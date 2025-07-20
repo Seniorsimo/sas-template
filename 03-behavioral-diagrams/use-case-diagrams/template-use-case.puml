@@ -1,0 +1,57 @@
+@startuml UseCase-Template
+!define RECTANGLE class
+
+title Sistema [Nome Sistema] - Casi d'Uso Principali
+
+' Definizione degli attori
+actor "Utente Primario" as User
+actor "Amministratore" as Admin
+actor "Sistema Esterno" as ExtSystem
+
+' Definizione del boundary del sistema
+rectangle "Sistema [Nome]" {
+  
+  ' Casi d'uso principali
+  usecase UC1 as "Caso d'Uso 1
+  --
+  Descrizione breve"
+  
+  usecase UC2 as "Caso d'Uso 2
+  --
+  Descrizione breve"
+  
+  usecase UC3 as "Caso d'Uso 3
+  --
+  Descrizione breve"
+  
+  ' Casi d'uso secondari
+  usecase UC4 as "Caso d'Uso 4"
+  usecase UC5 as "Caso d'Uso 5"
+}
+
+' Relazioni attori-casi d'uso
+User --> UC1 : esegue
+User --> UC2 : esegue
+Admin --> UC3 : gestisce
+Admin --> UC4 : configura
+
+' Relazioni tra casi d'uso
+UC1 ..> UC5 : <<include>>
+UC2 ..> UC4 : <<extend>>
+
+' Relazioni con sistemi esterni
+ExtSystem --> UC3 : notifica
+
+' Note esplicative
+note right of UC1
+  Questo caso d'uso rappresenta
+  la funzionalità principale
+  del sistema
+end note
+
+note bottom of ExtSystem
+  Sistema di notifiche
+  o servizio esterno
+end note
+
+@enduml

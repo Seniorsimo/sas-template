@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Preview PlantUML Diagrams",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"Use Ctrl+Shift+P and search 'PlantUML: Preview Current Diagram' to view PlantUML diagrams"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Export All PlantUML to PNG",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"Use Ctrl+Shift+P and search 'PlantUML: Export Workspace Diagrams' to export all diagrams"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Generate Project Documentation",
+			"type": "shell",
+			"command": "echo",
+			"args": [
+				"Documentation workflow: 1) Complete project definition, 2) Write user stories, 3) Create use case diagrams, 4) Design activity flows, 5) Model sequences, 6) Design class structure, 7) Create ER model"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Documentation Structure",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-Command",
+				"Write-Host 'Checking documentation structure...'; Get-ChildItem -Recurse -Include '*.md','*.puml' | Measure-Object | ForEach-Object { Write-Host \"Found $($_.Count) documentation files\" }"
+			],
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

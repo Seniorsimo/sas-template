@@ -1,0 +1,147 @@
+@startuml Class-Diagram-Template
+!define ENTITY class
+!define SERVICE class
+!define CONTROLLER class
+
+title Sistema [Nome] - Diagramma delle Classi
+
+package "Domain Model" {
+  
+  class User {
+    - id: Long
+    - username: String
+    - email: String
+    - password: String
+    - createdAt: Date
+    --
+    + getId(): Long
+    + setUsername(username: String): void
+    + validateEmail(): boolean
+    + hashPassword(): void
+  }
+  
+  class Product {
+    - id: Long
+    - name: String
+    - description: String
+    - price: BigDecimal
+    - category: Category
+    --
+    + calculateDiscount(): BigDecimal
+    + isAvailable(): boolean
+    + updatePrice(newPrice: BigDecimal): void
+  }
+  
+  class Order {
+    - id: Long
+    - orderDate: Date
+    - status: OrderStatus
+    - totalAmount: BigDecimal
+    --
+    + addItem(item: OrderItem): void
+    + calculateTotal(): BigDecimal
+    + processPayment(): boolean
+  }
+  
+  class OrderItem {
+    - quantity: Integer
+    - unitPrice: BigDecimal
+    --
+    + getSubtotal(): BigDecimal
+  }
+  
+  enum OrderStatus {
+    PENDING
+    CONFIRMED
+    SHIPPED
+    DELIVERED
+    CANCELLED
+  }
+  
+  abstract class Category {
+    # id: Long
+    # name: String
+    --
+    + {abstract} applyDiscount(): BigDecimal
+  }
+  
+  class Electronics extends Category {
+    - warrantyPeriod: Integer
+    --
+    + applyDiscount(): BigDecimal
+  }
+}
+
+package "Service Layer" {
+  
+  interface UserService <<interface>> {
+    + createUser(user: User): User
+    + findByEmail(email: String): User
+    + validateCredentials(email: String, password: String): boolean
+  }
+  
+  class UserServiceImpl implements UserService {
+    - userRepository: UserRepository
+    --
+    + createUser(user: User): User
+    + findByEmail(email: String): User
+    + validateCredentials(email: String, password: String): boolean
+  }
+  
+  class OrderService {
+    - orderRepository: OrderRepository
+    - paymentService: PaymentService
+    --
+    + createOrder(order: Order): Order
+    + processOrder(orderId: Long): boolean
+    + getOrderHistory(userId: Long): List<Order>
+  }
+}
+
+package "Repository Layer" {
+  
+  interface UserRepository <<interface>> {
+    + save(user: User): User
+    + findById(id: Long): User
+    + findByEmail(email: String): User
+  }
+  
+  interface OrderRepository <<interface>> {
+    + save(order: Order): Order
+    + findByUserId(userId: Long): List<Order>
+  }
+}
+
+' Relazioni
+User ||--o{ Order : "places"
+Order ||--o{ OrderItem : "contains"
+OrderItem }o--|| Product : "references"
+Product }o--|| Category : "belongs to"
+
+UserService --> User : "manages"
+OrderService --> Order : "manages"
+OrderService --> PaymentService : "uses"
+
+UserServiceImpl ..|> UserService : "implements"
+UserServiceImpl --> UserRepository : "uses"
+OrderService --> OrderRepository : "uses"
+
+' Note esplicative
+note top of User
+  Entità principale che rappresenta
+  l'utente del sistema
+end note
+
+note right of OrderStatus
+  Enum che definisce
+  i possibili stati
+  di un ordine
+end note
+
+note bottom of Category
+  Classe astratta per
+  implementare il pattern
+  Strategy per le categorie
+end note
+
+@enduml

@@ -1,0 +1,69 @@
+@startuml Sequence-Template
+!define PARTICIPANT actor
+!define OBJECT entity
+
+title Interazione [Nome Scenario] - Diagramma di Sequenza
+
+' Definizione dei partecipanti
+actor Utente as User
+participant "Frontend\n(React/Vue)" as FE
+participant "API Gateway" as API
+participant "Service Layer" as Service
+participant "Database" as DB
+
+' Attivazione automatica
+autonumber
+
+' Scenario principale
+User -> FE : richiesta operazione
+activate FE
+
+FE -> API : POST /api/operazione
+activate API
+
+API -> Service : processOperation()
+activate Service
+
+Service -> DB : INSERT/UPDATE
+activate DB
+DB --> Service : risultato
+deactivate DB
+
+Service --> API : response
+deactivate Service
+
+API --> FE : JSON response
+deactivate API
+
+FE --> User : mostra risultato
+deactivate FE
+
+' Scenario alternativo (errore)
+|||
+note over User, DB : Scenario alternativo - Errore
+|||
+
+User -> FE : richiesta invalida
+activate FE
+
+FE -> API : POST /api/operazione (dati invalidi)
+activate API
+
+API --> FE : 400 Bad Request
+deactivate API
+
+FE --> User : messaggio errore
+deactivate FE
+
+' Note esplicative
+note right of Service
+  Il Service Layer contiene
+  la logica di business
+end note
+
+note left of DB
+  Database persistente
+  (MySQL, PostgreSQL, etc.)
+end note
+
+@enduml

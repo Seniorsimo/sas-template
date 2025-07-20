@@ -1,0 +1,27 @@
+```mermaid
+graph TD
+    A[Inizio Processo] --> B{Condizione}
+    B -->|Opzione 1| C[Azione 1]
+    B -->|Opzione 2| D[Azione 2]
+    C --> E[Elaborazione]
+    D --> E
+    E --> F{Risultato OK?}
+    F -->|Sì| G[Successo]
+    F -->|No| H[Gestione Errore]
+    H --> I[Retry?]
+    I -->|Sì| B
+    I -->|No| J[Termina con Errore]
+    G --> K[Fine Processo]
+    J --> K
+    
+    %% Stili personalizzati
+    classDef startEnd fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef process fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef decision fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef error fill:#ffebee,stroke:#c62828,stroke-width:2px
+    
+    class A,K startEnd
+    class C,D,E process
+    class B,F,I decision
+    class H,J error
+```

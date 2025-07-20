@@ -1,0 +1,137 @@
+@startuml ER-Diagram-Template
+!define ENTITY entity
+!define WEAK_ENTITY entity
+
+title Sistema [Nome] - Modello Entità-Relazione
+
+' Definizione delle entità
+entity User {
+  * user_id : INTEGER <<PK>>
+  --
+  * username : VARCHAR(50) <<UK>>
+  * email : VARCHAR(100) <<UK>>
+  * password_hash : VARCHAR(255)
+  * first_name : VARCHAR(50)
+  * last_name : VARCHAR(50)
+  * phone : VARCHAR(20)
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+  * is_active : BOOLEAN
+}
+
+entity Product {
+  * product_id : INTEGER <<PK>>
+  --
+  * name : VARCHAR(100)
+  * description : TEXT
+  * price : DECIMAL(10,2)
+  * sku : VARCHAR(50) <<UK>>
+  * stock_quantity : INTEGER
+  * category_id : INTEGER <<FK>>
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+  * is_available : BOOLEAN
+}
+
+entity Category {
+  * category_id : INTEGER <<PK>>
+  --
+  * name : VARCHAR(50) <<UK>>
+  * description : TEXT
+  * parent_category_id : INTEGER <<FK>>
+  * created_at : TIMESTAMP
+}
+
+entity Order {
+  * order_id : INTEGER <<PK>>
+  --
+  * user_id : INTEGER <<FK>>
+  * order_date : TIMESTAMP
+  * status : ENUM('PENDING','CONFIRMED','SHIPPED','DELIVERED','CANCELLED')
+  * total_amount : DECIMAL(10,2)
+  * shipping_address : TEXT
+  * payment_method : VARCHAR(50)
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+}
+
+entity OrderItem {
+  * order_item_id : INTEGER <<PK>>
+  --
+  * order_id : INTEGER <<FK>>
+  * product_id : INTEGER <<FK>>
+  * quantity : INTEGER
+  * unit_price : DECIMAL(10,2)
+  * total_price : DECIMAL(10,2)
+}
+
+entity Review {
+  * review_id : INTEGER <<PK>>
+  --
+  * user_id : INTEGER <<FK>>
+  * product_id : INTEGER <<FK>>
+  * rating : INTEGER
+  * comment : TEXT
+  * created_at : TIMESTAMP
+}
+
+entity Cart {
+  * cart_id : INTEGER <<PK>>
+  --
+  * user_id : INTEGER <<FK>>
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+}
+
+entity CartItem {
+  * cart_item_id : INTEGER <<PK>>
+  --
+  * cart_id : INTEGER <<FK>>
+  * product_id : INTEGER <<FK>>
+  * quantity : INTEGER
+  * added_at : TIMESTAMP
+}
+
+' Relazioni
+User ||--o{ Order : "places"
+User ||--|| Cart : "has"
+User ||--o{ Review : "writes"
+
+Order ||--o{ OrderItem : "contains"
+Product ||--o{ OrderItem : "included in"
+Product ||--o{ Review : "receives"
+Product }o--|| Category : "belongs to"
+Category ||--o{ Category : "parent of"
+
+Cart ||--o{ CartItem : "contains"
+Product ||--o{ CartItem : "added to"
+
+' Vincoli e note
+note top of User
+  Tabella principale degli utenti
+  - username e email devono essere unici
+  - password_hash: hash bcrypt
+  - is_active: soft delete
+end note
+
+note right of Order
+  Stati dell'ordine:
+  PENDING → CONFIRMED → SHIPPED → DELIVERED
+  
+  Può passare a CANCELLED
+  da qualsiasi stato
+end note
+
+note bottom of Category
+  Struttura gerarchica:
+  - parent_category_id può essere NULL
+  - Evitare cicli nella gerarchia
+end note
+
+note left of OrderItem
+  Snapshot del prezzo:
+  - unit_price: prezzo al momento dell'ordine
+  - total_price: quantity * unit_price
+end note
+
+@enduml
