@@ -13,41 +13,46 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 ## 📁 Struttura del Template
 
 ### 01-project-definition/
-Template completi per la definizione iniziale del progetto
+**Template completi per la definizione iniziale del progetto**
 - `project-description.md` - Descrizione dettagliata del progetto (problema, soluzione, benefici)
-- `stakeholders.md` - Identificazione e analisi completa degli stakeholder
-- `objectives.md` - Obiettivi business/tecnici/qualità con metriche di successo  
+- `stakeholders.md` - Identificazione e analisi completa degli stakeholder  
+- `objectives.md` - Obiettivi SMART (business/tecnici/qualità) con metriche di successo
 - `project-scope.md` - Definizione dello scope (in/out scope, vincoli, WBS)
-- `risk-register.md` - Registro dei rischi con matrice e piani di mitigazione
+- `risk-register.md` - Registro dei rischi con matrice probabilità/impatto e piani di mitigazione
 
 ### 02-requirements/
-Gestione dei requisiti e user stories
-- `user-stories.md` - Raccolta delle user stories
-- `functional-requirements.md` - Requisiti funzionali
-- `non-functional-requirements.md` - Requisiti non funzionali
-- `acceptance-criteria.md` - Criteri di accettazione
+**Gestione gerarchica e strutturata dei requisiti**
+- **`user-stories/`** - Epic e user stories con prioritizzazione MoSCoW
+- **`functional-requirements/`** - Struttura organizzata in:
+  - `core-features/` - Funzionalità principali del sistema
+  - `integrations/` - Requisiti di integrazione con sistemi esterni
+  - `api-requirements/` - Specifiche per API e servizi web
+  - `ui-requirements/` - Requisiti di interfaccia utente e UX
+- **`non-functional-requirements/`** - Performance, security, usability, scalability
+- **`acceptance-criteria/`** - Criteri strutturati per categoria:
+  - `functional-acceptance/` - Criteri per validazione funzionale
+  - `non-functional-acceptance/` - Criteri per qualità e performance  
+  - `integration-acceptance/` - Criteri per testing di integrazione
+  - `user-acceptance/` - Criteri per UAT e business validation
 
 ### 03-behavioral-diagrams/
-Diagrammi comportamentali UML
-- `use-case-diagrams/` - Diagrammi dei casi d'uso
-- `activity-diagrams/` - Diagrammi delle attività
-- `sequence-diagrams/` - Diagrammi di sequenza
-- `state-diagrams/` - Diagrammi di stato (opzionale)
+**Diagrammi UML comportamentali con template e guide complete**
+- **`use-case-diagrams/`** - Casi d'uso con attori, boundary e relazioni + README dettagliato
+- **`activity-diagrams/`** - Workflow e processi business con swimlanes + guide best practices
+- **`sequence-diagrams/`** - Interazioni temporali tra oggetti/sistemi + pattern comuni
 
 ### 04-structural-diagrams/
-Diagrammi strutturali UML
-- `class-diagrams/` - Diagrammi delle classi
-- `component-diagrams/` - Diagrammi dei componenti
-- `deployment-diagrams/` - Diagrammi di deployment
+**Diagrammi UML strutturali per architettura e design**
+- **`class-diagrams/`** - Modello OOP con relazioni, pattern e principi SOLID + esempi multi-dominio
+- **`component-diagrams/`** - Architettura componenti, layer e deployment + pattern architetturali
+- `template-system-architecture.puml` - Template architettura generale del sistema
 
 ### 05-database-design/
-Progettazione del database
-- `er-diagram/` - Modello Entità-Relazione
-- `database-schema/` - Schema logico del database
-- `data-dictionary.md` - Dizionario dei dati
+**Progettazione dati tramite diagrammi e documentazione (NO SQL)**
+- **`er-diagram/`** - Modello Entità-Relazione concettuale e logico + guida completa
+- `data-dictionary.md` - Dizionario dei dati e glossario del dominio
 
-### templates/
-Template riutilizzabili per documentazione e diagrammi
+> ⚠️ **Nota**: Ogni sottocartella include template PlantUML + README dettagliato con best practices, esempi e anti-patterns
 
 ## 🛠️ Strumenti Consigliati
 
@@ -65,18 +70,45 @@ Template riutilizzabili per documentazione e diagrammi
 
 ## 🚀 Come Iniziare
 
-1. **Definisci il Progetto**: Inizia compilando i file in `01-project-definition/`
-2. **Raccogli i Requisiti**: Scrivi le user stories in `02-requirements/`
-3. **Crea i Diagrammi Comportamentali**: Usa `03-behavioral-diagrams/`
-4. **Progetta la Struttura**: Sviluppa i diagrammi in `04-structural-diagrams/`
-5. **Disegna il Database**: Completa con `05-database-design/`
+1. **Definisci il Progetto**: Completa tutti i template in `01-project-definition/` (description, stakeholders, objectives, scope, risks)
+2. **Raccogli i Requisiti Gerarchici**: Struttura le user stories e requisiti in `02-requirements/` usando la gerarchia per categoria
+3. **Crea i Diagrammi Comportamentali**: Modella use cases, activity e sequence in `03-behavioral-diagrams/`
+4. **Progetta l'Architettura**: Sviluppa system architecture, class e component diagrams in `04-structural-diagrams/`
+5. **Disegna il Modello Dati**: Completa con ER diagrams e data dictionary in `05-database-design/`
 
-## 📋 Workflow Consigliato
+## 📋 Workflow di Sviluppo Template
 
+### 🎯 Fase 1: Foundation (01-project-definition/)
 ```
-Descrizione Progetto → User Stories → Use Cases → Activity Diagrams → 
-Sequence Diagrams → Class Diagrams → ER Model → Database Schema
+Project Description → Stakeholder Analysis → SMART Objectives → 
+Scope Definition → Risk Assessment
 ```
+
+### 📋 Fase 2: Requirements (02-requirements/)
+```
+Epic Stories → Functional Requirements (by category) → 
+Non-Functional Requirements → Acceptance Criteria (structured)
+```
+
+### 🎭 Fase 3: Behavioral Design (03-behavioral-diagrams/)
+```
+Use Case Modeling → Business Process Flows → 
+System Interaction Sequences
+```
+
+### 🏗️ Fase 4: Structural Design (04-structural-diagrams/)
+```
+System Architecture → OOP Class Design → 
+Component Architecture & Deployment
+```
+
+### 💾 Fase 5: Data Design (05-database-design/)
+```
+Conceptual ER Model → Logical Data Model → 
+Data Dictionary & Business Rules
+```
+
+> 💡 **Pro Tip**: Ogni README fornisce guide dettagliate, pattern comuni e anti-patterns per accelerare lo sviluppo
 
 ## 📝 Note
 
@@ -85,29 +117,64 @@ Sequence Diagrams → Class Diagrams → ER Model → Database Schema
 - Seguire le convenzioni UML standard per mantenere consistenza
 - Utilizzare gli ID univoci per la tracciabilità tra documenti
 
-## 📦 Template Inclusi
+## 📦 Template Sistema Completo
 
-### File Template
-- `project-description.md` - Template per la descrizione del progetto
-- `user-stories.md` - Template per user stories con format standard
-- `data-dictionary.md` - Template per il dizionario dati
+### 📋 Template Documentazione (Markdown)
+**01-project-definition/**
+- `project-description.md` - Descrizione completa: problema, soluzione, benefici, ROI
+- `stakeholders.md` - Mapping stakeholder con matrice interesse/influenza
+- `objectives.md` - Obiettivi SMART (business/tecnici/qualità) con KPI
+- `project-scope.md` - In/out scope, vincoli, assunzioni, WBS
+- `risk-register.md` - Matrice rischi con probabilità/impatto e piani di mitigazione
 
-### Diagrammi Template
-- `template-use-case.puml` - Template per diagrammi dei casi d'uso
-- `template-activity.puml` - Template per diagrammi delle attività  
-- `template-sequence.puml` - Template per diagrammi di sequenza
-- `template-class-diagram.puml` - Template per diagrammi delle classi
-- `template-system-architecture.puml` - Template per architettura di sistema
-- `template-er-diagram.puml` - Template per diagrammi ER
+**02-requirements/**
+- `user-stories/` - Epic e user stories con prioritizzazione MoSCoW
+- `functional-requirements/` (core-features, integrations, API, UI)
+- `non-functional-requirements/` - Performance, security, usability, scalability  
+- `acceptance-criteria/` (functional, non-functional, integration, user acceptance)
 
-## 🔧 Personalizzazione
+**05-database-design/**
+- `data-dictionary.md` - Dizionario dati completo e glossario del dominio
 
-Per personalizzare questo template per il tuo progetto:
+### 🎨 Template Diagrammi (PlantUML)
+**Behavioral Diagrams**
+- `template-use-case.puml` - Casi d'uso con attori, boundary, include/extend
+- `template-activity.puml` - Workflow business con swimlanes e decision points
+- `template-sequence.puml` - Interazioni temporali con lifelines e messaggi
 
-1. **Sostituisci i placeholder**: Cerca e sostituisci tutti i `[Nome Progetto]`, `[Descrizione]`, etc.
-2. **Adapta i diagrammi**: Modifica i template UML con le entità specifiche del tuo dominio
-3. **Rimuovi sezioni non necessarie**: Elimina cartelle/file non rilevanti per il tuo progetto
-4. **Aggiungi sezioni specifiche**: Estendi la struttura con documentazione aggiuntiva se necessaria
+**Structural Diagrams**  
+- `template-system-architecture.puml` - Architettura generale multi-layer
+- `template-class-diagram.puml` - Modello OOP con relazioni e pattern SOLID
+- `template-component-diagram.puml` - Architettura componenti e deployment
+
+**Data Diagrams**
+- `template-er-diagram.puml` - Modello Entità-Relazione con cardinalità e vincoli
+
+### 📚 README e Documentazione  
+- **15+ README completi** con best practices, esempi multi-dominio e anti-patterns
+- **Guide dettagliate** per ogni tipo di diagramma con sintassi e convenzioni
+- **Esempi pratici** per E-commerce, Banking, Healthcare, SaaS
+
+## 🔧 Utilizzo Template Enterprise
+
+### Quick Start
+1. **Clone/Fork** questo repository per il tuo progetto
+2. **Leggi i README** di ogni cartella per comprendere la struttura e best practices
+3. **Inizia da 01-project-definition/** seguendo l'ordine numerico delle cartelle
+4. **Personalizza i template** sostituendo placeholder con i dati del tuo progetto
+5. **Usa i pattern forniti** negli esempi multi-dominio come riferimento
+
+### Personalizzazione Avanzata
+- **Multi-domain Examples**: Adapta gli esempi E-commerce/Banking/Healthcare al tuo settore  
+- **Scaling**: Usa la struttura gerarchica per progetti di qualsiasi dimensione
+- **Tool Integration**: Compatible con Jira, Confluence, Azure DevOps, GitHub Issues
+- **Enterprise Standards**: Integra SMART objectives, MoSCoW prioritization, RACI matrices
+
+### Governance e Tracciabilità
+- **ID Univoci**: Ogni requisito/user story/componente ha identificatori per la tracciabilità
+- **Matrice di Tracciabilità**: Collegamenti tra requisiti → design → implementazione
+- **Version Control**: Struttura ottimizzata per Git con branching per feature
+- **Review Process**: Template supportano review strutturati e approval workflow
 
 ---
-*Template di Documentazione Software v1.0*
+*🚀 Enterprise Software Documentation Template v2.0 - Complete Project Lifecycle Coverage*
