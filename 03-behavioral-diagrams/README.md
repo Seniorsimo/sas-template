@@ -48,5 +48,14 @@ Ogni diagramma deve:
 2. **Activity**: Dettaglio dei processi interni
 3. **Sequence**: Interazioni specifiche tra componenti
 
-## Template
-Consulta la cartella `templates/` per i template predefiniti di ogni tipo di diagramma.
+## Template e Documentazione
+Ogni sottocartella contiene:
+- **Template PlantUML**: File `.puml` pronti per l'uso
+- **README.md**: Guida completa all'utilizzo dei template
+- **Best Practices**: Convenzioni e standards per ogni tipo di diagramma
+
+### Come Iniziare
+1. Scegli il tipo di diagramma più appropriato per il tuo caso d'uso
+2. Leggi il README della sottocartella per le linee guida specifiche  
+3. Copia e personalizza il template fornito
+4. Segui le convenzioni di naming e tracciabilità

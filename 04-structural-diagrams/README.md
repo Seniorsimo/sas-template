@@ -6,17 +6,19 @@ Questa sezione contiene tutti i diagrammi che descrivono la struttura e l'archit
 
 ### class-diagrams/
 Diagrammi delle classi UML che mostrano:
-- Classi del dominio
-- Attributi e metodi
+- Classi del dominio e business objects
+- Attributi, metodi e visibilità
 - Relazioni tra classi (ereditarietà, composizione, aggregazione)
-- Interfacce e classi astratte
+- Interfacce, classi astratte e pattern OOP
+- Design patterns e architectural patterns
 
 ### component-diagrams/
 Diagrammi dei componenti che descrivono:
-- Componenti software
-- Interfacce tra componenti
-- Dipendenze
-- Deployment dei componenti
+- Architettura del sistema a livello di componenti
+- Interfacce e contratti tra moduli
+- Dipendenze e accoppiamento tra componenti
+- Layer architetturali e package organization
+- Deployment e distribuzione dei componenti
 
 ### template-system-architecture.puml
 Template per il diagramma dell'architettura generale del sistema che include:
