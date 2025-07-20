@@ -129,39 +129,6 @@ EmailService --> MessageInterface
 DomainEvents --> MessageInterface
 
 ' ====================
-' DEPLOYMENT NODES (Optional)
-' ====================
-
-node "Web Server" as WebServer {
-  WebUI
-  AdminUI
-}
-
-node "Application Server" as AppServer {
-  APIGateway
-  AuthService
-  BusinessService
-}
-
-node "Database Server" as DBServer {
-  DatabaseAccess
-}
-
-node "Message Broker" as MessageBroker {
-  MessageQueue
-}
-
-cloud "Cloud Storage" as CloudStorage {
-  FileStorage
-}
-
-cloud "External Services" as ExtServices {
-  PaymentGateway
-  ThirdPartyAPI
-  EmailService
-}
-
-' ====================
 ' NOTES AND CONSTRAINTS
 ' ====================
 
@@ -188,6 +155,10 @@ note as N2
   • Database: PostgreSQL/SQL Server
   • Message Queue: RabbitMQ/Kafka
   • Cache: Redis
+  
+  <b>Deployment:</b>
+  • Crea un diagramma separato per deployment nodes
+  • Usa template-system-architecture.puml per overview
 end note
 
 ' Collegamento note
