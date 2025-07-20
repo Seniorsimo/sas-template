@@ -18,12 +18,15 @@ Diagrammi dei componenti che descrivono:
 - Dipendenze
 - Deployment dei componenti
 
-### system-architecture.drawio
-Diagramma dell'architettura generale del sistema creato con Draw.io che mostra:
-- Layer dell'applicazione
-- Servizi esterni
-- Flussi di comunicazione
-- Infrastruttura
+### template-system-architecture.puml
+Template per il diagramma dell'architettura generale del sistema che include:
+- Layer dell'applicazione (Frontend, API Gateway, Services)
+- Database Layer (Database principale, Cache, File Storage)
+- Servizi esterni (servizi di terze parti)
+- Componenti di infrastruttura (Load Balancer, Monitoring, Security, CI/CD)
+- Flussi di comunicazione tra i componenti
+
+**Come utilizzare**: Personalizza i nomi dei servizi, delle tecnologie e delle connessioni in base al tuo progetto specifico.
 
 ## Strumenti Disponibili
 

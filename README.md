@@ -1,8 +1,16 @@
-# Documentazione Progetto Software
+# Template Documentazione Progetto Software
 
-Questo workspace è organizzato per gestire l'intero ciclo di vita documentale di un progetto software, dalla definizione iniziale fino alla progettazione strutturale.
+Questo workspace fornisce un **template completo** per gestire l'intero ciclo di vita documentale di un progetto software, dalla definizione iniziale fino alla progettazione strutturale.
 
-## 📁 Struttura del Progetto
+## 🎯 Come Utilizzare Questo Template
+
+1. **Clona** questo repository
+2. **Personalizza** i file template in base al tuo progetto specifico
+3. **Sostituisci** i placeholder `[Nome Progetto]`, `[Descrizione]`, etc. con i tuoi dati
+4. **Elimina** le sezioni non necessarie per il tuo progetto
+5. **Aggiungi** diagrammi e documentazione specifica
+
+## 📁 Struttura del Template
 
 ### 01-project-definition/
 Contiene la descrizione del progetto e gli obiettivi principali
@@ -70,10 +78,34 @@ Sequence Diagrams → Class Diagrams → ER Model → Database Schema
 
 ## 📝 Note
 
-- Ogni directory contiene un README.md specifico con istruzioni dettagliate
-- I template nella cartella `templates/` possono essere copiati e personalizzati
-- Usa le estensioni VS Code per un'esperienza ottimale
-- Mantieni la tracciabilità tra requisiti e diagrammi
+- Tutti i file sono **template riutilizzabili** con placeholder da personalizzare
+- I diagrammi PlantUML includono esempi di sintassi e best practices
+- Seguire le convenzioni UML standard per mantenere consistenza
+- Utilizzare gli ID univoci per la tracciabilità tra documenti
+
+## 📦 Template Inclusi
+
+### File Template
+- `project-description.md` - Template per la descrizione del progetto
+- `user-stories.md` - Template per user stories con format standard
+- `data-dictionary.md` - Template per il dizionario dati
+
+### Diagrammi Template
+- `template-use-case.puml` - Template per diagrammi dei casi d'uso
+- `template-activity.puml` - Template per diagrammi delle attività  
+- `template-sequence.puml` - Template per diagrammi di sequenza
+- `template-class-diagram.puml` - Template per diagrammi delle classi
+- `template-system-architecture.puml` - Template per architettura di sistema
+- `template-er-diagram.puml` - Template per diagrammi ER
+
+## 🔧 Personalizzazione
+
+Per personalizzare questo template per il tuo progetto:
+
+1. **Sostituisci i placeholder**: Cerca e sostituisci tutti i `[Nome Progetto]`, `[Descrizione]`, etc.
+2. **Adapta i diagrammi**: Modifica i template UML con le entità specifiche del tuo dominio
+3. **Rimuovi sezioni non necessarie**: Elimina cartelle/file non rilevanti per il tuo progetto
+4. **Aggiungi sezioni specifiche**: Estendi la struttura con documentazione aggiuntiva se necessaria
 
 ---
-*Creato il: 20 Luglio 2025*
+*Template di Documentazione Software v1.0*

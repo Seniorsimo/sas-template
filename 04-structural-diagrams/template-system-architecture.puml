@@ -1,0 +1,129 @@
+@startuml system-architecture
+!theme plain
+title [Nome del Progetto] - Architettura di Sistema
+
+' Definizione degli stili per i diversi layer
+skinparam package {
+    BackgroundColor<<frontend>> LightBlue
+    BackgroundColor<<gateway>> LightYellow
+    BackgroundColor<<services>> LightGreen
+    BackgroundColor<<database>> LightPink
+    BackgroundColor<<external>> Plum
+    BackgroundColor<<infrastructure>> LightGoldenRodYellow
+}
+
+' Frontend Layer
+package "Frontend Layer" <<frontend>> {
+    component [Applicazione Frontend] as FrontendApp
+    component [Interfaccia Utente] as UI
+    component [Gestione Stato] as StateManagement
+    
+    FrontendApp -down-> UI
+    FrontendApp -down-> StateManagement
+}
+
+' API Gateway / Entry Point
+package "API Gateway" <<gateway>> {
+    component [Routing delle Richieste] as Routing
+    component [Autenticazione] as AuthGW
+    component [Rate Limiting] as RateLimit
+    
+    Routing -down-> AuthGW
+    Routing -down-> RateLimit
+}
+
+' Services Layer
+package "Services Layer" <<services>> {
+    component [Servizio A] as ServiceA
+    component [Servizio B] as ServiceB
+    component [Servizio C] as ServiceC
+    
+    ServiceA -[hidden]right-> ServiceB
+    ServiceB -[hidden]right-> ServiceC
+}
+
+' Database Layer
+package "Database Layer" <<database>> {
+    database "Database Principale" as MainDB
+    database "Cache" as Cache
+    database "Storage File" as FileStorage
+    
+    MainDB -[hidden]right-> Cache
+    Cache -[hidden]right-> FileStorage
+}
+
+' External Services
+package "External Services" <<external>> {
+    component [Servizio Esterno 1] as ExternalService1
+    component [Servizio Esterno 2] as ExternalService2
+    component [Servizio Esterno 3] as ExternalService3
+    
+    ExternalService1 -[hidden]down-> ExternalService2
+    ExternalService2 -[hidden]down-> ExternalService3
+}
+
+' Infrastructure Components
+package "Infrastructure" <<infrastructure>> {
+    component [Load Balancer] as LoadBalancer
+    component [Monitoring & Logging] as Monitoring
+    component [Security Layer] as Security
+    component [CI/CD Pipeline] as CICD
+    
+    LoadBalancer -[hidden]down-> Monitoring
+    Monitoring -[hidden]right-> Security
+    Security -[hidden]right-> CICD
+}
+
+' Connessioni principali
+FrontendApp -right-> Routing : HTTP/HTTPS
+Routing -right-> ServiceA : API
+Routing -right-> ServiceB : API
+Routing -right-> ServiceC : API
+
+' Connessioni ai database
+ServiceA -down-> MainDB : [Tipo connessione]
+ServiceB -down-> MainDB : [Tipo connessione]
+ServiceC -down-> MainDB : [Tipo connessione]
+
+ServiceA -down-> Cache : [Tipo connessione]
+ServiceB -down-> Cache : [Tipo connessione]
+ServiceC -down-> Cache : [Tipo connessione]
+
+ServiceB -down-> FileStorage : [Tipo connessione]
+
+' Connessioni ai servizi esterni
+Routing -left-> ExternalService1 : API Calls
+Routing -left-> ExternalService2 : API Calls
+Routing -left-> ExternalService3 : API Calls
+
+' Connessioni infrastruttura
+LoadBalancer -up-> ServiceA
+LoadBalancer -up-> ServiceB
+LoadBalancer -up-> ServiceC
+
+' Note per chiarire l'architettura
+note right of FrontendApp
+  [Descrizione dell'applicazione frontend]
+  [Tecnologie utilizzate]
+  [Responsabilità principali]
+end note
+
+note right of Routing
+  [Descrizione del punto di ingresso]
+  [Funzionalità implementate]
+  [Politiche di sicurezza]
+end note
+
+note bottom of MainDB
+  [Tipo di database]
+  [Caratteristiche principali]
+  [Modello dati]
+end note
+
+note bottom of Cache
+  [Sistema di cache utilizzato]
+  [Strategia di caching]
+  [Ottimizzazioni]
+end note
+
+@enduml
