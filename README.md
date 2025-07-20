@@ -13,10 +13,12 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 ## 📁 Struttura del Template
 
 ### 01-project-definition/
-Contiene la descrizione del progetto e gli obiettivi principali
-- `project-description.md` - Descrizione dettagliata del progetto
-- `stakeholders.md` - Identificazione degli stakeholder
-- `objectives.md` - Obiettivi e scope del progetto
+Template completi per la definizione iniziale del progetto
+- `project-description.md` - Descrizione dettagliata del progetto (problema, soluzione, benefici)
+- `stakeholders.md` - Identificazione e analisi completa degli stakeholder
+- `objectives.md` - Obiettivi business/tecnici/qualità con metriche di successo  
+- `project-scope.md` - Definizione dello scope (in/out scope, vincoli, WBS)
+- `risk-register.md` - Registro dei rischi con matrice e piani di mitigazione
 
 ### 02-requirements/
 Gestione dei requisiti e user stories
