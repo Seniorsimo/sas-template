@@ -1,0 +1,37 @@
+@startuml BackendInternal-ComponentDiagram
+!theme blueprint
+title Componenti Interni del Backend
+
+package "Backend (Node.js)" {
+
+  [API Controller] as ApiController
+  [Booking Service] as BookingService
+  [User Service] as UserService
+  [Notification Service] as NotificationService
+
+}
+
+ApiController --> BookingService
+ApiController --> UserService
+BookingService --> NotificationService
+
+note right of ApiController
+  Gestisce le richieste HTTP
+  in entrata e le risposte.
+end note
+
+note right of BookingService
+  Contiene la logica di business
+  per la gestione delle prenotazioni.
+end note
+
+note right of UserService
+  Gestisce la logica relativa
+  agli utenti.
+end note
+
+note right of NotificationService
+  Invia notifiche (es. email di conferma)
+  agli utenti.
+end note
+@enduml

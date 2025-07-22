@@ -1,130 +1,110 @@
 # Stakeholders del Progetto
 
 ## Informazioni Generali
-**Progetto**: [Nome del Progetto]
-**Versione**: [Versione]
-**Data**: [Data]
-**Responsabile**: [Nome Responsabile]
+**Progetto**: Meeting Room Booking Application
+**Versione**: 1.0
+**Data**: 22/07/2024
+**Responsabile**: [Nome non definito]
 
 ---
 
 ## 👥 Stakeholder Primari
 
 ### Product Owner / Sponsor
-**Nome**: [Nome]  
-**Ruolo**: [Titolo/Posizione]  
-**Organizzazione**: [Azienda/Dipartimento]  
-**Contatto**: [Email/Telefono]
+**Nome**: [Nome non definito]
+**Ruolo**: Office Manager
+**Organizzazione**: [Azienda/Dipartimento non definito]
+**Contatto**: [Email/Telefono non definito]
 
 **Responsabilità**:
-- [Responsabilità 1]
-- [Responsabilità 2]
-- [Responsabilità 3]
+- Definire i requisiti di business.
+- Prioritizzare le funzionalità.
+- Approvare il prodotto finale.
 
 **Aspettative**:
-- [Aspettativa 1]
-- [Aspettativa 2]
-- [Aspettativa 3]
+- Un'applicazione che semplifichi la gestione delle sale riunioni.
+- Riduzione del tempo dedicato alla gestione manuale delle prenotazioni.
+- Aumento della soddisfazione dei dipendenti.
 
-**Livello di Influenza**: Alto | Medio | Basso  
-**Livello di Interesse**: Alto | Medio | Basso
+**Livello di Influenza**: Alto
+**Livello di Interesse**: Alto
 
 ---
 
 ### Utilizzatori Finali
 
-#### [Tipo Utente 1]
-**Descrizione**: [Descrizione del gruppo di utenti]  
-**Dimensione del Gruppo**: [Numero approssimativo]  
-**Rappresentante**: [Nome del rappresentante se presente]
+#### Dipendenti
+**Descrizione**: Tutti i dipendenti dell'azienda che necessitano di prenotare una sala riunioni.
+**Dimensione del Gruppo**: Circa 200 persone.
+**Rappresentante**: [Nome non definito]
 
 **Caratteristiche**:
-- **Competenze Tecniche**: [Livello: Alto/Medio/Basso]
-- **Frequenza d'Uso**: [Quotidiana/Settimanale/Mensile/Occasionale]
-- **Dispositivi Utilizzati**: [Desktop/Mobile/Tablet/etc.]
+- **Competenze Tecniche**: Medio
+- **Frequenza d'Uso**: Quotidiana/Settimanale
+- **Dispositivi Utilizzati**: Desktop, Mobile
 
 **Obiettivi e Necessità**:
-- [Obiettivo 1]
-- [Obiettivo 2]
-- [Obiettivo 3]
+- Prenotare una sala riunioni in modo rapido e semplice.
+- Verificare la disponibilità delle sale in tempo reale.
+- Ricevere una notifica di conferma della prenotazione.
 
 **Pain Points Attuali**:
-- [Pain point 1]
-- [Pain point 2]
-- [Pain point 3]
-
-#### [Tipo Utente 2]
-**Descrizione**: [Descrizione del gruppo di utenti]  
-**Dimensione del Gruppo**: [Numero approssimativo]  
-**Rappresentante**: [Nome del rappresentante se presente]
-
-**Caratteristiche**:
-- **Competenze Tecniche**: [Livello: Alto/Medio/Basso]
-- **Frequenza d'Uso**: [Quotidiana/Settimanale/Mensile/Occasionale]
-- **Dispositivi Utilizzati**: [Desktop/Mobile/Tablet/etc.]
-
-**Obiettivi e Necessità**:
-- [Obiettivo 1]
-- [Obiettivo 2]
-- [Obiettivo 3]
-
-**Pain Points Attuali**:
-- [Pain point 1]
-- [Pain point 2]
-- [Pain point 3]
+- Difficoltà nel trovare una sala riunioni libera.
+- Conflitti di prenotazione.
+- Processo di prenotazione lento e macchinoso.
 
 ---
 
 ## 🏢 Stakeholder Secondari
 
 ### Team di Sviluppo
-**Team Leader**: [Nome]  
-**Dimensione Team**: [Numero persone]  
-**Competenze Chiave**: [Lista competenze principali]
+**Team Leader**: [Nome non definito]
+**Dimensione Team**: 4 persone
+**Competenze Chiave**: React, Node.js, PostgreSQL, Keycloak
 
 **Responsabilità**:
-- Implementazione delle funzionalità
-- Testing e quality assurance
-- Manutenzione del codice
-- Documentazione tecnica
+- Implementazione delle funzionalità.
+- Testing e quality assurance.
+- Manutenzione del codice.
+- Documentazione tecnica.
 
 **Aspettative**:
-- Requisiti chiari e stabili
-- Accesso alle risorse necessarie
-- Timeline realistiche
-- Supporto per la risoluzione di blocchi tecnici
+- Requisiti chiari e stabili.
+- Accesso alle risorse necessarie.
+- Timeline realistiche.
+- Supporto per la risoluzione di blocchi tecnici.
 
 ### Team Operations/DevOps
-**Responsabile**: [Nome]  
-**Contatto**: [Email]
+**Responsabile**: [Nome non definito]
+**Contatto**: [Email non definita]
 
 **Responsabilità**:
-- Gestione dell'infrastruttura
-- Deployment e release management
-- Monitoring e alerting
-- Backup e disaster recovery
+- Gestione dell'infrastruttura.
+- Deployment e release management.
+- Monitoring e alerting.
+- Backup e disaster recovery.
 
 **Aspettative**:
-- Architettura scalabile e manutenibile
-- Documentazione operativa completa
-- Piani di deployment e rollback
-- SLA chiaramente definiti
+- Architettura scalabile e manutenibile.
+- Documentazione operativa completa.
+- Piani di deployment e rollback.
+- SLA chiaramente definiti.
 
 ### Team di Sicurezza
-**Responsabile**: [Nome]  
-**Contatto**: [Email]
+**Responsabile**: [Nome non definito]
+**Contatto**: [Email non definita]
 
 **Responsabilità**:
-- Security review del codice
-- Penetration testing
-- Compliance e audit
-- Gestione delle vulnerabilità
+- Security review del codice.
+- Penetration testing.
+- Compliance e audit.
+- Gestione delle vulnerabilità.
 
 **Aspettative**:
-- Implementazione di security best practices
-- Crittografia dei dati sensibili
-- Logging e auditing appropriati
-- Conformità agli standard aziendali
+- Implementazione di security best practices.
+- Crittografia dei dati sensibili.
+- Logging e auditing appropriati.
+- Conformità agli standard aziendali.
 
 ---
 
@@ -132,38 +112,20 @@
 
 ### Fornitori/Vendor
 | Nome Fornitore | Servizio Fornito | Contatto | Criticità |
-|----------------|------------------|----------|-----------|
-| [Nome 1] | [Descrizione servizio] | [Email/Tel] | Alta/Media/Bassa |
-| [Nome 2] | [Descrizione servizio] | [Email/Tel] | Alta/Media/Bassa |
-| [Nome 3] | [Descrizione servizio] | [Email/Tel] | Alta/Media/Bassa |
-
-### Partner di Integrazione
-**[Nome Partner 1]**
-- **Servizio**: [Descrizione integrazione]
-- **API/Protocollo**: [Tipo di integrazione]
-- **SLA**: [Service Level Agreement]
-- **Contatto Tecnico**: [Nome e contatto]
-
-**[Nome Partner 2]**
-- **Servizio**: [Descrizione integrazione]
-- **API/Protocollo**: [Tipo di integrazione]
-- **SLA**: [Service Level Agreement]
-- **Contatto Tecnico**: [Nome e contatto]
-
-### Enti Regolatori (se applicabile)
-- **[Nome Ente 1]**: [Tipo di regolamentazione]
-- **[Nome Ente 2]**: [Tipo di regolamentazione]
+|---|---|---|---|
+| Keycloak | Servizio di autenticazione | [Email/Tel non definito] | Alta |
 
 ---
 
 ## 📊 Matrice Stakeholder
 
 | Stakeholder | Influenza | Interesse | Strategia di Gestione |
-|-------------|-----------|-----------|----------------------|
-| [Nome 1] | Alta | Alto | Gestire da vicino |
-| [Nome 2] | Alta | Basso | Tenere soddisfatto |
-| [Nome 3] | Bassa | Alto | Tenere informato |
-| [Nome 4] | Bassa | Basso | Monitorare |
+|---|---|---|---|
+| Product Owner | Alto | Alto | Gestire da vicino |
+| Dipendenti | Basso | Alto | Tenere informato |
+| Team di Sviluppo | Alto | Alto | Gestire da vicino |
+| Team Operations/DevOps | Medio | Medio | Tenere soddisfatto |
+| Team di Sicurezza | Medio | Medio | Tenere soddisfatto |
 
 ### Legenda Strategie:
 - **Gestire da vicino**: Coinvolgimento attivo e comunicazione frequente
@@ -178,9 +140,9 @@
 ### Frequenza delle Comunicazioni
 
 | Stakeholder | Frequenza | Canale | Contenuto |
-|-------------|-----------|---------|-----------|
+|---|---|---|---|
 | Product Owner | Settimanale | Meeting + Email | Status, blocchi, decisioni |
-| Utilizzatori Finali | Bi-settimanale | Demo + Feedback | Progressi, feedback, validazione |
+| Dipendenti | Bi-settimanale | Demo + Feedback | Progressi, feedback, validazione |
 | Team Sviluppo | Quotidiana | Stand-up + Chat | Task, blocchi, coordinamento |
 | Management | Mensile | Report + Presentation | KPI, budget, timeline |
 
@@ -210,20 +172,18 @@
 ## 📝 Note e Considerazioni
 
 ### Conflitti di Interesse Potenziali
-- [Descrizione conflitto 1 e strategia di mitigazione]
-- [Descrizione conflitto 2 e strategia di mitigazione]
+- [Nessun conflitto di interesse identificato al momento]
 
 ### Stakeholder Critici
-- **[Nome]**: [Motivo criticità e piano di gestione]
-- **[Nome]**: [Motivo criticità e piano di gestione]
+- **Product Owner**: La sua disponibilità e il suo feedback sono cruciali per il successo del progetto.
+- **Team di Sviluppo**: Le loro competenze e la loro efficienza sono fondamentali per rispettare le scadenze.
 
 ### Assunzioni sugli Stakeholder
-- [Assunzione 1 sulla disponibilità o commitment]
-- [Assunzione 2 sulle competenze o autorità]
-- [Assunzione 3 sui tempi di risposta o feedback]
+- Si presume che tutti gli stakeholder siano disponibili per le riunioni e forniscano feedback tempestivi.
+- Si presume che il Product Owner abbia l'autorità per prendere decisioni sui requisiti.
 
 ---
 
-*Ultima modifica: [Data]*
-*Versione documento: [Numero versione]*
-*Prossima revisione programmata: [Data]*
+*Ultima modifica: 22/07/2024*
+*Versione documento: 1.0*
+*Prossima revisione programmata: [Data non definita]*

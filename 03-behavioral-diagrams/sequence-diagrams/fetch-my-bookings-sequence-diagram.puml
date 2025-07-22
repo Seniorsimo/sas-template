@@ -1,0 +1,30 @@
+@startuml FetchMyBookings-SequenceDiagram
+!define PARTICIPANT actor
+!define OBJECT entity
+
+title Recupero Prenotazioni Utente - Diagramma di Sequenza
+
+' Definizione dei partecipanti
+actor Dipendente as User
+participant "Frontend\n(React)" as FE
+participant "Backend\n(Node.js)" as BE
+participant "Database\n(PostgreSQL)" as DB
+
+' Attivazione automatica
+autonumber
+
+' Scenario di recupero prenotazioni
+User -> FE : Accede a "Le mie prenotazioni"
+activate FE
+FE -> BE : GET /api/bookings/my-bookings
+activate BE
+BE -> DB : SELECT prenotazioni per userId
+activate DB
+DB --> BE : Elenco prenotazioni
+deactivate DB
+BE --> FE : JSON con elenco prenotazioni
+deactivate BE
+FE --> User : Mostra elenco prenotazioni
+deactivate FE
+
+@enduml

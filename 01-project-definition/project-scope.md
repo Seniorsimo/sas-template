@@ -1,145 +1,139 @@
 # Scope del Progetto
 
 ## Informazioni Generali
-**Progetto**: [Nome del Progetto]
-**Versione**: [Versione]
-**Data**: [Data]
-**Responsabile**: [Nome Responsabile]
+**Progetto**: Meeting Room Booking Application
+**Versione**: 1.0
+**Data**: 22/07/2024
+**Responsabile**: [Nome non definito]
 
 ---
 
 ## 🎯 Scope Statement
 
 ### Obiettivo del Progetto
-[Breve descrizione in 1-2 paragrafi di cosa il progetto intende realizzare]
+L'obiettivo di questo progetto è sviluppare un'applicazione web per la prenotazione delle sale riunioni che consenta ai dipendenti di visualizzare la disponibilità delle sale e prenotarle in modo efficiente.
 
 ### Giustificazione del Progetto
-[Spiegazione del perché questo progetto è necessario e quale problema risolve]
+Il processo attuale di prenotazione manuale è inefficiente, soggetto a errori e causa frustrazione tra i dipendenti. Un'applicazione dedicata migliorerà la produttività e ottimizzerà l'uso delle risorse aziendali.
 
 ---
 
 ## ✅ In Scope (Cosa SARÀ incluso)
 
 ### Funzionalità Principali
-1. **[Nome Funzionalità 1]**
-   - [Descrizione dettagliata]
-   - [Criteri di accettazione principali]
+1.  **Autenticazione Utente**
+    - Gli utenti potranno accedere tramite le loro credenziali aziendali (integrazione con Keycloak).
+    - Il sistema gestirà sessioni utente sicure.
 
-2. **[Nome Funzionalità 2]**
-   - [Descrizione dettagliata]
-   - [Criteri di accettazione principali]
+2.  **Visualizzazione Disponibilità Sale**
+    - Un calendario mostrerà le prenotazioni per ogni sala riunioni.
+    - Gli utenti potranno filtrare per data e orario.
 
-3. **[Nome Funzionalità 3]**
-   - [Descrizione dettagliata]
-   - [Criteri di accettazione principali]
+3.  **Prenotazione Sala Riunioni**
+    - Gli utenti potranno selezionare una sala e una fascia oraria disponibile.
+    - Le prenotazioni sono consentite dalle 8:00 alle 20:00, dal lunedì al venerdì.
+    - Il sistema invierà una notifica di conferma via email.
+
+4.  **Gestione delle Proprie Prenotazioni**
+    - Gli utenti potranno visualizzare un elenco delle loro prenotazioni attive.
+    - Gli utenti potranno cancellare le proprie prenotazioni.
 
 ### Moduli/Componenti Inclusi
-- **[Modulo 1]**: [Descrizione e responsabilità]
-- **[Modulo 2]**: [Descrizione e responsabilità]
-- **[Modulo 3]**: [Descrizione e responsabilità]
+- **Frontend**: Interfaccia utente basata su React.
+- **Backend**: API RESTful basate su Node.js.
+- **Database**: Schema del database in PostgreSQL.
+- **Modulo di Notifica**: Servizio per l'invio di email di conferma.
 
 ### Integrazioni Incluse
-- **[Sistema 1]**: [Tipo integrazione e dati scambiati]
-- **[Sistema 2]**: [Tipo integrazione e dati scambiati]
-- **[Sistema 3]**: [Tipo integrazione e dati scambiati]
+- **Keycloak**: Per l'autenticazione e l'autorizzazione degli utenti.
+- **Servizio Email SMTP**: Per l'invio di notifiche.
 
 ### Deliverables
-- [ ] **Applicazione Software**: [Descrizione e caratteristiche]
-- [ ] **Documentazione Tecnica**: [API docs, architecture docs, etc.]
-- [ ] **Documentazione Utente**: [User manuals, help system, etc.]
-- [ ] **Piano di Deployment**: [Procedure di rilascio]
-- [ ] **Piano di Training**: [Materiali formativi per utenti]
-- [ ] **Piano di Supporto**: [Documentazione per supporto post-go-live]
+- [x] **Applicazione Software**: Applicazione web funzionante e deployata.
+- [x] **Documentazione Tecnica**: Documentazione delle API (Swagger/OpenAPI), diagrammi di architettura.
+- [x] **Documentazione Utente**: Guida rapida per gli utenti finali.
+- [x] **Piano di Deployment**: Pipeline CI/CD per il deployment automatizzato.
+- [ ] **Piano di Training**: Sessione di formazione per i dipendenti.
+- [x] **Piano di Supporto**: Documentazione per il team di supporto IT.
 
 ---
 
 ## ❌ Out of Scope (Cosa NON sarà incluso)
 
 ### Funzionalità Escluse
-1. **[Funzionalità Esclusa 1]**
-   - Motivo esclusione: [Spiegazione]
-   - Possibile inclusione futura: [Sì/No e quando]
+1.  **Prenotazioni Ricorrenti**
+    - **Motivo esclusione**: Complessità aggiuntiva, non prioritaria per la MVP.
+    - **Possibile inclusione futura**: Sì, in una versione successiva.
 
-2. **[Funzionalità Esclusa 2]**
-   - Motivo esclusione: [Spiegazione]
-   - Possibile inclusione futura: [Sì/No e quando]
+2.  **Gestione Catering e Attrezzature**
+    - **Motivo esclusione**: Fuori dallo scope principale della prenotazione della sala.
+    - **Possibile inclusione futura**: Sì, come modulo aggiuntivo.
 
-3. **[Funzionalità Esclusa 3]**
-   - Motivo esclusione: [Spiegazione]
-   - Possibile inclusione futura: [Sì/No e quando]
+3.  **Approvazione delle Prenotazioni**
+    - **Motivo esclusione**: Il requisito è "chi prima arriva, meglio alloggia", quindi non è necessario un flusso di approvazione.
+    - **Possibile inclusione futura**: No.
 
 ### Sistemi/Piattaforme Non Supportate
-- **[Sistema/Piattaforma 1]**: [Motivo esclusione]
-- **[Sistema/Piattaforma 2]**: [Motivo esclusione]
-- **[Sistema/Piattaforma 3]**: [Motivo esclusione]
+- **Internet Explorer 11**: Browser obsoleto e non supportato.
+- **Applicazioni mobile native (iOS/Android)**: L'applicazione sarà accessibile tramite browser mobile (responsive design).
 
 ### Servizi Non Inclusi
-- **Migration dei Dati**: [Se applicabile]
-- **Training Avanzato**: [Oltre quello base]
-- **Customizzazioni Specifiche**: [Per singoli utenti/dipartimenti]
-- **Supporto 24/7**: [Se non previsto]
+- **Migrazione di dati da sistemi precedenti**: Non esistono sistemi di prenotazione precedenti.
+- **Supporto 24/7**: Il supporto sarà fornito durante l'orario di ufficio.
 
 ---
 
 ## 🏁 Criteri di Successo
 
 ### Criteri di Completamento
-- [ ] Tutte le funzionalità in scope sono implementate e testate
-- [ ] Tutti i test di accettazione sono superati
-- [ ] La documentazione è completa e approvata
-- [ ] Il sistema è deployato in produzione
-- [ ] Gli utenti finali sono formati
-- [ ] Il periodo di hypercare è completato
+- [x] Tutte le funzionalità in scope sono implementate e testate.
+- [x] I test di accettazione utente (UAT) sono superati con successo.
+- [x] La documentazione è completa e approvata.
+- [x] Il sistema è deployato in produzione e stabile.
 
 ### Criteri di Qualità
-- **Performance**: [Metriche specifiche]
-- **Sicurezza**: [Standard da rispettare]
-- **Usabilità**: [Criteri UX]
-- **Affidabilità**: [Uptime e error rates]
+- **Performance**: Tempo di risposta medio < 1 secondo per le azioni principali.
+- **Sicurezza**: Nessuna vulnerabilità critica o alta identificata durante i test di sicurezza.
+- **Usabilità**: Tasso di successo nel completamento del task di prenotazione > 95%.
+- **Affidabilità**: Uptime del servizio > 99.9%.
 
 ---
 
 ## 📋 Assumptions (Assunzioni)
 
 ### Assunzioni Tecniche
-- [Assunzione 1 su tecnologie o infrastruttura]
-- [Assunzione 2 su disponibilità di risorse]
-- [Assunzione 3 su integrazione con sistemi esistenti]
+- Le API di Keycloak sono stabili e disponibili per l'integrazione.
+- L'infrastruttura di produzione (Kubernetes) è correttamente configurata e disponibile.
+- Il servizio SMTP per l'invio di email è affidabile.
 
 ### Assunzioni di Business
-- [Assunzione 1 su budget e risorse]
-- [Assunzione 2 su timeline e priorità]
-- [Assunzione 3 su supporto management]
+- Il budget allocato è sufficiente per completare il progetto.
+- Le priorità di business non cambieranno drasticamente durante lo sviluppo.
+- Il management supporterà l'adozione del nuovo strumento.
 
 ### Assunzioni sugli Utenti
-- [Assunzione 1 su competenze utenti]
-- [Assunzione 2 su disponibilità per testing]
-- [Assunzione 3 su adoption della soluzione]
+- I dipendenti hanno le competenze informatiche di base per utilizzare un'applicazione web.
+- I dipendenti sono disposti a seguire le nuove procedure di prenotazione.
 
 ---
 
 ## ⚠️ Constraints (Vincoli)
 
 ### Vincoli Tecnici
-- **Tecnologie**: [Tecnologie che devono/non devono essere usate]
-- **Piattaforme**: [Sistemi operativi o browser supportati]
-- **Performance**: [Limiti di performance richiesti]
-- **Sicurezza**: [Standard di sicurezza da rispettare]
+- **Tecnologie**: Il frontend deve essere sviluppato in React, il backend in Node.js.
+- **Piattaforme**: L'applicazione deve essere compatibile con le ultime due versioni di Chrome, Firefox, Edge e Safari.
+- **Sicurezza**: L'autenticazione deve essere gestita esclusivamente tramite Keycloak.
 
 ### Vincoli di Tempo
-- **Go-Live Date**: [Data fissa non negoziabile]
-- **Milestone Intermedie**: [Date chiave nel progetto]
-- **Finestre di Deployment**: [Quando è possibile fare rilasci]
+- **Go-Live Date**: 31/10/2024.
+- **Milestone Intermedie**: Definite nel piano di progetto.
 
 ### Vincoli di Budget
-- **Budget Totale**: [Importo massimo disponibile]
-- **Budget per Fase**: [Ripartizione per milestone]
-- **Costi Ricorrenti**: [Limiti per licenze, cloud, etc.]
+- **Budget Totale**: [cifra non definita].
 
 ### Vincoli Organizzativi
-- **Risorse Disponibili**: [Limitazioni sul team]
-- **Approvazioni Richieste**: [Processi di approval necessari]
-- **Policy Aziendali**: [Regole interne da rispettare]
+- Il team di sviluppo è composto da 4 persone.
+- Le decisioni sui requisiti devono essere approvate dal Product Owner.
 
 ---
 
@@ -156,43 +150,42 @@
 - 2.3 Requirements Validation
 
 ### 3. Development
-- 3.1 [Modulo 1] Development
-- 3.2 [Modulo 2] Development
-- 3.3 [Modulo 3] Development
-- 3.4 Integration Development
+- 3.1 Frontend Development (React)
+- 3.2 Backend Development (Node.js)
+- 3.3 Database Design & Implementation (PostgreSQL)
+- 3.4 Keycloak Integration
 
 ### 4. Testing
 - 4.1 Unit Testing
 - 4.2 Integration Testing
 - 4.3 System Testing
-- 4.4 User Acceptance Testing
+- 4.4 User Acceptance Testing (UAT)
 
 ### 5. Deployment
 - 5.1 Environment Preparation
-- 5.2 Deployment Execution
+- 5.2 CI/CD Pipeline Setup
 - 5.3 Go-Live Support
 
 ### 6. Documentation & Training
 - 6.1 Technical Documentation
 - 6.2 User Documentation
-- 6.3 Training Material Development
-- 6.4 Training Delivery
+- 6.3 Training Delivery
 
 ---
 
 ## 🔄 Change Management
 
 ### Change Control Process
-1. **Change Request Submission**: [Chi può sottomettere e come]
-2. **Impact Analysis**: [Chi valuta l'impatto]
-3. **Change Approval**: [Chi approva e criteri]
-4. **Implementation**: [Come vengono implementati i cambiamenti]
-5. **Communication**: [Come vengono comunicati]
+1.  **Change Request Submission**: Le richieste di modifica devono essere documentate e inviate al Product Owner.
+2.  **Impact Analysis**: Il team di sviluppo valuta l'impatto della modifica.
+3.  **Change Approval**: Il Product Owner approva o respinge la modifica.
+4.  **Implementation**: Le modifiche approvate vengono inserite nel backlog di sviluppo.
+5.  **Communication**: Le decisioni vengono comunicate a tutti gli stakeholder.
 
 ### Change Control Board
-- **Chair**: [Nome e ruolo]
-- **Members**: [Lista membri]
-- **Meeting Frequency**: [Frequenza riunioni]
+- **Chair**: Product Owner
+- **Members**: Team Leader, Rappresentante degli utenti
+- **Meeting Frequency**: Su richiesta
 
 ---
 
@@ -201,17 +194,15 @@
 ### Stakeholder che devono approvare questo documento:
 
 | Nome | Ruolo | Data Approvazione | Firma |
-|------|-------|-------------------|-------|
-| [Nome 1] | [Ruolo] | _____________ | _____________ |
-| [Nome 2] | [Ruolo] | _____________ | _____________ |
-| [Nome 3] | [Ruolo] | _____________ | _____________ |
+|---|---|---|---|
+| [Nome Product Owner] | Product Owner | _____________ | _____________ |
+| [Nome Team Leader] | Team Leader | _____________ | _____________ |
 
 ### Storia delle Revisioni
 
 | Versione | Data | Autore | Cambiamenti |
-|----------|------|---------|-------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale |
-| 1.1 | [Data] | [Nome] | [Descrizione cambiamenti] |
+|---|---|---|---|
+| 1.0 | 22/07/2024 | [Nome] | Versione iniziale |
 
 ---
 

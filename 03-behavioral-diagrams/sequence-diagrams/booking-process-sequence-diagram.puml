@@ -1,0 +1,52 @@
+@startuml BookingProcess-SequenceDiagram
+!define PARTICIPANT actor
+!define OBJECT entity
+
+title Processo di Prenotazione - Diagramma di Sequenza
+
+' Definizione dei partecipanti
+actor Dipendente as User
+participant "Frontend\n(React)" as FE
+participant "Backend\n(Node.js)" as BE
+participant "Database\n(PostgreSQL)" as DB
+participant "Keycloak" as KC
+
+' Attivazione automatica
+autonumber
+
+' Scenario di login
+User -> FE : Inserisce credenziali
+activate FE
+FE -> BE : /api/auth/login
+activate BE
+BE -> KC : Verifica credenziali
+activate KC
+KC --> BE : Token JWT
+deactivate KC
+BE --> FE : Sessione creata
+deactivate BE
+FE --> User : Login successo
+deactivate FE
+
+|||
+note over User, DB : Flusso di prenotazione
+|||
+
+User -> FE : Richiede di prenotare una sala
+activate FE
+FE -> BE : POST /api/bookings
+activate BE
+BE -> DB : Verifica disponibilità
+activate DB
+DB --> BE : Sala disponibile
+deactivate DB
+BE -> DB : INSERT nuova prenotazione
+activate DB
+DB --> BE : Prenotazione creata
+deactivate DB
+BE --> FE : Conferma prenotazione
+deactivate BE
+FE --> User : Mostra conferma
+deactivate FE
+
+@enduml

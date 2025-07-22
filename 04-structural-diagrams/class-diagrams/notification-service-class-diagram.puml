@@ -1,0 +1,44 @@
+@startuml NotificationService-ClassDiagram
+!define SERVICE class
+
+title Servizio di Notifica - Diagramma delle Classi
+
+package "Service Layer" {
+
+  class BookingServiceImpl {
+    - bookingRepository: BookingRepository
+    - notificationService: NotificationService
+    --
+    + createBooking(booking: Booking): Booking
+  }
+
+  interface NotificationService <<interface>> {
+    + sendBookingConfirmation(user: User, booking: Booking): void
+  }
+
+  class EmailNotificationService implements NotificationService {
+    - emailProvider: EmailProvider
+    --
+    + sendBookingConfirmation(user: User, booking: Booking): void
+  }
+}
+
+package "Infrastructure Layer" {
+
+  interface EmailProvider <<interface>> {
+    + sendEmail(to: String, subject: String, body: String): void
+  }
+
+  class SmtpEmailProvider implements EmailProvider {
+    --
+    + sendEmail(to: String, subject: String, body: String): void
+  }
+}
+
+' Relazioni
+BookingServiceImpl --> NotificationService : "uses"
+EmailNotificationService ..|> NotificationService : "implements"
+EmailNotificationService --> EmailProvider : "uses"
+SmtpEmailProvider ..|> EmailProvider : "implements"
+
+@enduml

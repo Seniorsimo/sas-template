@@ -1,0 +1,35 @@
+@startuml BookingCancellation-ActivityDiagram
+!define SWIMLANE partition
+
+title Processo di Cancellazione Prenotazione
+
+|#LightBlue|Dipendente|
+start
+:Accede a "Le mie prenotazioni";
+:Seleziona una prenotazione;
+:Clicca su "Cancella";
+:Conferma cancellazione;
+
+|#LightGreen|Sistema di Prenotazione|
+:Verifica proprietà prenotazione;
+if (Utente è proprietario?) then (sì)
+  :Rimuove prenotazione;
+
+  |#LightYellow|Database|
+  :DELETE da tabella bookings;
+
+  |#LightGreen|Sistema di Prenotazione|
+  :Mostra messaggio di successo;
+
+  |#LightBlue|Dipendente|
+  :Visualizza lista aggiornata;
+  stop
+else (no)
+  :Mostra messaggio di errore "Non autorizzato";
+
+  |#LightBlue|Dipendente|
+  :Torna a "Le mie prenotazioni";
+  stop
+endif
+
+@enduml

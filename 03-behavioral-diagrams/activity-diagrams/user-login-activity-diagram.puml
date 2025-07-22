@@ -1,0 +1,33 @@
+@startuml UserLogin-ActivityDiagram
+!define SWIMLANE partition
+
+title Processo di Login Utente
+
+|#LightBlue|Dipendente|
+start
+:Richiede di accedere;
+:Viene reindirizzato a Keycloak;
+:Inserisce credenziali;
+
+|#LightGreen|Keycloak|
+:Valida credenziali;
+if (Credenziali valide?) then (sì)
+  :Genera token JWT;
+  :Reindirizza a sistema di prenotazione;
+else (no)
+  :Mostra messaggio di errore;
+
+  |#LightBlue|Dipendente|
+  :Reinserisce credenziali;
+  stop
+endif
+
+|#LightGreen|Sistema di Prenotazione|
+:Riceve token JWT;
+:Valida token e crea sessione;
+
+|#LightBlue|Dipendente|
+:Visualizza dashboard;
+stop
+
+@enduml

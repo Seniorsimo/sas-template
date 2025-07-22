@@ -1,0 +1,30 @@
+@startuml FailedLogin-SequenceDiagram
+!define PARTICIPANT actor
+!define OBJECT entity
+
+title Tentativo di Login Fallito - Diagramma di Sequenza
+
+' Definizione dei partecipanti
+actor Dipendente as User
+participant "Frontend\n(React)" as FE
+participant "Backend\n(Node.js)" as BE
+participant "Keycloak" as KC
+
+' Attivazione automatica
+autonumber
+
+' Scenario di login fallito
+User -> FE : Inserisce credenziali errate
+activate FE
+FE -> BE : /api/auth/login
+activate BE
+BE -> KC : Verifica credenziali
+activate KC
+KC --> BE : Errore autenticazione
+deactivate KC
+BE --> FE : Errore 401
+deactivate BE
+FE --> User : Mostra messaggio "Credenziali non valide"
+deactivate FE
+
+@enduml

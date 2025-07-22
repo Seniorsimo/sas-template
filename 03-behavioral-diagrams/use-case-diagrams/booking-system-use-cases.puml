@@ -1,0 +1,47 @@
+@startuml BookingSystem-UseCases
+!define RECTANGLE class
+
+title Sistema di Prenotazione Sale Riunioni - Casi d'Uso
+
+' Definizione degli attori
+actor "Dipendente" as Employee
+actor "Keycloak" as KeycloakSystem
+
+' Definizione del boundary del sistema
+rectangle "Sistema di Prenotazione" {
+
+  ' Casi d'uso principali
+  usecase UC1 as "Autenticarsi nel sistema"
+  usecase UC2 as "Visualizzare disponibilità sale"
+  usecase UC3 as "Prenotare una sala"
+  usecase UC4 as "Cancellare una prenotazione"
+  usecase UC5 as "Visualizzare le proprie prenotazioni"
+}
+
+' Relazioni attori-casi d'uso
+Employee --> UC1
+Employee --> UC2
+Employee --> UC3
+Employee --> UC4
+Employee --> UC5
+
+' Relazioni con sistemi esterni
+UC1 -- KeycloakSystem
+
+' Relazioni tra casi d'uso
+UC3 ..> UC2 : <<extend>>
+UC4 ..> UC5 : <<extend>>
+
+
+' Note esplicative
+note right of Employee
+  Un dipendente dell'azienda
+  che vuole prenotare una sala.
+end note
+
+note bottom of KeycloakSystem
+  Sistema di autenticazione
+  aziendale.
+end note
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml BookingSystem-ClassDiagram
+!define ENTITY class
+!define SERVICE class
+!define CONTROLLER class
+
+title Sistema di Prenotazione - Diagramma delle Classi
+
+package "Domain Model" {
+
+  class User {
+    - userId: UUID
+    - name: String
+    - email: String
+    --
+    + getUserId(): UUID
+  }
+
+  class Room {
+    - roomId: UUID
+    - name: String
+    - capacity: Integer
+    --
+    + getRoomId(): UUID
+  }
+
+  class Booking {
+    - bookingId: UUID
+    - startTime: DateTime
+    - endTime: DateTime
+    - userId: UUID
+    - roomId: UUID
+    --
+    + getBookingId(): UUID
+    + checkOverlap(other: Booking): boolean
+  }
+}
+
+package "Service Layer" {
+
+  interface BookingService <<interface>> {
+    + createBooking(booking: Booking): Booking
+    + getBookingsForRoom(roomId: UUID, date: Date): List<Booking>
+    + cancelBooking(bookingId: UUID, userId: UUID): void
+  }
+
+  class BookingServiceImpl implements BookingService {
+    - bookingRepository: BookingRepository
+    --
+    + createBooking(booking: Booking): Booking
+    + getBookingsForRoom(roomId: UUID, date: Date): List<Booking>
+    + cancelBooking(bookingId: UUID, userId: UUID): void
+  }
+}
+
+package "Repository Layer" {
+
+  interface BookingRepository <<interface>> {
+    + save(booking: Booking): Booking
+    + findById(bookingId: UUID): Booking
+    + findByRoomAndDate(roomId: UUID, date: Date): List<Booking>
+    + delete(bookingId: UUID): void
+  }
+}
+
+' Relazioni
+User "1" -- "0..*" Booking : "makes"
+Room "1" -- "0..*" Booking : "is booked for"
+
+BookingServiceImpl ..|> BookingService : "implements"
+BookingServiceImpl --> BookingRepository : "uses"
+
+@enduml

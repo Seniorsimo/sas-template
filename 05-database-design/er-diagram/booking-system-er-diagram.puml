@@ -1,0 +1,48 @@
+@startuml BookingSystem-ERDiagram
+!define ENTITY entity
+
+title Sistema di Prenotazione - Modello Entità-Relazione
+
+entity User {
+  * user_id : UUID <<PK>>
+  --
+  * name : VARCHAR(100)
+  * email : VARCHAR(100) <<UK>>
+}
+
+entity Room {
+  * room_id : UUID <<PK>>
+  --
+  * name : VARCHAR(100) <<UK>>
+  * capacity : INTEGER
+}
+
+entity Booking {
+  * booking_id : UUID <<PK>>
+  --
+  * start_time : TIMESTAMP
+  * end_time : TIMESTAMP
+  * user_id : UUID <<FK>>
+  * room_id : UUID <<FK>>
+}
+
+' Relazioni
+User ||--o{ Booking : "effettua"
+Room ||--o{ Booking : "è prenotata in"
+
+' Note
+note top of User
+  Tabella degli utenti che possono
+  prenotare le sale.
+  L'autenticazione è gestita
+  da Keycloak.
+end note
+
+note right of Booking
+  Contiene i dettagli di ogni
+  singola prenotazione.
+  La coppia (room_id, start_time)
+  dovrebbe essere unica.
+end note
+
+@enduml

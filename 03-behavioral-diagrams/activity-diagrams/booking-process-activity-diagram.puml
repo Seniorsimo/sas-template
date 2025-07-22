@@ -1,0 +1,36 @@
+@startuml BookingProcess-ActivityDiagram
+!define SWIMLANE partition
+
+title Processo di Prenotazione Sala Riunioni
+
+|#LightBlue|Dipendente|
+start
+:Accede al sistema;
+:Visualizza calendario sale;
+:Identifica fascia oraria libera;
+:Seleziona sala e orario;
+:Conferma prenotazione;
+
+|#LightGreen|Sistema di Prenotazione|
+:Verifica disponibilità;
+if (Sala disponibile?) then (sì)
+  :Crea prenotazione;
+
+  |#LightYellow|Database|
+  :Salva nuova prenotazione;
+
+  |#LightGreen|Sistema di Prenotazione|
+  :Invia notifica di conferma;
+
+  |#LightBlue|Dipendente|
+  :Riceve conferma;
+  stop
+else (no)
+  :Mostra messaggio di errore;
+
+  |#LightBlue|Dipendente|
+  :Torna al calendario;
+  stop
+endif
+
+@enduml

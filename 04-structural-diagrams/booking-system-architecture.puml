@@ -1,0 +1,60 @@
+@startuml booking-system-architecture
+!theme plain
+title Architettura di Sistema - Applicazione Prenotazione Sale
+
+' Definizione degli stili per i diversi layer
+skinparam package {
+    BackgroundColor<<frontend>> LightBlue
+    BackgroundColor<<backend>> LightGreen
+    BackgroundColor<<database>> LightPink
+    BackgroundColor<<auth>> LightYellow
+}
+
+package "Frontend Layer" <<frontend>> {
+    [React App] as Frontend
+}
+
+package "Backend Layer" <<backend>> {
+    [Node.js API] as Backend
+}
+
+package "Database Layer" <<database>> {
+    [PostgreSQL] as DB
+}
+
+package "Authentication" <<auth>> {
+    [Keycloak] as Keycloak
+}
+
+' Connessioni
+Frontend -> Backend : HTTP/HTTPS (REST API)
+Backend -> DB : TCP/IP
+Backend -> Keycloak : HTTP/HTTPS (OAuth2/OIDC)
+Frontend -> Keycloak : HTTP/HTTPS (OAuth2/OIDC)
+
+
+' Note
+note right of Frontend
+  Applicazione single-page
+  costruita con React.
+  Gestisce l'interfaccia utente.
+end note
+
+note right of Backend
+  API RESTful sviluppata in Node.js.
+  Contiene la logica di business
+  per la gestione delle prenotazioni.
+end note
+
+note bottom of DB
+  Database PostgreSQL per
+  la persistenza dei dati
+  (utenti, sale, prenotazioni).
+end note
+
+note bottom of Keycloak
+  Servizio di Identity and Access Management
+  utilizzato per l'autenticazione e
+  l'autorizzazione degli utenti.
+end note
+@enduml

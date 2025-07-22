@@ -1,0 +1,30 @@
+@startuml BookingCancellation-SequenceDiagram
+!define PARTICIPANT actor
+!define OBJECT entity
+
+title Cancellazione Prenotazione - Diagramma di Sequenza
+
+' Definizione dei partecipanti
+actor Dipendente as User
+participant "Frontend\n(React)" as FE
+participant "Backend\n(Node.js)" as BE
+participant "Database\n(PostgreSQL)" as DB
+
+' Attivazione automatica
+autonumber
+
+' Scenario di cancellazione
+User -> FE : Richiede di cancellare una prenotazione
+activate FE
+FE -> BE : DELETE /api/bookings/{bookingId}
+activate BE
+BE -> DB : Verifica proprietario e cancella prenotazione
+activate DB
+DB --> BE : Cancellazione avvenuta
+deactivate DB
+BE --> FE : Conferma cancellazione
+deactivate BE
+FE --> User : Mostra conferma
+deactivate FE
+
+@enduml

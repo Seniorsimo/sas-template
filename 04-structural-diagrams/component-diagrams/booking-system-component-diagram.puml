@@ -1,0 +1,49 @@
+@startuml BookingSystem-ComponentDiagram
+!theme blueprint
+title Architettura a Componenti - Sistema di Prenotazione
+
+package "Presentation Layer" {
+  [Frontend (React)] as WebUI
+}
+
+package "Application Layer" {
+  [Backend (Node.js)] as Backend
+}
+
+package "Infrastructure Layer" {
+  [Database (PostgreSQL)] as DB
+  [Keycloak] as Keycloak
+}
+
+interface "REST API" as RestApi
+
+WebUI --> RestApi
+
+RestApi - Backend
+
+Backend --> DB : "reads/writes"
+Backend --> Keycloak : "authenticates"
+
+note right of WebUI
+  Interfaccia utente web
+  responsiva per i dipendenti.
+end note
+
+note right of Backend
+  Logica di business,
+  gestione prenotazioni
+  e API REST.
+end note
+
+note bottom of DB
+  Database per la persistenza
+  di utenti, sale e prenotazioni.
+end note
+
+note bottom of Keycloak
+  Servizio esterno per la
+  gestione dell'autenticazione
+  e autorizzazione.
+end note
+
+@enduml
