@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.rooms,
+.booking-form,
+.bookings {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 30%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+li.selected {
+  background-color: #eee;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
