@@ -9,8 +9,6 @@
 }
 
 main {
-  display: flex;
-  justify-content: space-around;
   padding: 20px;
 }
 
@@ -19,7 +17,7 @@ main {
 .bookings {
   border: 1px solid #ccc;
   padding: 20px;
-  width: 30%;
+  margin-bottom: 20px;
 }
 
 ul {
