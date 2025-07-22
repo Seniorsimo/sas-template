@@ -1,2 +1,4 @@
 test-documentation.html
 *.pdf
+node_modules/
+src/frontend/node_modules/
