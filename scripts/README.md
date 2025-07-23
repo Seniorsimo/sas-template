@@ -1,151 +1,151 @@
-# 📄 Script per Generazione PDF/HTML
+# 📄 Scripts for PDF/HTML Generation
 
-Questa cartella contiene script per convertire l'intera documentazione del template enterprise in formati unificati per distribuzione e archivio.
+This folder contains scripts to convert the entire enterprise template documentation into unified formats for distribution and archiving.
 
-## 🚀 Opzioni Disponibili
+## 🚀 Available Options
 
-### 1. **Script HTML (Raccomandato)** ✅
-**File**: `generate-html.ps1`  
-**Requisiti**: Solo PowerShell (nativo Windows)  
-**Output**: File HTML professionale convertibile in PDF
+### 1. **HTML Script (Recommended)** ✅
+**File**: `generate-html.ps1`
+**Requirements**: PowerShell only (native to Windows)
+**Output**: Professional HTML file convertible to PDF
 
 ```powershell
-# Esecuzione base
+# Basic execution
 .\scripts\generate-html.ps1
 
-# Con parametri personalizzati
+# With custom parameters
 .\scripts\generate-html.ps1 -OutputPath ".\MyProject-Documentation.html" -Title "My Project Documentation"
 ```
 
-**Vantaggi**:
-- ✅ Non richiede installazioni aggiuntive
-- ✅ CSS professionale integrato
-- ✅ Ottimizzato per stampa/PDF
-- ✅ Funziona immediatamente
+**Advantages**:
+- ✅ No additional installations required
+- ✅ Integrated professional CSS
+- ✅ Optimized for printing/PDF
+- ✅ Works immediately
 
-**Come convertire in PDF**:
-1. Esegui lo script → genera file HTML
-2. Apri HTML nel browser (Chrome/Edge)
-3. Ctrl+P → "Salva come PDF"
-4. Imposta: A4, margini minimi, includi grafiche
+**How to convert to PDF**:
+1. Run the script → generates an HTML file
+2. Open the HTML in a browser (Chrome/Edge)
+3. Ctrl+P → "Save as PDF"
+4. Settings: A4, minimum margins, include graphics
 
-### 2. **Script Pandoc (Avanzato)** 🔧
-**File**: `generate-pdf.ps1`  
-**Requisiti**: Pandoc + LaTeX engine  
-**Output**: PDF nativo di alta qualità
+### 2. **Pandoc Script (Advanced)** 🔧
+**File**: `generate-pdf.ps1`
+**Requirements**: Pandoc + LaTeX engine
+**Output**: High-quality native PDF
 
 ```powershell
-# Installa Pandoc prima dell'uso
+# Install Pandoc before use
 winget install pandoc
 
-# Esecuzione base
+# Basic execution
 .\scripts\generate-pdf.ps1
 
-# Con diagrammi inclusi (richiede pandoc-plantuml)
+# With diagrams included (requires pandoc-plantuml)
 .\scripts\generate-pdf.ps1 -WithDiagrams
 
-# Con parametri personalizzati
+# With custom parameters
 .\scripts\generate-pdf.ps1 -OutputPath ".\enterprise-docs.pdf" -Title "Enterprise Documentation" -Verbose
 ```
 
-**Vantaggi**:
-- ✅ PDF nativo di qualità professionale
-- ✅ Numerazione automatica sezioni
-- ✅ Indice dei contenuti cliccabile
-- ✅ Supporto LaTeX per formatting avanzato
-- ✅ Possibilità di includere diagrammi PlantUML
+**Advantages**:
+- ✅ Professional quality native PDF
+- ✅ Automatic section numbering
+- ✅ Clickable table of contents
+- ✅ LaTeX support for advanced formatting
+- ✅ Ability to include PlantUML diagrams
 
-## 🎯 Esecuzione Rapida (VS Code)
+## 🎯 Quick Execution (VS Code)
 
 ### Via Task Runner
 1. **Ctrl+Shift+P** → "Tasks: Run Task"
-2. Seleziona:
-   - `Generate Documentation HTML` (più semplice)
-   - `Generate Documentation PDF (Pandoc)` (richiede Pandoc)
+2. Select:
+   - `Generate Documentation HTML` (simpler)
+   - `Generate Documentation PDF (Pandoc)` (requires Pandoc)
 
-### Via Terminal Integrato
+### Via Integrated Terminal
 ```powershell
-# Metodo HTML (sempre funziona)
+# HTML method (always works)
 .\scripts\generate-html.ps1
 
-# Metodo Pandoc (se installato)
+# Pandoc method (if installed)
 .\scripts\generate-pdf.ps1
 ```
 
-## 📋 Struttura Output
+## 📋 Output Structure
 
-### File Inclusi nel PDF/HTML
-Il sistema elabora automaticamente tutti i file secondo questo ordine:
+### Files Included in PDF/HTML
+The system automatically processes all files in this order:
 
 1. **Template Overview** (`README.md`)
-2. **Project Definition** (cartella 01-)
+2. **Project Definition** (folder 01-)
    - Project Description
-   - Stakeholders Analysis  
+   - Stakeholders Analysis
    - SMART Objectives
    - Project Scope
    - Risk Register
-3. **Requirements Management** (cartella 02-)
+3. **Requirements Management** (folder 02-)
    - User Stories
    - Functional Requirements
    - Non-Functional Requirements
    - Acceptance Criteria
-4. **Behavioral Design** (cartella 03-)
+4. **Behavioral Design** (folder 03-)
    - Use Case Diagrams
    - Activity Diagrams
    - Sequence Diagrams
-5. **Structural Design** (cartella 04-)
+5. **Structural Design** (folder 04-)
    - Class Diagrams
    - Component Diagrams
-6. **Database Design** (cartella 05-)
+6. **Database Design** (folder 05-)
    - ER Diagrams
    - Data Dictionary
 
-## 🔧 Personalizzazione
+## 🔧 Customization
 
-### Modifica Ordine File
-Edita l'array `$fileOrder` nei script per cambiare l'ordine o escludere sezioni.
+### Modify File Order
+Edit the `$fileOrder` array in the scripts to change the order or exclude sections.
 
-### Styling HTML
-Modifica la variabile `$css` in `generate-html.ps1` per personalizzare l'aspetto.
+### HTML Styling
+Modify the `$css` variable in `generate-html.ps1` to customize the appearance.
 
-### Parametri Pandoc
-Modifica l'array `$pandocArgs` in `generate-pdf.ps1` per opzioni avanzate LaTeX.
+### Pandoc Parameters
+Modify the `$pandocArgs` array in `generate-pdf.ps1` for advanced LaTeX options.
 
 ## 🚨 Troubleshooting
 
-### "Pandoc non trovato"
+### "Pandoc not found"
 ```powershell
-# Installa Pandoc
+# Install Pandoc
 winget install pandoc
 
-# Oppure scarica da: https://pandoc.org/installing.html
+# Or download from: https://pandoc.org/installing.html
 ```
 
 ### "Execution Policy Error"
 ```powershell
-# Abilita esecuzione script temporaneamente  
+# Temporarily enable script execution
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
-# Oppure esegui con parametro
+# Or run with parameter
 powershell -ExecutionPolicy Bypass -File .\scripts\generate-html.ps1
 ```
 
-### File mancanti
-Lo script continua anche se alcuni file template non esistono, segnalando i file mancanti.
+### Missing files
+The script continues even if some template files do not exist, reporting the missing files.
 
-## 📈 Esempi Output
+## 📈 Output Examples
 
 ### HTML Output
-- **Dimensione**: ~500KB per documentazione completa
-- **Formato**: Responsive, ottimizzato per stampa
-- **Compatibilità**: Tutti i browser moderni
-- **PDF**: Stampa diretta → PDF di ~50-100 pagine
+- **Size**: ~500KB for complete documentation
+- **Format**: Responsive, optimized for printing
+- **Compatibility**: All modern browsers
+- **PDF**: Direct printing → PDF of ~50-100 pages
 
-### Pandoc PDF Output  
-- **Dimensione**: ~2-5MB per documentazione completa
-- **Qualità**: Professionale con LaTeX rendering
-- **Formato**: A4, margini ottimizzati
-- **Lunghezza**: 50-150 pagine (dipende dal contenuto)
+### Pandoc PDF Output
+- **Size**: ~2-5MB for complete documentation
+- **Quality**: Professional with LaTeX rendering
+- **Format**: A4, optimized margins
+- **Length**: 50-150 pages (depending on content)
 
 ---
-💡 **Suggerimento**: Inizia sempre con il metodo HTML per semplicità, passa a Pandoc solo se hai bisogno di qualità tipografica superiore.
+💡 **Tip**: Always start with the HTML method for simplicity, switch to Pandoc only if you need higher typographical quality.

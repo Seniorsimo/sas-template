@@ -1,154 +1,154 @@
-# Obiettivi del Progetto
+# Project Objectives
 
-## Informazioni Generali
-**Progetto**: [Nome del Progetto]
-**Versione**: [Versione]
-**Data**: [Data]
-**Responsabile**: [Nome Responsabile]
-
----
-
-## 🎯 Obiettivi di Business
-
-### Obiettivo Primario
-[Descrivi l'obiettivo principale che il progetto deve raggiungere dal punto di vista del business]
-
-### Obiettivi Secondari
-1. **[Nome Obiettivo 1]**
-   - Descrizione: [Descrizione dettagliata]
-   - Metrica: [Come misurarlo]
-   - Target: [Valore target]
-
-2. **[Nome Obiettivo 2]**
-   - Descrizione: [Descrizione dettagliata]
-   - Metrica: [Come misurarlo]
-   - Target: [Valore target]
-
-3. **[Nome Obiettivo 3]**
-   - Descrizione: [Descrizione dettagliata]
-   - Metrica: [Come misurarlo]
-   - Target: [Valore target]
+## General Information
+**Project**: [Project Name]
+**Version**: [Version]
+**Date**: [Date]
+**Manager**: [Manager's Name]
 
 ---
 
-## 🔧 Obiettivi Tecnici
+## 🎯 Business Objectives
+
+### Primary Objective
+[Describe the main objective that the project must achieve from a business perspective]
+
+### Secondary Objectives
+1. **[Objective Name 1]**
+   - Description: [Detailed description]
+   - Metric: [How to measure it]
+   - Target: [Target value]
+
+2. **[Objective Name 2]**
+   - Description: [Detailed description]
+   - Metric: [How to measure it]
+   - Target: [Target value]
+
+3. **[Objective Name 3]**
+   - Description: [Detailed description]
+   - Metric: [How to measure it]
+   - Target: [Target value]
+
+---
+
+## 🔧 Technical Objectives
 
 ### Performance
-- **Tempo di Risposta**: [es. < 2 secondi per le operazioni principali]
-- **Throughput**: [es. gestire 1000 utenti concorrenti]
-- **Disponibilità**: [es. 99.9% uptime]
+- **Response Time**: [e.g., < 2 seconds for main operations]
+- **Throughput**: [e.g., handle 1000 concurrent users]
+- **Availability**: [e.g., 99.9% uptime]
 
-### Scalabilità
-- **Orizzontale**: [es. supportare fino a X server]
-- **Verticale**: [es. utilizzare risorse fino a Y GB RAM]
-- **Storage**: [es. gestire Z TB di dati]
+### Scalability
+- **Horizontal**: [e.g., support up to X servers]
+- **Vertical**: [e.g., use resources up to Y GB RAM]
+- **Storage**: [e.g., manage Z TB of data]
 
-### Sicurezza
-- **Autenticazione**: [es. implementare OAuth 2.0]
-- **Autorizzazione**: [es. controllo accessi basato su ruoli]
-- **Crittografia**: [es. TLS 1.3 per tutte le comunicazioni]
-- **Compliance**: [es. conformità GDPR]
+### Security
+- **Authentication**: [e.g., implement OAuth 2.0]
+- **Authorization**: [e.g., role-based access control]
+- **Encryption**: [e.g., TLS 1.3 for all communications]
+- **Compliance**: [e.g., GDPR compliance]
 
-### Manutenibilità
-- **Code Coverage**: [es. > 80% test coverage]
-- **Documentazione**: [es. API documentation completa]
-- **Monitoring**: [es. logging centralizzato e metriche]
-
----
-
-## 📊 Obiettivi di Qualità
-
-### Usabilità
-- **Facilità d'uso**: [es. utente può completare task principale in < 3 click]
-- **Accessibilità**: [es. conformità WCAG 2.1 AA]
-- **User Experience**: [es. Net Promoter Score > 8]
-
-### Affidabilità
-- **MTBF** (Mean Time Between Failures): [es. > 720 ore]
-- **MTTR** (Mean Time To Recovery): [es. < 1 ora]
-- **Error Rate**: [es. < 0.1% di errori]
-
-### Portabilità
-- **Browser Support**: [es. Chrome, Firefox, Safari, Edge (ultime 2 versioni)]
-- **Dispositivi**: [es. Desktop, Tablet, Mobile]
-- **Sistema Operativo**: [es. Windows, macOS, Linux]
+### Maintainability
+- **Code Coverage**: [e.g., > 80% test coverage]
+- **Documentation**: [e.g., complete API documentation]
+- **Monitoring**: [e.g., centralized logging and metrics]
 
 ---
 
-## 📈 Metriche di Successo
+## 📊 Quality Objectives
 
-### KPI Primari
-| Metrica | Baseline | Target | Scadenza |
-|---------|----------|---------|----------|
-| [Nome KPI 1] | [Valore attuale] | [Valore target] | [Data] |
-| [Nome KPI 2] | [Valore attuale] | [Valore target] | [Data] |
-| [Nome KPI 3] | [Valore attuale] | [Valore target] | [Data] |
+### Usability
+- **Ease of Use**: [e.g., user can complete the main task in < 3 clicks]
+- **Accessibility**: [e.g., WCAG 2.1 AA compliance]
+- **User Experience**: [e.g., Net Promoter Score > 8]
 
-### KPI Secondari
-- **[Nome Metrica 1]**: [Descrizione e target]
-- **[Nome Metrica 2]**: [Descrizione e target]
-- **[Nome Metrica 3]**: [Descrizione e target]
+### Reliability
+- **MTBF** (Mean Time Between Failures): [e.g., > 720 hours]
+- **MTTR** (Mean Time To Recovery): [e.g., < 1 hour]
+- **Error Rate**: [e.g., < 0.1% of errors]
 
----
-
-## 🚧 Vincoli e Limitazioni
-
-### Vincoli Tecnici
-- [es. Deve integrarsi con sistema legacy X]
-- [es. Limitazioni di budget per infrastruttura cloud]
-- [es. Deve utilizzare tecnologie già approvate dall'azienda]
-
-### Vincoli Temporali
-- **Data di Go-Live**: [Data finale]
-- **Milestone Principali**: 
-  - [Milestone 1]: [Data]
-  - [Milestone 2]: [Data]
-  - [Milestone 3]: [Data]
-
-### Vincoli di Risorse
-- **Budget**: [Importo disponibile]
-- **Team Size**: [Numero persone]
-- **Competenze Richieste**: [Lista competenze necessarie]
+### Portability
+- **Browser Support**: [e.g., Chrome, Firefox, Safari, Edge (latest 2 versions)]
+- **Devices**: [e.g., Desktop, Tablet, Mobile]
+- **Operating System**: [e.g., Windows, macOS, Linux]
 
 ---
 
-## 🔄 Criteri di Accettazione
+## 📈 Success Metrics
 
-### Criteri Funzionali
-- [ ] [Criterio funzionale 1]
-- [ ] [Criterio funzionale 2]
-- [ ] [Criterio funzionale 3]
+### Primary KPIs
+| Metric       | Baseline      | Target        | Deadline |
+|--------------|---------------|---------------|----------|
+| [KPI Name 1] | [Current value] | [Target value] | [Date]   |
+| [KPI Name 2] | [Current value] | [Target value] | [Date]   |
+| [KPI Name 3] | [Current value] | [Target value] | [Date]   |
 
-### Criteri Non-Funzionali
-- [ ] [Criterio non-funzionale 1]
-- [ ] [Criterio non-funzionale 2]
-- [ ] [Criterio non-funzionale 3]
-
-### Criteri di Deployment
-- [ ] [Criterio di deployment 1]
-- [ ] [Criterio di deployment 2]
-- [ ] [Criterio di deployment 3]
+### Secondary KPIs
+- **[Metric Name 1]**: [Description and target]
+- **[Metric Name 2]**: [Description and target]
+- **[Metric Name 3]**: [Description and target]
 
 ---
 
-## 📝 Note e Assunzioni
+## 🚧 Constraints and Limitations
 
-### Assunzioni
-1. [Assunzione 1 sul contesto o sulle risorse]
-2. [Assunzione 2 sulle tecnologie o integrations]
-3. [Assunzione 3 sugli utenti o sul mercato]
+### Technical Constraints
+- [e.g., Must integrate with legacy system X]
+- [e.g., Budget limitations for cloud infrastructure]
+- [e.g., Must use technologies already approved by the company]
 
-### Dipendenze Esterne
-- [Dipendenza 1]: [Descrizione e impatto]
-- [Dipendenza 2]: [Descrizione e impatto]
-- [Dipendenza 3]: [Descrizione e impatto]
+### Time Constraints
+- **Go-Live Date**: [Final Date]
+- **Main Milestones**:
+  - [Milestone 1]: [Date]
+  - [Milestone 2]: [Date]
+  - [Milestone 3]: [Date]
 
-### Rischi Identificati
-- **[Rischio 1]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
-- **[Rischio 2]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
-- **[Rischio 3]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
+### Resource Constraints
+- **Budget**: [Available amount]
+- **Team Size**: [Number of people]
+- **Required Skills**: [List of necessary skills]
 
 ---
 
-*Ultima modifica: [Data]*
-*Versione documento: [Numero versione]*
+## 🔄 Acceptance Criteria
+
+### Functional Criteria
+- [ ] [Functional criterion 1]
+- [ ] [Functional criterion 2]
+- [ ] [Functional criterion 3]
+
+### Non-Functional Criteria
+- [ ] [Non-functional criterion 1]
+- [ ] [Non-functional criterion 2]
+- [ ] [Non-functional criterion 3]
+
+### Deployment Criteria
+- [ ] [Deployment criterion 1]
+- [ ] [Deployment criterion 2]
+- [ ] [Deployment criterion 3]
+
+---
+
+## 📝 Notes and Assumptions
+
+### Assumptions
+1. [Assumption 1 about context or resources]
+2. [Assumption 2 about technologies or integrations]
+3. [Assumption 3 about users or the market]
+
+### External Dependencies
+- [Dependency 1]: [Description and impact]
+- [Dependency 2]: [Description and impact]
+- [Dependency 3]: [Description and impact]
+
+### Identified Risks
+- **[Risk 1]**: [Probability: High/Medium/Low] - [Impact: High/Medium/Low]
+- **[Risk 2]**: [Probability: High/Medium/Low] - [Impact: High/Medium/Low]
+- **[Risk 3]**: [Probability: High/Medium/Low] - [Impact: High/Medium/Low]
+
+---
+
+*Last modified: [Date]*
+*Document version: [Version number]*

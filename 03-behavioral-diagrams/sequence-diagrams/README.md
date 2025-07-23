@@ -1,58 +1,58 @@
 # Sequence Diagrams
 
-I diagrammi di sequenza mostrano le interazioni tra oggetti in ordine temporale, evidenziando lo scambio di messaggi.
+Sequence diagrams show interactions between objects in temporal order, highlighting the exchange of messages.
 
-## 🎯 Scopo dei Sequence Diagrams
+## 🎯 Purpose of Sequence Diagrams
 
-I **Sequence Diagrams** servono per:
-- Modellare interazioni tra oggetti/sistemi
-- Mostrare l'ordine temporale dei messaggi
-- Documentare protocolli di comunicazione
-- Analizzare cicli di vita degli oggetti
+**Sequence Diagrams** are used to:
+- Model interactions between objects/systems
+- Show the temporal order of messages
+- Document communication protocols
+- Analyze object lifecycles
 
-## 📋 Elementi del Diagramma
+## 📋 Diagram Elements
 
-### Participants (Partecipanti)
+### Participants
 ```plantuml
-participant "Nome Partecipante" as P1
-actor "Attore" as A1
-boundary "Interfaccia" as I1
+participant "Participant Name" as P1
+actor "Actor" as A1
+boundary "Interface" as I1
 control "Controller" as C1
-entity "Entità" as E1
+entity "Entity" as E1
 database "Database" as DB1
 ```
 
-### Lifelines (Linee di Vita)
+### Lifelines
 ```plantuml
 participant A
 participant B
 
-A -> B: Messaggio
+A -> B: Message
 activate B
-B --> A: Risposta
+B --> A: Response
 deactivate B
 ```
 
-### Messaggi
+### Messages
 
-#### Messaggi Sincroni
+#### Synchronous Messages
 ```plantuml
-A -> B: Chiamata sincrona
-A <-- B: Risposta
+A -> B: Synchronous call
+A <-- B: Response
 ```
 
-#### Messaggi Asincroni
+#### Asynchronous Messages
 ```plantuml
-A ->> B: Messaggio asincrono
-A -->> B: Risposta asincrona
+A ->> B: Asynchronous message
+A -->> B: Asynchronous response
 ```
 
 #### Self-Messages
 ```plantuml
-A -> A: Auto-chiamata
+A -> A: Self-call
 ```
 
-### Attivazione e Distruzione
+### Activation and Destruction
 ```plantuml
 participant A
 participant B
@@ -65,27 +65,27 @@ A -> B: destroy
 destroy B
 ```
 
-### Alternative e Loop
+### Alternatives and Loops
 ```plantuml
-alt condizione true
-  A -> B: Messaggio A
-else condizione false
-  A -> C: Messaggio B
+alt condition true
+  A -> B: Message A
+else condition false
+  A -> C: Message B
 end
 
 loop 5 times
-  A -> B: Iterazione
+  A -> B: Iteration
 end
 ```
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica i Partecipanti
+### 1. Identify Participants
 ```plantuml
 @startuml
 !theme blueprint
 
-actor "Cliente" as C
+actor "Customer" as C
 participant "Web App" as W
 participant "API Gateway" as G
 participant "User Service" as U
@@ -93,7 +93,7 @@ database "User DB" as DB
 @enduml
 ```
 
-### 2. Modella l'Interazione
+### 2. Model the Interaction
 ```plantuml
 C -> W: Login Request
 activate W
@@ -113,24 +113,24 @@ W --> C: Login Success
 deactivate W
 ```
 
-### 3. Gestisci Scenari Alternativi
+### 3. Manage Alternative Scenarios
 ```plantuml
-alt credenziali valide
+alt valid credentials
   U --> G: success + user_data
-else credenziali non valide
+else invalid credentials
   U --> G: error: invalid_credentials
-else utente bloccato
+else user blocked
   U --> G: error: account_locked
 end
 ```
 
-## 🏗️ Pattern Comuni
+## 🏗️ Common Patterns
 
-### Pattern Request-Response Semplice
+### Simple Request-Response Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Pattern Request-Response Base
+title Base Request-Response Pattern
 
 participant "Client" as C
 participant "Server" as S
@@ -142,11 +142,11 @@ deactivate S
 @enduml
 ```
 
-### Pattern Multi-Layer
+### Multi-Layer Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Architettura Multi-Layer
+title Multi-Layer Architecture
 
 actor "User" as U
 participant "Presentation" as P
@@ -173,11 +173,11 @@ deactivate P
 @enduml
 ```
 
-### Pattern Async con Callback
+### Async with Callback Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Pattern Asincrono con Callback
+title Asynchronous Pattern with Callback
 
 participant "Client" as C
 participant "Service" as S
@@ -198,11 +198,11 @@ deactivate W
 @enduml
 ```
 
-### Pattern Error Handling
+### Error Handling Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Gestione Errori Completa
+title Complete Error Handling
 
 participant "Client" as C
 participant "API" as A
@@ -231,7 +231,7 @@ deactivate A
 @enduml
 ```
 
-### Pattern Microservices
+### Microservices Pattern
 ```plantuml
 @startuml
 !theme blueprint
@@ -283,31 +283,31 @@ deactivate G
 
 ## 📊 Best Practices
 
-### ✅ Messaggi e Naming
+### ✅ Messages and Naming
 ```plantuml
-' ✅ Nomi descrittivi e azioni chiare
+' ✅ Descriptive names and clear actions
 User -> AuthService: authenticateUser(username, password)
 AuthService -> Database: findUserByUsername(username)
 
-' ❌ Nomi vaghi
+' ❌ Vague names
 User -> System: doStuff()
 System -> DB: getData()
 ```
 
-### ✅ Livello di Astrazione
+### ✅ Level of Abstraction
 ```plantuml
-' ✅ Focus su business logic
+' ✅ Focus on business logic
 Client -> OrderService: createOrder(orderData)
 OrderService -> PaymentService: processPayment(amount)
 
-' ❌ Troppo tecnico
+' ❌ Too technical
 Client -> Controller: HTTP POST /orders
 Controller -> Repository: executeSQL(query)
 ```
 
-### ✅ Gestione Activation
+### ✅ Activation Management
 ```plantuml
-' ✅ Activation corrette
+' ✅ Correct activations
 A -> B: request
 activate B
 B -> C: delegate
@@ -317,12 +317,12 @@ deactivate C
 B --> A: response
 deactivate B
 
-' ❌ Activation mancanti o sbagliate - evitare
+' ❌ Missing or wrong activations - avoid
 ```
 
 ### ✅ Return Messages
 ```plantuml
-' ✅ Esplicita return per chiarezza
+' ✅ Explicit return for clarity
 A -> B: getData()
 activate B
 B -> DB: query
@@ -332,14 +332,14 @@ deactivate DB
 B --> A: processedData
 deactivate B
 
-' ✅ Implicita per semplicità quando ovvia
+' ✅ Implicit for simplicity when obvious
 A -> B: simpleRequest
 B --> A: simpleResponse
 ```
 
-## 🎨 Styling e Personalizzazione
+## 🎨 Styling and Customization
 
-### Stereotipi e Colori
+### Stereotypes and Colors
 ```plantuml
 !define ACTOR_COLOR #E8F5E8
 !define BOUNDARY_COLOR #E3F2FD
@@ -354,7 +354,7 @@ participant "Service" as S <<entity>> ENTITY_COLOR
 database "DB" as DB DATABASE_COLOR
 ```
 
-### Grouping e Separatori
+### Grouping and Separators
 ```plantuml
 == Authentication Phase ==
 User -> System: login()
@@ -371,18 +371,18 @@ Service -> Database: saveData()
 System -> System: cleanup()
 ```
 
-### Note e Commenti
+### Notes and Comments
 ```plantuml
 User -> System: request
-note right: Questo messaggio include\nvalidazione dei parametri
+note right: This message includes\nparameter validation
 
 System -> Database: query
-note over Database: Query ottimizzata\ncon indici appropriati
+note over Database: Query optimized\nwith appropriate indexes
 ```
 
-## 🧪 Esempi per Dominio
+## 🧪 Examples by Domain
 
-### E-commerce: Processo di Checkout
+### E-commerce: Checkout Process
 ```plantuml
 @startuml
 !theme blueprint
@@ -414,32 +414,32 @@ activate PS
 alt payment successful
   PS --> W: paymentConfirmed(transactionId)
   deactivate PS
-  
+
   W -> OS: createOrder(cartItems, transactionId)
   activate OS
-  
+
   loop for each item
     OS -> IS: reserveItem(itemId, quantity)
     activate IS
     IS --> OS: reserved
     deactivate IS
   end
-  
+
   OS -> ODB: saveOrder(orderData)
   activate ODB
   ODB --> OS: orderId
   deactivate ODB
-  
+
   OS --> W: orderCreated(orderId)
   deactivate OS
-  
+
   W -> CS: clearCart(userId)
   activate CS
   CS --> W: cartCleared
   deactivate CS
-  
+
   W --> C: Order Confirmation
-  
+
 else payment failed
   PS --> W: paymentFailed(reason)
   deactivate PS
@@ -450,7 +450,7 @@ deactivate W
 @enduml
 ```
 
-### Sistema Bancario: Trasferimento Fondi
+### Banking System: Fund Transfer
 ```plantuml
 @startuml
 !theme blueprint
@@ -484,30 +484,30 @@ deactivate AS
 alt sufficient funds
   B -> TS: initiateTransfer(fromAccount, toAccount, amount)
   activate TS
-  
+
   TS -> AS: debitAccount(fromAccount, amount)
   activate AS
   AS -> ADB: UPDATE accounts SET balance = balance - amount
   AS --> TS: debitSuccess
   deactivate AS
-  
+
   TS -> AS: creditAccount(toAccount, amount)
   activate AS
   AS -> ADB: UPDATE accounts SET balance = balance + amount
   AS --> TS: creditSuccess
   deactivate AS
-  
+
   TS -> TS: logTransaction()
   TS --> B: transferComplete(transactionId)
   deactivate TS
-  
+
   B -> NS: sendConfirmation(customer, transactionDetails)
   activate NS
   NS --> B: notificationSent
   deactivate NS
-  
+
   B --> C: Transfer Successful
-  
+
 else insufficient funds
   B --> C: Insufficient Funds Error
 end
@@ -516,7 +516,7 @@ deactivate B
 @enduml
 ```
 
-### Sistema IoT: Device Management
+### IoT System: Device Management
 ```plantuml
 @startuml
 !theme blueprint
@@ -572,49 +572,49 @@ end
 @enduml
 ```
 
-## 🔄 Sequence vs Altri Diagrammi
+## 🔄 Sequence vs Other Diagrams
 
 ### Sequence vs Activity
 ```yaml
 Sequence Diagrams:
-  - Focus: Interazioni tra oggetti
-  - Asse temporale: Verticale, esplicito
-  - Prospettiva: Collaborazione
-  - Dettaglio: Messaggi e protocolli
+  - Focus: Interactions between objects
+  - Time axis: Vertical, explicit
+  - Perspective: Collaboration
+  - Detail: Messages and protocols
 
 Activity Diagrams:
-  - Focus: Workflow e processi
-  - Controllo di flusso: Decisioni e parallelismo
-  - Prospettiva: Processo business
-  - Dettaglio: Attività e stati
+  - Focus: Workflows and processes
+  - Control flow: Decisions and parallelism
+  - Perspective: Business process
+  - Detail: Activities and states
 ```
 
 ### Sequence vs Communication
 ```yaml
 Sequence Diagrams:
-  - Layout: Verticale, temporale
-  - Enfasi: Ordine dei messaggi
-  - Complessità: Buono per molti messaggi
-  - Use case: Protocolli dettagliati
+  - Layout: Vertical, temporal
+  - Emphasis: Order of messages
+  - Complexity: Good for many messages
+  - Use case: Detailed protocols
 
 Communication Diagrams:
-  - Layout: Grafo, spaziale
-  - Enfasi: Relazioni tra oggetti
-  - Complessità: Buono per pochi oggetti
-  - Use case: Overview architetturale
+  - Layout: Graph, spatial
+  - Emphasis: Relationships between objects
+  - Complexity: Good for few objects
+  - Use case: Architectural overview
 ```
 
-## 🔍 Tracciabilità e Documentazione
+## 🔍 Traceability and Documentation
 
-### Collegamento con Use Cases
+### Link with Use Cases
 ```plantuml
-title Sequence per Use Case "UC-001: User Login"
-note over User, Database: Implementa User Story US-001\nRequisiti: REQ-F-001, REQ-NF-003
+title Sequence for Use Case "UC-001: User Login"
+note over User, Database: Implements User Story US-001\nRequirements: REQ-F-001, REQ-NF-003
 
 User -> System: login(username, password)
 ```
 
-### Mapping con API Documentation
+### Mapping with API Documentation
 ```plantuml
 note right of API: POST /api/v1/auth/login\nContent-Type: application/json\n{\n  "username": "string",\n  "password": "string"\n}
 
@@ -636,7 +636,7 @@ User -> System: unauthorizedRequest()
 System --> User: 401 Unauthorized
 ```
 
-## 🧪 Testing dei Sequence Diagrams
+## 🧪 Testing Sequence Diagrams
 
 ### Test Scenario Mapping
 ```yaml
@@ -662,7 +662,7 @@ MD --> S: mock_data
 S --> C: processed_response
 ```
 
-## 🔧 Tools e Integration
+## 🔧 Tools and Integration
 
 ### PlantUML Advanced Features
 ```plantuml
@@ -682,7 +682,7 @@ B --> A: response
 A -> B: after space
 ```
 
-### Integration con IDE
+### Integration with IDEs
 - **VS Code**: PlantUML extension + live preview
 - **IntelliJ**: PlantUML plugin + syntax highlighting
 - **Eclipse**: PlantUML plugin
@@ -781,15 +781,15 @@ deactivate CB
 @enduml
 ```
 
-## 📞 Supporto
+## 📞 Support
 
-Per domande sui Sequence Diagrams:
+For questions about Sequence Diagrams:
 
-- **Software Architect**: [Responsabile design interazioni]
-- **API Designer**: [Responsabile design interfacce]
-- **Integration Specialist**: [Responsabile integrazioni]
-- **Technical Lead**: [Responsabile implementazione]
+- **Software Architect**: [Responsible for interaction design]
+- **API Designer**: [Responsible for interface design]
+- **Integration Specialist**: [Responsible for integrations]
+- **Technical Lead**: [Responsible for implementation]
 
 ---
 
-*I Sequence Diagrams sono il DNA delle interazioni software. Usali per documentare come i componenti collaborano per realizzare le funzionalità.*
+*Sequence Diagrams are the DNA of software interactions. Use them to document how components collaborate to achieve functionalities.*

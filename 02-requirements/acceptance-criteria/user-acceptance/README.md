@@ -1,50 +1,50 @@
 # User Acceptance Criteria
 
-Questa cartella contiene i criteri di accettazione dal punto di vista dell'utente finale per validare che il software soddisfi le necessità di business e le aspettative degli stakeholder.
+This folder contains acceptance criteria from the end-user's perspective to validate that the software meets business needs and stakeholder expectations.
 
-## 🎯 Scopo degli User Acceptance Criteria
+## 🎯 Purpose of User Acceptance Criteria
 
-Gli **User Acceptance Criteria** servono per:
-- Validare funzionalità dal punto di vista utente
-- Confermare soddisfazione requisiti di business
-- Verificare usabilità e user experience
-- Garantire allineamento con aspettative stakeholder
+**User Acceptance Criteria** are used to:
+- Validate functionality from the user's point of view
+- Confirm that business requirements are met
+- Verify usability and user experience
+- Ensure alignment with stakeholder expectations
 
-## 👥 Tipologie di User Acceptance Testing (UAT)
+## 👥 Types of User Acceptance Testing (UAT)
 
 ### Business Acceptance Testing (BAT)
-- **Processi di Business**: Workflow aziendali
-- **Regole di Business**: Logica applicativa specifica
-- **Reporting**: Dashboard e reportistica
-- **Compliance**: Aderenza a normative
+- **Business Processes**: Corporate workflows
+- **Business Rules**: Specific application logic
+- **Reporting**: Dashboards and reports
+- **Compliance**: Adherence to regulations
 
 ### Alpha Testing
-- **Internal Testing**: Testing interno team sviluppo
-- **Controlled Environment**: Ambiente controllato
-- **Feature Validation**: Validazione funzionalità core
-- **Early Feedback**: Feedback preliminare
+- **Internal Testing**: Testing by the internal development team
+- **Controlled Environment**: Controlled environment
+- **Feature Validation**: Validation of core functionalities
+- **Early Feedback**: Preliminary feedback
 
 ### Beta Testing
-- **External Users**: Utenti reali in ambiente reale
-- **Limited Release**: Rilascio limitato
-- **Real-world Scenarios**: Scenari d'uso reali
-- **Production-like**: Ambiente simile produzione
+- **External Users**: Real users in a real environment
+- **Limited Release**: Limited release
+- **Real-world Scenarios**: Real-life use cases
+- **Production-like**: Environment similar to production
 
 ### Contract Acceptance Testing
-- **Contractual Requirements**: Requisiti contrattuali
-- **Vendor Deliverables**: Deliverable fornitori
-- **SLA Validation**: Verifica service level agreement
-- **Compliance Testing**: Testing conformità contratto
+- **Contractual Requirements**: Contractual requirements
+- **Vendor Deliverables**: Vendor deliverables
+- **SLA Validation**: Verification of service level agreements
+- **Compliance Testing**: Testing for contract compliance
 
 ### Regulation Acceptance Testing
-- **GDPR Compliance**: Conformità privacy
-- **Industry Standards**: Standard settoriali
-- **Security Regulations**: Normative sicurezza
+- **GDPR Compliance**: Privacy compliance
+- **Industry Standards**: Industry standards
+- **Security Regulations**: Security regulations
 - **Accessibility**: WCAG, Section 508
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica il Tipo di UAT
+### 1. Identify the UAT Type
 ```bash
 # Business Process Testing
 AC-U-BP-001-order-management.md
@@ -59,57 +59,57 @@ AC-U-REG-001-gdpr-compliance.md
 AC-U-PERF-001-page-load-times.md
 ```
 
-### 2. Definisci User Persona
-- **Primary Users**: Utenti principali sistema
-- **Secondary Users**: Utenti occasionali
-- **Admin Users**: Utenti amministrativi
-- **External Users**: Utenti esterni/clienti
+### 2. Define User Persona
+- **Primary Users**: Main users of the system
+- **Secondary Users**: Occasional users
+- **Admin Users**: Administrative users
+- **External Users**: External users/customers
 
-### 3. Descrivi User Journey
-- **Entry Points**: Come utente accede
-- **Main Flow**: Percorso principale
-- **Alternative Paths**: Percorsi alternativi
-- **Exit Points**: Come utente completa task
+### 3. Describe User Journey
+- **Entry Points**: How the user accesses
+- **Main Flow**: Main path
+- **Alternative Paths**: Alternative paths
+- **Exit Points**: How the user completes a task
 
-## 🎭 User Personas per UAT
+## 🎭 User Personas for UAT
 
-### End User (Utente Finale)
+### End User
 ```yaml
-Caratteristiche:
-  - Utilizzo quotidiano del sistema
-  - Focus su efficienza e facilità d'uso
-  - Limitate competenze tecniche
-  - Interesse in produttività
+Characteristics:
+  - Daily use of the system
+  - Focus on efficiency and ease of use
+  - Limited technical skills
+  - Interest in productivity
 
 Test Focus:
-  - Workflow intuitivi
-  - Messaggi d'errore chiari
-  - Performance perceived
+  - Intuitive workflows
+  - Clear error messages
+  - Perceived performance
   - Mobile responsiveness
 ```
 
-### Business User (Utente Business)
+### Business User
 ```yaml
-Caratteristiche:
-  - Responsabile processi aziendali
-  - Focus su conformità e reporting
-  - Competenze domain-specific
-  - Interesse in accuracy e compliance
+Characteristics:
+  - Responsible for business processes
+  - Focus on compliance and reporting
+  - Domain-specific skills
+  - Interest in accuracy and compliance
 
 Test Focus:
   - Business rule validation
   - Report accuracy
   - Audit trails
-  - Integration con business systems
+  - Integration with business systems
 ```
 
-### Administrator (Amministratore)
+### Administrator
 ```yaml
-Caratteristiche:
-  - Gestione configurazione sistema
-  - Competenze tecniche avanzate
-  - Responsabile security e maintenance
-  - Focus su control e monitoring
+Characteristics:
+  - Manages system configuration
+  - Advanced technical skills
+  - Responsible for security and maintenance
+  - Focus on control and monitoring
 
 Test Focus:
   - Admin interfaces
@@ -118,13 +118,13 @@ Test Focus:
   - System monitoring
 ```
 
-### External User (Utente Esterno)
+### External User
 ```yaml
-Caratteristiche:
-  - Accesso limitato al sistema
-  - Interazione occasionale
-  - Varie competenze tecniche
-  - Focus su task completion
+Characteristics:
+  - Limited access to the system
+  - Occasional interaction
+  - Various technical skills
+  - Focus on task completion
 
 Test Focus:
   - Self-service capabilities
@@ -142,7 +142,7 @@ Given I am a new user visiting the registration page
 When I complete the registration process
 Then I can register successfully in ≤ 3 minutes
 And I receive clear confirmation
-And I understand next steps
+And I understand the next steps
 ```
 
 ### Business Process Testing
@@ -189,27 +189,27 @@ And the system feels responsive
 
 ### Usability Quality
 - [ ] **Task Completion**: 95% task success rate
-- [ ] **Task Efficiency**: Tasks completed in expected time
+- [ ] **Task Efficiency**: Tasks completed in the expected time
 - [ ] **Error Recovery**: Users can recover from errors
-- [ ] **User Satisfaction**: Score ≥ 4/5 nelle survey
+- [ ] **User Satisfaction**: Score ≥ 4/5 in surveys
 
 ### Business Value Quality
-- [ ] **Business Goals**: Obiettivi business raggiunti
-- [ ] **Process Efficiency**: Miglioramento processi attuali
-- [ ] **ROI Achievement**: Return on investment realizzato
-- [ ] **Stakeholder Approval**: Approvazione stakeholder
+- [ ] **Business Goals**: Business objectives achieved
+- [ ] **Process Efficiency**: Improvement of current processes
+- [ ] **ROI Achievement**: Return on investment realized
+- [ ] **Stakeholder Approval**: Stakeholder approval
 
 ### Functional Quality
-- [ ] **Feature Completeness**: Tutte le funzionalità richieste
-- [ ] **Business Rules**: Regole business implementate
-- [ ] **Data Accuracy**: Dati corretti e affidabili
-- [ ] **Integration**: Sistemi integrati funzionano
+- [ ] **Feature Completeness**: All required functionalities
+- [ ] **Business Rules**: Business rules implemented
+- [ ] **Data Accuracy**: Correct and reliable data
+- [ ] **Integration**: Integrated systems work
 
 ### User Experience Quality
-- [ ] **Intuitive Design**: Interfaccia intuitiva
-- [ ] **Consistent UI**: Design coerente
-- [ ] **Responsive**: Funziona su tutti device
-- [ ] **Accessible**: Conforme standard accessibilità
+- [ ] **Intuitive Design**: Intuitive interface
+- [ ] **Consistent UI**: Consistent design
+- [ ] **Responsive**: Works on all devices
+- [ ] **Accessible**: Complies with accessibility standards
 
 ## 🔄 UAT Process Flow
 
@@ -280,25 +280,25 @@ Deliverables:
 ## 📋 UAT Checklist per Scenario
 
 ### Pre-Test Checklist
-- [ ] **User Persona Identified**: Target user per scenario
-- [ ] **Business Context**: Scenario business context
-- [ ] **Prerequisites**: System state prereqs
+- [ ] **User Persona Identified**: Target user for the scenario
+- [ ] **Business Context**: Business context of the scenario
+- [ ] **Prerequisites**: System state prerequisites
 - [ ] **Test Data**: Realistic test data ready
 - [ ] **Success Criteria**: Clear definition of success
 
 ### During Test Checklist
 - [ ] **User Instructions**: Clear, non-leading instructions
 - [ ] **Observation**: User behavior observed
-- [ ] **Think Aloud**: User verbalizza processo decisionale
-- [ ] **Issue Documentation**: Problemi documentati in real-time
+- [ ] **Think Aloud**: User verbalizes the decision-making process
+- [ ] **Issue Documentation**: Problems documented in real-time
 - [ ] **Timing Recorded**: Task completion times
 
 ### Post-Test Checklist
 - [ ] **Feedback Collected**: Structured user feedback
 - [ ] **Satisfaction Measured**: User satisfaction score
-- [ ] **Issues Prioritized**: Problemi categorizzati per severity
+- [ ] **Issues Prioritized**: Problems categorized by severity
 - [ ] **Recommendations**: Improvement recommendations
-- [ ] **Follow-up Planned**: Next steps definiti
+- [ ] **Follow-up Planned**: Next steps defined
 
 ## 🎯 UAT Success Metrics
 
@@ -313,11 +313,11 @@ User Satisfaction: ≥ 4.0/5.0
 
 ### Qualitative Metrics
 ```yaml
-User Confidence: Users feel confident using system
-Intuitiveness: Users find system intuitive
-Usefulness: System provides business value
-Efficiency: System improves user productivity
-Satisfaction: Users enjoy using system
+User Confidence: Users feel confident using the system
+Intuitiveness: Users find the system intuitive
+Usefulness: The system provides business value
+Efficiency: The system improves user productivity
+Satisfaction: Users enjoy using the system
 ```
 
 ### Business Metrics
@@ -329,7 +329,7 @@ User Adoption: High adoption rates
 Business Goals: Strategic objectives met
 ```
 
-## 🔧 UAT Tools e Techniques
+## 🔧 UAT Tools and Techniques
 
 ### Usability Testing Tools
 - **User Testing Platforms**: UserTesting.com, Lookback
@@ -378,32 +378,32 @@ Business Goals: Strategic objectives met
 ## 💡 UAT Best Practices
 
 ### ✅ Planning Best Practices
-- **Start Early** nel development lifecycle
-- **Involve Real Users** non solo proxy users
-- **Create Realistic Scenarios** based su real workflows
-- **Plan Multiple Rounds** di testing se necessario
-- **Budget Adequate Time** per proper UAT
+- **Start Early** in the development lifecycle
+- **Involve Real Users**, not just proxy users
+- **Create Realistic Scenarios** based on real workflows
+- **Plan Multiple Rounds** of testing if necessary
+- **Budget Adequate Time** for proper UAT
 
 ### ✅ Execution Best Practices
-- **Use Real Data** quando possibile
-- **Test in Production-like Environment**
-- **Document Everything** per future reference
-- **Facilitate Don't Direct** lascia utenti esplorare
-- **Focus on User Goals** non solo funzionalità
+- **Use Real Data** when possible
+- **Test in a Production-like Environment**
+- **Document Everything** for future reference
+- **Facilitate, Don't Direct**, let users explore
+- **Focus on User Goals**, not just functionalities
 
 ### ✅ Feedback Best Practices
-- **Ask Open Questions** per gather insights
-- **Prioritize Issues** per impact e frequency
-- **Involve Users in Solutions** quando appropriato
-- **Close the Loop** con follow-up communication
-- **Share Results** con all stakeholders
+- **Ask Open Questions** to gather insights
+- **Prioritize Issues** by impact and frequency
+- **Involve Users in Solutions** when appropriate
+- **Close the Loop** with follow-up communication
+- **Share Results** with all stakeholders
 
-### ❌ Anti-Patterns da Evitare
-- **Proxy Users**: Usare non-users per testing
-- **Leading Questions**: Influenzare user responses
-- **Rushed UAT**: Insufficient time per proper testing
-- **Ignore Feedback**: Not acting su user feedback
-- **One-Size-Fits-All**: Same approach per all users
+### ❌ Anti-Patterns to Avoid
+- **Proxy Users**: Using non-users for testing
+- **Leading Questions**: Influencing user responses
+- **Rushed UAT**: Insufficient time for proper testing
+- **Ignoring Feedback**: Not acting on user feedback
+- **One-Size-Fits-All**: Same approach for all users
 
 ## 📈 UAT Reporting
 
@@ -455,16 +455,16 @@ Minor Issues:
   - Documentation issues
 ```
 
-## 📞 Supporto e Contatti
+## 📞 Support and Contacts
 
-Per domande sugli User Acceptance Criteria:
+For questions about User Acceptance Criteria:
 
-- **Product Owner**: [Responsabile product requirements]
-- **UX Designer**: [Responsabile user experience]
-- **Business Analyst**: [Responsabile business requirements]
-- **Quality Manager**: [Responsabile quality assurance]
-- **Project Manager**: [Responsabile project delivery]
+- **Product Owner**: [Responsible for product requirements]
+- **UX Designer**: [Responsible for user experience]
+- **Business Analyst**: [Responsible for business requirements]
+- **Quality Manager**: [Responsible for quality assurance]
+- **Project Manager**: [Responsible for project delivery]
 
 ---
 
-*Il successo di un sistema software si misura dalla soddisfazione degli utenti finali. UAT è il momento di verifica che il software non solo funzioni, ma che funzioni bene per chi lo userà ogni giorno.*
+*The success of a software system is measured by the satisfaction of its end-users. UAT is the moment to verify that the software not only works, but that it works well for those who will use it every day.*

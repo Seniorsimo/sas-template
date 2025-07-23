@@ -1,98 +1,98 @@
 # Database Design
 
-Questa sezione contiene la progettazione del database tramite **DIAGRAMMI VISIVI SOLAMENTE**.
+This section contains the database design using **VISUAL DIAGRAMS ONLY**.
 
-> ⚠️ **IMPORTANTE**: Questa sezione contiene esclusivamente diagrammi e documentazione del design. 
-> Non include codice SQL, DDL o script di implementazione.
+> ⚠️ **IMPORTANT**: This section exclusively contains diagrams and design documentation.
+> It does not include SQL code, DDL, or implementation scripts.
 
-## 🎯 Obiettivo
+## 🎯 Objective
 
-Documentare la struttura dei dati tramite:
-- **Diagrammi ER (Entity-Relationship)** per il modello concettuale
-- **Dizionario dei dati** per la documentazione delle entità
-- **Diagrammi di architettura dati** per la visione complessiva
+To document the data structure through:
+- **ER (Entity-Relationship) Diagrams** for the conceptual model
+- **Data Dictionary** for entity documentation
+- **Data Architecture Diagrams** for the overall view
 
-## Struttura
+## Structure
 
 ### er-diagram/
-Diagrammi Entità-Relazione che mostrano:
-- Entità del dominio e loro attributi
-- Relazioni tra entità con cardinalità
-- Chiavi primarie e foreign keys
-- Vincoli di integrità referenziale
-- Modello concettuale e logico dei dati
+Entity-Relationship diagrams that show:
+- Domain entities and their attributes
+- Relationships between entities with cardinality
+- Primary and foreign keys
+- Referential integrity constraints
+- Conceptual and logical data model
 
 ### data-dictionary.md
-Dizionario dei dati completo che documenta:
-- Definizione di tutte le entità
-- Descrizione dettagliata degli attributi
-- Tipi di dati e vincoli di dominio
-- Relazioni e regole di business
-- Glossario dei termini del dominio
+A complete data dictionary that documents:
+- Definition of all entities
+- Detailed description of attributes
+- Data types and domain constraints
+- Relationships and business rules
+- Glossary of domain terms
 
-## Convenzioni ER
+## ER Conventions
 
-### Entità
-- Nomi al singolare e in PascalCase
-- Attributi in camelCase
-- Chiavi primarie sottolineate
+### Entities
+- Singular names in PascalCase
+- Attributes in camelCase
+- Primary keys underlined
 
-### Relazioni
-- Nomi descrittivi del tipo di relazione
-- Cardinalità chiaramente specificata
-- Ruoli quando necessario
+### Relationships
+- Descriptive names of the relationship type
+- Clearly specified cardinality
+- Roles when necessary
 
-### Attributi
-- Tipi di dati specificati
-- Vincoli di dominio
-- Valori di default
+### Attributes
+- Specified data types
+- Domain constraints
+- Default values
 
-## Processo di Design Concettuale
+## Conceptual Design Process
 
-1. **Analisi dei Requisiti**: Estrazione entità dai requirements e user stories
-2. **Modello Concettuale**: Diagramma ER ad alto livello con entità principali
-3. **Modello Logico**: Raffinamento con normalizzazione e vincoli
-4. **Documentazione**: Dizionario dati e descrizioni dettagliate
+1. **Requirements Analysis**: Extracting entities from requirements and user stories
+2. **Conceptual Model**: High-level ER diagram with main entities
+3. **Logical Model**: Refinement with normalization and constraints
+4. **Documentation**: Data dictionary and detailed descriptions
 
-> 📝 **Nota**: L'implementazione fisica (DDL, SQL) non è inclusa in questa sezione.
+> 📝 **Note**: The physical implementation (DDL, SQL) is not included in this section.
 
-## Livelli di Normalizzazione
+## Normalization Levels
 
-- **1NF**: Eliminazione gruppi ripetuti e valori multipli
-- **2NF**: Eliminazione dipendenze parziali dalle chiavi
-- **3NF**: Eliminazione dipendenze transitive
-- **BCNF**: Forma normale Boyce-Codd per casi complessi
+- **1NF**: Elimination of repeating groups and multiple values
+- **2NF**: Elimination of partial dependencies on keys
+- **3NF**: Elimination of transitive dependencies
+- **BCNF**: Boyce-Codd normal form for complex cases
 
-## Best Practices per Diagrammi ER
+## Best Practices for ER Diagrams
 
-### Design Concettuale
-- **Entità chiare**: Nomi significativi che riflettono il dominio business
-- **Attributi essenziali**: Include solo attributi rilevanti per il modello
-- **Relazioni semantiche**: Nomi che esprimono il significato business
-- **Cardinalità accurate**: Rifletti le regole business reali
+### Conceptual Design
+- **Clear Entities**: Meaningful names that reflect the business domain
+- **Essential Attributes**: Include only relevant attributes for the model
+- **Semantic Relationships**: Names that express business meaning
+- **Accurate Cardinality**: Reflect real business rules
 
 ### Notation Standards
-- **Entità**: Rettangoli con nomi al singolare (Customer, Order, Product)
-- **Attributi**: Ovali collegati alle entità con linee
-- **Chiavi primarie**: Attributi sottolineati o evidenziati
-- **Relazioni**: Rombi con verbi che descrivono l'associazione
+- **Entities**: Rectangles with singular names (Customer, Order, Product)
+- **Attributes**: Ovals connected to entities with lines
+- **Primary Keys**: Underlined or highlighted attributes
+- **Relationships**: Diamonds with verbs describing the association
 
 ### Visual Organization
-- **Layout pulito**: Evita sovrapposizioni di linee
-- **Raggruppamento logico**: Entità correlate vicine
-- **Colori consistenti**: Usa colori per categorizzare entità
-- **Leggibilità**: Font e dimensioni appropriate
+- **Clean Layout**: Avoid overlapping lines
+- **Logical Grouping**: Related entities close together
+- **Consistent Colors**: Use colors to categorize entities
+- **Readability**: Appropriate fonts and sizes
 
-### Documentazione
-- **Tracciabilità**: Collegamenti con requirements e user stories
-- **Glossario**: Definizioni chiare per termini di dominio
-- **Vincoli**: Documenta regole business non esprimibili graficamente
-- **Versioning**: Mantieni storia delle modifiche al modello
+### Documentation
+- **Traceability**: Links to requirements and user stories
+- **Glossary**: Clear definitions for domain terms
+- **Constraints**: Document business rules not expressible graphically
+- **Versioning**: Maintain a history of model changes
 
-## Template e Strumenti
+## Templates and Tools
 
-### PlantUML per ER Diagrams
-Usa la sintassi PlantUML per diagrammi versionabili:
+### PlantUML for ER Diagrams
+Use PlantUML syntax for versionable diagrams:
 ```plantuml
 @startuml
 entity Customer {
@@ -105,9 +105,9 @@ entity Customer {
 @enduml
 ```
 
-### Collegamento con Altri Diagrammi
-- **Class Diagrams**: Mappatura entità → classi domain
-- **Component Diagrams**: Architettura data layer
-- **Use Cases**: Operazioni CRUD per ogni entità
-- Pianifica per la scalabilità
-- Documenta decisioni di denormalizzazione
+### Link with Other Diagrams
+- **Class Diagrams**: Mapping entities → domain classes
+- **Component Diagrams**: Data layer architecture
+- **Use Cases**: CRUD operations for each entity
+- Plan for scalability
+- Document denormalization decisions

@@ -1,245 +1,245 @@
-# REQ-F-XXX: [Titolo Requisito Core]
+# REQ-F-XXX: [Core Requirement Title]
 
-## 📋 Informazioni Generali
-**ID**: REQ-F-XXX  
-**Categoria**: Core Feature  
-**Modulo/Sistema**: [Nome modulo]  
-**Priorità**: Must Have | Should Have | Could Have | Won't Have  
-**Status**: Draft | Review | Approved | Implemented | Tested  
-**Owner**: [Stakeholder responsabile]  
+## 📋 General Information
+**ID**: REQ-F-XXX
+**Category**: Core Feature
+**Module/System**: [Module Name]
+**Priority**: Must Have | Should Have | Could Have | Won't Have
+**Status**: Draft | Review | Approved | Implemented | Tested
+**Owner**: [Responsible Stakeholder]
 **Assigned to**: [Team/Developer]
 
 ---
 
-## 📝 Descrizione
+## 📝 Description
 
-### Sommario
-[Breve descrizione di cosa il sistema deve fare]
+### Summary
+[Brief description of what the system must do]
 
-### Descrizione Dettagliata
-[Spiegazione completa della funzionalità richiesta, includendo contesto e motivazioni]
+### Detailed Description
+[Complete explanation of the required functionality, including context and motivations]
 
-### Valore di Business
-[Perché questo requisito è importante e quale valore porta]
+### Business Value
+[Why this requirement is important and what value it brings]
 
 ---
 
 ## 👥 Stakeholders
 
-### Richiedente
-**Nome**: [Stakeholder che ha richiesto]  
-**Ruolo**: [Posizione/Responsabilità]  
-**Interesse**: [Perché è importante per loro]
+### Requester
+**Name**: [Stakeholder who requested]
+**Role**: [Position/Responsibility]
+**Interest**: [Why it is important to them]
 
-### Utilizzatori Finali
-- **[Tipo Utente 1]**: [Come utilizzeranno questa funzionalità]
-- **[Tipo Utente 2]**: [Come utilizzeranno questa funzionalità]
-
----
-
-## ✅ Criteri di Accettazione
-
-### Scenario Principale
-**Given** [precondizione]  
-**When** [azione/evento]  
-**Then** [risultato atteso]
-
-### Scenario Alternativo 1
-**Given** [precondizione]  
-**When** [azione/evento diversa]  
-**Then** [risultato atteso diverso]
-
-### Scenario di Errore
-**Given** [precondizione di errore]  
-**When** [azione che causa errore]  
-**Then** [gestione errore attesa]
-
-### Criteri Aggiuntivi
-- [ ] [Criterio specifico 1]
-- [ ] [Criterio specifico 2]
-- [ ] [Criterio specifico 3]
+### End Users
+- **[User Type 1]**: [How they will use this functionality]
+- **[User Type 2]**: [How they will use this functionality]
 
 ---
 
-## 🔧 Specifiche Tecniche
+## ✅ Acceptance Criteria
+
+### Main Scenario
+**Given** [precondition]
+**When** [action/event]
+**Then** [expected result]
+
+### Alternative Scenario 1
+**Given** [precondition]
+**When** [different action/event]
+**Then** [different expected result]
+
+### Error Scenario
+**Given** [error precondition]
+**When** [action that causes an error]
+**Then** [expected error handling]
+
+### Additional Criteria
+- [ ] [Specific criterion 1]
+- [ ] [Specific criterion 2]
+- [ ] [Specific criterion 3]
+
+---
+
+## 🔧 Technical Specifications
 
 ### Input
-**Formato**: [Tipo di dati in input]  
-**Sorgente**: [Da dove arrivano i dati]  
-**Validazioni**: [Regole di validazione richieste]
+**Format**: [Type of input data]
+**Source**: [Where the data comes from]
+**Validations**: [Required validation rules]
 
 ### Processing
-**Business Logic**: [Elaborazioni da effettuare]  
-**Calcoli**: [Formule o algoritmi necessari]  
-**Regole**: [Business rules da applicare]
+**Business Logic**: [Processing to be performed]
+**Calculations**: [Necessary formulas or algorithms]
+**Rules**: [Business rules to be applied]
 
 ### Output
-**Formato**: [Tipo di dati in output]  
-**Destinazione**: [Dove vanno i risultati]  
-**Formato Presentazione**: [Come devono essere mostrati]
+**Format**: [Type of output data]
+**Destination**: [Where the results go]
+**Presentation Format**: [How they should be displayed]
 
-### Interfacce
-**UI Components**: [Componenti interfaccia necessari]  
-**API Endpoints**: [Endpoint da esporre se applicable]  
-**Database**: [Tabelle/entità coinvolte]
+### Interfaces
+**UI Components**: [Necessary interface components]
+**API Endpoints**: [Endpoints to be exposed if applicable]
+**Database**: [Involved tables/entities]
 
 ---
 
-## 📊 Requisiti Non-Funzionali Collegati
+## 📊 Related Non-Functional Requirements
 
 ### Performance
-- **Response Time**: [Tempo massimo risposta]
-- **Throughput**: [Operazioni per secondo]
-- **Concurrent Users**: [Utenti simultanei supportati]
+- **Response Time**: [Maximum response time]
+- **Throughput**: [Operations per second]
+- **Concurrent Users**: [Supported simultaneous users]
 
-### Sicurezza
-- **Authentication**: [Requisiti autenticazione]
-- **Authorization**: [Controlli accesso necessari]
-- **Data Protection**: [Protezione dati sensibili]
+### Security
+- **Authentication**: [Authentication requirements]
+- **Authorization**: [Necessary access controls]
+- **Data Protection**: [Protection of sensitive data]
 
-### Usabilità
-- **Accessibility**: [Standard WCAG da rispettare]
-- **Browser Support**: [Browser supportati]
-- **Mobile**: [Supporto dispositivi mobili]
+### Usability
+- **Accessibility**: [WCAG standards to be met]
+- **Browser Support**: [Supported browsers]
+- **Mobile**: [Support for mobile devices]
 
 ---
 
-## 🔗 Tracciabilità
+## 🔗 Traceability
 
-### Obiettivi Business
-- **[OBJ-XXX]**: [Riferimento a obiettivi da 01-project-definition]
-- **[OBJ-XXX]**: [Altri obiettivi collegati]
+### Business Objectives
+- **[OBJ-XXX]**: [Reference to objectives from 01-project-definition]
+- **[OBJ-XXX]**: [Other related objectives]
 
 ### User Stories
-- **[US-XXX]**: [Titolo user story collegata]
-- **[US-XXX]**: [Altre user stories collegate]
+- **[US-XXX]**: [Title of related user story]
+- **[US-XXX]**: [Other related user stories]
 
-### Casi d'Uso
-- **[UC-XXX]**: [Use case che implementa questo requisito]
-- **[UC-XXX]**: [Altri use case collegati]
+### Use Cases
+- **[UC-XXX]**: [Use case that implements this requirement]
+- **[UC-XXX]**: [Other related use cases]
 
-### Altri Requisiti
-**Dipendenze**: 
-- **[REQ-F-XXX]**: [Requisito da cui dipende]
-- **[REQ-I-XXX]**: [Integrazione necessaria]
+### Other Requirements
+**Dependencies**:
+- **[REQ-F-XXX]**: [Requirement it depends on]
+- **[REQ-I-XXX]**: [Necessary integration]
 
-**Conflitti**:
-- **[REQ-XXX]**: [Requisito in conflitto e risoluzione]
+**Conflicts**:
+- **[REQ-XXX]**: [Conflicting requirement and resolution]
 
 ---
 
-## 🧪 Strategia di Test
+## 🧪 Test Strategy
 
 ### Unit Testing
-- [ ] [Test unitario 1]
-- [ ] [Test unitario 2]
-- [ ] [Test unitario 3]
+- [ ] [Unit test 1]
+- [ ] [Unit test 2]
+- [ ] [Unit test 3]
 
 ### Integration Testing
-- [ ] [Test integrazione con componente X]
-- [ ] [Test integrazione con database]
-- [ ] [Test integrazione con API Y]
+- [ ] [Integration test with component X]
+- [ ] [Database integration test]
+- [ ] [Integration test with API Y]
 
 ### System Testing
-- [ ] [Test end-to-end scenario principale]
-- [ ] [Test scenari alternativi]
-- [ ] [Test gestione errori]
+- [ ] [End-to-end test of the main scenario]
+- [ ] [Test of alternative scenarios]
+- [ ] [Error handling test]
 
 ### User Acceptance Testing
-- [ ] [Test accettazione utente 1]
-- [ ] [Test accettazione utente 2]
+- [ ] [User acceptance test 1]
+- [ ] [User acceptance test 2]
 
 ---
 
-## 📋 Mockups e Design
+## 📋 Mockups and Design
 
 ### UI Mockups
-- [ ] [Link a wireframe/mockup]
-- [ ] [Link a prototipo interattivo]
+- [ ] [Link to wireframe/mockup]
+- [ ] [Link to interactive prototype]
 
 ### Data Flow Diagrams
-- [ ] [Diagramma flusso dati]
-- [ ] [Sequence diagram se complesso]
+- [ ] [Data flow diagram]
+- [ ] [Sequence diagram if complex]
 
 ### Business Process
-- [ ] [Diagramma processo business]
+- [ ] [Business process diagram]
 
 ---
 
-## ⚠️ Rischi e Mitigation
+## ⚠️ Risks and Mitigation
 
-### Rischi Tecnici
-- **[Rischio 1]**: [Descrizione]  
-  *Mitigazione*: [Piano di mitigazione]
-  
-- **[Rischio 2]**: [Descrizione]  
-  *Mitigazione*: [Piano di mitigazione]
+### Technical Risks
+- **[Risk 1]**: [Description]
+  *Mitigation*: [Mitigation plan]
 
-### Rischi di Business
-- **[Rischio Business 1]**: [Descrizione]  
-  *Mitigazione*: [Piano di mitigazione]
+- **[Risk 2]**: [Description]
+  *Mitigation*: [Mitigation plan]
+
+### Business Risks
+- **[Business Risk 1]**: [Description]
+  *Mitigation*: [Mitigation plan]
 
 ---
 
 ## 📅 Planning
 
-### Stima Effort
-- **Analysis**: [Giorni persona]
-- **Development**: [Giorni persona]  
-- **Testing**: [Giorni persona]
-- **Documentation**: [Giorni persona]
-- **Total**: [Giorni persona totali]
+### Effort Estimation
+- **Analysis**: [Person-days]
+- **Development**: [Person-days]
+- **Testing**: [Person-days]
+- **Documentation**: [Person-days]
+- **Total**: [Total person-days]
 
-### Milestone
-- **Analysis Complete**: [Data]
-- **Development Complete**: [Data]
-- **Testing Complete**: [Data]
-- **Ready for Production**: [Data]
+### Milestones
+- **Analysis Complete**: [Date]
+- **Development Complete**: [Date]
+- **Testing Complete**: [Date]
+- **Ready for Production**: [Date]
 
 ---
 
-## 📝 Note e Commenti
+## 📝 Notes and Comments
 
-### Note Implementative
-[Considerazioni specifiche per l'implementazione]
+### Implementation Notes
+[Specific considerations for implementation]
 
-### Decisioni Prese
-[Decisioni architetturali o di design prese durante l'analisi]
+### Decisions Made
+[Architectural or design decisions made during analysis]
 
-### Issues Aperte
-- [ ] [Issue 1 da risolvere]
-- [ ] [Issue 2 da risolvere]
+### Open Issues
+- [ ] [Issue 1 to be resolved]
+- [ ] [Issue 2 to be resolved]
 
 ---
 
 ## ✅ Sign-off
 
 ### Review Checklist
-- [ ] Requisito chiaro e non ambiguo
-- [ ] Criteri di accettazione testabili
-- [ ] Tracciabilità completa
-- [ ] Aspetti tecnici definiti
-- [ ] Rischi identificati
-- [ ] Stima effort ragionevole
+- [ ] Clear and unambiguous requirement
+- [ ] Testable acceptance criteria
+- [ ] Complete traceability
+- [ ] Defined technical aspects
+- [ ] Identified risks
+- [ ] Reasonable effort estimation
 
-### Approvazioni
-| Ruolo | Nome | Data | Firma |
-|-------|------|------|-------|
-| Business Analyst | [Nome] | ______ | ______ |
-| Technical Lead | [Nome] | ______ | ______ |
-| Product Owner | [Nome] | ______ | ______ |
+### Approvals
+| Role             | Name   | Date   | Signature |
+|------------------|--------|--------|-----------|
+| Business Analyst | [Name] | ______ | ______    |
+| Technical Lead   | [Name] | ______ | ______    |
+| Product Owner    | [Name] | ______ | ______    |
 
 ---
 
 ## 📊 Change History
 
-| Versione | Data | Autore | Cambiamenti |
-|----------|------|--------|-------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale |
-| 1.1 | [Data] | [Nome] | [Descrizione cambiamenti] |
+| Version | Date   | Author | Changes             |
+|---------|--------|--------|---------------------|
+| 1.0     | [Date] | [Name] | Initial version     |
+| 1.1     | [Date] | [Name] | [Description of changes] |
 
 ---
 
-*Requisito creato il: [Data]*  
-*Ultima modifica: [Data]*  
-*Prossima review: [Data]*
+*Requirement created on: [Date]*
+*Last modified: [Date]*
+*Next review: [Date]*

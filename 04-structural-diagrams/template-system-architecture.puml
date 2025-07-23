@@ -1,8 +1,8 @@
 @startuml system-architecture
 !theme plain
-title [Nome del Progetto] - Architettura di Sistema
+title [Project Name] - System Architecture
 
-' Definizione degli stili per i diversi layer
+' Definition of styles for the different layers
 skinparam package {
     BackgroundColor<<frontend>> LightBlue
     BackgroundColor<<gateway>> LightYellow
@@ -14,9 +14,9 @@ skinparam package {
 
 ' Frontend Layer
 package "Frontend Layer" <<frontend>> {
-    component [Applicazione Frontend] as FrontendApp
-    component [Interfaccia Utente] as UI
-    component [Gestione Stato] as StateManagement
+    component [Frontend Application] as FrontendApp
+    component [User Interface] as UI
+    component [State Management] as StateManagement
     
     FrontendApp -down-> UI
     FrontendApp -down-> StateManagement
@@ -24,8 +24,8 @@ package "Frontend Layer" <<frontend>> {
 
 ' API Gateway / Entry Point
 package "API Gateway" <<gateway>> {
-    component [Routing delle Richieste] as Routing
-    component [Autenticazione] as AuthGW
+    component [Request Routing] as Routing
+    component [Authentication] as AuthGW
     component [Rate Limiting] as RateLimit
     
     Routing -down-> AuthGW
@@ -34,9 +34,9 @@ package "API Gateway" <<gateway>> {
 
 ' Services Layer
 package "Services Layer" <<services>> {
-    component [Servizio A] as ServiceA
-    component [Servizio B] as ServiceB
-    component [Servizio C] as ServiceC
+    component [Service A] as ServiceA
+    component [Service B] as ServiceB
+    component [Service C] as ServiceC
     
     ServiceA -[hidden]right-> ServiceB
     ServiceB -[hidden]right-> ServiceC
@@ -44,9 +44,9 @@ package "Services Layer" <<services>> {
 
 ' Database Layer
 package "Database Layer" <<database>> {
-    database "Database Principale" as MainDB
+    database "Main Database" as MainDB
     database "Cache" as Cache
-    database "Storage File" as FileStorage
+    database "File Storage" as FileStorage
     
     MainDB -[hidden]right-> Cache
     Cache -[hidden]right-> FileStorage
@@ -54,9 +54,9 @@ package "Database Layer" <<database>> {
 
 ' External Services
 package "External Services" <<external>> {
-    component [Servizio Esterno 1] as ExternalService1
-    component [Servizio Esterno 2] as ExternalService2
-    component [Servizio Esterno 3] as ExternalService3
+    component [External Service 1] as ExternalService1
+    component [External Service 2] as ExternalService2
+    component [External Service 3] as ExternalService3
     
     ExternalService1 -[hidden]down-> ExternalService2
     ExternalService2 -[hidden]down-> ExternalService3
@@ -74,56 +74,56 @@ package "Infrastructure" <<infrastructure>> {
     Security -[hidden]right-> CICD
 }
 
-' Connessioni principali
+' Main connections
 FrontendApp -right-> Routing : HTTP/HTTPS
 Routing -right-> ServiceA : API
 Routing -right-> ServiceB : API
 Routing -right-> ServiceC : API
 
-' Connessioni ai database
-ServiceA -down-> MainDB : [Tipo connessione]
-ServiceB -down-> MainDB : [Tipo connessione]
-ServiceC -down-> MainDB : [Tipo connessione]
+' Database connections
+ServiceA -down-> MainDB : [Connection type]
+ServiceB -down-> MainDB : [Connection type]
+ServiceC -down-> MainDB : [Connection type]
 
-ServiceA -down-> Cache : [Tipo connessione]
-ServiceB -down-> Cache : [Tipo connessione]
-ServiceC -down-> Cache : [Tipo connessione]
+ServiceA -down-> Cache : [Connection type]
+ServiceB -down-> Cache : [Connection type]
+ServiceC -down-> Cache : [Connection type]
 
-ServiceB -down-> FileStorage : [Tipo connessione]
+ServiceB -down-> FileStorage : [Connection type]
 
-' Connessioni ai servizi esterni
+' External services connections
 Routing -left-> ExternalService1 : API Calls
 Routing -left-> ExternalService2 : API Calls
 Routing -left-> ExternalService3 : API Calls
 
-' Connessioni infrastruttura
+' Infrastructure connections
 LoadBalancer -up-> ServiceA
 LoadBalancer -up-> ServiceB
 LoadBalancer -up-> ServiceC
 
-' Note per chiarire l'architettura
+' Notes to clarify the architecture
 note right of FrontendApp
-  [Descrizione dell'applicazione frontend]
-  [Tecnologie utilizzate]
-  [Responsabilità principali]
+  [Description of the frontend application]
+  [Technologies used]
+  [Main responsibilities]
 end note
 
 note right of Routing
-  [Descrizione del punto di ingresso]
-  [Funzionalità implementate]
-  [Politiche di sicurezza]
+  [Description of the entry point]
+  [Implemented features]
+  [Security policies]
 end note
 
 note bottom of MainDB
-  [Tipo di database]
-  [Caratteristiche principali]
-  [Modello dati]
+  [Database type]
+  [Main features]
+  [Data model]
 end note
 
 note bottom of Cache
-  [Sistema di cache utilizzato]
-  [Strategia di caching]
-  [Ottimizzazioni]
+  [Caching system used]
+  [Caching strategy]
+  [Optimizations]
 end note
 
 @enduml

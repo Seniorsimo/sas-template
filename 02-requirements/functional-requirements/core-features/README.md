@@ -1,92 +1,92 @@
-# Core Features - Funzionalità Principali
+# Core Features
 
-Questa cartella contiene i requisiti per le funzionalità core del sistema.
+This folder contains the requirements for the core functionalities of the system.
 
-## 📋 Panoramica
+## 📋 Overview
 
-Le **Core Features** sono le funzionalità fondamentali senza le quali il sistema non può operare. Queste sono tipicamente classificate come "Must Have" nella prioritizzazione MoSCoW.
+**Core Features** are the fundamental functionalities without which the system cannot operate. These are typically classified as "Must Have" in MoSCoW prioritization.
 
-## 🎯 Categorie di Core Features
+## 🎯 Categories of Core Features
 
-### Autenticazione e Autorizzazione
-- Gestione login/logout utenti
-- Controllo accessi basato su ruoli
-- Gestione sessioni e token
-- Password policy e security
+### Authentication and Authorization
+- User login/logout management
+- Role-based access control
+- Session and token management
+- Password policy and security
 
-### Gestione Dati Principali
-- CRUD operations per entità core
-- Validazione dati
+### Main Data Management
+- CRUD operations for core entities
+- Data validation
 - Business rules enforcement
 - Data consistency
 
-### Business Logic Core
-- Processi business principali
+### Core Business Logic
+- Main business processes
 - Workflow automation
-- Calcoli e algoritmi core
+- Core calculations and algorithms
 - State management
 
-### Reporting e Analytics
-- Report standard
-- Dashboard principali
-- Export dati
+### Reporting and Analytics
+- Standard reports
+- Main dashboards
+- Data export
 - Audit logging
 
-## 📁 Struttura File
+## 📁 File Structure
 
 ### Template Naming
-`REQ-F-XXX-[nome-funzionalità].md`
+`REQ-F-XXX-[feature-name].md`
 
-### Esempi
+### Examples
 - `REQ-F-001-user-authentication.md`
 - `REQ-F-002-role-management.md`
 - `REQ-F-003-data-validation.md`
 
-## 📊 Priorità Core Features
+## 📊 Core Features Priority
 
-### Livello 1 - Sistema Base
-- [ ] Autenticazione utenti
-- [ ] Autorizzazione base
-- [ ] Gestione sessioni
-- [ ] Logging sistema
+### Level 1 - Base System
+- [ ] User authentication
+- [ ] Basic authorization
+- [ ] Session management
+- [ ] System logging
 
-### Livello 2 - Business Logic
-- [ ] Funzionalità business principali
-- [ ] Workflow core
-- [ ] Validazioni business
-- [ ] Notifiche base
+### Level 2 - Business Logic
+- [ ] Main business functionalities
+- [ ] Core workflows
+- [ ] Business validations
+- [ ] Basic notifications
 
-### Livello 3 - Features Avanzate
+### Level 3 - Advanced Features
 - [ ] Reporting
-- [ ] Analytics base
+- [ ] Basic analytics
 - [ ] Export/Import
-- [ ] Configurazioni sistema
+- [ ] System configurations
 
-## 🔗 Collegamenti
+## 🔗 Connections
 
-### User Stories Principali
-Le core features sono tipicamente derivate dalle user stories ad alta priorità dell'epic principale del progetto.
+### Main User Stories
+Core features are typically derived from the high-priority user stories of the project's main epic.
 
-### Architettura
-Le core features definiscono i componenti principali dell'architettura del sistema.
+### Architecture
+Core features define the main components of the system's architecture.
 
 ### Database
-Le core features determinano le entità principali del modello dati.
+Core features determine the main entities of the data model.
 
-## 💡 Linee Guida
+## 💡 Guidelines
 
-### Criteri per Core Features
-- **Essenziale**: Il sistema non può funzionare senza
-- **Frequente**: Utilizzato dalla maggioranza degli utenti
-- **Fondante**: Base per altre funzionalità
-- **MVP**: Incluso nel Minimum Viable Product
+### Criteria for Core Features
+- **Essential**: The system cannot function without it
+- **Frequent**: Used by the majority of users
+- **Foundational**: Basis for other functionalities
+- **MVP**: Included in the Minimum Viable Product
 
 ### Quality Gates
-- Tutti i requisiti core devono essere "Must Have"
-- Copertura test >= 95%
-- Performance requirements stringenti
-- Security requirements obbligatori
+- All core requirements must be "Must Have"
+- Test coverage >= 95%
+- Strict performance requirements
+- Mandatory security requirements
 
 ---
 
-*I requisiti in questa cartella rappresentano la base del sistema e devono essere implementati con la massima qualità.*
+*The requirements in this folder represent the foundation of the system and must be implemented with the highest quality.*

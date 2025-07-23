@@ -1,289 +1,289 @@
-# AC-I-XXX: [Titolo Criterio di Accettazione Integrazione]
+# AC-I-XXX: [Integration Acceptance Criterion Title]
 
-## 📋 Informazioni Generali
-**ID**: AC-I-XXX  
-**Categoria**: API Integration | System Integration | Data Integration | Service Integration  
-**Requisito Collegato**: [REQ-I-XXX] / [REQ-F-XXX]  
-**Integration Type**: Internal | External | Third-party | Legacy  
-**Priorità**: Critical | High | Medium | Low  
-**Status**: Draft | Review | Approved | Testing | Verified | Closed  
+## 📋 General Information
+**ID**: AC-I-XXX
+**Category**: API Integration | System Integration | Data Integration | Service Integration
+**Related Requirement**: [REQ-I-XXX] / [REQ-F-XXX]
+**Integration Type**: Internal | External | Third-party | Legacy
+**Priority**: Critical | High | Medium | Low
+**Status**: Draft | Review | Approved | Testing | Verified | Closed
 **Assigned to**: [Integration Engineer]
 
 ---
 
-## 📝 Descrizione Integrazione
+## 📝 Integration Description
 
-### Sommario
-[Breve descrizione dell'integrazione da testare]
+### Summary
+[Brief description of the integration to be tested]
 
 ### Integration Pattern
-**Pattern Type**: [Synchronous | Asynchronous | Batch | Event-driven | Request-Response]  
-**Protocol**: [HTTP/REST | SOAP | GraphQL | Message Queue | File Transfer | Database]  
-**Data Format**: [JSON | XML | CSV | Binary | Custom]  
+**Pattern Type**: [Synchronous | Asynchronous | Batch | Event-driven | Request-Response]
+**Protocol**: [HTTP/REST | SOAP | GraphQL | Message Queue | File Transfer | Database]
+**Data Format**: [JSON | XML | CSV | Binary | Custom]
 **Authentication**: [API Key | OAuth | JWT | Basic Auth | Certificate | Custom]
 
 ### Systems Involved
-**Source System**: [Nome sistema sorgente]  
-**Target System**: [Nome sistema destinazione]  
-**Middleware**: [ESB | API Gateway | Message Broker | Altro]  
-**Dependencies**: [Altri sistemi/servizi coinvolti]
+**Source System**: [Source system name]
+**Target System**: [Target system name]
+**Middleware**: [ESB | API Gateway | Message Broker | Other]
+**Dependencies**: [Other systems/services involved]
 
 ### Business Context
-[Perché questa integrazione è critica per il business]
+[Why this integration is critical for the business]
 
 ---
 
 ## 🔗 Integration Specifications
 
 ### Connection Details
-**Endpoint URL**: [URL endpoint se REST/SOAP]  
-**Port**: [Porta di comunicazione]  
-**Timeout**: [Timeout configurato]  
-**Retry Logic**: [Strategia di retry]  
-**Circuit Breaker**: [Configurazione circuit breaker]
+**Endpoint URL**: [Endpoint URL if REST/SOAP]
+**Port**: [Communication port]
+**Timeout**: [Configured timeout]
+**Retry Logic**: [Retry strategy]
+**Circuit Breaker**: [Circuit breaker configuration]
 
 ### Data Mapping
-**Input Schema**: [Riferimento schema input]  
-**Output Schema**: [Riferimento schema output]  
-**Field Mappings**: 
+**Input Schema**: [Reference to input schema]
+**Output Schema**: [Reference to output schema]
+**Field Mappings**:
 - [Source Field 1] → [Target Field 1]
 - [Source Field 2] → [Target Field 2]
 - [Source Field 3] → [Target Field 3]
 
 ### Transformation Rules
-**Data Validation**: [Regole di validazione dati]  
-**Data Enrichment**: [Arricchimento dati]  
-**Data Cleansing**: [Pulizia/normalizzazione dati]  
-**Business Rules**: [Regole business applicate]
+**Data Validation**: [Data validation rules]
+**Data Enrichment**: [Data enrichment]
+**Data Cleansing**: [Data cleaning/normalization]
+**Business Rules**: [Applied business rules]
 
 ---
 
-## 🧪 Scenari di Test Integrazione
+## 🧪 Integration Test Scenarios
 
 ### Scenario 1: Happy Path - Successful Integration
-**Objective**: Verificare funzionamento normale dell'integrazione
+**Objective**: To verify the normal operation of the integration
 
-**Given** il sistema sorgente ha dati validi  
-**And** il sistema destinazione è disponibile  
-**And** la connessione è stabilita correttamente  
-**When** viene inviata una richiesta di integrazione standard  
-**Then** i dati devono essere trasferiti correttamente  
-**And** il sistema destinazione deve confermare la ricezione  
-**And** il response deve essere ricevuto entro [X] secondi  
-**And** i dati mappati devono corrispondere allo schema atteso
+**Given** the source system has valid data
+**And** the target system is available
+**And** the connection is established correctly
+**When** a standard integration request is sent
+**Then** the data must be transferred correctly
+**And** the target system must confirm receipt
+**And** the response must be received within [X] seconds
+**And** the mapped data must match the expected schema
 
 ### Scenario 2: Error Handling - System Unavailable
-**Objective**: Verificare gestione errori quando il sistema destinazione non è disponibile
+**Objective**: To verify error handling when the target system is unavailable
 
-**Given** il sistema sorgente ha dati validi  
-**And** il sistema destinazione è non disponibile/offline  
-**When** viene tentata l'integrazione  
-**Then** il sistema deve rilevare l'indisponibilità  
-**And** deve attivare la logica di retry configurata  
-**And** deve loggare l'errore appropriatamente  
-**And** deve notificare l'errore ai sistemi di monitoring  
-**And** i dati devono essere preservati per retry successivi
+**Given** the source system has valid data
+**And** the target system is unavailable/offline
+**When** the integration is attempted
+**Then** the system must detect the unavailability
+**And** it must activate the configured retry logic
+**And** it must log the error appropriately
+**And** it must notify the monitoring systems of the error
+**And** the data must be preserved for subsequent retries
 
 ### Scenario 3: Data Validation - Invalid Input
-**Objective**: Verificare validazione dati di input
+**Objective**: To verify input data validation
 
-**Given** il sistema destinazione è disponibile  
-**And** vengono forniti dati non validi dal sistema sorgente  
-**When** viene tentata l'integrazione  
-**Then** il sistema deve rilevare i dati non validi  
-**And** deve rifiutare l'elaborazione  
-**And** deve restituire un errore descrittivo  
-**And** deve loggare i dettagli della validazione fallita  
-**And** non deve compromettere l'integrità del sistema destinazione
+**Given** the target system is available
+**And** invalid data is provided from the source system
+**When** the integration is attempted
+**Then** the system must detect the invalid data
+**And** it must refuse processing
+**And** it must return a descriptive error
+**And** it must log the details of the failed validation
+**And** it must not compromise the integrity of the target system
 
 ### Scenario 4: Performance Under Load
-**Objective**: Verificare performance dell'integrazione sotto carico
+**Objective**: To verify the integration's performance under load
 
-**Given** entrambi i sistemi sono operativi  
-**And** viene generato un carico di [X] richieste simultanee  
-**When** vengono processate le richieste di integrazione  
-**Then** il throughput deve essere >= [Y] transazioni/minuto  
-**And** il response time medio deve essere <= [Z] secondi  
-**And** non devono verificarsi errori di timeout  
-**And** le risorse di sistema devono rimanere entro i limiti
+**Given** both systems are operational
+**And** a load of [X] simultaneous requests is generated
+**When** the integration requests are processed
+**Then** the throughput must be >= [Y] transactions/minute
+**And** the average response time must be <= [Z] seconds
+**And** no timeout errors should occur
+**And** system resources must remain within limits
 
 ### Scenario 5: Transaction Rollback
-**Objective**: Verificare gestione rollback in caso di fallimento
+**Objective**: To verify rollback management in case of failure
 
-**Given** è iniziata una transazione di integrazione multi-step  
-**And** uno step intermedio fallisce  
-**When** viene rilevato il fallimento  
-**Then** deve essere eseguito il rollback di tutti gli step precedenti  
-**And** i sistemi devono tornare allo stato pre-transazione  
-**And** deve essere loggato il motivo del rollback  
-**And** eventuali lock devono essere rilasciati
+**Given** a multi-step integration transaction has started
+**And** an intermediate step fails
+**When** the failure is detected
+**Then** all previous steps must be rolled back
+**And** the systems must return to the pre-transaction state
+**And** the reason for the rollback must be logged
+**And** any locks must be released
 
 ---
 
-## ✅ Criteri di Accettazione Dettagliati
+## ✅ Detailed Acceptance Criteria
 
 ### Functional Integration Criteria
-- [ ] **Data Transfer**: Dati trasferiti correttamente in entrambe le direzioni
-- [ ] **Data Integrity**: Zero perdite o corruzioni di dati durante il trasferimento
-- [ ] **Field Mapping**: Tutti i campi mappati correttamente secondo le specifiche
-- [ ] **Business Rules**: Tutte le regole business applicate correttamente
-- [ ] **Validation**: Dati validati secondo gli schemi definiti
+- [ ] **Data Transfer**: Data transferred correctly in both directions
+- [ ] **Data Integrity**: Zero data loss or corruption during transfer
+- [ ] **Field Mapping**: All fields mapped correctly according to specifications
+- [ ] **Business Rules**: All business rules applied correctly
+- [ ] **Validation**: Data validated according to defined schemas
 
 ### Technical Integration Criteria
-- [ ] **Connectivity**: Connessione stabile e persistente
-- [ ] **Authentication**: Autenticazione funziona per tutti gli scenari
-- [ ] **Authorization**: Controlli di autorizzazione implementati correttamente
-- [ ] **Protocol Compliance**: Aderenza completa al protocollo di comunicazione
-- [ ] **Format Compliance**: Dati nel formato corretto (JSON/XML/etc.)
+- [ ] **Connectivity**: Stable and persistent connection
+- [ ] **Authentication**: Authentication works for all scenarios
+- [ ] **Authorization**: Authorization controls implemented correctly
+- [ ] **Protocol Compliance**: Full adherence to the communication protocol
+- [ ] **Format Compliance**: Data in the correct format (JSON/XML/etc.)
 
 ### Error Handling Criteria
-- [ ] **Connection Errors**: Gestione appropriata di errori di connessione
-- [ ] **Data Errors**: Validazione e gestione errori nei dati
-- [ ] **Timeout Handling**: Gestione timeout configurabile e funzionante
-- [ ] **Retry Logic**: Logica di retry implementata secondo specifiche
-- [ ] **Circuit Breaker**: Circuit breaker funziona come progettato
-- [ ] **Graceful Degradation**: Sistema degrada elegantemente in caso di errori
+- [ ] **Connection Errors**: Appropriate handling of connection errors
+- [ ] **Data Errors**: Validation and handling of data errors
+- [ ] **Timeout Handling**: Configurable and functional timeout management
+- [ ] **Retry Logic**: Retry logic implemented according to specifications
+- [ ] **Circuit Breaker**: Circuit breaker works as designed
+- [ ] **Graceful Degradation**: System degrades gracefully in case of errors
 
 ### Performance Criteria
-- [ ] **Response Time**: Tempo risposta <= [X] secondi per [scenario standard]
-- [ ] **Throughput**: >= [Y] transazioni/minuto sotto carico normale
-- [ ] **Concurrent Connections**: Supporta >= [Z] connessioni simultanee
-- [ ] **Resource Usage**: CPU <= [%], Memory <= [%] durante operazioni
-- [ ] **Network Utilization**: Utilizzo efficiente della banda disponibile
+- [ ] **Response Time**: Response time <= [X] seconds for [standard scenario]
+- [ ] **Throughput**: >= [Y] transactions/minute under normal load
+- [ ] **Concurrent Connections**: Supports >= [Z] simultaneous connections
+- [ ] **Resource Usage**: CPU <= [%], Memory <= [%] during operations
+- [ ] **Network Utilization**: Efficient use of available bandwidth
 
-### Monitoring e Observability
-- [ ] **Logging**: Tutti gli eventi critici loggati appropriatamente
-- [ ] **Metrics**: Metriche di performance raccolte e disponibili
-- [ ] **Alerting**: Alert configurati per eventi critici
-- [ ] **Tracing**: Request tracing funzionante end-to-end
-- [ ] **Health Checks**: Health check endpoints implementati e funzionanti
+### Monitoring and Observability
+- [ ] **Logging**: All critical events logged appropriately
+- [ ] **Metrics**: Performance metrics collected and available
+- [ ] **Alerting**: Alerts configured for critical events
+- [ ] **Tracing**: End-to-end request tracing working
+- [ ] **Health Checks**: Health check endpoints implemented and working
 
 ---
 
 ## 🔧 Test Configuration
 
 ### Test Environment Setup
-**Source System**: [Configurazione sistema sorgente]  
-**Target System**: [Configurazione sistema destinazione]  
-**Network Configuration**: [Setup rete test]  
-**Security Configuration**: [Configurazione sicurezza]  
-**Test Data**: [Dataset per test]
+**Source System**: [Source system configuration]
+**Target System**: [Target system configuration]
+**Network Configuration**: [Test network setup]
+**Security Configuration**: [Security configuration]
+**Test Data**: [Test dataset]
 
 ### Test Tools
-**Primary Testing Tool**: [Postman | SoapUI | Custom Framework]  
-**Load Testing**: [JMeter | LoadRunner | K6]  
-**Monitoring Tools**: [Application Performance Monitoring tools]  
-**Mock Services**: [WireMock | MockServer per sistemi esterni]
+**Primary Testing Tool**: [Postman | SoapUI | Custom Framework]
+**Load Testing**: [JMeter | LoadRunner | K6]
+**Monitoring Tools**: [Application Performance Monitoring tools]
+**Mock Services**: [WireMock | MockServer for external systems]
 
 ### Test Data Management
-**Test Data Source**: [Sorgente dati test]  
-**Data Refresh Strategy**: [Come refreshare i dati test]  
-**Sensitive Data Handling**: [Gestione dati sensibili]  
-**Data Cleanup**: [Pulizia dati post-test]
+**Test Data Source**: [Test data source]
+**Data Refresh Strategy**: [How to refresh test data]
+**Sensitive Data Handling**: [Handling of sensitive data]
+**Data Cleanup**: [Post-test data cleanup]
 
 ---
 
 ## 📊 Integration Monitoring
 
 ### Key Metrics
-**Success Rate**: [% di transazioni completate con successo]  
-**Error Rate**: [% di transazioni fallite]  
-**Average Response Time**: [Tempo medio di risposta]  
-**Peak Response Time**: [Tempo massimo di risposta]  
-**Throughput**: [Transazioni per unità di tempo]
+**Success Rate**: [% of successfully completed transactions]
+**Error Rate**: [% of failed transactions]
+**Average Response Time**: [Average response time]
+**Peak Response Time**: [Maximum response time]
+**Throughput**: [Transactions per unit of time]
 
 ### SLA Monitoring
-**Availability Target**: [% availability richiesto]  
-**Response Time SLA**: [SLA tempo di risposta]  
-**Error Rate SLA**: [SLA error rate massimo]  
-**Recovery Time SLA**: [SLA tempo di recovery]
+**Availability Target**: [% required availability]
+**Response Time SLA**: [Response time SLA]
+**Error Rate SLA**: [Maximum error rate SLA]
+**Recovery Time SLA**: [Recovery time SLA]
 
 ### Alerting Configuration
-**Critical Alerts**: [Configurazione alert critici]  
-**Warning Alerts**: [Configurazione alert warning]  
-**Escalation Matrix**: [Matrice escalation]  
-**On-call Procedures**: [Procedure on-call]
+**Critical Alerts**: [Critical alert configuration]
+**Warning Alerts**: [Warning alert configuration]
+**Escalation Matrix**: [Escalation matrix]
+**On-call Procedures**: [On-call procedures]
 
 ---
 
-## 🔗 Tracciabilità
+## 🔗 Traceability
 
 ### Requirements Traceability
-**Functional Requirements**: [REQ-F-XXX] - [Requisito funzionale collegato]  
-**Integration Requirements**: [REQ-I-XXX] - [Requisito integrazione]  
-**Non-Functional Requirements**: [REQ-NF-XXX] - [Requisiti non-funzionali]  
-**Business Requirements**: [BR-XXX] - [Requisito business]
+**Functional Requirements**: [REQ-F-XXX] - [Related functional requirement]
+**Integration Requirements**: [REQ-I-XXX] - [Integration requirement]
+**Non-Functional Requirements**: [REQ-NF-XXX] - [Non-functional requirements]
+**Business Requirements**: [BR-XXX] - [Business requirement]
 
 ### Design Traceability
-**Integration Design**: [Link a design document]  
-**API Specifications**: [Link a API specs]  
-**Data Model**: [Link a data model]  
-**Security Design**: [Link a security specifications]
+**Integration Design**: [Link to design document]
+**API Specifications**: [Link to API specs]
+**Data Model**: [Link to data model]
+**Security Design**: [Link to security specifications]
 
 ### Test Traceability
-**Related Test Cases**: [TC-XXX] - [Test case correlati]  
-**Integration Test Suite**: [Link a test suite]  
-**End-to-End Tests**: [E2E test che includono questa integrazione]
+**Related Test Cases**: [TC-XXX] - [Related test cases]
+**Integration Test Suite**: [Link to test suite]
+**End-to-End Tests**: [E2E tests that include this integration]
 
 ---
 
-## ⚠️ Risks e Dependencies
+## ⚠️ Risks and Dependencies
 
 ### Integration Risks
-- **[Rischio 1]**: [Es. Dipendenza da sistema esterno instabile]  
-  *Impact*: [Impatto su integrazione]  
-  *Mitigation*: [Piano di mitigazione]  
-  *Contingency*: [Piano di contingenza]
+- **[Risk 1]**: [e.g., Dependency on unstable external system]
+  *Impact*: [Impact on integration]
+  *Mitigation*: [Mitigation plan]
+  *Contingency*: [Contingency plan]
 
-- **[Rischio 2]**: [Es. Cambiamenti schema dati]  
-  *Impact*: [Impatto su compatibilità]  
-  *Mitigation*: [Versioning strategy]  
+- **[Risk 2]**: [e.g., Data schema changes]
+  *Impact*: [Impact on compatibility]
+  *Mitigation*: [Versioning strategy]
   *Contingency*: [Backward compatibility]
 
 ### Technical Dependencies
-- **External System Availability**: [Dipendenze da sistemi esterni]
-- **Network Infrastructure**: [Dipendenze infrastruttura]
-- **Security Certificates**: [Dipendenze certificati/credenziali]
-- **Third-party Services**: [Servizi terze parti]
+- **External System Availability**: [Dependencies on external systems]
+- **Network Infrastructure**: [Infrastructure dependencies]
+- **Security Certificates**: [Dependencies on certificates/credentials]
+- **Third-party Services**: [Third-party services]
 
 ### Operational Dependencies
-- **Deployment Sequence**: [Sequenza deployment necessaria]
-- **Configuration Management**: [Gestione configurazioni]
-- **Monitoring Setup**: [Setup monitoring necessario]
-- **Support Teams**: [Team supporto necessari]
+- **Deployment Sequence**: [Required deployment sequence]
+- **Configuration Management**: [Configuration management]
+- **Monitoring Setup**: [Required monitoring setup]
+- **Support Teams**: [Required support teams]
 
 ---
 
 ## 📅 Test Execution Plan
 
 ### Pre-execution Checklist
-- [ ] Test environment setup completato
-- [ ] Configurazioni verificate
-- [ ] Credenziali/certificati validati
-- [ ] Test data preparati
-- [ ] Monitoring attivato
-- [ ] Sistemi target operativi
+- [ ] Test environment setup completed
+- [ ] Configurations verified
+- [ ] Credentials/certificates validated
+- [ ] Test data prepared
+- [ ] Monitoring activated
+- [ ] Target systems operational
 
 ### Test Phases
 **Phase 1: Connectivity Testing**
-- Date: [Data inizio] - [Data fine]
-- Focus: Verificare connessioni base
+- Date: [Start date] - [End date]
+- Focus: Verify basic connections
 
 **Phase 2: Functional Testing**
-- Date: [Data inizio] - [Data fine]
-- Focus: Test funzionalità core
+- Date: [Start date] - [End date]
+- Focus: Test core functionality
 
 **Phase 3: Error Scenario Testing**
-- Date: [Data inizio] - [Data fine]
-- Focus: Test gestione errori
+- Date: [Start date] - [End date]
+- Focus: Test error handling
 
 **Phase 4: Performance Testing**
-- Date: [Data inizio] - [Data fine]
-- Focus: Test performance e carico
+- Date: [Start date] - [End date]
+- Focus: Test performance and load
 
 **Phase 5: End-to-End Testing**
-- Date: [Data inizio] - [Data fine]
-- Focus: Test integrazione completa
+- Date: [Start date] - [End date]
+- Focus: Test complete integration
 
 ### Post-execution Activities
 - [ ] Test results analysis
@@ -297,113 +297,113 @@
 ## 📈 Test Results
 
 ### Test Execution Summary
-| Test Phase | Start Date | End Date | Status | Pass Rate | Issues Found |
-|------------|------------|----------|--------|-----------|--------------|
-| Connectivity | [Data] | [Data] | [Pass/Fail] | [%] | [Numero] |
-| Functional | [Data] | [Data] | [Pass/Fail] | [%] | [Numero] |
-| Error Scenarios | [Data] | [Data] | [Pass/Fail] | [%] | [Numero] |
-| Performance | [Data] | [Data] | [Pass/Fail] | [%] | [Numero] |
-| End-to-End | [Data] | [Data] | [Pass/Fail] | [%] | [Numero] |
+| Test Phase        | Start Date | End Date | Status    | Pass Rate | Issues Found |
+|-------------------|------------|----------|-----------|-----------|--------------|
+| Connectivity      | [Date]     | [Date]   | [Pass/Fail] | [%]       | [Number]     |
+| Functional        | [Date]     | [Date]   | [Pass/Fail] | [%]       | [Number]     |
+| Error Scenarios   | [Date]     | [Date]   | [Pass/Fail] | [%]       | [Number]     |
+| Performance       | [Date]     | [Date]   | [Pass/Fail] | [%]       | [Number]     |
+| End-to-End        | [Date]     | [Date]   | [Pass/Fail] | [%]       | [Number]     |
 
 ### Performance Results
-| Metric | Target | Achieved | Status | Notes |
-|--------|--------|----------|--------|-------|
-| Response Time | [Target] | [Actual] | [Pass/Fail] | [Note] |
-| Throughput | [Target] | [Actual] | [Pass/Fail] | [Note] |
-| Error Rate | [Target] | [Actual] | [Pass/Fail] | [Note] |
-| Availability | [Target] | [Actual] | [Pass/Fail] | [Note] |
+| Metric          | Target | Achieved | Status    | Notes |
+|-----------------|--------|----------|-----------|-------|
+| Response Time   | [Target] | [Actual] | [Pass/Fail] | [Notes] |
+| Throughput      | [Target] | [Actual] | [Pass/Fail] | [Notes] |
+| Error Rate      | [Target] | [Actual] | [Pass/Fail] | [Notes] |
+| Availability    | [Target] | [Actual] | [Pass/Fail] | [Notes] |
 
 ### Issues and Resolutions
-| Issue ID | Description | Severity | Status | Resolution | Date Resolved |
-|----------|-------------|----------|--------|------------|---------------|
-| [INT-001] | [Descrizione] | [High/Med/Low] | [Open/Closed] | [Risoluzione] | [Data] |
+| Issue ID  | Description   | Severity     | Status      | Resolution  | Date Resolved |
+|-----------|---------------|--------------|-------------|-------------|---------------|
+| [INT-001] | [Description] | [High/Med/Low] | [Open/Closed] | [Resolution] | [Date]        |
 
 ---
 
 ## 🔧 Configuration Management
 
 ### Environment Configurations
-**Development**: [Config specifiche per dev]  
-**Testing**: [Config specifiche per test]  
-**Staging**: [Config specifiche per staging]  
-**Production**: [Config specifiche per prod]
+**Development**: [Specific configs for dev]
+**Testing**: [Specific configs for test]
+**Staging**: [Specific configs for staging]
+**Production**: [Specific configs for prod]
 
 ### Security Configurations
-**Certificates**: [Gestione certificati]  
-**API Keys**: [Gestione API keys]  
-**Encryption**: [Configurazioni encryption]  
-**Network Security**: [Configurazioni security network]
+**Certificates**: [Certificate management]
+**API Keys**: [API key management]
+**Encryption**: [Encryption configurations]
+**Network Security**: [Network security configurations]
 
 ### Operational Configurations
-**Logging Levels**: [Livelli logging per ambiente]  
-**Monitoring Thresholds**: [Soglie monitoring]  
-**Alerting Rules**: [Regole alerting]  
-**Backup Configurations**: [Configurazioni backup]
+**Logging Levels**: [Logging levels per environment]
+**Monitoring Thresholds**: [Monitoring thresholds]
+**Alerting Rules**: [Alerting rules]
+**Backup Configurations**: [Backup configurations]
 
 ---
 
-## ✅ Sign-off e Acceptance
+## ✅ Sign-off and Acceptance
 
 ### Technical Review Checklist
-- [ ] Integration pattern appropriato implementato
-- [ ] Tutti gli scenari di test eseguiti con successo
-- [ ] Error handling testato e funzionante
-- [ ] Performance requirements soddisfatti
-- [ ] Security requirements implementati
-- [ ] Monitoring e logging configurati
-- [ ] Documentation completa e aggiornata
+- [ ] Appropriate integration pattern implemented
+- [ ] All test scenarios executed successfully
+- [ ] Error handling tested and working
+- [ ] Performance requirements met
+- [ ] Security requirements implemented
+- [ ] Monitoring and logging configured
+- [ ] Documentation complete and updated
 
 ### Business Acceptance Checklist
-- [ ] Business requirements soddisfatti
-- [ ] SLA targets raggiunti
-- [ ] Data integrity verificata
-- [ ] Operational runbooks completati
-- [ ] Support team formato
-- [ ] Go-live criteria soddisfatti
+- [ ] Business requirements met
+- [ ] SLA targets achieved
+- [ ] Data integrity verified
+- [ ] Operational runbooks completed
+- [ ] Support team trained
+- [ ] Go-live criteria met
 
 ### Approvals
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Integration Engineer | [Nome] | ______ | ______ | [Comments] |
-| System Architect | [Nome] | ______ | ______ | [Comments] |
-| Security Officer | [Nome] | ______ | ______ | [Comments] |
-| Operations Manager | [Nome] | ______ | ______ | [Comments] |
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
+| Role                 | Name   | Date   | Signature | Comments |
+|----------------------|--------|--------|-----------|----------|
+| Integration Engineer | [Name] | ______ | ______    | [Comments] |
+| System Architect     | [Name] | ______ | ______    | [Comments] |
+| Security Officer     | [Name] | ______ | ______    | [Comments] |
+| Operations Manager   | [Name] | ______ | ______    | [Comments] |
+| Product Owner        | [Name] | ______ | ______    | [Comments] |
 
 ---
 
 ## 📝 Change History
 
-| Versione | Data | Autore | Cambiamenti | Impact su Integration |
-|----------|------|--------|-------------|----------------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | - |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] |
+| Version | Date   | Author | Changes     | Impact on Integration |
+|---------|--------|--------|-------------|-----------------------|
+| 1.0     | [Date] | [Name] | Initial version | -                     |
+| 1.1     | [Date] | [Name] | [Changes]   | [Impact]              |
 
 ---
 
 ## 📎 Supporting Documentation
 
 ### Integration Documentation
-- [Link a integration design document]
-- [Link a API documentation]
-- [Link a data mapping specifications]
-- [Link a security specifications]
+- [Link to integration design document]
+- [Link to API documentation]
+- [Link to data mapping specifications]
+- [Link to security specifications]
 
 ### Operational Documentation
-- [Link a deployment guide]
-- [Link a configuration guide]
-- [Link a troubleshooting guide]
-- [Link a monitoring setup]
+- [Link to deployment guide]
+- [Link to configuration guide]
+- [Link to troubleshooting guide]
+- [Link to monitoring setup]
 
 ### Test Artifacts
-- [Link a detailed test scripts]
-- [Link a test data sets]
-- [Link a test results reports]
-- [Link a performance test results]
+- [Link to detailed test scripts]
+- [Link to test data sets]
+- [Link to test results reports]
+- [Link to performance test results]
 
 ---
 
-*Criterio di accettazione integrazione creato il: [Data]*  
-*Ultima validazione: [Data]*  
-*Prossima review: [Data]*  
-*Integration Engineer: [Nome responsabile]*
+*Integration acceptance criterion created on: [Date]*
+*Last validation: [Date]*
+*Next review: [Date]*
+*Integration Engineer: [Responsible person's name]*

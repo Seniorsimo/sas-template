@@ -1,140 +1,140 @@
 # User Stories
 
-Questa cartella contiene tutte le user stories del progetto, organizzate per epic.
+This folder contains all the user stories for the project, organized by epic.
 
-## 📁 Struttura Organizzativa
+## 📁 Organizational Structure
 
-### Organizzazione per Epic
-Ogni epic ha la sua cartella dedicata:
+### Organization by Epic
+Each epic has its own dedicated folder:
 ```
 user-stories/
-├── epic-[nome-epic]/
-│   ├── README.md              (Descrizione dell'epic)
-│   ├── US-001-[titolo].md     (User story 1)
-│   ├── US-002-[titolo].md     (User story 2)
-│   └── US-xxx-[titolo].md     (Altre user stories)
-├── epic-template/             (Template per nuovi epic)
-└── README.md                  (Questo file)
+├── epic-[epic-name]/
+│   ├── README.md              (Description of the epic)
+│   ├── US-001-[title].md     (User story 1)
+│   ├── US-002-[title].md     (User story 2)
+│   └── US-xxx-[title].md     (Other user stories)
+├── epic-template/             (Template for new epics)
+└── README.md                  (This file)
 ```
 
-## 🏷️ Convenzioni di Naming
+## 🏷️ Naming Conventions
 
 ### Epic
-- **Cartelle**: `epic-[nome-breve]` (es. `epic-authentication`, `epic-user-management`)
-- **Nome Epic**: Descrittivo e conciso (es. "Gestione Utenti", "Sistema di Autenticazione")
+- **Folders**: `epic-[short-name]` (e.g., `epic-authentication`, `epic-user-management`)
+- **Epic Name**: Descriptive and concise (e.g., "User Management", "Authentication System")
 
 ### User Stories
-- **File**: `US-XXX-[titolo-breve].md`
-- **ID**: Numerazione progressiva globale (US-001, US-002, etc.)
-- **Titolo**: Descrittivo e conciso (es. `US-001-login-utente.md`)
+- **File**: `US-XXX-[short-title].md`
+- **ID**: Global progressive numbering (US-001, US-002, etc.)
+- **Title**: Descriptive and concise (e.g., `US-001-user-login.md`)
 
-## 📋 Template User Story
+## 📋 User Story Template
 
-Ogni user story deve seguire questo formato:
+Each user story must follow this format:
 
 ```markdown
-# US-XXX: [Titolo User Story]
+# US-XXX: [User Story Title]
 
-## Informazioni Generali
+## General Information
 **ID**: US-XXX
-**Epic**: [Nome Epic]
-**Priorità**: Alta | Media | Bassa
-**Stima**: [Story Points]
+**Epic**: [Epic Name]
+**Priority**: High | Medium | Low
+**Estimate**: [Story Points]
 **Status**: Backlog | In Progress | In Review | Done
 
 ## User Story
-**Come** [tipo di utente]  
-**Voglio** [funzionalità/obiettivo]  
-**Per** [beneficio/valore]
+**As** [type of user]
+**I want** [feature/goal]
+**So that** [benefit/value]
 
-## Criteri di Accettazione
-- [ ] [Criterio 1]
-- [ ] [Criterio 2]
-- [ ] [Criterio 3]
+## Acceptance Criteria
+- [ ] [Criterion 1]
+- [ ] [Criterion 2]
+- [ ] [Criterion 3]
 
-## Casi di Test
-### Test Case 1: [Nome test]
-- **Prerequisiti**: [Condizioni iniziali]
-- **Passi**: [Step by step]
-- **Risultato Atteso**: [Cosa dovrebbe succedere]
+## Test Cases
+### Test Case 1: [Test name]
+- **Prerequisites**: [Initial conditions]
+- **Steps**: [Step by step]
+- **Expected Result**: [What should happen]
 
-## Note Tecniche
-[Dettagli implementativi, vincoli, dipendenze]
+## Technical Notes
+[Implementation details, constraints, dependencies]
 
-## Tracciabilità
-- **Obiettivi collegati**: [Da 01-project-definition/objectives.md]
-- **Requisiti funzionali**: [REQ-XXX]
-- **Casi d'uso**: [UC-XXX]
+## Traceability
+- **Related Objectives**: [From 01-project-definition/objectives.md]
+- **Functional Requirements**: [REQ-XXX]
+- **Use Cases**: [UC-XXX]
 ```
 
-## 🎯 Prioritizzazione
+## 🎯 Prioritization
 
-### Criteri di Priorità
-- **Alta**: Funzionalità core per MVP, blockers
-- **Media**: Funzionalità importanti per release completa
-- **Bassa**: Nice-to-have, miglioramenti futuri
+### Priority Criteria
+- **High**: Core functionality for MVP, blockers
+- **Medium**: Important functionality for a complete release
+- **Low**: Nice-to-have, future improvements
 
 ### Story Points
-- **1**: Molto semplice (poche ore)
-- **2**: Semplice (1 giorno)
-- **3**: Media (2-3 giorni)
-- **5**: Complessa (1 settimana)
-- **8**: Molto complessa (2 settimane)
-- **13**: Epic troppo grande, da spezzare
+- **1**: Very simple (a few hours)
+- **2**: Simple (1 day)
+- **3**: Medium (2-3 days)
+- **5**: Complex (1 week)
+- **8**: Very complex (2 weeks)
+- **13**: Epic is too large, needs to be split
 
-## 🔄 Workflow User Stories
+## 🔄 User Stories Workflow
 
-### 1. Creazione
-1. Crea cartella epic se non esiste
-2. Copia template da `epic-template/`
-3. Assegna ID progressivo
-4. Compila tutti i campi
+### 1. Creation
+1. Create an epic folder if it doesn't exist
+2. Copy the template from `epic-template/`
+3. Assign a progressive ID
+4. Fill in all fields
 
 ### 2. Refinement
-1. Review durante sprint planning
-2. Aggiorna criteri di accettazione
-3. Stima story points
-4. Identifica dipendenze
+1. Review during sprint planning
+2. Update acceptance criteria
+3. Estimate story points
+4. Identify dependencies
 
 ### 3. Development
 1. Status → "In Progress"
-2. Implementazione seguendo criteri
+2. Implementation according to criteria
 3. Status → "In Review"
-4. Testing e validazione
+4. Testing and validation
 5. Status → "Done"
 
-## 📊 Tracking e Metriche
+## 📊 Tracking and Metrics
 
 ### Definition of Ready (DoR)
-- [ ] User story scritta in formato standard
-- [ ] Criteri di accettazione definiti
-- [ ] Story points stimati
-- [ ] Dipendenze identificate
-- [ ] Mockup/wireframe se necessario
+- [ ] User story written in standard format
+- [ ] Acceptance criteria defined
+- [ ] Story points estimated
+- [ ] Dependencies identified
+- [ ] Mockup/wireframe if necessary
 
 ### Definition of Done (DoD)
-- [ ] Codice implementato
-- [ ] Unit test scritti e passanti
-- [ ] Criteri di accettazione verificati
-- [ ] Code review completata
-- [ ] Documentazione aggiornata
+- [ ] Code implemented
+- [ ] Unit tests written and passing
+- [ ] Acceptance criteria verified
+- [ ] Code review completed
+- [ ] Documentation updated
 
 ## 💡 Best Practices
 
 ### ✅ Do's
-- **Scrivi from user perspective** - sempre dal punto di vista dell'utente
-- **Mantieni stories indipendenti** - evita dipendenze strette
-- **Usa INVEST criteria** (Independent, Negotiable, Valuable, Estimable, Small, Testable)
-- **Include acceptance criteria specifici** e misurabili
-- **Aggiorna regolarmente** status e dettagli
+- **Write from the user's perspective** - always from the user's point of view
+- **Keep stories independent** - avoid tight dependencies
+- **Use INVEST criteria** (Independent, Negotiable, Valuable, Estimable, Small, Testable)
+- **Include specific** and measurable acceptance criteria
+- **Regularly update** status and details
 
 ### ❌ Don'ts
-- **Non scrivere task tecnici** come user stories
-- **Non creare stories troppo grandi** (>8 story points)
-- **Non omettere il valore** per l'utente
-- **Non duplicare stories** tra epic diversi
-- **Non dimenticare la tracciabilità** con requisiti e obiettivi
+- **Don't write technical tasks** as user stories
+- **Don't create stories that are too large** (>8 story points)
+- **Don't omit the value** for the user
+- **Don't duplicate stories** between different epics
+- **Don't forget traceability** with requirements and objectives
 
 ---
 
-*Per creare un nuovo epic, copia la cartella `epic-template` e personalizzala.*
+*To create a new epic, copy the `epic-template` folder and customize it.*

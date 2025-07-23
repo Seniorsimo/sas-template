@@ -1,21 +1,21 @@
 # Integration Acceptance Criteria
 
-Questa cartella contiene i criteri di accettazione per validare l'integrazione tra sistemi, servizi o componenti del software.
+This folder contains the acceptance criteria to validate the integration between systems, services, or software components.
 
-## 📋 Scopo degli Integration Acceptance Criteria
+## 📋 Purpose of Integration Acceptance Criteria
 
-Gli **Integration Acceptance Criteria** servono per:
-- Verificare comunicazione corretta tra sistemi
-- Validare scambio dati tra componenti
-- Testare API e servizi web
-- Confermare integrazione con sistemi esterni e legacy
+**Integration Acceptance Criteria** are used to:
+- Verify correct communication between systems
+- Validate data exchange between components
+- Test APIs and web services
+- Confirm integration with external and legacy systems
 
-## 🔗 Tipologie di Integrazioni
+## 🔗 Types of Integrations
 
 ### API Integration
 - **REST APIs**: HTTP/HTTPS endpoints
-- **GraphQL**: Query e mutation APIs
-- **SOAP Services**: Web services legacy
+- **GraphQL**: Query and mutation APIs
+- **SOAP Services**: Legacy web services
 - **WebSocket**: Real-time communication
 - **gRPC**: High-performance RPC
 
@@ -39,9 +39,9 @@ Gli **Integration Acceptance Criteria** servono per:
 - **iFrame Integration**: Cross-domain embedding
 - **Mobile Deep Links**: App-to-app integration
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica il Tipo di Integrazione
+### 1. Identify the Integration Type
 ```bash
 # API Integration
 AC-I-API-001-payment-gateway.md
@@ -56,133 +56,133 @@ AC-I-MQ-001-order-events.md
 AC-I-EXT-001-maps-service.md
 ```
 
-### 2. Definisci Integration Contract
-- **Input Schema**: Formato dati inviati
-- **Output Schema**: Formato dati ricevuti
+### 2. Define the Integration Contract
+- **Input Schema**: Format of data sent
+- **Output Schema**: Format of data received
 - **Protocol Details**: HTTP methods, headers, auth
-- **Error Handling**: Error codes e recovery
+- **Error Handling**: Error codes and recovery
 
-### 3. Specifica Test Scenarios
-- **Happy Path**: Integrazione funziona correttamente
-- **Error Conditions**: Gestione failure e timeout
-- **Load Testing**: Performance sotto carico
-- **Security**: Authentication e authorization
+### 3. Specify Test Scenarios
+- **Happy Path**: Integration works correctly
+- **Error Conditions**: Handling of failures and timeouts
+- **Load Testing**: Performance under load
+- **Security**: Authentication and authorization
 
-## 🛠️ Integration Patterns Testati
+## 🛠️ Tested Integration Patterns
 
 ### Synchronous Integration
 ```gherkin
-Given il sistema destinazione è disponibile
-When invio una richiesta sincronoa
-Then ricevo una risposta entro X secondi
-And la risposta contiene i dati attesi
+Given the destination system is available
+When I send a synchronous request
+Then I receive a response within X seconds
+And the response contains the expected data
 ```
 
 ### Asynchronous Integration
 ```gherkin
-Given il message broker è operativo
-When pubblico un messaggio nella queue
-Then il messaggio viene processato
-And ricevo un acknowledgment
-And il consumer processa il messaggio
+Given the message broker is operational
+When I publish a message to the queue
+Then the message is processed
+And I receive an acknowledgment
+And the consumer processes the message
 ```
 
 ### Batch Integration
 ```gherkin
-Given ho un file batch da processare
-When avvio il processo di import
-Then tutti i record validi sono processati
-And i record invalidi sono loggati
-And viene generato un report di completamento
+Given I have a batch file to process
+When I start the import process
+Then all valid records are processed
+And invalid records are logged
+And a completion report is generated
 ```
 
 ### Event-Driven Integration
 ```gherkin
-Given il sistema è in ascolto per eventi
-When si verifica un evento di business
-Then l'evento viene pubblicato
-And tutti i subscriber ricevono l'evento
-And processano l'evento appropriatamente
+Given the system is listening for events
+When a business event occurs
+Then the event is published
+And all subscribers receive the event
+And they process the event appropriately
 ```
 
-## 🧪 Test Scenarios Comuni
+## 🧪 Common Test Scenarios
 
 ### Connectivity Testing
 ```gherkin
-Scenario: Verifica connessione di base
-Given le credenziali sono configurate
-When testo la connettività
-Then la connessione è stabilita con successo
-And ricevo una risposta di health check
+Scenario: Verify basic connection
+Given the credentials are configured
+When I test the connectivity
+Then the connection is established successfully
+And I receive a health check response
 ```
 
 ### Data Exchange Testing
 ```gherkin
-Scenario: Scambio dati corretto
-Given ho dati validi da trasmettere
-When invio i dati al sistema esterno
-Then i dati sono trasmessi correttamente
-And ricevo conferma della ricezione
-And i dati mantengono integrità
+Scenario: Correct data exchange
+Given I have valid data to transmit
+When I send the data to the external system
+Then the data is transmitted correctly
+And I receive confirmation of receipt
+And the data maintains integrity
 ```
 
 ### Error Handling Testing
 ```gherkin
-Scenario: Gestione errori di rete
-Given il sistema esterno è temporaneamente non disponibile
-When tento di inviare dati
-Then ricevo un errore di timeout appropriato
-And l'errore viene loggato
-And viene attivata la logica di retry
+Scenario: Network error handling
+Given the external system is temporarily unavailable
+When I attempt to send data
+Then I receive an appropriate timeout error
+And the error is logged
+And the retry logic is activated
 ```
 
 ### Performance Testing
 ```gherkin
-Scenario: Performance sotto carico
-Given sto inviando X richieste simultanee
-When eseguo il test di carico
-Then tutte le richieste sono processate entro Y secondi
-And il tasso di successo è ≥ Z%
-And non si verificano memory leaks
+Scenario: Performance under load
+Given I am sending X simultaneous requests
+When I run the load test
+Then all requests are processed within Y seconds
+And the success rate is ≥ Z%
+And no memory leaks occur
 ```
 
 ### Security Testing
 ```gherkin
-Scenario: Autenticazione sicura
-Given ho credenziali valide
-When mi autentico con il sistema esterno
-Then l'autenticazione ha successo
-And ricevo un token valido
-And il token ha scadenza appropriata
+Scenario: Secure authentication
+Given I have valid credentials
+When I authenticate with the external system
+Then authentication is successful
+And I receive a valid token
+And the token has an appropriate expiration
 ```
 
-## 📊 Quality Gates per Integration
+## 📊 Quality Gates for Integration
 
 ### Functional Quality
-- [ ] **Data Integrity**: Dati trasmessi senza corruzioni
-- [ ] **Protocol Compliance**: Aderenza a standard protocollari
-- [ ] **Error Handling**: Gestione appropriata di tutti gli errori
-- [ ] **State Management**: Gestione corretta stati transazione
+- [ ] **Data Integrity**: Data transmitted without corruption
+- [ ] **Protocol Compliance**: Adherence to protocol standards
+- [ ] **Error Handling**: Appropriate handling of all errors
+- [ ] **State Management**: Correct management of transaction states
 
 ### Performance Quality
-- [ ] **Response Time**: Entro SLA definiti
-- [ ] **Throughput**: Volume transazioni richiesto
-- [ ] **Concurrency**: Gestione richieste simultanee
-- [ ] **Resource Usage**: Utilizzo efficiente risorse
+- [ ] **Response Time**: Within defined SLAs
+- [ ] **Throughput**: Required transaction volume
+- [ ] **Concurrency**: Handling of simultaneous requests
+- [ ] **Resource Usage**: Efficient use of resources
 
 ### Security Quality
-- [ ] **Authentication**: Meccanismi auth implementati
-- [ ] **Authorization**: Controlli accesso funzionanti
-- [ ] **Data Protection**: Dati sensibili protetti
-- [ ] **Audit Logging**: Tutte le operazioni loggate
+- [ ] **Authentication**: Auth mechanisms implemented
+- [ ] **Authorization**: Access controls working
+- [ ] **Data Protection**: Sensitive data protected
+- [ ] **Audit Logging**: All operations logged
 
 ### Reliability Quality
-- [ ] **Fault Tolerance**: Resilienza a failure
-- [ ] **Recovery**: Capacità di recovery da errori
-- [ ] **Monitoring**: Osservabilità completa
-- [ ] **Alerting**: Notifiche per anomalie
+- [ ] **Fault Tolerance**: Resilience to failures
+- [ ] **Recovery**: Ability to recover from errors
+- [ ] **Monitoring**: Complete observability
+- [ ] **Alerting**: Notifications for anomalies
 
-## 🔧 Testing Tools e Environment
+## 🔧 Testing Tools and Environment
 
 ### API Testing Tools
 - **Postman**: Interactive API testing
@@ -240,7 +240,7 @@ User Experience: Integration user satisfaction
 
 ### 1. Planning Phase
 - **Integration Architecture Review**: Design validation
-- **Test Strategy Definition**: Approach e tools
+- **Test Strategy Definition**: Approach and tools
 - **Environment Setup**: Test environment prep
 - **Test Data Preparation**: Realistic test datasets
 
@@ -253,19 +253,19 @@ User Experience: Integration user satisfaction
 ### 3. Integration Testing Phase
 - **Smoke Testing**: Basic connectivity
 - **Functional Testing**: End-to-end scenarios
-- **Performance Testing**: Load e stress testing
-- **Security Testing**: Auth e vulnerability testing
+- **Performance Testing**: Load and stress testing
+- **Security Testing**: Auth and vulnerability testing
 
 ### 4. Deployment Phase
 - **Staging Testing**: Production-like testing
 - **Production Validation**: Post-deployment verification
-- **Monitoring Setup**: Alerts e dashboards
-- **Documentation**: Runbooks e procedures
+- **Monitoring Setup**: Alerts and dashboards
+- **Documentation**: Runbooks and procedures
 
 ## ⚠️ Common Integration Challenges
 
 ### Technical Challenges
-- **Network Latency**: Geographic distributed systems
+- **Network Latency**: Geographically distributed systems
 - **Data Format Differences**: Schema mismatches
 - **Version Compatibility**: API version management
 - **Transaction Management**: Distributed transactions
@@ -285,25 +285,25 @@ User Experience: Integration user satisfaction
 ## 💡 Best Practices
 
 ### ✅ Design Best Practices
-- **Implement Circuit Breakers** per fault tolerance
-- **Use Idempotent Operations** per reliability
-- **Design for Failure** con fallback mechanisms
-- **Implement Proper Logging** per troubleshooting
-- **Version APIs** per backward compatibility
+- **Implement Circuit Breakers** for fault tolerance
+- **Use Idempotent Operations** for reliability
+- **Design for Failure** with fallback mechanisms
+- **Implement Proper Logging** for troubleshooting
+- **Version APIs** for backward compatibility
 
 ### ✅ Testing Best Practices
-- **Test Early** nel development lifecycle
-- **Use Contract Testing** per API validation
-- **Implement Automated Testing** per CI/CD
-- **Test Failure Scenarios** non solo happy path
-- **Monitor Production** per real-world validation
+- **Test Early** in the development lifecycle
+- **Use Contract Testing** for API validation
+- **Implement Automated Testing** for CI/CD
+- **Test Failure Scenarios** not just the happy path
+- **Monitor Production** for real-world validation
 
-### ❌ Anti-Patterns da Evitare
-- **Tight Coupling**: Dipendenze strette tra sistemi
-- **Sync When Async**: Usare sync per long-running ops
-- **No Error Handling**: Ignorare gestione errori
-- **Hard-coded Config**: Configurazioni non flessibili
-- **No Monitoring**: Mancanza observability
+### ❌ Anti-Patterns to Avoid
+- **Tight Coupling**: Strong dependencies between systems
+- **Sync When Async**: Using sync for long-running ops
+- **No Error Handling**: Ignoring error management
+- **Hard-coded Config**: Inflexible configurations
+- **No Monitoring**: Lack of observability
 
 ## 🔍 Troubleshooting Integration Issues
 
@@ -331,21 +331,21 @@ Business Logic Errors:
 ```
 
 ### Debugging Techniques
-- **Distributed Tracing**: Follow request path
+- **Distributed Tracing**: Follow the request path
 - **Correlation IDs**: Track requests across systems
 - **Log Aggregation**: Centralized log analysis
 - **Health Checks**: System availability monitoring
 
-## 📞 Supporto e Contatti
+## 📞 Support and Contacts
 
-Per domande sugli Integration Acceptance Criteria:
+For questions about Integration Acceptance Criteria:
 
-- **Integration Architect**: [Responsabile design integrazioni]
-- **API Developer**: [Responsabile API development]
-- **DevOps Engineer**: [Responsabile deployment e monitoring]
-- **Security Engineer**: [Responsabile integration security]
-- **QA Engineer**: [Responsabile integration testing]
+- **Integration Architect**: [Responsible for integration design]
+- **API Developer**: [Responsible for API development]
+- **DevOps Engineer**: [Responsible for deployment and monitoring]
+- **Security Engineer**: [Responsible for integration security]
+- **QA Engineer**: [Responsible for integration testing]
 
 ---
 
-*Le integrazioni sono spesso il punto più fragile di un sistema distribuito. Testale accuratamente per garantire comunicazione affidabile e resiliente tra componenti.*
+*Integrations are often the most fragile part of a distributed system. Test them thoroughly to ensure reliable and resilient communication between components.*

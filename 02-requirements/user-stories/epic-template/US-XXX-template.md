@@ -1,185 +1,185 @@
-# US-XXX: [Titolo User Story]
+# US-XXX: [User Story Title]
 
-## 📋 Informazioni Generali
-**ID**: US-XXX  
-**Epic**: [Nome Epic]  
-**Priorità**: Alta | Media | Bassa  
-**Stima**: [Story Points]  
-**Assegnato a**: [Nome Developer]  
-**Status**: Backlog | In Progress | In Review | Done  
-**Sprint**: [Numero Sprint]
+## 📋 General Information
+**ID**: US-XXX
+**Epic**: [Epic Name]
+**Priority**: High | Medium | Low
+**Estimate**: [Story Points]
+**Assigned to**: [Developer Name]
+**Status**: Backlog | In Progress | In Review | Done
+**Sprint**: [Sprint Number]
 
 ---
 
 ## 👤 User Story
 
-**Come** [tipo di utente]  
-**Voglio** [funzionalità/obiettivo]  
-**Per** [beneficio/valore per l'utente]
+**As a** [type of user]
+**I want** [desired functionality/goal]
+**So that** [benefit/value for the user]
 
-### Dettagli Aggiuntivi
-[Contesto aggiuntivo o spiegazione del perché questa user story è importante]
+### Additional Details
+[Additional context or explanation of why this user story is important]
 
 ---
 
-## ✅ Criteri di Accettazione
+## ✅ Acceptance Criteria
 
-### Scenario 1: [Nome scenario principale]
-- **Dato che** [precondizione]
-- **Quando** [azione dell'utente]
-- **Allora** [risultato atteso]
+### Scenario 1: [Main scenario name]
+- **Given** [precondition]
+- **When** [user action]
+- **Then** [expected result]
 
-### Scenario 2: [Nome scenario alternativo]
-- **Dato che** [precondizione]
-- **Quando** [azione dell'utente]  
-- **Allora** [risultato atteso]
+### Scenario 2: [Alternative scenario name]
+- **Given** [precondition]
+- **When** [user action]
+- **Then** [expected result]
 
-### Scenario 3: [Nome scenario di errore]
-- **Dato che** [precondizione di errore]
-- **Quando** [azione che causa errore]
-- **Allora** [gestione errore attesa]
+### Scenario 3: [Error scenario name]
+- **Given** [error precondition]
+- **When** [action that causes an error]
+- **Then** [expected error handling]
 
 ---
 
 ## 🧪 Test Cases
 
-### Test Case 1: [Nome test case]
-**Obiettivo**: [Cosa stiamo testando]
+### Test Case 1: [Test case name]
+**Objective**: [What we are testing]
 
-**Prerequisiti**:
-- [Condizione iniziale 1]
-- [Condizione iniziale 2]
+**Prerequisites**:
+- [Initial condition 1]
+- [Initial condition 2]
 
-**Passi**:
-1. [Passo 1]
-2. [Passo 2]
-3. [Passo 3]
+**Steps**:
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
-**Risultato Atteso**: [Cosa dovrebbe succedere]
+**Expected Result**: [What should happen]
 
-### Test Case 2: [Nome test case]
-**Obiettivo**: [Cosa stiamo testando]
+### Test Case 2: [Test case name]
+**Objective**: [What we are testing]
 
-**Prerequisiti**:
-- [Condizione iniziale 1]
-- [Condizione iniziale 2]
+**Prerequisites**:
+- [Initial condition 1]
+- [Initial condition 2]
 
-**Passi**:
-1. [Passo 1]
-2. [Passo 2]
-3. [Passo 3]
+**Steps**:
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
 
-**Risultato Atteso**: [Cosa dovrebbe succedere]
+**Expected Result**: [What should happen]
 
 ---
 
 ## 🎨 Design & UX
 
 ### Wireframes/Mockups
-- [ ] [Link a wireframe/mockup]
-- [ ] [Link a prototipo interattivo]
+- [ ] [Link to wireframe/mockup]
+- [ ] [Link to interactive prototype]
 
 ### User Flow
-[Descrizione step-by-step del flusso utente]
+[Step-by-step description of the user flow]
 
 ### UI Requirements
-- **Responsive**: [Requisiti per mobile/tablet/desktop]
-- **Accessibility**: [Requisiti WCAG se applicable]
-- **Browser Support**: [Browser da supportare]
+- **Responsive**: [Requirements for mobile/tablet/desktop]
+- **Accessibility**: [WCAG requirements if applicable]
+- **Browser Support**: [Browsers to be supported]
 
 ---
 
-## 🔧 Note Tecniche
+## 🔧 Technical Notes
 
-### Implementazione
-**Componenti coinvolti**:
-- [Componente Frontend 1]
-- [Componente Backend 1]
+### Implementation
+**Involved Components**:
+- [Frontend Component 1]
+- [Backend Component 1]
 - [Database tables/entities]
 
-**API Endpoints** (se applicable):
-- `[METHOD] /api/endpoint` - [Descrizione]
+**API Endpoints** (if applicable):
+- `[METHOD] /api/endpoint` - [Description]
 
 **Business Logic**:
-- [Regola business 1]
-- [Regola business 2]
+- [Business rule 1]
+- [Business rule 2]
 
-### Vincoli Tecnici
-- [Vincolo 1]
-- [Vincolo 2]
+### Technical Constraints
+- [Constraint 1]
+- [Constraint 2]
 
 ### Performance Requirements
-- [Tempo di risposta atteso]
-- [Carico supportato]
+- [Expected response time]
+- [Supported load]
 
 ---
 
-## 🔗 Dipendenze
+## 🔗 Dependencies
 
 ### User Stories
-- **US-XXX**: [Titolo] - [Tipo dipendenza]
-- **US-XXX**: [Titolo] - [Tipo dipendenza]
+- **US-XXX**: [Title] - [Dependency type]
+- **US-XXX**: [Title] - [Dependency type]
 
-### Requisiti Funzionali
-- **REQ-XXX**: [Titolo requisito]
-- **REQ-XXX**: [Titolo requisito]
+### Functional Requirements
+- **REQ-XXX**: [Requirement title]
+- **REQ-XXX**: [Requirement title]
 
-### Componenti Esterni
-- [Sistema/API esterno]
-- [Servizio di terze parti]
+### External Components
+- [External system/API]
+- [Third-party service]
 
 ---
 
-## ⚠️ Rischi e Considerazioni
+## ⚠️ Risks and Considerations
 
-### Rischi Identificati
-- **[Rischio 1]**: [Descrizione e impatto]
-- **[Rischio 2]**: [Descrizione e impatto]
+### Identified Risks
+- **[Risk 1]**: [Description and impact]
+- **[Risk 2]**: [Description and impact]
 
 ### Edge Cases
 - [Edge case 1]
 - [Edge case 2]
 
-### Assunzioni
-- [Assunzione 1]
-- [Assunzione 2]
+### Assumptions
+- [Assumption 1]
+- [Assumption 2]
 
 ---
 
 ## 📝 Definition of Ready Checklist
 
-- [ ] User story scritta in formato "Come... Voglio... Per..."
-- [ ] Criteri di accettazione chiari e testabili
-- [ ] Story points stimati dal team
-- [ ] Dipendenze identificate
-- [ ] Design/wireframes disponibili (se necessario)
-- [ ] Requisiti tecnici chiari
-- [ ] Accettata dal Product Owner
+- [ ] User story written in "As a... I want... So that..." format
+- [ ] Clear and testable acceptance criteria
+- [ ] Story points estimated by the team
+- [ ] Dependencies identified
+- [ ] Design/wireframes available (if necessary)
+- [ ] Clear technical requirements
+- [ ] Accepted by the Product Owner
 
 ---
 
 ## ✅ Definition of Done Checklist
 
 ### Development
-- [ ] Codice implementato secondo criteri di accettazione
-- [ ] Unit tests scritti e passanti (>= 80% coverage)
-- [ ] Code review completata
-- [ ] Codice pushato su feature branch
+- [ ] Code implemented according to acceptance criteria
+- [ ] Unit tests written and passing (>= 80% coverage)
+- [ ] Code review completed
+- [ ] Code pushed to feature branch
 
 ### Testing
-- [ ] Tutti i test cases eseguiti e passanti
-- [ ] Integration tests passanti
-- [ ] Testing su dispositivi/browser target
-- [ ] Performance testing (se applicable)
+- [ ] All test cases executed and passing
+- [ ] Integration tests passing
+- [ ] Testing on target devices/browsers
+- [ ] Performance testing (if applicable)
 
 ### Documentation
-- [ ] Documentazione tecnica aggiornata
-- [ ] API documentation aggiornata (se applicable)
-- [ ] User documentation aggiornata (se applicable)
+- [ ] Technical documentation updated
+- [ ] API documentation updated (if applicable)
+- [ ] User documentation updated (if applicable)
 
 ### Deployment
-- [ ] Deploy su environment di test
-- [ ] Smoke tests passanti
+- [ ] Deployed to test environment
+- [ ] Smoke tests passing
 - [ ] Product Owner acceptance
 - [ ] Ready for production deploy
 
@@ -188,45 +188,45 @@
 ## 📊 Tracking
 
 ### Story Points Breakdown
-- **Planning**: [Points] punti
-- **Development**: [Points] punti  
-- **Testing**: [Points] punti
-- **Review**: [Points] punti
+- **Planning**: [Points]
+- **Development**: [Points]
+- **Testing**: [Points]
+- **Review**: [Points]
 
 ### Time Tracking
-- **Stimato**: [Ore] ore
-- **Effettivo**: [Ore] ore
-- **Variance**: [+/-X] ore
+- **Estimated**: [Hours]
+- **Actual**: [Hours]
+- **Variance**: [+/-X] hours
 
 ---
 
 ## 💬 Comments & Notes
 
 ### Development Notes
-[Note tecniche durante lo sviluppo]
+[Technical notes during development]
 
 ### Testing Notes
-[Risultati dei test, bug trovati, etc.]
+[Test results, bugs found, etc.]
 
 ### Review Comments
-[Feedback dal code review o testing]
+[Feedback from code review or testing]
 
 ---
 
-## 📅 Storia della User Story
+## 📅 User Story History
 
 ### Change Log
-| Data | Versione | Autore | Cambiamenti |
-|------|----------|--------|-------------|
-| [Data] | 1.0 | [Nome] | User story creata |
-| [Data] | 1.1 | [Nome] | [Descrizione cambiamento] |
+| Date   | Version | Author | Changes             |
+|--------|---------|--------|---------------------|
+| [Date] | 1.0     | [Name] | User story created  |
+| [Date] | 1.1     | [Name] | [Description of change] |
 
 ### Sprint History
-- **Sprint X**: [Status raggiunto]
-- **Sprint Y**: [Status raggiunto]
+- **Sprint X**: [Status reached]
+- **Sprint Y**: [Status reached]
 
 ---
 
-*User Story creata il: [Data]*  
-*Ultimo aggiornamento: [Data]*  
-*Assegnata a: [Nome Developer]*
+*User Story created on: [Date]*
+*Last updated: [Date]*
+*Assigned to: [Developer Name]*

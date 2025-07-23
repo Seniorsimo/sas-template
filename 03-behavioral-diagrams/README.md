@@ -1,61 +1,61 @@
-# Diagrammi Comportamentali
+# Behavioral Diagrams
 
-Questa sezione contiene tutti i diagrammi UML che descrivono il comportamento del sistema.
+This section contains all the UML diagrams that describe the behavior of the system.
 
-## Struttura
+## Structure
 
 ### use-case-diagrams/
-Diagrammi dei casi d'uso che mostrano:
-- Attori del sistema
-- Casi d'uso principali
-- Relazioni tra attori e casi d'uso
-- Boundary del sistema
+Use case diagrams that show:
+- System actors
+- Main use cases
+- Relationships between actors and use cases
+- System boundary
 
 ### activity-diagrams/
-Diagrammi delle attività che descrivono:
-- Flussi di lavoro
-- Processi business
-- Logica di controllo
-- Parallelismo e sincronizzazione
+Activity diagrams that describe:
+- Workflows
+- Business processes
+- Control logic
+- Parallelism and synchronization
 
 ### sequence-diagrams/
-Diagrammi di sequenza che mostrano:
-- Interazioni tra oggetti
-- Ordine temporale dei messaggi
-- Ciclo di vita degli oggetti
-- Collaborazioni tra componenti
+Sequence diagrams that show:
+- Interactions between objects
+- Temporal order of messages
+- Object lifecycle
+- Collaborations between components
 
-## Convenzioni
+## Conventions
 
 ### Naming
-- File: `[nome-descrittivo].puml` o `[nome-descrittivo].mmd`
-- Diagrammi: Titoli chiari e descrittivi
-- Elementi: Nomi consistenti con il dominio
+- Files: `[descriptive-name].puml` or `[descriptive-name].mmd`
+- Diagrams: Clear and descriptive titles
+- Elements: Names consistent with the domain
 
-### Strumenti
-- **PlantUML**: Per diagrammi UML formali
-- **Mermaid**: Per diagrammi rapidi e semplici
-- **Draw.io**: Per diagrammi visuali complessi
+### Tools
+- **PlantUML**: For formal UML diagrams
+- **Mermaid**: For quick and simple diagrams
+- **Draw.io**: For complex visual diagrams
 
-### Tracciabilità
-Ogni diagramma deve:
-- Referenziare le user stories correlate
-- Includere una descrizione del scopo
-- Mantenere consistenza con altri diagrammi
+### Traceability
+Each diagram must:
+- Reference related user stories
+- Include a description of the purpose
+- Maintain consistency with other diagrams
 
-## Workflow Consigliato
-1. **Use Case**: Parti dai casi d'uso di alto livello
-2. **Activity**: Dettaglio dei processi interni
-3. **Sequence**: Interazioni specifiche tra componenti
+## Recommended Workflow
+1. **Use Case**: Start with high-level use cases
+2. **Activity**: Detail internal processes
+3. **Sequence**: Specific interactions between components
 
-## Template e Documentazione
-Ogni sottocartella contiene:
-- **Template PlantUML**: File `.puml` pronti per l'uso
-- **README.md**: Guida completa all'utilizzo dei template
-- **Best Practices**: Convenzioni e standards per ogni tipo di diagramma
+## Templates and Documentation
+Each subfolder contains:
+- **PlantUML Template**: Ready-to-use `.puml` files
+- **README.md**: Complete guide to using the templates
+- **Best Practices**: Conventions and standards for each type of diagram
 
-### Come Iniziare
-1. Scegli il tipo di diagramma più appropriato per il tuo caso d'uso
-2. Leggi il README della sottocartella per le linee guida specifiche  
-3. Copia e personalizza il template fornito
-4. Segui le convenzioni di naming e tracciabilità
+### How to Get Started
+1. Choose the most appropriate type of diagram for your use case
+2. Read the subfolder's README for specific guidelines
+3. Copy and customize the provided template
+4. Follow the naming and traceability conventions

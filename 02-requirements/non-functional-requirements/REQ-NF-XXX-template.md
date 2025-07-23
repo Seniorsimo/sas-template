@@ -1,283 +1,283 @@
-# REQ-NF-[CAT]-XXX: [Titolo Requisito Non-Funzionale]
+# REQ-NF-[CAT]-XXX: [Non-Functional Requirement Title]
 
-## 📋 Informazioni Generali
-**ID**: REQ-NF-[CAT]-XXX  
-**Categoria**: Performance | Security | Usability | Reliability | Scalability | Compatibility  
-**Sottocategoria**: [Specifica più dettagliata]  
-**Priorità**: Critical | High | Medium | Low  
-**Status**: Draft | Review | Approved | Implemented | Verified  
-**Owner**: [Stakeholder responsabile]
-
----
-
-## 📝 Descrizione
-
-### Sommario
-[Breve descrizione del requisito qualitativo]
-
-### Descrizione Dettagliata
-[Spiegazione completa di cosa il sistema deve soddisfare dal punto di vista qualitativo]
-
-### Motivazione Business
-[Perché questo requisito è importante per il business]
-
-### Impatto Utente
-[Come questo requisito influenza l'esperienza utente]
+## 📋 General Information
+**ID**: REQ-NF-[CAT]-XXX
+**Category**: Performance | Security | Usability | Reliability | Scalability | Compatibility
+**Subcategory**: [More detailed specification]
+**Priority**: Critical | High | Medium | Low
+**Status**: Draft | Review | Approved | Implemented | Verified
+**Owner**: [Responsible Stakeholder]
 
 ---
 
-## 📊 Specifiche Quantitative
+## 📝 Description
 
-### Metrica Primaria
-**Nome Metrica**: [Nome della metrica principale]  
-**Unità di Misura**: [Secondi/Percentuale/Numero/etc.]  
-**Valore Target**: [Valore obiettivo da raggiungere]  
-**Valore Minimo Accettabile**: [Soglia minima]  
-**Valore Ottimale**: [Valore ideale]
+### Summary
+[Brief description of the quality requirement]
 
-### Metriche Secondarie
-- **[Metrica 2]**: [Target] [Unità]
-- **[Metrica 3]**: [Target] [Unità]
-- **[Metrica 4]**: [Target] [Unità]
+### Detailed Description
+[Complete explanation of what the system must satisfy from a qualitative point of view]
 
-### Condizioni di Misurazione
-**Ambiente**: [Produzione/Staging/Test]  
-**Carico**: [Condizioni di carico durante la misurazione]  
-**Configurazione**: [Setup specifico richiesto]  
-**Periodo**: [Quando/quanto spesso misurare]
+### Business Motivation
+[Why this requirement is important for the business]
+
+### User Impact
+[How this requirement affects the user experience]
 
 ---
 
-## ✅ Criteri di Accettazione
+## 📊 Quantitative Specifications
 
-### Criterio Principale
-**Given** [condizioni iniziali]  
-**When** [scenario di test]  
-**Then** [risultato quantitativo atteso]
+### Primary Metric
+**Metric Name**: [Name of the main metric]
+**Unit of Measure**: [Seconds/Percentage/Number/etc.]
+**Target Value**: [Target value to be achieved]
+**Minimum Acceptable Value**: [Minimum threshold]
+**Optimal Value**: [Ideal value]
 
-### Criteri Aggiuntivi
-- [ ] [Criterio quantitativo 1]
-- [ ] [Criterio quantitativo 2]
-- [ ] [Criterio qualitativo 1]
-- [ ] [Criterio qualitativo 2]
+### Secondary Metrics
+- **[Metric 2]**: [Target] [Unit]
+- **[Metric 3]**: [Target] [Unit]
+- **[Metric 4]**: [Target] [Unit]
 
-### Scenari di Test
-#### Scenario Normale
-[Descrizione test sotto condizioni normali]
-
-#### Scenario di Stress
-[Descrizione test sotto condizioni di stress]
-
-#### Scenario di Peak Load
-[Descrizione test sotto carico massimo]
+### Measurement Conditions
+**Environment**: [Production/Staging/Test]
+**Load**: [Load conditions during measurement]
+**Configuration**: [Specific setup required]
+**Period**: [When/how often to measure]
 
 ---
 
-## 🔧 Specifiche Tecniche
+## ✅ Acceptance Criteria
 
-### Componenti Impattati
-- **[Componente 1]**: [Tipo di impatto e requisiti]
-- **[Componente 2]**: [Tipo di impatto e requisiti]
-- **[Componente 3]**: [Tipo di impatto e requisiti]
+### Main Criterion
+**Given** [initial conditions]
+**When** [test scenario]
+**Then** [expected quantitative result]
 
-### Tecnologie Richieste
-- **[Tecnologia 1]**: [Per quale aspetto è necessaria]
-- **[Tecnologia 2]**: [Per quale aspetto è necessaria]
+### Additional Criteria
+- [ ] [Quantitative criterion 1]
+- [ ] [Quantitative criterion 2]
+- [ ] [Qualitative criterion 1]
+- [ ] [Qualitative criterion 2]
 
-### Configurazioni
-**Hardware**: [Requisiti minimi hardware]  
-**Software**: [Configurazioni software richieste]  
-**Network**: [Requisiti di rete]  
-**Storage**: [Requisiti di storage]
+### Test Scenarios
+#### Normal Scenario
+[Description of the test under normal conditions]
 
-### Vincoli Tecnici
-- [Vincolo 1]
-- [Vincolo 2]
-- [Vincolo 3]
+#### Stress Scenario
+[Description of the test under stress conditions]
 
----
-
-## 🧪 Piano di Verifica
-
-### Metodi di Testing
-**Tipo di Test**: [Load/Security/Usability/etc.]  
-**Tools di Test**: [Strumenti da utilizzare]  
-**Frequenza**: [Quando eseguire i test]  
-**Automazione**: [Livello di automazione]
-
-### Test Specifici
-#### Test 1: [Nome Test]
-- **Obiettivo**: [Cosa verificare]
-- **Setup**: [Configurazione test]
-- **Procedura**: [Passi da seguire]
-- **Criteri Successo**: [Come determinare successo]
-
-#### Test 2: [Nome Test]
-- **Obiettivo**: [Cosa verificare]
-- **Setup**: [Configurazione test]
-- **Procedura**: [Passi da seguire]
-- **Criteri Successo**: [Come determinare successo]
-
-### Monitoring Continuo
-**Metriche da Monitorare**: [Liste metriche]  
-**Alerting**: [Quando attivare alert]  
-**Dashboard**: [Visualizzazioni necessarie]  
-**Reporting**: [Report periodici]
+#### Peak Load Scenario
+[Description of the test under maximum load]
 
 ---
 
-## 🔗 Tracciabilità
+## 🔧 Technical Specifications
 
-### Obiettivi Business
-- **[OBJ-XXX]**: [Collegamento con obiettivi business]
-- **[OBJ-XXX]**: [Altri obiettivi collegati]
+### Impacted Components
+- **[Component 1]**: [Type of impact and requirements]
+- **[Component 2]**: [Type of impact and requirements]
+- **[Component 3]**: [Type of impact and requirements]
 
-### Requisiti Funzionali
-- **[REQ-F-XXX]**: [Come questo NFR supporta il requisito funzionale]
-- **[REQ-F-XXX]**: [Altri requisiti funzionali collegati]
+### Required Technologies
+- **[Technology 1]**: [For what aspect it is necessary]
+- **[Technology 2]**: [For what aspect it is necessary]
+
+### Configurations
+**Hardware**: [Minimum hardware requirements]
+**Software**: [Required software configurations]
+**Network**: [Network requirements]
+**Storage**: [Storage requirements]
+
+### Technical Constraints
+- [Constraint 1]
+- [Constraint 2]
+- [Constraint 3]
+
+---
+
+## 🧪 Verification Plan
+
+### Testing Methods
+**Test Type**: [Load/Security/Usability/etc.]
+**Test Tools**: [Tools to be used]
+**Frequency**: [When to perform tests]
+**Automation**: [Level of automation]
+
+### Specific Tests
+#### Test 1: [Test Name]
+- **Objective**: [What to verify]
+- **Setup**: [Test configuration]
+- **Procedure**: [Steps to follow]
+- **Success Criteria**: [How to determine success]
+
+#### Test 2: [Test Name]
+- **Objective**: [What to verify]
+- **Setup**: [Test configuration]
+- **Procedure**: [Steps to follow]
+- **Success Criteria**: [How to determine success]
+
+### Continuous Monitoring
+**Metrics to Monitor**: [List of metrics]
+**Alerting**: [When to trigger alerts]
+**Dashboard**: [Necessary visualizations]
+**Reporting**: [Periodic reports]
+
+---
+
+## 🔗 Traceability
+
+### Business Objectives
+- **[OBJ-XXX]**: [Link to business objectives]
+- **[OBJ-XXX]**: [Other related objectives]
+
+### Functional Requirements
+- **[REQ-F-XXX]**: [How this NFR supports the functional requirement]
+- **[REQ-F-XXX]**: [Other related functional requirements]
 
 ### User Stories
-- **[US-XXX]**: [User story che beneficia di questo NFR]
-- **[US-XXX]**: [Altre user stories collegate]
+- **[US-XXX]**: [User story that benefits from this NFR]
+- **[US-XXX]**: [Other related user stories]
 
 ### Stakeholders
-- **[Nome Stakeholder]**: [Interesse in questo requisito]
-- **[Nome Stakeholder]**: [Altri stakeholder coinvolti]
+- **[Stakeholder Name]**: [Interest in this requirement]
+- **[Stakeholder Name]**: [Other involved stakeholders]
 
 ---
 
 ## ⚙️ Design & Architecture Implications
 
-### Decisioni Architetturali
-- **[Decisione 1]**: [Impatto architetturale]
-- **[Decisione 2]**: [Altre decisioni necessarie]
+### Architectural Decisions
+- **[Decision 1]**: [Architectural impact]
+- **[Decision 2]**: [Other necessary decisions]
 
-### Pattern di Design
-- **[Pattern 1]**: [Quando e perché utilizzarlo]
-- **[Pattern 2]**: [Altri pattern necessari]
+### Design Patterns
+- **[Pattern 1]**: [When and why to use it]
+- **[Pattern 2]**: [Other necessary patterns]
 
 ### Infrastructure Requirements
-- **[Infra 1]**: [Requisiti infrastrutturali]
-- **[Infra 2]**: [Altri requisiti infrastruttura]
+- **[Infra 1]**: [Infrastructural requirements]
+- **[Infra 2]**: [Other infrastructure requirements]
 
 ---
 
-## 💰 Costi e Trade-offs
+## 💰 Costs and Trade-offs
 
-### Costi di Implementazione
-**Development**: [Stima effort di sviluppo]  
-**Testing**: [Costi aggiuntivi di testing]  
-**Infrastructure**: [Costi infrastrutturali]  
-**Maintenance**: [Costi operativi continuativi]
+### Implementation Costs
+**Development**: [Development effort estimate]
+**Testing**: [Additional testing costs]
+**Infrastructure**: [Infrastructural costs]
+**Maintenance**: [Ongoing operational costs]
 
-### Trade-offs Identificati
-- **[Qualità A] vs [Qualità B]**: [Descrizione trade-off]
-- **[Performance] vs [Security]**: [Altro trade-off]
+### Identified Trade-offs
+- **[Quality A] vs [Quality B]**: [Description of the trade-off]
+- **[Performance] vs [Security]**: [Another trade-off]
 
 ### Risk/Benefit Analysis
-**Benefici**: [Benefici quantificati]  
-**Rischi**: [Rischi di non implementare]  
-**ROI**: [Ritorno investimento stimato]
+**Benefits**: [Quantified benefits]
+**Risks**: [Risks of not implementing]
+**ROI**: [Estimated return on investment]
 
 ---
 
-## ⚠️ Rischi e Mitigazioni
+## ⚠️ Risks and Mitigations
 
-### Rischi Tecnici
-- **[Rischio 1]**: [Probabilità: H/M/L] - [Impatto: H/M/L]  
-  *Mitigazione*: [Piano di mitigazione]
+### Technical Risks
+- **[Risk 1]**: [Probability: H/M/L] - [Impact: H/M/L]
+  *Mitigation*: [Mitigation plan]
 
-- **[Rischio 2]**: [Probabilità: H/M/L] - [Impatto: H/M/L]  
-  *Mitigazione*: [Piano di mitigazione]
+- **[Risk 2]**: [Probability: H/M/L] - [Impact: H/M/L]
+  *Mitigation*: [Mitigation plan]
 
-### Rischi di Business
-- **[Rischio Business]**: [Descrizione]  
-  *Mitigazione*: [Piano di mitigazione]
+### Business Risks
+- **[Business Risk]**: [Description]
+  *Mitigation*: [Mitigation plan]
 
 ---
 
 ## 📅 Timeline & Milestones
 
-### Fase di Analysis
-- **Requirements Finalization**: [Data]
-- **Architecture Review**: [Data]
-- **Technology Selection**: [Data]
+### Analysis Phase
+- **Requirements Finalization**: [Date]
+- **Architecture Review**: [Date]
+- **Technology Selection**: [Date]
 
-### Fase di Implementation
-- **Development Start**: [Data]
-- **Implementation Complete**: [Data]
-- **Internal Testing**: [Data]
+### Implementation Phase
+- **Development Start**: [Date]
+- **Implementation Complete**: [Date]
+- **Internal Testing**: [Date]
 
-### Fase di Verification
-- **Testing Start**: [Data]
-- **Performance Validation**: [Data]
-- **Acceptance Testing**: [Data]
-- **Go-Live**: [Data]
+### Verification Phase
+- **Testing Start**: [Date]
+- **Performance Validation**: [Date]
+- **Acceptance Testing**: [Date]
+- **Go-Live**: [Date]
 
 ---
 
 ## 📈 Success Metrics
 
-### Metriche di Implementazione
-- **[Metrica 1]**: [Baseline] → [Target] → [Attuale]
-- **[Metrica 2]**: [Baseline] → [Target] → [Attuale]
+### Implementation Metrics
+- **[Metric 1]**: [Baseline] → [Target] → [Actual]
+- **[Metric 2]**: [Baseline] → [Target] → [Actual]
 
-### KPI di Business
-- **[KPI 1]**: [Come questo NFR influenza il KPI]
-- **[KPI 2]**: [Altri KPI impattati]
+### Business KPIs
+- **[KPI 1]**: [How this NFR affects the KPI]
+- **[KPI 2]**: [Other impacted KPIs]
 
 ### User Satisfaction
-- **[Metrica UX 1]**: [Come misurare soddisfazione]
-- **[Metrica UX 2]**: [Altre metriche di soddisfazione]
+- **[UX Metric 1]**: [How to measure satisfaction]
+- **[UX Metric 2]**: [Other satisfaction metrics]
 
 ---
 
-## 📝 Note e Considerazioni
+## 📝 Notes and Considerations
 
-### Note Implementative
-[Considerazioni specifiche per l'implementazione]
+### Implementation Notes
+[Specific considerations for implementation]
 
 ### Lessons Learned
-[Lezioni apprese da progetti simili]
+[Lessons learned from similar projects]
 
 ### Best Practices
-[Best practices specifiche per questo tipo di requisito]
+[Specific best practices for this type of requirement]
 
-### Issues Aperte
-- [ ] [Issue 1 da risolvere]
-- [ ] [Issue 2 da risolvere]
+### Open Issues
+- [ ] [Issue 1 to be resolved]
+- [ ] [Issue 2 to be resolved]
 
 ---
 
-## ✅ Sign-off e Validazione
+## ✅ Sign-off and Validation
 
 ### Review Checklist
-- [ ] Requisito quantificabile e misurabile
-- [ ] Criteri di accettazione chiari
-- [ ] Piano di verifica definito
-- [ ] Tracciabilità completa
-- [ ] Rischi identificati e mitigati
-- [ ] Trade-offs analizzati
+- [ ] Quantifiable and measurable requirement
+- [ ] Clear acceptance criteria
+- [ ] Defined verification plan
+- [ ] Complete traceability
+- [ ] Identified risks and mitigated
+- [ ] Analyzed trade-offs
 
-### Approvazioni
-| Ruolo | Nome | Data | Firma |
-|-------|------|------|-------|
-| Technical Architect | [Nome] | ______ | ______ |
-| Performance Engineer | [Nome] | ______ | ______ |
-| Product Owner | [Nome] | ______ | ______ |
-| Quality Assurance | [Nome] | ______ | ______ |
+### Approvals
+| Role                 | Name   | Date   | Signature |
+|----------------------|--------|--------|-----------|
+| Technical Architect  | [Name] | ______ | ______    |
+| Performance Engineer | [Name] | ______ | ______    |
+| Product Owner        | [Name] | ______ | ______    |
+| Quality Assurance    | [Name] | ______ | ______    |
 
 ---
 
 ## 📊 Change History
 
-| Versione | Data | Autore | Cambiamenti | Impatto |
-|----------|------|--------|-------------|---------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | - |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] |
+| Version | Date   | Author | Changes     | Impact |
+|---------|--------|--------|-------------|--------|
+| 1.0     | [Date] | [Name] | Initial version | -      |
+| 1.1     | [Date] | [Name] | [Changes]   | [Impact] |
 
 ---
 
-*Requisito non-funzionale creato il: [Data]*  
-*Ultima verifica: [Data]*  
-*Prossima validazione: [Data]*
+*Non-functional requirement created on: [Date]*
+*Last verification: [Date]*
+*Next validation: [Date]*

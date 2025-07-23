@@ -1,126 +1,126 @@
 # Use Case Diagrams
 
-I diagrammi dei casi d'uso mostrano le funzionalità del sistema dal punto di vista degli utenti e degli attori esterni.
+Use case diagrams show the functionality of the system from the perspective of users and external actors.
 
-## 🎯 Scopo dei Use Case Diagrams
+## 🎯 Purpose of Use Case Diagrams
 
-I **Use Case Diagrams** servono per:
-- Identificare gli attori del sistema
-- Definire i casi d'uso principali
-- Mostrare le relazioni tra attori e casi d'uso
-- Stabilire i confini del sistema (system boundary)
+**Use Case Diagrams** are used to:
+- Identify the system's actors
+- Define the main use cases
+- Show the relationships between actors and use cases
+- Establish the system boundaries
 
-## 📋 Elementi del Diagramma
+## 📋 Diagram Elements
 
-### Attori (Actors)
+### Actors
 ```plantuml
-actor "Nome Attore" as ActorAlias
-actor :Nome Attore: as ActorAlias2
+actor "Actor Name" as ActorAlias
+actor :Actor Name: as ActorAlias2
 ```
 
-**Tipologie di Attori:**
-- **Attori Primari**: Utenti principali che iniziano i casi d'uso
-- **Attori Secondari**: Sistemi esterni che supportano i casi d'uso
-- **Attori di Sistema**: Altri sistemi che interagiscono
+**Types of Actors:**
+- **Primary Actors**: Main users who initiate use cases
+- **Secondary Actors**: External systems that support use cases
+- **System Actors**: Other interacting systems
 
-### Casi d'Uso (Use Cases)
+### Use Cases
 ```plantuml
-usecase "Nome Use Case" as UC1
-usecase (Nome Use Case) as UC2
+usecase "Use Case Name" as UC1
+usecase (Use Case Name) as UC2
 ```
 
-**Livelli di Granularità:**
-- **High-Level**: Processi business completi
-- **User-Level**: Interazioni singole utente
-- **Sub-Function**: Sotto-funzionalità specifiche
+**Levels of Granularity:**
+- **High-Level**: Complete business processes
+- **User-Level**: Single user interactions
+- **Sub-Function**: Specific sub-functionalities
 
 ### System Boundary
 ```plantuml
-rectangle "Nome Sistema" {
+rectangle "System Name" {
   usecase "Use Case 1" as UC1
   usecase "Use Case 2" as UC2
 }
 ```
 
-### Relazioni
+### Relationships
 
-#### Association (Associazione)
+#### Association
 ```plantuml
 Actor --> (Use Case)
 ```
 
-#### Include (Inclusione)
+#### Include
 ```plantuml
-(Use Case Base) .> (Use Case Incluso) : <<include>>
+(Base Use Case) .> (Included Use Case) : <<include>>
 ```
 
-#### Extend (Estensione)
+#### Extend
 ```plantuml
-(Use Case Esteso) .> (Use Case Base) : <<extend>>
+(Extended Use Case) .> (Base Use Case) : <<extend>>
 ```
 
-#### Generalization (Generalizzazione)
+#### Generalization
 ```plantuml
-(Use Case Specifico) --|> (Use Case Generale)
+(Specific Use Case) --|> (General Use Case)
 Actor1 --|> Actor2
 ```
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica gli Attori
+### 1. Identify the Actors
 ```plantuml
-' Attori Primari (esterni, a sinistra)
-actor "Cliente" as Customer
-actor "Amministratore" as Admin
+' Primary Actors (external, on the left)
+actor "Customer" as Customer
+actor "Administrator" as Admin
 
-' Attori Secondari (sistemi, a destra)  
-actor "Sistema Pagamenti" as PaymentSys
-actor "Sistema Email" as EmailSys
+' Secondary Actors (systems, on the right)
+actor "Payment System" as PaymentSys
+actor "Email System" as EmailSys
 ```
 
-### 2. Definisci i Casi d'Uso
+### 2. Define the Use Cases
 ```plantuml
-' Casi d'uso raggruppati logicamente
-package "Gestione Ordini" {
-  usecase "Effettua Ordine" as UC1
-  usecase "Modifica Ordine" as UC2
-  usecase "Cancella Ordine" as UC3
+' Logically grouped use cases
+package "Order Management" {
+  usecase "Place Order" as UC1
+  usecase "Modify Order" as UC2
+  usecase "Cancel Order" as UC3
 }
 
-package "Gestione Account" {
-  usecase "Registra Account" as UC4
+package "Account Management" {
+  usecase "Register Account" as UC4
   usecase "Login" as UC5
-  usecase "Recupera Password" as UC6
+  usecase "Recover Password" as UC6
 }
 ```
 
-### 3. Stabilisci le Relazioni
+### 3. Establish Relationships
 ```plantuml
-' Associazioni dirette
+' Direct associations
 Customer --> UC1
 Customer --> UC2
 Admin --> UC3
 
-' Relazioni include/extend
+' Include/extend relationships
 UC1 .> UC5 : <<include>>
 UC6 .> UC5 : <<extend>>
 ```
 
-## 🏗️ Pattern Comuni
+## 🏗️ Common Patterns
 
-### Pattern Cliente-Sistema
+### Customer-System Pattern
 ```plantuml
 @startuml
 !theme blueprint
 
-actor "Cliente" as C
-actor "Sistema Bancario" as Bank
+actor "Customer" as C
+actor "Banking System" as Bank
 
 rectangle "E-commerce System" {
-  usecase "Sfoglia Catalogo" as UC1
-  usecase "Effettua Ordine" as UC2
-  usecase "Effettua Pagamento" as UC3
-  usecase "Ricevi Conferma" as UC4
+  usecase "Browse Catalog" as UC1
+  usecase "Place Order" as UC2
+  usecase "Make Payment" as UC3
+  usecase "Receive Confirmation" as UC4
 }
 
 C --> UC1
@@ -131,21 +131,21 @@ UC3 .> UC4 : <<include>>
 @enduml
 ```
 
-### Pattern Amministrativo
+### Administrative Pattern
 ```plantuml
 @startuml
 !theme blueprint
 
-actor "Utente" as U
-actor "Amministratore" as A
+actor "User" as U
+actor "Administrator" as A
 actor "Super Admin" as SA
 
-rectangle "Sistema Gestionale" {
-  usecase "Visualizza Dati" as UC1
-  usecase "Modifica Dati" as UC2
-  usecase "Elimina Dati" as UC3
-  usecase "Gestisci Utenti" as UC4
-  usecase "Configurazione Sistema" as UC5
+rectangle "Management System" {
+  usecase "View Data" as UC1
+  usecase "Modify Data" as UC2
+  usecase "Delete Data" as UC3
+  usecase "Manage Users" as UC4
+  usecase "System Configuration" as UC5
 }
 
 U --> UC1
@@ -160,20 +160,20 @@ SA --|> A
 @enduml
 ```
 
-### Pattern con Sistema Esterno
+### External System Pattern
 ```plantuml
 @startuml
 !theme blueprint
 
-actor "Utente Mobile" as Mobile
-actor "Utente Web" as Web
+actor "Mobile User" as Mobile
+actor "Web User" as Web
 actor "API Gateway" as API
 actor "Database" as DB
 
-rectangle "Sistema Multi-Channel" {
-  usecase "Autentica Utente" as UC1
-  usecase "Accedi Dati" as UC2
-  usecase "Sincronizza Dati" as UC3
+rectangle "Multi-Channel System" {
+  usecase "Authenticate User" as UC1
+  usecase "Access Data" as UC2
+  usecase "Synchronize Data" as UC3
 }
 
 Mobile --> UC1
@@ -188,74 +188,74 @@ Web --> UC2
 @enduml
 ```
 
-## 📊 Best Practices per Use Cases
+## 📊 Best Practices for Use Cases
 
 ### ✅ Naming Conventions
-- **Use Cases**: Verbo + Oggetto ("Effettua Ordine", "Gestisci Profilo")
-- **Attori**: Nomi o ruoli chiari ("Cliente", "Amministratore Sistema")
-- **Packages**: Raggruppamenti logici ("Gestione Ordini", "Sicurezza")
+- **Use Cases**: Verb + Object ("Place Order", "Manage Profile")
+- **Actors**: Clear names or roles ("Customer", "System Administrator")
+- **Packages**: Logical groupings ("Order Management", "Security")
 
-### ✅ Livelli di Dettaglio
+### ✅ Levels of Detail
 ```plantuml
-' ❌ Troppo dettagliato
-usecase "Clicca Bottone Login"
+' ❌ Too detailed
+usecase "Click Login Button"
 
-' ✅ Livello appropriato  
-usecase "Effettua Login"
+' ✅ Appropriate level
+usecase "Perform Login"
 
-' ❌ Troppo generico
-usecase "Gestisci Sistema"
+' ❌ Too generic
+usecase "Manage System"
 
-' ✅ Specifico ma completo
-usecase "Gestisci Configurazione Utenti"
+' ✅ Specific but complete
+usecase "Manage User Configuration"
 ```
 
-### ✅ Relazioni Significative
+### ✅ Meaningful Relationships
 ```plantuml
-' ✅ Include per funzionalità sempre richieste
-(Effettua Ordine) .> (Valida Pagamento) : <<include>>
+' ✅ Include for always required functionality
+(Place Order) .> (Validate Payment) : <<include>>
 
-' ✅ Extend per variazioni opzionali
-(Applica Sconto) .> (Effettua Ordine) : <<extend>>
+' ✅ Extend for optional variations
+(Apply Discount) .> (Place Order) : <<extend>>
 
-' ✅ Generalizzazione per specializzazioni
-(Login OAuth) --|> (Effettua Login)
+' ✅ Generalization for specializations
+(OAuth Login) --|> (Perform Login)
 ```
 
-### ❌ Anti-Patterns da Evitare
-- **Troppi Use Cases**: Max 7-9 per diagramma
-- **Use Cases Implementativi**: Focus su business value
-- **Attori Tecnici**: Evita "Database", "Server" come attori
-- **Flussi Sequenziali**: Non mostrare sequenze temporali
+### ❌ Anti-Patterns to Avoid
+- **Too many Use Cases**: Max 7-9 per diagram
+- **Implementation-focused Use Cases**: Focus on business value
+- **Technical Actors**: Avoid "Database", "Server" as actors
+- **Sequential Flows**: Do not show temporal sequences
 
-## 🔍 Tracciabilità
+## 🔍 Traceability
 
-### Collegamento con User Stories
+### Link with User Stories
 ```plantuml
-' Use Case: UC-001 "Effettua Ordine"
+' Use Case: UC-001 "Place Order"
 ' User Stories: US-001, US-002, US-003
 ' Requirements: REQ-F-001, REQ-F-002
 
-note top of UC1 : Traccia a:\nUS-001: Ordine Cliente\nREQ-F-001: Processo Ordini
+note top of UC1 : Traces to:\nUS-001: Customer Order\nREQ-F-001: Order Process
 ```
 
-### Collegamento con Requirements
+### Link with Requirements
 ```yaml
 Use Case ID: UC-001
-Name: Effettua Ordine
-User Stories: 
-  - US-001: Come cliente, voglio ordinare prodotti
-  - US-002: Come cliente, voglio scegliere pagamento
+Name: Place Order
+User Stories:
+  - US-001: As a customer, I want to order products
+  - US-002: As a customer, I want to choose a payment method
 Functional Requirements:
-  - REQ-F-001: Sistema deve validare ordini
-  - REQ-F-002: Sistema deve processare pagamenti
+  - REQ-F-001: System must validate orders
+  - REQ-F-002: System must process payments
 Non-Functional Requirements:
-  - REQ-NF-001: Tempo risposta < 3 secondi
+  - REQ-NF-001: Response time < 3 seconds
 ```
 
-## 🎨 Styling e Presentazione
+## 🎨 Styling and Presentation
 
-### Theme e Colori
+### Theme and Colors
 ```plantuml
 !theme blueprint
 !define BUSINESS_COLOR #E1F5FE
@@ -273,51 +273,51 @@ skinparam usecase {
 }
 ```
 
-### Layout e Organizzazione
+### Layout and Organization
 ```plantuml
-' Attori primari a sinistra
+' Primary actors on the left
 left to right direction
 
-' Attori secondari a destra  
-actor "Sistema Esterno" as Ext
+' Secondary actors on the right
+actor "External System" as Ext
 
-' Raggruppamento logico
-package "Modulo Core" as Core {
-  usecase "Use Case Principale" as Main
+' Logical grouping
+package "Core Module" as Core {
+  usecase "Main Use Case" as Main
 }
 
-package "Modulo Supporto" as Support {
-  usecase "Use Case Supporto" as Help
+package "Support Module" as Support {
+  usecase "Support Use Case" as Help
 }
 ```
 
-## 🧪 Esempi per Dominio
+## 🧪 Examples by Domain
 
 ### E-commerce
 ```plantuml
 @startuml
 !theme blueprint
-title Sistema E-commerce - Use Cases Principali
+title E-commerce System - Main Use Cases
 
-actor "Cliente" as C
-actor "Amministratore" as A
-actor "Sistema Pagamenti" as Pay
+actor "Customer" as C
+actor "Administrator" as A
+actor "Payment System" as Pay
 
 rectangle "E-commerce Platform" {
-  package "Catalogo" {
-    usecase "Sfoglia Prodotti" as UC1
-    usecase "Cerca Prodotti" as UC2
+  package "Catalog" {
+    usecase "Browse Products" as UC1
+    usecase "Search Products" as UC2
   }
-  
-  package "Ordini" {
-    usecase "Aggiungi al Carrello" as UC3
-    usecase "Effettua Checkout" as UC4
-    usecase "Traccia Ordine" as UC5
+
+  package "Orders" {
+    usecase "Add to Cart" as UC3
+    usecase "Perform Checkout" as UC4
+    usecase "Track Order" as UC5
   }
-  
-  package "Amministrazione" {
-    usecase "Gestisci Inventario" as UC6
-    usecase "Processa Ordini" as UC7
+
+  package "Administration" {
+    usecase "Manage Inventory" as UC6
+    usecase "Process Orders" as UC7
   }
 }
 
@@ -335,21 +335,21 @@ UC4 .> UC3 : <<include>>
 @enduml
 ```
 
-### Sistema Bancario
+### Banking System
 ```plantuml
 @startuml
 !theme blueprint
-title Sistema Bancario - Use Cases
+title Banking System - Use Cases
 
-actor "Cliente" as C
-actor "Operatore" as O
-actor "Sistema Centrale" as SC
+actor "Customer" as C
+actor "Operator" as O
+actor "Central System" as SC
 
 rectangle "Online Banking" {
-  usecase "Visualizza Saldo" as UC1
-  usecase "Effettua Bonifico" as UC2
-  usecase "Richiedi Prestito" as UC3
-  usecase "Approva Prestito" as UC4
+  usecase "View Balance" as UC1
+  usecase "Make Transfer" as UC2
+  usecase "Request Loan" as UC3
+  usecase "Approve Loan" as UC4
 }
 
 C --> UC1
@@ -364,27 +364,27 @@ UC4 .> UC3 : <<extend>>
 @enduml
 ```
 
-### Sistema HR
+### HR System
 ```plantuml
 @startuml
 !theme blueprint
-title Sistema HR - Gestione Dipendenti
+title HR System - Employee Management
 
-actor "Dipendente" as D
+actor "Employee" as D
 actor "HR Manager" as HR
 actor "System Admin" as SA
 
 rectangle "HR Management System" {
   package "Self Service" {
-    usecase "Visualizza Busta Paga" as UC1
-    usecase "Richiedi Ferie" as UC2
-    usecase "Aggiorna Profilo" as UC3
+    usecase "View Payslip" as UC1
+    usecase "Request Leave" as UC2
+    usecase "Update Profile" as UC3
   }
-  
-  package "Amministrazione" {
-    usecase "Gestisci Dipendenti" as UC4
-    usecase "Approva Richieste" as UC5
-    usecase "Genera Report" as UC6
+
+  package "Administration" {
+    usecase "Manage Employees" as UC4
+    usecase "Approve Requests" as UC5
+    usecase "Generate Reports" as UC6
   }
 }
 
@@ -401,27 +401,27 @@ UC5 .> UC2 : <<include>>
 @enduml
 ```
 
-## 🔧 Tools e Integrazione
+## 🔧 Tools and Integration
 
 ### PlantUML Extensions
-- **VS Code**: PlantUML extension per preview
+- **VS Code**: PlantUML extension for preview
 - **IntelliJ**: PlantUML integration plugin
-- **Confluence**: PlantUML macro per documentation
+- **Confluence**: PlantUML macro for documentation
 - **GitHub**: PlantUML rendering in README
 
-### Export e Condivisione
+### Export and Sharing
 ```bash
 # Export PNG
 plantuml -tpng diagram.puml
 
-# Export SVG  
+# Export SVG
 plantuml -tsvg diagram.puml
 
 # Export PDF
 plantuml -tpdf diagram.puml
 ```
 
-### Integrazione CI/CD
+### CI/CD Integration
 ```yaml
 # GitHub Actions example
 - name: Generate PlantUML Diagrams
@@ -430,27 +430,27 @@ plantuml -tpdf diagram.puml
     args: -v -tsvg **/*.puml
 ```
 
-## 📚 Risorse Aggiuntive
+## 📚 Additional Resources
 
 ### UML Standards
-- **UML 2.5 Specification**: Standard OMG ufficiale
-- **PlantUML Language Reference**: Sintassi completa
+- **UML 2.5 Specification**: Official OMG standard
+- **PlantUML Language Reference**: Complete syntax
 - **Use Case Best Practices**: Cockburn, Fowler guidelines
 
-### Template Correlati
-- `../activity-diagrams/`: Dettaglio flussi use case
-- `../sequence-diagrams/`: Interazioni specifiche
-- `../../02-requirements/user-stories/`: User stories collegate
+### Related Templates
+- `../activity-diagrams/`: Detailed use case flows
+- `../sequence-diagrams/`: Specific interactions
+- `../../02-requirements/user-stories/`: Linked user stories
 
-## 📞 Supporto
+## 📞 Support
 
-Per domande sui Use Case Diagrams:
+For questions about Use Case Diagrams:
 
-- **Business Analyst**: [Responsabile requirements]
-- **Solution Architect**: [Responsabile system design]  
-- **Product Owner**: [Responsabile product vision]
-- **Technical Writer**: [Responsabile documentation]
+- **Business Analyst**: [Responsible for requirements]
+- **Solution Architect**: [Responsible for system design]
+- **Product Owner**: [Responsible for product vision]
+- **Technical Writer**: [Responsible for documentation]
 
 ---
 
-*I Use Case Diagrams sono il ponte tra il business e la tecnologia. Usali per catturare il "cosa" prima di passare al "come".*
+*Use Case Diagrams are the bridge between business and technology. Use them to capture the "what" before moving on to the "how."*

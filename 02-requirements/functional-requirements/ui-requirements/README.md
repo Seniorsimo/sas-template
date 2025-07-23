@@ -1,36 +1,36 @@
-# UI Requirements - Specifiche Interfaccia Utente
+# UI Requirements - User Interface Specifications
 
-Questa cartella contiene i requisiti specifici per l'interfaccia utente del sistema - componenti UI, user experience, responsive design e accessibilità.
+This folder contains the specific requirements for the system's user interface - UI components, user experience, responsive design, and accessibility.
 
-## 📋 Scopo degli UI Requirements
+## 📋 Purpose of UI Requirements
 
-Gli **UI Requirements** definiscono:
-- Componenti interfaccia utente
-- Layout e responsive design
-- Interazioni e user experience
-- Accessibilità e usabilità
-- Branding e visual design
-- Performance frontend
+**UI Requirements** define:
+- User interface components
+- Layout and responsive design
+- Interactions and user experience
+- Accessibility and usability
+- Branding and visual design
+- Frontend performance
 
-## 🎯 Tipologie di UI Requirements
+## 🎯 Types of UI Requirements
 
-### Layout e Structure
-- Grid systems e layout responsive
+### Layout and Structure
+- Grid systems and responsive layouts
 - Navigation patterns
 - Header, footer, sidebar
 - Content organization
 
 ### Interactive Components
-- Forms e input controls
-- Buttons e call-to-action
-- Modal e dialogs
-- Tables e data grids
-- Charts e visualizzazioni
+- Forms and input controls
+- Buttons and call-to-actions
+- Modals and dialogs
+- Tables and data grids
+- Charts and visualizations
 
 ### User Experience
-- User workflows e journeys
-- Loading states e feedback
-- Error handling UI
+- User workflows and journeys
+- Loading states and feedback
+- UI error handling
 - Success/confirmation patterns
 
 ### Responsive Design
@@ -39,67 +39,67 @@ Gli **UI Requirements** definiscono:
 - Desktop experience
 - Cross-browser compatibility
 
-## 📝 Convenzioni per UI Requirements
+## 📝 Conventions for UI Requirements
 
-### Schema ID
+### ID Schema
 ```
 REQ-UI-{COMPONENT}-{NUMBER}
 ```
 
-**Dove**:
-- `UI` = sempre per UI requirements
-- `{COMPONENT}` = Tipo componente (FORM, NAV, DASH, etc.)
-- `{NUMBER}` = Numero progressivo (001, 002, etc.)
+**Where**:
+- `UI` = always for UI requirements
+- `{COMPONENT}` = Component type (FORM, NAV, DASH, etc.)
+- `{NUMBER}` = Progressive number (001, 002, etc.)
 
-### Esempi ID
+### ID Examples
 ```
-REQ-UI-FORM-001        # Form di login
-REQ-UI-NAV-001         # Navigazione principale
-REQ-UI-DASH-001        # Dashboard utente
-REQ-UI-TABLE-001       # Tabelle dati
+REQ-UI-FORM-001        # Login form
+REQ-UI-NAV-001         # Main navigation
+REQ-UI-DASH-001        # User dashboard
+REQ-UI-TABLE-001       # Data tables
 REQ-UI-MODAL-001       # Modal dialogs
 ```
 
-## 🏷️ Categorizzazione UI
+## 🏷️ UI Categorization
 
 ### Core Components
-- **REQ-UI-CORE-XXX**: Componenti base (buttons, inputs, etc.)
-- **REQ-UI-LAYOUT-XXX**: Layout e struttura
-- **REQ-UI-NAV-XXX**: Navigazione
+- **REQ-UI-CORE-XXX**: Base components (buttons, inputs, etc.)
+- **REQ-UI-LAYOUT-XXX**: Layout and structure
+- **REQ-UI-NAV-XXX**: Navigation
 
 ### Feature Components
-- **REQ-UI-FORM-XXX**: Forms e input
-- **REQ-UI-TABLE-XXX**: Tabelle e grids
-- **REQ-UI-CHART-XXX**: Charts e grafici
-- **REQ-UI-MODAL-XXX**: Modal e dialogs
+- **REQ-UI-FORM-XXX**: Forms and inputs
+- **REQ-UI-TABLE-XXX**: Tables and grids
+- **REQ-UI-CHART-XXX**: Charts and graphs
+- **REQ-UI-MODAL-XXX**: Modals and dialogs
 
 ### Specialized Components
-- **REQ-UI-ADMIN-XXX**: Interfacce admin
-- **REQ-UI-MOBILE-XXX**: Componenti mobile-specific
-- **REQ-UI-PRINT-XXX**: Layout per stampa
+- **REQ-UI-ADMIN-XXX**: Admin interfaces
+- **REQ-UI-MOBILE-XXX**: Mobile-specific components
+- **REQ-UI-PRINT-XXX**: Print layouts
 
-## ✅ Quality Gates UI
+## ✅ UI Quality Gates
 
 ### Design Consistency
 - [ ] Design system compliance
-- [ ] Brand guidelines seguito
-- [ ] Visual consistency mantenuta
-- [ ] Typography standards applicati
-- [ ] Color palette utilizzata correttamente
+- [ ] Brand guidelines followed
+- [ ] Visual consistency maintained
+- [ ] Typography standards applied
+- [ ] Color palette used correctly
 
 ### Usability Standards
-- [ ] User testing completato
+- [ ] User testing completed
 - [ ] Accessibility guidelines (WCAG 2.1 AA)
 - [ ] Mobile-friendly design
 - [ ] Intuitive navigation
 - [ ] Clear information hierarchy
 
 ### Technical Quality
-- [ ] Performance targets raggiunti
+- [ ] Performance targets reached
 - [ ] Cross-browser compatibility
-- [ ] Responsive behavior verificato
-- [ ] Loading states implementati
-- [ ] Error handling UI completato
+- [ ] Responsive behavior verified
+- [ ] Loading states implemented
+- [ ] UI error handling completed
 
 ## 📊 UI Design Standards
 
@@ -154,12 +154,12 @@ xxl: 48px
 - Rich text editors
 
 ### Display Components
-- Cards e panels
-- Tables e data grids
-- Lists e tiles
+- Cards and panels
+- Tables and data grids
+- Lists and tiles
 - Progress indicators
-- Badges e labels
-- Tooltips e popovers
+- Badges and labels
+- Tooltips and popovers
 
 ### Navigation Components
 - Main navigation
@@ -170,7 +170,7 @@ xxl: 48px
 - Mobile menu
 
 ### Feedback Components
-- Alerts e notifications
+- Alerts and notifications
 - Loading spinners
 - Error messages
 - Success confirmations
@@ -189,7 +189,7 @@ xxl: 48px
 - Color contrast ratio ≥ 4.5:1
 - Keyboard navigation support
 - Screen reader compatibility
-- Focus indicators visible
+- Visible focus indicators
 - Alt text for images
 - Form labels properly associated
 
@@ -210,7 +210,7 @@ xxl: 48px
 ## 💡 Best Practices
 
 ### ✅ Do's
-- **Follow design system** consistently
+- **Follow the design system** consistently
 - **Test on real devices** and browsers
 - **Optimize for performance**
 - **Consider accessibility** from the start
@@ -218,7 +218,7 @@ xxl: 48px
 - **Implement progressive enhancement**
 
 ### ❌ Don'ts
-- **Don't ignore mobile experience**
+- **Don't ignore the mobile experience**
 - **Don't use color alone** to convey information
 - **Don't create overly complex** interfaces
 - **Don't forget loading states**
@@ -227,4 +227,4 @@ xxl: 48px
 
 ---
 
-*L'interfaccia utente è il punto di contatto con i tuoi utenti. Progettala per essere intuitiva, accessibile e performante.*
+*The user interface is the point of contact with your users. Design it to be intuitive, accessible, and high-performing.*

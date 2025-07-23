@@ -1,45 +1,45 @@
-# Diagrammi Strutturali
+# Structural Diagrams
 
-Questa sezione contiene tutti i diagrammi che descrivono la struttura e l'architettura del sistema.
+This section contains all the diagrams that describe the structure and architecture of the system.
 
-## Struttura
+## Structure
 
 ### class-diagrams/
-Diagrammi delle classi UML che mostrano:
-- Classi del dominio e business objects
-- Attributi, metodi e visibilità
-- Relazioni tra classi (ereditarietà, composizione, aggregazione)
-- Interfacce, classi astratte e pattern OOP
-- Design patterns e architectural patterns
+UML class diagrams that show:
+- Domain classes and business objects
+- Attributes, methods, and visibility
+- Relationships between classes (inheritance, composition, aggregation)
+- Interfaces, abstract classes, and OOP patterns
+- Design patterns and architectural patterns
 
 ### component-diagrams/
-Diagrammi dei componenti che descrivono:
-- Architettura del sistema a livello di componenti
-- Interfacce e contratti tra moduli
-- Dipendenze e accoppiamento tra componenti
-- Layer architetturali e package organization
-- Deployment e distribuzione dei componenti
+Component diagrams that describe:
+- System architecture at the component level
+- Interfaces and contracts between modules
+- Dependencies and coupling between components
+- Architectural layers and package organization
+- Deployment and distribution of components
 
 ### template-system-architecture.puml
-Template per il diagramma dell'architettura generale del sistema che include:
-- Layer dell'applicazione (Frontend, API Gateway, Services)
-- Database Layer (Database principale, Cache, File Storage)
-- Servizi esterni (servizi di terze parti)
-- Componenti di infrastruttura (Load Balancer, Monitoring, Security, CI/CD)
-- Flussi di comunicazione tra i componenti
+Template for the general system architecture diagram that includes:
+- Application layers (Frontend, API Gateway, Services)
+- Database Layer (Main database, Cache, File Storage)
+- External services (third-party services)
+- Infrastructure components (Load Balancer, Monitoring, Security, CI/CD)
+- Communication flows between components
 
-**Come utilizzare**: Personalizza i nomi dei servizi, delle tecnologie e delle connessioni in base al tuo progetto specifico.
+**How to use**: Customize the names of services, technologies, and connections according to your specific project.
 
-## Strumenti Disponibili
+## Available Tools
 
 ### PlantUML (.puml)
-Perfetto per diagrammi UML formali:
-- Sintassi testuale precisa
-- Supporto completo per UML standard
-- Facile versionamento
-- Generazione automatica
+Perfect for formal UML diagrams:
+- Precise textual syntax
+- Full support for standard UML
+- Easy versioning
+- Automatic generation
 
-**Esempio d'uso**:
+**Example of use**:
 ```plantuml
 @startuml
 class User {
@@ -50,120 +50,120 @@ class User {
 ```
 
 ### Draw.io (.drawio)
-Ideale per diagrammi di architettura e infrastruttura:
-- Interfaccia drag-and-drop
-- Librerie di icone predefinite
-- Ottimo per diagrammi di deployment
-- Collaborazione visuale
+Ideal for architecture and infrastructure diagrams:
+- Drag-and-drop interface
+- Predefined icon libraries
+- Great for deployment diagrams
+- Visual collaboration
 
-**Come aprire**: Fai doppio clic sul file `.drawio` per aprirlo nell'editor integrato di VS Code.
+**How to open**: Double-click the `.drawio` file to open it in the integrated VS Code editor.
 
 ### Mermaid (.mmd)
-Per diagrammi rapidi e semplici:
-- Sintassi semplificata
-- Rendering veloce
-- Perfetto per documentazione
+For quick and simple diagrams:
+- Simplified syntax
+- Fast rendering
+- Perfect for documentation
 
-## Workflow Consigliato
+## Recommended Workflow
 
-### 1. Architettura di Sistema (Draw.io)
-- Inizia con il diagramma generale dell'architettura
-- Mostra i layer principali
-- Evidenzia i flussi di comunicazione
+### 1. System Architecture (Draw.io)
+- Start with the general architecture diagram
+- Show the main layers
+- Highlight communication flows
 
-### 2. Diagrammi dei Componenti (PlantUML)
-- Dettaglio dei singoli componenti
-- Interfacce e dipendenze
-- Mapping con l'architettura generale
+### 2. Component Diagrams (PlantUML)
+- Detail of individual components
+- Interfaces and dependencies
+- Mapping with the general architecture
 
-### 3. Diagrammi delle Classi (PlantUML)
-- Modello del dominio
-- Design patterns implementati
-- Struttura interna dei componenti
+### 3. Class Diagrams (PlantUML)
+- Domain model
+- Implemented design patterns
+- Internal structure of components
 
-## Template Disponibili
+## Available Templates
 
-### Per PlantUML
-- `template-class-diagram.puml` - Struttura base per diagrammi delle classi
-- Esempi di relazioni, stereotipi e annotazioni
+### For PlantUML
+- `template-class-diagram.puml` - Base structure for class diagrams
+- Examples of relationships, stereotypes, and annotations
 
-### Per Draw.io
-- `system-architecture.drawio` - Template architettura sistema
-- Layout predefinito con layer colorati
-- Esempi di connessioni e etichette
+### For Draw.io
+- `system-architecture.drawio` - System architecture template
+- Predefined layout with colored layers
+- Examples of connections and labels
 
 ## Best Practices
 
-### Diagrammi delle Classi
-- Mostra solo attributi e metodi rilevanti
-- Usa stereotipi per chiarire ruoli (`<<interface>>`, `<<abstract>>`)
-- Raggruppa classi correlate in package
-- Includi molteplicità nelle relazioni
+### Class Diagrams
+- Show only relevant attributes and methods
+- Use stereotypes to clarify roles (`<<interface>>`, `<<abstract>>`)
+- Group related classes into packages
+- Include multiplicity in relationships
 
-### Diagrammi di Architettura
-- Usa colori consistenti per raggruppare layer
-- Mostra direzione dei flussi di comunicazione
-- Includi tecnologie utilizzate
-- Mantieni il diagramma ad alto livello
+### Architecture Diagrams
+- Use consistent colors to group layers
+- Show the direction of communication flows
+- Include technologies used
+- Keep the diagram at a high level
 
 ### Naming Conventions
-- File: `[component-name]-[type].puml` o `[system-name]-architecture.drawio`
-- Classi: PascalCase
-- Attributi/Metodi: camelCase
-- Package: lowercase
+- Files: `[component-name]-[type].puml` or `[system-name]-architecture.drawio`
+- Classes: PascalCase
+- Attributes/Methods: camelCase
+- Packages: lowercase
 
-## Visualizzazione
+## Visualization
 
 ### PlantUML
-1. Apri il file `.puml`
-2. Usa `Ctrl+Shift+P` → `PlantUML: Preview Current Diagram`
-3. Per esportare: `PlantUML: Export Current Diagram`
+1. Open the `.puml` file
+2. Use `Ctrl+Shift+P` → `PlantUML: Preview Current Diagram`
+3. To export: `PlantUML: Export Current Diagram`
 
 ### Draw.io
-1. Fai doppio clic sul file `.drawio`
-2. Si aprirà l'editor integrato di Draw.io
-3. Modifica con drag-and-drop
-4. Salva automaticamente in VS Code
+1. Double-click the `.drawio` file
+2. The integrated Draw.io editor will open
+3. Edit with drag-and-drop
+4. Save automatically in VS Code
 
 ### Mermaid
-1. Inserisci il codice in un file Markdown:
+1. Insert the code into a Markdown file:
    ```markdown
    ```mermaid
    graph TD
      A --> B
    ```
-2. Usa l'anteprima Markdown per visualizzare
+2. Use the Markdown preview to view
 
-## Integrazione con Documentazione
-- Riferimenti ai diagrammi nella documentazione testuale
-- Link tra diagrammi comportamentali e strutturali
-- Tracciabilità con requisiti e user stories
-- Relazioni tra classi (associazione, aggregazione, composizione, ereditarietà)
-- Interfacce e classi astratte
+## Integration with Documentation
+- References to diagrams in textual documentation
+- Links between behavioral and structural diagrams
+- Traceability with requirements and user stories
+- Relationships between classes (association, aggregation, composition, inheritance)
+- Interfaces and abstract classes
 
 ### component-diagrams/
-Diagrammi dei componenti che descrivono:
-- Architettura a componenti
-- Interfacce fornite e richieste
-- Dipendenze tra componenti
-- Organizzazione del sistema
+Component diagrams that describe:
+- Component architecture
+- Provided and required interfaces
+- Dependencies between components
+- System organization
 
-## Convenzioni per Diagrammi delle Classi
+## Conventions for Class Diagrams
 
-### Visibilità
+### Visibility
 - `+` public
 - `-` private
 - `#` protected
 - `~` package
 
-### Relazioni
-- **Associazione**: linea semplice
-- **Aggregazione**: diamante vuoto
-- **Composizione**: diamante pieno
-- **Ereditarietà**: triangolo vuoto
-- **Implementazione**: triangolo vuoto + linea tratteggiata
+### Relationships
+- **Association**: solid line
+- **Aggregation**: empty diamond
+- **Composition**: filled diamond
+- **Inheritance**: empty triangle
+- **Implementation**: empty triangle + dashed line
 
-### Stereotipi
+### Stereotypes
 - `<<interface>>`
 - `<<abstract>>`
 - `<<entity>>`
@@ -172,17 +172,17 @@ Diagrammi dei componenti che descrivono:
 
 ## Best Practices
 
-### Organizzazione
-- Raggruppa classi correlate
-- Mantieni diagrammi leggibili (max 10-15 classi)
-- Usa package per organizzare classi
+### Organization
+- Group related classes
+- Keep diagrams readable (max 10-15 classes)
+- Use packages to organize classes
 
-### Dettaglio
-- Includi attributi e metodi principali
-- Specifica tipi di dati importanti
-- Mostra cardinalità nelle associazioni
+### Detail
+- Include main attributes and methods
+- Specify important data types
+- Show cardinality in associations
 
-### Tracciabilità
-- Collega alle user stories
-- Mantieni consistenza con i diagrammi comportamentali
-- Documenta le decisioni di design
+### Traceability
+- Link to user stories
+- Maintain consistency with behavioral diagrams
+- Document design decisions

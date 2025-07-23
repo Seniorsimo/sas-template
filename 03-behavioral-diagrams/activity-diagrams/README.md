@@ -1,18 +1,18 @@
 # Activity Diagrams
 
-I diagrammi delle attività mostrano i flussi di lavoro, i processi business e la logica di controllo del sistema.
+Activity diagrams show the workflows, business processes, and control logic of the system.
 
-## 🎯 Scopo degli Activity Diagrams
+## 🎯 Purpose of Activity Diagrams
 
-Gli **Activity Diagrams** servono per:
-- Modellare processi business e workflow
-- Mostrare flussi di controllo e dati
-- Documentare algoritmi e logica complessa
-- Analizzare parallelismo e sincronizzazione
+**Activity Diagrams** are used to:
+- Model business processes and workflows
+- Show control and data flows
+- Document complex algorithms and logic
+- Analyze parallelism and synchronization
 
-## 📋 Elementi del Diagramma
+## 📋 Diagram Elements
 
-### Nodi di Controllo
+### Control Nodes
 
 #### Start/End Nodes
 ```plantuml
@@ -23,185 +23,185 @@ end
 
 #### Activity Nodes
 ```plantuml
-:Attività Semplice;
-:Attività con
-Descrizione Multipla;
+:Simple Activity;
+:Activity with
+Multiple Description;
 ```
 
 #### Decision Nodes
 ```plantuml
-if (Condizione?) then (si)
-  :Azione A;
+if (Condition?) then (yes)
+  :Action A;
 else (no)
-  :Azione B;
+  :Action B;
 endif
 ```
 
-#### Fork/Join (Parallelismo)
+#### Fork/Join (Parallelism)
 ```plantuml
 fork
-  :Processo A;
+  :Process A;
 fork again
-  :Processo B;
+  :Process B;
 end fork
 ```
 
-### Swimlanes (Corsie)
+### Swimlanes
 ```plantuml
-|Cliente|
+|Customer|
 start
-:Effettua Richiesta;
+:Make Request;
 
-|Sistema|
-:Elabora Richiesta;
+|System|
+:Process Request;
 
 |Database|
-:Salva Dati;
+:Save Data;
 stop
 ```
 
-### Note e Commenti
+### Notes and Comments
 ```plantuml
-:Attività Importante;
-note right: Questa attività richiede\nvalidazione speciale
+:Important Activity;
+note right: This activity requires\nspecial validation
 ```
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica il Processo
+### 1. Identify the Process
 ```plantuml
-title Processo di Gestione Ordini
+title Order Management Process
 
 start
-:Cliente effettua ordine;
+:Customer places order;
 ```
 
-### 2. Definisci le Swimlanes
+### 2. Define Swimlanes
 ```plantuml
-|#AntiqueWhite|Cliente|
+|#AntiqueWhite|Customer|
 |#LightBlue|Frontend|
 |#LightGreen|Backend|
 |#LightCoral|Database|
 ```
 
-### 3. Modella il Flusso
+### 3. Model the Flow
 ```plantuml
-|Cliente|
+|Customer|
 start
-:Seleziona prodotti;
-:Procede al checkout;
+:Select products;
+:Proceed to checkout;
 
 |Frontend|
-:Valida form;
-if (Dati validi?) then (si)
+:Validate form;
+if (Data valid?) then (yes)
   |Backend|
-  :Elabora ordine;
+  :Process order;
 else (no)
   |Frontend|
-  :Mostra errori;
+  :Show errors;
   stop
 endif
 ```
 
-## 🏗️ Pattern Comuni
+## 🏗️ Common Patterns
 
-### Pattern Processo Lineare
+### Linear Process Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Processo di Approvazione Lineare
+title Linear Approval Process
 
 start
-:Ricevi Richiesta;
-:Valida Documenti;
-if (Documenti OK?) then (si)
-  :Elabora Richiesta;
-  :Invia Approvazione;
+:Receive Request;
+:Validate Documents;
+if (Documents OK?) then (yes)
+  :Process Request;
+  :Send Approval;
 else (no)
-  :Richiedi Documenti Aggiuntivi;
+  :Request Additional Documents;
   stop
 endif
-:Archivia Pratica;
+:Archive Case;
 end
 @enduml
 ```
 
-### Pattern con Parallelismo
+### Parallelism Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Processo di Elaborazione Parallela
+title Parallel Processing Process
 
 start
-:Ricevi Ordine;
+:Receive Order;
 
 fork
-  :Verifica Inventario;
+  :Check Inventory;
 fork again
-  :Valida Pagamento;
+  :Validate Payment;
 fork again
-  :Calcola Spedizione;
+  :Calculate Shipping;
 end fork
 
-:Consolida Risultati;
-if (Tutto OK?) then (si)
-  :Conferma Ordine;
+:Consolidate Results;
+if (All OK?) then (yes)
+  :Confirm Order;
 else (no)
-  :Notifica Problemi;
+  :Notify Problems;
 endif
 end
 @enduml
 ```
 
-### Pattern con Loop
+### Loop Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Processo con Iterazione
+title Process with Iteration
 
 start
-:Inizializza Contatore;
+:Initialize Counter;
 repeat
-  :Elabora Item;
-  :Incrementa Contatore;
-repeat while (Altri item?) is (si)
+  :Process Item;
+  :Increment Counter;
+repeat while (More items?) is (yes)
 ->no;
-:Finalizza Elaborazione;
+:Finalize Processing;
 end
 @enduml
 ```
 
-### Pattern Multi-Swimlane
+### Multi-Swimlane Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Processo Cross-Funzionale
+title Cross-Functional Process
 
-|#AntiqueWhite|Cliente|
+|#AntiqueWhite|Customer|
 start
-:Invia Richiesta;
+:Send Request;
 
-|#LightBlue|Vendite|
-:Riceve Richiesta;
-:Valida Requisiti;
-if (Requisiti OK?) then (si)
-  |#LightGreen|Produzione|
-  :Pianifica Produzione;
-  :Produce Articolo;
-  |#LightCoral|Qualità|
-  :Controlla Qualità;
-  if (Qualità OK?) then (si)
-    |#LightBlue|Vendite|
-    :Conferma Consegna;
-    |#AntiqueWhite|Cliente|
-    :Riceve Prodotto;
+|#LightBlue|Sales|
+:Receive Request;
+:Validate Requirements;
+if (Requirements OK?) then (yes)
+  |#LightGreen|Production|
+  :Plan Production;
+  :Produce Item;
+  |#LightCoral|Quality|
+  :Check Quality;
+  if (Quality OK?) then (yes)
+    |#LightBlue|Sales|
+    :Confirm Delivery;
+    |#AntiqueWhite|Customer|
+    :Receive Product;
   else (no)
-    |#LightGreen|Produzione|
-    :Rilavora Articolo;
+    |#LightGreen|Production|
+    :Rework Item;
   endif
 else (no)
-  |#LightBlue|Vendite|
-  :Rifiuta Richiesta;
+  |#LightBlue|Sales|
+  :Reject Request;
 endif
 end
 @enduml
@@ -209,66 +209,66 @@ end
 
 ## 📊 Best Practices
 
-### ✅ Struttura e Flusso
-- **Start/End chiari**: Ogni diagramma deve avere inizio e fine definiti
-- **Flusso logico**: Le attività devono seguire sequenza logica
-- **Decisioni binarie**: Use if-then-else per decision points
-- **Parallelismo appropriato**: Fork/join solo quando necessario
+### ✅ Structure and Flow
+- **Clear Start/End**: Every diagram must have a defined beginning and end
+- **Logical Flow**: Activities must follow a logical sequence
+- **Binary Decisions**: Use if-then-else for decision points
+- **Appropriate Parallelism**: Fork/join only when necessary
 
-### ✅ Naming e Descrizioni
+### ✅ Naming and Descriptions
 ```plantuml
-' ✅ Verbi d'azione chiari
-:Valida Credenziali Utente;
-:Genera Report Vendite;
-:Invia Notifica Email;
+' ✅ Clear action verbs
+:Validate User Credentials;
+:Generate Sales Report;
+:Send Email Notification;
 
-' ❌ Nomi vaghi
-:Elaborazione;
-:Controllo;
-:Gestione;
+' ❌ Vague names
+:Processing;
+:Control;
+:Management;
 ```
 
-### ✅ Livello di Dettaglio
+### ✅ Level of Detail
 ```plantuml
-' ✅ Livello business process
-:Elabora Ordine Cliente;
-:Verifica Disponibilità Prodotto;
-:Calcola Totale con Tasse;
+' ✅ Business process level
+:Process Customer Order;
+:Check Product Availability;
+:Calculate Total with Taxes;
 
-' ❌ Troppo tecnico
-:Esegui Query SQL;
-:Deserializza JSON;
-:Chiama API REST;
+' ❌ Too technical
+:Execute SQL Query;
+:Deserialize JSON;
+:Call REST API;
 ```
 
-### ✅ Gestione Errori
+### ✅ Error Handling
 ```plantuml
-:Elabora Pagamento;
-if (Pagamento riuscito?) then (si)
-  :Conferma Transazione;
+:Process Payment;
+if (Payment successful?) then (yes)
+  :Confirm Transaction;
 else (no)
-  :Log Errore;
-  :Notifica Fallimento;
-  :Rollback Transazione;
+  :Log Error;
+  :Notify Failure;
+  :Rollback Transaction;
 endif
 ```
 
-## 🎨 Styling e Layout
+## 🎨 Styling and Layout
 
-### Colori per Swimlanes
+### Swimlane Colors
 ```plantuml
-!define CLIENTE_COLOR #E3F2FD
-!define SISTEMA_COLOR #E8F5E8  
+!define CUSTOMER_COLOR #E3F2FD
+!define SYSTEM_COLOR #E8F5E8
 !define DATABASE_COLOR #FFF3E0
 !define EXTERNAL_COLOR #FCE4EC
 
-|CLIENTE_COLOR|Cliente|
-|SISTEMA_COLOR|Sistema|
+|CUSTOMER_COLOR|Customer|
+|SYSTEM_COLOR|System|
 |DATABASE_COLOR|Database|
-|EXTERNAL_COLOR|Servizio Esterno|
+|EXTERNAL_COLOR|External Service|
 ```
 
-### Styling Attività
+### Activity Styling
 ```plantuml
 skinparam activity {
   BackgroundColor #E1F5FE
@@ -284,283 +284,283 @@ skinparam decision {
 
 ### Layout Direction
 ```plantuml
-' Layout verticale (default)
+' Vertical layout (default)
 top to bottom direction
 
-' Layout orizzontale
+' Horizontal layout
 left to right direction
 ```
 
-## 🧪 Esempi per Dominio
+## 🧪 Examples by Domain
 
-### E-commerce: Processo Checkout
+### E-commerce: Checkout Process
 ```plantuml
 @startuml
 !theme blueprint
-title E-commerce - Processo di Checkout
+title E-commerce - Checkout Process
 
-|#E3F2FD|Cliente|
+|#E3F2FD|Customer|
 start
-:Visualizza Carrello;
-:Inserisce Dati Spedizione;
-:Seleziona Metodo Pagamento;
+:View Cart;
+:Enter Shipping Data;
+:Select Payment Method;
 
-|#E8F5E8|Sistema Frontend|
-:Valida Dati Form;
-if (Dati validi?) then (si)
-  |#FFF3E0|Sistema Backend|
-  :Calcola Totale;
-  
+|#E8F5E8|Frontend System|
+:Validate Form Data;
+if (Data valid?) then (yes)
+  |#FFF3E0|Backend System|
+  :Calculate Total;
+
   fork
-    :Verifica Inventario;
+    :Check Inventory;
   fork again
-    :Valida Pagamento;
+    :Validate Payment;
   end fork
-  
-  if (Tutto disponibile?) then (si)
-    :Crea Ordine;
-    :Processa Pagamento;
-    if (Pagamento OK?) then (si)
-      :Conferma Ordine;
-      |#FCE4EC|Sistema Email|
-      :Invia Conferma;
-      |#E3F2FD|Cliente|
-      :Riceve Conferma;
+
+  if (All available?) then (yes)
+    :Create Order;
+    :Process Payment;
+    if (Payment OK?) then (yes)
+      :Confirm Order;
+      |#FCE4EC|Email System|
+      :Send Confirmation;
+      |#E3F2FD|Customer|
+      :Receive Confirmation;
     else (no)
-      |#E8F5E8|Sistema Frontend|
-      :Mostra Errore Pagamento;
+      |#E8F5E8|Frontend System|
+      :Show Payment Error;
     endif
   else (no)
-    |#E8F5E8|Sistema Frontend|
-    :Mostra Prodotti Non Disponibili;
+    |#E8F5E8|Frontend System|
+    :Show Unavailable Products;
   endif
 else (no)
-  :Evidenzia Errori Form;
+  :Highlight Form Errors;
 endif
 end
 @enduml
 ```
 
-### Banking: Processo Prestito
+### Banking: Loan Process
 ```plantuml
 @startuml
 !theme blueprint
-title Sistema Bancario - Richiesta Prestito
+title Banking System - Loan Request
 
-|#E3F2FD|Cliente|
+|#E3F2FD|Customer|
 start
-:Compila Richiesta Prestito;
-:Carica Documenti;
+:Fill Loan Application;
+:Upload Documents;
 
-|#E8F5E8|Operatore|
-:Riceve Richiesta;
-:Verifica Completezza;
-if (Documenti completi?) then (si)
-  :Avvia Valutazione;
-  
+|#E8F5E8|Operator|
+:Receive Application;
+:Check Completeness;
+if (Documents complete?) then (yes)
+  :Start Evaluation;
+
   fork
-    |#FFF3E0|Sistema Credit Scoring|
-    :Calcola Credit Score;
+    |#FFF3E0|Credit Scoring System|
+    :Calculate Credit Score;
   fork again
-    |#FCE4EC|Sistema Verifica Reddito|
-    :Verifica Reddito;
+    |#FCE4EC|Income Verification System|
+    :Verify Income;
   end fork
-  
-  |#E8F5E8|Operatore|
-  :Valuta Risultati;
-  if (Score >= Soglia?) then (si)
-    :Approva Prestito;
-    |#E3F2FD|Cliente|
-    :Riceve Approvazione;
+
+  |#E8F5E8|Operator|
+  :Evaluate Results;
+  if (Score >= Threshold?) then (yes)
+    :Approve Loan;
+    |#E3F2FD|Customer|
+    :Receive Approval;
   else (no)
-    :Rifiuta Prestito;
-    |#E3F2FD|Cliente|
-    :Riceve Motivazioni Rifiuto;
+    :Reject Loan;
+    |#E3F2FD|Customer|
+    :Receive Rejection Reasons;
   endif
 else (no)
-  :Richiede Documenti Aggiuntivi;
-  |#E3F2FD|Cliente|
-  :Integra Documentazione;
+  :Request Additional Documents;
+  |#E3F2FD|Customer|
+  :Integrate Documentation;
 endif
 end
 @enduml
 ```
 
-### Manufacturing: Processo Produzione
+### Manufacturing: Production Process
 ```plantuml
 @startuml
 !theme blueprint
-title Manufacturing - Processo di Produzione
+title Manufacturing - Production Process
 
-|#E3F2FD|Vendite|
+|#E3F2FD|Sales|
 start
-:Riceve Ordine Cliente;
-:Verifica Specifiche;
+:Receive Customer Order;
+:Verify Specifications;
 
-|#E8F5E8|Pianificazione|
-:Pianifica Produzione;
-:Alloca Risorse;
+|#E8F5E8|Planning|
+:Plan Production;
+:Allocate Resources;
 
-|#FFF3E0|Produzione|
-:Prepara Materiali;
+|#FFF3E0|Production|
+:Prepare Materials;
 repeat
-  :Esegue Fase Produttiva;
-  |#FCE4EC|Controllo Qualità|
-  :Controlla Qualità Fase;
-  if (Qualità OK?) then (si)
-    |#FFF3E0|Produzione|
+  :Execute Production Phase;
+  |#FCE4EC|Quality Control|
+  :Check Phase Quality;
+  if (Quality OK?) then (yes)
+    |#FFF3E0|Production|
   else (no)
-    :Rilavorazione;
+    :Rework;
   endif
-repeat while (Fasi complete?) is (no)
-->si;
+repeat while (Phases complete?) is (no)
+->yes;
 
-|#FCE4EC|Controllo Qualità|
-:Controllo Finale;
-if (Prodotto conforme?) then (si)
-  |#E8F5E8|Logistica|
-  :Prepara Spedizione;
-  |#E3F2FD|Cliente|
-  :Riceve Prodotto;
+|#FCE4EC|Quality Control|
+:Final Inspection;
+if (Product compliant?) then (yes)
+  |#E8F5E8|Logistics|
+  :Prepare Shipment;
+  |#E3F2FD|Customer|
+  :Receive Product;
 else (no)
-  |#FFF3E0|Produzione|
-  :Scarta/Rilavorazione;
+  |#FFF3E0|Production|
+  :Scrap/Rework;
 endif
 end
 @enduml
 ```
 
-## 🔄 Activity vs Altri Diagrammi
+## 🔄 Activity vs Other Diagrams
 
 ### Activity vs Sequence
 ```yaml
 Activity Diagrams:
-  - Focus: Workflow e processi
-  - Prospettiva: Controllo e flusso dati
-  - Quando: Processi business complessi
-  - Dettaglio: Algoritmi e logica
+  - Focus: Workflows and processes
+  - Perspective: Control and data flow
+  - When: Complex business processes
+  - Detail: Algorithms and logic
 
 Sequence Diagrams:
-  - Focus: Interazioni tra oggetti
-  - Prospettiva: Comunicazione e messaggi
-  - Quando: Collaborazioni specifiche
-  - Dettaglio: Protocolli e interfacce
+  - Focus: Interactions between objects
+  - Perspective: Communication and messages
+  - When: Specific collaborations
+  - Detail: Protocols and interfaces
 ```
 
 ### Activity vs Use Case
 ```yaml
 Activity Diagrams:
-  - Cosa mostra: Come fare
-  - Livello: Implementazione processo
-  - Scope: Workflow interno
-  - Target: Team development
+  - What it shows: How to do it
+  - Level: Process implementation
+  - Scope: Internal workflow
+  - Target: Development team
 
 Use Case Diagrams:
-  - Cosa mostra: Cosa fare
-  - Livello: Requisiti funzionali
-  - Scope: Interazioni esterne
-  - Target: Stakeholder business
+  - What it shows: What to do
+  - Level: Functional requirements
+  - Scope: External interactions
+  - Target: Business stakeholders
 ```
 
-## 🔍 Tracciabilità
+## 🔍 Traceability
 
-### Collegamento con Use Cases
+### Link with Use Cases
 ```plantuml
-title Implementazione Use Case "Elabora Ordine"
-note top : Traccia a Use Case UC-002\nUser Story US-005
+title Implementation of Use Case "Process Order"
+note top : Traces to Use Case UC-002\nUser Story US-005
 
 start
-:Ricevi Richiesta Ordine;
-' ... resto del processo
+:Receive Order Request;
+' ... rest of the process
 ```
 
-### Collegamento con Requirements
+### Link with Requirements
 ```yaml
-Activity: "Processo Approvazione Credito"
-Use Cases: UC-003 "Richiedi Prestito"
-User Stories: 
-  - US-008: Valutazione automatica credito
-  - US-009: Notifica esito valutazione
+Activity: "Credit Approval Process"
+Use Cases: UC-003 "Request Loan"
+User Stories:
+  - US-008: Automatic credit evaluation
+  - US-009: Notification of evaluation outcome
 Requirements:
-  - REQ-F-015: Sistema scoring automatico
-  - REQ-NF-008: Tempo valutazione < 24h
+  - REQ-F-015: Automatic scoring system
+  - REQ-NF-008: Evaluation time < 24h
 ```
 
-## 🧪 Testing degli Activity Diagrams
+## 🧪 Testing Activity Diagrams
 
-### Scenari di Test
+### Test Scenarios
 ```plantuml
 ' Test Happy Path
 start
-:Input valido;
-:Elaborazione normale;
-:Output atteso;
+:Valid input;
+:Normal processing;
+:Expected output;
 end
 
-' Test Error Path  
+' Test Error Path
 start
-:Input non valido;
-:Gestione errore;
-:Messaggio errore;
+:Invalid input;
+:Error handling;
+:Error message;
 end
 ```
 
-### Coverage dei Percorsi
-- **Path Coverage**: Tutti i percorsi possibili
-- **Branch Coverage**: Tutte le decisioni
-- **Condition Coverage**: Tutte le condizioni
-- **Loop Coverage**: Iterazioni min/max/tipiche
+### Path Coverage
+- **Path Coverage**: All possible paths
+- **Branch Coverage**: All decisions
+- **Condition Coverage**: All conditions
+- **Loop Coverage**: Min/max/typical iterations
 
-## 🔧 Tools Avanzati
+## 🔧 Advanced Tools
 
 ### PlantUML Advanced Features
 ```plantuml
-' Partition per raggruppamento
-partition "Fase Preparazione" {
-  :Setup Ambiente;
-  :Carica Dati;
+' Partition for grouping
+partition "Preparation Phase" {
+  :Setup Environment;
+  :Load Data;
 }
 
-partition "Fase Elaborazione" {
-  :Processa Dati;
-  :Genera Output;
+partition "Processing Phase" {
+  :Process Data;
+  :Generate Output;
 }
 
 ' Backward arrow
-:Attività A;
--> Errore;
-:Gestione Errore;
+:Activity A;
+-> Error;
+:Error Handling;
 <-- Retry;
-:Attività A;
+:Activity A;
 ```
 
-### Integration con Modeling Tools
+### Integration with Modeling Tools
 - **Enterprise Architect**: Import/export UML
 - **Visual Paradigm**: PlantUML integration
 - **Lucidchart**: PlantUML support
 - **Draw.io**: PlantUML plugin
 
-## 📚 Risorse e References
+## 📚 Resources and References
 
 ### UML Standards
-- **UML 2.5 Activity Diagrams**: Specification completa
-- **BPMN vs UML Activity**: Differenze e quando usare
-- **Workflow Patterns**: Catalog pattern comuni
+- **UML 2.5 Activity Diagrams**: Complete specification
+- **BPMN vs UML Activity**: Differences and when to use
+- **Workflow Patterns**: Common pattern catalog
 
-### Template Correlati
-- `../use-case-diagrams/`: Use cases implementati
-- `../sequence-diagrams/`: Interazioni dettagliate
-- `../../02-requirements/`: Requirements correlati
+### Related Templates
+- `../use-case-diagrams/`: Implemented use cases
+- `../sequence-diagrams/`: Detailed interactions
+- `../../02-requirements/`: Related requirements
 
-## 📞 Supporto
+## 📞 Support
 
-Per domande sugli Activity Diagrams:
+For questions about Activity Diagrams:
 
-- **Business Process Analyst**: [Responsabile processi business]
-- **Solution Architect**: [Responsabile design soluzione]
-- **Technical Lead**: [Responsabile implementazione]
-- **Quality Assurance**: [Responsabile test processi]
+- **Business Process Analyst**: [Responsible for business processes]
+- **Solution Architect**: [Responsible for solution design]
+- **Technical Lead**: [Responsible for implementation]
+- **Quality Assurance**: [Responsible for process testing]
 
 ---
 
-*Gli Activity Diagrams trasformano i processi business in blueprint implementabili. Usali per bridging tra business e tecnologia.*
+*Activity Diagrams transform business processes into implementable blueprints. Use them to bridge the gap between business and technology.*

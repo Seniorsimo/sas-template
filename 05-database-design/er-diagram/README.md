@@ -1,22 +1,22 @@
 # Entity-Relationship Diagrams
 
-I diagrammi Entità-Relazione (ER) rappresentano il modello concettuale e logico dei dati del sistema.
+Entity-Relationship (ER) diagrams represent the conceptual and logical data model of the system.
 
-## 🎯 Scopo dei Diagrammi ER
+## 🎯 Purpose of ER Diagrams
 
-I **Diagrammi ER** servono per:
-- Modellare la struttura dei dati a livello concettuale
-- Definire entità, attributi e relazioni del dominio
-- Documentare vincoli di integrità e regole business
-- Fornire base per il design del database fisico
+**ER Diagrams** are used to:
+- Model the data structure at a conceptual level
+- Define domain entities, attributes, and relationships
+- Document integrity constraints and business rules
+- Provide a basis for the physical database design
 
-## 📋 Elementi del Diagramma ER
+## 📋 Elements of the ER Diagram
 
-### Entità
+### Entities
 
-#### Sintassi PlantUML
+#### PlantUML Syntax
 ```plantuml
-entity "Nome Entità" as EntityAlias {
+entity "Entity Name" as EntityAlias {
   * primary_key : TYPE
   --
   * required_attribute : TYPE
@@ -25,9 +25,9 @@ entity "Nome Entità" as EntityAlias {
 }
 ```
 
-#### Tipi di Entità
+#### Entity Types
 ```plantuml
-' Entità forte
+' Strong entity
 entity Customer {
   * customer_id : UUID
   --
@@ -35,7 +35,7 @@ entity Customer {
   * last_name : VARCHAR(50)
 }
 
-' Entità debole
+' Weak entity
 entity OrderItem {
   * order_id : UUID <<FK>>
   * product_id : UUID <<FK>>
@@ -46,9 +46,9 @@ entity OrderItem {
 }
 ```
 
-### Attributi
+### Attributes
 
-#### Classificazione Attributi
+#### Attribute Classification
 ```plantuml
 entity Product {
   * product_id : UUID
@@ -62,16 +62,16 @@ entity Product {
 ```
 
 #### Notation Symbols
-- `*` = Attributo obbligatorio (NOT NULL)
+- `*` = Required attribute (NOT NULL)
 - `<<FK>>` = Foreign Key
-- `<<PK>>` = Primary Key  
+- `<<PK>>` = Primary Key
 - `<<UK>>` = Unique Key
-- `<<computed>>` = Attributo calcolato
-- `<<derived>>` = Attributo derivato
+- `<<computed>>` = Computed attribute
+- `<<derived>>` = Derived attribute
 
-### Relazioni
+### Relationships
 
-#### Cardinalità
+#### Cardinality
 ```plantuml
 Customer ||--o{ Order : "places"
 Order ||--o{ OrderItem : "contains"
@@ -79,7 +79,7 @@ Product ||--o{ OrderItem : "includes"
 Category ||--o{ Product : "categorizes"
 ```
 
-#### Tipi di Relazioni
+#### Relationship Types
 ```plantuml
 ' One-to-One (1:1)
 Customer ||--|| CustomerProfile : "has"
@@ -94,9 +94,9 @@ Product }o--o{ Category : "belongs to"
 Category ||--o{ Category : "parent/child"
 ```
 
-### Vincoli e Business Rules
+### Constraints and Business Rules
 
-#### Vincoli di Integrità
+#### Integrity Constraints
 ```plantuml
 entity Order {
   * order_id : UUID
@@ -111,24 +111,24 @@ entity Order {
 note right of Order : Business Rules:\n- total_amount >= 0\n- shipping_date >= order_date\n- status transitions controlled
 ```
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica le Entità del Dominio
+### 1. Identify Domain Entities
 ```plantuml
-' Entità principali del business
+' Main business entities
 entity Customer
-entity Order  
+entity Order
 entity Product
 entity Category
 entity Payment
 
-' Entità di supporto
+' Supporting entities
 entity Address
 entity ContactInfo
 entity AuditLog
 ```
 
-### 2. Definisci gli Attributi
+### 2. Define Attributes
 ```plantuml
 entity Customer {
   * customer_id : UUID
@@ -144,7 +144,7 @@ entity Customer {
 }
 ```
 
-### 3. Modella le Relazioni
+### 3. Model Relationships
 ```plantuml
 Customer ||--o{ Order : "places"
 Customer ||--o{ Address : "has"
@@ -154,7 +154,7 @@ Product ||--o{ OrderItem : "ordered as"
 Category ||--o{ Product : "contains"
 ```
 
-### 4. Aggiungi Vincoli e Note
+### 4. Add Constraints and Notes
 ```plantuml
 note right of Customer : Customer must have\nat least one contact method\n(email or phone)
 
@@ -163,13 +163,13 @@ note top of Order : Order total calculated\nfrom OrderItem.quantity * unit_price
 note bottom of Payment : Payment amount must\nmatch Order.total_amount
 ```
 
-## 🏗️ Pattern di Modellazione
+## 🏗️ Modeling Patterns
 
-### Pattern Gerarchia (Inheritance)
+### Hierarchy Pattern (Inheritance)
 ```plantuml
 @startuml
 !theme blueprint
-title Pattern Gerarchia - Specializzazione
+title Hierarchy Pattern - Specialization
 
 entity Person {
   * person_id : UUID
@@ -203,11 +203,11 @@ Person ||--o| Employee : "is a"
 @enduml
 ```
 
-### Pattern Aggregazione/Composizione
+### Aggregation/Composition Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Pattern Composizione - Aggregazione
+title Composition - Aggregation Pattern
 
 entity Order {
   * order_id : UUID
@@ -236,7 +236,7 @@ entity ShippingAddress {
   * country : VARCHAR(50)
 }
 
-' Composizione (parte-tutto forte)
+' Composition (strong part-whole)
 Order ||--o{ OrderItem : "composed of"
 Order ||--|| ShippingAddress : "shipped to"
 
@@ -246,11 +246,11 @@ note right of ShippingAddress : ShippingAddress specific\nto this Order only\n(c
 @enduml
 ```
 
-### Pattern Many-to-Many con Attributi
+### Many-to-Many Pattern with Attributes
 ```plantuml
 @startuml
 !theme blueprint
-title Pattern M:N con Attributi di Relazione
+title M:N Pattern with Relationship Attributes
 
 entity Student {
   * student_id : UUID
@@ -288,11 +288,11 @@ note top of Enrollment : Enrollment entity captures\nthe relationship attributes
 @enduml
 ```
 
-### Pattern Temporal/Historical Data
+### Temporal/Historical Data Pattern
 ```plantuml
 @startuml
 !theme blueprint
-title Pattern Dati Temporali
+title Temporal Data Pattern
 
 entity Product {
   * product_id : UUID
@@ -332,11 +332,11 @@ note right of ProductInventory : Daily inventory snapshots\nfor trend analysis
 @enduml
 ```
 
-## 📊 Best Practices per ER Design
+## 📊 Best Practices for ER Design
 
-### ✅ Entità ben definite
+### ✅ Well-defined Entities
 ```plantuml
-' ✅ Entità con responsabilità chiara
+' ✅ Entity with clear responsibility
 entity Customer {
   * customer_id : UUID
   --
@@ -354,7 +354,7 @@ entity CustomerAddress {
   address_type : ENUM(billing, shipping)
 }
 
-' ❌ Entità con troppi attributi eterogenei
+' ❌ Entity with too many heterogeneous attributes
 entity CustomerEverything {
   customer_id, name, email, phone,
   address1, address2, city, country,
@@ -363,21 +363,21 @@ entity CustomerEverything {
 }
 ```
 
-### ✅ Relazioni semantiche
+### ✅ Semantic Relationships
 ```plantuml
-' ✅ Relazioni con nomi significativi
+' ✅ Relationships with meaningful names
 Customer ||--o{ Order : "places"
 Order ||--o{ OrderItem : "contains"
 Product ||--o{ OrderItem : "appears in"
 
-' ❌ Relazioni generiche
+' ❌ Generic relationships
 Customer ||--o{ Order : "has"
 Order ||--o{ OrderItem : "links to"
 ```
 
-### ✅ Normalizzazione appropriata
+### ✅ Appropriate Normalization
 ```plantuml
-' ✅ 3NF - Entità separate per concetti distinti
+' ✅ 3NF - Separate entities for distinct concepts
 entity Customer {
   * customer_id : UUID
   --
@@ -400,7 +400,7 @@ entity CustomerAddress {
   * city : VARCHAR(100)
 }
 
-' ❌ Denormalizzato con ripetizioni
+' ❌ Denormalized with repetitions
 entity CustomerDenorm {
   customer_id, name, email,
   country_code, country_name, currency_code,
@@ -408,14 +408,14 @@ entity CustomerDenorm {
 }
 ```
 
-### ❌ Anti-Patterns da Evitare
+### ❌ Anti-Patterns to Avoid
 ```plantuml
-' ❌ Entità "God Table"
+' ❌ "God Table" Entity
 entity SystemData {
-  note right : Contiene tutto:\n- User data\n- Order data\n- Product data\n- Configuration\n- Logs
+  note right : Contains everything:\n- User data\n- Order data\n- Product data\n- Configuration\n- Logs
 }
 
-' ❌ Attributi multivalore
+' ❌ Multivalued Attributes
 entity Product {
   * product_id : UUID
   --
@@ -423,16 +423,16 @@ entity Product {
   sizes : VARCHAR(255) "S,M,L,XL"
 }
 
-' ❌ Chiavi naturali instabili
+' ❌ Unstable Natural Keys
 entity Customer {
   * email : VARCHAR(100) <<PK>>
-  note right : Email può cambiare!\nUsa UUID invece
+  note right : Email can change!\nUse UUID instead
 }
 ```
 
-## 🎨 Styling e Presentazione
+## 🎨 Styling and Presentation
 
-### Colori per Categorizzazione
+### Colors for Categorization
 ```plantuml
 !define CORE_ENTITY_COLOR #E3F2FD
 !define LOOKUP_COLOR #E8F5E8
@@ -445,7 +445,7 @@ entity CustomerAddress JUNCTION_COLOR
 entity AuditLog AUDIT_COLOR
 ```
 
-### Raggruppamento Logico
+### Logical Grouping
 ```plantuml
 package "Customer Domain" {
   entity Customer
@@ -466,11 +466,11 @@ package "Product Domain" {
 }
 ```
 
-### Layout Ottimizzato
+### Optimized Layout
 ```plantuml
-' Entità centrali al centro
-' Entità di lookup ai margini
-' Flusso logico da sinistra a destra
+' Central entities in the center
+' Lookup entities on the periphery
+' Logical flow from left to right
 
 left to right direction
 
@@ -482,7 +482,7 @@ Customer ||--o{ Order
 Order }o--o{ Product
 ```
 
-## 🧪 Esempi per Dominio
+## 🧪 Examples by Domain
 
 ### E-commerce Database Model
 ```plantuml
@@ -1034,7 +1034,7 @@ note left of Bill : patient_amount + insurance_amount\n= total_amount
 @enduml
 ```
 
-## 🔍 Validation e Quality Checks
+## 🔍 Validation and Quality Checks
 
 ### Data Model Quality Metrics
 ```yaml
@@ -1080,7 +1080,7 @@ Data Consistency:
   - Business rule constraints applied
 ```
 
-## 🔧 Tools e Integration
+## 🔧 Tools and Integration
 
 ### PlantUML Advanced Features
 ```plantuml
@@ -1114,7 +1114,7 @@ ER Design → ORM Mapping:
   - Inheritance → Table Strategy
 ```
 
-### Integration con Development
+### Integration with Development
 ```bash
 # Generate JPA entities from ER
 er-to-jpa --input model.puml --output src/main/java/entities/
@@ -1126,7 +1126,7 @@ er-to-sql --input model.puml --output migrations/ --database postgresql
 plantuml-validator --check-constraints --check-naming model.puml
 ```
 
-## 📚 Resources e Standards
+## 📚 Resources and Standards
 
 ### Data Modeling Standards
 - **IDEF1X**: Integration Definition for Information Modeling
@@ -1134,20 +1134,20 @@ plantuml-validator --check-constraints --check-naming model.puml
 - **Crow's Foot**: Popular industry-standard notation
 - **Martin Notation**: Information Engineering notation
 
-### Template Correlati
+### Related Templates
 - `../class-diagrams/`: OOP mapping from ER entities
 - `../../02-requirements/`: Business rules and constraints
 - `../data-dictionary.md`: Detailed attribute descriptions
 
-## 📞 Supporto
+## 📞 Support
 
-Per domande sui Diagrammi ER:
+For questions about ER Diagrams:
 
-- **Data Architect**: [Responsabile design dati]
-- **Database Designer**: [Responsabile schema fisico]
-- **Business Analyst**: [Responsabile regole business]
-- **Domain Expert**: [Responsabile knowledge dominio]
+- **Data Architect**: [Responsible for data design]
+- **Database Designer**: [Responsible for physical schema]
+- **Business Analyst**: [Responsible for business rules]
+- **Domain Expert**: [Responsible for domain knowledge]
 
 ---
 
-*I Diagrammi ER sono la foundation del data design. Usali per catturare la semantica del dominio business prima di procedere con l'implementazione fisica.*
+*ER Diagrams are the foundation of data design. Use them to capture the semantics of the business domain before proceeding with the physical implementation.*

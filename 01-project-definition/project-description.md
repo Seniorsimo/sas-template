@@ -1,84 +1,84 @@
-# Descrizione del Progetto
+# Project Description
 
-## Panoramica Generale
-[Inserisci qui una breve descrizione del progetto - 2-3 paragrafi]
+## General Overview
+[Insert a brief description of the project here - 2-3 paragraphs]
 
-**Nome del Progetto**: [Nome del Progetto]
-**Versione**: 1.0
-**Data**: [Data di creazione]
-**Responsabile del Progetto**: [Nome]
+**Project Name**: [Project Name]
+**Version**: 1.0
+**Date**: [Creation Date]
+**Project Manager**: [Name]
 
-## Problema da Risolvere
+## Problem to Be Solved
 
-### Contesto
-[Descrivi il contesto in cui si inserisce il progetto]
+### Context
+[Describe the context in which the project is set]
 
-### Problematiche Attuali
-1. [Problema 1]
-2. [Problema 2]
-3. [Problema 3]
+### Current Issues
+1. [Issue 1]
+2. [Issue 2]
+3. [Issue 3]
 
-### Impatto del Problema
-[Descrivi l'impatto negativo del problema non risolto]
+### Impact of the Problem
+[Describe the negative impact of the unresolved problem]
 
-## Soluzione Proposta
+## Proposed Solution
 
-### Approccio
-[Descrivi l'approccio generale della soluzione]
+### Approach
+[Describe the general approach of the solution]
 
-### Funzionalità Principali
-1. [Funzionalità 1]
-2. [Funzionalità 2]
-3. [Funzionalità 3]
+### Main Features
+1. [Feature 1]
+2. [Feature 2]
+3. [Feature 3]
 
-### Tecnologie Coinvolte
-- **Frontend**: [Tecnologia]
-- **Backend**: [Tecnologia]
-- **Database**: [Tecnologia]
-- **Infrastruttura**: [Tecnologia]
+### Technologies Involved
+- **Frontend**: [Technology]
+- **Backend**: [Technology]
+- **Database**: [Technology]
+- **Infrastructure**: [Technology]
 
-## Benefici Attesi
+## Expected Benefits
 
-### Benefici per gli Utenti
-- [Beneficio 1]
-- [Beneficio 2]
-- [Beneficio 3]
+### Benefits for Users
+- [Benefit 1]
+- [Benefit 2]
+- [Benefit 3]
 
-### Benefici per il Business
-- [Beneficio 1]
-- [Beneficio 2]
-- [Beneficio 3]
+### Benefits for the Business
+- [Benefit 1]
+- [Benefit 2]
+- [Benefit 3]
 
-### Benefici Tecnici
-- [Beneficio 1]
-- [Beneficio 2]
-- [Beneficio 3]
+### Technical Benefits
+- [Benefit 1]
+- [Benefit 2]
+- [Benefit 3]
 
-## Vincoli e Limitazioni
+## Constraints and Limitations
 
-### Vincoli Temporali
-[Descrivi i vincoli di tempo]
+### Time Constraints
+[Describe the time constraints]
 
-### Vincoli di Budget
-[Descrivi i vincoli economici]
+### Budget Constraints
+[Describe the economic constraints]
 
-### Vincoli Tecnici
-[Descrivi i vincoli tecnologici]
+### Technical Constraints
+[Describe the technological constraints]
 
-### Vincoli Normativi
-[Descrivi i vincoli legali/normativi]
+### Regulatory Constraints
+[Describe the legal/regulatory constraints]
 
-## Rischi Identificati
+## Identified Risks
 
-| Rischio | Probabilità | Impatto | Mitigazione |
-|---------|-------------|---------|-------------|
-| [Rischio 1] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Strategia] |
-| [Rischio 2] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Strategia] |
+| Risk      | Probability    | Impact     | Mitigation  |
+|-----------|----------------|------------|-------------|
+| [Risk 1]  | [High/Medium/Low] | [High/Medium/Low] | [Strategy]  |
+| [Risk 2]  | [High/Medium/Low] | [High/Medium/Low] | [Strategy]  |
 
-## Criteri di Successo
-1. [Criterio 1]
-2. [Criterio 2]
-3. [Criterio 3]
+## Success Criteria
+1. [Criterion 1]
+2. [Criterion 2]
+3. [Criterion 3]
 
 ---
-*Template creato per facilitare la definizione del progetto*
+*Template created to facilitate project definition*

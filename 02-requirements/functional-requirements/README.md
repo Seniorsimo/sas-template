@@ -1,174 +1,174 @@
-# Requisiti Funzionali
+# Functional Requirements
 
-Questa cartella contiene tutti i requisiti funzionali del sistema, organizzati per categoria e modulo.
+This folder contains all the functional requirements of the system, organized by category and module.
 
-## 📁 Struttura Organizzativa
+## 📁 Organizational Structure
 
-### Organizzazione per Categoria
+### Organization by Category
 ```
 functional-requirements/
 ├── core-features/
-│   ├── README.md                     (Descrizione funzionalità core)
-│   ├── REQ-F-001-[modulo].md         (Requisito funzionale 1)
-│   └── REQ-F-XXX-[modulo].md         (Altri requisiti core)
+│   ├── README.md                     (Description of core features)
+│   ├── REQ-F-001-[module].md         (Functional requirement 1)
+│   └── REQ-F-XXX-[module].md         (Other core requirements)
 ├── integrations/
-│   ├── README.md                     (Descrizione integrazioni)
-│   ├── REQ-I-001-[sistema].md        (Requisito integrazione 1)
-│   └── REQ-I-XXX-[sistema].md        (Altri requisiti integrazione)
+│   ├── README.md                     (Description of integrations)
+│   ├── REQ-I-001-[system].md         (Integration requirement 1)
+│   └── REQ-I-XXX-[system].md         (Other integration requirements)
 ├── api-requirements/
-│   ├── README.md                     (Descrizione API)
-│   ├── REQ-API-001-[endpoint].md     (Requisito API 1)
-│   └── REQ-API-XXX-[endpoint].md     (Altri requisiti API)
+│   ├── README.md                     (API description)
+│   ├── REQ-API-001-[endpoint].md     (API requirement 1)
+│   └── REQ-API-XXX-[endpoint].md     (Other API requirements)
 ├── ui-requirements/
-│   ├── README.md                     (Descrizione UI)
-│   ├── REQ-UI-001-[componente].md    (Requisito UI 1)
-│   └── REQ-UI-XXX-[componente].md    (Altri requisiti UI)
-└── README.md                         (Questo file)
+│   ├── README.md                     (UI description)
+│   ├── REQ-UI-001-[component].md     (UI requirement 1)
+│   └── REQ-UI-XXX-[component].md     (Other UI requirements)
+└── README.md                         (This file)
 ```
 
-## 🏷️ Convenzioni di Naming
+## 🏷️ Naming Conventions
 
-### ID Requisiti
-- **Core Features**: `REQ-F-XXX` (es. REQ-F-001)
-- **Integrazioni**: `REQ-I-XXX` (es. REQ-I-001)
-- **API**: `REQ-API-XXX` (es. REQ-API-001)
-- **UI**: `REQ-UI-XXX` (es. REQ-UI-001)
+### Requirement IDs
+- **Core Features**: `REQ-F-XXX` (e.g., REQ-F-001)
+- **Integrations**: `REQ-I-XXX` (e.g., REQ-I-001)
+- **API**: `REQ-API-XXX` (e.g., REQ-API-001)
+- **UI**: `REQ-UI-XXX` (e.g., REQ-UI-001)
 
 ### File Names
-- **Formato**: `[ID]-[nome-breve].md`
-- **Esempi**: 
+- **Format**: `[ID]-[short-name].md`
+- **Examples**:
   - `REQ-F-001-user-authentication.md`
   - `REQ-I-001-payment-gateway.md`
   - `REQ-API-001-user-endpoints.md`
 
-## 📋 Template Requisito Funzionale
+## 📋 Functional Requirement Template
 
 ```markdown
-# [ID]: [Titolo Requisito]
+# [ID]: [Requirement Title]
 
-## Informazioni Generali
+## General Information
 **ID**: [REQ-XXX]
-**Categoria**: Core | Integration | API | UI
-**Priorità**: Must Have | Should Have | Could Have | Won't Have
-**Modulo/Sistema**: [Nome modulo]
+**Category**: Core | Integration | API | UI
+**Priority**: Must Have | Should Have | Could Have | Won't Have
+**Module/System**: [Module Name]
 **Status**: Draft | Review | Approved | Implemented
 
-## Descrizione
-[Descrizione dettagliata di cosa il sistema deve fare]
+## Description
+[Detailed description of what the system must do]
 
-## Criteri di Accettazione
-- [ ] [Criterio 1]
-- [ ] [Criterio 2]
+## Acceptance Criteria
+- [ ] [Criterion 1]
+- [ ] [Criterion 2]
 
-## Tracciabilità
+## Traceability
 - **User Stories**: [US-XXX, US-XXX]
-- **Obiettivi Business**: [Riferimento a objectives.md]
-- **Stakeholders**: [Chi ha richiesto questo requisito]
+- **Business Objectives**: [Reference to objectives.md]
+- **Stakeholders**: [Who requested this requirement]
 
-## Dettagli Implementativi
-[Specifiche tecniche se necessarie]
+## Implementation Details
+[Technical specifications if necessary]
 ```
 
-## 📊 Categorizzazione
+## 📊 Categorization
 
 ### Core Features (REQ-F-XXX)
-Funzionalità fondamentali del sistema:
-- Autenticazione e autorizzazione
-- Gestione dati principali
-- Business logic core
-- Workflow principali
+Fundamental functionalities of the system:
+- Authentication and authorization
+- Main data management
+- Core business logic
+- Main workflows
 
-### Integrazioni (REQ-I-XXX)
-Requisiti per integrazioni esterne:
-- API di terze parti
-- Sistemi legacy
-- Servizi cloud
-- Database esterni
+### Integrations (REQ-I-XXX)
+Requirements for external integrations:
+- Third-party APIs
+- Legacy systems
+- Cloud services
+- External databases
 
 ### API Requirements (REQ-API-XXX)
-Specifiche per API del sistema:
-- Endpoint REST/GraphQL
-- Formati richiesta/risposta
-- Autenticazione API
+Specifications for the system's APIs:
+- REST/GraphQL endpoints
+- Request/response formats
+- API authentication
 - Rate limiting
 
 ### UI Requirements (REQ-UI-XXX)
-Requisiti per interfaccia utente:
-- Componenti UI
+Requirements for the user interface:
+- UI components
 - User experience
 - Responsive design
 - Accessibility
 
-## 🎯 Prioritizzazione MoSCoW
+## 🎯 MoSCoW Prioritization
 
 ### Must Have
-Requisiti critici senza i quali il sistema non può funzionare
+Critical requirements without which the system cannot function
 
-### Should Have  
-Requisiti importanti che aggiungono valore significativo
+### Should Have
+Important requirements that add significant value
 
 ### Could Have
-Requisiti desiderabili che migliorano il sistema
+Desirable requirements that improve the system
 
 ### Won't Have (this time)
-Requisiti esclusi dalla versione corrente
+Requirements excluded from the current version
 
-## 🔗 Tracciabilità
+## 🔗 Traceability
 
 ### Forward Traceability
-Requisiti → User Stories → Test Cases → Code
+Requirements → User Stories → Test Cases → Code
 
-### Backward Traceability  
-Code → Test Cases → User Stories → Requisiti → Obiettivi Business
+### Backward Traceability
+Code → Test Cases → User Stories → Requirements → Business Objectives
 
 ### Horizontal Traceability
-Requisiti ↔ Architecture ↔ Design ↔ Implementation
+Requirements ↔ Architecture ↔ Design ↔ Implementation
 
-## 📋 Matrice di Tracciabilità
+## 📋 Traceability Matrix
 
-| Requisito | User Stories | Use Cases | Test Cases | Implementato |
-|-----------|--------------|-----------|------------|--------------|
-| REQ-F-001 | US-001, US-002 | UC-001 | TC-001, TC-002 | ✅ |
-| REQ-F-002 | US-003 | UC-002 | TC-003 | ⏳ |
+| Requirement | User Stories | Use Cases | Test Cases | Implemented |
+|-------------|--------------|-----------|------------|-------------|
+| REQ-F-001   | US-001, US-002 | UC-001    | TC-001, TC-002 | ✅          |
+| REQ-F-002   | US-003       | UC-002    | TC-003     | ⏳          |
 
 ## 💡 Best Practices
 
 ### ✅ Do's
-- **Scrivi requisiti specifici** e misurabili
-- **Usa linguaggio chiaro** e non ambiguo
-- **Mantieni tracciabilità** con user stories e obiettivi
-- **Versiona i requisiti** per tracciare cambiamenti
-- **Coinvolgi stakeholders** nella review
+- **Write specific** and measurable requirements
+- **Use clear** and unambiguous language
+- **Maintain traceability** with user stories and objectives
+- **Version requirements** to track changes
+- **Involve stakeholders** in the review
 
 ### ❌ Don'ts
-- **Non mescolare** requisiti funzionali e non-funzionali
-- **Non essere vago** o generico nelle descrizioni
-- **Non dimenticare** la prioritizzazione
-- **Non omettere** criteri di accettazione
-- **Non ignorare** le dipendenze tra requisiti
+- **Don't mix** functional and non-functional requirements
+- **Don't be vague** or generic in descriptions
+- **Don't forget** prioritization
+- **Don't omit** acceptance criteria
+- **Don't ignore** dependencies between requirements
 
-## 🔄 Processo di Gestione
+## 🔄 Management Process
 
-### 1. Identificazione
-- Analisi degli obiettivi business
-- Workshop con stakeholders
-- Derivazione da user stories
+### 1. Identification
+- Analysis of business objectives
+- Workshop with stakeholders
+- Derivation from user stories
 
-### 2. Documentazione
-- Utilizzo template standardizzato
-- Definizione criteri di accettazione
-- Identificazione dipendenze
+### 2. Documentation
+- Use of a standardized template
+- Definition of acceptance criteria
+- Identification of dependencies
 
-### 3. Review e Approvazione
-- Review tecnica
-- Approvazione stakeholders
-- Baseline dei requisiti
+### 3. Review and Approval
+- Technical review
+- Stakeholder approval
+- Requirements baseline
 
 ### 4. Change Management
-- Process di change request
+- Change request process
 - Impact analysis
-- Re-baseline quando necessario
+- Re-baseline when necessary
 
 ---
 
-*Per aggiungere nuovi requisiti, utilizza i template nelle rispettive cartelle di categoria.*
+*To add new requirements, use the templates in the respective category folders.*

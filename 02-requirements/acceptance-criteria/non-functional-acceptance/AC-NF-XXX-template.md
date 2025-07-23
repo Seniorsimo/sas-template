@@ -1,357 +1,357 @@
-# AC-NF-XXX: [Titolo Criterio di Accettazione Non-Funzionale]
+# AC-NF-XXX: [Non-Functional Acceptance Criterion Title]
 
-## 📋 Informazioni Generali
-**ID**: AC-NF-XXX  
-**Categoria**: Performance | Security | Usability | Reliability | Scalability | Compatibility  
-**Requisito Collegato**: [REQ-NF-XXX]  
-**Quality Attribute**: [Attributo di qualità specifico]  
-**Priorità**: Critical | High | Medium | Low  
-**Status**: Draft | Review | Approved | Testing | Verified | Closed  
+## 📋 General Information
+**ID**: AC-NF-XXX
+**Category**: Performance | Security | Usability | Reliability | Scalability | Compatibility
+**Related Requirement**: [REQ-NF-XXX]
+**Quality Attribute**: [Specific quality attribute]
+**Priority**: Critical | High | Medium | Low
+**Status**: Draft | Review | Approved | Testing | Verified | Closed
 **Assigned to**: [Performance/Security/QA Engineer]
 
 ---
 
-## 📝 Descrizione
+## 📝 Description
 
-### Sommario
-[Breve descrizione dell'attributo di qualità da verificare]
+### Summary
+[Brief description of the quality attribute to be verified]
 
-### Contesto di Business
-[Perché questo attributo di qualità è importante per il business]
+### Business Context
+[Why this quality attribute is important for the business]
 
-### Impatto Utente
-[Come questo attributo influenza l'esperienza utente]
+### User Impact
+[How this attribute affects the user experience]
 
-### Definizione di Successo
-[Cosa significa "successo" per questo criterio]
+### Definition of Success
+[What "success" means for this criterion]
 
 ---
 
-## 📊 Metriche e Target
+## 📊 Metrics and Targets
 
-### Metrica Primaria
-**Nome Metrica**: [Nome della metrica principale]  
-**Unità di Misura**: [Secondi | Percentuale | Transazioni/sec | GB | etc.]  
-**Valore Target**: [Valore obiettivo da raggiungere]  
-**Valore Minimo Accettabile**: [Soglia minima per il pass]  
-**Valore Ottimale**: [Valore ideale da raggiungere]  
-**Baseline Attuale**: [Valore corrente se disponibile]
+### Primary Metric
+**Metric Name**: [Name of the main metric]
+**Unit of Measure**: [Seconds | Percentage | Transactions/sec | GB | etc.]
+**Target Value**: [Target value to be achieved]
+**Minimum Acceptable Value**: [Minimum threshold for passing]
+**Optimal Value**: [Ideal value to be achieved]
+**Current Baseline**: [Current value if available]
 
-### Metriche Secondarie
-- **[Metrica 2]**: Target: [Valore] [Unità] | Min: [Valore] | Optimal: [Valore]
-- **[Metrica 3]**: Target: [Valore] [Unità] | Min: [Valore] | Optimal: [Valore]
-- **[Metrica 4]**: Target: [Valore] [Unità] | Min: [Valore] | Optimal: [Valore]
+### Secondary Metrics
+- **[Metric 2]**: Target: [Value] [Unit] | Min: [Value] | Optimal: [Value]
+- **[Metric 3]**: Target: [Value] [Unit] | Min: [Value] | Optimal: [Value]
+- **[Metric 4]**: Target: [Value] [Unit] | Min: [Value] | Optimal: [Value]
 
 ### SLA/SLO Requirements
-**Service Level Objective**: [Definizione SLO]  
-**Service Level Agreement**: [SLA con stakeholder se applicabile]  
-**Availability Target**: [% uptime richiesto]  
-**Performance Threshold**: [Soglie performance]
+**Service Level Objective**: [SLO definition]
+**Service Level Agreement**: [SLA with stakeholders if applicable]
+**Availability Target**: [% uptime required]
+**Performance Threshold**: [Performance thresholds]
 
 ---
 
-## ⚙️ Condizioni di Misurazione
+## ⚙️ Measurement Conditions
 
-### Ambiente di Test
-**Environment**: Production-like | Staging | Performance Lab  
-**Hardware Specs**: [Specifiche hardware ambiente test]  
-**Software Configuration**: [Configurazioni software]  
-**Network Conditions**: [Condizioni di rete]
+### Test Environment
+**Environment**: Production-like | Staging | Performance Lab
+**Hardware Specs**: [Hardware specifications of the test environment]
+**Software Configuration**: [Software configurations]
+**Network Conditions**: [Network conditions]
 
 ### Load Conditions
-**Normal Load**: [Definizione carico normale]  
-**Peak Load**: [Definizione carico di picco]  
-**Stress Load**: [Definizione carico di stress]  
-**User Concurrency**: [Numero utenti simultanei]
+**Normal Load**: [Definition of normal load]
+**Peak Load**: [Definition of peak load]
+**Stress Load**: [Definition of stress load]
+**User Concurrency**: [Number of simultaneous users]
 
 ### Data Volume
-**Dataset Size**: [Dimensione dati test]  
-**Transaction Volume**: [Volume transazioni]  
-**Historical Data**: [Quantità dati storici]  
-**Growth Projection**: [Crescita prevista]
+**Dataset Size**: [Size of test data]
+**Transaction Volume**: [Volume of transactions]
+**Historical Data**: [Amount of historical data]
+**Growth Projection**: [Projected growth]
 
 ---
 
-## 🧪 Scenari di Test
+## 🧪 Test Scenarios
 
 ### Scenario 1: Normal Operations
-**Metric**: [Metrica da misurare]  
-**Conditions**: [Condizioni di carico normale]  
-**Expected Result**: [Risultato atteso]  
-**Acceptance Criteria**: [Criteri di accettazione]
+**Metric**: [Metric to be measured]
+**Conditions**: [Normal load conditions]
+**Expected Result**: [Expected result]
+**Acceptance Criteria**: [Acceptance criteria]
 
-**Given** il sistema è in condizioni di carico normale  
-**When** [azione o carico specifico]  
-**Then** [metrica] deve essere <= [valore target]  
-**And** [altre condizioni devono essere soddisfatte]
+**Given** the system is under normal load conditions
+**When** [specific action or load]
+**Then** [metric] must be <= [target value]
+**And** [other conditions must be met]
 
 ### Scenario 2: Peak Load
-**Metric**: [Metrica da misurare]  
-**Conditions**: [Condizioni di carico di picco]  
-**Expected Result**: [Risultato atteso]  
-**Acceptance Criteria**: [Criteri di accettazione]
+**Metric**: [Metric to be measured]
+**Conditions**: [Peak load conditions]
+**Expected Result**: [Expected result]
+**Acceptance Criteria**: [Acceptance criteria]
 
-**Given** il sistema è sotto carico di picco ([X] utenti concorrenti)  
-**When** [azione specifica sotto carico]  
-**Then** [metrica] deve rimanere <= [valore soglia]  
-**And** il sistema deve rimanere responsivo
+**Given** the system is under peak load ([X] concurrent users)
+**When** [specific action under load]
+**Then** [metric] must remain <= [threshold value]
+**And** the system must remain responsive
 
 ### Scenario 3: Stress Test
-**Metric**: [Metrica da misurare]  
-**Conditions**: [Condizioni di stress]  
-**Expected Result**: [Risultato atteso]  
-**Acceptance Criteria**: [Criteri di accettazione]
+**Metric**: [Metric to be measured]
+**Conditions**: [Stress conditions]
+**Expected Result**: [Expected result]
+**Acceptance Criteria**: [Acceptance criteria]
 
-**Given** il sistema è sotto stress test ([Y] volte il carico normale)  
-**When** [azione sotto stress]  
-**Then** il sistema deve [comportamento atteso]  
-**And** deve recovery entro [tempo] quando il carico diminuisce
+**Given** the system is under a stress test ([Y] times the normal load)
+**When** [action under stress]
+**Then** the system must [expected behavior]
+**And** it must recover within [time] when the load decreases
 
 ---
 
-## ✅ Criteri di Accettazione Dettagliati
+## ✅ Detailed Acceptance Criteria
 
-### Performance Criteria (se applicabile)
-- [ ] **Response Time**: [Metrica] <= [Valore] sotto carico normale
-- [ ] **Throughput**: [Metrica] >= [Valore] transazioni/secondo
+### Performance Criteria (if applicable)
+- [ ] **Response Time**: [Metric] <= [Value] under normal load
+- [ ] **Throughput**: [Metric] >= [Value] transactions/second
 - [ ] **Resource Utilization**: CPU <= [%], Memory <= [%], Disk I/O <= [%]
-- [ ] **Concurrent Users**: Supporta >= [Numero] utenti simultanei
-- [ ] **Recovery Time**: Recovery completo entro [Tempo] dopo incident
+- [ ] **Concurrent Users**: Supports >= [Number] simultaneous users
+- [ ] **Recovery Time**: Full recovery within [Time] after an incident
 
-### Security Criteria (se applicabile)
-- [ ] **Authentication**: [Metodo] implementato correttamente
-- [ ] **Authorization**: Controlli accesso funzionano per tutti i ruoli
-- [ ] **Data Encryption**: Dati sensibili criptati in transit e at rest
-- [ ] **Audit Logging**: Tutte le azioni critiche sono loggate
-- [ ] **Vulnerability**: Zero vulnerabilità [High/Critical] in security scan
+### Security Criteria (if applicable)
+- [ ] **Authentication**: [Method] implemented correctly
+- [ ] **Authorization**: Access controls work for all roles
+- [ ] **Data Encryption**: Sensitive data encrypted in transit and at rest
+- [ ] **Audit Logging**: All critical actions are logged
+- [ ] **Vulnerability**: Zero [High/Critical] vulnerabilities in security scan
 
-### Usability Criteria (se applicabile)
-- [ ] **Task Completion**: [%] utenti completano task principali
-- [ ] **Learning Curve**: Nuovi utenti produttivi entro [Tempo]
-- [ ] **Error Rate**: <= [%] errori utente per task
-- [ ] **Satisfaction Score**: Score >= [Valore] in user satisfaction survey
-- [ ] **Accessibility**: Conformità [WCAG Level] raggiunta
+### Usability Criteria (if applicable)
+- [ ] **Task Completion**: [%] of users complete main tasks
+- [ ] **Learning Curve**: New users productive within [Time]
+- [ ] **Error Rate**: <= [%] user errors per task
+- [ ] **Satisfaction Score**: Score >= [Value] in user satisfaction survey
+- [ ] **Accessibility**: [WCAG Level] compliance achieved
 
-### Reliability Criteria (se applicabile)
-- [ ] **Uptime**: [%] availability mantenuto
-- [ ] **MTBF**: Mean Time Between Failures >= [Tempo]
-- [ ] **MTTR**: Mean Time To Recovery <= [Tempo]
-- [ ] **Error Rate**: <= [%] error rate in condizioni normali
-- [ ] **Data Consistency**: Zero perdite dati durante failures
+### Reliability Criteria (if applicable)
+- [ ] **Uptime**: [%] availability maintained
+- [ ] **MTBF**: Mean Time Between Failures >= [Time]
+- [ ] **MTTR**: Mean Time To Recovery <= [Time]
+- [ ] **Error Rate**: <= [%] error rate under normal conditions
+- [ ] **Data Consistency**: Zero data loss during failures
 
 ---
 
-## 🔧 Strumenti e Metodologie
+## 🔧 Tools and Methodologies
 
 ### Testing Tools
-**Primary Tool**: [Nome tool principale]  
-**Supporting Tools**: [Altri tool utilizzati]  
-**Monitoring Tools**: [Tool per monitoring]  
-**Analysis Tools**: [Tool per analisi risultati]
+**Primary Tool**: [Main tool name]
+**Supporting Tools**: [Other tools used]
+**Monitoring Tools**: [Monitoring tools]
+**Analysis Tools**: [Tools for results analysis]
 
 ### Test Methodology
-**Approach**: [Metodologia di test utilizzata]  
-**Test Duration**: [Durata test per scenario]  
-**Warm-up Period**: [Tempo di warm-up]  
-**Measurement Period**: [Periodo di misurazione]  
-**Cool-down Period**: [Tempo di cool-down]
+**Approach**: [Test methodology used]
+**Test Duration**: [Test duration per scenario]
+**Warm-up Period**: [Warm-up time]
+**Measurement Period**: [Measurement period]
+**Cool-down Period**: [Cool-down time]
 
 ### Data Collection
-**Metrics Collection**: [Come vengono raccolte le metriche]  
-**Sampling Rate**: [Frequenza campionamento]  
-**Storage**: [Dove vengono archiviate le metriche]  
-**Reporting**: [Come vengono riportati i risultati]
+**Metrics Collection**: [How metrics are collected]
+**Sampling Rate**: [Sampling frequency]
+**Storage**: [Where metrics are stored]
+**Reporting**: [How results are reported]
 
 ---
 
-## 📊 Baseline e Benchmarking
+## 📊 Baseline and Benchmarking
 
 ### Current Baseline
-**Current Performance**: [Performance attuale se nota]  
-**Historical Trends**: [Trend storici]  
-**Seasonal Variations**: [Variazioni stagionali]
+**Current Performance**: [Current performance if known]
+**Historical Trends**: [Historical trends]
+**Seasonal Variations**: [Seasonal variations]
 
 ### Industry Benchmarks
-**Industry Standard**: [Standard del settore]  
-**Competitor Analysis**: [Analisi competitor se disponibile]  
-**Best Practices**: [Best practice del settore]
+**Industry Standard**: [Industry standard]
+**Competitor Analysis**: [Competitor analysis if available]
+**Best Practices**: [Industry best practices]
 
 ### Improvement Targets
-**Short Term**: [Target a breve termine]  
-**Medium Term**: [Target a medio termine]  
-**Long Term**: [Target a lungo termine]
+**Short Term**: [Short-term target]
+**Medium Term**: [Medium-term target]
+**Long Term**: [Long-term target]
 
 ---
 
-## 🔗 Tracciabilità
+## 🔗 Traceability
 
 ### Business Requirements
-**Business Objectives**: [OBJ-XXX] - [Obiettivo business collegato]  
-**SLA Commitments**: [Impegni SLA con clienti]  
-**Regulatory Requirements**: [Requisiti normativi se applicabili]
+**Business Objectives**: [OBJ-XXX] - [Related business objective]
+**SLA Commitments**: [SLA commitments with customers]
+**Regulatory Requirements**: [Regulatory requirements if applicable]
 
 ### Technical Requirements
-**Non-Functional Req**: [REQ-NF-XXX] - [Requisito non-funzionale padre]  
-**Functional Dependencies**: [REQ-F-XXX] - [Requisiti funzionali correlati]  
-**Architecture Decisions**: [Decisioni architetturali correlate]
+**Non-Functional Req**: [REQ-NF-XXX] - [Parent non-functional requirement]
+**Functional Dependencies**: [REQ-F-XXX] - [Related functional requirements]
+**Architecture Decisions**: [Related architectural decisions]
 
 ### Related Criteria
-**Related AC**: [AC-XXX] - [Altri criteri collegati]  
-**Dependencies**: [AC-XXX] - [Criteri da cui dipende]  
-**Conflicts**: [Eventuali conflitti o trade-off]
+**Related AC**: [AC-XXX] - [Other related criteria]
+**Dependencies**: [AC-XXX] - [Criteria it depends on]
+**Conflicts**: [Any conflicts or trade-offs]
 
 ---
 
-## ⚠️ Risks e Mitigation
+## ⚠️ Risks and Mitigation
 
 ### Testing Risks
-- **[Rischio 1]**: [Es. Ambiente test non rappresentativo]  
-  *Impact*: [Impatto su validità risultati]  
-  *Mitigation*: [Piano di mitigazione]
+- **[Risk 1]**: [e.g., Unrepresentative test environment]
+  *Impact*: [Impact on results validity]
+  *Mitigation*: [Mitigation plan]
 
-- **[Rischio 2]**: [Es. Tool di test limitazioni]  
-  *Impact*: [Impatto su accuratezza]  
-  *Mitigation*: [Piano alternativo]
+- **[Risk 2]**: [e.g., Test tool limitations]
+  *Impact*: [Impact on accuracy]
+  *Mitigation*: [Alternative plan]
 
 ### Implementation Risks
-- **[Rischio Impl 1]**: [Es. Performance degradation in production]  
-  *Impact*: [Impatto su business]  
-  *Mitigation*: [Monitoring e alerting]
+- **[Impl Risk 1]**: [e.g., Performance degradation in production]
+  *Impact*: [Impact on business]
+  *Mitigation*: [Monitoring and alerting]
 
 ### Business Risks
-- **[Rischio Business]**: [Es. SLA breach]  
-  *Impact*: [Conseguenze business]  
-  *Mitigation*: [Piano di contingenza]
+- **[Business Risk]**: [e.g., SLA breach]
+  *Impact*: [Business consequences]
+  *Mitigation*: [Contingency plan]
 
 ---
 
 ## 📅 Testing Schedule
 
 ### Test Planning Phase
-- **Test Plan Creation**: [Data inizio] - [Data fine]
-- **Environment Setup**: [Data inizio] - [Data fine]
-- **Tool Configuration**: [Data inizio] - [Data fine]
-- **Test Data Preparation**: [Data inizio] - [Data fine]
+- **Test Plan Creation**: [Start date] - [End date]
+- **Environment Setup**: [Start date] - [End date]
+- **Tool Configuration**: [Start date] - [End date]
+- **Test Data Preparation**: [Start date] - [End date]
 
 ### Test Execution Phase
-- **Baseline Testing**: [Data inizio] - [Data fine]
-- **Scenario Testing**: [Data inizio] - [Data fine]
-- **Results Analysis**: [Data inizio] - [Data fine]
-- **Report Generation**: [Data inizio] - [Data fine]
+- **Baseline Testing**: [Start date] - [End date]
+- **Scenario Testing**: [Start date] - [End date]
+- **Results Analysis**: [Start date] - [End date]
+- **Report Generation**: [Start date] - [End date]
 
 ### Key Milestones
-- **Environment Ready**: [Data]
-- **First Test Run**: [Data]
-- **All Scenarios Complete**: [Data]
-- **Results Validated**: [Data]
-- **Sign-off**: [Data]
+- **Environment Ready**: [Date]
+- **First Test Run**: [Date]
+- **All Scenarios Complete**: [Date]
+- **Results Validated**: [Date]
+- **Sign-off**: [Date]
 
 ---
 
 ## 📈 Test Results
 
 ### Test Execution Summary
-| Test Scenario | Date | Duration | Status | Result | Notes |
-|---------------|------|----------|--------|--------|-------|
-| Normal Load | [Data] | [Durata] | [Pass/Fail] | [Valore metrica] | [Note] |
-| Peak Load | [Data] | [Durata] | [Pass/Fail] | [Valore metrica] | [Note] |
-| Stress Test | [Data] | [Durata] | [Pass/Fail] | [Valore metrica] | [Note] |
+| Test Scenario | Date   | Duration | Status    | Result          | Notes |
+|---------------|--------|----------|-----------|-----------------|-------|
+| Normal Load   | [Date] | [Duration] | [Pass/Fail] | [Metric value] | [Notes] |
+| Peak Load     | [Date] | [Duration] | [Pass/Fail] | [Metric value] | [Notes] |
+| Stress Test   | [Date] | [Duration] | [Pass/Fail] | [Metric value] | [Notes] |
 
 ### Metrics Summary
-| Metrica | Target | Achieved | Status | Gap Analysis |
-|---------|--------|----------|--------|--------------|
-| [Metrica 1] | [Target] | [Actual] | [Pass/Fail] | [Gap se presente] |
-| [Metrica 2] | [Target] | [Actual] | [Pass/Fail] | [Gap se presente] |
+| Metric      | Target | Achieved | Status    | Gap Analysis |
+|-------------|--------|----------|-----------|--------------|
+| [Metric 1]  | [Target] | [Actual] | [Pass/Fail] | [Gap if any] |
+| [Metric 2]  | [Target] | [Actual] | [Pass/Fail] | [Gap if any] |
 
 ### Performance Trends
-[Grafici o descrizione dei trend di performance]
+[Charts or description of performance trends]
 
 ### Issues Identified
-| ID | Descrizione | Impact | Severity | Status | Owner |
-|----|-------------|---------|----------|--------|-------|
-| [Issue-1] | [Descrizione] | [High/Med/Low] | [Critical/High/Med/Low] | [Open/Closed] | [Nome] |
+| ID        | Description   | Impact       | Severity            | Status      | Owner |
+|-----------|---------------|--------------|---------------------|-------------|-------|
+| [Issue-1] | [Description] | [High/Med/Low] | [Critical/High/Med/Low] | [Open/Closed] | [Name]  |
 
 ---
 
-## 🔧 Tuning e Optimization
+## 🔧 Tuning and Optimization
 
 ### Optimization Opportunities
-- **[Area 1]**: [Opportunità di ottimizzazione]
-- **[Area 2]**: [Altra opportunità]
+- **[Area 1]**: [Optimization opportunity]
+- **[Area 2]**: [Another opportunity]
 
 ### Configuration Changes
-- **[Config 1]**: [Cambiamento configurazione raccomandato]
-- **[Config 2]**: [Altro cambiamento]
+- **[Config 1]**: [Recommended configuration change]
+- **[Config 2]**: [Another change]
 
 ### Infrastructure Recommendations
-- **[Infra 1]**: [Raccomandazione infrastrutturale]
-- **[Infra 2]**: [Altra raccomandazione]
+- **[Infra 1]**: [Infrastructural recommendation]
+- **[Infra 2]**: [Another recommendation]
 
 ---
 
-## ✅ Sign-off e Acceptance
+## ✅ Sign-off and Acceptance
 
 ### Review Checklist
-- [ ] Metriche chiaramente definite e misurabili
-- [ ] Condizioni di test appropriate e rappresentative
-- [ ] Tool e metodologie adeguate
-- [ ] Baseline e benchmark identificati
-- [ ] Rischi identificati e mitigati
-- [ ] Timeline realistica e fattibile
+- [ ] Clearly defined and measurable metrics
+- [ ] Appropriate and representative test conditions
+- [ ] Adequate tools and methodologies
+- [ ] Baselines and benchmarks identified
+- [ ] Risks identified and mitigated
+- [ ] Realistic and feasible timeline
 
 ### Performance Acceptance
-- [ ] Tutti i target di performance raggiunti
-- [ ] Sistema stabile sotto carico normale
-- [ ] Recovery appropriato dopo stress test
-- [ ] Monitoring e alerting in place
+- [ ] All performance targets met
+- [ ] System stable under normal load
+- [ ] Appropriate recovery after stress test
+- [ ] Monitoring and alerting in place
 
 ### Business Acceptance
-- [ ] SLA requirements soddisfatti
-- [ ] Business impact accettabile
-- [ ] Costi operazionali entro budget
-- [ ] Stakeholder satisfied
+- [ ] SLA requirements met
+- [ ] Acceptable business impact
+- [ ] Operational costs within budget
+- [ ] Stakeholders satisfied
 
 ### Approvals
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Performance Engineer | [Nome] | ______ | ______ | [Comments] |
-| Technical Architect | [Nome] | ______ | ______ | [Comments] |
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| Operations Manager | [Nome] | ______ | ______ | [Comments] |
+| Role                 | Name   | Date   | Signature | Comments |
+|----------------------|--------|--------|-----------|----------|
+| Performance Engineer | [Name] | ______ | ______    | [Comments] |
+| Technical Architect  | [Name] | ______ | ______    | [Comments] |
+| Product Owner        | [Name] | ______ | ______    | [Comments] |
+| Operations Manager   | [Name] | ______ | ______    | [Comments] |
 
 ---
 
 ## 📝 Change History
 
-| Versione | Data | Autore | Cambiamenti | Impact su Testing |
-|----------|------|--------|-------------|-------------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | - |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] |
+| Version | Date   | Author | Changes     | Impact on Testing |
+|---------|--------|--------|-------------|-------------------|
+| 1.0     | [Date] | [Name] | Initial version | -                 |
+| 1.1     | [Date] | [Name] | [Changes]   | [Impact]          |
 
 ---
 
 ## 📎 Supporting Documentation
 
 ### Test Artifacts
-- [Link a test plan dettagliato]
-- [Link a test scripts/automation]
-- [Link a raw test data]
-- [Link a environment setup guide]
+- [Link to detailed test plan]
+- [Link to test scripts/automation]
+- [Link to raw test data]
+- [Link to environment setup guide]
 
 ### Reference Materials
-- [Link a performance requirements doc]
-- [Link a architecture documentation]
-- [Link a capacity planning docs]
-- [Link a industry benchmarks]
+- [Link to performance requirements doc]
+- [Link to architecture documentation]
+- [Link to capacity planning docs]
+- [Link to industry benchmarks]
 
 ### Monitoring Setup
-- [Link a monitoring configuration]
-- [Link a alerting rules]
-- [Link a dashboard setup]
+- [Link to monitoring configuration]
+- [Link to alerting rules]
+- [Link to dashboard setup]
 
 ---
 
-*Criterio di accettazione non-funzionale creato il: [Data]*  
-*Ultima validazione: [Data]*  
-*Prossima review: [Data]*  
-*Performance Engineer: [Nome responsabile]*
+*Non-functional acceptance criterion created on: [Date]*
+*Last validation: [Date]*
+*Next review: [Date]*
+*Performance Engineer: [Responsible person's name]*

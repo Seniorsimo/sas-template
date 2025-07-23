@@ -1,81 +1,81 @@
-# Integrations - Integrazioni
+# Integrations
 
-Questa cartella contiene i requisiti per le integrazioni con sistemi esterni e servizi di terze parti.
+This folder contains the requirements for integrations with external systems and third-party services.
 
-## 📋 Panoramica
+## 📋 Overview
 
-I requisiti di **Integrazione** definiscono come il sistema deve interagire con sistemi esterni, API di terze parti, servizi cloud e sistemi legacy.
+**Integration** requirements define how the system should interact with external systems, third-party APIs, cloud services, and legacy systems.
 
-## 🔌 Tipi di Integrazioni
+## 🔌 Types of Integrations
 
-### API di Terze Parti
+### Third-Party APIs
 - Payment gateways (Stripe, PayPal, etc.)
-- Servizi di comunicazione (Twilio, SendGrid)
-- Servizi di autenticazione (OAuth providers)
-- Servizi di mapping (Google Maps, etc.)
+- Communication services (Twilio, SendGrid)
+- Authentication services (OAuth providers)
+- Mapping services (Google Maps, etc.)
 
-### Sistemi Legacy
-- Database legacy
-- Applicazioni enterprise esistenti
+### Legacy Systems
+- Legacy databases
+- Existing enterprise applications
 - Mainframe systems
 - File systems
 
-### Servizi Cloud
+### Cloud Services
 - Cloud storage (AWS S3, Azure Blob)
-- Servizi di messaging (SQS, Service Bus)
-- Servizi di monitoring (CloudWatch, etc.)
-- CDN e caching services
+- Messaging services (SQS, Service Bus)
+- Monitoring services (CloudWatch, etc.)
+- CDN and caching services
 
-### Database Esterni
+### External Databases
 - Data warehouses
-- Sistemi di analytics
-- Database di partner
+- Analytics systems
+- Partner databases
 - Master data management
 
-## 📁 Struttura File
+## 📁 File Structure
 
 ### Template Naming
-`REQ-I-XXX-[nome-integrazione].md`
+`REQ-I-XXX-[integration-name].md`
 
-### Esempi
+### Examples
 - `REQ-I-001-payment-gateway.md`
 - `REQ-I-002-email-service.md`
 - `REQ-I-003-legacy-crm.md`
 - `REQ-I-004-cloud-storage.md`
 
-## 📊 Categorizzazione per Criticità
+## 📊 Categorization by Criticality
 
-### Critiche (Must Have)
-- [ ] Integrazioni essenziali per business core
-- [ ] Sistemi di pagamento
-- [ ] Servizi di autenticazione
-- [ ] Database principali
+### Critical (Must Have)
+- [ ] Essential integrations for core business
+- [ ] Payment systems
+- [ ] Authentication services
+- [ ] Main databases
 
-### Importanti (Should Have)
-- [ ] Servizi di notifica
-- [ ] Sistemi di monitoring
+### Important (Should Have)
+- [ ] Notification services
+- [ ] Monitoring systems
 - [ ] Backup services
 - [ ] Analytics platforms
 
-### Opzionali (Could Have)
-- [ ] Servizi di recommendation
+### Optional (Could Have)
+- [ ] Recommendation services
 - [ ] Social media integrations
 - [ ] Advanced analytics
 - [ ] Marketing tools
 
-## 🔧 Aspetti Tecnici da Considerare
+## 🔧 Technical Aspects to Consider
 
-### Protocolli di Comunicazione
+### Communication Protocols
 - **REST API**: GET, POST, PUT, DELETE
-- **GraphQL**: Query e mutations
-- **SOAP**: Web services legacy
+- **GraphQL**: Queries and mutations
+- **SOAP**: Legacy web services
 - **Message Queues**: Async communication
 - **Webhooks**: Event-driven integration
 
-### Sicurezza
-- **API Keys**: Gestione e rotazione
+### Security
+- **API Keys**: Management and rotation
 - **OAuth 2.0**: Authorization flows
-- **JWT Tokens**: Validazione e refresh
+- **JWT Tokens**: Validation and refresh
 - **SSL/TLS**: Encryption in transit
 - **IP Whitelisting**: Network security
 
@@ -91,49 +91,49 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - **Error Rates**: Success/failure tracking
 - **SLA Monitoring**: Service level compliance
 
-## 📋 Template per Requisito Integrazione
+## 📋 Template for Integration Requirement
 
 ```markdown
-# REQ-I-XXX: [Nome Integrazione]
+# REQ-I-XXX: [Integration Name]
 
-## Informazioni Generali
+## General Information
 **ID**: REQ-I-XXX
-**Sistema Esterno**: [Nome sistema/servizio]
-**Proprietario**: [Fornitore/Team]
-**Criticità**: Critical | Important | Optional
-**Tipo**: API REST | SOAP | File Exchange | Database
+**External System**: [System/Service Name]
+**Owner**: [Provider/Team]
+**Criticality**: Critical | Important | Optional
+**Type**: REST API | SOAP | File Exchange | Database
 
-## Descrizione Integrazione
-[Descrizione di cosa fa l'integrazione e perché è necessaria]
+## Integration Description
+[Description of what the integration does and why it is necessary]
 
-## Specifiche Tecniche
+## Technical Specifications
 ### Endpoint/Connection
 - **URL**: [Endpoint URL]
-- **Protocollo**: [HTTP/HTTPS/FTP/etc.]
-- **Autenticazione**: [Tipo di auth]
-- **Rate Limits**: [Limiti di chiamate]
+- **Protocol**: [HTTP/HTTPS/FTP/etc.]
+- **Authentication**: [Auth Type]
+- **Rate Limits**: [Call limits]
 
-### Dati Scambiati
-**Input**: [Formato e struttura dati inviati]
-**Output**: [Formato e struttura dati ricevuti]
+### Exchanged Data
+**Input**: [Format and structure of data sent]
+**Output**: [Format and structure of data received]
 
-## SLA e Performance
-- **Availability**: [Uptime atteso]
-- **Response Time**: [Tempo massimo risposta]
-- **Throughput**: [Operazioni/secondo]
+## SLA and Performance
+- **Availability**: [Expected uptime]
+- **Response Time**: [Maximum response time]
+- **Throughput**: [Operations/second]
 
 ## Error Handling
-[Come gestire errori e fallimenti]
+[How to handle errors and failures]
 
 ## Testing
-[Come testare l'integrazione]
+[How to test the integration]
 ```
 
-## 🔄 Workflow di Integrazione
+## 🔄 Integration Workflow
 
 ### 1. Design Phase
-- Analisi requirements
-- Valutazione alternative
+- Requirements analysis
+- Evaluation of alternatives
 - Proof of Concept
 - Architecture review
 
@@ -157,49 +157,49 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 
 ## 📊 Dependencies Matrix
 
-| Integrazione | Core Features | Altri Sistemi | Criticità |
-|--------------|---------------|---------------|-----------|
-| REQ-I-001 | REQ-F-001, REQ-F-003 | REQ-I-002 | High |
-| REQ-I-002 | REQ-F-002 | - | Medium |
+| Integration | Core Features | Other Systems | Criticality |
+|-------------|---------------|---------------|-------------|
+| REQ-I-001   | REQ-F-001, REQ-F-003 | REQ-I-002     | High        |
+| REQ-I-002   | REQ-F-002     | -             | Medium      |
 
-## ⚠️ Rischi Comuni
+## ⚠️ Common Risks
 
-### Disponibilità
-- Downtime del servizio esterno
-- Cambiamenti non comunicati
-- Rate limiting imprevisto
+### Availability
+- Downtime of the external service
+- Uncommunicated changes
+- Unexpected rate limiting
 
-### Sicurezza
-- Breach del servizio terzo
+### Security
+- Breach of the third-party service
 - Credential exposure
 - Data leakage
 
 ### Performance
-- Latenza di rete
-- Bottleneck sui servizi esterni
+- Network latency
+- Bottlenecks on external services
 - Cascading failures
 
 ### Business
-- Cambi di pricing
-- Discontinuation del servizio
+- Pricing changes
+- Discontinuation of the service
 - Vendor lock-in
 
 ## 💡 Best Practices
 
 ### ✅ Do's
-- **Implementa circuit breakers** per fault tolerance
-- **Usa retry logic** con exponential backoff
-- **Monitora continuamente** le integrazioni
-- **Documenta accuratamente** API contracts
-- **Testa scenari di failure**
+- **Implement circuit breakers** for fault tolerance
+- **Use retry logic** with exponential backoff
+- **Continuously monitor** integrations
+- **Accurately document** API contracts
+- **Test failure scenarios**
 
 ### ❌ Don'ts
-- **Non fare assunzioni** su disponibilità
-- **Non ignorare rate limits**
-- **Non hardcodare** credenziali
-- **Non trascurare** la security
-- **Non dimenticare** il monitoring
+- **Don't make assumptions** about availability
+- **Don't ignore rate limits**
+- **Don't hardcode** credentials
+- **Don't neglect** security
+- **Don't forget** monitoring
 
 ---
 
-*Le integrazioni sono spesso il punto più fragile del sistema. Progettale con resilienza e monitoring adeguati.*
+*Integrations are often the most fragile part of the system. Design them with resilience and adequate monitoring.*

@@ -1,59 +1,59 @@
-# REQ-UI-XXX-[COMPONENT]: [Titolo UI Requirement]
+# REQ-UI-XXX-[COMPONENT]: [UI Requirement Title]
 
-## 📋 Informazioni Generali
-**ID**: REQ-UI-XXX-[COMPONENT]  
-**Categoria**: UI Requirement  
-**Component Type**: Layout | Form | Navigation | Display | Interactive | Feedback  
-**Platform**: Web | Mobile | Desktop App | Cross-platform  
-**Device Target**: Mobile | Tablet | Desktop | All  
-**Priorità**: Must Have | Should Have | Could Have | Won't Have  
-**Status**: Draft | Review | Approved | In Development | Implemented | Testing | Closed  
+## 📋 General Information
+**ID**: REQ-UI-XXX-[COMPONENT]
+**Category**: UI Requirement
+**Component Type**: Layout | Form | Navigation | Display | Interactive | Feedback
+**Platform**: Web | Mobile | Desktop App | Cross-platform
+**Device Target**: Mobile | Tablet | Desktop | All
+**Priority**: Must Have | Should Have | Could Have | Won't Have
+**Status**: Draft | Review | Approved | In Development | Implemented | Testing | Closed
 **Assigned to**: [Frontend Developer/UI Designer]
 
 ---
 
-## 📝 Descrizione UI Component
+## 📝 UI Component Description
 
-### Sommario
-[Breve descrizione del componente UI - cosa fa e dove viene utilizzato]
+### Summary
+[Brief description of the UI component - what it does and where it is used]
 
 ### User Context
-[In quale contesto l'utente interagisce con questo componente]
+[In what context the user interacts with this component]
 
 ### Business Purpose
-[Perché questo componente è importante dal punto di vista business]
+[Why this component is important from a business perspective]
 
 ### Component Category
-**Primary Function**: [Information Display | Data Entry | Navigation | Feedback | Action]  
-**Complexity Level**: [Simple | Medium | Complex]  
-**Reusability**: [High | Medium | Low - quanto è riutilizzabile]
+**Primary Function**: [Information Display | Data Entry | Navigation | Feedback | Action]
+**Complexity Level**: [Simple | Medium | Complex]
+**Reusability**: [High | Medium | Low - how reusable it is]
 
 ---
 
 ## 🎨 Design Specifications
 
 ### Visual Design
-**Layout Type**: [Fixed | Fluid | Responsive | Adaptive]  
-**Design Pattern**: [Card | List | Grid | Form | Modal | etc.]  
-**Visual Style**: [Material Design | Flat | Corporate | Custom]  
-**Brand Alignment**: [Descrizione allineamento con brand guidelines]
+**Layout Type**: [Fixed | Fluid | Responsive | Adaptive]
+**Design Pattern**: [Card | List | Grid | Form | Modal | etc.]
+**Visual Style**: [Material Design | Flat | Corporate | Custom]
+**Brand Alignment**: [Description of alignment with brand guidelines]
 
 ### Color Scheme
-**Primary Colors**: [Colori primari utilizzati]  
-**Secondary Colors**: [Colori secondari]  
-**State Colors**: [Colori per stati - success, error, warning, etc.]  
-**Background**: [Colore/pattern background]
+**Primary Colors**: [Primary colors used]
+**Secondary Colors**: [Secondary colors]
+**State Colors**: [Colors for states - success, error, warning, etc.]
+**Background**: [Background color/pattern]
 
 ### Typography
-**Headings**: [Font, size, weight per intestazioni]  
-**Body Text**: [Font, size, weight per testo corpo]  
-**Labels**: [Typography per label e metadata]  
-**Special Text**: [Typography per link, emphasized text, etc.]
+**Headings**: [Font, size, weight for headings]
+**Body Text**: [Font, size, weight for body text]
+**Labels**: [Typography for labels and metadata]
+**Special Text**: [Typography for links, emphasized text, etc.]
 
 ### Spacing & Layout
-**Margins**: [Margini esterni componente]  
-**Padding**: [Padding interno]  
-**Grid System**: [Se usa grid, specifiche]  
+**Margins**: [External component margins]
+**Padding**: [Internal padding]
+**Grid System**: [If it uses a grid, specifications]
 **Alignment**: [Left | Center | Right | Justified]
 
 ---
@@ -107,182 +107,182 @@
 ## 🔧 Functional Specifications
 
 ### Interactive Elements
-**Clickable Areas**: [Elementi cliccabili/tappabili]  
-**Hover States**: [Comportamento hover su desktop]  
-**Active States**: [Stati attivi/pressed]  
-**Disabled States**: [Stati disabilitati]  
-**Loading States**: [Stati di caricamento]
+**Clickable Areas**: [Clickable/tappable elements]
+**Hover States**: [Hover behavior on desktop]
+**Active States**: [Active/pressed states]
+**Disabled States**: [Disabled states]
+**Loading States**: [Loading states]
 
-### Input Specifications (se applicabile)
-| Field Name | Type | Required | Validation | Placeholder | Max Length |
-|------------|------|----------|------------|-------------|------------|
-| [Nome campo] | [text/email/number] | [Yes/No] | [Regole] | [Placeholder text] | [Lunghezza] |
+### Input Specifications (if applicable)
+| Field Name   | Type                | Required | Validation | Placeholder        | Max Length |
+|--------------|---------------------|----------|------------|--------------------|------------|
+| [Field name] | [text/email/number] | [Yes/No] | [Rules]    | [Placeholder text] | [Length]   |
 
-### Output Specifications (se applicabile)
-**Data Display**: [Come vengono mostrati i dati]  
-**Formatting**: [Formattazione numeri, date, etc.]  
-**Empty States**: [Cosa mostrare quando non ci sono dati]  
-**Error States**: [Come visualizzare errori]
+### Output Specifications (if applicable)
+**Data Display**: [How data is displayed]
+**Formatting**: [Formatting of numbers, dates, etc.]
+**Empty States**: [What to show when there is no data]
+**Error States**: [How to display errors]
 
 ### Navigation Behavior
-**Primary Actions**: [Azioni principali disponibili]  
-**Secondary Actions**: [Azioni secondarie]  
-**Navigation Flow**: [Come si naviga da/verso questo componente]  
-**Back Behavior**: [Comportamento pulsante back]
+**Primary Actions**: [Available primary actions]
+**Secondary Actions**: [Secondary actions]
+**Navigation Flow**: [How to navigate to/from this component]
+**Back Behavior**: [Back button behavior]
 
 ---
 
 ## 📱 Responsive Behavior
 
 ### Mobile Adaptations
-**Touch Targets**: [Dimensione minima 44x44px per elementi touch]  
-**Gesture Support**: [Swipe, pinch, long press se supportati]  
-**Keyboard Behavior**: [Comportamento tastiera mobile]  
+**Touch Targets**: [Minimum size 44x44px for touch elements]
+**Gesture Support**: [Swipe, pinch, long press if supported]
+**Keyboard Behavior**: [Mobile keyboard behavior]
 **Orientation**: [Portrait | Landscape | Both]
 
 ### Tablet Adaptations
-**Layout Changes**: [Come cambia il layout su tablet]  
-**Navigation Pattern**: [Pattern navigazione su tablet]  
-**Content Density**: [Densità contenuti rispetto a mobile/desktop]
+**Layout Changes**: [How the layout changes on a tablet]
+**Navigation Pattern**: [Navigation pattern on a tablet]
+**Content Density**: [Content density compared to mobile/desktop]
 
 ### Desktop Enhancements
-**Keyboard Shortcuts**: [Shortcuts tastiera se supportati]  
-**Mouse Interactions**: [Hover, right-click, drag&drop]  
-**Multi-monitor**: [Considerazioni multi-monitor]
+**Keyboard Shortcuts**: [Keyboard shortcuts if supported]
+**Mouse Interactions**: [Hover, right-click, drag & drop]
+**Multi-monitor**: [Multi-monitor considerations]
 
 ### Cross-Device Consistency
-**State Preservation**: [Come mantenere stato tra dispositivi]  
-**Data Sync**: [Sincronizzazione dati]  
-**Feature Parity**: [Parità funzionalità tra piattaforme]
+**State Preservation**: [How to maintain state between devices]
+**Data Sync**: [Data synchronization]
+**Feature Parity**: [Feature parity across platforms]
 
 ---
 
 ## ♿ Accessibility Requirements
 
 ### WCAG 2.1 AA Compliance
-**Color Contrast**: [Ratio ≥ 4.5:1 per testo normale, ≥ 3:1 per testo large]  
-**Keyboard Navigation**: [Navigazione completa da tastiera]  
-**Screen Reader**: [Supporto screen reader con ARIA labels]  
-**Focus Management**: [Gestione focus visibile e logico]
+**Color Contrast**: [Ratio ≥ 4.5:1 for normal text, ≥ 3:1 for large text]
+**Keyboard Navigation**: [Full keyboard navigation]
+**Screen Reader**: [Screen reader support with ARIA labels]
+**Focus Management**: [Visible and logical focus management]
 
 ### Semantic HTML
-**HTML Structure**: [Uso appropriato di header, main, nav, etc.]  
-**Form Labels**: [Label associate correttamente agli input]  
-**Heading Hierarchy**: [Gerarchia H1-H6 logica]  
-**Landmark Roles**: [Ruoli landmark ARIA se necessari]
+**HTML Structure**: [Appropriate use of header, main, nav, etc.]
+**Form Labels**: [Labels correctly associated with inputs]
+**Heading Hierarchy**: [Logical H1-H6 hierarchy]
+**Landmark Roles**: [ARIA landmark roles if necessary]
 
 ### Alternative Text
-**Images**: [Alt text per tutte le immagini informative]  
-**Icons**: [Aria-label per icone funzionali]  
-**Charts**: [Descrizioni alternative per grafici]  
-**Media**: [Captions per video, trascrizioni per audio]
+**Images**: [Alt text for all informative images]
+**Icons**: [Aria-label for functional icons]
+**Charts**: [Alternative descriptions for charts]
+**Media**: [Captions for videos, transcripts for audio]
 
 ### Assistive Technology Support
-**Screen Readers**: [Compatibilità NVDA, JAWS, VoiceOver]  
-**Voice Control**: [Supporto Dragon, Voice Control]  
-**Switch Navigation**: [Supporto navigazione switch]  
-**High Contrast**: [Funzionamento con high contrast mode]
+**Screen Readers**: [Compatibility with NVDA, JAWS, VoiceOver]
+**Voice Control**: [Support for Dragon, Voice Control]
+**Switch Navigation**: [Support for switch navigation]
+**High Contrast**: [Functionality with high contrast mode]
 
 ---
 
-## ✅ Criteri di Accettazione
+## ✅ Acceptance Criteria
 
 ### Scenario 1: Visual Rendering - Desktop
-**Given** l'utente accede da un browser desktop  
-**And** la risoluzione è ≥1024px  
-**When** il componente viene renderizzato  
-**Then** deve seguire il layout desktop specificato  
-**And** tutti gli elementi devono essere visibili e allineati correttamente  
-**And** i colori devono corrispondere al design system  
-**And** la tipografia deve essere quella specificata
+**Given** the user accesses from a desktop browser
+**And** the resolution is ≥1024px
+**When** the component is rendered
+**Then** it must follow the specified desktop layout
+**And** all elements must be visible and correctly aligned
+**And** the colors must match the design system
+**And** the typography must be as specified
 
 ### Scenario 2: Responsive Behavior - Mobile
-**Given** l'utente accede da dispositivo mobile  
-**And** la risoluzione è ≤768px  
-**When** il componente viene renderizzato  
-**Then** deve adattarsi al layout mobile  
-**And** tutti gli elementi touch devono essere ≥44x44px  
-**And** il contenuto deve essere leggibile senza zoom  
-**And** la navigazione deve essere touch-friendly
+**Given** the user accesses from a mobile device
+**And** the resolution is ≤768px
+**When** the component is rendered
+**Then** it must adapt to the mobile layout
+**And** all touch elements must be ≥44x44px
+**And** the content must be readable without zooming
+**And** navigation must be touch-friendly
 
 ### Scenario 3: Keyboard Navigation
-**Given** l'utente naviga usando solo la tastiera  
-**When** usa Tab per navigare nel componente  
-**Then** tutti gli elementi interattivi devono essere raggiungibili  
-**And** l'ordine di tab deve essere logico  
-**And** il focus deve essere chiaramente visibile  
-**And** Escape deve chiudere modal/dropdown se applicabile
+**Given** the user navigates using only the keyboard
+**When** they use Tab to navigate through the component
+**Then** all interactive elements must be reachable
+**And** the tab order must be logical
+**And** the focus must be clearly visible
+**And** Escape must close modals/dropdowns if applicable
 
 ### Scenario 4: Screen Reader Compatibility
-**Given** l'utente utilizza uno screen reader  
-**When** naviga nel componente  
-**Then** tutti gli elementi devono essere annunciati correttamente  
-**And** le label e descrizioni devono essere meaningful  
-**And** lo stato degli elementi deve essere comunicato  
-**And** le azioni disponibili devono essere chiare
+**Given** the user is using a screen reader
+**When** they navigate through the component
+**Then** all elements must be announced correctly
+**And** labels and descriptions must be meaningful
+**And** the state of the elements must be communicated
+**And** the available actions must be clear
 
 ### Scenario 5: Loading and Error States
-**Given** il componente deve caricare dati  
-**When** i dati stanno caricando  
-**Then** deve mostrare un indicatore di loading appropriato  
-**And** se il caricamento fallisce, deve mostrare un errore chiaro  
-**And** deve fornire opzioni per retry se appropriato  
-**And** deve mantenere la struttura del layout durante gli stati
+**Given** the component needs to load data
+**When** the data is loading
+**Then** it must show an appropriate loading indicator
+**And** if loading fails, it must show a clear error
+**And** it must provide options to retry if appropriate
+**And** it must maintain the layout structure during these states
 
 ---
 
 ## ⚡ Performance Requirements
 
 ### Loading Performance
-**First Paint**: [Tempo per primo rendering ≤ X ms]  
-**Fully Loaded**: [Tempo caricamento completo ≤ Y ms]  
-**Interactive**: [Tempo fino a interattività ≤ Z ms]  
-**Bundle Size**: [Dimensione massima bundle JS/CSS]
+**First Paint**: [Time to first render ≤ X ms]
+**Fully Loaded**: [Full load time ≤ Y ms]
+**Interactive**: [Time to interactivity ≤ Z ms]
+**Bundle Size**: [Maximum JS/CSS bundle size]
 
 ### Runtime Performance
-**Smooth Scrolling**: [60fps durante scroll]  
-**Animation Performance**: [60fps per animazioni]  
-**Memory Usage**: [Utilizzo memoria accettabile]  
-**CPU Usage**: [Utilizzo CPU durante interazioni]
+**Smooth Scrolling**: [60fps during scroll]
+**Animation Performance**: [60fps for animations]
+**Memory Usage**: [Acceptable memory usage]
+**CPU Usage**: [CPU usage during interactions]
 
 ### Network Optimization
-**Image Optimization**: [WebP, lazy loading, responsive images]  
-**Font Loading**: [Font display: swap, subsetting]  
-**Code Splitting**: [Bundle splitting per componenti]  
+**Image Optimization**: [WebP, lazy loading, responsive images]
+**Font Loading**: [Font display: swap, subsetting]
+**Code Splitting**: [Bundle splitting for components]
 **Caching Strategy**: [Browser caching, CDN usage]
 
 ### Mobile Performance
-**3G Performance**: [Utilizzo accettabile su 3G]  
-**Battery Impact**: [Impatto batteria minimizzato]  
-**Data Usage**: [Utilizzo dati ottimizzato]  
-**Offline Capability**: [Funzionalità offline se applicabile]
+**3G Performance**: [Acceptable usage on 3G]
+**Battery Impact**: [Minimized battery impact]
+**Data Usage**: [Optimized data usage]
+**Offline Capability**: [Offline functionality if applicable]
 
 ---
 
 ## 🧪 Test Strategy
 
 ### Visual Testing
-**Cross-browser Testing**: [Chrome, Firefox, Safari, Edge]  
-**Device Testing**: [iPhone, Android, iPad, Desktop]  
-**Resolution Testing**: [Varie risoluzioni e zoom levels]  
+**Cross-browser Testing**: [Chrome, Firefox, Safari, Edge]
+**Device Testing**: [iPhone, Android, iPad, Desktop]
+**Resolution Testing**: [Various resolutions and zoom levels]
 **Screenshot Testing**: [Automated visual regression]
 
 ### Functional Testing
-**User Interaction Testing**: [Click, tap, keyboard, gesture]  
-**Form Validation**: [Validation rules, error messages]  
-**State Management**: [Loading, error, success states]  
-**Navigation Testing**: [Link funzionali, back button]
+**User Interaction Testing**: [Click, tap, keyboard, gesture]
+**Form Validation**: [Validation rules, error messages]
+**State Management**: [Loading, error, success states]
+**Navigation Testing**: [Functional links, back button]
 
 ### Accessibility Testing
-**Automated Testing**: [axe-core, Lighthouse accessibility]  
-**Manual Testing**: [Keyboard navigation, screen reader]  
-**User Testing**: [Test con utenti con disabilità]  
+**Automated Testing**: [axe-core, Lighthouse accessibility]
+**Manual Testing**: [Keyboard navigation, screen reader]
+**User Testing**: [Testing with users with disabilities]
 **Compliance Verification**: [WCAG 2.1 AA audit]
 
 ### Performance Testing
-**Core Web Vitals**: [LCP, FID, CLS measurements]  
-**Load Testing**: [Performance sotto carico]  
-**Mobile Testing**: [Performance su dispositivi mobile]  
+**Core Web Vitals**: [LCP, FID, CLS measurements]
+**Load Testing**: [Performance under load]
+**Mobile Testing**: [Performance on mobile devices]
 **Network Testing**: [Slow 3G, offline scenarios]
 
 ---
@@ -290,198 +290,198 @@
 ## 🎯 User Experience Goals
 
 ### Usability Metrics
-**Task Success Rate**: [% utenti che completano task]  
-**Task Completion Time**: [Tempo medio completamento]  
-**Error Rate**: [% errori utente]  
-**User Satisfaction**: [Score soddisfazione utente]
+**Task Success Rate**: [% of users who complete tasks]
+**Task Completion Time**: [Average completion time]
+**Error Rate**: [% of user errors]
+**User Satisfaction**: [User satisfaction score]
 
 ### Engagement Metrics
-**Time on Component**: [Tempo medio di utilizzo]  
-**Interaction Rate**: [% utenti che interagiscono]  
-**Return Usage**: [% utenti che riutilizzano]  
-**Feature Discovery**: [% utenti che scoprono feature]
+**Time on Component**: [Average usage time]
+**Interaction Rate**: [% of users who interact]
+**Return Usage**: [% of returning users]
+**Feature Discovery**: [% of users who discover features]
 
 ### Business Metrics
-**Conversion Rate**: [% conversioni se applicabile]  
-**User Adoption**: [% adozione della feature]  
-**Support Tickets**: [Riduzione ticket supporto]  
-**User Feedback**: [Score feedback utente]
+**Conversion Rate**: [% of conversions if applicable]
+**User Adoption**: [% of feature adoption]
+**Support Tickets**: [Reduction in support tickets]
+**User Feedback**: [User feedback score]
 
 ---
 
-## 🔗 Tracciabilità
+## 🔗 Traceability
 
 ### Business Requirements
-**Business Objectives**: [OBJ-XXX] - [Obiettivo business]  
-**User Stories**: [US-XXX] - [User story implementata]  
-**User Journey**: [Punto nel customer journey]
+**Business Objectives**: [OBJ-XXX] - [Business objective]
+**User Stories**: [US-XXX] - [Implemented user story]
+**User Journey**: [Point in the customer journey]
 
 ### Technical Requirements
-**Functional Requirements**: [REQ-F-XXX] - [Requisiti funzionali]  
-**API Requirements**: [REQ-API-XXX] - [API utilizzate]  
+**Functional Requirements**: [REQ-F-XXX] - [Functional requirements]
+**API Requirements**: [REQ-API-XXX] - [APIs used]
 **Non-Functional Requirements**: [REQ-NF-XXX] - [Performance, security]
 
 ### Design Requirements
-**Design System**: [Componenti design system utilizzati]  
-**Brand Guidelines**: [Guidelines brand applicate]  
-**Accessibility Standards**: [Standard accessibilità seguiti]
+**Design System**: [Design system components used]
+**Brand Guidelines**: [Applied brand guidelines]
+**Accessibility Standards**: [Followed accessibility standards]
 
 ---
 
-## ⚠️ Rischi e Constraints
+## ⚠️ Risks and Constraints
 
 ### Technical Risks
-- **[Rischio Tecnico 1]**: [Es. Browser compatibility issues]  
-  *Probability*: [Alta/Media/Bassa]  
-  *Impact*: [Alto/Medio/Basso]  
+- **[Technical Risk 1]**: [e.g., Browser compatibility issues]
+  *Probability*: [High/Medium/Low]
+  *Impact*: [High/Medium/Low]
   *Mitigation*: [Progressive enhancement, polyfills]
 
-- **[Rischio Tecnico 2]**: [Es. Performance on low-end devices]  
-  *Probability*: [Alta/Media/Bassa]  
-  *Impact*: [Alto/Medio/Basso]  
+- **[Technical Risk 2]**: [e.g., Performance on low-end devices]
+  *Probability*: [High/Medium/Low]
+  *Impact*: [High/Medium/Low]
   *Mitigation*: [Optimization, fallbacks]
 
 ### UX Risks
-- **[Rischio UX 1]**: [Es. User confusion]  
-  *Probability*: [Alta/Media/Bassa]  
-  *Impact*: [Alto/Medio/Basso]  
+- **[UX Risk 1]**: [e.g., User confusion]
+  *Probability*: [High/Medium/Low]
+  *Impact*: [High/Medium/Low]
   *Mitigation*: [User testing, clear messaging]
 
 ### Business Constraints
-**Budget Constraints**: [Limitazioni budget per design/dev]  
-**Time Constraints**: [Limitazioni temporali]  
-**Technology Constraints**: [Limitazioni tecnologiche]  
-**Resource Constraints**: [Limitazioni risorse umane]
+**Budget Constraints**: [Budget limitations for design/dev]
+**Time Constraints**: [Time limitations]
+**Technology Constraints**: [Technological limitations]
+**Resource Constraints**: [Human resource limitations]
 
 ---
 
-## 📅 Timeline e Dependencies
+## 📅 Timeline and Dependencies
 
 ### Development Phases
-**Phase 1 - Design**: [Mockups, prototypes] - [Data inizio] to [Data fine]  
-**Phase 2 - Development**: [Implementation] - [Data inizio] to [Data fine]  
-**Phase 3 - Testing**: [QA, user testing] - [Data inizio] to [Data fine]  
-**Phase 4 - Optimization**: [Performance, polish] - [Data inizio] to [Data fine]
+**Phase 1 - Design**: [Mockups, prototypes] - [Start date] to [End date]
+**Phase 2 - Development**: [Implementation] - [Start date] to [End date]
+**Phase 3 - Testing**: [QA, user testing] - [Start date] to [End date]
+**Phase 4 - Optimization**: [Performance, polish] - [Start date] to [End date]
 
 ### Key Milestones
-- **Design Approval**: [Data]
-- **Prototype Complete**: [Data]
-- **Development Complete**: [Data]
-- **Testing Complete**: [Data]
-- **Production Deployment**: [Data]
+- **Design Approval**: [Date]
+- **Prototype Complete**: [Date]
+- **Development Complete**: [Date]
+- **Testing Complete**: [Date]
+- **Production Deployment**: [Date]
 
 ### Dependencies
-**Design System Ready**: [Data]  
-**API Endpoints Available**: [Data]  
-**Authentication System Ready**: [Data]  
-**Content/Copy Ready**: [Data]
+**Design System Ready**: [Date]
+**API Endpoints Available**: [Date]
+**Authentication System Ready**: [Date]
+**Content/Copy Ready**: [Date]
 
 ---
 
-## 💰 Effort e Cost Estimates
+## 💰 Effort and Cost Estimates
 
 ### Design Effort
-**UX Research**: [Ore]  
-**UI Design**: [Ore]  
-**Prototyping**: [Ore]  
-**Design System Updates**: [Ore]  
-**User Testing**: [Ore]
+**UX Research**: [Hours]
+**UI Design**: [Hours]
+**Prototyping**: [Hours]
+**Design System Updates**: [Hours]
+**User Testing**: [Hours]
 
 ### Development Effort
-**Frontend Development**: [Ore]  
-**Responsive Implementation**: [Ore]  
-**Accessibility Implementation**: [Ore]  
-**Testing**: [Ore]  
-**Performance Optimization**: [Ore]
+**Frontend Development**: [Hours]
+**Responsive Implementation**: [Hours]
+**Accessibility Implementation**: [Hours]
+**Testing**: [Hours]
+**Performance Optimization**: [Hours]
 
 ### Resource Requirements
-**UI/UX Designer**: [Ore]  
-**Frontend Developer**: [Ore]  
-**Accessibility Specialist**: [Ore]  
-**QA Engineer**: [Ore]
+**UI/UX Designer**: [Hours]
+**Frontend Developer**: [Hours]
+**Accessibility Specialist**: [Hours]
+**QA Engineer**: [Hours]
 
 ---
 
 ## ✅ Definition of Done
 
 ### Design Complete
-- [ ] Visual design approvato
-- [ ] Responsive design definito
-- [ ] Accessibility considerations documentate
-- [ ] Design system components identificati
-- [ ] Prototype interattivo creato
+- [ ] Visual design approved
+- [ ] Responsive design defined
+- [ ] Accessibility considerations documented
+- [ ] Design system components identified
+- [ ] Interactive prototype created
 
 ### Development Complete
-- [ ] Implementazione conforme al design
-- [ ] Responsive behavior implementato
-- [ ] Accessibility requirements soddisfatti
-- [ ] Cross-browser testing completato
-- [ ] Performance targets raggiunti
+- [ ] Implementation conforms to the design
+- [ ] Responsive behavior implemented
+- [ ] Accessibility requirements met
+- [ ] Cross-browser testing completed
+- [ ] Performance targets met
 
 ### Quality Assurance
-- [ ] Functional testing completato
-- [ ] Visual regression testing passato
-- [ ] Accessibility audit completato
-- [ ] Performance testing passato
-- [ ] User acceptance testing completato
+- [ ] Functional testing completed
+- [ ] Visual regression testing passed
+- [ ] Accessibility audit completed
+- [ ] Performance testing passed
+- [ ] User acceptance testing completed
 
 ---
 
 ## 📝 Change History
 
-| Versione | Data | Autore | Cambiamenti | Design Impact | Approvato da |
-|----------|------|--------|-------------|---------------|--------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | - | [Nome] |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] | [Nome] |
+| Version | Date   | Author | Changes     | Design Impact | Approved by |
+|---------|--------|--------|-------------|---------------|-------------|
+| 1.0     | [Date] | [Name] | Initial version | -             | [Name]      |
+| 1.1     | [Date] | [Name] | [Changes]   | [Impact]      | [Name]      |
 
 ---
 
-## ✅ Approvazioni
+## ✅ Approvals
 
 ### Design Approval
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| UI/UX Designer | [Nome] | ______ | ______ | [Comments] |
-| Brand Manager | [Nome] | ______ | ______ | [Comments] |
-| Accessibility Specialist | [Nome] | ______ | ______ | [Comments] |
+| Role                     | Name   | Date   | Signature | Comments |
+|--------------------------|--------|--------|-----------|----------|
+| UI/UX Designer           | [Name] | ______ | ______    | [Comments] |
+| Brand Manager            | [Name] | ______ | ______    | [Comments] |
+| Accessibility Specialist | [Name] | ______ | ______    | [Comments] |
 
 ### Technical Approval
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Frontend Architect | [Nome] | ______ | ______ | [Comments] |
-| Performance Engineer | [Nome] | ______ | ______ | [Comments] |
+| Role                 | Name   | Date   | Signature | Comments |
+|----------------------|--------|--------|-----------|----------|
+| Frontend Architect   | [Name] | ______ | ______    | [Comments] |
+| Performance Engineer | [Name] | ______ | ______    | [Comments] |
 
 ### Business Approval
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| User Experience Lead | [Nome] | ______ | ______ | [Comments] |
+| Role                 | Name   | Date   | Signature | Comments |
+|----------------------|--------|--------|-----------|----------|
+| Product Owner        | [Name] | ______ | ______    | [Comments] |
+| User Experience Lead | [Name] | ______ | ______    | [Comments] |
 
 ---
 
 ## 📎 Supporting Documentation
 
 ### Design Documentation
-- [Link a mockups/wireframes]
-- [Link a interactive prototype]
-- [Link a design system documentation]
-- [Link a brand guidelines]
+- [Link to mockups/wireframes]
+- [Link to interactive prototype]
+- [Link to design system documentation]
+- [Link to brand guidelines]
 
 ### Technical Documentation
-- [Link a component library]
-- [Link a coding standards]
-- [Link a browser support matrix]
-- [Link a performance benchmarks]
+- [Link to component library]
+- [Link to coding standards]
+- [Link to browser support matrix]
+- [Link to performance benchmarks]
 
 ### User Research
-- [Link a user personas]
-- [Link a user journey maps]
-- [Link a usability testing results]
-- [Link a accessibility audit results]
+- [Link to user personas]
+- [Link to user journey maps]
+- [Link to usability testing results]
+- [Link to accessibility audit results]
 
 ---
 
-*UI requirement creato il: [Data]*  
-*Ultima revisione: [Data]*  
-*Prossima review: [Data]*  
-*UI Owner: [Nome responsabile UI/UX]*
+*UI requirement created on: [Date]*
+*Last revision: [Date]*
+*Next review: [Date]*
+*UI Owner: [UI/UX responsible person's name]*

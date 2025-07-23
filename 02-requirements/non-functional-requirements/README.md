@@ -1,45 +1,45 @@
-# Requisiti Non-Funzionali
+# Non-Functional Requirements
 
-Questa cartella contiene tutti i requisiti non-funzionali del sistema, organizzati per categoria di qualità.
+This folder contains all the non-functional requirements of the system, organized by quality category.
 
-## 📋 Panoramica
+## 📋 Overview
 
-I **Requisiti Non-Funzionali** definiscono le qualità del sistema: come deve performare, quanto deve essere sicuro, usabile, affidabile, etc. Questi requisiti sono spesso chiamati "ilities" e sono critici per il successo del sistema.
+**Non-Functional Requirements** define the qualities of the system: how it should perform, how secure, usable, reliable, etc., it must be. These requirements are often called "ilities" and are critical to the system's success.
 
-## 📁 Struttura Organizzativa
+## 📁 Organizational Structure
 
 ```
 non-functional-requirements/
 ├── performance/
-│   ├── README.md                     (Requisiti di performance)
-│   ├── REQ-NF-PERF-001.md          (Tempo di risposta)
-│   └── REQ-NF-PERF-XXX.md          (Altri requisiti performance)
+│   ├── README.md                     (Performance requirements)
+│   ├── REQ-NF-PERF-001.md          (Response time)
+│   └── REQ-NF-PERF-XXX.md          (Other performance requirements)
 ├── security/
-│   ├── README.md                     (Requisiti di sicurezza)
-│   ├── REQ-NF-SEC-001.md           (Autenticazione)
-│   └── REQ-NF-SEC-XXX.md           (Altri requisiti security)
+│   ├── README.md                     (Security requirements)
+│   ├── REQ-NF-SEC-001.md           (Authentication)
+│   └── REQ-NF-SEC-XXX.md           (Other security requirements)
 ├── usability/
-│   ├── README.md                     (Requisiti di usabilità)
-│   ├── REQ-NF-USA-001.md           (Accessibilità)
-│   └── REQ-NF-USA-XXX.md           (Altri requisiti usability)
+│   ├── README.md                     (Usability requirements)
+│   ├── REQ-NF-USA-001.md           (Accessibility)
+│   └── REQ-NF-USA-XXX.md           (Other usability requirements)
 ├── reliability/
-│   ├── README.md                     (Requisiti di affidabilità)
-│   ├── REQ-NF-REL-001.md           (Disponibilità)
-│   └── REQ-NF-REL-XXX.md           (Altri requisiti reliability)
+│   ├── README.md                     (Reliability requirements)
+│   ├── REQ-NF-REL-001.md           (Availability)
+│   └── REQ-NF-REL-XXX.md           (Other reliability requirements)
 ├── scalability/
-│   ├── README.md                     (Requisiti di scalabilità)
-│   ├── REQ-NF-SCAL-001.md          (Carico utenti)
-│   └── REQ-NF-SCAL-XXX.md          (Altri requisiti scalability)
+│   ├── README.md                     (Scalability requirements)
+│   ├── REQ-NF-SCAL-001.md          (User load)
+│   └── REQ-NF-SCAL-XXX.md          (Other scalability requirements)
 ├── compatibility/
-│   ├── README.md                     (Requisiti di compatibilità)
+│   ├── README.md                     (Compatibility requirements)
 │   ├── REQ-NF-COMP-001.md          (Browser support)
-│   └── REQ-NF-COMP-XXX.md          (Altri requisiti compatibility)
-└── README.md                         (Questo file)
+│   └── REQ-NF-COMP-XXX.md          (Other compatibility requirements)
+└── README.md                         (This file)
 ```
 
-## 🏷️ Convenzioni di Naming
+## 🏷️ Naming Conventions
 
-### ID Requisiti per Categoria
+### Requirement IDs by Category
 - **Performance**: `REQ-NF-PERF-XXX`
 - **Security**: `REQ-NF-SEC-XXX`
 - **Usability**: `REQ-NF-USA-XXX`
@@ -50,121 +50,121 @@ non-functional-requirements/
 - **Portability**: `REQ-NF-PORT-XXX`
 
 ### File Names
-`[ID]-[nome-breve].md`
+`[ID]-[short-name].md`
 
-**Esempi**:
+**Examples**:
 - `REQ-NF-PERF-001-response-time.md`
 - `REQ-NF-SEC-001-authentication.md`
 - `REQ-NF-USA-001-accessibility.md`
 
-## 📊 Categorie Principali
+## 📊 Main Categories
 
 ### 🚀 Performance
-Velocità, throughput, utilizzo risorse:
-- Tempo di risposta
-- Throughput (operazioni/secondo)
-- Utilizzo CPU/memoria
-- Capacità di carico
+Speed, throughput, resource utilization:
+- Response time
+- Throughput (operations/second)
+- CPU/memory utilization
+- Load capacity
 
 ### 🔒 Security
-Protezione dati e sistema:
-- Autenticazione e autorizzazione
-- Crittografia dati
-- Audit e logging
-- Protezione attacchi
+Data and system protection:
+- Authentication and authorization
+- Data encryption
+- Audit and logging
+- Attack protection
 
 ### 👤 Usability
-Facilità d'uso e user experience:
-- Accessibilità (WCAG)
+Ease of use and user experience:
+- Accessibility (WCAG)
 - User interface design
 - Learnability
 - User satisfaction
 
 ### 🔧 Reliability
-Affidabilità e disponibilità:
-- Uptime/disponibilità
+Reliability and availability:
+- Uptime/availability
 - MTBF (Mean Time Between Failures)
 - MTTR (Mean Time To Recovery)
 - Error handling
 
 ### 📈 Scalability
-Capacità di crescita:
-- Scalabilità orizzontale
-- Scalabilità verticale
-- Gestione del carico
-- Elasticità
+Growth capacity:
+- Horizontal scalability
+- Vertical scalability
+- Load management
+- Elasticity
 
 ### 🔄 Compatibility
-Interoperabilità e compatibilità:
+Interoperability and compatibility:
 - Browser support
-- Sistema operativo
-- Versioni software
-- Standard e protocolli
+- Operating system
+- Software versions
+- Standards and protocols
 
-## 📋 Template Requisito Non-Funzionale
+## 📋 Non-Functional Requirement Template
 
 ```markdown
-# REQ-NF-[CAT]-XXX: [Titolo Requisito]
+# REQ-NF-[CAT]-XXX: [Requirement Title]
 
-## Informazioni Generali
+## General Information
 **ID**: REQ-NF-[CAT]-XXX
-**Categoria**: [Performance|Security|Usability|etc.]
-**Priorità**: Critical | High | Medium | Low
-**Misurabilità**: Quantitative | Qualitative
+**Category**: [Performance|Security|Usability|etc.]
+**Priority**: Critical | High | Medium | Low
+**Measurability**: Quantitative | Qualitative
 
-## Descrizione
-[Cosa il sistema deve fare dal punto di vista qualitativo]
+## Description
+[What the system must do from a qualitative point of view]
 
-## Metriche e Target
-**Metrica**: [Come misurare]
-**Target Value**: [Valore obiettivo]
-**Acceptance Criteria**: [Criteri di accettazione]
+## Metrics and Targets
+**Metric**: [How to measure]
+**Target Value**: [Objective value]
+**Acceptance Criteria**: [Acceptance criteria]
 
-## Metodo di Verifica
-[Come testare e validare questo requisito]
+## Verification Method
+[How to test and validate this requirement]
 
-## Tracciabilità
+## Traceability
 **Functional Requirements**: [REQ-F-XXX]
 **User Stories**: [US-XXX]
 ```
 
-## 🎯 Prioritizzazione
+## 🎯 Prioritization
 
 ### Critical
-Requisiti senza i quali il sistema è inutilizzabile
-- Security essenziali
-- Performance critiche
-- Availability minimale
+Requirements without which the system is unusable
+- Essential security
+- Critical performance
+- Minimal availability
 
 ### High
-Requisiti che impattano significativamente l'utente
+Requirements that significantly impact the user
 - User experience
-- Performance auspicate
-- Compatibility principale
+- Desired performance
+- Main compatibility
 
 ### Medium
-Requisiti che migliorano la qualità
-- Usability avanzata
-- Performance ottimali
+Requirements that improve quality
+- Advanced usability
+- Optimal performance
 - Maintainability
 
 ### Low
-Requisiti nice-to-have
-- Features accessorie
+Nice-to-have requirements
+- Accessory features
 - Optimizations
 - Future compatibility
 
 ## 📏 SMART Criteria
 
-I requisiti non-funzionali devono essere **SMART**:
+Non-functional requirements must be **SMART**:
 
-- **Specific**: Specificare esattamente cosa
-- **Measurable**: Quantificabile con metriche
-- **Achievable**: Raggiungibile tecnicamente
-- **Relevant**: Rilevante per il business
-- **Time-bound**: Con deadline chiare
+- **Specific**: Specify exactly what
+- **Measurable**: Quantifiable with metrics
+- **Achievable**: Technically achievable
+- **Relevant**: Relevant to the business
+- **Time-bound**: With clear deadlines
 
-## 🧪 Metodi di Verifica
+## 🧪 Verification Methods
 
 ### Performance Testing
 - Load testing
@@ -192,15 +192,15 @@ I requisiti non-funzionali devono essere **SMART**:
 
 ## 📊 Quality Attributes Matrix
 
-| Quality Attribute | Importanza | Difficoltà | Priorità |
+| Quality Attribute | Importance | Difficulty | Priority |
 |-------------------|------------|------------|----------|
-| Performance | High | Medium | High |
-| Security | Critical | High | Critical |
-| Usability | High | Low | High |
-| Reliability | High | Medium | High |
-| Scalability | Medium | High | Medium |
+| Performance       | High       | Medium     | High     |
+| Security          | Critical   | High       | Critical |
+| Usability         | High       | Low        | High     |
+| Reliability       | High       | Medium     | High     |
+| Scalability       | Medium     | High       | Medium   |
 
-## 🔗 Tracciabilità NFR
+## 🔗 NFR Traceability
 
 ### Forward Traceability
 NFR → Architecture Decisions → Design Patterns → Implementation → Testing
@@ -214,18 +214,18 @@ NFR ↔ Functional Requirements ↔ User Stories ↔ Test Cases
 ## 💡 Best Practices
 
 ### ✅ Do's
-- **Quantifica sempre** quando possibile
-- **Usa metriche standard** dell'industria
-- **Collega agli obiettivi** di business
-- **Pianifica testing specifico** per ogni NFR
-- **Considera trade-offs** tra qualità diverse
+- **Always quantify** when possible
+- **Use industry standard metrics**
+- **Link to business objectives**
+- **Plan specific testing** for each NFR
+- **Consider trade-offs** between different qualities
 
 ### ❌ Don'ts
-- **Non essere vago** ("il sistema deve essere veloce")
-- **Non ignorare** le limitazioni tecniche
-- **Non dimenticare** il costo di implementazione
-- **Non sottovalutare** l'impatto su altri requisiti
-- **Non rimandare** la validazione
+- **Don't be vague** ("the system must be fast")
+- **Don't ignore** technical limitations
+- **Don't forget** the cost of implementation
+- **Don't underestimate** the impact on other requirements
+- **Don't postpone** validation
 
 ## 🔄 NFR Lifecycle
 
@@ -267,4 +267,4 @@ NFR ↔ Functional Requirements ↔ User Stories ↔ Test Cases
 
 ---
 
-*I requisiti non-funzionali sono spesso più difficili da implementare dei funzionali, ma sono quelli che determinano il successo o fallimento del sistema.*
+*Non-functional requirements are often more difficult to implement than functional ones, but they are what determine the success or failure of the system.*

@@ -1,153 +1,119 @@
-# AC-F-XXX: [Titolo Criterio di Accettazione Funzionale]
+# AC-F-XXX: [Functional Acceptance Criterion Title]
 
-## 📋 Informazioni Generali
-**ID**: AC-F-XXX  
-**Requisito Collegato**: [REQ-F-XXX]  
-**User Story Collegata**: [US-XXX]  
-**Feature/Modulo**: [Nome feature o modulo]  
-**Priorità**: Critical | High | Medium | Low  
-**Status**: Draft | Review | Approved | Testing | Verified | Closed  
-**Assigned to**: [QA Engineer responsabile]
-
----
-
-## 📝 Descrizione
-
-### Sommario
-[Breve descrizione di cosa viene testato e validato]
-
-### Contesto
-[Contesto della funzionalità e perché questo criterio è importante]
-
-### Valore per il Business
-[Quale valore porta questo criterio al business]
+## 📋 General Information
+**ID**: AC-F-XXX
+**Related Requirement**: [REQ-F-XXX]
+**Related User Story**: [US-XXX]
+**Feature/Module**: [Feature or module name]
+**Priority**: Critical | High | Medium | Low
+**Status**: Draft | Review | Approved | Testing | Verified | Closed
+**Assigned to**: [Responsible QA Engineer]
 
 ---
 
-## 🎯 Scenario Principale
+## 📝 Description
+
+### Summary
+[Brief description of what is being tested and validated]
+
+### Context
+[Context of the functionality and why this criterion is important]
+
+### Business Value
+[What value this criterion brings to the business]
+
+---
+
+## 🎯 Main Scenario
 
 ### Happy Path
-**Given** [precondizione - stato iniziale del sistema]  
-**When** [azione dell'utente o evento scatenante]  
-**Then** [risultato atteso e osservabile]  
-**And** [condizioni aggiuntive che devono essere verificate]
+**Given** [precondition - initial state of the system]
+**When** [user action or triggering event]
+**Then** [expected and observable result]
+**And** [additional conditions that must be verified]
 
-### Esempio Concreto
-**Given** che sono un utente autenticato con ruolo "Manager"  
-**When** accedo alla sezione "Reports" e clicco su "Genera Report Vendite"  
-**Then** il sistema genera un report PDF con i dati delle vendite dell'ultimo mese  
-**And** il report viene scaricato automaticamente nel browser  
-**And** il sistema registra l'azione nel log di audit
-
----
-
-## 🔄 Scenari Alternativi
-
-### Scenario 2: [Nome scenario alternativo]
-**Given** [precondizione diversa]  
-**When** [azione alternativa]  
-**Then** [risultato atteso alternativo]  
-**And** [condizioni aggiuntive]
-
-### Scenario 3: [Nome altro scenario]
-**Given** [altra precondizione]  
-**When** [altra azione]  
-**Then** [altro risultato atteso]  
-**And** [altre condizioni]
+### Concrete Example
+**Given** that I am an authenticated user with the "Manager" role
+**When** I access the "Reports" section and click on "Generate Sales Report"
+**Then** the system generates a PDF report with the sales data for the last month
+**And** the report is automatically downloaded in the browser
+**And** the system records the action in the audit log
 
 ---
 
-## ❌ Scenari di Errore
+## 🔄 Alternative Scenarios
 
-### Error Scenario 1: [Tipo di errore]
-**Given** [precondizione che porta all'errore]  
-**When** [azione che scatena l'errore]  
-**Then** [comportamento atteso in caso di errore]  
-**And** [messaggio di errore o recovery action]
+### Scenario 2: [Alternative scenario name]
+**Given** [different precondition]
+**When** [alternative action]
+**Then** [alternative expected result]
+**And** [additional conditions]
 
-### Error Scenario 2: [Altro tipo di errore]
-**Given** [altra precondizione di errore]  
-**When** [altra azione che causa errore]  
-**Then** [altro comportamento atteso]  
-**And** [altra gestione errore]
-
----
-
-## 🏗️ Edge Cases
-
-### Edge Case 1: [Caso limite]
-**Given** [condizione al limite]  
-**When** [azione sul caso limite]  
-**Then** [comportamento atteso]
-
-### Edge Case 2: [Altro caso limite]
-**Given** [altra condizione limite]  
-**When** [altra azione limite]  
-**Then** [altro comportamento atteso]
+### Scenario 3: [Another scenario name]
+**Given** [another precondition]
+**When** [another action]
+**Then** [another expected result]
+**And** [other conditions]
 
 ---
 
-## ✅ Criteri Dettagliati di Accettazione
+## ❌ Error Scenarios
 
-### Criteri Funzionali
-- [ ] **[Criterio 1]**: [Descrizione specifica e misurabile]
-- [ ] **[Criterio 2]**: [Altra descrizione specifica]
-- [ ] **[Criterio 3]**: [Terzo criterio specifico]
-- [ ] **[Criterio 4]**: [Quarto criterio se necessario]
+### Error Scenario 1: [Error type]
+**Given** [precondition that leads to the error]
+**When** [action that triggers the error]
+**Then** [expected behavior in case of error]
+**And** [error message or recovery action]
 
-### Criteri di UI/UX
-- [ ] **Interfaccia**: [Elementi UI devono essere presenti e funzionali]
-- [ ] **Navigazione**: [Flusso di navigazione deve essere intuitivo]
-- [ ] **Feedback**: [Sistema deve fornire feedback appropriato]
-- [ ] **Accessibility**: [Requisiti di accessibilità se applicabili]
+### Error Scenario 2: [Another error type]
+**Given** [another error precondition]
+**When** [another action that causes an error]
+- [ ] **Response Time**: [Maximum acceptable response time]
+- [ ] **Throughput**: [Volume of supported operations]
+- [ ] **Resource Usage**: [Resource usage within limits]
 
-### Criteri di Performance
-- [ ] **Response Time**: [Tempo massimo di risposta accettabile]
-- [ ] **Throughput**: [Volume di operazioni supportate]
-- [ ] **Resource Usage**: [Utilizzo risorse entro limiti]
-
-### Criteri di Sicurezza
-- [ ] **Authorization**: [Controlli di autorizzazione appropriati]
-- [ ] **Data Protection**: [Protezione dati sensibili]
-- [ ] **Audit**: [Logging appropriato delle azioni]
+### Security Criteria
+- [ ] **Authorization**: [Appropriate authorization controls]
+- [ ] **Data Protection**: [Protection of sensitive data]
+- [ ] **Audit**: [Appropriate logging of actions]
 
 ---
 
 ## 🧪 Test Data Requirements
 
-### Dati di Test Necessari
-**Utenti**:
-- [Tipo utente 1] con permessi [specifici]
-- [Tipo utente 2] con permessi [diversi]
-- [Utente con permessi limitati]
+### Required Test Data
+**Users**:
+- [User type 1] with [specific] permissions
+- [User type 2] with [different] permissions
+- [User with limited permissions]
 
-**Dati Master**:
-- [Tipo di dato 1]: [Quantità e caratteristiche]
-- [Tipo di dato 2]: [Altre caratteristiche necessarie]
+**Master Data**:
+- [Data type 1]: [Quantity and characteristics]
+- [Data type 2]: [Other necessary characteristics]
 
-**Configurazioni**:
-- [Setting 1]: [Valore specifico]
-- [Setting 2]: [Altro valore]
+**Configurations**:
+- [Setting 1]: [Specific value]
+- [Setting 2]: [Another value]
 
-### Precondizioni di Sistema
-- Database in stato [specifico]
-- Servizi esterni [disponibili/configurati]
-- Cache [vuota/precaricata]
+### System Preconditions
+- Database in [specific] state
+- External services [available/configured]
+- Cache [empty/preloaded]
 
 ---
 
 ## 🏭 Environment Requirements
 
-### Ambiente di Test
-**Environment Type**: [Development | Staging | UAT | Production-like]  
-**Data Refresh**: [Frequenza aggiornamento dati]  
-**External Dependencies**: [Sistemi esterni necessari]
+### Test Environment
+**Environment Type**: [Development | Staging | UAT | Production-like]
+**Data Refresh**: [Data update frequency]
+**External Dependencies**: [Necessary external systems]
 
-### Configurazioni Specifiche
-- **Application Settings**: [Configurazioni app necessarie]
-- **Database Setup**: [Setup specifico database]
-- **Network Config**: [Configurazioni di rete]
-- **Security Setup**: [Configurazioni sicurezza]
+### Specific Configurations
+- **Application Settings**: [Necessary app configurations]
+- **Database Setup**: [Specific database setup]
+- **Network Config**: [Network configurations]
+- **Security Setup**: [Security configurations]
 
 ---
 
@@ -155,139 +121,139 @@
 
 ### Manual Testing
 **Steps**:
-1. [Passo 1 del test manuale]
-2. [Passo 2 del test manuale]
-3. [Passo 3 del test manuale]
+1. [Step 1 of manual test]
+2. [Step 2 of manual test]
+3. [Step 3 of manual test]
 
-**Expected Results**: [Risultati attesi per ogni passo]
+**Expected Results**: [Expected results for each step]
 
 ### Automated Testing
-**Test Automation**: [Se applicabile, tipo di automazione]  
-**Test Scripts**: [Riferimenti a script automatizzati]  
-**CI/CD Integration**: [Come integrato nel pipeline]
+**Test Automation**: [If applicable, type of automation]
+**Test Scripts**: [References to automated scripts]
+**CI/CD Integration**: [How it is integrated into the pipeline]
 
 ### Validation Criteria
-**Success Criteria**: [Come determinare il successo]  
-**Failure Criteria**: [Cosa costituisce un fallimento]  
-**Acceptance Threshold**: [Soglie di accettazione]
+**Success Criteria**: [How to determine success]
+**Failure Criteria**: [What constitutes a failure]
+**Acceptance Threshold**: [Acceptance thresholds]
 
 ---
 
-## 🔗 Tracciabilità
+## 🔗 Traceability
 
 ### Upstream Traceability
-**Business Objectives**: [OBJ-XXX] - [Riferimento a obiettivi business]  
-**User Stories**: [US-XXX] - [Titolo user story]  
-**Functional Requirements**: [REQ-F-XXX] - [Titolo requisito]
+**Business Objectives**: [OBJ-XXX] - [Reference to business objectives]
+**User Stories**: [US-XXX] - [User story title]
+**Functional Requirements**: [REQ-F-XXX] - [Requirement title]
 
 ### Downstream Traceability
-**Test Cases**: [TC-XXX, TC-XXX] - [Riferimenti test cases]  
-**Defects**: [BUG-XXX] - [Se ci sono bug collegati]  
-**Implementation**: [Link a commit/branch se disponibile]
+**Test Cases**: [TC-XXX, TC-XXX] - [References to test cases]
+**Defects**: [BUG-XXX] - [If there are linked bugs]
+**Implementation**: [Link to commit/branch if available]
 
 ### Horizontal Traceability
-**Related AC**: [AC-XXX] - [Altri criteri collegati]  
-**Dependencies**: [AC-XXX] - [Criteri da cui dipende]  
-**Conflicts**: [Eventuali conflitti con altri criteri]
+**Related AC**: [AC-XXX] - [Other related criteria]
+**Dependencies**: [AC-XXX] - [Criteria it depends on]
+**Conflicts**: [Any conflicts with other criteria]
 
 ---
 
 ## ⚠️ Risks and Mitigation
 
 ### Testing Risks
-- **[Rischio 1]**: [Descrizione del rischio]  
-  *Mitigation*: [Piano di mitigazione]
+- **[Risk 1]**: [Description of the risk]
+  *Mitigation*: [Mitigation plan]
 
-- **[Rischio 2]**: [Altro rischio di testing]  
-  *Mitigation*: [Altro piano di mitigazione]
+- **[Risk 2]**: [Another testing risk]
+  *Mitigation*: [Another mitigation plan]
 
 ### Business Risks
-- **[Rischio Business]**: [Impatto sul business se criterio non soddisfatto]  
-  *Mitigation*: [Come mitigare il rischio business]
+- **[Business Risk]**: [Impact on the business if the criterion is not met]
+  *Mitigation*: [How to mitigate the business risk]
 
 ---
 
 ## 📅 Testing Schedule
 
 ### Timeline
-- **Test Preparation**: [Data inizio] - [Data fine]
-- **Test Execution**: [Data inizio] - [Data fine]
-- **Results Review**: [Data inizio] - [Data fine]
-- **Sign-off**: [Data target]
+- **Test Preparation**: [Start date] - [End date]
+- **Test Execution**: [Start date] - [End date]
+- **Results Review**: [Start date] - [End date]
+- **Sign-off**: [Target date]
 
 ### Milestones
-- **Environment Ready**: [Data]
-- **Test Data Ready**: [Data]
-- **First Pass Complete**: [Data]
-- **All Criteria Verified**: [Data]
+- **Environment Ready**: [Date]
+- **Test Data Ready**: [Date]
+- **First Pass Complete**: [Date]
+- **All Criteria Verified**: [Date]
 
 ---
 
 ## 📋 Test Results
 
 ### Execution Summary
-| Test Run | Date | Tester | Status | Notes |
-|----------|------|--------|--------|-------|
-| 1 | [Data] | [Nome] | [Pass/Fail] | [Note] |
-| 2 | [Data] | [Nome] | [Pass/Fail] | [Note] |
+| Test Run | Date   | Tester | Status    | Notes |
+|----------|--------|--------|-----------|-------|
+| 1        | [Date] | [Name] | [Pass/Fail] | [Notes] |
+| 2        | [Date] | [Name] | [Pass/Fail] | [Notes] |
 
 ### Criteria Status
-- [ ] **Scenario Principale**: [Status e note]
-- [ ] **Scenari Alternativi**: [Status e note]
-- [ ] **Scenari di Errore**: [Status e note]
-- [ ] **Edge Cases**: [Status e note]
+- [ ] **Main Scenario**: [Status and notes]
+- [ ] **Alternative Scenarios**: [Status and notes]
+- [ ] **Error Scenarios**: [Status and notes]
+- [ ] **Edge Cases**: [Status and notes]
 
 ### Issues Found
-| ID | Descrizione | Severità | Status | Assignee |
-|----|-------------|----------|--------|----------|
-| [Issue-1] | [Descrizione] | [High/Med/Low] | [Open/Closed] | [Nome] |
+| ID        | Description   | Severity     | Status      | Assignee |
+|-----------|---------------|--------------|-------------|----------|
+| [Issue-1] | [Description] | [High/Med/Low] | [Open/Closed] | [Name]   |
 
 ---
 
 ## ✅ Sign-off
 
 ### Review Checklist
-- [ ] Criteri chiari e testabili
-- [ ] Tracciabilità completa
-- [ ] Test data identificati
-- [ ] Environment requirements definiti
-- [ ] Rischi identificati e mitigati
-- [ ] Timeline realistica
+- [ ] Clear and testable criteria
+- [ ] Complete traceability
+- [ ] Test data identified
+- [ ] Environment requirements defined
+- [ ] Risks identified and mitigated
+- [ ] Realistic timeline
 
 ### Approvals
-| Ruolo | Nome | Data | Firma | Status |
-|-------|------|------|-------|--------|
-| QA Lead | [Nome] | ______ | ______ | [Approved/Pending] |
-| Product Owner | [Nome] | ______ | ______ | [Approved/Pending] |
-| Tech Lead | [Nome] | ______ | ______ | [Approved/Pending] |
-| Business Analyst | [Nome] | ______ | ______ | [Approved/Pending] |
+| Role             | Name   | Date   | Signature | Status           |
+|------------------|--------|--------|-----------|------------------|
+| QA Lead          | [Name] | ______ | ______    | [Approved/Pending] |
+| Product Owner    | [Name] | ______ | ______    | [Approved/Pending] |
+| Tech Lead        | [Name] | ______ | ______    | [Approved/Pending] |
+| Business Analyst | [Name] | ______ | ______    | [Approved/Pending] |
 
 ---
 
 ## 📝 Change History
 
-| Versione | Data | Autore | Cambiamenti | Impatto |
-|----------|------|--------|-------------|---------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | - |
-| 1.1 | [Data] | [Nome] | [Descrizione cambiamenti] | [Impatto su test] |
+| Version | Date   | Author | Changes               | Impact          |
+|---------|--------|--------|-----------------------|-----------------|
+| 1.0     | [Date] | [Name] | Initial version       | -               |
+| 1.1     | [Date] | [Name] | [Description of changes] | [Impact on test] |
 
 ---
 
 ## 📎 Attachments & References
 
 ### Supporting Documents
-- [Link a mockup/wireframe]
-- [Link a documentation aggiuntiva]
-- [Riferimenti a standard/guidelines]
+- [Link to mockup/wireframe]
+- [Link to additional documentation]
+- [References to standards/guidelines]
 
 ### Related Test Assets
-- [Link a test scripts]
-- [Link a test data files]
-- [Link a environment setup guides]
+- [Link to test scripts]
+- [Link to test data files]
+- [Link to environment setup guides]
 
 ---
 
-*Criterio di accettazione creato il: [Data]*  
-*Ultima verifica: [Data]*  
-*Prossima review: [Data]*  
-*Owner: [QA Engineer responsabile]*
+*Acceptance criterion created on: [Date]*
+*Last verified: [Date]*
+*Next review: [Date]*
+*Owner: [Responsible QA Engineer]*

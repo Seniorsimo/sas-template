@@ -1,118 +1,118 @@
-# Definizione del Progetto
+# Project Definition
 
-Questa sezione contiene la documentazione di base per definire chiaramente il progetto software. Tutti i file sono **template** da personalizzare per il tuo progetto specifico.
+This section contains the basic documentation to clearly define the software project. All files are **templates** to be customized for your specific project.
 
-## 📁 File Template Inclusi
+## 📁 Included Template Files
 
 ### 📄 project-description.md
-Template per la descrizione completa del progetto che include:
-- **Panoramica generale** del progetto
-- **Problema da risolvere** e contesto
-- **Soluzione proposta** e approccio
-- **Benefici attesi** e valore di business
+Template for a complete project description that includes:
+- **General overview** of the project
+- **Problem to be solved** and context
+- **Proposed solution** and approach
+- **Expected benefits** and business value
 
-### 👥 stakeholders.md  
-Template per l'identificazione e analisi degli stakeholder:
-- **Stakeholder primari** (Product Owner, Utenti finali)
-- **Stakeholder secondari** (Team di sviluppo, Operations, Sicurezza)
-- **Stakeholder esterni** (Fornitori, Partner, Enti regolatori)
-- **Matrice stakeholder** e piano di comunicazione
+### 👥 stakeholders.md
+Template for stakeholder identification and analysis:
+- **Primary stakeholders** (Product Owner, End Users)
+- **Secondary stakeholders** (Development Team, Operations, Security)
+- **External stakeholders** (Suppliers, Partners, Regulatory Bodies)
+- **Stakeholder matrix** and communication plan
 
 ### 🎯 objectives.md
-Template per la definizione degli obiettivi del progetto:
-- **Obiettivi di business** (primari e secondari)
-- **Obiettivi tecnici** (performance, scalabilità, sicurezza)
-- **Obiettivi di qualità** (usabilità, affidabilità, portabilità)
-- **Metriche di successo** e KPI
+Template for defining project objectives:
+- **Business objectives** (primary and secondary)
+- **Technical objectives** (performance, scalability, security)
+- **Quality objectives** (usability, reliability, portability)
+- **Success metrics** and KPIs
 
 ### 📏 project-scope.md
-Template per la definizione dello scope del progetto:
-- **Scope statement** e giustificazione
-- **In scope**: funzionalità, moduli, integrazioni incluse
-- **Out of scope**: cosa NON sarà incluso
-- **Vincoli** (tecnici, temporali, budget, organizzativi)
-- **Work Breakdown Structure** di alto livello
+Template for defining the project scope:
+- **Scope statement** and justification
+- **In scope**: features, modules, integrations included
+- **Out of scope**: what will NOT be included
+- **Constraints** (technical, time, budget, organizational)
+- **High-level Work Breakdown Structure**
 
 ### ⚠️ risk-register.md
-Template per il registro dei rischi del progetto:
-- **Risk Matrix** con scala probabilità/impatto
-- **Catalogazione rischi** per categoria e priorità
-- **Strategie di mitigazione** e piani di contingenza
-- **Risk management process** e escalation
+Template for the project risk register:
+- **Risk Matrix** with probability/impact scale
+- **Risk categorization** by category and priority
+- **Mitigation strategies** and contingency plans
+- **Risk management process** and escalation
 
-## 🚀 Come Utilizzare Questi Template
+## 🚀 How to Use These Templates
 
-### 1. Ordine di Compilazione Consigliato
+### 1. Recommended Completion Order
 ```
-1. project-description.md    → Definisci il COSA e il PERCHÉ
-2. stakeholders.md          → Identifica il CHI è coinvolto  
-3. objectives.md            → Stabilisci COSA vuoi ottenere
-4. project-scope.md         → Delimita COSA farai e NON farai
-5. risk-register.md         → Anticipa COSA potrebbe andare storto
+1. project-description.md    → Define the WHAT and WHY
+2. stakeholders.md          → Identify WHO is involved
+3. objectives.md            → Establish WHAT you want to achieve
+4. project-scope.md         → Delimit WHAT you will and will NOT do
+5. risk-register.md         → Anticipate WHAT could go wrong
 ```
 
-### 2. Personalizzazione
-Per ogni file template:
-- 🔍 **Cerca e sostituisci** tutti i placeholder `[Nome Progetto]`, `[Descrizione]`, etc.
-- ✏️ **Compila le sezioni** con informazioni specifiche del tuo progetto
-- 🗑️ **Rimuovi sezioni** non applicabili al tuo contesto
-- ➕ **Aggiungi sezioni** specifiche se necessario
+### 2. Customization
+For each template file:
+- 🔍 **Find and replace** all placeholders `[Project Name]`, `[Description]`, etc.
+- ✏️ **Fill in the sections** with information specific to your project
+- 🗑️ **Remove sections** not applicable to your context
+- ➕ **Add specific sections** if necessary
 
-### 3. Iterazione e Refinement
-- 🔄 **Revisiona regolarmente** questi documenti durante il progetto
-- 📝 **Aggiorna** quando cambiano requisiti o contesto
-- ✅ **Mantieni allineamento** tra tutti i documenti
-- 📊 **Traccia cambiamenti** e versioni
+### 3. Iteration and Refinement
+- 🔄 **Regularly review** these documents during the project
+- 📝 **Update** when requirements or context change
+- ✅ **Maintain alignment** between all documents
+- 📊 **Track changes** and versions
 
-## 📋 Checklist di Completamento
+## 📋 Completion Checklist
 
-Prima di procedere alla fase successiva (`02-requirements`), assicurati di aver completato:
+Before proceeding to the next phase (`02-requirements`), ensure you have completed:
 
-- [ ] **Project Description**: Descrizione chiara di problema, soluzione e benefici
-- [ ] **Stakeholders**: Identificazione completa di tutti gli stakeholder con ruoli e responsabilità  
-- [ ] **Objectives**: Obiettivi SMART definiti con metriche di successo
-- [ ] **Project Scope**: Confini chiari di cosa è incluso ed escluso
-- [ ] **Risk Register**: Identificazione dei rischi principali con piani di mitigazione
-- [ ] **Approval**: Tutti i documenti approvati dagli stakeholder chiave
+- [ ] **Project Description**: Clear description of the problem, solution, and benefits
+- [ ] **Stakeholders**: Complete identification of all stakeholders with roles and responsibilities
+- [ ] **Objectives**: SMART objectives defined with success metrics
+- [ ] **Project Scope**: Clear boundaries of what is included and excluded
+- [ ] **Risk Register**: Identification of main risks with mitigation plans
+- [ ] **Approval**: All documents approved by key stakeholders
 
-## 🔗 Collegamento con Altre Sezioni
+## 🔗 Connection with Other Sections
 
-### Input per le Fasi Successive:
-- **02-requirements**: Gli obiettivi definiti guideranno la raccolta dei requisiti
-- **03-behavioral-diagrams**: Gli stakeholder identificati diventeranno attori nei use case
-- **04-structural-diagrams**: Lo scope definisce i moduli da progettare
-- **05-database-design**: I requisiti di business guidano il design del database
+### Input for Subsequent Phases:
+- **02-requirements**: The defined objectives will guide the requirements gathering
+- **03-behavioral-diagrams**: The identified stakeholders will become actors in the use cases
+- **04-structural-diagrams**: The scope defines the modules to be designed
+- **05-database-design**: Business requirements guide the database design
 
-### Tracciabilità:
-- Ogni requisito deve essere tracciabile agli obiettivi
-- Ogni use case deve servire almeno uno stakeholder
-- Ogni componente deve essere nel scope definito
+### Traceability:
+- Each requirement must be traceable to the objectives
+- Each use case must serve at least one stakeholder
+- Each component must be within the defined scope
 
 ## 💡 Best Practices
 
 ### ✅ Do's
-- **Coinvolgi gli stakeholder** nella definizione e review
-- **Sii specifico** nelle descrizioni ed evita generalità
-- **Usa metriche quantificabili** dove possibile
-- **Mantieni documenti concisi** ma completi
-- **Versiona tutti i documenti** per tracciare cambiamenti
+- **Involve stakeholders** in the definition and review
+- **Be specific** in descriptions and avoid generalities
+- **Use quantifiable metrics** where possible
+- **Keep documents concise** but complete
+- **Version all documents** to track changes
 
-### ❌ Don'ts  
-- **Non fare assunzioni** senza documentarle
-- **Non definire scope troppo ampio** per la prima release
-- **Non trascurare i rischi** anche se sembrano improbabili
-- **Non procedere** senza approvazione formale
-- **Non dimenticare** di aggiornare i documenti durante il progetto
+### ❌ Don'ts
+- **Don't make assumptions** without documenting them
+- **Don't define a scope that is too broad** for the first release
+- **Don't neglect risks** even if they seem unlikely
+- **Don't proceed** without formal approval
+- **Don't forget** to update the documents during the project
 
-## 📞 Prossimi Passi
+## 📞 Next Steps
 
-Una volta completata la definizione del progetto:
+Once the project definition is complete:
 
-1. **Revisione formale** con tutti gli stakeholder chiave
-2. **Approvazione documentale** (sign-off formale)
-3. **Kick-off del progetto** con il team di sviluppo
-4. **Transizione** alla fase di raccolta requisiti (`02-requirements/`)
+1. **Formal review** with all key stakeholders
+2. **Document approval** (formal sign-off)
+3. **Project kick-off** with the development team
+4. **Transition** to the requirements gathering phase (`02-requirements/`)
 
 ---
 
-*Questi template forniscono una base solida per definire qualsiasi progetto software. Personalizzali in base alle specifiche esigenze del tuo progetto e organizzazione.*
+*These templates provide a solid foundation for defining any software project. Customize them according to the specific needs of your project and organization.*

@@ -2,9 +2,9 @@
 !define ENTITY entity
 !define WEAK_ENTITY entity
 
-title Sistema [Nome] - Modello Entità-Relazione
+title [System Name] - Entity-Relationship Model
 
-' Definizione delle entità
+' Definition of entities
 entity User {
   * user_id : INTEGER <<PK>>
   --
@@ -92,7 +92,7 @@ entity CartItem {
   * added_at : TIMESTAMP
 }
 
-' Relazioni
+' Relationships
 User ||--o{ Order : "places"
 User ||--|| Cart : "has"
 User ||--o{ Review : "writes"
@@ -106,31 +106,31 @@ Category ||--o{ Category : "parent of"
 Cart ||--o{ CartItem : "contains"
 Product ||--o{ CartItem : "added to"
 
-' Vincoli e note
+' Constraints and notes
 note top of User
-  Tabella principale degli utenti
-  - username e email devono essere unici
-  - password_hash: hash bcrypt
+  Main user table
+  - username and email must be unique
+  - password_hash: bcrypt hash
   - is_active: soft delete
 end note
 
 note right of Order
-  Stati dell'ordine:
+  Order states:
   PENDING → CONFIRMED → SHIPPED → DELIVERED
   
-  Può passare a CANCELLED
-  da qualsiasi stato
+  Can go to CANCELLED
+  from any state
 end note
 
 note bottom of Category
-  Struttura gerarchica:
-  - parent_category_id può essere NULL
-  - Evitare cicli nella gerarchia
+  Hierarchical structure:
+  - parent_category_id can be NULL
+  - Avoid cycles in the hierarchy
 end note
 
 note left of OrderItem
-  Snapshot del prezzo:
-  - unit_price: prezzo al momento dell'ordine
+  Price snapshot:
+  - unit_price: price at the time of order
   - total_price: quantity * unit_price
 end note
 

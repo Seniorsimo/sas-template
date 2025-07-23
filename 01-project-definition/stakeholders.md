@@ -1,229 +1,229 @@
-# Stakeholders del Progetto
+# Project Stakeholders
 
-## Informazioni Generali
-**Progetto**: [Nome del Progetto]
-**Versione**: [Versione]
-**Data**: [Data]
-**Responsabile**: [Nome Responsabile]
+## General Information
+**Project**: [Project Name]
+**Version**: [Version]
+**Date**: [Date]
+**Manager**: [Manager's Name]
 
 ---
 
-## 👥 Stakeholder Primari
+## 👥 Primary Stakeholders
 
 ### Product Owner / Sponsor
-**Nome**: [Nome]  
-**Ruolo**: [Titolo/Posizione]  
-**Organizzazione**: [Azienda/Dipartimento]  
-**Contatto**: [Email/Telefono]
+**Name**: [Name]
+**Role**: [Title/Position]
+**Organization**: [Company/Department]
+**Contact**: [Email/Phone]
 
-**Responsabilità**:
-- [Responsabilità 1]
-- [Responsabilità 2]
-- [Responsabilità 3]
+**Responsibilities**:
+- [Responsibility 1]
+- [Responsibility 2]
+- [Responsibility 3]
 
-**Aspettative**:
-- [Aspettativa 1]
-- [Aspettativa 2]
-- [Aspettativa 3]
+**Expectations**:
+- [Expectation 1]
+- [Expectation 2]
+- [Expectation 3]
 
-**Livello di Influenza**: Alto | Medio | Basso  
-**Livello di Interesse**: Alto | Medio | Basso
+**Influence Level**: High | Medium | Low
+**Interest Level**: High | Medium | Low
 
 ---
 
-### Utilizzatori Finali
+### End Users
 
-#### [Tipo Utente 1]
-**Descrizione**: [Descrizione del gruppo di utenti]  
-**Dimensione del Gruppo**: [Numero approssimativo]  
-**Rappresentante**: [Nome del rappresentante se presente]
+#### [User Type 1]
+**Description**: [Description of the user group]
+**Group Size**: [Approximate number]
+**Representative**: [Name of the representative if any]
 
-**Caratteristiche**:
-- **Competenze Tecniche**: [Livello: Alto/Medio/Basso]
-- **Frequenza d'Uso**: [Quotidiana/Settimanale/Mensile/Occasionale]
-- **Dispositivi Utilizzati**: [Desktop/Mobile/Tablet/etc.]
+**Characteristics**:
+- **Technical Skills**: [Level: High/Medium/Low]
+- **Frequency of Use**: [Daily/Weekly/Monthly/Occasional]
+- **Devices Used**: [Desktop/Mobile/Tablet/etc.]
 
-**Obiettivi e Necessità**:
-- [Obiettivo 1]
-- [Obiettivo 2]
-- [Obiettivo 3]
+**Goals and Needs**:
+- [Goal 1]
+- [Goal 2]
+- [Goal 3]
 
-**Pain Points Attuali**:
+**Current Pain Points**:
 - [Pain point 1]
 - [Pain point 2]
 - [Pain point 3]
 
-#### [Tipo Utente 2]
-**Descrizione**: [Descrizione del gruppo di utenti]  
-**Dimensione del Gruppo**: [Numero approssimativo]  
-**Rappresentante**: [Nome del rappresentante se presente]
+#### [User Type 2]
+**Description**: [Description of the user group]
+**Group Size**: [Approximate number]
+**Representative**: [Name of the representative if any]
 
-**Caratteristiche**:
-- **Competenze Tecniche**: [Livello: Alto/Medio/Basso]
-- **Frequenza d'Uso**: [Quotidiana/Settimanale/Mensile/Occasionale]
-- **Dispositivi Utilizzati**: [Desktop/Mobile/Tablet/etc.]
+**Characteristics**:
+- **Technical Skills**: [Level: High/Medium/Low]
+- **Frequency of Use**: [Daily/Weekly/Monthly/Occasional]
+- **Devices Used**: [Desktop/Mobile/Tablet/etc.]
 
-**Obiettivi e Necessità**:
-- [Obiettivo 1]
-- [Obiettivo 2]
-- [Obiettivo 3]
+**Goals and Needs**:
+- [Goal 1]
+- [Goal 2]
+- [Goal 3]
 
-**Pain Points Attuali**:
+**Current Pain Points**:
 - [Pain point 1]
 - [Pain point 2]
 - [Pain point 3]
 
 ---
 
-## 🏢 Stakeholder Secondari
+## 🏢 Secondary Stakeholders
 
-### Team di Sviluppo
-**Team Leader**: [Nome]  
-**Dimensione Team**: [Numero persone]  
-**Competenze Chiave**: [Lista competenze principali]
+### Development Team
+**Team Leader**: [Name]
+**Team Size**: [Number of people]
+**Key Skills**: [List of main skills]
 
-**Responsabilità**:
-- Implementazione delle funzionalità
-- Testing e quality assurance
-- Manutenzione del codice
-- Documentazione tecnica
+**Responsibilities**:
+- Implementation of features
+- Testing and quality assurance
+- Code maintenance
+- Technical documentation
 
-**Aspettative**:
-- Requisiti chiari e stabili
-- Accesso alle risorse necessarie
-- Timeline realistiche
-- Supporto per la risoluzione di blocchi tecnici
+**Expectations**:
+- Clear and stable requirements
+- Access to necessary resources
+- Realistic timelines
+- Support for resolving technical blocks
 
-### Team Operations/DevOps
-**Responsabile**: [Nome]  
-**Contatto**: [Email]
+### Operations/DevOps Team
+**Manager**: [Name]
+**Contact**: [Email]
 
-**Responsabilità**:
-- Gestione dell'infrastruttura
-- Deployment e release management
-- Monitoring e alerting
-- Backup e disaster recovery
+**Responsibilities**:
+- Infrastructure management
+- Deployment and release management
+- Monitoring and alerting
+- Backup and disaster recovery
 
-**Aspettative**:
-- Architettura scalabile e manutenibile
-- Documentazione operativa completa
-- Piani di deployment e rollback
-- SLA chiaramente definiti
+**Expectations**:
+- Scalable and maintainable architecture
+- Complete operational documentation
+- Deployment and rollback plans
+- Clearly defined SLAs
 
-### Team di Sicurezza
-**Responsabile**: [Nome]  
-**Contatto**: [Email]
+### Security Team
+**Manager**: [Name]
+**Contact**: [Email]
 
-**Responsabilità**:
-- Security review del codice
+**Responsibilities**:
+- Code security review
 - Penetration testing
-- Compliance e audit
-- Gestione delle vulnerabilità
+- Compliance and auditing
+- Vulnerability management
 
-**Aspettative**:
-- Implementazione di security best practices
-- Crittografia dei dati sensibili
-- Logging e auditing appropriati
-- Conformità agli standard aziendali
+**Expectations**:
+- Implementation of security best practices
+- Encryption of sensitive data
+- Appropriate logging and auditing
+- Compliance with company standards
 
 ---
 
-## 🔗 Stakeholder Esterni
+## 🔗 External Stakeholders
 
-### Fornitori/Vendor
-| Nome Fornitore | Servizio Fornito | Contatto | Criticità |
-|----------------|------------------|----------|-----------|
-| [Nome 1] | [Descrizione servizio] | [Email/Tel] | Alta/Media/Bassa |
-| [Nome 2] | [Descrizione servizio] | [Email/Tel] | Alta/Media/Bassa |
-| [Nome 3] | [Descrizione servizio] | [Email/Tel] | Alta/Media/Bassa |
+### Suppliers/Vendors
+| Supplier Name  | Service Provided       | Contact      | Criticality |
+|----------------|------------------------|--------------|-------------|
+| [Name 1]       | [Service description]  | [Email/Phone] | High/Medium/Low |
+| [Name 2]       | [Service description]  | [Email/Phone] | High/Medium/Low |
+| [Name 3]       | [Service description]  | [Email/Phone] | High/Medium/Low |
 
-### Partner di Integrazione
-**[Nome Partner 1]**
-- **Servizio**: [Descrizione integrazione]
-- **API/Protocollo**: [Tipo di integrazione]
+### Integration Partners
+**[Partner Name 1]**
+- **Service**: [Integration description]
+- **API/Protocol**: [Integration type]
 - **SLA**: [Service Level Agreement]
-- **Contatto Tecnico**: [Nome e contatto]
+- **Technical Contact**: [Name and contact]
 
-**[Nome Partner 2]**
-- **Servizio**: [Descrizione integrazione]
-- **API/Protocollo**: [Tipo di integrazione]
+**[Partner Name 2]**
+- **Service**: [Integration description]
+- **API/Protocol**: [Integration type]
 - **SLA**: [Service Level Agreement]
-- **Contatto Tecnico**: [Nome e contatto]
+- **Technical Contact**: [Name and contact]
 
-### Enti Regolatori (se applicabile)
-- **[Nome Ente 1]**: [Tipo di regolamentazione]
-- **[Nome Ente 2]**: [Tipo di regolamentazione]
-
----
-
-## 📊 Matrice Stakeholder
-
-| Stakeholder | Influenza | Interesse | Strategia di Gestione |
-|-------------|-----------|-----------|----------------------|
-| [Nome 1] | Alta | Alto | Gestire da vicino |
-| [Nome 2] | Alta | Basso | Tenere soddisfatto |
-| [Nome 3] | Bassa | Alto | Tenere informato |
-| [Nome 4] | Bassa | Basso | Monitorare |
-
-### Legenda Strategie:
-- **Gestire da vicino**: Coinvolgimento attivo e comunicazione frequente
-- **Tenere soddisfatto**: Comunicazione regolare sui progressi
-- **Tenere informato**: Aggiornamenti periodici
-- **Monitorare**: Comunicazione minima, monitoraggio cambiamenti
+### Regulatory Bodies (if applicable)
+- **[Body Name 1]**: [Type of regulation]
+- **[Body Name 2]**: [Type of regulation]
 
 ---
 
-## 📞 Piano di Comunicazione
+## 📊 Stakeholder Matrix
 
-### Frequenza delle Comunicazioni
+| Stakeholder | Influence | Interest  | Management Strategy |
+|-------------|-----------|-----------|-----------------------|
+| [Name 1]    | High      | High      | Manage closely        |
+| [Name 2]    | High      | Low       | Keep satisfied        |
+| [Name 3]    | Low       | High      | Keep informed         |
+| [Name 4]    | Low       | Low       | Monitor               |
 
-| Stakeholder | Frequenza | Canale | Contenuto |
-|-------------|-----------|---------|-----------|
-| Product Owner | Settimanale | Meeting + Email | Status, blocchi, decisioni |
-| Utilizzatori Finali | Bi-settimanale | Demo + Feedback | Progressi, feedback, validazione |
-| Team Sviluppo | Quotidiana | Stand-up + Chat | Task, blocchi, coordinamento |
-| Management | Mensile | Report + Presentation | KPI, budget, timeline |
+### Strategy Legend:
+- **Manage closely**: Active involvement and frequent communication
+- **Keep satisfied**: Regular communication on progress
+- **Keep informed**: Periodic updates
+- **Monitor**: Minimal communication, monitoring changes
+
+---
+
+## 📞 Communication Plan
+
+### Communication Frequency
+
+| Stakeholder      | Frequency      | Channel              | Content                     |
+|------------------|----------------|----------------------|-----------------------------|
+| Product Owner    | Weekly         | Meeting + Email      | Status, blocks, decisions   |
+| End Users        | Bi-weekly      | Demo + Feedback      | Progress, feedback, validation |
+| Development Team | Daily          | Stand-up + Chat      | Tasks, blocks, coordination |
+| Management       | Monthly        | Report + Presentation | KPIs, budget, timeline      |
 
 ### Escalation Path
-1. **Livello 1**: Team Lead / Project Manager
-2. **Livello 2**: Product Owner / Department Manager
-3. **Livello 3**: Executive Sponsor / C-Level
+1. **Level 1**: Team Lead / Project Manager
+2. **Level 2**: Product Owner / Department Manager
+3. **Level 3**: Executive Sponsor / C-Level
 
 ---
 
-## 🔄 Gestione dei Cambiamenti
+## 🔄 Change Management
 
-### Processo di Change Request
-1. **Identificazione**: Stakeholder identifica necessità di cambiamento
-2. **Documentazione**: Compilazione change request form
-3. **Valutazione**: Analisi impatto (tempo, costi, risorse)
-4. **Approvazione**: Decisione da parte del comitato appropriato
-5. **Implementazione**: Aggiornamento piani e comunicazione
+### Change Request Process
+1. **Identification**: Stakeholder identifies the need for a change
+2. **Documentation**: Completion of a change request form
+3. **Evaluation**: Impact analysis (time, costs, resources)
+4. **Approval**: Decision by the appropriate committee
+5. **Implementation**: Update plans and communication
 
-### Comitato di Controllo Cambiamenti
-- **Chair**: [Nome Product Owner]
-- **Membri**: [Lista membri del comitato]
-- **Frequenza Riunioni**: [Settimanale/Bi-settimanale]
-
----
-
-## 📝 Note e Considerazioni
-
-### Conflitti di Interesse Potenziali
-- [Descrizione conflitto 1 e strategia di mitigazione]
-- [Descrizione conflitto 2 e strategia di mitigazione]
-
-### Stakeholder Critici
-- **[Nome]**: [Motivo criticità e piano di gestione]
-- **[Nome]**: [Motivo criticità e piano di gestione]
-
-### Assunzioni sugli Stakeholder
-- [Assunzione 1 sulla disponibilità o commitment]
-- [Assunzione 2 sulle competenze o autorità]
-- [Assunzione 3 sui tempi di risposta o feedback]
+### Change Control Board
+- **Chair**: [Product Owner's Name]
+- **Members**: [List of committee members]
+- **Meeting Frequency**: [Weekly/Bi-weekly]
 
 ---
 
-*Ultima modifica: [Data]*
-*Versione documento: [Numero versione]*
-*Prossima revisione programmata: [Data]*
+## 📝 Notes and Considerations
+
+### Potential Conflicts of Interest
+- [Description of conflict 1 and mitigation strategy]
+- [Description of conflict 2 and mitigation strategy]
+
+### Critical Stakeholders
+- **[Name]**: [Reason for criticality and management plan]
+- **[Name]**: [Reason for criticality and management plan]
+
+### Stakeholder Assumptions
+- [Assumption 1 about availability or commitment]
+- [Assumption 2 about skills or authority]
+- [Assumption 3 about response times or feedback]
+
+---
+
+*Last modified: [Date]*
+*Document version: [Version number]*
+*Next scheduled review: [Date]*

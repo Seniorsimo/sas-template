@@ -1,235 +1,235 @@
 # Functional Acceptance Criteria
 
-Questa cartella contiene i criteri di accettazione per validare che le funzionalità implementate soddisfino i requisiti funzionali specifici.
+This folder contains the acceptance criteria to validate that the implemented features meet the specific functional requirements.
 
-## 📋 Scopo dei Functional Acceptance Criteria
+## 📋 Purpose of Functional Acceptance Criteria
 
-I **Functional Acceptance Criteria** servono per:
-- Verificare che le funzionalità si comportino come specificato
-- Validare business logic e workflow applicativi  
-- Testare input/output e elaborazioni dati
-- Confermare che i requisiti funzionali siano implementati correttamente
+**Functional Acceptance Criteria** are used to:
+- Verify that features behave as specified
+- Validate business logic and application workflows
+- Test input/output and data processing
+- Confirm that functional requirements are implemented correctly
 
-## 🎯 Quando Utilizzare questo Template
+## 🎯 When to Use this Template
 
-### Scenario Ideali
-- **Feature Completion**: Quando una nuova funzionalità è implementata
-- **Business Logic Testing**: Per validare regole business complesse
-- **Data Processing**: Per testare elaborazioni e trasformazioni dati
-- **Workflow Validation**: Per verificare flussi operativi
-- **Integration Points**: Per testare punti di integrazione funzionale
+### Ideal Scenarios
+- **Feature Completion**: When a new feature is implemented
+- **Business Logic Testing**: To validate complex business rules
+- **Data Processing**: To test data processing and transformations
+- **Workflow Validation**: To verify operational flows
+- **Integration Points**: To test functional integration points
 
-### Tipologie di Funzionalità Coperte
+### Types of Functionality Covered
 - **CRUD Operations**: Create, Read, Update, Delete
-- **Business Workflows**: Processi business multi-step
-- **Data Validation**: Controlli input e business rules
-- **Calculations**: Logiche di calcolo e elaborazione
-- **State Management**: Gestione stati e transizioni
+- **Business Workflows**: Multi-step business processes
+- **Data Validation**: Input checks and business rules
+- **Calculations**: Calculation and processing logic
+- **State Management**: State and transition management
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Copia e Rinomina
+### 1. Copy and Rename
 ```bash
-# Copia il template
+# Copy the template
 cp AC-F-XXX-template.md AC-F-001-user-login.md
 
-# Esempio naming convention
+# Example naming convention
 AC-F-{AREA}-{NUMBER}-{description}.md
 ```
 
-### 2. Compila le Sezioni Principali
-- **Informazioni Generali**: ID, categoria, priorità
-- **Descrizione Funzionalità**: Cosa deve fare il sistema
-- **Scenari di Test**: Given/When/Then scenarios
-- **Criteri Dettagliati**: Checklist specifica
-- **Tracciabilità**: Collegamenti a requisiti e user stories
+### 2. Fill in the Main Sections
+- **General Information**: ID, category, priority
+- **Feature Description**: What the system should do
+- **Test Scenarios**: Given/When/Then scenarios
+- **Detailed Criteria**: Specific checklist
+- **Traceability**: Links to requirements and user stories
 
-### 3. Focus sui Comportamenti
-Concentrati su **COSA** il sistema deve fare, non **COME**:
-- ✅ "Il sistema deve validare il formato email"
-- ❌ "Il sistema deve usare regex per email"
+### 3. Focus on Behaviors
+Focus on **WHAT** the system should do, not **HOW**:
+- ✅ "The system must validate the email format"
+- ❌ "The system must use regex for email"
 
-## 🧪 Struttura Test Scenarios
+## 🧪 Test Scenarios Structure
 
-### Pattern Given/When/Then
+### Given/When/Then Pattern
 ```gherkin
-**Given** [stato iniziale/precondizioni]
-**When** [azione eseguita]
-**Then** [risultato atteso]
-**And** [condizioni aggiuntive]
+**Given** [initial state/preconditions]
+**When** [action performed]
+**Then** [expected result]
+**And** [additional conditions]
 ```
 
-### Tipi di Scenari da Includere
+### Types of Scenarios to Include
 
-#### Happy Path (Scenario Principale)
-- Flusso normale senza errori
-- Dati validi e condizioni ottimali
-- Comportamento atteso standard
+#### Happy Path (Main Scenario)
+- Normal flow without errors
+- Valid data and optimal conditions
+- Standard expected behavior
 
-#### Alternative Flows (Scenari Alternativi)
-- Percorsi alternativi validi
-- Scelte utente diverse
-- Configurazioni alternative
+#### Alternative Flows
+- Valid alternative paths
+- Different user choices
+- Alternative configurations
 
-#### Error Scenarios (Gestione Errori)
-- Input invalidi
-- Condizioni di errore
-- Gestione eccezioni
+#### Error Scenarios
+- Invalid inputs
+- Error conditions
+- Exception handling
 
-#### Edge Cases (Casi Limite)
-- Valori limite (min/max)
-- Condizioni estreme
-- Scenari rari ma possibili
+#### Edge Cases
+- Boundary values (min/max)
+- Extreme conditions
+- Rare but possible scenarios
 
-## ✅ Checklist Qualità AC Funzionali
+## ✅ Quality Checklist for Functional AC
 
-### Completezza
-- [ ] Tutti i requisiti funzionali coperti
-- [ ] Scenari happy path definiti
-- [ ] Scenari alternativi identificati
-- [ ] Gestione errori specificata
-- [ ] Edge cases considerati
+### Completeness
+- [ ] All functional requirements covered
+- [ ] Happy path scenarios defined
+- [ ] Alternative scenarios identified
+- [ ] Error handling specified
+- [ ] Edge cases considered
 
-### Chiarezza
-- [ ] Linguaggio business comprensibile
-- [ ] Criteri non ambigui
-- [ ] Esempi concreti forniti
-- [ ] Terminologia consistente
-- [ ] Assunzioni esplicite
+### Clarity
+- [ ] Understandable business language
+- [ ] Unambiguous criteria
+- [ ] Concrete examples provided
+- [ ] Consistent terminology
+- [ ] Explicit assumptions
 
-### Testabilità
-- [ ] Criteri misurabili
-- [ ] Dati test identificati
-- [ ] Ambiente test specificato
-- [ ] Procedure test definite
-- [ ] Risultati attesi chiari
+### Testability
+- [ ] Measurable criteria
+- [ ] Test data identified
+- [ ] Test environment specified
+- [ ] Test procedures defined
+- [ ] Clear expected results
 
-### Tracciabilità
-- [ ] Collegati a requisiti funzionali
-- [ ] Derivati da user stories
-- [ ] Allineati con obiettivi business
-- [ ] Impatto su architettura identificato
+### Traceability
+- [ ] Linked to functional requirements
+- [ ] Derived from user stories
+- [ ] Aligned with business objectives
+- [ ] Impact on architecture identified
 
-## 🔗 Collegamenti con Altri Artefatti
+## 🔗 Connections with Other Artifacts
 
-### Input per AC Funzionali
-- **Requirements (REQ-F-XXX)**: Requisiti funzionali da validare
-- **User Stories (US-XXX)**: Storie utente implementate
-- **Use Cases (UC-XXX)**: Casi d'uso del sistema
-- **Business Rules**: Regole business da applicare
+### Input for Functional AC
+- **Requirements (REQ-F-XXX)**: Functional requirements to be validated
+- **User Stories (US-XXX)**: Implemented user stories
+- **Use Cases (UC-XXX)**: System use cases
+- **Business Rules**: Business rules to be applied
 
-### Output degli AC Funzionali
-- **Test Cases**: Test case dettagliati per QA
-- **Test Scripts**: Script automatici di test
-- **Test Data**: Dati necessari per esecuzione
-- **Defect Reports**: Report bug se criteri non soddisfatti
+### Output of Functional AC
+- **Test Cases**: Detailed test cases for QA
+- **Test Scripts**: Automated test scripts
+- **Test Data**: Data needed for execution
+- **Defect Reports**: Bug reports if criteria are not met
 
-## 📊 Metriche di Successo
+## 📊 Success Metrics
 
 ### Coverage Metrics
-- **Requirement Coverage**: % requisiti con AC definiti
-- **Scenario Coverage**: % scenari business coperti
-- **Branch Coverage**: % branch logici testati
+- **Requirement Coverage**: % of requirements with defined AC
+- **Scenario Coverage**: % of business scenarios covered
+- **Branch Coverage**: % of logical branches tested
 
 ### Quality Metrics
-- **Pass Rate**: % AC che passano al primo tentativo
-- **Defect Detection**: % difetti trovati tramite AC
-- **Rework Rate**: % AC che richiedono modifiche
+- **Pass Rate**: % of AC that pass on the first attempt
+- **Defect Detection**: % of defects found through AC
+- **Rework Rate**: % of AC that require changes
 
 ### Efficiency Metrics
-- **Test Execution Time**: Tempo medio esecuzione AC
-- **Automation Rate**: % AC automatizzati
-- **Maintenance Effort**: Effort manutenzione AC
+- **Test Execution Time**: Average execution time of AC
+- **Automation Rate**: % of automated AC
+- **Maintenance Effort**: Effort to maintain AC
 
 ## 💡 Best Practices
 
-### Durante la Definizione
-1. **Coinvolgi il Product Owner** per validazione business
-2. **Usa esempi concreti** invece di descrizioni astratte
-3. **Mantieni atomicità** - un AC per un comportamento
-4. **Evita dettagli implementativi** - focus sul comportamento
-5. **Considera l'utente finale** - valore per il business
+### During Definition
+1. **Involve the Product Owner** for business validation
+2. **Use concrete examples** instead of abstract descriptions
+3. **Maintain atomicity** - one AC for one behavior
+4. **Avoid implementation details** - focus on behavior
+5. **Consider the end-user** - value for the business
 
-### Durante l'Implementazione
-1. **Aggiorna AC** se i requisiti cambiano
-2. **Valida frequentemente** con stakeholder
-3. **Documenta deviazioni** e rationale
-4. **Mantieni tracciabilità** durante sviluppo
-5. **Prepara evidenze** per acceptance testing
+### During Implementation
+1. **Update AC** if requirements change
+2. **Validate frequently** with stakeholders
+3. **Document deviations** and rationale
+4. **Maintain traceability** during development
+5. **Prepare evidence** for acceptance testing
 
-### Durante i Test
-1. **Esegui AC nell'ordine** di priorità business
-2. **Documenta tutti i risultati** accuratamente
-3. **Coinvolgi business users** nella validazione
-4. **Gestisci fallimenti** con processo strutturato
-5. **Ottieni sign-off formale** prima del rilascio
+### During Testing
+1. **Execute AC in order** of business priority
+2. **Document all results** accurately
+3. **Involve business users** in validation
+4. **Manage failures** with a structured process
+5. **Obtain formal sign-off** before release
 
-## 🔄 Processo di Lifecycle
+## 🔄 Lifecycle Process
 
 ### 1. Creation Phase
-- Analisi requisiti funzionali
-- Workshop con stakeholder
-- Definizione scenari test
-- Review e approvazione
+- Analysis of functional requirements
+- Workshop with stakeholders
+- Definition of test scenarios
+- Review and approval
 
 ### 2. Implementation Phase
-- Guida per sviluppatori
-- Validazione continua
-- Update per cambiamenti
-- Preparazione test data
+- Guidance for developers
+- Continuous validation
+- Updates for changes
+- Preparation of test data
 
 ### 3. Testing Phase
-- Esecuzione test manuali
-- Automazione dove possibile
-- Reporting risultati
+- Execution of manual tests
+- Automation where possible
+- Reporting of results
 - Issue resolution
 
 ### 4. Acceptance Phase
 - Business user validation
-- Sign-off stakeholder
+- Stakeholder sign-off
 - Documentation update
 - Lessons learned
 
 ## 📋 Template Sections Overview
 
 ### Mandatory Sections
-- **Informazioni Generali**: Metadati e identificazione
-- **Descrizione Funzionalità**: Scopo e contesto
-- **Scenari di Test**: Given/When/Then specifici
-- **Criteri Dettagliati**: Checklist verificabile
-- **Tracciabilità**: Collegamenti requisiti
+- **General Information**: Metadata and identification
+- **Feature Description**: Purpose and context
+- **Test Scenarios**: Specific Given/When/Then
+- **Detailed Criteria**: Verifiable checklist
+- **Traceability**: Links to requirements
 
 ### Optional Sections
-- **Test Data Requirements**: Dati specifici necessari
-- **Environment Setup**: Configurazione ambiente
-- **Automation Notes**: Note per automazione
-- **Performance Considerations**: Aspetti performance
+- **Test Data Requirements**: Specific data needed
+- **Environment Setup**: Environment configuration
+- **Automation Notes**: Notes for automation
+- **Performance Considerations**: Performance aspects
 
 ## ⚠️ Common Pitfalls
 
-### ❌ Errori da Evitare
-- **Troppo generico**: "Il sistema deve funzionare"
-- **Dettagli implementativi**: "Deve usare Spring Framework"
-- **Non testabile**: "Deve essere user-friendly"
-- **Ambiguo**: "Deve essere veloce"
-- **Senza tracciabilità**: Non collegato a requisiti
+### ❌ Errors to Avoid
+- **Too generic**: "The system must work"
+- **Implementation details**: "Must use Spring Framework"
+- **Not testable**: "Must be user-friendly"
+- **Ambiguous**: "Must be fast"
+- **Without traceability**: Not linked to requirements
 
 ### ✅ Best Practices
-- **Specifico e misurabile**: "Login deve completarsi in <2 secondi"
-- **Linguaggio business**: Comprensibile agli stakeholder
-- **Comportamento osservabile**: Verificabile dall'esterno
-- **Completo**: Copre tutti gli scenari rilevanti
-- **Mantenibile**: Facile da aggiornare
+- **Specific and measurable**: "Login must complete in <2 seconds"
+- **Business language**: Understandable to stakeholders
+- **Observable behavior**: Verifiable from the outside
+- **Complete**: Covers all relevant scenarios
+- **Maintainable**: Easy to update
 
-## 📞 Supporto e Contatti
+## 📞 Support and Contacts
 
-Per domande sui Functional Acceptance Criteria:
+For questions about Functional Acceptance Criteria:
 
-- **Business Analyst**: [Responsabile definizione AC]
-- **Product Owner**: [Approvazione business value]
-- **QA Lead**: [Strategia testing e automazione]
-- **Technical Lead**: [Feasibility e implementazione]
+- **Business Analyst**: [Responsible for AC definition]
+- **Product Owner**: [Business value approval]
+- **QA Lead**: [Testing and automation strategy]
+- **Technical Lead**: [Feasibility and implementation]
 
 ---
 
-*I Functional Acceptance Criteria sono il ponte tra requisiti business e implementazione tecnica. Definiscili con precisione per garantire che il software faccia esattamente quello che il business si aspetta.*
+*Functional Acceptance Criteria are the bridge between business requirements and technical implementation. Define them with precision to ensure that the software does exactly what the business expects.*

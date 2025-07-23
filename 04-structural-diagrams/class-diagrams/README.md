@@ -1,35 +1,35 @@
 # Class Diagrams
 
-I diagrammi delle classi mostrano la struttura statica del sistema, incluse classi, attributi, metodi e relazioni.
+Class diagrams show the static structure of the system, including classes, attributes, methods, and relationships.
 
-## 🎯 Scopo dei Class Diagrams
+## 🎯 Purpose of Class Diagrams
 
-I **Class Diagrams** servono per:
-- Modellare la struttura statica del sistema
-- Definire classi, attributi e metodi
-- Mostrare relazioni tra classi
-- Documentare l'architettura object-oriented
+**Class Diagrams** are used to:
+- Model the static structure of the system
+- Define classes, attributes, and methods
+- Show relationships between classes
+- Document the object-oriented architecture
 
-## 📋 Elementi del Diagramma
+## 📋 Diagram Elements
 
-### Classi
+### Classes
 
-#### Sintassi Base
+#### Basic Syntax
 ```plantuml
-class "Nome Classe" {
-  +attributo_pubblico : tipo
-  -attributo_privato : tipo
-  #attributo_protetto : tipo
-  ~attributo_package : tipo
+class "Class Name" {
+  +public_attribute : type
+  -private_attribute : type
+  #protected_attribute : type
+  ~package_attribute : type
   --
-  +metodo_pubblico() : tipo_ritorno
-  -metodo_privato() : void
-  {abstract} +metodo_astratto()
-  {static} +metodo_statico()
+  +public_method() : return_type
+  -private_method() : void
+  {abstract} +abstract_method()
+  {static} +static_method()
 }
 ```
 
-#### Stereotipi
+#### Stereotypes
 ```plantuml
 class "<<interface>>" as Interface
 class "<<abstract>>" as AbstractClass
@@ -38,7 +38,7 @@ class "<<service>>" as Service
 class "<<repository>>" as Repository
 ```
 
-### Visibilità
+### Visibility
 ```plantuml
 class Example {
   + public_attribute : String
@@ -53,53 +53,53 @@ class Example {
 }
 ```
 
-### Relazioni
+### Relationships
 
-#### Association (Associazione)
+#### Association
 ```plantuml
 ClassA -- ClassB
-ClassA --> ClassB : "navigazione"
-ClassA -- ClassB : "ruolo"
+ClassA --> ClassB : "navigation"
+ClassA -- ClassB : "role"
 ```
 
-#### Aggregation (Aggregazione)
+#### Aggregation
 ```plantuml
 ClassA o-- ClassB
-ClassA "1" o-- "0..*" ClassB : "contiene"
+ClassA "1" o-- "0..*" ClassB : "contains"
 ```
 
-#### Composition (Composizione)
+#### Composition
 ```plantuml
 ClassA *-- ClassB
-ClassA "1" *-- "1..*" ClassB : "è composto da"
+ClassA "1" *-- "1..*" ClassB : "is composed of"
 ```
 
-#### Inheritance (Ereditarietà)
+#### Inheritance
 ```plantuml
 SubClass --|> SuperClass
 ConcreteClass --|> AbstractClass
 ```
 
-#### Implementation (Implementazione)
+#### Implementation
 ```plantuml
 ConcreteClass ..|> Interface
 ```
 
-#### Dependency (Dipendenza)
+#### Dependency
 ```plantuml
-ClassA ..> ClassB : "usa"
+ClassA ..> ClassB : "uses"
 ```
 
-### Molteplicità
+### Multiplicity
 ```plantuml
 ClassA "1" -- "0..*" ClassB
 ClassA "0..1" -- "1..n" ClassB
 ClassA "1" -- "exactly 3" ClassB
 ```
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica le Classi del Dominio
+### 1. Identify Domain Classes
 ```plantuml
 @startuml
 !theme blueprint
@@ -127,14 +127,14 @@ class Order {
 @enduml
 ```
 
-### 2. Definisci le Relazioni
+### 2. Define Relationships
 ```plantuml
 Customer "1" -- "0..*" Order : "places"
 Order "1" *-- "1..*" OrderItem : "contains"
 OrderItem "0..*" -- "1" Product : "references"
 ```
 
-### 3. Aggiungi Dettagli e Constraint
+### 3. Add Details and Constraints
 ```plantuml
 class Order {
   -orderId : Long {id}
@@ -147,10 +147,10 @@ class Order {
   +{query} findByCustomer(customerId : Long) : List<Order>
 }
 
-note right of Order : Vincoli:\n- totalAmount >= 0\n- orderDate <= today
+note right of Order : Constraints:\n- totalAmount >= 0\n- orderDate <= today
 ```
 
-## 🏗️ Pattern Architetturali
+## 🏗️ Architectural Patterns
 
 ### Layered Architecture
 ```plantuml
@@ -163,7 +163,7 @@ package "Presentation Layer" #E3F2FD {
     +createUser() : ResponseEntity
     +getUser() : ResponseEntity
   }
-  
+
   class OrderController {
     +createOrder() : ResponseEntity
     +getOrderHistory() : ResponseEntity
@@ -175,7 +175,7 @@ package "Business Layer" #E8F5E8 {
     +registerUser() : User
     +authenticateUser() : boolean
   }
-  
+
   class OrderService {
     +processOrder() : Order
     +calculateTotal() : BigDecimal
@@ -187,7 +187,7 @@ package "Data Access Layer" #FFF3E0 {
     +save() : User
     +findById() : Optional<User>
   }
-  
+
   interface OrderRepository {
     +save() : Order
     +findByUserId() : List<Order>
@@ -200,7 +200,7 @@ package "Domain Model" #FCE4EC {
     -username : String
     -email : String
   }
-  
+
   class Order {
     -orderId : Long
     -userId : Long
@@ -228,7 +228,7 @@ package "View" #E3F2FD {
     +displayLoginForm() : void
     +showError() : void
   }
-  
+
   class DashboardView {
     +displayUserData() : void
     +updateView() : void
@@ -243,7 +243,7 @@ package "Controller" #E8F5E8 {
     +handleLogin() : void
     +validateCredentials() : boolean
   }
-  
+
   class DashboardController {
     -model : UserModel
     -view : DashboardView
@@ -262,7 +262,7 @@ package "Model" #FFF3E0 {
     +getUserData() : User
     +notifyObservers() : void
   }
-  
+
   class User {
     -userId : Long
     -username : String
@@ -379,7 +379,7 @@ class PayPalFactory {
 }
 
 PaymentProcessor <|-- CreditCardProcessor
-PaymentProcessor <|-- PayPalProcessor  
+PaymentProcessor <|-- PayPalProcessor
 PaymentProcessor <|-- BankTransferProcessor
 PaymentProcessorFactory <|-- CreditCardFactory
 PaymentProcessorFactory <|-- PayPalFactory
@@ -390,9 +390,9 @@ PayPalFactory ..> PayPalProcessor : "creates"
 
 ## 📊 Best Practices
 
-### ✅ Design delle Classi
+### ✅ Class Design
 ```plantuml
-' ✅ Classe ben strutturata
+' ✅ Well-structured class
 class Customer {
   -customerId : Long
   -firstName : String
@@ -404,7 +404,7 @@ class Customer {
   +isActive() : boolean
 }
 
-' ❌ Classe con troppi metodi/attributi
+' ❌ Class with too many methods/attributes
 class GodClass {
   -id, name, email, phone, address...
   -orders, payments, preferences...
@@ -415,7 +415,7 @@ class GodClass {
 
 ### ✅ Naming Conventions
 ```plantuml
-' ✅ Nomi chiari e descrittivi
+' ✅ Clear and descriptive names
 class ShoppingCart {
   -items : List<CartItem>
   +addItem(item : CartItem) : void
@@ -423,7 +423,7 @@ class ShoppingCart {
   +calculateTotal() : BigDecimal
 }
 
-' ❌ Nomi ambigui
+' ❌ Ambiguous names
 class Data {
   -info : List<Object>
   +process() : void
@@ -431,9 +431,9 @@ class Data {
 }
 ```
 
-### ✅ Livelli di Astrazione
+### ✅ Abstraction Levels
 ```plantuml
-' ✅ Interfacce ben definite
+' ✅ Well-defined interfaces
 interface PaymentGateway {
   +processPayment(amount : BigDecimal) : PaymentResult
   +refundPayment(transactionId : String) : RefundResult
@@ -442,14 +442,14 @@ interface PaymentGateway {
 class StripeGateway implements PaymentGateway
 class PayPalGateway implements PaymentGateway
 
-' ✅ Composizione over inheritance
+' ✅ Composition over inheritance
 class Order {
   -payment : PaymentGateway
   -shipping : ShippingService
 }
 ```
 
-### ❌ Anti-Patterns da Evitare
+### ❌ Anti-Patterns to Avoid
 ```plantuml
 ' ❌ God Class
 class EverythingManager {
@@ -468,13 +468,13 @@ class User {
 ' ❌ Tight Coupling
 class OrderService {
   -mysqlDatabase : MySQLOrderRepository
-  ' Dipendenza da implementazione concreta
+  ' Dependency on concrete implementation
 }
 ```
 
-## 🎨 Styling e Layout
+## 🎨 Styling and Layout
 
-### Colori per Package
+### Package Colors
 ```plantuml
 !define CONTROLLER_COLOR #E3F2FD
 !define SERVICE_COLOR #E8F5E8
@@ -487,7 +487,7 @@ package "Repositories" REPOSITORY_COLOR
 package "Models" MODEL_COLOR
 ```
 
-### Stereotipi Custom
+### Custom Stereotypes
 ```plantuml
 class "<<Controller>>" as UserController #lightblue
 class "<<Service>>" as UserService #lightgreen
@@ -495,26 +495,26 @@ class "<<Repository>>" as UserRepository #lightyellow
 class "<<Entity>>" as User #lightpink
 ```
 
-### Layout e Organizzazione
+### Layout and Organization
 ```plantuml
-' Disposizione orizzontale
+' Horizontal layout
 left to right direction
 
-' Nascondere attributi/metodi per overview
+' Hide attributes/methods for overview
 class User {
   {field} -userId : Long
   ..
   {method} +authenticate() : boolean
 }
 
-' Solo nomi classi per high-level view
+' Only class names for high-level view
 hide members
 class A
 class B
 class C
 ```
 
-## 🧪 Esempi per Dominio
+## 🧪 Examples by Domain
 
 ### E-commerce System
 ```plantuml
@@ -876,26 +876,26 @@ Appointment -- AppointmentStatus
 @enduml
 ```
 
-## 🔍 Tracciabilità e Design
+## 🔍 Traceability and Design
 
-### Mapping da Requirements
+### Mapping from Requirements
 ```yaml
 Class: Customer
 Requirements:
-  - REQ-F-001: Sistema deve gestire clienti
-  - REQ-F-002: Tracciare storico ordini
+  - REQ-F-001: System must manage customers
+  - REQ-F-002: Track order history
 User Stories:
-  - US-001: Come cliente, voglio registrarmi
-  - US-002: Come cliente, voglio vedere i miei ordini
+  - US-001: As a customer, I want to register
+  - US-002: As a customer, I want to see my orders
 ```
 
 ### Design Patterns Integration
 ```plantuml
-note top of OrderService : Implementa Service Pattern\nPer centralizzare business logic
+note top of OrderService : Implements Service Pattern\nTo centralize business logic
 
-note right of PaymentGateway : Strategy Pattern\nPer multiple payment methods
+note right of PaymentGateway : Strategy Pattern\nFor multiple payment methods
 
-note left of UserRepository : Repository Pattern\nPer astrazione data access
+note left of UserRepository : Repository Pattern\nFor data access abstraction
 ```
 
 ### Code Generation
@@ -906,24 +906,24 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String email;
-    
+
     public String getFullName() {
         return firstName + " " + lastName;
     }
-    
+
     // ... other methods
 }
 ```
 
-## 🧪 Validation e Testing
+## 🧪 Validation and Testing
 
 ### Class Design Validation
 ```yaml
-Single Responsibility: ✓ Ogni classe ha una responsabilità
-Open/Closed Principle: ✓ Estendibile senza modifiche
-Liskov Substitution: ✓ Sottoclassi sostituibili
-Interface Segregation: ✓ Interfacce specifiche
-Dependency Inversion: ✓ Dipendenze da astrazioni
+Single Responsibility: ✓ Each class has one responsibility
+Open/Closed Principle: ✓ Extensible without modification
+Liskov Substitution: ✓ Subclasses are substitutable
+Interface Segregation: ✓ Specific interfaces
+Dependency Inversion: ✓ Dependencies on abstractions
 ```
 
 ### Unit Testing Structure
@@ -944,7 +944,7 @@ CustomerTest ..> Customer : "tests"
 OrderServiceTest ..> OrderService : "tests"
 ```
 
-## 🔧 Tools e Integration
+## 🔧 Tools and Integration
 
 ### Reverse Engineering
 ```bash
@@ -973,7 +973,7 @@ class User {
 note right of User : JPA Entity\n@Table(name="users")\n@Column annotations
 ```
 
-## 📚 Resources e Standards
+## 📚 Resources and Standards
 
 ### UML Class Diagram Standards
 - **UML 2.5 Specification**: Class diagram notation
@@ -981,20 +981,20 @@ note right of User : JPA Entity\n@Table(name="users")\n@Column annotations
 - **Design Patterns**: GoF patterns implementation
 - **Domain-Driven Design**: Aggregate, entity, value object
 
-### Template Correlati
-- `../behavioral-diagrams/`: Behavior degli oggetti
+### Related Templates
+- `../behavioral-diagrams/`: Behavior of objects
 - `../../02-requirements/`: Requirements mapping
 - `../../05-database-design/`: Data model correlation
 
-## 📞 Supporto
+## 📞 Support
 
-Per domande sui Class Diagrams:
+For questions about Class Diagrams:
 
-- **Software Architect**: [Responsabile design architettura]
-- **Lead Developer**: [Responsabile implementazione OOP]
-- **Domain Expert**: [Responsabile domain modeling]
-- **Database Designer**: [Responsabile data model]
+- **Software Architect**: [Responsible for architecture design]
+- **Lead Developer**: [Responsible for OOP implementation]
+- **Domain Expert**: [Responsible for domain modeling]
+- **Database Designer**: [Responsible for data model]
 
 ---
 
-*I Class Diagrams sono il cuore del design object-oriented. Usali per tradurre il dominio business in strutture software robuste e maintainable.*
+*Class Diagrams are the heart of object-oriented design. Use them to translate the business domain into robust and maintainable software structures.*

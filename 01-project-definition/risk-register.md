@@ -1,276 +1,276 @@
-# Risk Register - Registro dei Rischi
+# Risk Register
 
-## Informazioni Generali
-**Progetto**: [Nome del Progetto]
-**Versione**: [Versione]
-**Data**: [Data]
-**Responsabile**: [Nome Risk Manager]
-
----
-
-## 📊 Risk Matrix - Matrice dei Rischi
-
-### Scala di Probabilità
-- **1 - Molto Bassa**: 0-10% di probabilità
-- **2 - Bassa**: 11-30% di probabilità  
-- **3 - Media**: 31-50% di probabilità
-- **4 - Alta**: 51-80% di probabilità
-- **5 - Molto Alta**: 81-100% di probabilità
-
-### Scala di Impatto
-- **1 - Molto Basso**: Impatto minimo su costi, tempi, qualità
-- **2 - Basso**: Lieve impatto, facilmente gestibile
-- **3 - Medio**: Impatto moderato, richiede attenzione
-- **4 - Alto**: Impatto significativo su obiettivi progetto
-- **5 - Molto Alto**: Impatto critico, può compromettere il progetto
-
-### Livello di Rischio (Probabilità × Impatto)
-- **1-5**: Rischio Basso (Verde)
-- **6-12**: Rischio Medio (Giallo)
-- **15-25**: Rischio Alto (Rosso)
+## General Information
+**Project**: [Project Name]
+**Version**: [Version]
+**Date**: [Date]
+**Manager**: [Risk Manager's Name]
 
 ---
 
-## 🔴 Rischi Alti (15-25)
+## 📊 Risk Matrix
 
-### RISK-001: [Nome Rischio Alto 1]
-**Categoria**: Tecnico | Business | Organizzativo | Esterno  
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+### Probability Scale
+- **1 - Very Low**: 0-10% probability
+- **2 - Low**: 11-30% probability
+- **3 - Medium**: 31-50% probability
+- **4 - High**: 51-80% probability
+- **5 - Very High**: 81-100% probability
 
-**Descrizione**: [Descrizione dettagliata del rischio]
+### Impact Scale
+- **1 - Very Low**: Minimal impact on costs, time, quality
+- **2 - Low**: Slight impact, easily manageable
+- **3 - Medium**: Moderate impact, requires attention
+- **4 - High**: Significant impact on project objectives
+- **5 - Very High**: Critical impact, may compromise the project
 
-**Cause Potenziali**:
-- [Causa 1]
-- [Causa 2]
-- [Causa 3]
-
-**Conseguenze**:
-- [Conseguenza 1]
-- [Conseguenza 2]
-- [Conseguenza 3]
-
-**Strategie di Mitigazione**:
-- **Prevenzione**: [Azioni per ridurre la probabilità]
-- **Mitigazione**: [Azioni per ridurre l'impatto]
-- **Contingency Plan**: [Piano di emergenza se il rischio si materializza]
-
-**Owner**: [Nome responsabile]  
-**Target Date**: [Data entro cui implementare mitigazioni]  
-**Status**: Aperto | In Progress | Chiuso
+### Risk Level (Probability × Impact)
+- **1-5**: Low Risk (Green)
+- **6-12**: Medium Risk (Yellow)
+- **15-25**: High Risk (Red)
 
 ---
 
-### RISK-002: [Nome Rischio Alto 2]
-**Categoria**: Tecnico | Business | Organizzativo | Esterno  
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+## 🔴 High Risks (15-25)
 
-**Descrizione**: [Descrizione dettagliata del rischio]
+### RISK-001: [High Risk Name 1]
+**Category**: Technical | Business | Organizational | External
+**Probability**: [1-5] **Impact**: [1-5] **Score**: [Product]
 
-**Cause Potenziali**:
-- [Causa 1]
-- [Causa 2]
-- [Causa 3]
+**Description**: [Detailed description of the risk]
 
-**Conseguenze**:
-- [Conseguenza 1]
-- [Conseguenza 2]
-- [Conseguenza 3]
+**Potential Causes**:
+- [Cause 1]
+- [Cause 2]
+- [Cause 3]
 
-**Strategie di Mitigazione**:
-- **Prevenzione**: [Azioni per ridurre la probabilità]
-- **Mitigazione**: [Azioni per ridurre l'impatto]
-- **Contingency Plan**: [Piano di emergenza se il rischio si materializza]
+**Consequences**:
+- [Consequence 1]
+- [Consequence 2]
+- [Consequence 3]
 
-**Owner**: [Nome responsabile]  
-**Target Date**: [Data entro cui implementare mitigazioni]  
-**Status**: Aperto | In Progress | Chiuso
+**Mitigation Strategies**:
+- **Prevention**: [Actions to reduce probability]
+- **Mitigation**: [Actions to reduce impact]
+- **Contingency Plan**: [Emergency plan if the risk materializes]
 
----
-
-## 🟡 Rischi Medi (6-12)
-
-### RISK-003: [Nome Rischio Medio 1]
-**Categoria**: Tecnico | Business | Organizzativo | Esterno  
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
-
-**Descrizione**: [Descrizione dettagliata del rischio]
-
-**Strategie di Mitigazione**:
-- [Azione di mitigazione 1]
-- [Azione di mitigazione 2]
-
-**Owner**: [Nome responsabile]  
-**Status**: Aperto | In Progress | Chiuso
+**Owner**: [Responsible person's name]
+**Target Date**: [Date by which mitigations should be implemented]
+**Status**: Open | In Progress | Closed
 
 ---
 
-### RISK-004: [Nome Rischio Medio 2]
-**Categoria**: Tecnico | Business | Organizzativo | Esterno  
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+### RISK-002: [High Risk Name 2]
+**Category**: Technical | Business | Organizational | External
+**Probability**: [1-5] **Impact**: [1-5] **Score**: [Product]
 
-**Descrizione**: [Descrizione dettagliata del rischio]
+**Description**: [Detailed description of the risk]
 
-**Strategie di Mitigazione**:
-- [Azione di mitigazione 1]
-- [Azione di mitigazione 2]
+**Potential Causes**:
+- [Cause 1]
+- [Cause 2]
+- [Cause 3]
 
-**Owner**: [Nome responsabile]  
-**Status**: Aperto | In Progress | Chiuso
+**Consequences**:
+- [Consequence 1]
+- [Consequence 2]
+- [Consequence 3]
 
----
+**Mitigation Strategies**:
+- **Prevention**: [Actions to reduce probability]
+- **Mitigation**: [Actions to reduce impact]
+- **Contingency Plan**: [Emergency plan if the risk materializes]
 
-## 🟢 Rischi Bassi (1-5)
-
-### RISK-005: [Nome Rischio Basso 1]
-**Categoria**: Tecnico | Business | Organizzativo | Esterno  
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
-
-**Descrizione**: [Descrizione sintetica del rischio]
-
-**Mitigazione**: [Azione semplice di mitigazione]
-
-**Owner**: [Nome responsabile]
+**Owner**: [Responsible person's name]
+**Target Date**: [Date by which mitigations should be implemented]
+**Status**: Open | In Progress | Closed
 
 ---
 
-## 📋 Risk Categories - Template per Nuovi Rischi
+## 🟡 Medium Risks (6-12)
 
-### Rischi Tecnici
-- Problemi di performance o scalabilità
-- Complessità tecniche non previste
-- Integrazione con sistemi legacy
-- Obsolescenza tecnologica
-- Sicurezza e vulnerabilità
+### RISK-003: [Medium Risk Name 1]
+**Category**: Technical | Business | Organizational | External
+**Probability**: [1-5] **Impact**: [1-5] **Score**: [Product]
 
-### Rischi di Business
-- Cambiamenti nei requisiti
-- Perdita di stakeholder chiave
-- Cambiamenti normativi
-- Concorrenza
-- Budget insufficiente
+**Description**: [Detailed description of the risk]
 
-### Rischi Organizzativi
-- Disponibilità delle risorse
-- Competenze del team
-- Turnover del personale
-- Conflitti organizzativi
-- Cambiamenti nelle priorità
+**Mitigation Strategies**:
+- [Mitigation action 1]
+- [Mitigation action 2]
 
-### Rischi Esterni
-- Problemi con fornitori
-- Dipendenze da terze parti
-- Eventi naturali o forza maggiore
-- Cambiamenti del mercato
-- Questioni legali
+**Owner**: [Responsible person's name]
+**Status**: Open | In Progress | Closed
+
+---
+
+### RISK-004: [Medium Risk Name 2]
+**Category**: Technical | Business | Organizational | External
+**Probability**: [1-5] **Impact**: [1-5] **Score**: [Product]
+
+**Description**: [Detailed description of the risk]
+
+**Mitigation Strategies**:
+- [Mitigation action 1]
+- [Mitigation action 2]
+
+**Owner**: [Responsible person's name]
+**Status**: Open | In Progress | Closed
+
+---
+
+## 🟢 Low Risks (1-5)
+
+### RISK-005: [Low Risk Name 1]
+**Category**: Technical | Business | Organizational | External
+**Probability**: [1-5] **Impact**: [1-5] **Score**: [Product]
+
+**Description**: [Brief description of the risk]
+
+**Mitigation**: [Simple mitigation action]
+
+**Owner**: [Responsible person's name]
+
+---
+
+## 📋 Risk Categories - Template for New Risks
+
+### Technical Risks
+- Performance or scalability issues
+- Unforeseen technical complexities
+- Integration with legacy systems
+- Technological obsolescence
+- Security and vulnerabilities
+
+### Business Risks
+- Changes in requirements
+- Loss of key stakeholders
+- Regulatory changes
+- Competition
+- Insufficient budget
+
+### Organizational Risks
+- Availability of resources
+- Team skills
+- Staff turnover
+- Organizational conflicts
+- Changes in priorities
+
+### External Risks
+- Problems with suppliers
+- Dependencies on third parties
+- Natural events or force majeure
+- Market changes
+- Legal issues
 
 ---
 
 ## 📊 Risk Summary Dashboard
 
-### Rischi per Categoria
-| Categoria | Alto | Medio | Basso | Totale |
-|-----------|------|-------|-------|--------|
-| Tecnico | [#] | [#] | [#] | [#] |
-| Business | [#] | [#] | [#] | [#] |
-| Organizzativo | [#] | [#] | [#] | [#] |
-| Esterno | [#] | [#] | [#] | [#] |
-| **Totale** | **[#]** | **[#]** | **[#]** | **[#]** |
+### Risks by Category
+| Category       | High | Medium | Low | Total |
+|----------------|------|--------|-----|-------|
+| Technical      | [#]  | [#]    | [#] | [#]   |
+| Business       | [#]  | [#]    | [#] | [#]   |
+| Organizational | [#]  | [#]    | [#] | [#]   |
+| External       | [#]  | [#]    | [#] | [#]   |
+| **Total**      | **[#]** | **[#]** | **[#]** | **[#]** |
 
-### Rischi per Status
-- **Aperti**: [#] rischi
-- **In Progress**: [#] rischi
-- **Chiusi**: [#] rischi
-- **Materializzati**: [#] rischi
+### Risks by Status
+- **Open**: [#] risks
+- **In Progress**: [#] risks
+- **Closed**: [#] risks
+- **Materialized**: [#] risks
 
-### Top 5 Rischi (per score)
-1. [Nome rischio] - Score: [#]
-2. [Nome rischio] - Score: [#]
-3. [Nome rischio] - Score: [#]
-4. [Nome rischio] - Score: [#]
-5. [Nome rischio] - Score: [#]
+### Top 5 Risks (by score)
+1. [Risk name] - Score: [#]
+2. [Risk name] - Score: [#]
+3. [Risk name] - Score: [#]
+4. [Risk name] - Score: [#]
+5. [Risk name] - Score: [#]
 
 ---
 
 ## 🔄 Risk Management Process
 
 ### 1. Risk Identification
-- **Chi**: Tutti i membri del team
-- **Quando**: Continuo, con review formali ogni [frequenza]
-- **Come**: Brainstorming, lessons learned, expertise
+- **Who**: All team members
+- **When**: Continuous, with formal reviews every [frequency]
+- **How**: Brainstorming, lessons learned, expertise
 
 ### 2. Risk Assessment
-- **Chi**: Risk Owner + Project Manager
-- **Quando**: Entro [X giorni] dall'identificazione
-- **Come**: Utilizzo della matrice probabilità/impatto
+- **Who**: Risk Owner + Project Manager
+- **When**: Within [X days] of identification
+- **How**: Using the probability/impact matrix
 
 ### 3. Risk Response Planning
-- **Chi**: Risk Owner
-- **Quando**: Entro [X giorni] dall'assessment
-- **Strategie**: Avoid, Mitigate, Transfer, Accept
+- **Who**: Risk Owner
+- **When**: Within [X days] of assessment
+- **Strategies**: Avoid, Mitigate, Transfer, Accept
 
 ### 4. Risk Monitoring
-- **Chi**: Project Manager + Risk Owners
-- **Quando**: Review settimanale dei rischi alti, mensile per medi/bassi
-- **Reporting**: Dashboard aggiornato e comunicato agli stakeholder
+- **Who**: Project Manager + Risk Owners
+- **When**: Weekly review of high risks, monthly for medium/low
+- **Reporting**: Updated dashboard communicated to stakeholders
 
 ---
 
-## 📞 Escalation e Communication
+## 📞 Escalation and Communication
 
 ### Escalation Path
-1. **Livello 1**: Project Manager
-2. **Livello 2**: Program Manager / Sponsor
-3. **Livello 3**: Executive Committee
+1. **Level 1**: Project Manager
+2. **Level 2**: Program Manager / Sponsor
+3. **Level 3**: Executive Committee
 
-### Criteri di Escalation
-- **Immediata**: Rischi con score ≥ 20
-- **Settimanale**: Rischi con score 15-19
-- **Mensile**: Tutti gli altri rischi attivi
+### Escalation Criteria
+- **Immediate**: Risks with score ≥ 20
+- **Weekly**: Risks with score 15-19
+- **Monthly**: All other active risks
 
 ### Communication Plan
-| Audience | Frequency | Content |
-|----------|-----------|---------|
-| Team | Settimanale | Tutti i rischi attivi |
-| Stakeholder | Bi-settimanale | Rischi medi e alti |
-| Sponsor | Mensile | Risk dashboard e trend |
-| Executive | Quarterly | Risk portfolio e lessons learned |
+| Audience    | Frequency   | Content                      |
+|-------------|-------------|------------------------------|
+| Team        | Weekly      | All active risks             |
+| Stakeholder | Bi-weekly   | Medium and high risks        |
+| Sponsor     | Monthly     | Risk dashboard and trends    |
+| Executive   | Quarterly   | Risk portfolio and lessons learned |
 
 ---
 
-## 📝 Actions Items
+## 📝 Action Items
 
-### Azioni Immediate (Next 7 days)
-- [ ] [Azione 1] - Owner: [Nome] - Due: [Data]
-- [ ] [Azione 2] - Owner: [Nome] - Due: [Data]
-- [ ] [Azione 3] - Owner: [Nome] - Due: [Data]
+### Immediate Actions (Next 7 days)
+- [ ] [Action 1] - Owner: [Name] - Due: [Date]
+- [ ] [Action 2] - Owner: [Name] - Due: [Date]
+- [ ] [Action 3] - Owner: [Name] - Due: [Date]
 
-### Azioni Pianificate (Next 30 days)
-- [ ] [Azione 1] - Owner: [Nome] - Due: [Data]
-- [ ] [Azione 2] - Owner: [Nome] - Due: [Data]
-- [ ] [Azione 3] - Owner: [Nome] - Due: [Data]
+### Planned Actions (Next 30 days)
+- [ ] [Action 1] - Owner: [Name] - Due: [Date]
+- [ ] [Action 2] - Owner: [Name] - Due: [Date]
+- [ ] [Action 3] - Owner: [Name] - Due: [Date]
 
 ---
 
 ## 📋 Risk Review Meeting Minutes
 
-### [Data Meeting]
-**Partecipanti**: [Lista partecipanti]
+### [Meeting Date]
+**Attendees**: [List of attendees]
 
-**Rischi Discussi**:
-- [RISK-XXX]: [Decisioni prese]
-- [RISK-XXX]: [Decisioni prese]
+**Risks Discussed**:
+- [RISK-XXX]: [Decisions made]
+- [RISK-XXX]: [Decisions made]
 
-**Nuovi Rischi Identificati**:
-- [Nuovo rischio 1]
-- [Nuovo rischio 2]
+**New Risks Identified**:
+- [New risk 1]
+- [New risk 2]
 
 **Action Items**:
-- [Azione] - Owner: [Nome] - Due: [Data]
+- [Action] - Owner: [Name] - Due: [Date]
 
-**Next Meeting**: [Data prossimo meeting]
+**Next Meeting**: [Date of next meeting]
 
 ---
 
-*Ultima modifica: [Data]*
-*Prossima review: [Data]*
-*Document Owner: [Nome Risk Manager]*
+*Last modified: [Date]*
+*Next review: [Date]*
+*Document Owner: [Risk Manager's Name]*

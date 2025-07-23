@@ -1,65 +1,65 @@
-# REQ-API-XXX-[AREA]: [Titolo API Requirement]
+# REQ-API-XXX-[AREA]: [API Requirement Title]
 
-## 📋 Informazioni Generali
-**ID**: REQ-API-XXX-[AREA]  
-**Categoria**: API Requirement  
-**API Type**: REST | GraphQL | SOAP | WebSocket | gRPC  
-**Scope**: Public | Private | Partner | Admin  
-**Area Funzionale**: [Authentication | User Management | Business Logic | etc.]  
-**Priorità**: Must Have | Should Have | Could Have | Won't Have  
-**Status**: Draft | Review | Approved | In Development | Implemented | Testing | Closed  
+## 📋 General Information
+**ID**: REQ-API-XXX-[AREA]
+**Category**: API Requirement
+**API Type**: REST | GraphQL | SOAP | WebSocket | gRPC
+**Scope**: Public | Private | Partner | Admin
+**Functional Area**: [Authentication | User Management | Business Logic | etc.]
+**Priority**: Must Have | Should Have | Could Have | Won't Have
+**Status**: Draft | Review | Approved | In Development | Implemented | Testing | Closed
 **Assigned to**: [API Developer/Backend Engineer]
 
 ---
 
-## 📝 Descrizione API
+## 📝 API Description
 
-### Sommario
-[Breve descrizione di cosa fa questa API - scopo e funzionalità principale]
+### Summary
+[Brief description of what this API does - its purpose and main functionality]
 
 ### Business Context
-[Perché questa API è necessaria dal punto di vista business]
+[Why this API is necessary from a business perspective]
 
 ### Target Consumers
-**Primary Consumers**: [Chi userà principalmente questa API]  
-**Secondary Consumers**: [Utenti secondari dell'API]  
-**Use Cases**: [Casi d'uso principali per cui verrà utilizzata]
+**Primary Consumers**: [Who will primarily use this API]
+**Secondary Consumers**: [Secondary users of the API]
+**Use Cases**: [Main use cases for which it will be used]
 
 ### API Category
-**Category**: [CRUD | Search | Authentication | Notification | Integration | etc.]  
-**Complexity**: [Simple | Medium | Complex]  
+**Category**: [CRUD | Search | Authentication | Notification | Integration | etc.]
+**Complexity**: [Simple | Medium | Complex]
 **Expected Usage**: [Low | Medium | High volume]
 
 ---
 
-## 🛠️ Specifiche Tecniche
+## 🛠️ Technical Specifications
 
 ### Endpoint Details
-**Base URL**: `https://api.[domain].com/v{version}`  
-**Version**: [Versione API - es. v1, v2]  
-**Protocol**: [HTTP/HTTPS | WebSocket | gRPC]  
+**Base URL**: `https://api.[domain].com/v{version}`
+**Version**: [API version - e.g., v1, v2]
+**Protocol**: [HTTP/HTTPS | WebSocket | gRPC]
 **Content-Type**: [application/json | application/xml | multipart/form-data]
 
 ### Authentication
-**Method**: [API Key | OAuth 2.0 | JWT | Basic Auth | mTLS]  
-**Scope**: [Scopes/permessi richiesti]  
-**Token Location**: [Header | Query Parameter | Body]  
+**Method**: [API Key | OAuth 2.0 | JWT | Basic Auth | mTLS]
+**Scope**: [Required scopes/permissions]
+**Token Location**: [Header | Query Parameter | Body]
 **Token Format**: [Bearer {token} | API-Key: {key}]
 
 ### Rate Limiting
-**Limit**: [Numero richieste per periodo]  
-**Window**: [Per minuto | ora | giorno]  
-**Identifier**: [Per IP | Per User | Per API Key]  
+**Limit**: [Number of requests per period]
+**Window**: [Per minute | hour | day]
+**Identifier**: [Per IP | Per User | Per API Key]
 **Exceeded Behavior**: [Reject | Queue | Throttle]
 
 ---
 
 ## 🔗 Endpoint Specifications
 
-### Endpoint 1: [Nome Operazione]
-**Method**: `GET | POST | PUT | PATCH | DELETE`  
-**Path**: `/api/v{version}/{resource}`  
-**Description**: [Cosa fa questo endpoint]
+### Endpoint 1: [Operation Name]
+**Method**: `GET | POST | PUT | PATCH | DELETE`
+**Path**: `/api/v{version}/{resource}`
+**Description**: [What this endpoint does]
 
 #### Request Specification
 **Headers**:
@@ -70,19 +70,19 @@ X-API-Version: 1.0
 ```
 
 **Path Parameters**:
-| Parameter | Type | Required | Description | Example |
-|-----------|------|----------|-------------|---------|
-| [param1] | [string/int] | [Yes/No] | [Descrizione] | [Esempio] |
+| Parameter | Type         | Required | Description | Example |
+|-----------|--------------|----------|-------------|---------|
+| [param1]  | [string/int] | [Yes/No] | [Description] | [Example] |
 
 **Query Parameters**:
-| Parameter | Type | Required | Description | Default | Example |
-|-----------|------|----------|-------------|---------|---------|
-| [param1] | [string/int] | [Yes/No] | [Descrizione] | [Default] | [Esempio] |
+| Parameter | Type         | Required | Description | Default   | Example |
+|-----------|--------------|----------|-------------|-----------|---------|
+| [param1]  | [string/int] | [Yes/No] | [Description] | [Default] | [Example] |
 
-**Request Body** (se applicabile):
+**Request Body** (if applicable):
 ```json
 {
-  "field1": "string - Descrizione campo",
+  "field1": "string - Field description",
   "field2": 123,
   "field3": {
     "nestedField": "value"
@@ -182,12 +182,12 @@ X-API-Version: 1.0
 }
 ```
 
-### Endpoint 2: [Nome Altra Operazione]
-**Method**: `GET | POST | PUT | PATCH | DELETE`  
-**Path**: `/api/v{version}/{resource}/{id}`  
-**Description**: [Cosa fa questo endpoint]
+### Endpoint 2: [Another Operation Name]
+**Method**: `GET | POST | PUT | PATCH | DELETE`
+**Path**: `/api/v{version}/{resource}/{id}`
+**Description**: [What this endpoint does]
 
-[Ripetere la struttura per ogni endpoint...]
+[Repeat the structure for each endpoint...]
 
 ---
 
@@ -202,14 +202,14 @@ X-API-Version: 1.0
     "required": true,
     "maxLength": 255,
     "pattern": "^[a-zA-Z0-9]+$",
-    "description": "Descrizione campo"
+    "description": "Field description"
   },
   "field2": {
     "type": "integer",
     "required": false,
     "minimum": 1,
     "maximum": 100,
-    "description": "Descrizione campo numerico"
+    "description": "Numeric field description"
   },
   "field3": {
     "type": "array",
@@ -217,7 +217,7 @@ X-API-Version: 1.0
       "type": "string"
     },
     "maxItems": 10,
-    "description": "Array di stringhe"
+    "description": "Array of strings"
   }
 }
 ```
@@ -229,20 +229,20 @@ X-API-Version: 1.0
   "id": {
     "type": "string",
     "format": "uuid",
-    "description": "Identificatore univoco"
+    "description": "Unique identifier"
   },
   "name": {
     "type": "string",
-    "description": "Nome risorsa"
+    "description": "Resource name"
   },
   "status": {
     "type": "string",
     "enum": ["active", "inactive", "pending"],
-    "description": "Stato risorsa"
+    "description": "Resource status"
   },
   "metadata": {
     "type": "object",
-    "description": "Metadati aggiuntivi"
+    "description": "Additional metadata"
   }
 }
 ```
@@ -258,19 +258,19 @@ X-API-Version: 1.0
       "properties": {
         "code": {
           "type": "string",
-          "description": "Codice errore"
+          "description": "Error code"
         },
         "message": {
           "type": "string",
-          "description": "Messaggio errore human-readable"
+          "description": "Human-readable error message"
         },
         "field": {
           "type": "string",
-          "description": "Campo che ha causato l'errore (opzionale)"
+          "description": "Field that caused the error (optional)"
         },
         "details": {
           "type": "string",
-          "description": "Dettagli aggiuntivi errore"
+          "description": "Additional error details"
         }
       }
     }
@@ -280,69 +280,69 @@ X-API-Version: 1.0
 
 ---
 
-## ✅ Criteri di Accettazione
+## ✅ Acceptance Criteria
 
 ### Scenario 1: Successful API Call - Happy Path
-**Given** l'API è operativa e configurata correttamente  
-**And** il client ha credenziali valide  
-**And** i dati della richiesta sono nel formato corretto  
-**When** viene inviata una richiesta valida all'endpoint  
-**Then** l'API deve restituire una risposta con status code 200/201  
-**And** la risposta deve essere nel formato JSON specificato  
-**And** la risposta deve essere ricevuta entro [X] millisecondi  
-**And** la risposta deve includere tutti i campi obbligatori
+**Given** the API is operational and correctly configured
+**And** the client has valid credentials
+**And** the request data is in the correct format
+**When** a valid request is sent to the endpoint
+**Then** the API must return a response with status code 200/201
+**And** the response must be in the specified JSON format
+**And** the response must be received within [X] milliseconds
+**And** the response must include all mandatory fields
 
 ### Scenario 2: Invalid Authentication
-**Given** l'API è operativa  
-**And** il client invia credenziali invalide o mancanti  
-**When** viene inviata una richiesta  
-**Then** l'API deve restituire status code 401  
-**And** deve includere un messaggio di errore chiaro  
-**And** non deve esporre informazioni sensibili  
-**And** l'errore deve essere loggato appropriatamente
+**Given** the API is operational
+**And** the client sends invalid or missing credentials
+**When** a request is sent
+**Then** the API must return status code 401
+**And** it must include a clear error message
+**And** it must not expose sensitive information
+**And** the error must be logged appropriately
 
 ### Scenario 3: Input Validation Error
-**Given** l'API è operativa e il client è autenticato  
-**And** i dati della richiesta non rispettano lo schema  
-**When** viene inviata la richiesta con dati invalidi  
-**Then** l'API deve restituire status code 400  
-**And** deve specificare chiaramente quali campi sono invalidi  
-**And** deve fornire messaggi di errore actionable  
-**And** non deve processare parzialmente la richiesta
+**Given** the API is operational and the client is authenticated
+**And** the request data does not comply with the schema
+**When** the request with invalid data is sent
+**Then** the API must return status code 400
+**And** it must clearly specify which fields are invalid
+**And** it must provide actionable error messages
+**And** it must not partially process the request
 
 ### Scenario 4: Rate Limiting
-**Given** l'API è operativa e il client è autenticato  
-**And** il client ha già raggiunto il limite di rate  
-**When** viene inviata una richiesta aggiuntiva  
-**Then** l'API deve restituire status code 429  
-**And** deve includere l'header `Retry-After`  
-**And** deve fornire informazioni sui limiti attuali  
-**And** deve mantenere il counter accuratamente
+**Given** the API is operational and the client is authenticated
+**And** the client has already reached the rate limit
+**When** an additional request is sent
+**Then** the API must return status code 429
+**And** it must include the `Retry-After` header
+**And** it must provide information about the current limits
+**And** it must accurately maintain the counter
 
 ### Scenario 5: Resource Not Found
-**Given** l'API è operativa e il client è autenticato  
-**And** viene richiesta una risorsa che non esiste  
-**When** viene inviata la richiesta  
-**Then** l'API deve restituire status code 404  
-**And** deve fornire un messaggio di errore appropriato  
-**And** non deve esporre informazioni su risorse esistenti  
-**And** l'accesso deve essere loggato
+**Given** the API is operational and the client is authenticated
+**And** a resource that does not exist is requested
+**When** the request is sent
+**Then** the API must return status code 404
+**And** it must provide an appropriate error message
+**And** it must not expose information about existing resources
+**And** the access must be logged
 
 ---
 
-## 🔒 Requisiti di Sicurezza
+## 🔒 Security Requirements
 
 ### Input Validation
-**Validation Rules**: [Regole validazione specifiche]  
-**Sanitization**: [Regole sanitization input]  
-**Size Limits**: [Limiti dimensione payload]  
-**Type Checking**: [Controlli tipo dati]
+**Validation Rules**: [Specific validation rules]
+**Sanitization**: [Input sanitization rules]
+**Size Limits**: [Payload size limits]
+**Type Checking**: [Data type checks]
 
 ### Output Security
-**Data Filtering**: [Filtri dati in output]  
-**Sensitive Data**: [Gestione dati sensibili]  
-**Information Disclosure**: [Prevenzione information disclosure]  
-**CORS Policy**: [Politiche CORS se applicabile]
+**Data Filtering**: [Output data filters]
+**Sensitive Data**: [Handling of sensitive data]
+**Information Disclosure**: [Prevention of information disclosure]
+**CORS Policy**: [CORS policies if applicable]
 
 ### Security Headers
 ```
@@ -354,256 +354,256 @@ Content-Security-Policy: default-src 'self'
 ```
 
 ### Audit Requirements
-**Access Logging**: [Requisiti logging accessi]  
-**Operation Logging**: [Logging operazioni critiche]  
-**Error Logging**: [Logging errori]  
-**Retention Policy**: [Politiche retention log]
+**Access Logging**: [Access logging requirements]
+**Operation Logging**: [Logging of critical operations]
+**Error Logging**: [Error logging]
+**Retention Policy**: [Log retention policies]
 
 ---
 
-## ⚡ Requisiti di Performance
+## ⚡ Performance Requirements
 
 ### Response Time
-**Target Response Time**: [Target in millisecondi]  
-**95th Percentile**: [Tempo 95° percentile]  
-**Maximum Acceptable**: [Tempo massimo accettabile]  
-**Measurement Method**: [Come misurare performance]
+**Target Response Time**: [Target in milliseconds]
+**95th Percentile**: [95th percentile time]
+**Maximum Acceptable**: [Maximum acceptable time]
+**Measurement Method**: [How to measure performance]
 
 ### Throughput
-**Target TPS**: [Transazioni per secondo]  
-**Peak Load**: [Carico di picco supportato]  
-**Concurrent Users**: [Utenti simultanei]  
-**Batch Processing**: [Se supporta batch, specifiche]
+**Target TPS**: [Transactions per second]
+**Peak Load**: [Supported peak load]
+**Concurrent Users**: [Simultaneous users]
+**Batch Processing**: [If batch is supported, specifications]
 
 ### Scalability
-**Horizontal Scaling**: [Capacità scaling orizzontale]  
-**Load Balancing**: [Requisiti load balancing]  
-**Caching Strategy**: [Strategia caching]  
-**Database Performance**: [Ottimizzazioni database]
+**Horizontal Scaling**: [Horizontal scaling capability]
+**Load Balancing**: [Load balancing requirements]
+**Caching Strategy**: [Caching strategy]
+**Database Performance**: [Database optimizations]
 
 ### Monitoring
-**Key Metrics**: [Metriche chiave da monitorare]  
-**SLA Monitoring**: [Monitoring SLA]  
-**Alerting**: [Configurazione alert]  
-**Dashboard**: [Requisiti dashboard]
+**Key Metrics**: [Key metrics to monitor]
+**SLA Monitoring**: [SLA monitoring]
+**Alerting**: [Alert configuration]
+**Dashboard**: [Dashboard requirements]
 
 ---
 
-## 📚 Documentazione API
+## 📚 API Documentation
 
 ### OpenAPI Specification
-**Swagger Version**: [Versione Swagger/OpenAPI]  
-**Documentation URL**: [URL documentazione]  
-**Interactive Testing**: [Possibilità test interattivo]  
-**Code Generation**: [Generazione client/SDK]
+**Swagger Version**: [Swagger/OpenAPI version]
+**Documentation URL**: [Documentation URL]
+**Interactive Testing**: [Possibility of interactive testing]
+**Code Generation**: [Client/SDK generation]
 
 ### Documentation Requirements
-**Endpoint Documentation**: [Documentazione endpoint completa]  
-**Examples**: [Esempi per ogni operazione]  
-**Error Scenarios**: [Documentazione scenari errore]  
-**SDKs**: [SDK disponibili in vari linguaggi]
+**Endpoint Documentation**: [Complete endpoint documentation]
+**Examples**: [Examples for each operation]
+**Error Scenarios**: [Documentation of error scenarios]
+**SDKs**: [Available SDKs in various languages]
 
 ### Versioning Strategy
-**Versioning Scheme**: [Schema versioning - semantic, date-based, etc.]  
-**Backward Compatibility**: [Politiche backward compatibility]  
-**Deprecation Process**: [Processo deprecation]  
-**Migration Guide**: [Guide migrazione tra versioni]
+**Versioning Scheme**: [Versioning scheme - semantic, date-based, etc.]
+**Backward Compatibility**: [Backward compatibility policies]
+**Deprecation Process**: [Deprecation process]
+**Migration Guide**: [Migration guides between versions]
 
 ---
 
 ## 🧪 Test Strategy
 
 ### Unit Testing
-**Controller Tests**: [Test controller/handler]  
-**Model Validation Tests**: [Test validazione modelli]  
-**Business Logic Tests**: [Test logica business]  
-**Error Handling Tests**: [Test gestione errori]
+**Controller Tests**: [Controller/handler tests]
+**Model Validation Tests**: [Model validation tests]
+**Business Logic Tests**: [Business logic tests]
+**Error Handling Tests**: [Error handling tests]
 
 ### Integration Testing
-**Database Integration**: [Test integrazione database]  
-**External Service Integration**: [Test servizi esterni]  
-**Authentication Integration**: [Test autenticazione]  
-**End-to-End Tests**: [Test E2E completi]
+**Database Integration**: [Database integration tests]
+**External Service Integration**: [External service tests]
+**Authentication Integration**: [Authentication tests]
+**End-to-End Tests**: [Complete E2E tests]
 
 ### API Testing
-**Functional Testing**: [Test funzionalità API]  
-**Contract Testing**: [Test contratti API]  
-**Performance Testing**: [Test performance specifici]  
-**Security Testing**: [Test sicurezza API]
+**Functional Testing**: [API functionality tests]
+**Contract Testing**: [API contract tests]
+**Performance Testing**: [Specific performance tests]
+**Security Testing**: [API security tests]
 
 ### Test Data
-**Test Datasets**: [Dataset per test]  
-**Mock Services**: [Servizi da mockare]  
-**Test Environment**: [Ambiente test specifico]  
-**Test Automation**: [Automazione test API]
+**Test Datasets**: [Test datasets]
+**Mock Services**: [Services to be mocked]
+**Test Environment**: [Specific test environment]
+**Test Automation**: [API test automation]
 
 ---
 
-## 🔗 Tracciabilità
+## 🔗 Traceability
 
 ### Business Requirements
-**Business Objectives**: [OBJ-XXX] - [Obiettivo business]  
-**User Stories**: [US-XXX] - [User story implementata]  
-**Business Process**: [Processo business supportato]
+**Business Objectives**: [OBJ-XXX] - [Business objective]
+**User Stories**: [US-XXX] - [Implemented user story]
+**Business Process**: [Supported business process]
 
 ### System Requirements
-**Functional Requirements**: [REQ-F-XXX] - [Requisiti funzionali]  
-**Integration Requirements**: [REQ-I-XXX] - [Integrazioni necessarie]  
-**UI Requirements**: [REQ-UI-XXX] - [UI che consuma API]
+**Functional Requirements**: [REQ-F-XXX] - [Functional requirements]
+**Integration Requirements**: [REQ-I-XXX] - [Necessary integrations]
+**UI Requirements**: [REQ-UI-XXX] - [UI that consumes the API]
 
 ### Technical Architecture
-**System Architecture**: [Componenti architetturali]  
-**Data Architecture**: [Architettura dati]  
-**Security Architecture**: [Architettura sicurezza]
+**System Architecture**: [Architectural components]
+**Data Architecture**: [Data architecture]
+**Security Architecture**: [Security architecture]
 
 ---
 
-## ⚠️ Rischi e Mitigation
+## ⚠️ Risks and Mitigation
 
 ### Technical Risks
-- **[Rischio Tecnico 1]**: [Es. Performance degradation under load]  
-  *Probability*: [Alta/Media/Bassa]  
-  *Impact*: [Alto/Medio/Basso]  
+- **[Technical Risk 1]**: [e.g., Performance degradation under load]
+  *Probability*: [High/Medium/Low]
+  *Impact*: [High/Medium/Low]
   *Mitigation*: [Caching, optimization, load balancing]
 
-- **[Rischio Tecnico 2]**: [Es. Breaking changes impact]  
-  *Probability*: [Alta/Media/Bassa]  
-  *Impact*: [Alto/Medio/Basso]  
+- **[Technical Risk 2]**: [e.g., Breaking changes impact]
+  *Probability*: [High/Medium/Low]
+  *Impact*: [High/Medium/Low]
   *Mitigation*: [Versioning strategy, communication plan]
 
 ### Security Risks
-- **[Rischio Sicurezza 1]**: [Es. API abuse/DoS]  
-  *Probability*: [Alta/Media/Bassa]  
-  *Impact*: [Alto/Medio/Basso]  
+- **[Security Risk 1]**: [e.g., API abuse/DoS]
+  *Probability*: [High/Medium/Low]
+  *Impact*: [High/Medium/Low]
   *Mitigation*: [Rate limiting, monitoring, IP blocking]
 
 ### Business Risks
-- **[Rischio Business 1]**: [Es. Poor adoption]  
-  *Probability*: [Alta/Media/Bassa]  
-  *Impact*: [Alto/Medio/Basso]  
+- **[Business Risk 1]**: [e.g., Poor adoption]
+  *Probability*: [High/Medium/Low]
+  *Impact*: [High/Medium/Low]
   *Mitigation*: [Good documentation, developer support]
 
 ---
 
-## 📅 Timeline e Milestone
+## 📅 Timeline and Milestones
 
 ### Development Phases
-**Phase 1 - Core API**: [Funzionalità base] - [Data inizio] to [Data fine]  
-**Phase 2 - Advanced Features**: [Feature avanzate] - [Data inizio] to [Data fine]  
-**Phase 3 - Optimization**: [Ottimizzazioni] - [Data inizio] to [Data fine]
+**Phase 1 - Core API**: [Base functionality] - [Start date] to [End date]
+**Phase 2 - Advanced Features**: [Advanced features] - [Start date] to [End date]
+**Phase 3 - Optimization**: [Optimizations] - [Start date] to [End date]
 
 ### Key Milestones
-- **API Design Approved**: [Data]
-- **Core Endpoints Implemented**: [Data]
-- **Documentation Complete**: [Data]
-- **Testing Complete**: [Data]
-- **Production Deployment**: [Data]
+- **API Design Approved**: [Date]
+- **Core Endpoints Implemented**: [Date]
+- **Documentation Complete**: [Date]
+- **Testing Complete**: [Date]
+- **Production Deployment**: [Date]
 
 ### Dependencies
-- **Authentication Service Ready**: [Data]
-- **Database Schema Complete**: [Data]
-- **Infrastructure Provisioned**: [Data]
+- **Authentication Service Ready**: [Date]
+- **Database Schema Complete**: [Date]
+- **Infrastructure Provisioned**: [Date]
 
 ---
 
-## 💰 Effort e Cost Estimates
+## 💰 Effort and Cost Estimates
 
 ### Development Effort
-**API Design**: [Ore]  
-**Implementation**: [Ore]  
-**Testing**: [Ore]  
-**Documentation**: [Ore]  
-**Security Implementation**: [Ore]  
-**Total**: [Ore totali]
+**API Design**: [Hours]
+**Implementation**: [Hours]
+**Testing**: [Hours]
+**Documentation**: [Hours]
+**Security Implementation**: [Hours]
+**Total**: [Total hours]
 
 ### Resource Requirements
-**API Developer**: [Ore]  
-**Security Specialist**: [Ore]  
-**QA Engineer**: [Ore]  
-**Technical Writer**: [Ore]  
-**DevOps Engineer**: [Ore]
+**API Developer**: [Hours]
+**Security Specialist**: [Hours]
+**QA Engineer**: [Hours]
+**Technical Writer**: [Hours]
+**DevOps Engineer**: [Hours]
 
 ### Infrastructure Costs
-**API Gateway**: [Costo mensile]  
-**Monitoring Tools**: [Costo mensile]  
-**Documentation Platform**: [Costo mensile]  
-**Testing Tools**: [Costo mensile]
+**API Gateway**: [Monthly cost]
+**Monitoring Tools**: [Monthly cost]
+**Documentation Platform**: [Monthly cost]
+**Testing Tools**: [Monthly cost]
 
 ---
 
 ## ✅ Definition of Done
 
 ### Development Complete
-- [ ] Tutti gli endpoint implementati secondo specifiche
-- [ ] Input validation implementata
-- [ ] Error handling implementato
-- [ ] Authentication/authorization implementata
-- [ ] Rate limiting implementato
-- [ ] Logging implementato
+- [ ] All endpoints implemented according to specifications
+- [ ] Input validation implemented
+- [ ] Error handling implemented
+- [ ] Authentication/authorization implemented
+- [ ] Rate limiting implemented
+- [ ] Logging implemented
 
 ### Quality Assurance
-- [ ] Unit test completati (>= 90% coverage)
-- [ ] Integration test passati
-- [ ] Performance test soddisfatti
-- [ ] Security test completati
-- [ ] API contract test passati
+- [ ] Unit tests completed (>= 90% coverage)
+- [ ] Integration tests passed
+- [ ] Performance tests met
+- [ ] Security tests completed
+- [ ] API contract tests passed
 
 ### Documentation & Deployment
-- [ ] OpenAPI specification completa
-- [ ] Documentation pubblicata
-- [ ] SDK/client examples disponibili
-- [ ] Monitoring configurato
-- [ ] Production deployment completato
+- [ ] Complete OpenAPI specification
+- [ ] Documentation published
+- [ ] SDK/client examples available
+- [ ] Monitoring configured
+- [ ] Production deployment completed
 
 ---
 
 ## 📝 Change History
 
-| Versione | Data | Autore | Cambiamenti | Breaking Changes | Approvato da |
-|----------|------|--------|-------------|------------------|--------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | No | [Nome] |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Sì/No] | [Nome] |
+| Version | Date   | Author | Changes     | Breaking Changes | Approved by |
+|---------|--------|--------|-------------|------------------|-------------|
+| 1.0     | [Date] | [Name] | Initial version | No               | [Name]      |
+| 1.1     | [Date] | [Name] | [Changes]   | [Yes/No]         | [Name]      |
 
 ---
 
-## ✅ Approvazioni
+## ✅ Approvals
 
 ### Technical Approval
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| API Architect | [Nome] | ______ | ______ | [Comments] |
-| Security Engineer | [Nome] | ______ | ______ | [Comments] |
-| Performance Engineer | [Nome] | ______ | ______ | [Comments] |
+| Role                 | Name   | Date   | Signature | Comments |
+|----------------------|--------|--------|-----------|----------|
+| API Architect        | [Name] | ______ | ______    | [Comments] |
+| Security Engineer    | [Name] | ______ | ______    | [Comments] |
+| Performance Engineer | [Name] | ______ | ______    | [Comments] |
 
 ### Business Approval
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| Technical Product Manager | [Nome] | ______ | ______ | [Comments] |
+| Role                      | Name   | Date   | Signature | Comments |
+|---------------------------|--------|--------|-----------|----------|
+| Product Owner             | [Name] | ______ | ______    | [Comments] |
+| Technical Product Manager | [Name] | ______ | ______    | [Comments] |
 
 ---
 
 ## 📎 Supporting Documentation
 
 ### Technical Documentation
-- [Link a OpenAPI specification]
-- [Link a sequence diagrams]
-- [Link a data flow diagrams]
-- [Link a security specifications]
+- [Link to OpenAPI specification]
+- [Link to sequence diagrams]
+- [Link to data flow diagrams]
+- [Link to security specifications]
 
 ### Business Documentation
-- [Link a business case]
-- [Link a user journey maps]
-- [Link a competitive analysis]
+- [Link to business case]
+- [Link to user journey maps]
+- [Link to competitive analysis]
 
 ### Development Resources
-- [Link a coding standards]
-- [Link a testing guidelines]
-- [Link a deployment procedures]
+- [Link to coding standards]
+- [Link to testing guidelines]
+- [Link to deployment procedures]
 
 ---
 
-*API requirement creato il: [Data]*  
-*Ultima revisione: [Data]*  
-*Prossima review: [Data]*  
-*API Owner: [Nome responsabile API]*
+*API requirement created on: [Date]*
+*Last revision: [Date]*
+*Next review: [Date]*
+*API Owner: [API responsible person's name]*

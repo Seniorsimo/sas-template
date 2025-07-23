@@ -1,57 +1,57 @@
 @startuml UseCase-Template
 !define RECTANGLE class
 
-title Sistema [Nome Sistema] - Casi d'Uso Principali
+title [System Name] System - Main Use Cases
 
-' Definizione degli attori
-actor "Utente Primario" as User
-actor "Amministratore" as Admin
-actor "Sistema Esterno" as ExtSystem
+' Actor definition
+actor "Primary User" as User
+actor "Administrator" as Admin
+actor "External System" as ExtSystem
 
-' Definizione del boundary del sistema
-rectangle "Sistema [Nome]" {
+' System boundary definition
+rectangle "[Name] System" {
   
-  ' Casi d'uso principali
-  usecase UC1 as "Caso d'Uso 1
+  ' Main use cases
+  usecase UC1 as "Use Case 1
   --
-  Descrizione breve"
+  Brief description"
   
-  usecase UC2 as "Caso d'Uso 2
+  usecase UC2 as "Use Case 2
   --
-  Descrizione breve"
+  Brief description"
   
-  usecase UC3 as "Caso d'Uso 3
+  usecase UC3 as "Use Case 3
   --
-  Descrizione breve"
+  Brief description"
   
-  ' Casi d'uso secondari
-  usecase UC4 as "Caso d'Uso 4"
-  usecase UC5 as "Caso d'Uso 5"
+  ' Secondary use cases
+  usecase UC4 as "Use Case 4"
+  usecase UC5 as "Use Case 5"
 }
 
-' Relazioni attori-casi d'uso
-User --> UC1 : esegue
-User --> UC2 : esegue
-Admin --> UC3 : gestisce
-Admin --> UC4 : configura
+' Actor-use case relationships
+User --> UC1 : executes
+User --> UC2 : executes
+Admin --> UC3 : manages
+Admin --> UC4 : configures
 
-' Relazioni tra casi d'uso
+' Relationships between use cases
 UC1 ..> UC5 : <<include>>
 UC2 ..> UC4 : <<extend>>
 
-' Relazioni con sistemi esterni
-ExtSystem --> UC3 : notifica
+' Relationships with external systems
+ExtSystem --> UC3 : notifies
 
-' Note esplicative
+' Explanatory notes
 note right of UC1
-  Questo caso d'uso rappresenta
-  la funzionalità principale
-  del sistema
+  This use case represents
+  the main functionality
+  of the system
 end note
 
 note bottom of ExtSystem
-  Sistema di notifiche
-  o servizio esterno
+  Notification system
+  or external service
 end note
 
 @enduml

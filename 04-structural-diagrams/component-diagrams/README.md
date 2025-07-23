@@ -1,38 +1,38 @@
 # Component Diagrams
 
-I diagrammi dei componenti mostrano l'organizzazione e le dipendenze dell'architettura software a livello di componenti.
+Component diagrams show the organization and dependencies of the software architecture at the component level.
 
-## 🎯 Scopo dei Component Diagrams
+## 🎯 Purpose of Component Diagrams
 
-I **Component Diagrams** servono per:
-- Visualizzare l'architettura del sistema a livello di componenti
-- Mostrare le dipendenze tra moduli software
-- Documentare interfacce e contratti tra componenti
-- Pianificare deployment e distribuzione
+**Component Diagrams** are used to:
+- Visualize the system architecture at the component level
+- Show dependencies between software modules
+- Document interfaces and contracts between components
+- Plan deployment and distribution
 
-## 📋 Elementi del Diagramma
+## 📋 Diagram Elements
 
-### Componenti
+### Components
 
-#### Sintassi Base
+#### Basic Syntax
 ```plantuml
-component "Nome Componente" as ComponentAlias
-[Altro Componente]
+component "Component Name" as ComponentAlias
+[Another Component]
 ```
 
-#### Stereotipi
+#### Stereotypes
 ```plantuml
 component "<<service>>" as Service
-component "<<library>>" as Library  
+component "<<library>>" as Library
 component "<<database>>" as Database
 component "<<external>>" as External
 ```
 
-### Interfacce
+### Interfaces
 
 #### Interface Declaration
 ```plantuml
-interface "Nome Interface" as IInterface
+interface "Interface Name" as IInterface
 () "Interface Symbol" as ISymbol
 ```
 
@@ -45,7 +45,7 @@ Component1 -( IService : provides
 Component1 --( IService : requires
 ```
 
-### Packages e Raggruppamenti
+### Packages and Groupings
 ```plantuml
 package "Layer Name" {
   component "Component A"
@@ -61,7 +61,7 @@ cloud "External Systems" {
 }
 ```
 
-### Relazioni
+### Relationships
 
 #### Basic Connections
 ```plantuml
@@ -77,9 +77,9 @@ ComponentB --( IInterface
 IInterface - ComponentC
 ```
 
-## 📝 Come Utilizzare il Template
+## 📝 How to Use the Template
 
-### 1. Identifica i Layer Architetturali
+### 1. Identify Architectural Layers
 ```plantuml
 package "Presentation Layer" {
   component "Web UI"
@@ -97,7 +97,7 @@ package "Data Layer" {
 }
 ```
 
-### 2. Definisci i Componenti Principali
+### 2. Define Main Components
 ```plantuml
 component "User Service" as UserSvc {
   portin "IUserService" as IUserSvc
@@ -110,7 +110,7 @@ component "Order Service" as OrderSvc {
 }
 ```
 
-### 3. Specifica le Interfacce
+### 3. Specify Interfaces
 ```plantuml
 interface "REST API" as REST
 interface "Database Interface" as DB
@@ -121,7 +121,7 @@ UserSvc --( DB : uses
 OrderSvc --( MQ : publishes to
 ```
 
-## 🏗️ Pattern Architetturali
+## 🏗️ Architectural Patterns
 
 ### Layered Architecture
 ```plantuml
@@ -371,18 +371,18 @@ ExternalAPIAdapter --> ThirdPartyAPI
 
 ### ✅ Component Design
 ```plantuml
-' ✅ Componente ben definito con interfacce chiare
+' ✅ Well-defined component with clear interfaces
 component "UserService" {
   interface "IUserRepository" as IUserRepo
   interface "IUserNotification" as IUserNotif
-  
+
   component "UserBusinessLogic" as UserBL
 }
 
 UserBL -( IUserRepo : requires
 UserBL --( IUserNotif : provides
 
-' ✅ Separazione delle responsabilità
+' ✅ Separation of responsibilities
 package "Authentication" {
   component "Auth Service"
   component "Token Manager"
@@ -392,7 +392,7 @@ package "Authentication" {
 
 ### ✅ Interface Segregation
 ```plantuml
-' ✅ Interfacce specifiche e focalizzate
+' ✅ Specific and focused interfaces
 interface "IUserReader" {
   +getUser(id)
   +findUsers(criteria)
@@ -404,7 +404,7 @@ interface "IUserWriter" {
   +deleteUser(id)
 }
 
-' ❌ Interfaccia troppo grande
+' ❌ Too large interface
 interface "IUserManager" {
   +getUser(), +createUser(), +updateUser()
   +sendEmail(), +validateData(), +generateReport()
@@ -413,7 +413,7 @@ interface "IUserManager" {
 
 ### ✅ Dependency Direction
 ```plantuml
-' ✅ Dipendenze verso il centro (Domain)
+' ✅ Dependencies towards the center (Domain)
 package "UI Layer" {
   component "Controller"
 }
@@ -432,25 +432,25 @@ Service --> IRepository
 Repository ..|> IRepository
 ```
 
-### ❌ Anti-Patterns da Evitare
+### ❌ Anti-Patterns to Avoid
 ```plantuml
 ' ❌ Circular Dependencies
 component A --> B
 component B --> C
-component C --> A : "EVITARE!"
+component C --> A : "AVOID!"
 
 ' ❌ God Component
 component "EverythingManager" {
-  note right : Gestisce tutto:\n- Users\n- Orders\n- Payments\n- Reports\n- Notifications
+  note right : Manages everything:\n- Users\n- Orders\n- Payments\n- Reports\n- Notifications
 }
 
 ' ❌ Tight Coupling
-component ServiceA --> ConcreteImplementationB : "Dipendenza da implementazione"
+component ServiceA --> ConcreteImplementationB : "Dependency on implementation"
 ```
 
-## 🎨 Styling e Visualizzazione
+## 🎨 Styling and Visualization
 
-### Colori per Layer
+### Layer Colors
 ```plantuml
 !define UI_COLOR #E3F2FD
 !define BL_COLOR #E8F5E8
@@ -458,12 +458,12 @@ component ServiceA --> ConcreteImplementationB : "Dipendenza da implementazione"
 !define EXTERNAL_COLOR #FCE4EC
 
 package "UI Layer" UI_COLOR
-package "Business Layer" BL_COLOR  
+package "Business Layer" BL_COLOR
 package "Data Layer" DATA_COLOR
 cloud "External" EXTERNAL_COLOR
 ```
 
-### Stereotipi e Icons
+### Stereotypes and Icons
 ```plantuml
 component "<<service>>" as Service1
 component "<<repository>>" as Repo1
@@ -476,23 +476,23 @@ Controller1 #lightblue
 External1 #lightcoral
 ```
 
-### Layout e Organizzazione
+### Layout and Organization
 ```plantuml
-' Disposizione a livelli
+' Layered layout
 top to bottom direction
 
-' Evidenziare flusso principale
+' Highlight main flow
 component A --> B #red;line.bold
 component B --> C #blue;line.dashed
 
-' Raggruppare componenti correlati
+' Group related components
 together {
   component "Service A"
   component "Service B"
 }
 ```
 
-## 🧪 Esempi per Dominio
+## 🧪 Examples by Domain
 
 ### E-commerce Platform
 ```plantuml
@@ -806,15 +806,15 @@ ClinicalDB --> BackupSvc
 @enduml
 ```
 
-## 🔍 Tracciabilità e Design
+## 🔍 Traceability and Design
 
-### Mapping da Architettura
+### Mapping from Architecture
 ```yaml
 Component: "Order Service"
 Architectural Requirements:
   - AR-001: Microservices architecture
   - AR-002: Event-driven communication
-Use Cases: 
+Use Cases:
   - UC-005: Process customer order
   - UC-006: Track order status
 Quality Attributes:
@@ -830,7 +830,7 @@ interface "IOrderService" {
   +cancelOrder(orderId : String) : CancelResult
 }
 
-note right of IOrderService : Contract definisce:\n- Input/Output types\n- Error conditions\n- SLA requirements
+note right of IOrderService : Contract defines:\n- Input/Output types\n- Error conditions\n- SLA requirements
 ```
 
 ### Deployment Mapping
@@ -881,7 +881,7 @@ note right of MockDB : Provides predictable\ntest data responses
 note right of MockEmail : Verifies email\ncalls without sending
 ```
 
-## 🔧 Tools e Methodology
+## 🔧 Tools and Methodology
 
 ### Architecture Documentation
 - **C4 Model**: Context, Containers, Components, Code
@@ -910,7 +910,7 @@ CI/CD Pipeline:
   - Deployment Tests: Validate component deployment
 ```
 
-## 📚 Resources e Standards
+## 📚 Resources and Standards
 
 ### Architecture Patterns
 - **Microservices**: Independent deployable components
@@ -918,20 +918,20 @@ CI/CD Pipeline:
 - **CQRS**: Separate read/write components
 - **Hexagonal**: Ports and adapters pattern
 
-### Template Correlati
+### Related Templates
 - `../class-diagrams/`: Detailed component internals
 - `../../03-behavioral-diagrams/`: Component interactions
 - `../../05-database-design/`: Data component design
 
-## 📞 Supporto
+## 📞 Support
 
-Per domande sui Component Diagrams:
+For questions about Component Diagrams:
 
-- **Solution Architect**: [Responsabile architettura sistema]
-- **Technical Lead**: [Responsabile design componenti]
-- **DevOps Engineer**: [Responsabile deployment architettura]
-- **Software Architect**: [Responsabile standard architetturali]
+- **Solution Architect**: [Responsible for system architecture]
+- **Technical Lead**: [Responsible for component design]
+- **DevOps Engineer**: [Responsible for architecture deployment]
+- **Software Architect**: [Responsible for architectural standards]
 
 ---
 
-*I Component Diagrams sono la blueprint dell'architettura software. Usali per comunicare la struttura del sistema e guidare l'implementazione distribuita.*
+*Component Diagrams are the blueprint of the software architecture. Use them to communicate the system's structure and guide distributed implementation.*

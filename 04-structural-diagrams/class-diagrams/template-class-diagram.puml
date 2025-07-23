@@ -3,7 +3,7 @@
 !define SERVICE class
 !define CONTROLLER class
 
-title Sistema [Nome] - Diagramma delle Classi
+title [Name] System - Class Diagram
 
 package "Domain Model" {
   
@@ -112,7 +112,7 @@ package "Repository Layer" {
   }
 }
 
-' Relazioni
+' Relationships
 User ||--o{ Order : "places"
 Order ||--o{ OrderItem : "contains"
 OrderItem }o--|| Product : "references"
@@ -126,22 +126,22 @@ UserServiceImpl ..|> UserService : "implements"
 UserServiceImpl --> UserRepository : "uses"
 OrderService --> OrderRepository : "uses"
 
-' Note esplicative
+' Explanatory notes
 note top of User
-  Entità principale che rappresenta
-  l'utente del sistema
+  Main entity representing
+  the system user
 end note
 
 note right of OrderStatus
-  Enum che definisce
-  i possibili stati
-  di un ordine
+  Enum defining
+  the possible states
+  of an order
 end note
 
 note bottom of Category
-  Classe astratta per
-  implementare il pattern
-  Strategy per le categorie
+  Abstract class to
+  implement the Strategy
+  pattern for categories
 end note
 
 @enduml

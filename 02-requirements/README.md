@@ -1,69 +1,69 @@
-# Requisiti e User Stories
+# Requirements and User Stories
 
-Questa sezione gestisce la raccolta e documentazione strutturata di tutti i requisiti del progetto attraverso un approccio gerarchico e organizzato.
+This section manages the structured collection and documentation of all project requirements through a hierarchical and organized approach.
 
-## 📁 Struttura Gerarchica Organizzata
+## 📁 Organized Hierarchical Structure
 
 ### 📝 user-stories/
-Gestione delle user stories organizzate per epic:
+Management of user stories organized by epic:
 ```
 user-stories/
-├── epic-[nome]/
-│   ├── README.md              (Descrizione epic)
-│   ├── US-001-[titolo].md     (User story 1)
-│   └── US-XXX-[titolo].md     (Altre user stories)
-├── epic-template/             (Template per nuovi epic)
-└── README.md                  (Guida organizzazione)
+├── epic-[name]/
+│   ├── README.md              (Epic description)
+│   ├── US-001-[title].md     (User story 1)
+│   └── US-XXX-[title].md     (Other user stories)
+├── epic-template/             (Template for new epics)
+└── README.md                  (Organization guide)
 ```
 
 ### ⚙️ functional-requirements/
-Requisiti funzionali categorizzati per tipo:
+Functional requirements categorized by type:
 ```
 functional-requirements/
-├── core-features/             (Funzionalità principali)
-├── integrations/              (Integrazioni esterne)
-├── api-requirements/          (Specifiche API)
-├── ui-requirements/           (Requisiti interfaccia)
-└── README.md                  (Guida categorizzazione)
+├── core-features/             (Main functionalities)
+├── integrations/              (External integrations)
+├── api-requirements/          (API specifications)
+├── ui-requirements/           (Interface requirements)
+└── README.md                  (Categorization guide)
 ```
 
 ### 🎯 non-functional-requirements/
-Requisiti di qualità organizzati per attributo:
+Quality requirements organized by attribute:
 ```
 non-functional-requirements/
-├── performance/               (Tempi di risposta, throughput)
-├── security/                  (Autenticazione, crittografia)
-├── usability/                 (UX, accessibilità)
-├── reliability/               (Disponibilità, error handling)
-├── scalability/               (Carico, crescita)
-├── compatibility/             (Browser, sistemi)
-└── README.md                  (Guida qualità)
+├── performance/               (Response times, throughput)
+├── security/                  (Authentication, encryption)
+├── usability/                 (UX, accessibility)
+├── reliability/               (Availability, error handling)
+├── scalability/               (Load, growth)
+├── compatibility/             (Browsers, systems)
+└── README.md                  (Quality guide)
 ```
 
 ### ✅ acceptance-criteria/
-Criteri di accettazione strutturati per testing:
+Acceptance criteria structured for testing:
 ```
 acceptance-criteria/
-├── functional-acceptance/     (Criteri funzionali)
-├── non-functional-acceptance/ (Criteri qualità)
-├── integration-acceptance/    (Criteri integrazione)
-├── user-acceptance/           (Criteri UAT)
-└── README.md                  (Guida testing)
+├── functional-acceptance/     (Functional criteria)
+├── non-functional-acceptance/ (Quality criteria)
+├── integration-acceptance/    (Integration criteria)
+├── user-acceptance/           (UAT criteria)
+└── README.md                  (Testing guide)
 ```
 
-## 🏷️ Sistema di Numerazione Unificato
+## 🏷️ Unified Numbering System
 
 ### User Stories
-- **Epic**: `EPIC-XXX` (es. EPIC-001)
-- **User Stories**: `US-XXX` (numerazione progressiva globale)
+- **Epic**: `EPIC-XXX` (e.g., EPIC-001)
+- **User Stories**: `US-XXX` (global progressive numbering)
 
-### Requisiti Funzionali
+### Functional Requirements
 - **Core Features**: `REQ-F-XXX`
-- **Integrazioni**: `REQ-I-XXX`
+- **Integrations**: `REQ-I-XXX`
 - **API**: `REQ-API-XXX`
 - **UI**: `REQ-UI-XXX`
 
-### Requisiti Non-Funzionali
+### Non-Functional Requirements
 - **Performance**: `REQ-NF-PERF-XXX`
 - **Security**: `REQ-NF-SEC-XXX`
 - **Usability**: `REQ-NF-USA-XXX`
@@ -71,46 +71,46 @@ acceptance-criteria/
 - **Scalability**: `REQ-NF-SCAL-XXX`
 - **Compatibility**: `REQ-NF-COMP-XXX`
 
-### Criteri di Accettazione
+### Acceptance Criteria
 - **Functional**: `AC-F-XXX`
 - **Non-Functional**: `AC-NF-XXX`
 - **Integration**: `AC-I-XXX`
 - **User Acceptance**: `AC-UA-XXX`
 
-## 🎯 Metodologia e Framework
+## 🎯 Methodology and Framework
 
 ### User Stories Format
 ```
-Come [tipo di utente]
-Voglio [funzionalità/obiettivo]
-Per [beneficio/valore]
+As a [type of user]
+I want [feature/goal]
+So that [benefit/value]
 ```
 
-### Requisiti SMART
-- **Specific**: Specifici e chiari
-- **Measurable**: Misurabili quantitativamente
-- **Achievable**: Tecnicamente realizzabili
-- **Relevant**: Rilevanti per il business
-- **Time-bound**: Con tempistiche definite
+### SMART Requirements
+- **Specific**: Specific and clear
+- **Measurable**: Quantitatively measurable
+- **Achievable**: Technically feasible
+- **Relevant**: Relevant to the business
+- **Time-bound**: With defined timelines
 
-### Prioritizzazione MoSCoW
-- **Must Have**: Requisiti critici per MVP
-- **Should Have**: Requisiti importanti per release completa
-- **Could Have**: Requisiti nice-to-have per versioni future
-- **Won't Have**: Requisiti esclusi da questa versione
+### MoSCoW Prioritization
+- **Must Have**: Critical requirements for MVP
+- **Should Have**: Important requirements for full release
+- **Could Have**: Nice-to-have requirements for future versions
+- **Won't Have**: Requirements excluded from this version
 
-## 🔗 Tracciabilità Completa
+## 🔗 Complete Traceability
 
 ### Forward Traceability
 ```
-Obiettivi Business → User Stories → Requisiti → 
-Criteri Accettazione → Test Cases → Code
+Business Objectives → User Stories → Requirements →
+Acceptance Criteria → Test Cases → Code
 ```
 
 ### Backward Traceability
 ```
-Code → Test Cases → Criteri Accettazione → 
-Requisiti → User Stories → Obiettivi Business
+Code → Test Cases → Acceptance Criteria →
+Requirements → User Stories → Business Objectives
 ```
 
 ### Horizontal Traceability
@@ -119,121 +119,121 @@ User Stories ↔ Functional Requirements ↔
 Non-Functional Requirements ↔ Acceptance Criteria
 ```
 
-## 📊 Matrice di Tracciabilità
+## 📊 Traceability Matrix
 
-| User Story | Req. Funzionali | Req. Non-Funz. | Criteri Accett. | Status |
+| User Story | Functional Req. | Non-Func. Req. | Acceptance Crit. | Status |
 |------------|-----------------|-----------------|------------------|--------|
-| US-001 | REQ-F-001 | REQ-NF-PERF-001 | AC-F-001, AC-NF-001 | ✅ |
-| US-002 | REQ-F-002 | REQ-NF-SEC-001 | AC-F-002, AC-NF-002 | ⏳ |
+| US-001     | REQ-F-001       | REQ-NF-PERF-001 | AC-F-001, AC-NF-001 | ✅      |
+| US-002     | REQ-F-002       | REQ-NF-SEC-001  | AC-F-002, AC-NF-002 | ⏳      |
 
-## 🚀 Workflow di Gestione
+## 🚀 Management Workflow
 
 ### 1. Epic Planning
-- Identificazione epic dal backlog
-- Definizione obiettivi e scope epic
-- Breakdown in user stories
+- Identification of epics from the backlog
+- Definition of epic goals and scope
+- Breakdown into user stories
 
 ### 2. User Story Creation
-- Scrittura user stories format standard
-- Definizione criteri di accettazione
-- Stima story points
-- Prioritizzazione
+- Writing user stories in standard format
+- Definition of acceptance criteria
+- Estimation of story points
+- Prioritization
 
 ### 3. Requirements Analysis
-- Derivazione requisiti funzionali da user stories
-- Identificazione requisiti non-funzionali
-- Categorizzazione e prioritizzazione
-- Review stakeholder
+- Derivation of functional requirements from user stories
+- Identification of non-functional requirements
+- Categorization and prioritization
+- Stakeholder review
 
 ### 4. Acceptance Criteria Definition
-- Definizione criteri testabili
-- Collegamento con requisiti
-- Review con QA team
-- Approvazione finale
+- Definition of testable criteria
+- Linking with requirements
+- Review with QA team
+- Final approval
 
 ### 5. Validation & Testing
-- Implementazione funzionalità
-- Testing contro criteri
+- Feature implementation
+- Testing against criteria
 - User acceptance testing
-- Sign-off finale
+- Final sign-off
 
-## 📋 Template e Standard
+## 📋 Templates and Standards
 
-### Template Disponibili
+### Available Templates
 - **Epic Template**: `epic-template/README.md`
 - **User Story Template**: `epic-template/US-XXX-template.md`
 - **Functional Requirement**: `functional-requirements/core-features/REQ-F-XXX-template.md`
 - **Non-Functional Requirement**: `non-functional-requirements/REQ-NF-XXX-template.md`
 
-### Convenzioni di Naming
-- **File**: `[ID]-[nome-breve].md`
-- **Cartelle**: `[categoria]-[nome]` (es. `epic-authentication`)
-- **ID**: Numerazione progressiva per categoria
+### Naming Conventions
+- **File**: `[ID]-[short-name].md`
+- **Folders**: `[category]-[name]` (e.g., `epic-authentication`)
+- **ID**: Progressive numbering by category
 
 ## 💡 Best Practices
 
 ### ✅ Do's
-- **Mantieni tracciabilità** tra tutti gli elementi
-- **Usa template standardizzati** per consistenza
-- **Review regolarmente** con stakeholder
-- **Aggiorna status** man mano che procedi
-- **Documenta decisioni** e motivazioni
+- **Maintain traceability** between all elements
+- **Use standardized templates** for consistency
+- **Regularly review** with stakeholders
+- **Update status** as you proceed
+- **Document decisions** and motivations
 
 ### ❌ Don'ts
-- **Non creare requisiti** non collegati a user stories
-- **Non essere vago** nelle descrizioni
-- **Non dimenticare** i requisiti non-funzionali
-- **Non procedere** senza approvazione stakeholder
-- **Non trascurare** i criteri di accettazione
+- **Don't create requirements** not linked to user stories
+- **Don't be vague** in descriptions
+- **Don't forget** non-functional requirements
+- **Don't proceed** without stakeholder approval
+- **Don't neglect** acceptance criteria
 
 ## 🔄 Change Management
 
-### Processo di Modifica
-1. **Change Request**: Richiesta di modifica documentata
-2. **Impact Analysis**: Analisi impatto su altri elementi
-3. **Stakeholder Review**: Review e approvazione
-4. **Update Dependencies**: Aggiornamento elementi collegati
-5. **Communication**: Comunicazione cambiamenti
+### Modification Process
+1. **Change Request**: Documented request for modification
+2. **Impact Analysis**: Analysis of impact on other elements
+3. **Stakeholder Review**: Review and approval
+4. **Update Dependencies**: Update of linked elements
+5. **Communication**: Communication of changes
 
-### Controllo Versioni
-- Ogni documento deve avere tabella change history
-- Approvazioni formali documentate
-- Baseline dei requisiti per milestone
+### Version Control
+- Each document must have a change history table
+- Formal approvals documented
+- Requirements baseline for milestones
 
-## 📈 Metriche e Reporting
+## 📈 Metrics and Reporting
 
 ### Coverage Metrics
-- **User Stories Coverage**: % obiettivi business coperti
-- **Requirements Coverage**: % user stories con requisiti
-- **Acceptance Criteria Coverage**: % requisiti con criteri
-- **Test Coverage**: % criteri con test
+- **User Stories Coverage**: % of business objectives covered
+- **Requirements Coverage**: % of user stories with requirements
+- **Acceptance Criteria Coverage**: % of requirements with criteria
+- **Test Coverage**: % of criteria with tests
 
 ### Quality Metrics
-- **Completeness**: % elementi completati
-- **Traceability**: % elementi tracciati
-- **Approval Rate**: % elementi approvati
-- **Stability**: Frequenza cambiamenti
+- **Completeness**: % of completed elements
+- **Traceability**: % of traced elements
+- **Approval Rate**: % of approved elements
+- **Stability**: Frequency of changes
 
 ## 🏁 Definition of Ready/Done
 
 ### Epic Definition of Ready
-- [ ] Valore business chiarito
-- [ ] User stories identificate
-- [ ] Dipendenze mappate
-- [ ] Criteri accettazione epic definiti
+- [ ] Business value clarified
+- [ ] User stories identified
+- [ ] Dependencies mapped
+- [ ] Epic acceptance criteria defined
 
 ### User Story Definition of Ready
-- [ ] Scritta in formato standard
-- [ ] Criteri di accettazione definiti
-- [ ] Story points stimati
-- [ ] Dipendenze identificate
+- [ ] Written in standard format
+- [ ] Acceptance criteria defined
+- [ ] Story points estimated
+- [ ] Dependencies identified
 
 ### Requirements Definition of Done
-- [ ] Collegati a user stories
-- [ ] Approvati da stakeholder
-- [ ] Criteri di accettazione definiti
-- [ ] Tracciabilità completa
+- [ ] Linked to user stories
+- [ ] Approved by stakeholders
+- [ ] Acceptance criteria defined
+- [ ] Complete traceability
 
 ---
 
-*Questa struttura gerarchica garantisce organizzazione, scalabilità e tracciabilità completa per progetti di qualsiasi dimensione.*
+*This hierarchical structure ensures organization, scalability, and complete traceability for projects of any size.*

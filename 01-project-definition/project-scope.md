@@ -1,149 +1,149 @@
-# Scope del Progetto
+# Project Scope
 
-## Informazioni Generali
-**Progetto**: [Nome del Progetto]
-**Versione**: [Versione]
-**Data**: [Data]
-**Responsabile**: [Nome Responsabile]
+## General Information
+**Project**: [Project Name]
+**Version**: [Version]
+**Date**: [Date]
+**Manager**: [Manager's Name]
 
 ---
 
 ## 🎯 Scope Statement
 
-### Obiettivo del Progetto
-[Breve descrizione in 1-2 paragrafi di cosa il progetto intende realizzare]
+### Project Objective
+[Brief description in 1-2 paragraphs of what the project aims to achieve]
 
-### Giustificazione del Progetto
-[Spiegazione del perché questo progetto è necessario e quale problema risolve]
+### Project Justification
+[Explanation of why this project is necessary and what problem it solves]
 
 ---
 
-## ✅ In Scope (Cosa SARÀ incluso)
+## ✅ In Scope (What WILL be included)
 
-### Funzionalità Principali
-1. **[Nome Funzionalità 1]**
-   - [Descrizione dettagliata]
-   - [Criteri di accettazione principali]
+### Main Features
+1. **[Feature Name 1]**
+   - [Detailed description]
+   - [Main acceptance criteria]
 
-2. **[Nome Funzionalità 2]**
-   - [Descrizione dettagliata]
-   - [Criteri di accettazione principali]
+2. **[Feature Name 2]**
+   - [Detailed description]
+   - [Main acceptance criteria]
 
-3. **[Nome Funzionalità 3]**
-   - [Descrizione dettagliata]
-   - [Criteri di accettazione principali]
+3. **[Feature Name 3]**
+   - [Detailed description]
+   - [Main acceptance criteria]
 
-### Moduli/Componenti Inclusi
-- **[Modulo 1]**: [Descrizione e responsabilità]
-- **[Modulo 2]**: [Descrizione e responsabilità]
-- **[Modulo 3]**: [Descrizione e responsabilità]
+### Included Modules/Components
+- **[Module 1]**: [Description and responsibilities]
+- **[Module 2]**: [Description and responsibilities]
+- **[Module 3]**: [Description and responsibilities]
 
-### Integrazioni Incluse
-- **[Sistema 1]**: [Tipo integrazione e dati scambiati]
-- **[Sistema 2]**: [Tipo integrazione e dati scambiati]
-- **[Sistema 3]**: [Tipo integrazione e dati scambiati]
+### Included Integrations
+- **[System 1]**: [Integration type and data exchanged]
+- **[System 2]**: [Integration type and data exchanged]
+- **[System 3]**: [Integration type and data exchanged]
 
 ### Deliverables
-- [ ] **Applicazione Software**: [Descrizione e caratteristiche]
-- [ ] **Documentazione Tecnica**: [API docs, architecture docs, etc.]
-- [ ] **Documentazione Utente**: [User manuals, help system, etc.]
-- [ ] **Piano di Deployment**: [Procedure di rilascio]
-- [ ] **Piano di Training**: [Materiali formativi per utenti]
-- [ ] **Piano di Supporto**: [Documentazione per supporto post-go-live]
+- [ ] **Software Application**: [Description and features]
+- [ ] **Technical Documentation**: [API docs, architecture docs, etc.]
+- [ ] **User Documentation**: [User manuals, help system, etc.]
+- [ ] **Deployment Plan**: [Release procedures]
+- [ ] **Training Plan**: [User training materials]
+- [ ] **Support Plan**: [Documentation for post-go-live support]
 
 ---
 
-## ❌ Out of Scope (Cosa NON sarà incluso)
+## ❌ Out of Scope (What will NOT be included)
 
-### Funzionalità Escluse
-1. **[Funzionalità Esclusa 1]**
-   - Motivo esclusione: [Spiegazione]
-   - Possibile inclusione futura: [Sì/No e quando]
+### Excluded Features
+1. **[Excluded Feature 1]**
+   - Reason for exclusion: [Explanation]
+   - Possible future inclusion: [Yes/No and when]
 
-2. **[Funzionalità Esclusa 2]**
-   - Motivo esclusione: [Spiegazione]
-   - Possibile inclusione futura: [Sì/No e quando]
+2. **[Excluded Feature 2]**
+   - Reason for exclusion: [Explanation]
+   - Possible future inclusion: [Yes/No and when]
 
-3. **[Funzionalità Esclusa 3]**
-   - Motivo esclusione: [Spiegazione]
-   - Possibile inclusione futura: [Sì/No e quando]
+3. **[Excluded Feature 3]**
+   - Reason for exclusion: [Explanation]
+   - Possible future inclusion: [Yes/No and when]
 
-### Sistemi/Piattaforme Non Supportate
-- **[Sistema/Piattaforma 1]**: [Motivo esclusione]
-- **[Sistema/Piattaforma 2]**: [Motivo esclusione]
-- **[Sistema/Piattaforma 3]**: [Motivo esclusione]
+### Unsupported Systems/Platforms
+- **[System/Platform 1]**: [Reason for exclusion]
+- **[System/Platform 2]**: [Reason for exclusion]
+- **[System/Platform 3]**: [Reason for exclusion]
 
-### Servizi Non Inclusi
-- **Migration dei Dati**: [Se applicabile]
-- **Training Avanzato**: [Oltre quello base]
-- **Customizzazioni Specifiche**: [Per singoli utenti/dipartimenti]
-- **Supporto 24/7**: [Se non previsto]
-
----
-
-## 🏁 Criteri di Successo
-
-### Criteri di Completamento
-- [ ] Tutte le funzionalità in scope sono implementate e testate
-- [ ] Tutti i test di accettazione sono superati
-- [ ] La documentazione è completa e approvata
-- [ ] Il sistema è deployato in produzione
-- [ ] Gli utenti finali sono formati
-- [ ] Il periodo di hypercare è completato
-
-### Criteri di Qualità
-- **Performance**: [Metriche specifiche]
-- **Sicurezza**: [Standard da rispettare]
-- **Usabilità**: [Criteri UX]
-- **Affidabilità**: [Uptime e error rates]
+### Services Not Included
+- **Data Migration**: [If applicable]
+- **Advanced Training**: [Beyond the basic]
+- **Specific Customizations**: [For individual users/departments]
+- **24/7 Support**: [If not provided]
 
 ---
 
-## 📋 Assumptions (Assunzioni)
+## 🏁 Success Criteria
 
-### Assunzioni Tecniche
-- [Assunzione 1 su tecnologie o infrastruttura]
-- [Assunzione 2 su disponibilità di risorse]
-- [Assunzione 3 su integrazione con sistemi esistenti]
+### Completion Criteria
+- [ ] All in-scope features are implemented and tested
+- [ ] All acceptance tests are passed
+- [ ] Documentation is complete and approved
+- [ ] The system is deployed to production
+- [ ] End-users are trained
+- [ ] The hypercare period is completed
 
-### Assunzioni di Business
-- [Assunzione 1 su budget e risorse]
-- [Assunzione 2 su timeline e priorità]
-- [Assunzione 3 su supporto management]
-
-### Assunzioni sugli Utenti
-- [Assunzione 1 su competenze utenti]
-- [Assunzione 2 su disponibilità per testing]
-- [Assunzione 3 su adoption della soluzione]
-
----
-
-## ⚠️ Constraints (Vincoli)
-
-### Vincoli Tecnici
-- **Tecnologie**: [Tecnologie che devono/non devono essere usate]
-- **Piattaforme**: [Sistemi operativi o browser supportati]
-- **Performance**: [Limiti di performance richiesti]
-- **Sicurezza**: [Standard di sicurezza da rispettare]
-
-### Vincoli di Tempo
-- **Go-Live Date**: [Data fissa non negoziabile]
-- **Milestone Intermedie**: [Date chiave nel progetto]
-- **Finestre di Deployment**: [Quando è possibile fare rilasci]
-
-### Vincoli di Budget
-- **Budget Totale**: [Importo massimo disponibile]
-- **Budget per Fase**: [Ripartizione per milestone]
-- **Costi Ricorrenti**: [Limiti per licenze, cloud, etc.]
-
-### Vincoli Organizzativi
-- **Risorse Disponibili**: [Limitazioni sul team]
-- **Approvazioni Richieste**: [Processi di approval necessari]
-- **Policy Aziendali**: [Regole interne da rispettare]
+### Quality Criteria
+- **Performance**: [Specific metrics]
+- **Security**: [Standards to be met]
+- **Usability**: [UX criteria]
+- **Reliability**: [Uptime and error rates]
 
 ---
 
-## 📊 Work Breakdown Structure (WBS) - Alto Livello
+## 📋 Assumptions
+
+### Technical Assumptions
+- [Assumption 1 about technologies or infrastructure]
+- [Assumption 2 about resource availability]
+- [Assumption 3 about integration with existing systems]
+
+### Business Assumptions
+- [Assumption 1 about budget and resources]
+- [Assumption 2 about timeline and priorities]
+- [Assumption 3 about management support]
+
+### User Assumptions
+- [Assumption 1 about user skills]
+- [Assumption 2 about availability for testing]
+- [Assumption 3 about solution adoption]
+
+---
+
+## ⚠️ Constraints
+
+### Technical Constraints
+- **Technologies**: [Technologies that must/must not be used]
+- **Platforms**: [Supported operating systems or browsers]
+- **Performance**: [Required performance limits]
+- **Security**: [Security standards to be met]
+
+### Time Constraints
+- **Go-Live Date**: [Fixed non-negotiable date]
+- **Intermediate Milestones**: [Key dates in the project]
+- **Deployment Windows**: [When releases are possible]
+
+### Budget Constraints
+- **Total Budget**: [Maximum available amount]
+- **Budget per Phase**: [Breakdown by milestone]
+- **Recurring Costs**: [Limits for licenses, cloud, etc.]
+
+### Organizational Constraints
+- **Available Resources**: [Limitations on the team]
+- **Required Approvals**: [Necessary approval processes]
+- **Company Policies**: [Internal rules to be respected]
+
+---
+
+## 📊 Work Breakdown Structure (WBS) - High Level
 
 ### 1. Project Management
 - 1.1 Project Planning
@@ -156,9 +156,9 @@
 - 2.3 Requirements Validation
 
 ### 3. Development
-- 3.1 [Modulo 1] Development
-- 3.2 [Modulo 2] Development
-- 3.3 [Modulo 3] Development
+- 3.1 [Module 1] Development
+- 3.2 [Module 2] Development
+- 3.3 [Module 3] Development
 - 3.4 Integration Development
 
 ### 4. Testing
@@ -183,37 +183,37 @@
 ## 🔄 Change Management
 
 ### Change Control Process
-1. **Change Request Submission**: [Chi può sottomettere e come]
-2. **Impact Analysis**: [Chi valuta l'impatto]
-3. **Change Approval**: [Chi approva e criteri]
-4. **Implementation**: [Come vengono implementati i cambiamenti]
-5. **Communication**: [Come vengono comunicati]
+1. **Change Request Submission**: [Who can submit and how]
+2. **Impact Analysis**: [Who evaluates the impact]
+3. **Change Approval**: [Who approves and criteria]
+4. **Implementation**: [How changes are implemented]
+5. **Communication**: [How they are communicated]
 
 ### Change Control Board
-- **Chair**: [Nome e ruolo]
-- **Members**: [Lista membri]
-- **Meeting Frequency**: [Frequenza riunioni]
+- **Chair**: [Name and role]
+- **Members**: [List of members]
+- **Meeting Frequency**: [Meeting frequency]
 
 ---
 
-## 📝 Sign-off e Approvazioni
+## 📝 Sign-off and Approvals
 
-### Stakeholder che devono approvare questo documento:
+### Stakeholders who must approve this document:
 
-| Nome | Ruolo | Data Approvazione | Firma |
-|------|-------|-------------------|-------|
-| [Nome 1] | [Ruolo] | _____________ | _____________ |
-| [Nome 2] | [Ruolo] | _____________ | _____________ |
-| [Nome 3] | [Ruolo] | _____________ | _____________ |
+| Name     | Role    | Approval Date | Signature   |
+|----------|---------|---------------|-------------|
+| [Name 1] | [Role]  | _____________ | _____________ |
+| [Name 2] | [Role]  | _____________ | _____________ |
+| [Name 3] | [Role]  | _____________ | _____________ |
 
-### Storia delle Revisioni
+### Revision History
 
-| Versione | Data | Autore | Cambiamenti |
-|----------|------|---------|-------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale |
-| 1.1 | [Data] | [Nome] | [Descrizione cambiamenti] |
+| Version | Date   | Author | Changes             |
+|---------|--------|--------|---------------------|
+| 1.0     | [Date] | [Name] | Initial version     |
+| 1.1     | [Date] | [Name] | [Description of changes] |
 
 ---
 
-*Questo documento rappresenta l'accordo formale sullo scope del progetto.*
-*Qualsiasi modifica deve essere approvata attraverso il processo di change control.*
+*This document represents the formal agreement on the project scope.*
+*Any changes must be approved through the change control process.*

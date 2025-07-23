@@ -1,29 +1,29 @@
-# API Requirements - Specifiche API
+# API Requirements - API Specifications
 
-Questa cartella contiene i requisiti specifici per le API del sistema - endpoint, contratti dati, e specifiche tecniche per l'interfaccia applicativa.
+This folder contains the specific requirements for the system's APIs - endpoints, data contracts, and technical specifications for the application interface.
 
-## 📋 Scopo degli API Requirements
+## 📋 Purpose of API Requirements
 
-Gli **API Requirements** definiscono:
-- Endpoint e operazioni disponibili
-- Contratti dati (request/response)
-- Autenticazione e autorizzazione API
-- Gestione errori e status codes
-- Performance e rate limiting
-- Documentazione e versioning
+**API Requirements** define:
+- Endpoints and available operations
+- Data contracts (request/response)
+- API authentication and authorization
+- Error handling and status codes
+- Performance and rate limiting
+- Documentation and versioning
 
-## 🎯 Tipologie di API
+## 🎯 API Types
 
 ### REST APIs
-- Endpoint RESTful standard
+- Standard RESTful endpoints
 - HTTP methods (GET, POST, PUT, DELETE)
 - Resource-based URLs
 - JSON request/response
 
 ### GraphQL APIs
 - Schema definitions
-- Query e mutation operations
-- Subscription per real-time
+- Query and mutation operations
+- Subscriptions for real-time
 - Type system
 
 ### SOAP APIs
@@ -38,66 +38,66 @@ Gli **API Requirements** definiscono:
 - Service mesh integration
 - Event-driven APIs
 
-## 📝 Convenzioni per API Requirements
+## 📝 Conventions for API Requirements
 
-### Schema ID
+### ID Schema
 ```
 REQ-API-{AREA}-{NUMBER}
 ```
 
-**Dove**:
-- `API` = sempre per API requirements
-- `{AREA}` = Area funzionale (USER, AUTH, ORDER, etc.)
-- `{NUMBER}` = Numero progressivo (001, 002, etc.)
+**Where**:
+- `API` = always for API requirements
+- `{AREA}` = Functional area (USER, AUTH, ORDER, etc.)
+- `{NUMBER}` = Progressive number (001, 002, etc.)
 
-### Esempi ID
+### ID Examples
 ```
-REQ-API-AUTH-001       # API per autenticazione
-REQ-API-USER-001       # API per gestione utenti
-REQ-API-ORDER-001      # API per ordini
-REQ-API-PAYMENT-001    # API per pagamenti
-REQ-API-SEARCH-001     # API per ricerca
+REQ-API-AUTH-001       # API for authentication
+REQ-API-USER-001       # API for user management
+REQ-API-ORDER-001      # API for orders
+REQ-API-PAYMENT-001    # API for payments
+REQ-API-SEARCH-001     # API for search
 ```
 
-## 🏷️ Categorizzazione API
+## 🏷️ API Categorization
 
 ### Public APIs
-- **REQ-API-PUB-XXX**: API pubbliche per partner/clienti
-- Rate limiting stringente
-- Documentazione pubblica completa
-- Versioning rigoroso
+- **REQ-API-PUB-XXX**: Public APIs for partners/customers
+- Strict rate limiting
+- Complete public documentation
+- Rigorous versioning
 
 ### Private APIs
-- **REQ-API-PRIV-XXX**: API interne per microservizi
-- Performance ottimizzate
-- Documentazione interna
-- Evoluzione più flessibile
+- **REQ-API-PRIV-XXX**: Internal APIs for microservices
+- Optimized performance
+- Internal documentation
+- More flexible evolution
 
 ### Partner APIs
-- **REQ-API-PART-XXX**: API per partner business
-- Autenticazione forte
-- SLA definiti
-- Monitoring dedicato
+- **REQ-API-PART-XXX**: APIs for business partners
+- Strong authentication
+- Defined SLAs
+- Dedicated monitoring
 
 ### Admin APIs
-- **REQ-API-ADMIN-XXX**: API per amministrazione
-- Sicurezza massima
-- Audit logging completo
-- Accesso limitato
+- **REQ-API-ADMIN-XXX**: APIs for administration
+- Maximum security
+- Complete audit logging
+- Limited access
 
-## ✅ Quality Gates API
+## ✅ API Quality Gates
 
 ### Design Quality
-- [ ] RESTful design principles seguiti
-- [ ] Resource naming consistente
-- [ ] HTTP methods utilizzati correttamente
-- [ ] Status codes appropriati
-- [ ] Error handling standardizzato
+- [ ] RESTful design principles followed
+- [ ] Consistent resource naming
+- [ ] HTTP methods used correctly
+- [ ] Appropriate status codes
+- [ ] Standardized error handling
 
 ### Documentation Quality
-- [ ] OpenAPI/Swagger specification completa
-- [ ] Esempi per ogni endpoint
-- [ ] Error scenarios documentati
+- [ ] Complete OpenAPI/Swagger specification
+- [ ] Examples for each endpoint
+- [ ] Error scenarios documented
 - [ ] Authentication clearly explained
 - [ ] Rate limiting policies documented
 
@@ -188,4 +188,4 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 
 ---
 
-*Le API sono l'interfaccia del tuo sistema. Progettale con cura per garantire usabilità, sicurezza e manutenibilità.*
+*APIs are the interface of your system. Design them carefully to ensure usability, security, and maintainability.*

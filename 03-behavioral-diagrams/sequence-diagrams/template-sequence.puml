@@ -2,23 +2,23 @@
 !define PARTICIPANT actor
 !define OBJECT entity
 
-title Interazione [Nome Scenario] - Diagramma di Sequenza
+title [Scenario Name] Interaction - Sequence Diagram
 
-' Definizione dei partecipanti
-actor Utente as User
+' Participant definition
+actor User
 participant "Frontend\n(React/Vue)" as FE
 participant "API Gateway" as API
 participant "Service Layer" as Service
 participant "Database" as DB
 
-' Attivazione automatica
+' Automatic activation
 autonumber
 
-' Scenario principale
-User -> FE : richiesta operazione
+' Main scenario
+User -> FE : operation request
 activate FE
 
-FE -> API : POST /api/operazione
+FE -> API : POST /api/operation
 activate API
 
 API -> Service : processOperation()
@@ -26,7 +26,7 @@ activate Service
 
 Service -> DB : INSERT/UPDATE
 activate DB
-DB --> Service : risultato
+DB --> Service : result
 deactivate DB
 
 Service --> API : response
@@ -35,34 +35,34 @@ deactivate Service
 API --> FE : JSON response
 deactivate API
 
-FE --> User : mostra risultato
+FE --> User : show result
 deactivate FE
 
-' Scenario alternativo (errore)
+' Alternative scenario (error)
 |||
-note over User, DB : Scenario alternativo - Errore
+note over User, DB : Alternative scenario - Error
 |||
 
-User -> FE : richiesta invalida
+User -> FE : invalid request
 activate FE
 
-FE -> API : POST /api/operazione (dati invalidi)
+FE -> API : POST /api/operation (invalid data)
 activate API
 
 API --> FE : 400 Bad Request
 deactivate API
 
-FE --> User : messaggio errore
+FE --> User : error message
 deactivate FE
 
-' Note esplicative
+' Explanatory notes
 note right of Service
-  Il Service Layer contiene
-  la logica di business
+  The Service Layer contains
+  the business logic
 end note
 
 note left of DB
-  Database persistente
+  Persistent database
   (MySQL, PostgreSQL, etc.)
 end note
 
