@@ -1,6 +1,6 @@
 # US-XXX: [Titolo User Story]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: US-XXX  
 **Epic**: [Nome Epic]  
 **Priorità**: Alta | Media | Bassa  
@@ -11,7 +11,7 @@
 
 ---
 
-## 👤 User Story
+## User Story
 
 **Come** [tipo di utente]  
 **Voglio** [funzionalità/obiettivo]  
@@ -22,7 +22,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione
+## Criteri di Accettazione
 
 ### Scenario 1: [Nome scenario principale]
 - **Dato che** [precondizione]
@@ -41,7 +41,7 @@
 
 ---
 
-## 🧪 Test Cases
+## Test Cases
 
 ### Test Case 1: [Nome test case]
 **Obiettivo**: [Cosa stiamo testando]
@@ -73,7 +73,7 @@
 
 ---
 
-## 🎨 Design & UX
+## Design & UX
 
 ### Wireframes/Mockups
 - [ ] [Link a wireframe/mockup]
@@ -89,7 +89,7 @@
 
 ---
 
-## 🔧 Note Tecniche
+## Note Tecniche
 
 ### Implementazione
 **Componenti coinvolti**:
@@ -114,7 +114,7 @@
 
 ---
 
-## 🔗 Dipendenze
+## Dipendenze
 
 ### User Stories
 - **US-XXX**: [Titolo] - [Tipo dipendenza]
@@ -130,7 +130,7 @@
 
 ---
 
-## ⚠️ Rischi e Considerazioni
+## Rischi e Considerazioni
 
 ### Rischi Identificati
 - **[Rischio 1]**: [Descrizione e impatto]
@@ -146,7 +146,7 @@
 
 ---
 
-## 📝 Definition of Ready Checklist
+## Definition of Ready Checklist
 
 - [ ] User story scritta in formato "Come... Voglio... Per..."
 - [ ] Criteri di accettazione chiari e testabili
@@ -158,7 +158,7 @@
 
 ---
 
-## ✅ Definition of Done Checklist
+## Definition of Done Checklist
 
 ### Development
 - [ ] Codice implementato secondo criteri di accettazione
@@ -185,7 +185,7 @@
 
 ---
 
-## 📊 Tracking
+## Tracking
 
 ### Story Points Breakdown
 - **Planning**: [Points] punti
@@ -200,7 +200,7 @@
 
 ---
 
-## 💬 Comments & Notes
+## Comments & Notes
 
 ### Development Notes
 [Note tecniche durante lo sviluppo]
@@ -213,7 +213,7 @@
 
 ---
 
-## 📅 Storia della User Story
+## Storia della User Story
 
 ### Change Log
 | Data | Versione | Autore | Cambiamenti |

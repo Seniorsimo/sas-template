@@ -8,7 +8,7 @@
 
 ---
 
-## 🎯 Scope Statement
+## Scope Statement
 
 ### Obiettivo del Progetto
 [Breve descrizione in 1-2 paragrafi di cosa il progetto intende realizzare]
@@ -18,7 +18,7 @@
 
 ---
 
-## ✅ In Scope (Cosa SARÀ incluso)
+## In Scope (Cosa SARÀ incluso)
 
 ### Funzionalità Principali
 1. **[Nome Funzionalità 1]**
@@ -53,7 +53,7 @@
 
 ---
 
-## ❌ Out of Scope (Cosa NON sarà incluso)
+## Out of Scope (Cosa NON sarà incluso)
 
 ### Funzionalità Escluse
 1. **[Funzionalità Esclusa 1]**
@@ -81,7 +81,7 @@
 
 ---
 
-## 🏁 Criteri di Successo
+## Criteri di Successo
 
 ### Criteri di Completamento
 - [ ] Tutte le funzionalità in scope sono implementate e testate
@@ -99,7 +99,7 @@
 
 ---
 
-## 📋 Assumptions (Assunzioni)
+## Assumptions (Assunzioni)
 
 ### Assunzioni Tecniche
 - [Assunzione 1 su tecnologie o infrastruttura]
@@ -118,7 +118,7 @@
 
 ---
 
-## ⚠️ Constraints (Vincoli)
+## Constraints (Vincoli)
 
 ### Vincoli Tecnici
 - **Tecnologie**: [Tecnologie che devono/non devono essere usate]
@@ -143,7 +143,7 @@
 
 ---
 
-## 📊 Work Breakdown Structure (WBS) - Alto Livello
+## Work Breakdown Structure (WBS) - Alto Livello
 
 ### 1. Project Management
 - 1.1 Project Planning
@@ -180,7 +180,7 @@
 
 ---
 
-## 🔄 Change Management
+## Change Management
 
 ### Change Control Process
 1. **Change Request Submission**: [Chi può sottomettere e come]
@@ -196,7 +196,7 @@
 
 ---
 
-## 📝 Sign-off e Approvazioni
+## Sign-off e Approvazioni
 
 ### Stakeholder che devono approvare questo documento:
 

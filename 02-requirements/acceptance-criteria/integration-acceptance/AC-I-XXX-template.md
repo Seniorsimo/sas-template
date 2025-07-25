@@ -1,6 +1,6 @@
 # AC-I-XXX: [Titolo Criterio di Accettazione Integrazione]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: AC-I-XXX  
 **Categoria**: API Integration | System Integration | Data Integration | Service Integration  
 **Requisito Collegato**: [REQ-I-XXX] / [REQ-F-XXX]  
@@ -11,7 +11,7 @@
 
 ---
 
-## 📝 Descrizione Integrazione
+## Descrizione Integrazione
 
 ### Sommario
 [Breve descrizione dell'integrazione da testare]
@@ -33,7 +33,7 @@
 
 ---
 
-## 🔗 Integration Specifications
+## Integration Specifications
 
 ### Connection Details
 **Endpoint URL**: [URL endpoint se REST/SOAP]  
@@ -58,7 +58,7 @@
 
 ---
 
-## 🧪 Scenari di Test Integrazione
+## Scenari di Test Integrazione
 
 ### Scenario 1: Happy Path - Successful Integration
 **Objective**: Verificare funzionamento normale dell'integrazione
@@ -120,7 +120,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione Dettagliati
+## Criteri di Accettazione Dettagliati
 
 ### Functional Integration Criteria
 - [ ] **Data Transfer**: Dati trasferiti correttamente in entrambe le direzioni
@@ -160,7 +160,7 @@
 
 ---
 
-## 🔧 Test Configuration
+## Test Configuration
 
 ### Test Environment Setup
 **Source System**: [Configurazione sistema sorgente]  
@@ -183,7 +183,7 @@
 
 ---
 
-## 📊 Integration Monitoring
+## Integration Monitoring
 
 ### Key Metrics
 **Success Rate**: [% di transazioni completate con successo]  
@@ -206,7 +206,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Requirements Traceability
 **Functional Requirements**: [REQ-F-XXX] - [Requisito funzionale collegato]  
@@ -227,7 +227,7 @@
 
 ---
 
-## ⚠️ Risks e Dependencies
+## Risks e Dependencies
 
 ### Integration Risks
 - **[Rischio 1]**: [Es. Dipendenza da sistema esterno instabile]  
@@ -254,7 +254,7 @@
 
 ---
 
-## 📅 Test Execution Plan
+## Test Execution Plan
 
 ### Pre-execution Checklist
 - [ ] Test environment setup completato
@@ -294,7 +294,7 @@
 
 ---
 
-## 📈 Test Results
+## Test Results
 
 ### Test Execution Summary
 | Test Phase | Start Date | End Date | Status | Pass Rate | Issues Found |
@@ -320,7 +320,7 @@
 
 ---
 
-## 🔧 Configuration Management
+## Configuration Management
 
 ### Environment Configurations
 **Development**: [Config specifiche per dev]  
@@ -342,7 +342,7 @@
 
 ---
 
-## ✅ Sign-off e Acceptance
+## Sign-off e Acceptance
 
 ### Technical Review Checklist
 - [ ] Integration pattern appropriato implementato
@@ -372,7 +372,7 @@
 
 ---
 
-## 📝 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impact su Integration |
 |----------|------|--------|-------------|----------------------|
@@ -381,7 +381,7 @@
 
 ---
 
-## 📎 Supporting Documentation
+## Supporting Documentation
 
 ### Integration Documentation
 - [Link a integration design document]

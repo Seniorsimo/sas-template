@@ -1,6 +1,6 @@
 # AC-F-XXX: [Titolo Criterio di Accettazione Funzionale]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: AC-F-XXX  
 **Requisito Collegato**: [REQ-F-XXX]  
 **User Story Collegata**: [US-XXX]  
@@ -11,7 +11,7 @@
 
 ---
 
-## 📝 Descrizione
+## Descrizione
 
 ### Sommario
 [Breve descrizione di cosa viene testato e validato]
@@ -24,7 +24,7 @@
 
 ---
 
-## 🎯 Scenario Principale
+## Scenario Principale
 
 ### Happy Path
 **Given** [precondizione - stato iniziale del sistema]  
@@ -41,7 +41,7 @@
 
 ---
 
-## 🔄 Scenari Alternativi
+## Scenari Alternativi
 
 ### Scenario 2: [Nome scenario alternativo]
 **Given** [precondizione diversa]  
@@ -57,7 +57,7 @@
 
 ---
 
-## ❌ Scenari di Errore
+## Scenari di Errore
 
 ### Error Scenario 1: [Tipo di errore]
 **Given** [precondizione che porta all'errore]  
@@ -73,7 +73,7 @@
 
 ---
 
-## 🏗️ Edge Cases
+## Edge Cases
 
 ### Edge Case 1: [Caso limite]
 **Given** [condizione al limite]  
@@ -87,7 +87,7 @@
 
 ---
 
-## ✅ Criteri Dettagliati di Accettazione
+## Criteri Dettagliati di Accettazione
 
 ### Criteri Funzionali
 - [ ] **[Criterio 1]**: [Descrizione specifica e misurabile]
@@ -113,7 +113,7 @@
 
 ---
 
-## 🧪 Test Data Requirements
+## Test Data Requirements
 
 ### Dati di Test Necessari
 **Utenti**:
@@ -136,7 +136,7 @@
 
 ---
 
-## 🏭 Environment Requirements
+## Environment Requirements
 
 ### Ambiente di Test
 **Environment Type**: [Development | Staging | UAT | Production-like]  
@@ -151,7 +151,7 @@
 
 ---
 
-## 📊 Verification Methods
+## Verification Methods
 
 ### Manual Testing
 **Steps**:
@@ -173,7 +173,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Upstream Traceability
 **Business Objectives**: [OBJ-XXX] - [Riferimento a obiettivi business]  
@@ -192,7 +192,7 @@
 
 ---
 
-## ⚠️ Risks and Mitigation
+## Risks and Mitigation
 
 ### Testing Risks
 - **[Rischio 1]**: [Descrizione del rischio]  
@@ -207,7 +207,7 @@
 
 ---
 
-## 📅 Testing Schedule
+## Testing Schedule
 
 ### Timeline
 - **Test Preparation**: [Data inizio] - [Data fine]
@@ -223,7 +223,7 @@
 
 ---
 
-## 📋 Test Results
+## Test Results
 
 ### Execution Summary
 | Test Run | Date | Tester | Status | Notes |
@@ -244,7 +244,7 @@
 
 ---
 
-## ✅ Sign-off
+## Sign-off
 
 ### Review Checklist
 - [ ] Criteri chiari e testabili
@@ -264,7 +264,7 @@
 
 ---
 
-## 📝 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impatto |
 |----------|------|--------|-------------|---------|
@@ -273,7 +273,7 @@
 
 ---
 
-## 📎 Attachments & References
+## Attachments & References
 
 ### Supporting Documents
 - [Link a mockup/wireframe]

@@ -1,6 +1,6 @@
 # REQ-F-XXX: [Titolo Requisito Core]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: REQ-F-XXX  
 **Categoria**: Core Feature  
 **Modulo/Sistema**: [Nome modulo]  
@@ -11,7 +11,7 @@
 
 ---
 
-## 📝 Descrizione
+## Descrizione
 
 ### Sommario
 [Breve descrizione di cosa il sistema deve fare]
@@ -24,7 +24,7 @@
 
 ---
 
-## 👥 Stakeholders
+## Stakeholders
 
 ### Richiedente
 **Nome**: [Stakeholder che ha richiesto]  
@@ -37,7 +37,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione
+## Criteri di Accettazione
 
 ### Scenario Principale
 **Given** [precondizione]  
@@ -61,7 +61,7 @@
 
 ---
 
-## 🔧 Specifiche Tecniche
+## Specifiche Tecniche
 
 ### Input
 **Formato**: [Tipo di dati in input]  
@@ -85,7 +85,7 @@
 
 ---
 
-## 📊 Requisiti Non-Funzionali Collegati
+## Requisiti Non-Funzionali Collegati
 
 ### Performance
 - **Response Time**: [Tempo massimo risposta]
@@ -104,7 +104,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Obiettivi Business
 - **[OBJ-XXX]**: [Riferimento a obiettivi da 01-project-definition]
@@ -128,7 +128,7 @@
 
 ---
 
-## 🧪 Strategia di Test
+## Strategia di Test
 
 ### Unit Testing
 - [ ] [Test unitario 1]
@@ -151,7 +151,7 @@
 
 ---
 
-## 📋 Mockups e Design
+## Mockups e Design
 
 ### UI Mockups
 - [ ] [Link a wireframe/mockup]
@@ -166,7 +166,7 @@
 
 ---
 
-## ⚠️ Rischi e Mitigation
+## Rischi e Mitigation
 
 ### Rischi Tecnici
 - **[Rischio 1]**: [Descrizione]  
@@ -181,7 +181,7 @@
 
 ---
 
-## 📅 Planning
+## Planning
 
 ### Stima Effort
 - **Analysis**: [Giorni persona]
@@ -198,7 +198,7 @@
 
 ---
 
-## 📝 Note e Commenti
+## Note e Commenti
 
 ### Note Implementative
 [Considerazioni specifiche per l'implementazione]
@@ -212,7 +212,7 @@
 
 ---
 
-## ✅ Sign-off
+## Sign-off
 
 ### Review Checklist
 - [ ] Requisito chiaro e non ambiguo
@@ -231,7 +231,7 @@
 
 ---
 
-## 📊 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti |
 |----------|------|--------|-------------|

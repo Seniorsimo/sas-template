@@ -1,6 +1,6 @@
 # REQ-NF-[CAT]-XXX: [Titolo Requisito Non-Funzionale]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: REQ-NF-[CAT]-XXX  
 **Categoria**: Performance | Security | Usability | Reliability | Scalability | Compatibility  
 **Sottocategoria**: [Specifica più dettagliata]  
@@ -10,7 +10,7 @@
 
 ---
 
-## 📝 Descrizione
+## Descrizione
 
 ### Sommario
 [Breve descrizione del requisito qualitativo]
@@ -26,7 +26,7 @@
 
 ---
 
-## 📊 Specifiche Quantitative
+## Specifiche Quantitative
 
 ### Metrica Primaria
 **Nome Metrica**: [Nome della metrica principale]  
@@ -48,7 +48,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione
+## Criteri di Accettazione
 
 ### Criterio Principale
 **Given** [condizioni iniziali]  
@@ -73,7 +73,7 @@
 
 ---
 
-## 🔧 Specifiche Tecniche
+## Specifiche Tecniche
 
 ### Componenti Impattati
 - **[Componente 1]**: [Tipo di impatto e requisiti]
@@ -97,7 +97,7 @@
 
 ---
 
-## 🧪 Piano di Verifica
+## Piano di Verifica
 
 ### Metodi di Testing
 **Tipo di Test**: [Load/Security/Usability/etc.]  
@@ -126,7 +126,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Obiettivi Business
 - **[OBJ-XXX]**: [Collegamento con obiettivi business]
@@ -146,7 +146,7 @@
 
 ---
 
-## ⚙️ Design & Architecture Implications
+## Design & Architecture Implications
 
 ### Decisioni Architetturali
 - **[Decisione 1]**: [Impatto architetturale]
@@ -162,7 +162,7 @@
 
 ---
 
-## 💰 Costi e Trade-offs
+## Costi e Trade-offs
 
 ### Costi di Implementazione
 **Development**: [Stima effort di sviluppo]  
@@ -181,7 +181,7 @@
 
 ---
 
-## ⚠️ Rischi e Mitigazioni
+## Rischi e Mitigazioni
 
 ### Rischi Tecnici
 - **[Rischio 1]**: [Probabilità: H/M/L] - [Impatto: H/M/L]  
@@ -196,7 +196,7 @@
 
 ---
 
-## 📅 Timeline & Milestones
+## Timeline & Milestones
 
 ### Fase di Analysis
 - **Requirements Finalization**: [Data]
@@ -216,7 +216,7 @@
 
 ---
 
-## 📈 Success Metrics
+## Success Metrics
 
 ### Metriche di Implementazione
 - **[Metrica 1]**: [Baseline] → [Target] → [Attuale]
@@ -232,7 +232,7 @@
 
 ---
 
-## 📝 Note e Considerazioni
+## Note e Considerazioni
 
 ### Note Implementative
 [Considerazioni specifiche per l'implementazione]
@@ -249,7 +249,7 @@
 
 ---
 
-## ✅ Sign-off e Validazione
+## Sign-off e Validazione
 
 ### Review Checklist
 - [ ] Requisito quantificabile e misurabile
@@ -269,7 +269,7 @@
 
 ---
 
-## 📊 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impatto |
 |----------|------|--------|-------------|---------|

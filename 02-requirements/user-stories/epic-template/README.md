@@ -1,6 +1,6 @@
 # Epic: [Nome Epic]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **Epic ID**: EPIC-XXX  
 **Nome**: [Nome Epic]  
 **Descrizione**: [Descrizione di alto livello dell'epic]  
@@ -9,7 +9,7 @@
 
 ---
 
-## 🎯 Obiettivi dell'Epic
+## Obiettivi dell'Epic
 
 ### Valore di Business
 [Descrivi il valore che questo epic porta al business]
@@ -23,7 +23,7 @@
 
 ---
 
-## 📊 Metriche di Successo
+## Metriche di Successo
 
 ### KPI Primari
 - **[Metrica 1]**: [Valore baseline] → [Valore target]
@@ -35,17 +35,17 @@
 
 ---
 
-## 📝 User Stories Incluse
+## User Stories Incluse
 
-### 🔴 Alta Priorità
-- [ ] **US-XXX**: [Titolo user story] - [Story Points]
-- [ ] **US-XXX**: [Titolo user story] - [Story Points]
-
-### 🟡 Media Priorità
+### Alta Priorità
 - [ ] **US-XXX**: [Titolo user story] - [Story Points]
 - [ ] **US-XXX**: [Titolo user story] - [Story Points]
 
-### 🟢 Bassa Priorità
+### Media Priorità
+- [ ] **US-XXX**: [Titolo user story] - [Story Points]
+- [ ] **US-XXX**: [Titolo user story] - [Story Points]
+
+### Bassa Priorità
 - [ ] **US-XXX**: [Titolo user story] - [Story Points]
 - [ ] **US-XXX**: [Titolo user story] - [Story Points]
 
@@ -54,7 +54,7 @@
 
 ---
 
-## 🔗 Dipendenze
+## Dipendenze
 
 ### Dipendenze Interne
 - **[Epic/Feature]**: [Descrizione dipendenza]
@@ -66,7 +66,7 @@
 
 ---
 
-## 📋 Criteri di Accettazione Epic
+## Criteri di Accettazione Epic
 
 ### Must Have
 - [ ] [Criterio fondamentale 1]
@@ -83,7 +83,7 @@
 
 ---
 
-## 🎨 Design & UX
+## Design & UX
 
 ### Wireframes/Mockups
 - [ ] [Link a wireframe 1]
@@ -98,7 +98,7 @@
 
 ---
 
-## 🔧 Considerazioni Tecniche
+## Considerazioni Tecniche
 
 ### Architettura Impattata
 - **[Componente 1]**: [Tipo di impatto]
@@ -114,7 +114,7 @@
 
 ---
 
-## ⚠️ Rischi e Mitigazioni
+## Rischi e Mitigazioni
 
 ### Rischi Identificati
 - **[Rischio 1]**: [Probabilità] - [Impatto]  
@@ -125,7 +125,7 @@
 
 ---
 
-## 📅 Timeline
+## Timeline
 
 ### Milestone
 - **[Milestone 1]**: [Data] - [Descrizione]
@@ -139,7 +139,7 @@
 
 ---
 
-## 🔍 Testing Strategy
+## Testing Strategy
 
 ### Test Types
 - [ ] **Unit Testing**: [Coverage target]
@@ -154,7 +154,7 @@
 
 ---
 
-## 📖 Documentazione
+## Documentazione
 
 ### Documenti da Produrre
 - [ ] **API Documentation**: [Se applicable]
@@ -164,7 +164,7 @@
 
 ---
 
-## ✅ Definition of Done Epic
+## Definition of Done Epic
 
 ### Criteri di Completamento
 - [ ] Tutte le user stories sono "Done"
@@ -182,7 +182,7 @@
 
 ---
 
-## 📝 Note e Modifiche
+## Note e Modifiche
 
 ### Change Log
 | Data | Versione | Autore | Cambiamenti |

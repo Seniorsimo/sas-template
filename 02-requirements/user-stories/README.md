@@ -2,7 +2,7 @@
 
 Questa cartella contiene tutte le user stories del progetto, organizzate per epic.
 
-## 📁 Struttura Organizzativa
+## Struttura Organizzativa
 
 ### Organizzazione per Epic
 Ogni epic ha la sua cartella dedicata:
@@ -17,7 +17,7 @@ user-stories/
 └── README.md                  (Questo file)
 ```
 
-## 🏷️ Convenzioni di Naming
+## Convenzioni di Naming
 
 ### Epic
 - **Cartelle**: `epic-[nome-breve]` (es. `epic-authentication`, `epic-user-management`)
@@ -28,7 +28,7 @@ user-stories/
 - **ID**: Numerazione progressiva globale (US-001, US-002, etc.)
 - **Titolo**: Descrittivo e conciso (es. `US-001-login-utente.md`)
 
-## 📋 Template User Story
+## Template User Story
 
 Ogni user story deve seguire questo formato:
 
@@ -67,7 +67,7 @@ Ogni user story deve seguire questo formato:
 - **Casi d'uso**: [UC-XXX]
 ```
 
-## 🎯 Prioritizzazione
+## Prioritizzazione
 
 ### Criteri di Priorità
 - **Alta**: Funzionalità core per MVP, blockers
@@ -82,7 +82,7 @@ Ogni user story deve seguire questo formato:
 - **8**: Molto complessa (2 settimane)
 - **13**: Epic troppo grande, da spezzare
 
-## 🔄 Workflow User Stories
+## Workflow User Stories
 
 ### 1. Creazione
 1. Crea cartella epic se non esiste
@@ -103,7 +103,7 @@ Ogni user story deve seguire questo formato:
 4. Testing e validazione
 5. Status → "Done"
 
-## 📊 Tracking e Metriche
+## Tracking e Metriche
 
 ### Definition of Ready (DoR)
 - [ ] User story scritta in formato standard
@@ -119,16 +119,16 @@ Ogni user story deve seguire questo formato:
 - [ ] Code review completata
 - [ ] Documentazione aggiornata
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Scrivi from user perspective** - sempre dal punto di vista dell'utente
 - **Mantieni stories indipendenti** - evita dipendenze strette
 - **Usa INVEST criteria** (Independent, Negotiable, Valuable, Estimable, Small, Testable)
 - **Include acceptance criteria specifici** e misurabili
 - **Aggiorna regolarmente** status e dettagli
 
-### ❌ Don'ts
+### Don'ts
 - **Non scrivere task tecnici** come user stories
 - **Non creare stories troppo grandi** (>8 story points)
 - **Non omettere il valore** per l'utente

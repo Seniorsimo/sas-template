@@ -2,11 +2,11 @@
 
 Questa cartella contiene tutti i requisiti non-funzionali del sistema, organizzati per categoria di qualità.
 
-## 📋 Panoramica
+## Panoramica
 
 I **Requisiti Non-Funzionali** definiscono le qualità del sistema: come deve performare, quanto deve essere sicuro, usabile, affidabile, etc. Questi requisiti sono spesso chiamati "ilities" e sono critici per il successo del sistema.
 
-## 📁 Struttura Organizzativa
+## Struttura Organizzativa
 
 ```
 non-functional-requirements/
@@ -37,7 +37,7 @@ non-functional-requirements/
 └── README.md                         (Questo file)
 ```
 
-## 🏷️ Convenzioni di Naming
+## Convenzioni di Naming
 
 ### ID Requisiti per Categoria
 - **Performance**: `REQ-NF-PERF-XXX`
@@ -57,51 +57,51 @@ non-functional-requirements/
 - `REQ-NF-SEC-001-authentication.md`
 - `REQ-NF-USA-001-accessibility.md`
 
-## 📊 Categorie Principali
+## Categorie Principali
 
-### 🚀 Performance
+### Performance
 Velocità, throughput, utilizzo risorse:
 - Tempo di risposta
 - Throughput (operazioni/secondo)
 - Utilizzo CPU/memoria
 - Capacità di carico
 
-### 🔒 Security
+### Security
 Protezione dati e sistema:
 - Autenticazione e autorizzazione
 - Crittografia dati
 - Audit e logging
 - Protezione attacchi
 
-### 👤 Usability
+### Usability
 Facilità d'uso e user experience:
 - Accessibilità (WCAG)
 - User interface design
 - Learnability
 - User satisfaction
 
-### 🔧 Reliability
+### Reliability
 Affidabilità e disponibilità:
 - Uptime/disponibilità
 - MTBF (Mean Time Between Failures)
 - MTTR (Mean Time To Recovery)
 - Error handling
 
-### 📈 Scalability
+### Scalability
 Capacità di crescita:
 - Scalabilità orizzontale
 - Scalabilità verticale
 - Gestione del carico
 - Elasticità
 
-### 🔄 Compatibility
+### Compatibility
 Interoperabilità e compatibilità:
 - Browser support
 - Sistema operativo
 - Versioni software
 - Standard e protocolli
 
-## 📋 Template Requisito Non-Funzionale
+## Template Requisito Non-Funzionale
 
 ```markdown
 # REQ-NF-[CAT]-XXX: [Titolo Requisito]
@@ -128,7 +128,7 @@ Interoperabilità e compatibilità:
 **User Stories**: [US-XXX]
 ```
 
-## 🎯 Prioritizzazione
+## Prioritizzazione
 
 ### Critical
 Requisiti senza i quali il sistema è inutilizzabile
@@ -154,7 +154,7 @@ Requisiti nice-to-have
 - Optimizations
 - Future compatibility
 
-## 📏 SMART Criteria
+## SMART Criteria
 
 I requisiti non-funzionali devono essere **SMART**:
 
@@ -164,7 +164,7 @@ I requisiti non-funzionali devono essere **SMART**:
 - **Relevant**: Rilevante per il business
 - **Time-bound**: Con deadline chiare
 
-## 🧪 Metodi di Verifica
+## Metodi di Verifica
 
 ### Performance Testing
 - Load testing
@@ -190,7 +190,7 @@ I requisiti non-funzionali devono essere **SMART**:
 - Availability monitoring
 - Chaos engineering
 
-## 📊 Quality Attributes Matrix
+## Quality Attributes Matrix
 
 | Quality Attribute | Importanza | Difficoltà | Priorità |
 |-------------------|------------|------------|----------|
@@ -200,7 +200,7 @@ I requisiti non-funzionali devono essere **SMART**:
 | Reliability | High | Medium | High |
 | Scalability | Medium | High | Medium |
 
-## 🔗 Tracciabilità NFR
+## Tracciabilità NFR
 
 ### Forward Traceability
 NFR → Architecture Decisions → Design Patterns → Implementation → Testing
@@ -211,23 +211,23 @@ Business Goals → User Needs → Quality Attributes → NFR
 ### Horizontal Traceability
 NFR ↔ Functional Requirements ↔ User Stories ↔ Test Cases
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Quantifica sempre** quando possibile
 - **Usa metriche standard** dell'industria
 - **Collega agli obiettivi** di business
 - **Pianifica testing specifico** per ogni NFR
 - **Considera trade-offs** tra qualità diverse
 
-### ❌ Don'ts
+### Don'ts
 - **Non essere vago** ("il sistema deve essere veloce")
 - **Non ignorare** le limitazioni tecniche
 - **Non dimenticare** il costo di implementazione
 - **Non sottovalutare** l'impatto su altri requisiti
 - **Non rimandare** la validazione
 
-## 🔄 NFR Lifecycle
+## NFR Lifecycle
 
 ### 1. Identification
 - Business analysis

@@ -1,6 +1,6 @@
 # AC-UA-XXX: [Titolo Criterio di Accettazione Utente]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: AC-UA-XXX  
 **User Story**: [US-XXX] - [Titolo User Story collegata]  
 **Epic**: [EP-XXX] - [Epic di riferimento]  
@@ -12,7 +12,7 @@
 
 ---
 
-## 📝 Descrizione User Acceptance
+## Descrizione User Acceptance
 
 ### User Story Context
 **As a** [tipo di utente]  
@@ -30,7 +30,7 @@
 
 ---
 
-## 👥 Utenti Target
+## Utenti Target
 
 ### Primary User Persona
 **Name**: [Nome Persona]  
@@ -50,7 +50,7 @@
 
 ---
 
-## 🎯 Scenari di Accettazione Utente
+## Scenari di Accettazione Utente
 
 ### Scenario 1: First-Time User Experience
 **User Context**: Nuovo utente che usa la funzionalità per la prima volta
@@ -145,7 +145,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione Dettagliati
+## Criteri di Accettazione Dettagliati
 
 ### Usability Criteria
 - [ ] **Task Success Rate**: >= [%] utenti completano task principali
@@ -183,7 +183,7 @@
 
 ---
 
-## 🧪 UAT Test Scenarios
+## UAT Test Scenarios
 
 ### Test Scenario Matrix
 | Scenario | User Type | Device | Priority | Estimated Time |
@@ -239,7 +239,7 @@
 
 ---
 
-## 👥 UAT Team e Roles
+## UAT Team e Roles
 
 ### UAT Coordinator
 **Name**: [Nome]  
@@ -264,7 +264,7 @@
 
 ---
 
-## 🔧 UAT Environment
+## UAT Environment
 
 ### Environment Setup
 **Environment Type**: [Production-like | Dedicated UAT | Staging]  
@@ -286,7 +286,7 @@
 
 ---
 
-## 📊 Success Metrics
+## Success Metrics
 
 ### Quantitative Metrics
 **Task Success Rate**: Target >= [%]  
@@ -309,7 +309,7 @@
 
 ---
 
-## 📅 UAT Schedule
+## UAT Schedule
 
 ### Pre-UAT Phase
 - **UAT Planning**: [Data inizio] - [Data fine]
@@ -338,7 +338,7 @@
 
 ---
 
-## 📈 Test Results e Feedback
+## Test Results e Feedback
 
 ### Test Execution Summary
 | Test Session | Date | Participants | Scenarios Tested | Pass Rate | Issues Found |
@@ -368,7 +368,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Business Requirements
 **Business Objectives**: [OBJ-XXX] - [Obiettivo business]  
@@ -390,7 +390,7 @@
 
 ---
 
-## ⚠️ Risks e Mitigation
+## Risks e Mitigation
 
 ### UAT Execution Risks
 - **[Rischio 1]**: [Es. User availability limitata]  
@@ -417,7 +417,7 @@
 
 ---
 
-## ✅ Sign-off e Acceptance
+## Sign-off e Acceptance
 
 ### UAT Completion Criteria
 - [ ] Tutti gli scenari critici testati con successo
@@ -450,7 +450,7 @@
 
 ---
 
-## 📝 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impact su UAT |
 |----------|------|--------|-------------|---------------|
@@ -459,7 +459,7 @@
 
 ---
 
-## 📎 Supporting Documentation
+## Supporting Documentation
 
 ### User Documentation
 - [Link a user manual/guide]

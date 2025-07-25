@@ -2,11 +2,11 @@
 
 Questa cartella contiene i requisiti per le integrazioni con sistemi esterni e servizi di terze parti.
 
-## 📋 Panoramica
+## Panoramica
 
 I requisiti di **Integrazione** definiscono come il sistema deve interagire con sistemi esterni, API di terze parti, servizi cloud e sistemi legacy.
 
-## 🔌 Tipi di Integrazioni
+## Tipi di Integrazioni
 
 ### API di Terze Parti
 - Payment gateways (Stripe, PayPal, etc.)
@@ -32,7 +32,7 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - Database di partner
 - Master data management
 
-## 📁 Struttura File
+## Struttura File
 
 ### Template Naming
 `REQ-I-XXX-[nome-integrazione].md`
@@ -43,7 +43,7 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - `REQ-I-003-legacy-crm.md`
 - `REQ-I-004-cloud-storage.md`
 
-## 📊 Categorizzazione per Criticità
+## Categorizzazione per Criticità
 
 ### Critiche (Must Have)
 - [ ] Integrazioni essenziali per business core
@@ -63,7 +63,7 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - [ ] Advanced analytics
 - [ ] Marketing tools
 
-## 🔧 Aspetti Tecnici da Considerare
+## Aspetti Tecnici da Considerare
 
 ### Protocolli di Comunicazione
 - **REST API**: GET, POST, PUT, DELETE
@@ -91,7 +91,7 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - **Error Rates**: Success/failure tracking
 - **SLA Monitoring**: Service level compliance
 
-## 📋 Template per Requisito Integrazione
+## Template per Requisito Integrazione
 
 ```markdown
 # REQ-I-XXX: [Nome Integrazione]
@@ -129,7 +129,7 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 [Come testare l'integrazione]
 ```
 
-## 🔄 Workflow di Integrazione
+## Workflow di Integrazione
 
 ### 1. Design Phase
 - Analisi requirements
@@ -155,14 +155,14 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - Monitoring setup
 - Documentation
 
-## 📊 Dependencies Matrix
+## Dependencies Matrix
 
 | Integrazione | Core Features | Altri Sistemi | Criticità |
 |--------------|---------------|---------------|-----------|
 | REQ-I-001 | REQ-F-001, REQ-F-003 | REQ-I-002 | High |
 | REQ-I-002 | REQ-F-002 | - | Medium |
 
-## ⚠️ Rischi Comuni
+## Rischi Comuni
 
 ### Disponibilità
 - Downtime del servizio esterno
@@ -184,16 +184,16 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - Discontinuation del servizio
 - Vendor lock-in
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Implementa circuit breakers** per fault tolerance
 - **Usa retry logic** con exponential backoff
 - **Monitora continuamente** le integrazioni
 - **Documenta accuratamente** API contracts
 - **Testa scenari di failure**
 
-### ❌ Don'ts
+### Don'ts
 - **Non fare assunzioni** su disponibilità
 - **Non ignorare rate limits**
 - **Non hardcodare** credenziali

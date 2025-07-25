@@ -2,7 +2,7 @@
 
 I diagrammi dei casi d'uso mostrano le funzionalità del sistema dal punto di vista degli utenti e degli attori esterni.
 
-## 🎯 Scopo dei Use Case Diagrams
+## Scopo dei Use Case Diagrams
 
 I **Use Case Diagrams** servono per:
 - Identificare gli attori del sistema
@@ -10,7 +10,7 @@ I **Use Case Diagrams** servono per:
 - Mostrare le relazioni tra attori e casi d'uso
 - Stabilire i confini del sistema (system boundary)
 
-## 📋 Elementi del Diagramma
+## Elementi del Diagramma
 
 ### Attori (Actors)
 ```plantuml
@@ -65,7 +65,7 @@ Actor --> (Use Case)
 Actor1 --|> Actor2
 ```
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica gli Attori
 ```plantuml
@@ -106,7 +106,7 @@ UC1 .> UC5 : <<include>>
 UC6 .> UC5 : <<extend>>
 ```
 
-## 🏗️ Pattern Comuni
+## Pattern Comuni
 
 ### Pattern Cliente-Sistema
 ```plantuml
@@ -188,47 +188,47 @@ Web --> UC2
 @enduml
 ```
 
-## 📊 Best Practices per Use Cases
+## Best Practices per Use Cases
 
-### ✅ Naming Conventions
+### Naming Conventions
 - **Use Cases**: Verbo + Oggetto ("Effettua Ordine", "Gestisci Profilo")
 - **Attori**: Nomi o ruoli chiari ("Cliente", "Amministratore Sistema")
 - **Packages**: Raggruppamenti logici ("Gestione Ordini", "Sicurezza")
 
-### ✅ Livelli di Dettaglio
+### Livelli di Dettaglio
 ```plantuml
-' ❌ Troppo dettagliato
+' Troppo dettagliato
 usecase "Clicca Bottone Login"
 
-' ✅ Livello appropriato  
+' Livello appropriato  
 usecase "Effettua Login"
 
-' ❌ Troppo generico
+' Troppo generico
 usecase "Gestisci Sistema"
 
-' ✅ Specifico ma completo
+' Specifico ma completo
 usecase "Gestisci Configurazione Utenti"
 ```
 
-### ✅ Relazioni Significative
+### Relazioni Significative
 ```plantuml
-' ✅ Include per funzionalità sempre richieste
+' Include per funzionalità sempre richieste
 (Effettua Ordine) .> (Valida Pagamento) : <<include>>
 
-' ✅ Extend per variazioni opzionali
+' Extend per variazioni opzionali
 (Applica Sconto) .> (Effettua Ordine) : <<extend>>
 
-' ✅ Generalizzazione per specializzazioni
+' Generalizzazione per specializzazioni
 (Login OAuth) --|> (Effettua Login)
 ```
 
-### ❌ Anti-Patterns da Evitare
+### Anti-Patterns da Evitare
 - **Troppi Use Cases**: Max 7-9 per diagramma
 - **Use Cases Implementativi**: Focus su business value
 - **Attori Tecnici**: Evita "Database", "Server" come attori
 - **Flussi Sequenziali**: Non mostrare sequenze temporali
 
-## 🔍 Tracciabilità
+## Tracciabilità
 
 ### Collegamento con User Stories
 ```plantuml
@@ -253,7 +253,7 @@ Non-Functional Requirements:
   - REQ-NF-001: Tempo risposta < 3 secondi
 ```
 
-## 🎨 Styling e Presentazione
+## Styling e Presentazione
 
 ### Theme e Colori
 ```plantuml
@@ -291,7 +291,7 @@ package "Modulo Supporto" as Support {
 }
 ```
 
-## 🧪 Esempi per Dominio
+## Esempi per Dominio
 
 ### E-commerce
 ```plantuml
@@ -401,7 +401,7 @@ UC5 .> UC2 : <<include>>
 @enduml
 ```
 
-## 🔧 Tools e Integrazione
+## Tools e Integrazione
 
 ### PlantUML Extensions
 - **VS Code**: PlantUML extension per preview
@@ -430,7 +430,7 @@ plantuml -tpdf diagram.puml
     args: -v -tsvg **/*.puml
 ```
 
-## 📚 Risorse Aggiuntive
+## Risorse Aggiuntive
 
 ### UML Standards
 - **UML 2.5 Specification**: Standard OMG ufficiale
@@ -442,7 +442,7 @@ plantuml -tpdf diagram.puml
 - `../sequence-diagrams/`: Interazioni specifiche
 - `../../02-requirements/user-stories/`: User stories collegate
 
-## 📞 Supporto
+## Supporto
 
 Per domande sui Use Case Diagrams:
 

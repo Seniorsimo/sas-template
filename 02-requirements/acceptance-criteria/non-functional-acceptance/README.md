@@ -2,7 +2,7 @@
 
 Questa cartella contiene i criteri di accettazione per validare gli attributi di qualità del sistema (performance, sicurezza, usabilità, affidabilità, scalabilità).
 
-## 📋 Scopo dei Non-Functional Acceptance Criteria
+## Scopo dei Non-Functional Acceptance Criteria
 
 I **Non-Functional Acceptance Criteria** servono per:
 - Verificare attributi di qualità del sistema (performance, security, usability)
@@ -10,7 +10,7 @@ I **Non-Functional Acceptance Criteria** servono per:
 - Testare comportamenti sotto stress e condizioni limite
 - Confermare SLA e metriche di sistema
 
-## 🎯 Quality Attributes Coperti
+## Quality Attributes Coperti
 
 ### Performance
 - **Response Time**: Tempi di risposta per operazioni
@@ -42,7 +42,7 @@ I **Non-Functional Acceptance Criteria** servono per:
 - **Operating System**: Supporto OS diversi
 - **Integration**: Compatibilità con sistemi esistenti
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica il Quality Attribute
 ```bash
@@ -72,7 +72,7 @@ Ogni criterio deve avere:
 - **Tools**: Strumenti di misurazione
 - **Duration**: Durata test per stabilità
 
-## ⚡ Performance Acceptance Criteria
+## Performance Acceptance Criteria
 
 ### Response Time Metrics
 ```
@@ -98,7 +98,7 @@ Disk I/O: ≤ 80% capacity
 Network: ≤ 60% bandwidth
 ```
 
-## 🔒 Security Acceptance Criteria
+## Security Acceptance Criteria
 
 ### Authentication Requirements
 ```
@@ -124,7 +124,7 @@ PII handling: Anonymization/masking
 Backup security: Encrypted backups
 ```
 
-## 👥 Usability Acceptance Criteria
+## Usability Acceptance Criteria
 
 ### User Experience Metrics
 ```
@@ -150,7 +150,7 @@ Help usage: ≤ 20% need help
 Return users: No relearning needed
 ```
 
-## 🛡️ Reliability Acceptance Criteria
+## Reliability Acceptance Criteria
 
 ### Availability Targets
 ```
@@ -176,7 +176,7 @@ Backup verification: Regular restore tests
 Data validation: Integrity checks
 ```
 
-## 🧪 Testing Approaches
+## Testing Approaches
 
 ### Performance Testing
 - **Load Testing**: Comportamento sotto carico normale
@@ -202,7 +202,7 @@ Data validation: Integrity checks
 - **Backup Testing**: Test backup e restore
 - **Chaos Engineering**: Test resilience sistema
 
-## 📊 Measurement Tools e Techniques
+## Measurement Tools e Techniques
 
 ### Performance Monitoring
 - **Application Performance Monitoring**: New Relic, Dynatrace
@@ -222,7 +222,7 @@ Data validation: Integrity checks
 - **User Testing Platforms**: UserTesting, Maze
 - **Accessibility Tools**: axe, WAVE, Lighthouse
 
-## 📈 SLA e Service Level Objectives
+## SLA e Service Level Objectives
 
 ### Performance SLOs
 ```
@@ -248,7 +248,7 @@ Task Success: ≥ 95% completion rate
 Accessibility: 100% WCAG AA compliance
 ```
 
-## ✅ Acceptance Testing Process
+## Acceptance Testing Process
 
 ### 1. Test Planning
 - Identificazione metriche target
@@ -274,7 +274,7 @@ Accessibility: 100% WCAG AA compliance
 - Exception documentation
 - Formal acceptance
 
-## ⚠️ Common Challenges
+## Common Challenges
 
 ### Performance Testing
 - **Realistic Test Data**: Dati rappresentativi produzione
@@ -294,9 +294,9 @@ Accessibility: 100% WCAG AA compliance
 - **Quantifying UX**: Measuring subjective experiences
 - **Iteration**: Incorporating feedback loops
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Set realistic targets** basati su benchmarks
 - **Test early and often** nel development cycle
 - **Use production-like data** per test accurati
@@ -304,7 +304,7 @@ Accessibility: 100% WCAG AA compliance
 - **Document everything** per audit e compliance
 - **Automate where possible** per consistency
 
-### ❌ Don'ts
+### Don'ts
 - **Non ignorare edge cases** e condizioni estreme
 - **Non testare solo happy path** per non-functional
 - **Non dimenticare mobile** e dispositivi diversi
@@ -312,7 +312,7 @@ Accessibility: 100% WCAG AA compliance
 - **Non sottovalutare security** testing
 - **Non ignorare accessibility** requirements
 
-## 🔗 Integration con CI/CD
+## Integration con CI/CD
 
 ### Automated Testing
 - **Performance Gates**: Soglie automatiche CI/CD
@@ -326,7 +326,7 @@ Accessibility: 100% WCAG AA compliance
 - **Trending**: Long-term trend analysis
 - **Feedback Loops**: Results inform next iteration
 
-## 📞 Supporto e Contatti
+## Supporto e Contatti
 
 Per domande sui Non-Functional Acceptance Criteria:
 

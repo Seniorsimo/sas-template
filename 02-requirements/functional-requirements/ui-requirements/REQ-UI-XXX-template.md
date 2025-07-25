@@ -1,6 +1,6 @@
 # REQ-UI-XXX-[COMPONENT]: [Titolo UI Requirement]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: REQ-UI-XXX-[COMPONENT]  
 **Categoria**: UI Requirement  
 **Component Type**: Layout | Form | Navigation | Display | Interactive | Feedback  
@@ -12,7 +12,7 @@
 
 ---
 
-## 📝 Descrizione UI Component
+## Descrizione UI Component
 
 ### Sommario
 [Breve descrizione del componente UI - cosa fa e dove viene utilizzato]
@@ -30,7 +30,7 @@
 
 ---
 
-## 🎨 Design Specifications
+## Design Specifications
 
 ### Visual Design
 **Layout Type**: [Fixed | Fluid | Responsive | Adaptive]  
@@ -58,7 +58,7 @@
 
 ---
 
-## 📐 Layout Specifications
+## Layout Specifications
 
 ### Desktop Layout (≥1024px)
 ```
@@ -104,7 +104,7 @@
 
 ---
 
-## 🔧 Functional Specifications
+## Functional Specifications
 
 ### Interactive Elements
 **Clickable Areas**: [Elementi cliccabili/tappabili]  
@@ -132,7 +132,7 @@
 
 ---
 
-## 📱 Responsive Behavior
+## Responsive Behavior
 
 ### Mobile Adaptations
 **Touch Targets**: [Dimensione minima 44x44px per elementi touch]  
@@ -157,7 +157,7 @@
 
 ---
 
-## ♿ Accessibility Requirements
+## Accessibility Requirements
 
 ### WCAG 2.1 AA Compliance
 **Color Contrast**: [Ratio ≥ 4.5:1 per testo normale, ≥ 3:1 per testo large]  
@@ -185,7 +185,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione
+## Criteri di Accettazione
 
 ### Scenario 1: Visual Rendering - Desktop
 **Given** l'utente accede da un browser desktop  
@@ -231,7 +231,7 @@
 
 ---
 
-## ⚡ Performance Requirements
+## Performance Requirements
 
 ### Loading Performance
 **First Paint**: [Tempo per primo rendering ≤ X ms]  
@@ -259,7 +259,7 @@
 
 ---
 
-## 🧪 Test Strategy
+## Test Strategy
 
 ### Visual Testing
 **Cross-browser Testing**: [Chrome, Firefox, Safari, Edge]  
@@ -287,7 +287,7 @@
 
 ---
 
-## 🎯 User Experience Goals
+## User Experience Goals
 
 ### Usability Metrics
 **Task Success Rate**: [% utenti che completano task]  
@@ -309,7 +309,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Business Requirements
 **Business Objectives**: [OBJ-XXX] - [Obiettivo business]  
@@ -328,7 +328,7 @@
 
 ---
 
-## ⚠️ Rischi e Constraints
+## Rischi e Constraints
 
 ### Technical Risks
 - **[Rischio Tecnico 1]**: [Es. Browser compatibility issues]  
@@ -355,7 +355,7 @@
 
 ---
 
-## 📅 Timeline e Dependencies
+## Timeline e Dependencies
 
 ### Development Phases
 **Phase 1 - Design**: [Mockups, prototypes] - [Data inizio] to [Data fine]  
@@ -378,7 +378,7 @@
 
 ---
 
-## 💰 Effort e Cost Estimates
+## Effort e Cost Estimates
 
 ### Design Effort
 **UX Research**: [Ore]  
@@ -402,7 +402,7 @@
 
 ---
 
-## ✅ Definition of Done
+## Definition of Done
 
 ### Design Complete
 - [ ] Visual design approvato
@@ -427,7 +427,7 @@
 
 ---
 
-## 📝 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Design Impact | Approvato da |
 |----------|------|--------|-------------|---------------|--------------|
@@ -436,7 +436,7 @@
 
 ---
 
-## ✅ Approvazioni
+## Approvazioni
 
 ### Design Approval
 | Ruolo | Nome | Data | Firma | Comments |
@@ -459,7 +459,7 @@
 
 ---
 
-## 📎 Supporting Documentation
+## Supporting Documentation
 
 ### Design Documentation
 - [Link a mockups/wireframes]

@@ -2,10 +2,10 @@
 
 Questa sezione contiene la progettazione del database tramite **DIAGRAMMI VISIVI SOLAMENTE**.
 
-> ⚠️ **IMPORTANTE**: Questa sezione contiene esclusivamente diagrammi e documentazione del design. 
+> **IMPORTANTE**: Questa sezione contiene esclusivamente diagrammi e documentazione del design. 
 > Non include codice SQL, DDL o script di implementazione.
 
-## 🎯 Obiettivo
+## Obiettivo
 
 Documentare la struttura dei dati tramite:
 - **Diagrammi ER (Entity-Relationship)** per il modello concettuale
@@ -54,7 +54,7 @@ Dizionario dei dati completo che documenta:
 3. **Modello Logico**: Raffinamento con normalizzazione e vincoli
 4. **Documentazione**: Dizionario dati e descrizioni dettagliate
 
-> 📝 **Nota**: L'implementazione fisica (DDL, SQL) non è inclusa in questa sezione.
+> **Nota**: L'implementazione fisica (DDL, SQL) non è inclusa in questa sezione.
 
 ## Livelli di Normalizzazione
 

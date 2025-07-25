@@ -2,7 +2,7 @@
 
 I diagrammi delle classi mostrano la struttura statica del sistema, incluse classi, attributi, metodi e relazioni.
 
-## 🎯 Scopo dei Class Diagrams
+## Scopo dei Class Diagrams
 
 I **Class Diagrams** servono per:
 - Modellare la struttura statica del sistema
@@ -10,7 +10,7 @@ I **Class Diagrams** servono per:
 - Mostrare relazioni tra classi
 - Documentare l'architettura object-oriented
 
-## 📋 Elementi del Diagramma
+## Elementi del Diagramma
 
 ### Classi
 
@@ -97,7 +97,7 @@ ClassA "0..1" -- "1..n" ClassB
 ClassA "1" -- "exactly 3" ClassB
 ```
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica le Classi del Dominio
 ```plantuml
@@ -150,7 +150,7 @@ class Order {
 note right of Order : Vincoli:\n- totalAmount >= 0\n- orderDate <= today
 ```
 
-## 🏗️ Pattern Architetturali
+## Pattern Architetturali
 
 ### Layered Architecture
 ```plantuml
@@ -388,11 +388,11 @@ PayPalFactory ..> PayPalProcessor : "creates"
 @enduml
 ```
 
-## 📊 Best Practices
+## Best Practices
 
-### ✅ Design delle Classi
+### Design delle Classi
 ```plantuml
-' ✅ Classe ben strutturata
+' Classe ben strutturata
 class Customer {
   -customerId : Long
   -firstName : String
@@ -404,7 +404,7 @@ class Customer {
   +isActive() : boolean
 }
 
-' ❌ Classe con troppi metodi/attributi
+' Classe con troppi metodi/attributi
 class GodClass {
   -id, name, email, phone, address...
   -orders, payments, preferences...
@@ -413,9 +413,9 @@ class GodClass {
 }
 ```
 
-### ✅ Naming Conventions
+### Naming Conventions
 ```plantuml
-' ✅ Nomi chiari e descrittivi
+' Nomi chiari e descrittivi
 class ShoppingCart {
   -items : List<CartItem>
   +addItem(item : CartItem) : void
@@ -423,7 +423,7 @@ class ShoppingCart {
   +calculateTotal() : BigDecimal
 }
 
-' ❌ Nomi ambigui
+' Nomi ambigui
 class Data {
   -info : List<Object>
   +process() : void
@@ -431,9 +431,8 @@ class Data {
 }
 ```
 
-### ✅ Livelli di Astrazione
+### Livelli di Astrazione
 ```plantuml
-' ✅ Interfacce ben definite
 interface PaymentGateway {
   +processPayment(amount : BigDecimal) : PaymentResult
   +refundPayment(transactionId : String) : RefundResult
@@ -442,22 +441,19 @@ interface PaymentGateway {
 class StripeGateway implements PaymentGateway
 class PayPalGateway implements PaymentGateway
 
-' ✅ Composizione over inheritance
 class Order {
   -payment : PaymentGateway
   -shipping : ShippingService
 }
 ```
 
-### ❌ Anti-Patterns da Evitare
+### Anti-Patterns da Evitare
 ```plantuml
-' ❌ God Class
 class EverythingManager {
   +handleUsers(), handleOrders(), handlePayments()
   +validateEverything(), processAll()
 }
 
-' ❌ Anemic Model
 class User {
   +firstName : String
   +lastName : String
@@ -465,14 +461,13 @@ class User {
   ' No business logic
 }
 
-' ❌ Tight Coupling
 class OrderService {
   -mysqlDatabase : MySQLOrderRepository
   ' Dipendenza da implementazione concreta
 }
 ```
 
-## 🎨 Styling e Layout
+## Styling e Layout
 
 ### Colori per Package
 ```plantuml
@@ -514,7 +509,7 @@ class B
 class C
 ```
 
-## 🧪 Esempi per Dominio
+## Esempi per Dominio
 
 ### E-commerce System
 ```plantuml
@@ -876,7 +871,7 @@ Appointment -- AppointmentStatus
 @enduml
 ```
 
-## 🔍 Tracciabilità e Design
+## Tracciabilità e Design
 
 ### Mapping da Requirements
 ```yaml
@@ -915,7 +910,7 @@ public class Customer {
 }
 ```
 
-## 🧪 Validation e Testing
+## Validation e Testing
 
 ### Class Design Validation
 ```yaml
@@ -944,7 +939,7 @@ CustomerTest ..> Customer : "tests"
 OrderServiceTest ..> OrderService : "tests"
 ```
 
-## 🔧 Tools e Integration
+## Tools e Integration
 
 ### Reverse Engineering
 ```bash
@@ -973,7 +968,7 @@ class User {
 note right of User : JPA Entity\n@Table(name="users")\n@Column annotations
 ```
 
-## 📚 Resources e Standards
+## Resources e Standards
 
 ### UML Class Diagram Standards
 - **UML 2.5 Specification**: Class diagram notation
@@ -986,7 +981,7 @@ note right of User : JPA Entity\n@Table(name="users")\n@Column annotations
 - `../../02-requirements/`: Requirements mapping
 - `../../05-database-design/`: Data model correlation
 
-## 📞 Supporto
+## Supporto
 
 Per domande sui Class Diagrams:
 

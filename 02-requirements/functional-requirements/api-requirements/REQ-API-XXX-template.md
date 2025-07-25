@@ -1,6 +1,6 @@
 # REQ-API-XXX-[AREA]: [Titolo API Requirement]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: REQ-API-XXX-[AREA]  
 **Categoria**: API Requirement  
 **API Type**: REST | GraphQL | SOAP | WebSocket | gRPC  
@@ -12,7 +12,7 @@
 
 ---
 
-## 📝 Descrizione API
+## Descrizione API
 
 ### Sommario
 [Breve descrizione di cosa fa questa API - scopo e funzionalità principale]
@@ -32,7 +32,7 @@
 
 ---
 
-## 🛠️ Specifiche Tecniche
+## Specifiche Tecniche
 
 ### Endpoint Details
 **Base URL**: `https://api.[domain].com/v{version}`  
@@ -54,7 +54,7 @@
 
 ---
 
-## 🔗 Endpoint Specifications
+## Endpoint Specifications
 
 ### Endpoint 1: [Nome Operazione]
 **Method**: `GET | POST | PUT | PATCH | DELETE`  
@@ -191,7 +191,7 @@ X-API-Version: 1.0
 
 ---
 
-## 📊 Data Models
+## Data Models
 
 ### Request Models
 ```json
@@ -280,7 +280,7 @@ X-API-Version: 1.0
 
 ---
 
-## ✅ Criteri di Accettazione
+## Criteri di Accettazione
 
 ### Scenario 1: Successful API Call - Happy Path
 **Given** l'API è operativa e configurata correttamente  
@@ -330,7 +330,7 @@ X-API-Version: 1.0
 
 ---
 
-## 🔒 Requisiti di Sicurezza
+## Requisiti di Sicurezza
 
 ### Input Validation
 **Validation Rules**: [Regole validazione specifiche]  
@@ -361,7 +361,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## ⚡ Requisiti di Performance
+## Requisiti di Performance
 
 ### Response Time
 **Target Response Time**: [Target in millisecondi]  
@@ -389,7 +389,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## 📚 Documentazione API
+## Documentazione API
 
 ### OpenAPI Specification
 **Swagger Version**: [Versione Swagger/OpenAPI]  
@@ -411,7 +411,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## 🧪 Test Strategy
+## Test Strategy
 
 ### Unit Testing
 **Controller Tests**: [Test controller/handler]  
@@ -439,7 +439,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Business Requirements
 **Business Objectives**: [OBJ-XXX] - [Obiettivo business]  
@@ -458,7 +458,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## ⚠️ Rischi e Mitigation
+## Rischi e Mitigation
 
 ### Technical Risks
 - **[Rischio Tecnico 1]**: [Es. Performance degradation under load]  
@@ -485,7 +485,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## 📅 Timeline e Milestone
+## Timeline e Milestone
 
 ### Development Phases
 **Phase 1 - Core API**: [Funzionalità base] - [Data inizio] to [Data fine]  
@@ -506,7 +506,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## 💰 Effort e Cost Estimates
+## Effort e Cost Estimates
 
 ### Development Effort
 **API Design**: [Ore]  
@@ -531,7 +531,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## ✅ Definition of Done
+## Definition of Done
 
 ### Development Complete
 - [ ] Tutti gli endpoint implementati secondo specifiche
@@ -557,7 +557,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## 📝 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Breaking Changes | Approvato da |
 |----------|------|--------|-------------|------------------|--------------|
@@ -566,7 +566,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## ✅ Approvazioni
+## Approvazioni
 
 ### Technical Approval
 | Ruolo | Nome | Data | Firma | Comments |
@@ -583,7 +583,7 @@ Content-Security-Policy: default-src 'self'
 
 ---
 
-## 📎 Supporting Documentation
+## Supporting Documentation
 
 ### Technical Documentation
 - [Link a OpenAPI specification]

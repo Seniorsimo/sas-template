@@ -2,7 +2,7 @@
 
 Questa cartella contiene i criteri di accettazione dal punto di vista dell'utente finale per validare che il software soddisfi le necessità di business e le aspettative degli stakeholder.
 
-## 🎯 Scopo degli User Acceptance Criteria
+## Scopo degli User Acceptance Criteria
 
 Gli **User Acceptance Criteria** servono per:
 - Validare funzionalità dal punto di vista utente
@@ -10,7 +10,7 @@ Gli **User Acceptance Criteria** servono per:
 - Verificare usabilità e user experience
 - Garantire allineamento con aspettative stakeholder
 
-## 👥 Tipologie di User Acceptance Testing (UAT)
+## Tipologie di User Acceptance Testing (UAT)
 
 ### Business Acceptance Testing (BAT)
 - **Processi di Business**: Workflow aziendali
@@ -42,7 +42,7 @@ Gli **User Acceptance Criteria** servono per:
 - **Security Regulations**: Normative sicurezza
 - **Accessibility**: WCAG, Section 508
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica il Tipo di UAT
 ```bash
@@ -71,7 +71,7 @@ AC-U-PERF-001-page-load-times.md
 - **Alternative Paths**: Percorsi alternativi
 - **Exit Points**: Come utente completa task
 
-## 🎭 User Personas per UAT
+## User Personas per UAT
 
 ### End User (Utente Finale)
 ```yaml
@@ -133,7 +133,7 @@ Test Focus:
   - Account management
 ```
 
-## 🧪 UAT Test Scenarios
+## UAT Test Scenarios
 
 ### Usability Testing Scenarios
 ```gherkin
@@ -185,7 +185,7 @@ And operations complete within 5 seconds
 And the system feels responsive
 ```
 
-## 📊 UAT Quality Gates
+## UAT Quality Gates
 
 ### Usability Quality
 - [ ] **Task Completion**: 95% task success rate
@@ -211,7 +211,7 @@ And the system feels responsive
 - [ ] **Responsive**: Funziona su tutti device
 - [ ] **Accessible**: Conforme standard accessibilità
 
-## 🔄 UAT Process Flow
+## UAT Process Flow
 
 ### 1. UAT Planning
 ```yaml
@@ -277,7 +277,7 @@ Deliverables:
   - Lessons learned document
 ```
 
-## 📋 UAT Checklist per Scenario
+## UAT Checklist per Scenario
 
 ### Pre-Test Checklist
 - [ ] **User Persona Identified**: Target user per scenario
@@ -300,7 +300,7 @@ Deliverables:
 - [ ] **Recommendations**: Improvement recommendations
 - [ ] **Follow-up Planned**: Next steps definiti
 
-## 🎯 UAT Success Metrics
+## UAT Success Metrics
 
 ### Quantitative Metrics
 ```yaml
@@ -329,7 +329,7 @@ User Adoption: High adoption rates
 Business Goals: Strategic objectives met
 ```
 
-## 🔧 UAT Tools e Techniques
+## UAT Tools e Techniques
 
 ### Usability Testing Tools
 - **User Testing Platforms**: UserTesting.com, Lookback
@@ -352,7 +352,7 @@ Business Goals: Strategic objectives met
 - **User Journey**: FullStory, Hotjar
 - **Conversion Tracking**: Google Analytics Goals
 
-## ⚠️ Common UAT Challenges
+## Common UAT Challenges
 
 ### User-Related Challenges
 - **User Availability**: Difficulty finding test users
@@ -375,37 +375,37 @@ Business Goals: Strategic objectives met
 - **Bug Fixes**: Time needed for bug resolution
 - **Version Control**: Managing different software versions
 
-## 💡 UAT Best Practices
+## UAT Best Practices
 
-### ✅ Planning Best Practices
+### Planning Best Practices
 - **Start Early** nel development lifecycle
 - **Involve Real Users** non solo proxy users
 - **Create Realistic Scenarios** based su real workflows
 - **Plan Multiple Rounds** di testing se necessario
 - **Budget Adequate Time** per proper UAT
 
-### ✅ Execution Best Practices
+### Execution Best Practices
 - **Use Real Data** quando possibile
 - **Test in Production-like Environment**
 - **Document Everything** per future reference
 - **Facilitate Don't Direct** lascia utenti esplorare
 - **Focus on User Goals** non solo funzionalità
 
-### ✅ Feedback Best Practices
+### Feedback Best Practices
 - **Ask Open Questions** per gather insights
 - **Prioritize Issues** per impact e frequency
 - **Involve Users in Solutions** quando appropriato
 - **Close the Loop** con follow-up communication
 - **Share Results** con all stakeholders
 
-### ❌ Anti-Patterns da Evitare
+### Anti-Patterns da Evitare
 - **Proxy Users**: Usare non-users per testing
 - **Leading Questions**: Influenzare user responses
 - **Rushed UAT**: Insufficient time per proper testing
 - **Ignore Feedback**: Not acting su user feedback
 - **One-Size-Fits-All**: Same approach per all users
 
-## 📈 UAT Reporting
+## UAT Reporting
 
 ### UAT Summary Report Template
 ```yaml
@@ -455,7 +455,7 @@ Minor Issues:
   - Documentation issues
 ```
 
-## 📞 Supporto e Contatti
+## Supporto e Contatti
 
 Per domande sugli User Acceptance Criteria:
 

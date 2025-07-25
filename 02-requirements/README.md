@@ -2,9 +2,9 @@
 
 Questa sezione gestisce la raccolta e documentazione strutturata di tutti i requisiti del progetto attraverso un approccio gerarchico e organizzato.
 
-## 📁 Struttura Gerarchica Organizzata
+## Struttura Gerarchica Organizzata
 
-### 📝 user-stories/
+### user-stories/
 Gestione delle user stories organizzate per epic:
 ```
 user-stories/
@@ -16,7 +16,7 @@ user-stories/
 └── README.md                  (Guida organizzazione)
 ```
 
-### ⚙️ functional-requirements/
+### functional-requirements/
 Requisiti funzionali categorizzati per tipo:
 ```
 functional-requirements/
@@ -27,7 +27,7 @@ functional-requirements/
 └── README.md                  (Guida categorizzazione)
 ```
 
-### 🎯 non-functional-requirements/
+### non-functional-requirements/
 Requisiti di qualità organizzati per attributo:
 ```
 non-functional-requirements/
@@ -40,7 +40,7 @@ non-functional-requirements/
 └── README.md                  (Guida qualità)
 ```
 
-### ✅ acceptance-criteria/
+### acceptance-criteria/
 Criteri di accettazione strutturati per testing:
 ```
 acceptance-criteria/
@@ -51,7 +51,7 @@ acceptance-criteria/
 └── README.md                  (Guida testing)
 ```
 
-## 🏷️ Sistema di Numerazione Unificato
+## Sistema di Numerazione Unificato
 
 ### User Stories
 - **Epic**: `EPIC-XXX` (es. EPIC-001)
@@ -77,7 +77,7 @@ acceptance-criteria/
 - **Integration**: `AC-I-XXX`
 - **User Acceptance**: `AC-UA-XXX`
 
-## 🎯 Metodologia e Framework
+## Metodologia e Framework
 
 ### User Stories Format
 ```
@@ -99,7 +99,7 @@ Per [beneficio/valore]
 - **Could Have**: Requisiti nice-to-have per versioni future
 - **Won't Have**: Requisiti esclusi da questa versione
 
-## 🔗 Tracciabilità Completa
+## Tracciabilità Completa
 
 ### Forward Traceability
 ```
@@ -119,14 +119,14 @@ User Stories ↔ Functional Requirements ↔
 Non-Functional Requirements ↔ Acceptance Criteria
 ```
 
-## 📊 Matrice di Tracciabilità
+## Matrice di Tracciabilità
 
 | User Story | Req. Funzionali | Req. Non-Funz. | Criteri Accett. | Status |
 |------------|-----------------|-----------------|------------------|--------|
-| US-001 | REQ-F-001 | REQ-NF-PERF-001 | AC-F-001, AC-NF-001 | ✅ |
-| US-002 | REQ-F-002 | REQ-NF-SEC-001 | AC-F-002, AC-NF-002 | ⏳ |
+| US-001 | REQ-F-001 | REQ-NF-PERF-001 | AC-F-001, AC-NF-001 | In Review |
+| US-002 | REQ-F-002 | REQ-NF-SEC-001 | AC-F-002, AC-NF-002 | In Progress |
 
-## 🚀 Workflow di Gestione
+## Workflow di Gestione
 
 ### 1. Epic Planning
 - Identificazione epic dal backlog
@@ -157,7 +157,7 @@ Non-Functional Requirements ↔ Acceptance Criteria
 - User acceptance testing
 - Sign-off finale
 
-## 📋 Template e Standard
+## Template e Standard
 
 ### Template Disponibili
 - **Epic Template**: `epic-template/README.md`
@@ -170,23 +170,23 @@ Non-Functional Requirements ↔ Acceptance Criteria
 - **Cartelle**: `[categoria]-[nome]` (es. `epic-authentication`)
 - **ID**: Numerazione progressiva per categoria
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Mantieni tracciabilità** tra tutti gli elementi
 - **Usa template standardizzati** per consistenza
 - **Review regolarmente** con stakeholder
 - **Aggiorna status** man mano che procedi
 - **Documenta decisioni** e motivazioni
 
-### ❌ Don'ts
+### Don'ts
 - **Non creare requisiti** non collegati a user stories
 - **Non essere vago** nelle descrizioni
 - **Non dimenticare** i requisiti non-funzionali
 - **Non procedere** senza approvazione stakeholder
 - **Non trascurare** i criteri di accettazione
 
-## 🔄 Change Management
+## Change Management
 
 ### Processo di Modifica
 1. **Change Request**: Richiesta di modifica documentata
@@ -200,7 +200,7 @@ Non-Functional Requirements ↔ Acceptance Criteria
 - Approvazioni formali documentate
 - Baseline dei requisiti per milestone
 
-## 📈 Metriche e Reporting
+## Metriche e Reporting
 
 ### Coverage Metrics
 - **User Stories Coverage**: % obiettivi business coperti
@@ -214,7 +214,7 @@ Non-Functional Requirements ↔ Acceptance Criteria
 - **Approval Rate**: % elementi approvati
 - **Stability**: Frequenza cambiamenti
 
-## 🏁 Definition of Ready/Done
+## Definition of Ready/Done
 
 ### Epic Definition of Ready
 - [ ] Valore business chiarito

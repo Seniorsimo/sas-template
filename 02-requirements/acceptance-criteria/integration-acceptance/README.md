@@ -2,7 +2,7 @@
 
 Questa cartella contiene i criteri di accettazione per validare l'integrazione tra sistemi, servizi o componenti del software.
 
-## 📋 Scopo degli Integration Acceptance Criteria
+## Scopo degli Integration Acceptance Criteria
 
 Gli **Integration Acceptance Criteria** servono per:
 - Verificare comunicazione corretta tra sistemi
@@ -10,7 +10,7 @@ Gli **Integration Acceptance Criteria** servono per:
 - Testare API e servizi web
 - Confermare integrazione con sistemi esterni e legacy
 
-## 🔗 Tipologie di Integrazioni
+## Tipologie di Integrazioni
 
 ### API Integration
 - **REST APIs**: HTTP/HTTPS endpoints
@@ -39,7 +39,7 @@ Gli **Integration Acceptance Criteria** servono per:
 - **iFrame Integration**: Cross-domain embedding
 - **Mobile Deep Links**: App-to-app integration
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica il Tipo di Integrazione
 ```bash
@@ -68,7 +68,7 @@ AC-I-EXT-001-maps-service.md
 - **Load Testing**: Performance sotto carico
 - **Security**: Authentication e authorization
 
-## 🛠️ Integration Patterns Testati
+## Integration Patterns Testati
 
 ### Synchronous Integration
 ```gherkin
@@ -105,7 +105,7 @@ And tutti i subscriber ricevono l'evento
 And processano l'evento appropriatamente
 ```
 
-## 🧪 Test Scenarios Comuni
+## Test Scenarios Comuni
 
 ### Connectivity Testing
 ```gherkin
@@ -156,7 +156,7 @@ And ricevo un token valido
 And il token ha scadenza appropriata
 ```
 
-## 📊 Quality Gates per Integration
+## Quality Gates per Integration
 
 ### Functional Quality
 - [ ] **Data Integrity**: Dati trasmessi senza corruzioni
@@ -182,7 +182,7 @@ And il token ha scadenza appropriata
 - [ ] **Monitoring**: Osservabilità completa
 - [ ] **Alerting**: Notifiche per anomalie
 
-## 🔧 Testing Tools e Environment
+## Testing Tools e Environment
 
 ### API Testing Tools
 - **Postman**: Interactive API testing
@@ -209,7 +209,7 @@ And il token ha scadenza appropriata
 - **Postman Mock Server**: Quick API mocking
 - **JSON Server**: RESTful API mocking
 
-## 📈 Integration Monitoring
+## Integration Monitoring
 
 ### Key Metrics
 ```yaml
@@ -236,7 +236,7 @@ Business Impact: Revenue/process impact
 User Experience: Integration user satisfaction
 ```
 
-## 🔄 Integration Testing Lifecycle
+## Integration Testing Lifecycle
 
 ### 1. Planning Phase
 - **Integration Architecture Review**: Design validation
@@ -262,7 +262,7 @@ User Experience: Integration user satisfaction
 - **Monitoring Setup**: Alerts e dashboards
 - **Documentation**: Runbooks e procedures
 
-## ⚠️ Common Integration Challenges
+## Common Integration Challenges
 
 ### Technical Challenges
 - **Network Latency**: Geographic distributed systems
@@ -282,30 +282,30 @@ User Experience: Integration user satisfaction
 - **Error Attribution**: Identifying failure sources
 - **Cost Management**: Third-party service costs
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Design Best Practices
+### Design Best Practices
 - **Implement Circuit Breakers** per fault tolerance
 - **Use Idempotent Operations** per reliability
 - **Design for Failure** con fallback mechanisms
 - **Implement Proper Logging** per troubleshooting
 - **Version APIs** per backward compatibility
 
-### ✅ Testing Best Practices
+### Testing Best Practices
 - **Test Early** nel development lifecycle
 - **Use Contract Testing** per API validation
 - **Implement Automated Testing** per CI/CD
 - **Test Failure Scenarios** non solo happy path
 - **Monitor Production** per real-world validation
 
-### ❌ Anti-Patterns da Evitare
+### Anti-Patterns da Evitare
 - **Tight Coupling**: Dipendenze strette tra sistemi
 - **Sync When Async**: Usare sync per long-running ops
 - **No Error Handling**: Ignorare gestione errori
 - **Hard-coded Config**: Configurazioni non flessibili
 - **No Monitoring**: Mancanza observability
 
-## 🔍 Troubleshooting Integration Issues
+## Troubleshooting Integration Issues
 
 ### Common Error Patterns
 ```yaml
@@ -336,7 +336,7 @@ Business Logic Errors:
 - **Log Aggregation**: Centralized log analysis
 - **Health Checks**: System availability monitoring
 
-## 📞 Supporto e Contatti
+## Supporto e Contatti
 
 Per domande sugli Integration Acceptance Criteria:
 

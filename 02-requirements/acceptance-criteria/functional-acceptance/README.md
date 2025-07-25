@@ -2,7 +2,7 @@
 
 Questa cartella contiene i criteri di accettazione per validare che le funzionalità implementate soddisfino i requisiti funzionali specifici.
 
-## 📋 Scopo dei Functional Acceptance Criteria
+## Scopo dei Functional Acceptance Criteria
 
 I **Functional Acceptance Criteria** servono per:
 - Verificare che le funzionalità si comportino come specificato
@@ -10,7 +10,7 @@ I **Functional Acceptance Criteria** servono per:
 - Testare input/output e elaborazioni dati
 - Confermare che i requisiti funzionali siano implementati correttamente
 
-## 🎯 Quando Utilizzare questo Template
+## Quando Utilizzare questo Template
 
 ### Scenario Ideali
 - **Feature Completion**: Quando una nuova funzionalità è implementata
@@ -26,7 +26,7 @@ I **Functional Acceptance Criteria** servono per:
 - **Calculations**: Logiche di calcolo e elaborazione
 - **State Management**: Gestione stati e transizioni
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Copia e Rinomina
 ```bash
@@ -49,7 +49,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - ✅ "Il sistema deve validare il formato email"
 - ❌ "Il sistema deve usare regex per email"
 
-## 🧪 Struttura Test Scenarios
+## Struttura Test Scenarios
 
 ### Pattern Given/When/Then
 ```gherkin
@@ -81,7 +81,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - Condizioni estreme
 - Scenari rari ma possibili
 
-## ✅ Checklist Qualità AC Funzionali
+## Checklist Qualità AC Funzionali
 
 ### Completezza
 - [ ] Tutti i requisiti funzionali coperti
@@ -110,7 +110,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - [ ] Allineati con obiettivi business
 - [ ] Impatto su architettura identificato
 
-## 🔗 Collegamenti con Altri Artefatti
+## Collegamenti con Altri Artefatti
 
 ### Input per AC Funzionali
 - **Requirements (REQ-F-XXX)**: Requisiti funzionali da validare
@@ -124,7 +124,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - **Test Data**: Dati necessari per esecuzione
 - **Defect Reports**: Report bug se criteri non soddisfatti
 
-## 📊 Metriche di Successo
+## Metriche di Successo
 
 ### Coverage Metrics
 - **Requirement Coverage**: % requisiti con AC definiti
@@ -141,7 +141,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - **Automation Rate**: % AC automatizzati
 - **Maintenance Effort**: Effort manutenzione AC
 
-## 💡 Best Practices
+## Best Practices
 
 ### Durante la Definizione
 1. **Coinvolgi il Product Owner** per validazione business
@@ -164,7 +164,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 4. **Gestisci fallimenti** con processo strutturato
 5. **Ottieni sign-off formale** prima del rilascio
 
-## 🔄 Processo di Lifecycle
+## Processo di Lifecycle
 
 ### 1. Creation Phase
 - Analisi requisiti funzionali
@@ -190,7 +190,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - Documentation update
 - Lessons learned
 
-## 📋 Template Sections Overview
+## Template Sections Overview
 
 ### Mandatory Sections
 - **Informazioni Generali**: Metadati e identificazione
@@ -205,23 +205,23 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - **Automation Notes**: Note per automazione
 - **Performance Considerations**: Aspetti performance
 
-## ⚠️ Common Pitfalls
+## Common Pitfalls
 
-### ❌ Errori da Evitare
+### Errori da Evitare
 - **Troppo generico**: "Il sistema deve funzionare"
 - **Dettagli implementativi**: "Deve usare Spring Framework"
 - **Non testabile**: "Deve essere user-friendly"
 - **Ambiguo**: "Deve essere veloce"
 - **Senza tracciabilità**: Non collegato a requisiti
 
-### ✅ Best Practices
+### Best Practices
 - **Specifico e misurabile**: "Login deve completarsi in <2 secondi"
 - **Linguaggio business**: Comprensibile agli stakeholder
 - **Comportamento osservabile**: Verificabile dall'esterno
 - **Completo**: Copre tutti gli scenari rilevanti
 - **Mantenibile**: Facile da aggiornare
 
-## 📞 Supporto e Contatti
+## Supporto e Contatti
 
 Per domande sui Functional Acceptance Criteria:
 

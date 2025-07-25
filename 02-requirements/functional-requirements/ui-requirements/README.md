@@ -2,7 +2,7 @@
 
 Questa cartella contiene i requisiti specifici per l'interfaccia utente del sistema - componenti UI, user experience, responsive design e accessibilità.
 
-## 📋 Scopo degli UI Requirements
+## Scopo degli UI Requirements
 
 Gli **UI Requirements** definiscono:
 - Componenti interfaccia utente
@@ -12,7 +12,7 @@ Gli **UI Requirements** definiscono:
 - Branding e visual design
 - Performance frontend
 
-## 🎯 Tipologie di UI Requirements
+## Tipologie di UI Requirements
 
 ### Layout e Structure
 - Grid systems e layout responsive
@@ -39,7 +39,7 @@ Gli **UI Requirements** definiscono:
 - Desktop experience
 - Cross-browser compatibility
 
-## 📝 Convenzioni per UI Requirements
+## Convenzioni per UI Requirements
 
 ### Schema ID
 ```
@@ -60,7 +60,7 @@ REQ-UI-TABLE-001       # Tabelle dati
 REQ-UI-MODAL-001       # Modal dialogs
 ```
 
-## 🏷️ Categorizzazione UI
+## Categorizzazione UI
 
 ### Core Components
 - **REQ-UI-CORE-XXX**: Componenti base (buttons, inputs, etc.)
@@ -78,7 +78,7 @@ REQ-UI-MODAL-001       # Modal dialogs
 - **REQ-UI-MOBILE-XXX**: Componenti mobile-specific
 - **REQ-UI-PRINT-XXX**: Layout per stampa
 
-## ✅ Quality Gates UI
+## Quality Gates UI
 
 ### Design Consistency
 - [ ] Design system compliance
@@ -101,7 +101,7 @@ REQ-UI-MODAL-001       # Modal dialogs
 - [ ] Loading states implementati
 - [ ] Error handling UI completato
 
-## 📊 UI Design Standards
+## UI Design Standards
 
 ### Responsive Breakpoints
 ```css
@@ -143,7 +143,7 @@ xl: 32px
 xxl: 48px
 ```
 
-## 🎨 Component Categories
+## Component Categories
 
 ### Input Components
 - Text inputs, textareas
@@ -177,7 +177,7 @@ xxl: 48px
 - Empty states
 - 404 pages
 
-## ♿ Accessibility Standards
+## Accessibility Standards
 
 ### WCAG 2.1 AA Compliance
 - **Perceivable**: Text alternatives, captions, contrast
@@ -193,7 +193,7 @@ xxl: 48px
 - Alt text for images
 - Form labels properly associated
 
-## 📱 Mobile Considerations
+## Mobile Considerations
 
 ### Mobile-First Design
 - Touch-friendly interactions (44px minimum)
@@ -207,9 +207,9 @@ xxl: 48px
 - Progressive loading
 - Minimal battery usage
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Follow design system** consistently
 - **Test on real devices** and browsers
 - **Optimize for performance**
@@ -217,7 +217,7 @@ xxl: 48px
 - **Use semantic HTML**
 - **Implement progressive enhancement**
 
-### ❌ Don'ts
+### Don'ts
 - **Don't ignore mobile experience**
 - **Don't use color alone** to convey information
 - **Don't create overly complex** interfaces

@@ -2,7 +2,7 @@
 
 Questa cartella contiene tutti i requisiti funzionali del sistema, organizzati per categoria e modulo.
 
-## 📁 Struttura Organizzativa
+## Struttura Organizzativa
 
 ### Organizzazione per Categoria
 ```
@@ -26,7 +26,7 @@ functional-requirements/
 └── README.md                         (Questo file)
 ```
 
-## 🏷️ Convenzioni di Naming
+## Convenzioni di Naming
 
 ### ID Requisiti
 - **Core Features**: `REQ-F-XXX` (es. REQ-F-001)
@@ -41,7 +41,7 @@ functional-requirements/
   - `REQ-I-001-payment-gateway.md`
   - `REQ-API-001-user-endpoints.md`
 
-## 📋 Template Requisito Funzionale
+## Template Requisito Funzionale
 
 ```markdown
 # [ID]: [Titolo Requisito]
@@ -69,7 +69,7 @@ functional-requirements/
 [Specifiche tecniche se necessarie]
 ```
 
-## 📊 Categorizzazione
+## Categorizzazione
 
 ### Core Features (REQ-F-XXX)
 Funzionalità fondamentali del sistema:
@@ -99,7 +99,7 @@ Requisiti per interfaccia utente:
 - Responsive design
 - Accessibility
 
-## 🎯 Prioritizzazione MoSCoW
+## Prioritizzazione MoSCoW
 
 ### Must Have
 Requisiti critici senza i quali il sistema non può funzionare
@@ -113,7 +113,7 @@ Requisiti desiderabili che migliorano il sistema
 ### Won't Have (this time)
 Requisiti esclusi dalla versione corrente
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Forward Traceability
 Requisiti → User Stories → Test Cases → Code
@@ -124,30 +124,30 @@ Code → Test Cases → User Stories → Requisiti → Obiettivi Business
 ### Horizontal Traceability
 Requisiti ↔ Architecture ↔ Design ↔ Implementation
 
-## 📋 Matrice di Tracciabilità
+## Matrice di Tracciabilità
 
 | Requisito | User Stories | Use Cases | Test Cases | Implementato |
 |-----------|--------------|-----------|------------|--------------|
 | REQ-F-001 | US-001, US-002 | UC-001 | TC-001, TC-002 | ✅ |
 | REQ-F-002 | US-003 | UC-002 | TC-003 | ⏳ |
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Scrivi requisiti specifici** e misurabili
 - **Usa linguaggio chiaro** e non ambiguo
 - **Mantieni tracciabilità** con user stories e obiettivi
 - **Versiona i requisiti** per tracciare cambiamenti
 - **Coinvolgi stakeholders** nella review
 
-### ❌ Don'ts
+### Don'ts
 - **Non mescolare** requisiti funzionali e non-funzionali
 - **Non essere vago** o generico nelle descrizioni
 - **Non dimenticare** la prioritizzazione
 - **Non omettere** criteri di accettazione
 - **Non ignorare** le dipendenze tra requisiti
 
-## 🔄 Processo di Gestione
+## Processo di Gestione
 
 ### 1. Identificazione
 - Analisi degli obiettivi business

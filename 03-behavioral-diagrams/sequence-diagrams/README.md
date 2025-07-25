@@ -2,7 +2,7 @@
 
 I diagrammi di sequenza mostrano le interazioni tra oggetti in ordine temporale, evidenziando lo scambio di messaggi.
 
-## 🎯 Scopo dei Sequence Diagrams
+## Scopo dei Sequence Diagrams
 
 I **Sequence Diagrams** servono per:
 - Modellare interazioni tra oggetti/sistemi
@@ -10,7 +10,7 @@ I **Sequence Diagrams** servono per:
 - Documentare protocolli di comunicazione
 - Analizzare cicli di vita degli oggetti
 
-## 📋 Elementi del Diagramma
+## Elementi del Diagramma
 
 ### Participants (Partecipanti)
 ```plantuml
@@ -78,7 +78,7 @@ loop 5 times
 end
 ```
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica i Partecipanti
 ```plantuml
@@ -124,7 +124,7 @@ else utente bloccato
 end
 ```
 
-## 🏗️ Pattern Comuni
+## Pattern Comuni
 
 ### Pattern Request-Response Semplice
 ```plantuml
@@ -281,33 +281,28 @@ deactivate G
 @enduml
 ```
 
-## 📊 Best Practices
+## Best Practices
 
-### ✅ Messaggi e Naming
+### Messaggi e Naming
 ```plantuml
-' ✅ Nomi descrittivi e azioni chiare
 User -> AuthService: authenticateUser(username, password)
 AuthService -> Database: findUserByUsername(username)
 
-' ❌ Nomi vaghi
 User -> System: doStuff()
 System -> DB: getData()
 ```
 
-### ✅ Livello di Astrazione
+### Livello di Astrazione
 ```plantuml
-' ✅ Focus su business logic
 Client -> OrderService: createOrder(orderData)
 OrderService -> PaymentService: processPayment(amount)
 
-' ❌ Troppo tecnico
 Client -> Controller: HTTP POST /orders
 Controller -> Repository: executeSQL(query)
 ```
 
-### ✅ Gestione Activation
+### Gestione Activation
 ```plantuml
-' ✅ Activation corrette
 A -> B: request
 activate B
 B -> C: delegate
@@ -317,12 +312,10 @@ deactivate C
 B --> A: response
 deactivate B
 
-' ❌ Activation mancanti o sbagliate - evitare
 ```
 
-### ✅ Return Messages
+### Return Messages
 ```plantuml
-' ✅ Esplicita return per chiarezza
 A -> B: getData()
 activate B
 B -> DB: query
@@ -332,12 +325,12 @@ deactivate DB
 B --> A: processedData
 deactivate B
 
-' ✅ Implicita per semplicità quando ovvia
+ ' Implicita per semplicità quando ovvia
 A -> B: simpleRequest
 B --> A: simpleResponse
 ```
 
-## 🎨 Styling e Personalizzazione
+## Styling e Personalizzazione
 
 ### Stereotipi e Colori
 ```plantuml
@@ -380,7 +373,7 @@ System -> Database: query
 note over Database: Query ottimizzata\ncon indici appropriati
 ```
 
-## 🧪 Esempi per Dominio
+## Esempi per Dominio
 
 ### E-commerce: Processo di Checkout
 ```plantuml
@@ -572,7 +565,7 @@ end
 @enduml
 ```
 
-## 🔄 Sequence vs Altri Diagrammi
+## Sequence vs Altri Diagrammi
 
 ### Sequence vs Activity
 ```yaml
@@ -604,7 +597,7 @@ Communication Diagrams:
   - Use case: Overview architetturale
 ```
 
-## 🔍 Tracciabilità e Documentazione
+## Tracciabilità e Documentazione
 
 ### Collegamento con Use Cases
 ```plantuml
@@ -636,7 +629,7 @@ User -> System: unauthorizedRequest()
 System --> User: 401 Unauthorized
 ```
 
-## 🧪 Testing dei Sequence Diagrams
+## Testing dei Sequence Diagrams
 
 ### Test Scenario Mapping
 ```yaml
@@ -662,7 +655,7 @@ MD --> S: mock_data
 S --> C: processed_response
 ```
 
-## 🔧 Tools e Integration
+## Tools e Integration
 
 ### PlantUML Advanced Features
 ```plantuml
@@ -703,7 +696,7 @@ paths:
         @enduml
 ```
 
-## 📚 Advanced Patterns
+## Advanced Patterns
 
 ### Saga Pattern (Distributed Transactions)
 ```plantuml
@@ -781,7 +774,7 @@ deactivate CB
 @enduml
 ```
 
-## 📞 Supporto
+## Supporto
 
 Per domande sui Sequence Diagrams:
 

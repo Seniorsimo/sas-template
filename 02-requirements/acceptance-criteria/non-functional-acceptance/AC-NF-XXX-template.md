@@ -1,6 +1,6 @@
 # AC-NF-XXX: [Titolo Criterio di Accettazione Non-Funzionale]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: AC-NF-XXX  
 **Categoria**: Performance | Security | Usability | Reliability | Scalability | Compatibility  
 **Requisito Collegato**: [REQ-NF-XXX]  
@@ -11,7 +11,7 @@
 
 ---
 
-## 📝 Descrizione
+## Descrizione
 
 ### Sommario
 [Breve descrizione dell'attributo di qualità da verificare]
@@ -27,7 +27,7 @@
 
 ---
 
-## 📊 Metriche e Target
+## Metriche e Target
 
 ### Metrica Primaria
 **Nome Metrica**: [Nome della metrica principale]  
@@ -50,7 +50,7 @@
 
 ---
 
-## ⚙️ Condizioni di Misurazione
+## Condizioni di Misurazione
 
 ### Ambiente di Test
 **Environment**: Production-like | Staging | Performance Lab  
@@ -72,7 +72,7 @@
 
 ---
 
-## 🧪 Scenari di Test
+## Scenari di Test
 
 ### Scenario 1: Normal Operations
 **Metric**: [Metrica da misurare]  
@@ -109,7 +109,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione Dettagliati
+## Criteri di Accettazione Dettagliati
 
 ### Performance Criteria (se applicabile)
 - [ ] **Response Time**: [Metrica] <= [Valore] sotto carico normale
@@ -141,7 +141,7 @@
 
 ---
 
-## 🔧 Strumenti e Metodologie
+## Strumenti e Metodologie
 
 ### Testing Tools
 **Primary Tool**: [Nome tool principale]  
@@ -164,7 +164,7 @@
 
 ---
 
-## 📊 Baseline e Benchmarking
+## Baseline e Benchmarking
 
 ### Current Baseline
 **Current Performance**: [Performance attuale se nota]  
@@ -183,7 +183,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Business Requirements
 **Business Objectives**: [OBJ-XXX] - [Obiettivo business collegato]  
@@ -202,7 +202,7 @@
 
 ---
 
-## ⚠️ Risks e Mitigation
+## Risks e Mitigation
 
 ### Testing Risks
 - **[Rischio 1]**: [Es. Ambiente test non rappresentativo]  
@@ -225,7 +225,7 @@
 
 ---
 
-## 📅 Testing Schedule
+## Testing Schedule
 
 ### Test Planning Phase
 - **Test Plan Creation**: [Data inizio] - [Data fine]
@@ -248,7 +248,7 @@
 
 ---
 
-## 📈 Test Results
+## Test Results
 
 ### Test Execution Summary
 | Test Scenario | Date | Duration | Status | Result | Notes |
@@ -273,7 +273,7 @@
 
 ---
 
-## 🔧 Tuning e Optimization
+## Tuning e Optimization
 
 ### Optimization Opportunities
 - **[Area 1]**: [Opportunità di ottimizzazione]
@@ -289,7 +289,7 @@
 
 ---
 
-## ✅ Sign-off e Acceptance
+## Sign-off e Acceptance
 
 ### Review Checklist
 - [ ] Metriche chiaramente definite e misurabili
@@ -321,7 +321,7 @@
 
 ---
 
-## 📝 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impact su Testing |
 |----------|------|--------|-------------|-------------------|
@@ -330,7 +330,7 @@
 
 ---
 
-## 📎 Supporting Documentation
+## Supporting Documentation
 
 ### Test Artifacts
 - [Link a test plan dettagliato]

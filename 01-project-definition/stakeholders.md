@@ -8,7 +8,7 @@
 
 ---
 
-## 👥 Stakeholder Primari
+## Stakeholder Primari
 
 ### Product Owner / Sponsor
 **Nome**: [Nome]  
@@ -75,7 +75,7 @@
 
 ---
 
-## 🏢 Stakeholder Secondari
+## Stakeholder Secondari
 
 ### Team di Sviluppo
 **Team Leader**: [Nome]  
@@ -128,7 +128,7 @@
 
 ---
 
-## 🔗 Stakeholder Esterni
+## Stakeholder Esterni
 
 ### Fornitori/Vendor
 | Nome Fornitore | Servizio Fornito | Contatto | Criticità |
@@ -156,7 +156,7 @@
 
 ---
 
-## 📊 Matrice Stakeholder
+## Matrice Stakeholder
 
 | Stakeholder | Influenza | Interesse | Strategia di Gestione |
 |-------------|-----------|-----------|----------------------|
@@ -173,7 +173,7 @@
 
 ---
 
-## 📞 Piano di Comunicazione
+## Piano di Comunicazione
 
 ### Frequenza delle Comunicazioni
 
@@ -191,7 +191,7 @@
 
 ---
 
-## 🔄 Gestione dei Cambiamenti
+## Gestione dei Cambiamenti
 
 ### Processo di Change Request
 1. **Identificazione**: Stakeholder identifica necessità di cambiamento
@@ -207,7 +207,7 @@
 
 ---
 
-## 📝 Note e Considerazioni
+## Note e Considerazioni
 
 ### Conflitti di Interesse Potenziali
 - [Descrizione conflitto 1 e strategia di mitigazione]

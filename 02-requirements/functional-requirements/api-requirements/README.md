@@ -2,7 +2,7 @@
 
 Questa cartella contiene i requisiti specifici per le API del sistema - endpoint, contratti dati, e specifiche tecniche per l'interfaccia applicativa.
 
-## 📋 Scopo degli API Requirements
+## Scopo degli API Requirements
 
 Gli **API Requirements** definiscono:
 - Endpoint e operazioni disponibili
@@ -12,7 +12,7 @@ Gli **API Requirements** definiscono:
 - Performance e rate limiting
 - Documentazione e versioning
 
-## 🎯 Tipologie di API
+## Tipologie di API
 
 ### REST APIs
 - Endpoint RESTful standard
@@ -38,7 +38,7 @@ Gli **API Requirements** definiscono:
 - Service mesh integration
 - Event-driven APIs
 
-## 📝 Convenzioni per API Requirements
+## Convenzioni per API Requirements
 
 ### Schema ID
 ```
@@ -59,7 +59,7 @@ REQ-API-PAYMENT-001    # API per pagamenti
 REQ-API-SEARCH-001     # API per ricerca
 ```
 
-## 🏷️ Categorizzazione API
+## Categorizzazione API
 
 ### Public APIs
 - **REQ-API-PUB-XXX**: API pubbliche per partner/clienti
@@ -85,7 +85,7 @@ REQ-API-SEARCH-001     # API per ricerca
 - Audit logging completo
 - Accesso limitato
 
-## ✅ Quality Gates API
+## Quality Gates API
 
 ### Design Quality
 - [ ] RESTful design principles seguiti
@@ -108,7 +108,7 @@ REQ-API-SEARCH-001     # API per ricerca
 - [ ] Output sanitization rules
 - [ ] Security headers configured
 
-## 📊 API Design Standards
+## API Design Standards
 
 ### URL Structure
 ```
@@ -149,7 +149,7 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 }
 ```
 
-## 🔒 Security Standards
+## Security Standards
 
 ### Authentication
 - **API Keys**: For service-to-service
@@ -168,9 +168,9 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 - **X-Request-ID**: Request tracking
 - **Authorization**: Authentication token
 
-## 💡 Best Practices
+## Best Practices
 
-### ✅ Do's
+### Do's
 - **Version your APIs** from the start
 - **Use consistent naming** conventions
 - **Implement proper error handling**
@@ -178,7 +178,7 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 - **Include examples** for all endpoints
 - **Monitor API usage** and performance
 
-### ❌ Don'ts
+### Don'ts
 - **Don't break backward compatibility** without versioning
 - **Don't expose internal implementation** details
 - **Don't ignore security** considerations

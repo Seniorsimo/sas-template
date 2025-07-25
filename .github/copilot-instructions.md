@@ -32,6 +32,12 @@ Questo workspace è un **sistema di template enterprise completo** per la docume
 - **Tracciabilità**: usa ID univoci e collegamenti tra documenti
 - **DIVIETO EMOJI**: Non utilizzare mai emoji nei documenti di progetto (README, template, specifiche) per mantenere uno stile professionale e enterprise
 
+### Formattazione Markdown Standard
+- **Linee vuote**: sempre dopo titoli (# ## ###) e dopo linee orizzontali (---)
+- **Elenchi**: utilizzare SOLO elenchi puntati (-), MAI elenchi numerati (1. 2. 3.)
+- **Spaziatura elenchi**: lasciare sempre una riga bianca prima e dopo ogni elenco
+- **Consistenza**: mantenere formattazione uniforme in tutti i file .md del progetto
+
 ### Diagrammi UML
 - **PlantUML OBBLIGATORIO** per tutti i diagrammi UML formali (non usare altri formati)
 - **Mermaid** solo per diagrammi semplici e quick sketches
@@ -77,8 +83,10 @@ Questo workspace è un **sistema di template enterprise completo** per la docume
 
 ### Review Obbligatoria Post-Modifica
 **DOPO OGNI modifica di qualsiasi file, SEMPRE eseguire una review completa che verifichi:**
+
 - **Formattazione Markdown/PlantUML** corretta e consistente
 - **Struttura del template** rispettata (sezioni, placeholder, formato)
+- **Standard di formattazione Markdown** applicati (linee vuote dopo titoli, solo elenchi puntati, spaziatura elenchi)
 - **Convenzioni di naming** seguite per file e ID univoci
 - **Collegamenti interni** funzionanti (riferimenti tra documenti)
 - **Standard enterprise** applicati (SMART, MoSCoW, RACI, tracciabilità)

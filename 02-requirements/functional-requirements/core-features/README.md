@@ -2,11 +2,11 @@
 
 Questa cartella contiene i requisiti per le funzionalità core del sistema.
 
-## 📋 Panoramica
+## Panoramica
 
 Le **Core Features** sono le funzionalità fondamentali senza le quali il sistema non può operare. Queste sono tipicamente classificate come "Must Have" nella prioritizzazione MoSCoW.
 
-## 🎯 Categorie di Core Features
+## Categorie di Core Features
 
 ### Autenticazione e Autorizzazione
 - Gestione login/logout utenti
@@ -32,7 +32,7 @@ Le **Core Features** sono le funzionalità fondamentali senza le quali il sistem
 - Export dati
 - Audit logging
 
-## 📁 Struttura File
+## Struttura File
 
 ### Template Naming
 `REQ-F-XXX-[nome-funzionalità].md`
@@ -42,7 +42,7 @@ Le **Core Features** sono le funzionalità fondamentali senza le quali il sistem
 - `REQ-F-002-role-management.md`
 - `REQ-F-003-data-validation.md`
 
-## 📊 Priorità Core Features
+## Priorità Core Features
 
 ### Livello 1 - Sistema Base
 - [ ] Autenticazione utenti
@@ -62,7 +62,7 @@ Le **Core Features** sono le funzionalità fondamentali senza le quali il sistem
 - [ ] Export/Import
 - [ ] Configurazioni sistema
 
-## 🔗 Collegamenti
+## Collegamenti
 
 ### User Stories Principali
 Le core features sono tipicamente derivate dalle user stories ad alta priorità dell'epic principale del progetto.
@@ -73,7 +73,7 @@ Le core features definiscono i componenti principali dell'architettura del siste
 ### Database
 Le core features determinano le entità principali del modello dati.
 
-## 💡 Linee Guida
+## Linee Guida
 
 ### Criteri per Core Features
 - **Essenziale**: Il sistema non può funzionare senza

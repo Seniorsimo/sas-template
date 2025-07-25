@@ -2,7 +2,7 @@
 
 I diagrammi Entità-Relazione (ER) rappresentano il modello concettuale e logico dei dati del sistema.
 
-## 🎯 Scopo dei Diagrammi ER
+## Scopo dei Diagrammi ER
 
 I **Diagrammi ER** servono per:
 - Modellare la struttura dei dati a livello concettuale
@@ -10,7 +10,7 @@ I **Diagrammi ER** servono per:
 - Documentare vincoli di integrità e regole business
 - Fornire base per il design del database fisico
 
-## 📋 Elementi del Diagramma ER
+## Elementi del Diagramma ER
 
 ### Entità
 
@@ -111,7 +111,7 @@ entity Order {
 note right of Order : Business Rules:\n- total_amount >= 0\n- shipping_date >= order_date\n- status transitions controlled
 ```
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica le Entità del Dominio
 ```plantuml
@@ -163,7 +163,7 @@ note top of Order : Order total calculated\nfrom OrderItem.quantity * unit_price
 note bottom of Payment : Payment amount must\nmatch Order.total_amount
 ```
 
-## 🏗️ Pattern di Modellazione
+## Pattern di Modellazione
 
 ### Pattern Gerarchia (Inheritance)
 ```plantuml
@@ -332,9 +332,9 @@ note right of ProductInventory : Daily inventory snapshots\nfor trend analysis
 @enduml
 ```
 
-## 📊 Best Practices per ER Design
+## Best Practices per ER Design
 
-### ✅ Entità ben definite
+### Entità ben definite
 ```plantuml
 ' ✅ Entità con responsabilità chiara
 entity Customer {
@@ -430,7 +430,7 @@ entity Customer {
 }
 ```
 
-## 🎨 Styling e Presentazione
+## Styling e Presentazione
 
 ### Colori per Categorizzazione
 ```plantuml
@@ -482,7 +482,7 @@ Customer ||--o{ Order
 Order }o--o{ Product
 ```
 
-## 🧪 Esempi per Dominio
+## Esempi per Dominio
 
 ### E-commerce Database Model
 ```plantuml
@@ -1034,7 +1034,7 @@ note left of Bill : patient_amount + insurance_amount\n= total_amount
 @enduml
 ```
 
-## 🔍 Validation e Quality Checks
+## Validation e Quality Checks
 
 ### Data Model Quality Metrics
 ```yaml
@@ -1080,7 +1080,7 @@ Data Consistency:
   - Business rule constraints applied
 ```
 
-## 🔧 Tools e Integration
+## Tools e Integration
 
 ### PlantUML Advanced Features
 ```plantuml
@@ -1126,7 +1126,7 @@ er-to-sql --input model.puml --output migrations/ --database postgresql
 plantuml-validator --check-constraints --check-naming model.puml
 ```
 
-## 📚 Resources e Standards
+## Resources e Standards
 
 ### Data Modeling Standards
 - **IDEF1X**: Integration Definition for Information Modeling
@@ -1139,7 +1139,7 @@ plantuml-validator --check-constraints --check-naming model.puml
 - `../../02-requirements/`: Business rules and constraints
 - `../data-dictionary.md`: Detailed attribute descriptions
 
-## 📞 Supporto
+## Supporto
 
 Per domande sui Diagrammi ER:
 

@@ -1,6 +1,6 @@
 # REQ-I-XXX-[SYSTEM]: [Titolo Requisito Integrazione]
 
-## 📋 Informazioni Generali
+## Informazioni Generali
 **ID**: REQ-I-XXX-[SYSTEM]  
 **Categoria**: Integration  
 **Tipo Integrazione**: API REST | SOAP | Database | File Transfer | Message Queue | Event-driven  
@@ -12,7 +12,7 @@
 
 ---
 
-## 📝 Descrizione Integrazione
+## Descrizione Integrazione
 
 ### Sommario
 [Breve descrizione dell'integrazione - cosa collegare con cosa e perché]
@@ -30,7 +30,7 @@
 
 ---
 
-## 🔗 Sistemi Coinvolti
+## Sistemi Coinvolti
 
 ### Source System
 **Name**: [Nome sistema sorgente]  
@@ -53,7 +53,7 @@
 
 ---
 
-## 🛠️ Specifiche Tecniche
+## Specifiche Tecniche
 
 ### Connection Details
 **Protocol**: [HTTP/HTTPS | FTP/SFTP | TCP/IP | Message Queue]  
@@ -76,7 +76,7 @@
 
 ---
 
-## 📊 Data Mapping e Trasformazioni
+## Data Mapping e Trasformazioni
 
 ### Field Mapping
 | Source Field | Target Field | Transformation | Validation | Required |
@@ -102,7 +102,7 @@
 
 ---
 
-## ✅ Criteri di Accettazione
+## Criteri di Accettazione
 
 ### Scenario 1: Successful Integration - Happy Path
 **Given** entrambi i sistemi sono operativi e configurati correttamente  
@@ -152,7 +152,7 @@
 
 ---
 
-## 🔒 Requisiti di Sicurezza
+## Requisiti di Sicurezza
 
 ### Authentication & Authorization
 **Authentication Method**: [Metodo autenticazione dettagliato]  
@@ -180,7 +180,7 @@
 
 ---
 
-## ⚡ Requisiti di Performance
+## Requisiti di Performance
 
 ### Response Time
 **Target Response Time**: [Tempo risposta obiettivo]  
@@ -208,7 +208,7 @@
 
 ---
 
-## 🔄 Error Handling e Resilience
+## Error Handling e Resilience
 
 ### Error Categories
 | Error Type | Error Code | Description | Action | Retry Logic |
@@ -238,7 +238,7 @@
 
 ---
 
-## 📅 Timing e Scheduling
+## Timing e Scheduling
 
 ### Execution Schedule
 **Real-time**: [Se real-time, specifiche latenza]  
@@ -259,7 +259,7 @@
 
 ---
 
-## 🧪 Test Strategy
+## Test Strategy
 
 ### Integration Testing
 **Test Environment**: [Ambiente per integration test]  
@@ -281,7 +281,7 @@
 
 ---
 
-## 📊 Monitoring e Observability
+## Monitoring e Observability
 
 ### Key Performance Indicators
 **Success Rate**: [% transazioni successo]  
@@ -309,7 +309,7 @@
 
 ---
 
-## 🔗 Tracciabilità
+## Tracciabilità
 
 ### Business Requirements
 **Business Objectives**: [OBJ-XXX] - [Obiettivo business]  
@@ -328,7 +328,7 @@
 
 ---
 
-## ⚠️ Rischi e Mitigation
+## Rischi e Mitigation
 
 ### Technical Risks
 - **[Rischio Tecnico 1]**: [Descrizione]  
@@ -360,7 +360,7 @@
 
 ---
 
-## 💰 Cost e Effort Estimates
+## Cost e Effort Estimates
 
 ### Development Effort
 **Analysis & Design**: [Ore]  
@@ -386,7 +386,7 @@
 
 ---
 
-## ✅ Definition of Done
+## Definition of Done
 
 ### Development Complete
 - [ ] Integration layer implementato
@@ -413,7 +413,7 @@
 
 ---
 
-## 📝 Change History
+## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impact su Integration | Approvato da |
 |----------|------|--------|-------------|----------------------|--------------|
@@ -422,7 +422,7 @@
 
 ---
 
-## ✅ Approvazioni
+## Approvazioni
 
 ### Technical Approval
 | Ruolo | Nome | Data | Firma | Comments |
@@ -440,7 +440,7 @@
 
 ---
 
-## 📎 Supporting Documentation
+## Supporting Documentation
 
 ### Technical Documentation
 - [Link a API documentation]

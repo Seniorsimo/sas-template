@@ -1,10 +1,10 @@
-# 📄 Script per Generazione PDF/HTML
+# Script per Generazione PDF/HTML
 
 Questa cartella contiene script per convertire l'intera documentazione del template enterprise in formati unificati per distribuzione e archivio.
 
-## 🚀 Opzioni Disponibili
+## Opzioni Disponibili
 
-### 1. **Script HTML (Raccomandato)** ✅
+### 1. **Script HTML (Raccomandato)**
 **File**: `generate-html.ps1`  
 **Requisiti**: Solo PowerShell (nativo Windows)  
 **Output**: File HTML professionale convertibile in PDF
@@ -18,10 +18,10 @@ Questa cartella contiene script per convertire l'intera documentazione del templ
 ```
 
 **Vantaggi**:
-- ✅ Non richiede installazioni aggiuntive
-- ✅ CSS professionale integrato
-- ✅ Ottimizzato per stampa/PDF
-- ✅ Funziona immediatamente
+- Non richiede installazioni aggiuntive
+- CSS professionale integrato
+- Ottimizzato per stampa/PDF
+- Funziona immediatamente
 
 **Come convertire in PDF**:
 1. Esegui lo script → genera file HTML
@@ -29,7 +29,7 @@ Questa cartella contiene script per convertire l'intera documentazione del templ
 3. Ctrl+P → "Salva come PDF"
 4. Imposta: A4, margini minimi, includi grafiche
 
-### 2. **Script Pandoc (Avanzato)** 🔧
+### 2. **Script Pandoc (Avanzato)**
 **File**: `generate-pdf.ps1`  
 **Requisiti**: Pandoc + LaTeX engine  
 **Output**: PDF nativo di alta qualità
@@ -49,13 +49,13 @@ winget install pandoc
 ```
 
 **Vantaggi**:
-- ✅ PDF nativo di qualità professionale
-- ✅ Numerazione automatica sezioni
-- ✅ Indice dei contenuti cliccabile
-- ✅ Supporto LaTeX per formatting avanzato
-- ✅ Possibilità di includere diagrammi PlantUML
+- PDF nativo di qualità professionale
+- Numerazione automatica sezioni
+- Indice dei contenuti cliccabile
+- Supporto LaTeX per formatting avanzato
+- Possibilità di includere diagrammi PlantUML
 
-## 🎯 Esecuzione Rapida (VS Code)
+## Esecuzione Rapida (VS Code)
 
 ### Via Task Runner
 1. **Ctrl+Shift+P** → "Tasks: Run Task"
@@ -72,7 +72,7 @@ winget install pandoc
 .\scripts\generate-pdf.ps1
 ```
 
-## 📋 Struttura Output
+## Struttura Output
 
 ### File Inclusi nel PDF/HTML
 Il sistema elabora automaticamente tutti i file secondo questo ordine:
@@ -100,7 +100,7 @@ Il sistema elabora automaticamente tutti i file secondo questo ordine:
    - ER Diagrams
    - Data Dictionary
 
-## 🔧 Personalizzazione
+## Personalizzazione
 
 ### Modifica Ordine File
 Edita l'array `$fileOrder` nei script per cambiare l'ordine o escludere sezioni.
@@ -111,7 +111,7 @@ Modifica la variabile `$css` in `generate-html.ps1` per personalizzare l'aspetto
 ### Parametri Pandoc
 Modifica l'array `$pandocArgs` in `generate-pdf.ps1` per opzioni avanzate LaTeX.
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### "Pandoc non trovato"
 ```powershell
@@ -133,7 +133,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\generate-html.ps1
 ### File mancanti
 Lo script continua anche se alcuni file template non esistono, segnalando i file mancanti.
 
-## 📈 Esempi Output
+## Esempi Output
 
 ### HTML Output
 - **Dimensione**: ~500KB per documentazione completa
@@ -148,4 +148,4 @@ Lo script continua anche se alcuni file template non esistono, segnalando i file
 - **Lunghezza**: 50-150 pagine (dipende dal contenuto)
 
 ---
-💡 **Suggerimento**: Inizia sempre con il metodo HTML per semplicità, passa a Pandoc solo se hai bisogno di qualità tipografica superiore.
+**Suggerimento**: Inizia sempre con il metodo HTML per semplicità, passa a Pandoc solo se hai bisogno di qualità tipografica superiore.

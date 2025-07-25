@@ -2,7 +2,7 @@
 
 I diagrammi delle attività mostrano i flussi di lavoro, i processi business e la logica di controllo del sistema.
 
-## 🎯 Scopo degli Activity Diagrams
+## Scopo degli Activity Diagrams
 
 Gli **Activity Diagrams** servono per:
 - Modellare processi business e workflow
@@ -10,7 +10,7 @@ Gli **Activity Diagrams** servono per:
 - Documentare algoritmi e logica complessa
 - Analizzare parallelismo e sincronizzazione
 
-## 📋 Elementi del Diagramma
+## Elementi del Diagramma
 
 ### Nodi di Controllo
 
@@ -66,7 +66,7 @@ stop
 note right: Questa attività richiede\nvalidazione speciale
 ```
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica il Processo
 ```plantuml
@@ -103,7 +103,7 @@ else (no)
 endif
 ```
 
-## 🏗️ Pattern Comuni
+## Pattern Comuni
 
 ### Pattern Processo Lineare
 ```plantuml
@@ -207,41 +207,37 @@ end
 @enduml
 ```
 
-## 📊 Best Practices
+## Best Practices
 
-### ✅ Struttura e Flusso
+### Struttura e Flusso
 - **Start/End chiari**: Ogni diagramma deve avere inizio e fine definiti
 - **Flusso logico**: Le attività devono seguire sequenza logica
 - **Decisioni binarie**: Use if-then-else per decision points
 - **Parallelismo appropriato**: Fork/join solo quando necessario
 
-### ✅ Naming e Descrizioni
+### Naming e Descrizioni
 ```plantuml
-' ✅ Verbi d'azione chiari
 :Valida Credenziali Utente;
 :Genera Report Vendite;
 :Invia Notifica Email;
 
-' ❌ Nomi vaghi
 :Elaborazione;
 :Controllo;
 :Gestione;
 ```
 
-### ✅ Livello di Dettaglio
+### Livello di Dettaglio
 ```plantuml
-' ✅ Livello business process
 :Elabora Ordine Cliente;
 :Verifica Disponibilità Prodotto;
 :Calcola Totale con Tasse;
 
-' ❌ Troppo tecnico
 :Esegui Query SQL;
 :Deserializza JSON;
 :Chiama API REST;
 ```
 
-### ✅ Gestione Errori
+### Gestione Errori
 ```plantuml
 :Elabora Pagamento;
 if (Pagamento riuscito?) then (si)
@@ -253,7 +249,7 @@ else (no)
 endif
 ```
 
-## 🎨 Styling e Layout
+## Styling e Layout
 
 ### Colori per Swimlanes
 ```plantuml
@@ -291,7 +287,7 @@ top to bottom direction
 left to right direction
 ```
 
-## 🧪 Esempi per Dominio
+## Esempi per Dominio
 
 ### E-commerce: Processo Checkout
 ```plantuml
@@ -430,7 +426,7 @@ end
 @enduml
 ```
 
-## 🔄 Activity vs Altri Diagrammi
+## Activity vs Altri Diagrammi
 
 ### Activity vs Sequence
 ```yaml
@@ -462,7 +458,7 @@ Use Case Diagrams:
   - Target: Stakeholder business
 ```
 
-## 🔍 Tracciabilità
+## Tracciabilità
 
 ### Collegamento con Use Cases
 ```plantuml
@@ -486,7 +482,7 @@ Requirements:
   - REQ-NF-008: Tempo valutazione < 24h
 ```
 
-## 🧪 Testing degli Activity Diagrams
+## Testing degli Activity Diagrams
 
 ### Scenari di Test
 ```plantuml
@@ -511,7 +507,7 @@ end
 - **Condition Coverage**: Tutte le condizioni
 - **Loop Coverage**: Iterazioni min/max/tipiche
 
-## 🔧 Tools Avanzati
+## Tools Avanzati
 
 ### PlantUML Advanced Features
 ```plantuml
@@ -540,7 +536,7 @@ partition "Fase Elaborazione" {
 - **Lucidchart**: PlantUML support
 - **Draw.io**: PlantUML plugin
 
-## 📚 Risorse e References
+## Risorse e References
 
 ### UML Standards
 - **UML 2.5 Activity Diagrams**: Specification completa
@@ -552,7 +548,7 @@ partition "Fase Elaborazione" {
 - `../sequence-diagrams/`: Interazioni dettagliate
 - `../../02-requirements/`: Requirements correlati
 
-## 📞 Supporto
+## Supporto
 
 Per domande sugli Activity Diagrams:
 

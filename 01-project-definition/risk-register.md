@@ -8,7 +8,7 @@
 
 ---
 
-## 📊 Risk Matrix - Matrice dei Rischi
+## Risk Matrix - Matrice dei Rischi
 
 ### Scala di Probabilità
 - **1 - Molto Bassa**: 0-10% di probabilità
@@ -31,7 +31,7 @@
 
 ---
 
-## 🔴 Rischi Alti (15-25)
+## Rischi Alti (15-25)
 
 ### RISK-001: [Nome Rischio Alto 1]
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
@@ -87,7 +87,7 @@
 
 ---
 
-## 🟡 Rischi Medi (6-12)
+## Rischi Medi (6-12)
 
 ### RISK-003: [Nome Rischio Medio 1]
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
@@ -119,7 +119,7 @@
 
 ---
 
-## 🟢 Rischi Bassi (1-5)
+## Rischi Bassi (1-5)
 
 ### RISK-005: [Nome Rischio Basso 1]
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
@@ -133,7 +133,7 @@
 
 ---
 
-## 📋 Risk Categories - Template per Nuovi Rischi
+## Risk Categories - Template per Nuovi Rischi
 
 ### Rischi Tecnici
 - Problemi di performance o scalabilità
@@ -165,7 +165,7 @@
 
 ---
 
-## 📊 Risk Summary Dashboard
+## Risk Summary Dashboard
 
 ### Rischi per Categoria
 | Categoria | Alto | Medio | Basso | Totale |
@@ -191,7 +191,7 @@
 
 ---
 
-## 🔄 Risk Management Process
+## Risk Management Process
 
 ### 1. Risk Identification
 - **Chi**: Tutti i membri del team
@@ -215,7 +215,7 @@
 
 ---
 
-## 📞 Escalation e Communication
+## Escalation e Communication
 
 ### Escalation Path
 1. **Livello 1**: Project Manager
@@ -237,7 +237,7 @@
 
 ---
 
-## 📝 Actions Items
+## Actions Items
 
 ### Azioni Immediate (Next 7 days)
 - [ ] [Azione 1] - Owner: [Nome] - Due: [Data]
@@ -251,7 +251,7 @@
 
 ---
 
-## 📋 Risk Review Meeting Minutes
+## Risk Review Meeting Minutes
 
 ### [Data Meeting]
 **Partecipanti**: [Lista partecipanti]

@@ -30,31 +30,54 @@ try {
     exit 1
 }
 
-# Ordine dei file da includere nel PDF
-$fileOrder = @(
-    "README.md",
-    "01-project-definition\README.md",
-    "01-project-definition\project-description.md",
-    "01-project-definition\stakeholders.md", 
-    "01-project-definition\objectives.md",
-    "01-project-definition\project-scope.md",
-    "01-project-definition\risk-register.md",
-    "02-requirements\README.md",
-    "02-requirements\user-stories\README.md",
-    "02-requirements\functional-requirements\README.md",
-    "02-requirements\non-functional-requirements\README.md", 
-    "02-requirements\acceptance-criteria\README.md",
-    "03-behavioral-diagrams\README.md",
-    "03-behavioral-diagrams\use-case-diagrams\README.md",
-    "03-behavioral-diagrams\activity-diagrams\README.md",
-    "03-behavioral-diagrams\sequence-diagrams\README.md",
-    "04-structural-diagrams\README.md", 
-    "04-structural-diagrams\class-diagrams\README.md",
-    "04-structural-diagrams\component-diagrams\README.md",
-    "05-database-design\README.md",
-    "05-database-design\er-diagram\README.md",
-    "05-database-design\data-dictionary.md"
-)
+# Genera ordine dei file dinamicamente
+Write-Host "Scansione struttura progetto..." -ForegroundColor Cyan
+
+# Trova tutti i file .md escludendo i template e file temporanei
+$allFiles = Get-ChildItem -Path $PWD -Filter "*.md" -Recurse | 
+    Where-Object { 
+        $_.Name -notlike "*template*" -and 
+        $_.Name -ne "temp-combined.md" -and
+        $_.FullName -notlike "*\.git\*" -and
+        $_.FullName -notlike "*\.github\*" -and
+        $_.FullName -notlike "*scripts\*"
+    } |
+    ForEach-Object { 
+        $_.FullName.Replace("$PWD\", "").Replace("\", "\")
+    }
+
+# Funzione per ordinare i file con README sempre primo per cartella
+function Get-SortedFiles {
+    param([string[]]$files)
+    
+    # Raggruppa i file per cartella
+    $grouped = $files | Group-Object { Split-Path $_ -Parent }
+    
+    $sortedFiles = @()
+    
+    foreach ($group in ($grouped | Sort-Object Name)) {
+        $folderFiles = $group.Group | Sort-Object
+        
+        # Trova il README della cartella corrente
+        $readme = $folderFiles | Where-Object { (Split-Path $_ -Leaf) -eq "README.md" }
+        $otherFiles = $folderFiles | Where-Object { (Split-Path $_ -Leaf) -ne "README.md" }
+        
+        # Aggiungi README per primo, poi gli altri file ordinati
+        if ($readme) {
+            $sortedFiles += $readme
+        }
+        $sortedFiles += $otherFiles
+    }
+    
+    return $sortedFiles
+}
+
+$fileOrder = Get-SortedFiles -files $allFiles
+
+Write-Host "File da includere nel PDF:" -ForegroundColor Cyan
+foreach ($file in $fileOrder) {
+    Write-Host "  $file" -ForegroundColor Gray
+}
 
 # Crea file temporaneo combinato
 $tempFile = Join-Path $PWD "temp-combined.md"

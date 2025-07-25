@@ -1,8 +1,8 @@
-# 📋 Acceptance Criteria Templates
+# Acceptance Criteria Templates
 
 Questa cartella contiene i template per la definizione dei criteri di accettazione del progetto, organizzati per tipologia di test e validazione.
 
-## 📁 Struttura della Cartella
+## Struttura della Cartella
 
 ```
 acceptance-criteria/
@@ -17,9 +17,9 @@ acceptance-criteria/
     └── AC-UA-XXX-template.md          # Template criteri UAT
 ```
 
-## � Tipologie di Criteri di Accettazione
+## Tipologie di Criteri di Accettazione
 
-### 🔧 Functional Acceptance Criteria (AC-F-XXX)
+### Functional Acceptance Criteria (AC-F-XXX)
 **Scopo**: Definire criteri per validare che le funzionalità implementate soddisfino i requisiti funzionali specifici.
 
 **Quando utilizzare**:
@@ -30,7 +30,7 @@ acceptance-criteria/
 
 **Esempio ID**: AC-F-001, AC-F-002, AC-F-LOGIN-001
 
-### ⚡ Non-Functional Acceptance Criteria (AC-NF-XXX)
+### Non-Functional Acceptance Criteria (AC-NF-XXX)
 **Scopo**: Definire criteri per validare attributi di qualità del sistema (performance, sicurezza, usabilità, etc.).
 
 **Quando utilizzare**:
@@ -41,7 +41,7 @@ acceptance-criteria/
 
 **Esempio ID**: AC-NF-001, AC-NF-PERF-001, AC-NF-SEC-001
 
-### 🔗 Integration Acceptance Criteria (AC-I-XXX)
+### Integration Acceptance Criteria (AC-I-XXX)
 **Scopo**: Definire criteri per validare l'integrazione tra sistemi, servizi o componenti.
 
 **Quando utilizzare**:
@@ -52,7 +52,7 @@ acceptance-criteria/
 
 **Esempio ID**: AC-I-001, AC-I-API-001, AC-I-DB-001
 
-### 👥 User Acceptance Criteria (AC-UA-XXX)
+### User Acceptance Criteria (AC-UA-XXX)
 **Scopo**: Definire criteri per validare che il sistema soddisfi le aspettative e necessità degli utenti finali.
 
 **Quando utilizzare**:
@@ -63,7 +63,7 @@ acceptance-criteria/
 
 **Esempio ID**: AC-UA-001, AC-UA-LOGIN-001, AC-UA-DASHBOARD-001
 
-## 📝 Convenzioni di Naming
+## Convenzioni di Naming
 
 ### Schema ID Standard
 ```
@@ -88,7 +88,7 @@ AC-UA-ONBOARDING-001   # Primo criterio UAT per onboarding
 AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 ```
 
-## 🔄 Workflow di Utilizzo
+## Workflow di Utilizzo
 
 ### 1. Creazione di un Nuovo Criterio
 1. Identificare la tipologia appropriata (F/NF/I/UA)
@@ -109,7 +109,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 3. Business users validano acceptance criteria
 4. Sign-off formale e closure
 
-## 🔗 Collegamento con Altri Artefatti
+## Collegamento con Altri Artefatti
 
 ### Tracciabilità Verso l'Alto
 - **Business Objectives** (01-project-definition/objectives.md)
@@ -127,7 +127,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - **Sequence Diagrams** (03-behavioral-diagrams/sequence-diagrams/)
 - **Class Diagrams** (04-structural-diagrams/class-diagrams/)
 
-## ✅ Checklist per Criteri di Qualità
+## Checklist per Criteri di Qualità
 
 ### Criteri di Accettazione Efficaci
 - [ ] **Specific**: Criteri specifici e non ambigui
@@ -149,7 +149,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - [ ] **UX Review**: User experience considerations incluse
 - [ ] **QA Review**: Test approach e automation strategy
 
-## 📊 Metriche e KPI
+## Metriche e KPI
 
 ### Metriche di Progetto
 - **Coverage**: % requisiti con AC definiti
@@ -163,7 +163,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - **Rework Rate**: % AC che richiedono modifiche
 - **Stakeholder Satisfaction**: Feedback su chiarezza AC
 
-## �️ Best Practices
+## Best Practices
 
 ### Durante la Creazione
 1. **Coinvolgere tutti gli stakeholder** nella definizione
@@ -186,7 +186,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 4. **Gestire issues** in modo sistematico
 5. **Ottenere sign-off formale** prima del rilascio
 
-## � Template Sections Reference
+## Template Sections Reference
 
 ### Sezioni Comuni a Tutti i Template
 - **Informazioni Generali**: Metadati e identificazione
@@ -202,7 +202,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - **Integration**: Protocols, data flow e system interactions
 - **User Acceptance**: User experience e business value
 
-## 📞 Contatti e Supporto
+## Contatti e Supporto
 
 Per domande sui template di Acceptance Criteria:
 

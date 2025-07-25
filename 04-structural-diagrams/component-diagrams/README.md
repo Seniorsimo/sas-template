@@ -2,7 +2,7 @@
 
 I diagrammi dei componenti mostrano l'organizzazione e le dipendenze dell'architettura software a livello di componenti.
 
-## 🎯 Scopo dei Component Diagrams
+## Scopo dei Component Diagrams
 
 I **Component Diagrams** servono per:
 - Visualizzare l'architettura del sistema a livello di componenti
@@ -10,7 +10,7 @@ I **Component Diagrams** servono per:
 - Documentare interfacce e contratti tra componenti
 - Pianificare deployment e distribuzione
 
-## 📋 Elementi del Diagramma
+## Elementi del Diagramma
 
 ### Componenti
 
@@ -77,7 +77,7 @@ ComponentB --( IInterface
 IInterface - ComponentC
 ```
 
-## 📝 Come Utilizzare il Template
+## Come Utilizzare il Template
 
 ### 1. Identifica i Layer Architetturali
 ```plantuml
@@ -121,7 +121,7 @@ UserSvc --( DB : uses
 OrderSvc --( MQ : publishes to
 ```
 
-## 🏗️ Pattern Architetturali
+## Pattern Architetturali
 
 ### Layered Architecture
 ```plantuml
@@ -367,11 +367,10 @@ ExternalAPIAdapter --> ThirdPartyAPI
 @enduml
 ```
 
-## 📊 Best Practices
+## Best Practices
 
-### ✅ Component Design
+### Component Design
 ```plantuml
-' ✅ Componente ben definito con interfacce chiare
 component "UserService" {
   interface "IUserRepository" as IUserRepo
   interface "IUserNotification" as IUserNotif
@@ -382,7 +381,6 @@ component "UserService" {
 UserBL -( IUserRepo : requires
 UserBL --( IUserNotif : provides
 
-' ✅ Separazione delle responsabilità
 package "Authentication" {
   component "Auth Service"
   component "Token Manager"
@@ -390,9 +388,9 @@ package "Authentication" {
 }
 ```
 
-### ✅ Interface Segregation
+### Interface Segregation
 ```plantuml
-' ✅ Interfacce specifiche e focalizzate
+' Interfacce specifiche e focalizzate
 interface "IUserReader" {
   +getUser(id)
   +findUsers(criteria)
@@ -404,16 +402,16 @@ interface "IUserWriter" {
   +deleteUser(id)
 }
 
-' ❌ Interfaccia troppo grande
+' Interfaccia troppo grande
 interface "IUserManager" {
   +getUser(), +createUser(), +updateUser()
   +sendEmail(), +validateData(), +generateReport()
 }
 ```
 
-### ✅ Dependency Direction
+### Dependency Direction
 ```plantuml
-' ✅ Dipendenze verso il centro (Domain)
+' Dipendenze verso il centro (Domain)
 package "UI Layer" {
   component "Controller"
 }
@@ -432,23 +430,23 @@ Service --> IRepository
 Repository ..|> IRepository
 ```
 
-### ❌ Anti-Patterns da Evitare
+### Anti-Patterns da Evitare
 ```plantuml
-' ❌ Circular Dependencies
+' Circular Dependencies
 component A --> B
 component B --> C
 component C --> A : "EVITARE!"
 
-' ❌ God Component
+' God Component
 component "EverythingManager" {
   note right : Gestisce tutto:\n- Users\n- Orders\n- Payments\n- Reports\n- Notifications
 }
 
-' ❌ Tight Coupling
+' Tight Coupling
 component ServiceA --> ConcreteImplementationB : "Dipendenza da implementazione"
 ```
 
-## 🎨 Styling e Visualizzazione
+## Styling e Visualizzazione
 
 ### Colori per Layer
 ```plantuml
@@ -492,7 +490,7 @@ together {
 }
 ```
 
-## 🧪 Esempi per Dominio
+## Esempi per Dominio
 
 ### E-commerce Platform
 ```plantuml
@@ -806,7 +804,7 @@ ClinicalDB --> BackupSvc
 @enduml
 ```
 
-## 🔍 Tracciabilità e Design
+## Tracciabilità e Design
 
 ### Mapping da Architettura
 ```yaml
@@ -856,7 +854,7 @@ cloud "Cloud Services" {
 }
 ```
 
-## 🧪 Component Testing Strategy
+## Component Testing Strategy
 
 ### Unit Testing per Component
 ```yaml
@@ -881,7 +879,7 @@ note right of MockDB : Provides predictable\ntest data responses
 note right of MockEmail : Verifies email\ncalls without sending
 ```
 
-## 🔧 Tools e Methodology
+## Tools e Methodology
 
 ### Architecture Documentation
 - **C4 Model**: Context, Containers, Components, Code
@@ -910,7 +908,7 @@ CI/CD Pipeline:
   - Deployment Tests: Validate component deployment
 ```
 
-## 📚 Resources e Standards
+## Resources e Standards
 
 ### Architecture Patterns
 - **Microservices**: Independent deployable components
@@ -923,7 +921,7 @@ CI/CD Pipeline:
 - `../../03-behavioral-diagrams/`: Component interactions
 - `../../05-database-design/`: Data component design
 
-## 📞 Supporto
+## Supporto
 
 Per domande sui Component Diagrams:
 
