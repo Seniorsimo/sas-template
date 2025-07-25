@@ -80,7 +80,8 @@ end
 
 ## Come Utilizzare il Template
 
-### 1. Identifica i Partecipanti
+### Identifica i Partecipanti
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -93,7 +94,8 @@ database "User DB" as DB
 @enduml
 ```
 
-### 2. Modella l'Interazione
+### Modella l'Interazione
+
 ```plantuml
 C -> W: Login Request
 activate W
@@ -113,7 +115,7 @@ W --> C: Login Success
 deactivate W
 ```
 
-### 3. Gestisci Scenari Alternativi
+### Gestisci Scenari Alternativi
 ```plantuml
 alt credenziali valide
   U --> G: success + user_data

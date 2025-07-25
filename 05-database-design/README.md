@@ -8,6 +8,7 @@ Questa sezione contiene la progettazione del database tramite **DIAGRAMMI VISIVI
 ## Obiettivo
 
 Documentare la struttura dei dati tramite:
+
 - **Diagrammi ER (Entity-Relationship)** per il modello concettuale
 - **Dizionario dei dati** per la documentazione delle entità
 - **Diagrammi di architettura dati** per la visione complessiva
@@ -15,6 +16,7 @@ Documentare la struttura dei dati tramite:
 ## Struttura
 
 ### er-diagram/
+
 Diagrammi Entità-Relazione che mostrano:
 - Entità del dominio e loro attributi
 - Relazioni tra entità con cardinalità
@@ -23,6 +25,7 @@ Diagrammi Entità-Relazione che mostrano:
 - Modello concettuale e logico dei dati
 
 ### data-dictionary.md
+
 Dizionario dei dati completo che documenta:
 - Definizione di tutte le entità
 - Descrizione dettagliata degli attributi
@@ -33,26 +36,29 @@ Dizionario dei dati completo che documenta:
 ## Convenzioni ER
 
 ### Entità
+
 - Nomi al singolare e in PascalCase
 - Attributi in camelCase
 - Chiavi primarie sottolineate
 
 ### Relazioni
+
 - Nomi descrittivi del tipo di relazione
 - Cardinalità chiaramente specificata
 - Ruoli quando necessario
 
 ### Attributi
+
 - Tipi di dati specificati
 - Vincoli di dominio
 - Valori di default
 
 ## Processo di Design Concettuale
 
-1. **Analisi dei Requisiti**: Estrazione entità dai requirements e user stories
-2. **Modello Concettuale**: Diagramma ER ad alto livello con entità principali
-3. **Modello Logico**: Raffinamento con normalizzazione e vincoli
-4. **Documentazione**: Dizionario dati e descrizioni dettagliate
+- **Analisi dei Requisiti**: Estrazione entità dai requirements e user stories
+- **Modello Concettuale**: Diagramma ER ad alto livello con entità principali
+- **Modello Logico**: Raffinamento con normalizzazione e vincoli
+- **Documentazione**: Dizionario dati e descrizioni dettagliate
 
 > **Nota**: L'implementazione fisica (DDL, SQL) non è inclusa in questa sezione.
 
@@ -66,24 +72,28 @@ Dizionario dei dati completo che documenta:
 ## Best Practices per Diagrammi ER
 
 ### Design Concettuale
+
 - **Entità chiare**: Nomi significativi che riflettono il dominio business
 - **Attributi essenziali**: Include solo attributi rilevanti per il modello
 - **Relazioni semantiche**: Nomi che esprimono il significato business
 - **Cardinalità accurate**: Rifletti le regole business reali
 
 ### Notation Standards
+
 - **Entità**: Rettangoli con nomi al singolare (Customer, Order, Product)
 - **Attributi**: Ovali collegati alle entità con linee
 - **Chiavi primarie**: Attributi sottolineati o evidenziati
 - **Relazioni**: Rombi con verbi che descrivono l'associazione
 
 ### Visual Organization
+
 - **Layout pulito**: Evita sovrapposizioni di linee
 - **Raggruppamento logico**: Entità correlate vicine
 - **Colori consistenti**: Usa colori per categorizzare entità
 - **Leggibilità**: Font e dimensioni appropriate
 
 ### Documentazione
+
 - **Tracciabilità**: Collegamenti con requirements e user stories
 - **Glossario**: Definizioni chiare per termini di dominio
 - **Vincoli**: Documenta regole business non esprimibili graficamente
@@ -92,6 +102,7 @@ Dizionario dei dati completo che documenta:
 ## Template e Strumenti
 
 ### PlantUML per ER Diagrams
+
 Usa la sintassi PlantUML per diagrammi versionabili:
 ```plantuml
 @startuml
@@ -106,6 +117,7 @@ entity Customer {
 ```
 
 ### Collegamento con Altri Diagrammi
+
 - **Class Diagrams**: Mappatura entità → classi domain
 - **Component Diagrams**: Architettura data layer
 - **Use Cases**: Operazioni CRUD per ogni entità

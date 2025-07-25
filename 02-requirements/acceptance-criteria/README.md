@@ -20,9 +20,11 @@ acceptance-criteria/
 ## Tipologie di Criteri di Accettazione
 
 ### Functional Acceptance Criteria (AC-F-XXX)
+
 **Scopo**: Definire criteri per validare che le funzionalità implementate soddisfino i requisiti funzionali specifici.
 
 **Quando utilizzare**:
+
 - Test di singole funzionalità
 - Validazione comportamenti business logic
 - Verifica workflow applicativi
@@ -31,9 +33,11 @@ acceptance-criteria/
 **Esempio ID**: AC-F-001, AC-F-002, AC-F-LOGIN-001
 
 ### Non-Functional Acceptance Criteria (AC-NF-XXX)
+
 **Scopo**: Definire criteri per validare attributi di qualità del sistema (performance, sicurezza, usabilità, etc.).
 
 **Quando utilizzare**:
+
 - Test di performance e carico
 - Validazione requisiti di sicurezza
 - Test di usabilità e accessibilità
@@ -42,9 +46,11 @@ acceptance-criteria/
 **Esempio ID**: AC-NF-001, AC-NF-PERF-001, AC-NF-SEC-001
 
 ### Integration Acceptance Criteria (AC-I-XXX)
+
 **Scopo**: Definire criteri per validare l'integrazione tra sistemi, servizi o componenti.
 
 **Quando utilizzare**:
+
 - Test API e servizi web
 - Integrazione con sistemi esterni
 - Test database e data flow
@@ -53,9 +59,11 @@ acceptance-criteria/
 **Esempio ID**: AC-I-001, AC-I-API-001, AC-I-DB-001
 
 ### User Acceptance Criteria (AC-UA-XXX)
+
 **Scopo**: Definire criteri per validare che il sistema soddisfi le aspettative e necessità degli utenti finali.
 
 **Quando utilizzare**:
+
 - User Acceptance Testing (UAT)
 - Validazione user experience
 - Test usabilità con utenti reali
@@ -71,6 +79,7 @@ AC-{TYPE}-{AREA}-{NUMBER}
 ```
 
 **Dove**:
+
 - `{TYPE}`: F (Functional) | NF (Non-Functional) | I (Integration) | UA (User Acceptance)
 - `{AREA}`: [Opzionale] Area funzionale o modulo specifico
 - `{NUMBER}`: Numero progressivo (001, 002, etc.)
@@ -91,38 +100,44 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 ## Workflow di Utilizzo
 
 ### 1. Creazione di un Nuovo Criterio
-1. Identificare la tipologia appropriata (F/NF/I/UA)
-2. Copiare il template corrispondente
-3. Rinominare il file seguendo le convenzioni
-4. Compilare tutte le sezioni del template
-5. Collegare a requisiti e user stories esistenti
+
+- Identificare la tipologia appropriata (F/NF/I/UA)
+- Copiare il template corrispondente
+- Rinominare il file seguendo le convenzioni
+- Compilare tutte le sezioni del template
+- Collegare a requisiti e user stories esistenti
 
 ### 2. Review e Approvazione
-1. Business Analyst review per completezza
-2. Technical review per fattibilità
-3. Stakeholder approval per criteri business-critical
-4. QA review per testability
+
+- Business Analyst review per completezza
+- Technical review per fattibilità
+- Stakeholder approval per criteri business-critical
+- QA review per testability
 
 ### 3. Implementazione e Test
-1. Development team implementa features
-2. QA team esegue test secondo criteri
-3. Business users validano acceptance criteria
-4. Sign-off formale e closure
+
+- Development team implementa features
+- QA team esegue test secondo criteri
+- Business users validano acceptance criteria
+- Sign-off formale e closure
 
 ## Collegamento con Altri Artefatti
 
 ### Tracciabilità Verso l'Alto
+
 - **Business Objectives** (01-project-definition/objectives.md)
 - **User Stories** (02-requirements/user-stories/)
 - **Functional Requirements** (02-requirements/functional-requirements/)
 - **Non-Functional Requirements** (02-requirements/non-functional-requirements/)
 
 ### Tracciabilità Verso il Basso
+
 - **Test Cases** (Documenti di test dettagliati)
 - **Test Scripts** (Script automatici di test)
 - **Test Results** (Report risultati test)
 
 ### Collegamento Orizzontale
+
 - **Use Case Diagrams** (03-behavioral-diagrams/use-case-diagrams/)
 - **Sequence Diagrams** (03-behavioral-diagrams/sequence-diagrams/)
 - **Class Diagrams** (04-structural-diagrams/class-diagrams/)
@@ -130,6 +145,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 ## Checklist per Criteri di Qualità
 
 ### Criteri di Accettazione Efficaci
+
 - [ ] **Specific**: Criteri specifici e non ambigui
 - [ ] **Measurable**: Metriche e soglie quantificabili
 - [ ] **Achievable**: Realistici e implementabili
@@ -137,6 +153,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - [ ] **Time-bound**: Con tempistiche chiare per test
 
 ### Completezza del Template
+
 - [ ] Tutte le sezioni obbligatorie compilate
 - [ ] Tracciabilità a requisiti stabilita
 - [ ] Scenari di test definiti chiaramente
@@ -144,6 +161,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - [ ] Responsabilità e timeline assegnate
 
 ### Review Quality Gates
+
 - [ ] **Business Review**: Value e completeness validati
 - [ ] **Technical Review**: Feasibility e testability confermati
 - [ ] **UX Review**: User experience considerations incluse
@@ -152,12 +170,14 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 ## Metriche e KPI
 
 ### Metriche di Progetto
+
 - **Coverage**: % requisiti con AC definiti
 - **Completeness**: % AC con tutti campi compilati
 - **Traceability**: % AC collegati a requisiti
 - **Pass Rate**: % AC che passano i test al primo tentativo
 
 ### Metriche di Qualità
+
 - **Defect Density**: Difetti trovati per AC
 - **Cycle Time**: Tempo da creazione AC a sign-off
 - **Rework Rate**: % AC che richiedono modifiche
@@ -166,29 +186,33 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 ## Best Practices
 
 ### Durante la Creazione
-1. **Coinvolgere tutti gli stakeholder** nella definizione
-2. **Usare linguaggio business** comprensibile agli utenti
-3. **Essere specifici e misurabili** nei criteri
-4. **Includere scenari negativi** oltre a quelli positivi
-5. **Considerare edge cases** e condizioni limite
+
+- **Coinvolgere tutti gli stakeholder** nella definizione
+- **Usare linguaggio business** comprensibile agli utenti
+- **Essere specifici e misurabili** nei criteri
+- **Includere scenari negativi** oltre a quelli positivi
+- **Considerare edge cases** e condizioni limite
 
 ### Durante l'Implementazione
-1. **Mantenere tracciabilità** durante sviluppo
-2. **Aggiornare AC** se cambiano i requisiti
-3. **Validare frequentemente** con stakeholder
-4. **Documentare deviazioni** e rationale
-5. **Preparare evidenze** per sign-off
+
+- **Mantenere tracciabilità** durante sviluppo
+- **Aggiornare AC** se cambiano i requisiti
+- **Validare frequentemente** con stakeholder
+- **Documentare deviazioni** e rationale
+- **Preparare evidenze** per sign-off
 
 ### Durante i Test
-1. **Seguire AC come script di test** ufficiali
-2. **Documentare tutti i risultati** accuratamente
-3. **Coinvolgere business users** nella validazione
-4. **Gestire issues** in modo sistematico
-5. **Ottenere sign-off formale** prima del rilascio
+
+- **Seguire AC come script di test** ufficiali
+- **Documentare tutti i risultati** accuratamente
+- **Coinvolgere business users** nella validazione
+- **Gestire issues** in modo sistematico
+- **Ottenere sign-off formale** prima del rilascio
 
 ## Template Sections Reference
 
 ### Sezioni Comuni a Tutti i Template
+
 - **Informazioni Generali**: Metadati e identificazione
 - **Descrizione**: Context e background
 - **Criteri di Accettazione**: Specifici per tipologia
@@ -197,6 +221,7 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - **Sign-off**: Approvazioni formali
 
 ### Sezioni Specifiche per Tipologia
+
 - **Functional**: Focus su behavior e business logic
 - **Non-Functional**: Metriche quantitative e thresholds
 - **Integration**: Protocols, data flow e system interactions

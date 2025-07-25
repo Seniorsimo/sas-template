@@ -4,15 +4,16 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 
 ## Come Utilizzare Questo Template
 
-1. **Clona** questo repository
-2. **Personalizza** i file template in base al tuo progetto specifico
-3. **Sostituisci** i placeholder `[Nome Progetto]`, `[Descrizione]`, etc. con i tuoi dati
-4. **Elimina** le sezioni non necessarie per il tuo progetto
-5. **Aggiungi** diagrammi e documentazione specifica
+- **Clona** questo repository
+- **Personalizza** i file template in base al tuo progetto specifico
+- **Sostituisci** i placeholder `[Nome Progetto]`, `[Descrizione]`, etc. con i tuoi dati
+- **Elimina** le sezioni non necessarie per il tuo progetto
+- **Aggiungi** diagrammi e documentazione specifica
 
 ## Struttura del Template
 
 ### 01-project-definition/
+
 **Template completi per la definizione iniziale del progetto**
 
 - `project-description.md` - Descrizione dettagliata del progetto (problema, soluzione, benefici)
@@ -22,6 +23,7 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 - `risk-register.md` - Registro dei rischi con matrice probabilità/impatto e piani di mitigazione
 
 ### 02-requirements/
+
 **Gestione gerarchica e strutturata dei requisiti**
 
 - **`user-stories/`** - Epic e user stories con prioritizzazione MoSCoW
@@ -38,6 +40,7 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
   - `user-acceptance/` - Criteri per UAT e business validation
 
 ### 03-behavioral-diagrams/
+
 **Diagrammi UML comportamentali con template e guide complete**
 
 - **`use-case-diagrams/`** - Casi d'uso con attori, boundary e relazioni + README dettagliato
@@ -45,6 +48,7 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 - **`sequence-diagrams/`** - Interazioni temporali tra oggetti/sistemi + pattern comuni
 
 ### 04-structural-diagrams/
+
 **Diagrammi UML strutturali per architettura e design**
 
 - **`class-diagrams/`** - Modello OOP con relazioni, pattern e principi SOLID + esempi multi-dominio
@@ -52,6 +56,7 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 - `template-system-architecture.puml` - Template architettura generale del sistema
 
 ### 05-database-design/
+
 **Progettazione dati tramite diagrammi e documentazione (NO SQL)**
 
 - **`er-diagram/`** - Modello Entità-Relazione concettuale e logico + guida completa
@@ -77,11 +82,11 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 
 ## Come Iniziare
 
-1. **Definisci il Progetto**: Completa tutti i template in `01-project-definition/` (description, stakeholders, objectives, scope, risks)
-2. **Raccogli i Requisiti Gerarchici**: Struttura le user stories e requisiti in `02-requirements/` usando la gerarchia per categoria
-3. **Crea i Diagrammi Comportamentali**: Modella use cases, activity e sequence in `03-behavioral-diagrams/`
-4. **Progetta l'Architettura**: Sviluppa system architecture, class e component diagrams in `04-structural-diagrams/`
-5. **Disegna il Modello Dati**: Completa con ER diagrams e data dictionary in `05-database-design/`
+- **Definisci il Progetto**: Completa tutti i template in `01-project-definition/` (description, stakeholders, objectives, scope, risks)
+- **Raccogli i Requisiti Gerarchici**: Struttura le user stories e requisiti in `02-requirements/` usando la gerarchia per categoria
+- **Crea i Diagrammi Comportamentali**: Modella use cases, activity e sequence in `03-behavioral-diagrams/`
+- **Progetta l'Architettura**: Sviluppa system architecture, class e component diagrams in `04-structural-diagrams/`
+- **Disegna il Modello Dati**: Completa con ER diagrams e data dictionary in `05-database-design/`
 
 ## Workflow di Sviluppo Template
 
@@ -127,6 +132,7 @@ Data Dictionary & Business Rules
 ## Template Sistema Completo
 
 ### Template Documentazione (Markdown)
+
 **01-project-definition/**
 
 - `project-description.md` - Descrizione completa: problema, soluzione, benefici, ROI
@@ -147,6 +153,7 @@ Data Dictionary & Business Rules
 - `data-dictionary.md` - Dizionario dati completo e glossario del dominio
 
 ### Template Diagrammi (PlantUML)
+
 **Behavioral Diagrams**
 
 - `template-use-case.puml` - Casi d'uso con attori, boundary, include/extend
@@ -173,11 +180,11 @@ Data Dictionary & Business Rules
 
 ### Quick Start
 
-1. **Clone/Fork** questo repository per il tuo progetto
-2. **Leggi i README** di ogni cartella per comprendere la struttura e best practices
-3. **Inizia da 01-project-definition/** seguendo l'ordine numerico delle cartelle
-4. **Personalizza i template** sostituendo placeholder con i dati del tuo progetto
-5. **Usa i pattern forniti** negli esempi multi-dominio come riferimento
+- **Clone/Fork** questo repository per il tuo progetto
+- **Leggi i README** di ogni cartella per comprendere la struttura e best practices
+- **Inizia da 01-project-definition/** seguendo l'ordine numerico delle cartelle
+- **Personalizza i template** sostituendo placeholder con i dati del tuo progetto
+- **Usa i pattern forniti** negli esempi multi-dominio come riferimento
 
 ### Personalizzazione Avanzata
 

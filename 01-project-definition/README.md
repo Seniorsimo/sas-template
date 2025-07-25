@@ -5,28 +5,36 @@ Questa sezione contiene la documentazione di base per definire chiaramente il pr
 ## File Template Inclusi
 
 ### project-description.md
+
 Template per la descrizione completa del progetto che include:
+
 - **Panoramica generale** del progetto
 - **Problema da risolvere** e contesto
 - **Soluzione proposta** e approccio
 - **Benefici attesi** e valore di business
 
-### stakeholders.md  
+### stakeholders.md
+
 Template per l'identificazione e analisi degli stakeholder:
+
 - **Stakeholder primari** (Product Owner, Utenti finali)
 - **Stakeholder secondari** (Team di sviluppo, Operations, Sicurezza)
 - **Stakeholder esterni** (Fornitori, Partner, Enti regolatori)
 - **Matrice stakeholder** e piano di comunicazione
 
 ### objectives.md
+
 Template per la definizione degli obiettivi del progetto:
+
 - **Obiettivi di business** (primari e secondari)
 - **Obiettivi tecnici** (performance, scalabilità, sicurezza)
 - **Obiettivi di qualità** (usabilità, affidabilità, portabilità)
 - **Metriche di successo** e KPI
 
 ### project-scope.md
+
 Template per la definizione dello scope del progetto:
+
 - **Scope statement** e giustificazione
 - **In scope**: funzionalità, moduli, integrazioni incluse
 - **Out of scope**: cosa NON sarà incluso
@@ -34,7 +42,9 @@ Template per la definizione dello scope del progetto:
 - **Work Breakdown Structure** di alto livello
 
 ### risk-register.md
+
 Template per il registro dei rischi del progetto:
+
 - **Risk Matrix** con scala probabilità/impatto
 - **Catalogazione rischi** per categoria e priorità
 - **Strategie di mitigazione** e piani di contingenza
@@ -43,22 +53,24 @@ Template per il registro dei rischi del progetto:
 ## Come Utilizzare Questi Template
 
 ### 1. Ordine di Compilazione Consigliato
-```
-1. project-description.md    → Definisci il COSA e il PERCHE'
-2. stakeholders.md          → Identifica il CHI è coinvolto  
-3. objectives.md            → Stabilisci COSA vuoi ottenere
-4. project-scope.md         → Delimita COSA farai e NON farai
-5. risk-register.md         → Anticipa COSA potrebbe andare storto
-```
+
+- **project-description.md** → Definisci il COSA e il PERCHE'
+- **stakeholders.md** → Identifica il CHI è coinvolto  
+- **objectives.md** → Stabilisci COSA vuoi ottenere
+- **project-scope.md** → Delimita COSA farai e NON farai
+- **risk-register.md** → Anticipa COSA potrebbe andare storto
 
 ### 2. Personalizzazione
+
 Per ogni file template:
+
 - **Cerca e sostituisci** tutti i placeholder `[Nome Progetto]`, `[Descrizione]`, etc.
 - **Compila le sezioni** con informazioni specifiche del tuo progetto
 - **Rimuovi sezioni** non applicabili al tuo contesto
 - **Aggiungi sezioni** specifiche se necessario
 
 ### 3. Iterazione e Refinement
+
 - **Revisiona regolarmente** questi documenti durante il progetto
 - **Aggiorna** quando cambiano requisiti o contesto
 - **Mantieni allineamento** tra tutti i documenti
@@ -78,12 +90,14 @@ Prima di procedere alla fase successiva (`02-requirements`), assicurati di aver 
 ## Collegamento con Altre Sezioni
 
 ### Input per le Fasi Successive:
+
 - **02-requirements**: Gli obiettivi definiti guideranno la raccolta dei requisiti
 - **03-behavioral-diagrams**: Gli stakeholder identificati diventeranno attori nei use case
 - **04-structural-diagrams**: Lo scope definisce i moduli da progettare
 - **05-database-design**: I requisiti di business guidano il design del database
 
 ### Tracciabilità:
+
 - Ogni requisito deve essere tracciabile agli obiettivi
 - Ogni use case deve servire almeno uno stakeholder
 - Ogni componente deve essere nel scope definito
@@ -91,13 +105,15 @@ Prima di procedere alla fase successiva (`02-requirements`), assicurati di aver 
 ## Best Practices
 
 ### Do's
+
 - **Coinvolgi gli stakeholder** nella definizione e review
 - **Sii specifico** nelle descrizioni ed evita generalità
 - **Usa metriche quantificabili** dove possibile
 - **Mantieni documenti concisi** ma completi
 - **Versiona tutti i documenti** per tracciare cambiamenti
 
-### Don'ts  
+### Don'ts
+
 - **Non fare assunzioni** senza documentarle
 - **Non definire scope troppo ampio** per la prima release
 - **Non trascurare i rischi** anche se sembrano improbabili
@@ -108,10 +124,10 @@ Prima di procedere alla fase successiva (`02-requirements`), assicurati di aver 
 
 Una volta completata la definizione del progetto:
 
-1. **Revisione formale** con tutti gli stakeholder chiave
-2. **Approvazione documentale** (sign-off formale)
-3. **Kick-off del progetto** con il team di sviluppo
-4. **Transizione** alla fase di raccolta requisiti (`02-requirements/`)
+- **Revisione formale** con tutti gli stakeholder chiave
+- **Approvazione documentale** (sign-off formale)
+- **Kick-off del progetto** con il team di sviluppo
+- **Transizione** alla fase di raccolta requisiti (`02-requirements/`)
 
 ---
 

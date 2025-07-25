@@ -5,6 +5,7 @@ Questa cartella contiene i criteri di accettazione per validare l'integrazione t
 ## Scopo degli Integration Acceptance Criteria
 
 Gli **Integration Acceptance Criteria** servono per:
+
 - Verificare comunicazione corretta tra sistemi
 - Validare scambio dati tra componenti
 - Testare API e servizi web
@@ -13,6 +14,7 @@ Gli **Integration Acceptance Criteria** servono per:
 ## Tipologie di Integrazioni
 
 ### API Integration
+
 - **REST APIs**: HTTP/HTTPS endpoints
 - **GraphQL**: Query e mutation APIs
 - **SOAP Services**: Web services legacy
@@ -20,6 +22,7 @@ Gli **Integration Acceptance Criteria** servono per:
 - **gRPC**: High-performance RPC
 
 ### Data Integration
+
 - **Database Integration**: Cross-database queries
 - **File Transfer**: Batch file processing
 - **Message Queues**: Async messaging (SQS, RabbitMQ)
@@ -27,6 +30,7 @@ Gli **Integration Acceptance Criteria** servono per:
 - **ETL Processes**: Extract, Transform, Load
 
 ### System Integration
+
 - **Microservices**: Service-to-service communication
 - **Legacy Systems**: Mainframe, AS400 integration
 - **Cloud Services**: AWS, Azure, GCP services
@@ -34,6 +38,7 @@ Gli **Integration Acceptance Criteria** servono per:
 - **Enterprise Systems**: ERP, CRM, HR systems
 
 ### UI Integration
+
 - **Single Sign-On**: SSO implementations
 - **Embedded Widgets**: Third-party components
 - **iFrame Integration**: Cross-domain embedding
@@ -57,12 +62,14 @@ AC-I-EXT-001-maps-service.md
 ```
 
 ### 2. Definisci Integration Contract
+
 - **Input Schema**: Formato dati inviati
 - **Output Schema**: Formato dati ricevuti
 - **Protocol Details**: HTTP methods, headers, auth
 - **Error Handling**: Error codes e recovery
 
 ### 3. Specifica Test Scenarios
+
 - **Happy Path**: Integrazione funziona correttamente
 - **Error Conditions**: Gestione failure e timeout
 - **Load Testing**: Performance sotto carico
@@ -159,24 +166,28 @@ And il token ha scadenza appropriata
 ## Quality Gates per Integration
 
 ### Functional Quality
+
 - [ ] **Data Integrity**: Dati trasmessi senza corruzioni
 - [ ] **Protocol Compliance**: Aderenza a standard protocollari
 - [ ] **Error Handling**: Gestione appropriata di tutti gli errori
 - [ ] **State Management**: Gestione corretta stati transazione
 
 ### Performance Quality
+
 - [ ] **Response Time**: Entro SLA definiti
 - [ ] **Throughput**: Volume transazioni richiesto
 - [ ] **Concurrency**: Gestione richieste simultanee
 - [ ] **Resource Usage**: Utilizzo efficiente risorse
 
 ### Security Quality
+
 - [ ] **Authentication**: Meccanismi auth implementati
 - [ ] **Authorization**: Controlli accesso funzionanti
 - [ ] **Data Protection**: Dati sensibili protetti
 - [ ] **Audit Logging**: Tutte le operazioni loggate
 
 ### Reliability Quality
+
 - [ ] **Fault Tolerance**: Resilienza a failure
 - [ ] **Recovery**: Capacità di recovery da errori
 - [ ] **Monitoring**: Osservabilità completa
@@ -185,6 +196,7 @@ And il token ha scadenza appropriata
 ## Testing Tools e Environment
 
 ### API Testing Tools
+
 - **Postman**: Interactive API testing
 - **Newman**: Automated Postman collections
 - **REST Assured**: Java-based API testing
@@ -192,18 +204,21 @@ And il token ha scadenza appropriata
 - **Insomnia**: API client and testing
 
 ### Load Testing Tools
+
 - **JMeter**: Open-source load testing
 - **K6**: Modern load testing tool
 - **Artillery**: Node.js load testing
 - **Gatling**: High-performance load testing
 
 ### Monitoring Tools
+
 - **Application Performance Monitoring**: New Relic, Dynatrace
 - **Log Aggregation**: ELK Stack, Splunk
 - **Metrics Collection**: Prometheus, Grafana
 - **Distributed Tracing**: Jaeger, Zipkin
 
 ### Mock Services
+
 - **WireMock**: HTTP service mocking
 - **MockServer**: Flexible mocking platform
 - **Postman Mock Server**: Quick API mocking
@@ -239,24 +254,28 @@ User Experience: Integration user satisfaction
 ## Integration Testing Lifecycle
 
 ### 1. Planning Phase
+
 - **Integration Architecture Review**: Design validation
 - **Test Strategy Definition**: Approach e tools
 - **Environment Setup**: Test environment prep
 - **Test Data Preparation**: Realistic test datasets
 
 ### 2. Development Phase
+
 - **Component Testing**: Individual service testing
 - **Contract Testing**: API contract validation
 - **Integration Development**: Actual integration coding
 - **Unit Testing**: Isolated component tests
 
 ### 3. Integration Testing Phase
+
 - **Smoke Testing**: Basic connectivity
 - **Functional Testing**: End-to-end scenarios
 - **Performance Testing**: Load e stress testing
 - **Security Testing**: Auth e vulnerability testing
 
 ### 4. Deployment Phase
+
 - **Staging Testing**: Production-like testing
 - **Production Validation**: Post-deployment verification
 - **Monitoring Setup**: Alerts e dashboards
@@ -265,18 +284,21 @@ User Experience: Integration user satisfaction
 ## Common Integration Challenges
 
 ### Technical Challenges
+
 - **Network Latency**: Geographic distributed systems
 - **Data Format Differences**: Schema mismatches
 - **Version Compatibility**: API version management
 - **Transaction Management**: Distributed transactions
 
 ### Operational Challenges
+
 - **Monitoring Complexity**: Multi-system visibility
 - **Debugging Difficulty**: Cross-system troubleshooting
 - **Deployment Coordination**: Multi-team releases
 - **Change Management**: Impact of changes
 
 ### Business Challenges
+
 - **SLA Alignment**: Different system SLAs
 - **Data Consistency**: Eventually consistent systems
 - **Error Attribution**: Identifying failure sources
@@ -285,6 +307,7 @@ User Experience: Integration user satisfaction
 ## Best Practices
 
 ### Design Best Practices
+
 - **Implement Circuit Breakers** per fault tolerance
 - **Use Idempotent Operations** per reliability
 - **Design for Failure** con fallback mechanisms
@@ -292,6 +315,7 @@ User Experience: Integration user satisfaction
 - **Version APIs** per backward compatibility
 
 ### Testing Best Practices
+
 - **Test Early** nel development lifecycle
 - **Use Contract Testing** per API validation
 - **Implement Automated Testing** per CI/CD
@@ -299,6 +323,7 @@ User Experience: Integration user satisfaction
 - **Monitor Production** per real-world validation
 
 ### Anti-Patterns da Evitare
+
 - **Tight Coupling**: Dipendenze strette tra sistemi
 - **Sync When Async**: Usare sync per long-running ops
 - **No Error Handling**: Ignorare gestione errori
@@ -331,6 +356,7 @@ Business Logic Errors:
 ```
 
 ### Debugging Techniques
+
 - **Distributed Tracing**: Follow request path
 - **Correlation IDs**: Track requests across systems
 - **Log Aggregation**: Centralized log analysis

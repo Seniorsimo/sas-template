@@ -5,6 +5,7 @@ I diagrammi delle classi mostrano la struttura statica del sistema, incluse clas
 ## Scopo dei Class Diagrams
 
 I **Class Diagrams** servono per:
+
 - Modellare la struttura statica del sistema
 - Definire classi, attributi e metodi
 - Mostrare relazioni tra classi
@@ -99,7 +100,8 @@ ClassA "1" -- "exactly 3" ClassB
 
 ## Come Utilizzare il Template
 
-### 1. Identifica le Classi del Dominio
+### Identifica le Classi del Dominio
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -127,14 +129,15 @@ class Order {
 @enduml
 ```
 
-### 2. Definisci le Relazioni
+### Definisci le Relazioni
+
 ```plantuml
 Customer "1" -- "0..*" Order : "places"
 Order "1" *-- "1..*" OrderItem : "contains"
 OrderItem "0..*" -- "1" Product : "references"
 ```
 
-### 3. Aggiungi Dettagli e Constraint
+### Aggiungi Dettagli e Constraint
 ```plantuml
 class Order {
   -orderId : Long {id}
@@ -914,11 +917,11 @@ public class Customer {
 
 ### Class Design Validation
 ```yaml
-Single Responsibility: ✓ Ogni classe ha una responsabilità
-Open/Closed Principle: ✓ Estendibile senza modifiche
-Liskov Substitution: ✓ Sottoclassi sostituibili
-Interface Segregation: ✓ Interfacce specifiche
-Dependency Inversion: ✓ Dipendenze da astrazioni
+Single Responsibility: PASS - Ogni classe ha una responsabilità
+Open/Closed Principle: PASS - Estendibile senza modifiche
+Liskov Substitution: PASS - Sottoclassi sostituibili
+Interface Segregation: PASS - Interfacce specifiche
+Dependency Inversion: PASS - Dipendenze da astrazioni
 ```
 
 ### Unit Testing Structure
@@ -951,6 +954,7 @@ plantuml -jar plantuml.jar -reverse *.cs
 ```
 
 ### IDE Integration
+
 - **IntelliJ IDEA**: PlantUML plugin + code generation
 - **Visual Studio**: Class designer + PlantUML
 - **Eclipse**: PlantUML plugin + reverse engineering
@@ -971,6 +975,7 @@ note right of User : JPA Entity\n@Table(name="users")\n@Column annotations
 ## Resources e Standards
 
 ### UML Class Diagram Standards
+
 - **UML 2.5 Specification**: Class diagram notation
 - **Object-Oriented Design Principles**: SOLID principles
 - **Design Patterns**: GoF patterns implementation

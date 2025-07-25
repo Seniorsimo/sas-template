@@ -5,6 +5,7 @@ Questa sezione gestisce la raccolta e documentazione strutturata di tutti i requ
 ## Struttura Gerarchica Organizzata
 
 ### user-stories/
+
 Gestione delle user stories organizzate per epic:
 ```
 user-stories/
@@ -17,6 +18,7 @@ user-stories/
 ```
 
 ### functional-requirements/
+
 Requisiti funzionali categorizzati per tipo:
 ```
 functional-requirements/
@@ -28,6 +30,7 @@ functional-requirements/
 ```
 
 ### non-functional-requirements/
+
 Requisiti di qualità organizzati per attributo:
 ```
 non-functional-requirements/
@@ -41,6 +44,7 @@ non-functional-requirements/
 ```
 
 ### acceptance-criteria/
+
 Criteri di accettazione strutturati per testing:
 ```
 acceptance-criteria/
@@ -54,16 +58,19 @@ acceptance-criteria/
 ## Sistema di Numerazione Unificato
 
 ### User Stories
+
 - **Epic**: `EPIC-XXX` (es. EPIC-001)
 - **User Stories**: `US-XXX` (numerazione progressiva globale)
 
 ### Requisiti Funzionali
+
 - **Core Features**: `REQ-F-XXX`
 - **Integrazioni**: `REQ-I-XXX`
 - **API**: `REQ-API-XXX`
 - **UI**: `REQ-UI-XXX`
 
 ### Requisiti Non-Funzionali
+
 - **Performance**: `REQ-NF-PERF-XXX`
 - **Security**: `REQ-NF-SEC-XXX`
 - **Usability**: `REQ-NF-USA-XXX`
@@ -72,6 +79,7 @@ acceptance-criteria/
 - **Compatibility**: `REQ-NF-COMP-XXX`
 
 ### Criteri di Accettazione
+
 - **Functional**: `AC-F-XXX`
 - **Non-Functional**: `AC-NF-XXX`
 - **Integration**: `AC-I-XXX`
@@ -87,6 +95,7 @@ Per [beneficio/valore]
 ```
 
 ### Requisiti SMART
+
 - **Specific**: Specifici e chiari
 - **Measurable**: Misurabili quantitativamente
 - **Achievable**: Tecnicamente realizzabili
@@ -94,6 +103,7 @@ Per [beneficio/valore]
 - **Time-bound**: Con tempistiche definite
 
 ### Prioritizzazione MoSCoW
+
 - **Must Have**: Requisiti critici per MVP
 - **Should Have**: Requisiti importanti per release completa
 - **Could Have**: Requisiti nice-to-have per versioni future
@@ -129,29 +139,34 @@ Non-Functional Requirements ↔ Acceptance Criteria
 ## Workflow di Gestione
 
 ### 1. Epic Planning
+
 - Identificazione epic dal backlog
 - Definizione obiettivi e scope epic
 - Breakdown in user stories
 
 ### 2. User Story Creation
+
 - Scrittura user stories format standard
 - Definizione criteri di accettazione
 - Stima story points
 - Prioritizzazione
 
 ### 3. Requirements Analysis
+
 - Derivazione requisiti funzionali da user stories
 - Identificazione requisiti non-funzionali
 - Categorizzazione e prioritizzazione
 - Review stakeholder
 
 ### 4. Acceptance Criteria Definition
+
 - Definizione criteri testabili
 - Collegamento con requisiti
 - Review con QA team
 - Approvazione finale
 
 ### 5. Validation & Testing
+
 - Implementazione funzionalità
 - Testing contro criteri
 - User acceptance testing
@@ -160,12 +175,14 @@ Non-Functional Requirements ↔ Acceptance Criteria
 ## Template e Standard
 
 ### Template Disponibili
+
 - **Epic Template**: `epic-template/README.md`
 - **User Story Template**: `epic-template/US-XXX-template.md`
 - **Functional Requirement**: `functional-requirements/core-features/REQ-F-XXX-template.md`
 - **Non-Functional Requirement**: `non-functional-requirements/REQ-NF-XXX-template.md`
 
 ### Convenzioni di Naming
+
 - **File**: `[ID]-[nome-breve].md`
 - **Cartelle**: `[categoria]-[nome]` (es. `epic-authentication`)
 - **ID**: Numerazione progressiva per categoria
@@ -173,6 +190,7 @@ Non-Functional Requirements ↔ Acceptance Criteria
 ## Best Practices
 
 ### Do's
+
 - **Mantieni tracciabilità** tra tutti gli elementi
 - **Usa template standardizzati** per consistenza
 - **Review regolarmente** con stakeholder
@@ -180,6 +198,7 @@ Non-Functional Requirements ↔ Acceptance Criteria
 - **Documenta decisioni** e motivazioni
 
 ### Don'ts
+
 - **Non creare requisiti** non collegati a user stories
 - **Non essere vago** nelle descrizioni
 - **Non dimenticare** i requisiti non-funzionali
@@ -189,13 +208,15 @@ Non-Functional Requirements ↔ Acceptance Criteria
 ## Change Management
 
 ### Processo di Modifica
-1. **Change Request**: Richiesta di modifica documentata
-2. **Impact Analysis**: Analisi impatto su altri elementi
-3. **Stakeholder Review**: Review e approvazione
-4. **Update Dependencies**: Aggiornamento elementi collegati
-5. **Communication**: Comunicazione cambiamenti
+
+- **Change Request**: Richiesta di modifica documentata
+- **Impact Analysis**: Analisi impatto su altri elementi
+- **Stakeholder Review**: Review e approvazione
+- **Update Dependencies**: Aggiornamento elementi collegati
+- **Communication**: Comunicazione cambiamenti
 
 ### Controllo Versioni
+
 - Ogni documento deve avere tabella change history
 - Approvazioni formali documentate
 - Baseline dei requisiti per milestone
@@ -203,12 +224,14 @@ Non-Functional Requirements ↔ Acceptance Criteria
 ## Metriche e Reporting
 
 ### Coverage Metrics
+
 - **User Stories Coverage**: % obiettivi business coperti
 - **Requirements Coverage**: % user stories con requisiti
 - **Acceptance Criteria Coverage**: % requisiti con criteri
 - **Test Coverage**: % criteri con test
 
 ### Quality Metrics
+
 - **Completeness**: % elementi completati
 - **Traceability**: % elementi tracciati
 - **Approval Rate**: % elementi approvati
@@ -217,18 +240,21 @@ Non-Functional Requirements ↔ Acceptance Criteria
 ## Definition of Ready/Done
 
 ### Epic Definition of Ready
+
 - [ ] Valore business chiarito
 - [ ] User stories identificate
 - [ ] Dipendenze mappate
 - [ ] Criteri accettazione epic definiti
 
 ### User Story Definition of Ready
+
 - [ ] Scritta in formato standard
 - [ ] Criteri di accettazione definiti
 - [ ] Story points stimati
 - [ ] Dipendenze identificate
 
 ### Requirements Definition of Done
+
 - [ ] Collegati a user stories
 - [ ] Approvati da stakeholder
 - [ ] Criteri di accettazione definiti

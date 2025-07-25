@@ -5,6 +5,7 @@ Questa cartella contiene i criteri di accettazione dal punto di vista dell'utent
 ## Scopo degli User Acceptance Criteria
 
 Gli **User Acceptance Criteria** servono per:
+
 - Validare funzionalità dal punto di vista utente
 - Confermare soddisfazione requisiti di business
 - Verificare usabilità e user experience
@@ -13,30 +14,35 @@ Gli **User Acceptance Criteria** servono per:
 ## Tipologie di User Acceptance Testing (UAT)
 
 ### Business Acceptance Testing (BAT)
+
 - **Processi di Business**: Workflow aziendali
 - **Regole di Business**: Logica applicativa specifica
 - **Reporting**: Dashboard e reportistica
 - **Compliance**: Aderenza a normative
 
 ### Alpha Testing
+
 - **Internal Testing**: Testing interno team sviluppo
 - **Controlled Environment**: Ambiente controllato
 - **Feature Validation**: Validazione funzionalità core
 - **Early Feedback**: Feedback preliminare
 
 ### Beta Testing
+
 - **External Users**: Utenti reali in ambiente reale
 - **Limited Release**: Rilascio limitato
 - **Real-world Scenarios**: Scenari d'uso reali
 - **Production-like**: Ambiente simile produzione
 
 ### Contract Acceptance Testing
+
 - **Contractual Requirements**: Requisiti contrattuali
 - **Vendor Deliverables**: Deliverable fornitori
 - **SLA Validation**: Verifica service level agreement
 - **Compliance Testing**: Testing conformità contratto
 
 ### Regulation Acceptance Testing
+
 - **GDPR Compliance**: Conformità privacy
 - **Industry Standards**: Standard settoriali
 - **Security Regulations**: Normative sicurezza
@@ -60,12 +66,14 @@ AC-U-PERF-001-page-load-times.md
 ```
 
 ### 2. Definisci User Persona
+
 - **Primary Users**: Utenti principali sistema
 - **Secondary Users**: Utenti occasionali
 - **Admin Users**: Utenti amministrativi
 - **External Users**: Utenti esterni/clienti
 
 ### 3. Descrivi User Journey
+
 - **Entry Points**: Come utente accede
 - **Main Flow**: Percorso principale
 - **Alternative Paths**: Percorsi alternativi
@@ -188,24 +196,28 @@ And the system feels responsive
 ## UAT Quality Gates
 
 ### Usability Quality
+
 - [ ] **Task Completion**: 95% task success rate
 - [ ] **Task Efficiency**: Tasks completed in expected time
 - [ ] **Error Recovery**: Users can recover from errors
 - [ ] **User Satisfaction**: Score ≥ 4/5 nelle survey
 
 ### Business Value Quality
+
 - [ ] **Business Goals**: Obiettivi business raggiunti
 - [ ] **Process Efficiency**: Miglioramento processi attuali
 - [ ] **ROI Achievement**: Return on investment realizzato
 - [ ] **Stakeholder Approval**: Approvazione stakeholder
 
 ### Functional Quality
+
 - [ ] **Feature Completeness**: Tutte le funzionalità richieste
 - [ ] **Business Rules**: Regole business implementate
 - [ ] **Data Accuracy**: Dati corretti e affidabili
 - [ ] **Integration**: Sistemi integrati funzionano
 
 ### User Experience Quality
+
 - [ ] **Intuitive Design**: Interfaccia intuitiva
 - [ ] **Consistent UI**: Design coerente
 - [ ] **Responsive**: Funziona su tutti device
@@ -280,6 +292,7 @@ Deliverables:
 ## UAT Checklist per Scenario
 
 ### Pre-Test Checklist
+
 - [ ] **User Persona Identified**: Target user per scenario
 - [ ] **Business Context**: Scenario business context
 - [ ] **Prerequisites**: System state prereqs
@@ -287,6 +300,7 @@ Deliverables:
 - [ ] **Success Criteria**: Clear definition of success
 
 ### During Test Checklist
+
 - [ ] **User Instructions**: Clear, non-leading instructions
 - [ ] **Observation**: User behavior observed
 - [ ] **Think Aloud**: User verbalizza processo decisionale
@@ -294,6 +308,7 @@ Deliverables:
 - [ ] **Timing Recorded**: Task completion times
 
 ### Post-Test Checklist
+
 - [ ] **Feedback Collected**: Structured user feedback
 - [ ] **Satisfaction Measured**: User satisfaction score
 - [ ] **Issues Prioritized**: Problemi categorizzati per severity
@@ -332,6 +347,7 @@ Business Goals: Strategic objectives met
 ## UAT Tools e Techniques
 
 ### Usability Testing Tools
+
 - **User Testing Platforms**: UserTesting.com, Lookback
 - **Heatmap Tools**: Hotjar, Crazy Egg
 - **A/B Testing**: Optimizely, VWO
@@ -339,6 +355,7 @@ Business Goals: Strategic objectives met
 - **Session Recording**: FullStory, LogRocket
 
 ### Feedback Collection
+
 - **In-app Feedback**: Intercom, Zendesk
 - **Survey Tools**: Google Forms, Microsoft Forms
 - **Focus Groups**: Scheduled group sessions
@@ -346,6 +363,7 @@ Business Goals: Strategic objectives met
 - **Beta Testing Platforms**: TestFlight, Google Play Console
 
 ### Analytics Tools
+
 - **User Behavior**: Google Analytics, Mixpanel
 - **Performance Monitoring**: New Relic, Dynatrace
 - **Error Tracking**: Sentry, Bugsnag
@@ -355,6 +373,7 @@ Business Goals: Strategic objectives met
 ## Common UAT Challenges
 
 ### User-Related Challenges
+
 - **User Availability**: Difficulty finding test users
 - **User Bias**: Users giving what they think you want to hear
 - **User Training**: Insufficient user training on testing
@@ -362,6 +381,7 @@ Business Goals: Strategic objectives met
 - **User Diversity**: Not testing with diverse user groups
 
 ### Process Challenges
+
 - **Time Constraints**: Insufficient time for thorough testing
 - **Environment Issues**: Test environment differs from production
 - **Data Quality**: Unrealistic or insufficient test data
@@ -369,6 +389,7 @@ Business Goals: Strategic objectives met
 - **Scope Creep**: Expanding requirements during UAT
 
 ### Technical Challenges
+
 - **Environment Stability**: Unstable test environment
 - **Performance Issues**: System performance problems
 - **Integration Problems**: Integration failures during testing
@@ -378,6 +399,7 @@ Business Goals: Strategic objectives met
 ## UAT Best Practices
 
 ### Planning Best Practices
+
 - **Start Early** nel development lifecycle
 - **Involve Real Users** non solo proxy users
 - **Create Realistic Scenarios** based su real workflows
@@ -385,6 +407,7 @@ Business Goals: Strategic objectives met
 - **Budget Adequate Time** per proper UAT
 
 ### Execution Best Practices
+
 - **Use Real Data** quando possibile
 - **Test in Production-like Environment**
 - **Document Everything** per future reference
@@ -392,6 +415,7 @@ Business Goals: Strategic objectives met
 - **Focus on User Goals** non solo funzionalità
 
 ### Feedback Best Practices
+
 - **Ask Open Questions** per gather insights
 - **Prioritize Issues** per impact e frequency
 - **Involve Users in Solutions** quando appropriato
@@ -399,6 +423,7 @@ Business Goals: Strategic objectives met
 - **Share Results** con all stakeholders
 
 ### Anti-Patterns da Evitare
+
 - **Proxy Users**: Usare non-users per testing
 - **Leading Questions**: Influenzare user responses
 - **Rushed UAT**: Insufficient time per proper testing
@@ -460,7 +485,7 @@ Minor Issues:
 Per domande sugli User Acceptance Criteria:
 
 - **Product Owner**: [Responsabile product requirements]
-- **UX Designer**: [Responsabile user experience]
+- **UX Designer**: [Responsabile user experience]  
 - **Business Analyst**: [Responsabile business requirements]
 - **Quality Manager**: [Responsabile quality assurance]
 - **Project Manager**: [Responsabile project delivery]

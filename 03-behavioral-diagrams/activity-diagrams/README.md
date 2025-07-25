@@ -68,7 +68,8 @@ note right: Questa attività richiede\nvalidazione speciale
 
 ## Come Utilizzare il Template
 
-### 1. Identifica il Processo
+### Identifica il Processo
+
 ```plantuml
 title Processo di Gestione Ordini
 
@@ -76,7 +77,8 @@ start
 :Cliente effettua ordine;
 ```
 
-### 2. Definisci le Swimlanes
+### Definisci le Swimlanes
+
 ```plantuml
 |#AntiqueWhite|Cliente|
 |#LightBlue|Frontend|
@@ -84,7 +86,7 @@ start
 |#LightCoral|Database|
 ```
 
-### 3. Modella il Flusso
+### Modella il Flusso
 ```plantuml
 |Cliente|
 start
@@ -210,6 +212,7 @@ end
 ## Best Practices
 
 ### Struttura e Flusso
+
 - **Start/End chiari**: Ogni diagramma deve avere inizio e fine definiti
 - **Flusso logico**: Le attività devono seguire sequenza logica
 - **Decisioni binarie**: Use if-then-else per decision points
@@ -502,6 +505,7 @@ end
 ```
 
 ### Coverage dei Percorsi
+
 - **Path Coverage**: Tutti i percorsi possibili
 - **Branch Coverage**: Tutte le decisioni
 - **Condition Coverage**: Tutte le condizioni
@@ -531,6 +535,7 @@ partition "Fase Elaborazione" {
 ```
 
 ### Integration con Modeling Tools
+
 - **Enterprise Architect**: Import/export UML
 - **Visual Paradigm**: PlantUML integration
 - **Lucidchart**: PlantUML support
@@ -539,11 +544,13 @@ partition "Fase Elaborazione" {
 ## Risorse e References
 
 ### UML Standards
+
 - **UML 2.5 Activity Diagrams**: Specification completa
 - **BPMN vs UML Activity**: Differenze e quando usare
 - **Workflow Patterns**: Catalog pattern comuni
 
 ### Template Correlati
+
 - `../use-case-diagrams/`: Use cases implementati
 - `../sequence-diagrams/`: Interazioni dettagliate
 - `../../02-requirements/`: Requirements correlati

@@ -1,9 +1,13 @@
 # Obiettivi del Progetto
 
 ## Informazioni Generali
+
 **Progetto**: [Nome del Progetto]
+
 **Versione**: [Versione]
+
 **Data**: [Data]
+
 **Responsabile**: [Nome Responsabile]
 
 ---
@@ -11,24 +15,28 @@
 ## Obiettivi di Business
 
 ### Obiettivo Primario
+
 [Descrivi l'obiettivo principale che il progetto deve raggiungere dal punto di vista del business]
 
 ### Obiettivi Secondari
 
-1. **[Nome Obiettivo 1]**
-   - Descrizione: [Descrizione dettagliata]
-   - Metrica: [Come misurarlo]
-   - Target: [Valore target]
+- **[Nome Obiettivo 1]**
 
-2. **[Nome Obiettivo 2]**
-   - Descrizione: [Descrizione dettagliata]
-   - Metrica: [Come misurarlo]
-   - Target: [Valore target]
+  - Descrizione: [Descrizione dettagliata]
+  - Metrica: [Come misurarlo]
+  - Target: [Valore target]
 
-3. **[Nome Obiettivo 3]**
-   - Descrizione: [Descrizione dettagliata]
-   - Metrica: [Come misurarlo]
-   - Target: [Valore target]
+- **[Nome Obiettivo 2]**
+
+  - Descrizione: [Descrizione dettagliata]
+  - Metrica: [Come misurarlo]
+  - Target: [Valore target]
+
+- **[Nome Obiettivo 3]**
+
+  - Descrizione: [Descrizione dettagliata]
+  - Metrica: [Come misurarlo]
+  - Target: [Valore target]
 
 ---
 
@@ -37,19 +45,25 @@
 ### Performance
 
 - **Tempo di Risposta**: [es. < 2 secondi per le operazioni principali]
+
 - **Throughput**: [es. gestire 1000 utenti concorrenti]
+
 - **Disponibilità**: [es. 99.9% uptime]
 
 ### Scalabilità
 
 - **Orizzontale**: [es. supportare fino a X server]
+
 - **Verticale**: [es. utilizzare risorse fino a Y GB RAM]
+
 - **Storage**: [es. gestire Z TB di dati]
 
 ### Sicurezza
 
 - **Autenticazione**: [es. implementare OAuth 2.0]
+
 - **Autorizzazione**: [es. controllo accessi basato su ruoli]
+
 - **Crittografia**: [es. TLS 1.3 per tutte le comunicazioni]
 - **Compliance**: [es. conformità GDPR]
 

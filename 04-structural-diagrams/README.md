@@ -5,6 +5,7 @@ Questa sezione contiene tutti i diagrammi che descrivono la struttura e l'archit
 ## Struttura
 
 ### class-diagrams/
+
 Diagrammi delle classi UML che mostrano:
 - Classi del dominio e business objects
 - Attributi, metodi e visibilità
@@ -13,6 +14,7 @@ Diagrammi delle classi UML che mostrano:
 - Design patterns e architectural patterns
 
 ### component-diagrams/
+
 Diagrammi dei componenti che descrivono:
 - Architettura del sistema a livello di componenti
 - Interfacce e contratti tra moduli
@@ -21,6 +23,7 @@ Diagrammi dei componenti che descrivono:
 - Deployment e distribuzione dei componenti
 
 ### template-system-architecture.puml
+
 Template per il diagramma dell'architettura generale del sistema che include:
 - Layer dell'applicazione (Frontend, API Gateway, Services)
 - Database Layer (Database principale, Cache, File Storage)
@@ -33,6 +36,7 @@ Template per il diagramma dell'architettura generale del sistema che include:
 ## Strumenti Disponibili
 
 ### PlantUML (.puml)
+
 Perfetto per diagrammi UML formali:
 - Sintassi testuale precisa
 - Supporto completo per UML standard
@@ -50,7 +54,9 @@ class User {
 ```
 
 ### Draw.io (.drawio)
+
 Ideale per diagrammi di architettura e infrastruttura:
+
 - Interfaccia drag-and-drop
 - Librerie di icone predefinite
 - Ottimo per diagrammi di deployment
@@ -59,24 +65,29 @@ Ideale per diagrammi di architettura e infrastruttura:
 **Come aprire**: Fai doppio clic sul file `.drawio` per aprirlo nell'editor integrato di VS Code.
 
 ### Mermaid (.mmd)
+
 Per diagrammi rapidi e semplici:
+
 - Sintassi semplificata
 - Rendering veloce
 - Perfetto per documentazione
 
 ## Workflow Consigliato
 
-### 1. Architettura di Sistema (Draw.io)
+### Architettura di Sistema (Draw.io)
+
 - Inizia con il diagramma generale dell'architettura
 - Mostra i layer principali
 - Evidenzia i flussi di comunicazione
 
-### 2. Diagrammi dei Componenti (PlantUML)
+### Diagrammi dei Componenti (PlantUML)
+
 - Dettaglio dei singoli componenti
 - Interfacce e dipendenze
 - Mapping con l'architettura generale
 
-### 3. Diagrammi delle Classi (PlantUML)
+### Diagrammi delle Classi (PlantUML)
+
 - Modello del dominio
 - Design patterns implementati
 - Struttura interna dei componenti
@@ -84,10 +95,12 @@ Per diagrammi rapidi e semplici:
 ## Template Disponibili
 
 ### Per PlantUML
+
 - `template-class-diagram.puml` - Struttura base per diagrammi delle classi
 - Esempi di relazioni, stereotipi e annotazioni
 
 ### Per Draw.io
+
 - `system-architecture.drawio` - Template architettura sistema
 - Layout predefinito con layer colorati
 - Esempi di connessioni e etichette
@@ -95,18 +108,21 @@ Per diagrammi rapidi e semplici:
 ## Best Practices
 
 ### Diagrammi delle Classi
+
 - Mostra solo attributi e metodi rilevanti
 - Usa stereotipi per chiarire ruoli (`<<interface>>`, `<<abstract>>`)
 - Raggruppa classi correlate in package
 - Includi molteplicità nelle relazioni
 
 ### Diagrammi di Architettura
+
 - Usa colori consistenti per raggruppare layer
 - Mostra direzione dei flussi di comunicazione
 - Includi tecnologie utilizzate
 - Mantieni il diagramma ad alto livello
 
 ### Naming Conventions
+
 - File: `[component-name]-[type].puml` o `[system-name]-architecture.drawio`
 - Classi: PascalCase
 - Attributi/Metodi: camelCase
@@ -115,26 +131,30 @@ Per diagrammi rapidi e semplici:
 ## Visualizzazione
 
 ### PlantUML
-1. Apri il file `.puml`
-2. Usa `Ctrl+Shift+P` → `PlantUML: Preview Current Diagram`
-3. Per esportare: `PlantUML: Export Current Diagram`
+
+- Apri il file `.puml`
+- Usa `Ctrl+Shift+P` → `PlantUML: Preview Current Diagram`
+- Per esportare: `PlantUML: Export Current Diagram`
 
 ### Draw.io
-1. Fai doppio clic sul file `.drawio`
-2. Si aprirà l'editor integrato di Draw.io
-3. Modifica con drag-and-drop
-4. Salva automaticamente in VS Code
+
+- Fai doppio clic sul file `.drawio`
+- Si aprirà l'editor integrato di Draw.io
+- Modifica con drag-and-drop
+- Salva automaticamente in VS Code
 
 ### Mermaid
-1. Inserisci il codice in un file Markdown:
+
+- Inserisci il codice in un file Markdown:
    ```markdown
    ```mermaid
    graph TD
      A --> B
    ```
-2. Usa l'anteprima Markdown per visualizzare
+- Usa l'anteprima Markdown per visualizzare
 
 ## Integrazione con Documentazione
+
 - Riferimenti ai diagrammi nella documentazione testuale
 - Link tra diagrammi comportamentali e strutturali
 - Tracciabilità con requisiti e user stories
@@ -142,6 +162,7 @@ Per diagrammi rapidi e semplici:
 - Interfacce e classi astratte
 
 ### component-diagrams/
+
 Diagrammi dei componenti che descrivono:
 - Architettura a componenti
 - Interfacce fornite e richieste
@@ -151,12 +172,14 @@ Diagrammi dei componenti che descrivono:
 ## Convenzioni per Diagrammi delle Classi
 
 ### Visibilità
+
 - `+` public
 - `-` private
 - `#` protected
 - `~` package
 
 ### Relazioni
+
 - **Associazione**: linea semplice
 - **Aggregazione**: diamante vuoto
 - **Composizione**: diamante pieno
@@ -164,6 +187,7 @@ Diagrammi dei componenti che descrivono:
 - **Implementazione**: triangolo vuoto + linea tratteggiata
 
 ### Stereotipi
+
 - `<<interface>>`
 - `<<abstract>>`
 - `<<entity>>`
@@ -173,16 +197,19 @@ Diagrammi dei componenti che descrivono:
 ## Best Practices
 
 ### Organizzazione
+
 - Raggruppa classi correlate
 - Mantieni diagrammi leggibili (max 10-15 classi)
 - Usa package per organizzare classi
 
 ### Dettaglio
+
 - Includi attributi e metodi principali
 - Specifica tipi di dati importanti
 - Mostra cardinalità nelle associazioni
 
 ### Tracciabilità
+
 - Collega alle user stories
 - Mantieni consistenza con i diagrammi comportamentali
 - Documenta le decisioni di design

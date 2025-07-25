@@ -5,6 +5,7 @@ I diagrammi Entità-Relazione (ER) rappresentano il modello concettuale e logico
 ## Scopo dei Diagrammi ER
 
 I **Diagrammi ER** servono per:
+
 - Modellare la struttura dei dati a livello concettuale
 - Definire entità, attributi e relazioni del dominio
 - Documentare vincoli di integrità e regole business
@@ -64,7 +65,7 @@ entity Product {
 #### Notation Symbols
 - `*` = Attributo obbligatorio (NOT NULL)
 - `<<FK>>` = Foreign Key
-- `<<PK>>` = Primary Key  
+- `<<PK>>` = Primary Key
 - `<<UK>>` = Unique Key
 - `<<computed>>` = Attributo calcolato
 - `<<derived>>` = Attributo derivato
@@ -113,11 +114,11 @@ note right of Order : Business Rules:\n- total_amount >= 0\n- shipping_date >= o
 
 ## Come Utilizzare il Template
 
-### 1. Identifica le Entità del Dominio
+### Identifica le Entità del Dominio
 ```plantuml
 ' Entità principali del business
 entity Customer
-entity Order  
+entity Order
 entity Product
 entity Category
 entity Payment
@@ -128,7 +129,7 @@ entity ContactInfo
 entity AuditLog
 ```
 
-### 2. Definisci gli Attributi
+### Definisci gli Attributi
 ```plantuml
 entity Customer {
   * customer_id : UUID
@@ -144,7 +145,7 @@ entity Customer {
 }
 ```
 
-### 3. Modella le Relazioni
+### Modella le Relazioni
 ```plantuml
 Customer ||--o{ Order : "places"
 Customer ||--o{ Address : "has"
@@ -154,7 +155,7 @@ Product ||--o{ OrderItem : "ordered as"
 Category ||--o{ Product : "contains"
 ```
 
-### 4. Aggiungi Vincoli e Note
+### Aggiungi Vincoli e Note
 ```plantuml
 note right of Customer : Customer must have\nat least one contact method\n(email or phone)
 
@@ -336,7 +337,7 @@ note right of ProductInventory : Daily inventory snapshots\nfor trend analysis
 
 ### Entità ben definite
 ```plantuml
-' ✅ Entità con responsabilità chiara
+' Entità con responsabilità chiara
 entity Customer {
   * customer_id : UUID
   --
@@ -354,7 +355,7 @@ entity CustomerAddress {
   address_type : ENUM(billing, shipping)
 }
 
-' ❌ Entità con troppi attributi eterogenei
+' Entità con troppi attributi eterogenei
 entity CustomerEverything {
   customer_id, name, email, phone,
   address1, address2, city, country,
@@ -363,21 +364,21 @@ entity CustomerEverything {
 }
 ```
 
-### ✅ Relazioni semantiche
+### Relazioni semantiche
 ```plantuml
-' ✅ Relazioni con nomi significativi
+' Relazioni con nomi significativi
 Customer ||--o{ Order : "places"
 Order ||--o{ OrderItem : "contains"
 Product ||--o{ OrderItem : "appears in"
 
-' ❌ Relazioni generiche
+' Relazioni generiche
 Customer ||--o{ Order : "has"
 Order ||--o{ OrderItem : "links to"
 ```
 
-### ✅ Normalizzazione appropriata
+### Normalizzazione appropriata
 ```plantuml
-' ✅ 3NF - Entità separate per concetti distinti
+' 3NF - Entità separate per concetti distinti
 entity Customer {
   * customer_id : UUID
   --
@@ -400,7 +401,7 @@ entity CustomerAddress {
   * city : VARCHAR(100)
 }
 
-' ❌ Denormalizzato con ripetizioni
+' Denormalizzato con ripetizioni
 entity CustomerDenorm {
   customer_id, name, email,
   country_code, country_name, currency_code,
@@ -408,14 +409,14 @@ entity CustomerDenorm {
 }
 ```
 
-### ❌ Anti-Patterns da Evitare
+### Anti-Patterns da Evitare
 ```plantuml
-' ❌ Entità "God Table"
+' Entità "God Table"
 entity SystemData {
   note right : Contiene tutto:\n- User data\n- Order data\n- Product data\n- Configuration\n- Logs
 }
 
-' ❌ Attributi multivalore
+' Attributi multivalore
 entity Product {
   * product_id : UUID
   --
@@ -423,7 +424,7 @@ entity Product {
   sizes : VARCHAR(255) "S,M,L,XL"
 }
 
-' ❌ Chiavi naturali instabili
+' Chiavi naturali instabili
 entity Customer {
   * email : VARCHAR(100) <<PK>>
   note right : Email può cambiare!\nUsa UUID invece
@@ -1039,16 +1040,16 @@ note left of Bill : patient_amount + insurance_amount\n= total_amount
 ### Data Model Quality Metrics
 ```yaml
 Entity Design Quality:
-  - Single Responsibility: ✓ Each entity has one clear purpose
-  - Proper Normalization: ✓ 3NF achieved, no redundancy
-  - Complete Attributes: ✓ All necessary attributes present
-  - Appropriate Data Types: ✓ Types match business rules
+  - Single Responsibility: Each entity has one clear purpose
+  - Proper Normalization: 3NF achieved, no redundancy
+  - Complete Attributes: All necessary attributes present
+  - Appropriate Data Types: Types match business rules
 
 Relationship Quality:
-  - Correct Cardinality: ✓ Reflects real business rules
-  - Meaningful Names: ✓ Relationship names are descriptive
-  - Referential Integrity: ✓ All FKs properly defined
-  - No Missing Relationships: ✓ All associations captured
+  - Correct Cardinality: Reflects real business rules
+  - Meaningful Names: Relationship names are descriptive
+  - Referential Integrity: All FKs properly defined
+  - No Missing Relationships: All associations captured
 ```
 
 ### Business Rule Validation
@@ -1062,7 +1063,7 @@ entity Order {
   status : ENUM(pending, confirmed, shipped, delivered)
 }
 
-note right of Order : Validation Rules:\n• total_amount >= 0\n• order_date <= today\n• status transitions controlled\n• customer must be active
+note right of Order : Validation Rules:\n- total_amount >= 0\n- order_date <= today\n- status transitions controlled\n- customer must be active
 ```
 
 ### Referential Integrity Checks
@@ -1129,12 +1130,14 @@ plantuml-validator --check-constraints --check-naming model.puml
 ## Resources e Standards
 
 ### Data Modeling Standards
+
 - **IDEF1X**: Integration Definition for Information Modeling
 - **Chen Notation**: Original ER notation by Peter Chen
 - **Crow's Foot**: Popular industry-standard notation
 - **Martin Notation**: Information Engineering notation
 
 ### Template Correlati
+
 - `../class-diagrams/`: OOP mapping from ER entities
 - `../../02-requirements/`: Business rules and constraints
 - `../data-dictionary.md`: Detailed attribute descriptions

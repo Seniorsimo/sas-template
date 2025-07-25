@@ -1,6 +1,7 @@
 # REQ-API-XXX-[AREA]: [Titolo API Requirement]
 
 ## Informazioni Generali
+
 **ID**: REQ-API-XXX-[AREA]  
 **Categoria**: API Requirement  
 **API Type**: REST | GraphQL | SOAP | WebSocket | gRPC  
@@ -15,17 +16,21 @@
 ## Descrizione API
 
 ### Sommario
+
 [Breve descrizione di cosa fa questa API - scopo e funzionalità principale]
 
 ### Business Context
+
 [Perché questa API è necessaria dal punto di vista business]
 
 ### Target Consumers
+
 **Primary Consumers**: [Chi userà principalmente questa API]  
 **Secondary Consumers**: [Utenti secondari dell'API]  
 **Use Cases**: [Casi d'uso principali per cui verrà utilizzata]
 
 ### API Category
+
 **Category**: [CRUD | Search | Authentication | Notification | Integration | etc.]  
 **Complexity**: [Simple | Medium | Complex]  
 **Expected Usage**: [Low | Medium | High volume]
@@ -35,18 +40,21 @@
 ## Specifiche Tecniche
 
 ### Endpoint Details
+
 **Base URL**: `https://api.[domain].com/v{version}`  
 **Version**: [Versione API - es. v1, v2]  
 **Protocol**: [HTTP/HTTPS | WebSocket | gRPC]  
 **Content-Type**: [application/json | application/xml | multipart/form-data]
 
 ### Authentication
+
 **Method**: [API Key | OAuth 2.0 | JWT | Basic Auth | mTLS]  
 **Scope**: [Scopes/permessi richiesti]  
 **Token Location**: [Header | Query Parameter | Body]  
 **Token Format**: [Bearer {token} | API-Key: {key}]
 
 ### Rate Limiting
+
 **Limit**: [Numero richieste per periodo]  
 **Window**: [Per minuto | ora | giorno]  
 **Identifier**: [Per IP | Per User | Per API Key]  
@@ -57,11 +65,13 @@
 ## Endpoint Specifications
 
 ### Endpoint 1: [Nome Operazione]
+
 **Method**: `GET | POST | PUT | PATCH | DELETE`  
 **Path**: `/api/v{version}/{resource}`  
 **Description**: [Cosa fa questo endpoint]
 
 #### Request Specification
+
 **Headers**:
 ```
 Authorization: Bearer {token}
@@ -92,6 +102,7 @@ X-API-Version: 1.0
 ```
 
 #### Response Specification
+
 **Success Response (200/201)**:
 ```json
 {
@@ -183,6 +194,7 @@ X-API-Version: 1.0
 ```
 
 ### Endpoint 2: [Nome Altra Operazione]
+
 **Method**: `GET | POST | PUT | PATCH | DELETE`  
 **Path**: `/api/v{version}/{resource}/{id}`  
 **Description**: [Cosa fa questo endpoint]
@@ -283,6 +295,7 @@ X-API-Version: 1.0
 ## Criteri di Accettazione
 
 ### Scenario 1: Successful API Call - Happy Path
+
 **Given** l'API è operativa e configurata correttamente  
 **And** il client ha credenziali valide  
 **And** i dati della richiesta sono nel formato corretto  
@@ -293,6 +306,7 @@ X-API-Version: 1.0
 **And** la risposta deve includere tutti i campi obbligatori
 
 ### Scenario 2: Invalid Authentication
+
 **Given** l'API è operativa  
 **And** il client invia credenziali invalide o mancanti  
 **When** viene inviata una richiesta  
@@ -302,6 +316,7 @@ X-API-Version: 1.0
 **And** l'errore deve essere loggato appropriatamente
 
 ### Scenario 3: Input Validation Error
+
 **Given** l'API è operativa e il client è autenticato  
 **And** i dati della richiesta non rispettano lo schema  
 **When** viene inviata la richiesta con dati invalidi  
@@ -311,6 +326,7 @@ X-API-Version: 1.0
 **And** non deve processare parzialmente la richiesta
 
 ### Scenario 4: Rate Limiting
+
 **Given** l'API è operativa e il client è autenticato  
 **And** il client ha già raggiunto il limite di rate  
 **When** viene inviata una richiesta aggiuntiva  
@@ -320,6 +336,7 @@ X-API-Version: 1.0
 **And** deve mantenere il counter accuratamente
 
 ### Scenario 5: Resource Not Found
+
 **Given** l'API è operativa e il client è autenticato  
 **And** viene richiesta una risorsa che non esiste  
 **When** viene inviata la richiesta  
@@ -333,12 +350,14 @@ X-API-Version: 1.0
 ## Requisiti di Sicurezza
 
 ### Input Validation
+
 **Validation Rules**: [Regole validazione specifiche]  
 **Sanitization**: [Regole sanitization input]  
 **Size Limits**: [Limiti dimensione payload]  
 **Type Checking**: [Controlli tipo dati]
 
 ### Output Security
+
 **Data Filtering**: [Filtri dati in output]  
 **Sensitive Data**: [Gestione dati sensibili]  
 **Information Disclosure**: [Prevenzione information disclosure]  
@@ -354,6 +373,7 @@ Content-Security-Policy: default-src 'self'
 ```
 
 ### Audit Requirements
+
 **Access Logging**: [Requisiti logging accessi]  
 **Operation Logging**: [Logging operazioni critiche]  
 **Error Logging**: [Logging errori]  
@@ -364,24 +384,28 @@ Content-Security-Policy: default-src 'self'
 ## Requisiti di Performance
 
 ### Response Time
+
 **Target Response Time**: [Target in millisecondi]  
 **95th Percentile**: [Tempo 95° percentile]  
 **Maximum Acceptable**: [Tempo massimo accettabile]  
 **Measurement Method**: [Come misurare performance]
 
 ### Throughput
+
 **Target TPS**: [Transazioni per secondo]  
 **Peak Load**: [Carico di picco supportato]  
 **Concurrent Users**: [Utenti simultanei]  
 **Batch Processing**: [Se supporta batch, specifiche]
 
 ### Scalability
+
 **Horizontal Scaling**: [Capacità scaling orizzontale]  
 **Load Balancing**: [Requisiti load balancing]  
 **Caching Strategy**: [Strategia caching]  
 **Database Performance**: [Ottimizzazioni database]
 
 ### Monitoring
+
 **Key Metrics**: [Metriche chiave da monitorare]  
 **SLA Monitoring**: [Monitoring SLA]  
 **Alerting**: [Configurazione alert]  
@@ -392,18 +416,21 @@ Content-Security-Policy: default-src 'self'
 ## Documentazione API
 
 ### OpenAPI Specification
+
 **Swagger Version**: [Versione Swagger/OpenAPI]  
 **Documentation URL**: [URL documentazione]  
 **Interactive Testing**: [Possibilità test interattivo]  
 **Code Generation**: [Generazione client/SDK]
 
 ### Documentation Requirements
+
 **Endpoint Documentation**: [Documentazione endpoint completa]  
 **Examples**: [Esempi per ogni operazione]  
 **Error Scenarios**: [Documentazione scenari errore]  
 **SDKs**: [SDK disponibili in vari linguaggi]
 
 ### Versioning Strategy
+
 **Versioning Scheme**: [Schema versioning - semantic, date-based, etc.]  
 **Backward Compatibility**: [Politiche backward compatibility]  
 **Deprecation Process**: [Processo deprecation]  
@@ -414,24 +441,28 @@ Content-Security-Policy: default-src 'self'
 ## Test Strategy
 
 ### Unit Testing
+
 **Controller Tests**: [Test controller/handler]  
 **Model Validation Tests**: [Test validazione modelli]  
 **Business Logic Tests**: [Test logica business]  
 **Error Handling Tests**: [Test gestione errori]
 
 ### Integration Testing
+
 **Database Integration**: [Test integrazione database]  
 **External Service Integration**: [Test servizi esterni]  
 **Authentication Integration**: [Test autenticazione]  
 **End-to-End Tests**: [Test E2E completi]
 
 ### API Testing
+
 **Functional Testing**: [Test funzionalità API]  
 **Contract Testing**: [Test contratti API]  
 **Performance Testing**: [Test performance specifici]  
 **Security Testing**: [Test sicurezza API]
 
 ### Test Data
+
 **Test Datasets**: [Dataset per test]  
 **Mock Services**: [Servizi da mockare]  
 **Test Environment**: [Ambiente test specifico]  
@@ -442,16 +473,19 @@ Content-Security-Policy: default-src 'self'
 ## Tracciabilità
 
 ### Business Requirements
+
 **Business Objectives**: [OBJ-XXX] - [Obiettivo business]  
 **User Stories**: [US-XXX] - [User story implementata]  
 **Business Process**: [Processo business supportato]
 
 ### System Requirements
+
 **Functional Requirements**: [REQ-F-XXX] - [Requisiti funzionali]  
 **Integration Requirements**: [REQ-I-XXX] - [Integrazioni necessarie]  
 **UI Requirements**: [REQ-UI-XXX] - [UI che consuma API]
 
 ### Technical Architecture
+
 **System Architecture**: [Componenti architetturali]  
 **Data Architecture**: [Architettura dati]  
 **Security Architecture**: [Architettura sicurezza]
@@ -461,6 +495,7 @@ Content-Security-Policy: default-src 'self'
 ## Rischi e Mitigation
 
 ### Technical Risks
+
 - **[Rischio Tecnico 1]**: [Es. Performance degradation under load]  
   *Probability*: [Alta/Media/Bassa]  
   *Impact*: [Alto/Medio/Basso]  
@@ -472,6 +507,7 @@ Content-Security-Policy: default-src 'self'
   *Mitigation*: [Versioning strategy, communication plan]
 
 ### Security Risks
+
 - **[Rischio Sicurezza 1]**: [Es. API abuse/DoS]  
   *Probability*: [Alta/Media/Bassa]  
   *Impact*: [Alto/Medio/Basso]  
@@ -488,11 +524,13 @@ Content-Security-Policy: default-src 'self'
 ## Timeline e Milestone
 
 ### Development Phases
+
 **Phase 1 - Core API**: [Funzionalità base] - [Data inizio] to [Data fine]  
 **Phase 2 - Advanced Features**: [Feature avanzate] - [Data inizio] to [Data fine]  
 **Phase 3 - Optimization**: [Ottimizzazioni] - [Data inizio] to [Data fine]
 
 ### Key Milestones
+
 - **API Design Approved**: [Data]
 - **Core Endpoints Implemented**: [Data]
 - **Documentation Complete**: [Data]
@@ -500,6 +538,7 @@ Content-Security-Policy: default-src 'self'
 - **Production Deployment**: [Data]
 
 ### Dependencies
+
 - **Authentication Service Ready**: [Data]
 - **Database Schema Complete**: [Data]
 - **Infrastructure Provisioned**: [Data]
@@ -509,6 +548,7 @@ Content-Security-Policy: default-src 'self'
 ## Effort e Cost Estimates
 
 ### Development Effort
+
 **API Design**: [Ore]  
 **Implementation**: [Ore]  
 **Testing**: [Ore]  
@@ -517,6 +557,7 @@ Content-Security-Policy: default-src 'self'
 **Total**: [Ore totali]
 
 ### Resource Requirements
+
 **API Developer**: [Ore]  
 **Security Specialist**: [Ore]  
 **QA Engineer**: [Ore]  
@@ -524,6 +565,7 @@ Content-Security-Policy: default-src 'self'
 **DevOps Engineer**: [Ore]
 
 ### Infrastructure Costs
+
 **API Gateway**: [Costo mensile]  
 **Monitoring Tools**: [Costo mensile]  
 **Documentation Platform**: [Costo mensile]  
@@ -534,6 +576,7 @@ Content-Security-Policy: default-src 'self'
 ## Definition of Done
 
 ### Development Complete
+
 - [ ] Tutti gli endpoint implementati secondo specifiche
 - [ ] Input validation implementata
 - [ ] Error handling implementato
@@ -542,6 +585,7 @@ Content-Security-Policy: default-src 'self'
 - [ ] Logging implementato
 
 ### Quality Assurance
+
 - [ ] Unit test completati (>= 90% coverage)
 - [ ] Integration test passati
 - [ ] Performance test soddisfatti
@@ -549,6 +593,7 @@ Content-Security-Policy: default-src 'self'
 - [ ] API contract test passati
 
 ### Documentation & Deployment
+
 - [ ] OpenAPI specification completa
 - [ ] Documentation pubblicata
 - [ ] SDK/client examples disponibili
@@ -569,6 +614,7 @@ Content-Security-Policy: default-src 'self'
 ## Approvazioni
 
 ### Technical Approval
+
 | Ruolo | Nome | Data | Firma | Comments |
 |-------|------|------|-------|----------|
 | API Architect | [Nome] | ______ | ______ | [Comments] |
@@ -576,6 +622,7 @@ Content-Security-Policy: default-src 'self'
 | Performance Engineer | [Nome] | ______ | ______ | [Comments] |
 
 ### Business Approval
+
 | Ruolo | Nome | Data | Firma | Comments |
 |-------|------|------|-------|----------|
 | Product Owner | [Nome] | ______ | ______ | [Comments] |
@@ -586,17 +633,20 @@ Content-Security-Policy: default-src 'self'
 ## Supporting Documentation
 
 ### Technical Documentation
+
 - [Link a OpenAPI specification]
 - [Link a sequence diagrams]
 - [Link a data flow diagrams]
 - [Link a security specifications]
 
 ### Business Documentation
+
 - [Link a business case]
 - [Link a user journey maps]
 - [Link a competitive analysis]
 
 ### Development Resources
+
 - [Link a coding standards]
 - [Link a testing guidelines]
 - [Link a deployment procedures]

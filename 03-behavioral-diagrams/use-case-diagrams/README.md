@@ -19,6 +19,7 @@ actor :Nome Attore: as ActorAlias2
 ```
 
 **Tipologie di Attori:**
+
 - **Attori Primari**: Utenti principali che iniziano i casi d'uso
 - **Attori Secondari**: Sistemi esterni che supportano i casi d'uso
 - **Attori di Sistema**: Altri sistemi che interagiscono
@@ -30,6 +31,7 @@ usecase (Nome Use Case) as UC2
 ```
 
 **Livelli di Granularità:**
+
 - **High-Level**: Processi business completi
 - **User-Level**: Interazioni singole utente
 - **Sub-Function**: Sotto-funzionalità specifiche
@@ -67,7 +69,8 @@ Actor1 --|> Actor2
 
 ## Come Utilizzare il Template
 
-### 1. Identifica gli Attori
+### Identifica gli Attori
+
 ```plantuml
 ' Attori Primari (esterni, a sinistra)
 actor "Cliente" as Customer
@@ -78,7 +81,8 @@ actor "Sistema Pagamenti" as PaymentSys
 actor "Sistema Email" as EmailSys
 ```
 
-### 2. Definisci i Casi d'Uso
+### Definisci i Casi d'Uso
+
 ```plantuml
 ' Casi d'uso raggruppati logicamente
 package "Gestione Ordini" {
@@ -94,7 +98,7 @@ package "Gestione Account" {
 }
 ```
 
-### 3. Stabilisci le Relazioni
+### Stabilisci le Relazioni
 ```plantuml
 ' Associazioni dirette
 Customer --> UC1
@@ -191,6 +195,7 @@ Web --> UC2
 ## Best Practices per Use Cases
 
 ### Naming Conventions
+
 - **Use Cases**: Verbo + Oggetto ("Effettua Ordine", "Gestisci Profilo")
 - **Attori**: Nomi o ruoli chiari ("Cliente", "Amministratore Sistema")
 - **Packages**: Raggruppamenti logici ("Gestione Ordini", "Sicurezza")
@@ -223,6 +228,7 @@ usecase "Gestisci Configurazione Utenti"
 ```
 
 ### Anti-Patterns da Evitare
+
 - **Troppi Use Cases**: Max 7-9 per diagramma
 - **Use Cases Implementativi**: Focus su business value
 - **Attori Tecnici**: Evita "Database", "Server" come attori
@@ -404,6 +410,7 @@ UC5 .> UC2 : <<include>>
 ## Tools e Integrazione
 
 ### PlantUML Extensions
+
 - **VS Code**: PlantUML extension per preview
 - **IntelliJ**: PlantUML integration plugin
 - **Confluence**: PlantUML macro per documentation
@@ -433,11 +440,13 @@ plantuml -tpdf diagram.puml
 ## Risorse Aggiuntive
 
 ### UML Standards
+
 - **UML 2.5 Specification**: Standard OMG ufficiale
 - **PlantUML Language Reference**: Sintassi completa
 - **Use Case Best Practices**: Cockburn, Fowler guidelines
 
 ### Template Correlati
+
 - `../activity-diagrams/`: Dettaglio flussi use case
 - `../sequence-diagrams/`: Interazioni specifiche
 - `../../02-requirements/user-stories/`: User stories collegate

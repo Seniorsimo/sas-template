@@ -5,6 +5,7 @@ Questa cartella contiene i requisiti specifici per le API del sistema - endpoint
 ## Scopo degli API Requirements
 
 Gli **API Requirements** definiscono:
+
 - Endpoint e operazioni disponibili
 - Contratti dati (request/response)
 - Autenticazione e autorizzazione API
@@ -15,24 +16,28 @@ Gli **API Requirements** definiscono:
 ## Tipologie di API
 
 ### REST APIs
+
 - Endpoint RESTful standard
 - HTTP methods (GET, POST, PUT, DELETE)
 - Resource-based URLs
 - JSON request/response
 
 ### GraphQL APIs
+
 - Schema definitions
 - Query e mutation operations
 - Subscription per real-time
 - Type system
 
 ### SOAP APIs
+
 - WSDL definitions
 - XML request/response
 - SOAP envelope structure
 - Web service operations
 
 ### Microservices APIs
+
 - Service-to-service communication
 - Internal API contracts
 - Service mesh integration
@@ -46,6 +51,7 @@ REQ-API-{AREA}-{NUMBER}
 ```
 
 **Dove**:
+
 - `API` = sempre per API requirements
 - `{AREA}` = Area funzionale (USER, AUTH, ORDER, etc.)
 - `{NUMBER}` = Numero progressivo (001, 002, etc.)
@@ -62,24 +68,28 @@ REQ-API-SEARCH-001     # API per ricerca
 ## Categorizzazione API
 
 ### Public APIs
+
 - **REQ-API-PUB-XXX**: API pubbliche per partner/clienti
 - Rate limiting stringente
 - Documentazione pubblica completa
 - Versioning rigoroso
 
 ### Private APIs
+
 - **REQ-API-PRIV-XXX**: API interne per microservizi
 - Performance ottimizzate
 - Documentazione interna
 - Evoluzione più flessibile
 
 ### Partner APIs
+
 - **REQ-API-PART-XXX**: API per partner business
 - Autenticazione forte
 - SLA definiti
 - Monitoring dedicato
 
 ### Admin APIs
+
 - **REQ-API-ADMIN-XXX**: API per amministrazione
 - Sicurezza massima
 - Audit logging completo
@@ -88,6 +98,7 @@ REQ-API-SEARCH-001     # API per ricerca
 ## Quality Gates API
 
 ### Design Quality
+
 - [ ] RESTful design principles seguiti
 - [ ] Resource naming consistente
 - [ ] HTTP methods utilizzati correttamente
@@ -95,6 +106,7 @@ REQ-API-SEARCH-001     # API per ricerca
 - [ ] Error handling standardizzato
 
 ### Documentation Quality
+
 - [ ] OpenAPI/Swagger specification completa
 - [ ] Esempi per ogni endpoint
 - [ ] Error scenarios documentati
@@ -102,6 +114,7 @@ REQ-API-SEARCH-001     # API per ricerca
 - [ ] Rate limiting policies documented
 
 ### Security Standards
+
 - [ ] Authentication mechanism defined
 - [ ] Authorization rules specified
 - [ ] Input validation requirements
@@ -116,6 +129,7 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 ```
 
 ### HTTP Methods
+
 - **GET**: Retrieve data (idempotent)
 - **POST**: Create new resource
 - **PUT**: Update entire resource (idempotent)
@@ -152,17 +166,20 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 ## Security Standards
 
 ### Authentication
+
 - **API Keys**: For service-to-service
 - **OAuth 2.0**: For user-based access
 - **JWT Tokens**: For stateless authentication
 - **mTLS**: For high-security scenarios
 
 ### Rate Limiting
+
 - **Public APIs**: 1000 requests/hour
 - **Partner APIs**: 10000 requests/hour
 - **Internal APIs**: No limit (monitoring)
 
 ### Security Headers
+
 - **X-API-Version**: API version
 - **X-Rate-Limit-***: Rate limiting info
 - **X-Request-ID**: Request tracking
@@ -171,6 +188,7 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 ## Best Practices
 
 ### Do's
+
 - **Version your APIs** from the start
 - **Use consistent naming** conventions
 - **Implement proper error handling**
@@ -179,6 +197,7 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 - **Monitor API usage** and performance
 
 ### Don'ts
+
 - **Don't break backward compatibility** without versioning
 - **Don't expose internal implementation** details
 - **Don't ignore security** considerations

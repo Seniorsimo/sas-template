@@ -5,6 +5,7 @@ Questa cartella contiene i criteri di accettazione per validare gli attributi di
 ## Scopo dei Non-Functional Acceptance Criteria
 
 I **Non-Functional Acceptance Criteria** servono per:
+
 - Verificare attributi di qualità del sistema (performance, security, usability)
 - Validare requisiti non-funzionali quantificabili
 - Testare comportamenti sotto stress e condizioni limite
@@ -13,30 +14,35 @@ I **Non-Functional Acceptance Criteria** servono per:
 ## Quality Attributes Coperti
 
 ### Performance
+
 - **Response Time**: Tempi di risposta per operazioni
 - **Throughput**: Transazioni per unità di tempo
 - **Resource Utilization**: CPU, memoria, storage, network
 - **Scalability**: Capacità di gestire carico crescente
 
 ### Security
+
 - **Authentication**: Meccanismi di autenticazione
 - **Authorization**: Controlli di accesso e permessi
 - **Data Protection**: Crittografia, privacy, audit
 - **Vulnerability**: Resistenza ad attacchi
 
 ### Usability
+
 - **User Experience**: Facilità d'uso e soddisfazione
 - **Accessibility**: Conformità standard accessibilità
 - **Learnability**: Curva apprendimento per nuovi utenti
 - **Error Prevention**: Prevenzione errori utente
 
 ### Reliability
+
 - **Availability**: Uptime e disponibilità sistema
 - **Fault Tolerance**: Gestione failure e recovery
 - **Data Consistency**: Integrità e consistenza dati
 - **MTBF/MTTR**: Mean time between/to recovery
 
 ### Compatibility
+
 - **Browser Support**: Supporto browser multipli
 - **Device Compatibility**: Mobile, tablet, desktop
 - **Operating System**: Supporto OS diversi
@@ -45,6 +51,7 @@ I **Non-Functional Acceptance Criteria** servono per:
 ## Come Utilizzare il Template
 
 ### 1. Identifica il Quality Attribute
+
 ```bash
 # Performance
 AC-NF-PERF-001-response-time.md
@@ -60,13 +67,16 @@ AC-NF-REL-001-availability.md
 ```
 
 ### 2. Definisci Metriche Quantificabili
+
 Ogni criterio deve avere:
+
 - **Metrica specifica**: Cosa misurare
 - **Target value**: Valore obiettivo
 - **Threshold minimo**: Soglia accettazione
 - **Condizioni misurazione**: Come e quando misurare
 
 ### 3. Specifica Test Conditions
+
 - **Load conditions**: Carico normale, picco, stress
 - **Environment**: Prod-like, test, staging
 - **Tools**: Strumenti di misurazione
@@ -179,24 +189,28 @@ Data validation: Integrity checks
 ## Testing Approaches
 
 ### Performance Testing
+
 - **Load Testing**: Comportamento sotto carico normale
 - **Stress Testing**: Comportamento oltre capacità
 - **Volume Testing**: Grandi quantità di dati
 - **Endurance Testing**: Performance sostenute nel tempo
 
 ### Security Testing
+
 - **Penetration Testing**: Simulazione attacchi
 - **Vulnerability Scanning**: Ricerca vulnerabilità note
 - **Authentication Testing**: Test meccanismi auth
 - **Authorization Testing**: Test controlli accesso
 
 ### Usability Testing
+
 - **User Testing**: Test con utenti reali
 - **Accessibility Testing**: Test con tecnologie assistive
 - **Cross-browser Testing**: Test compatibilità browser
 - **Device Testing**: Test su dispositivi diversi
 
 ### Reliability Testing
+
 - **Failover Testing**: Test procedure failover
 - **Recovery Testing**: Test procedure recovery
 - **Backup Testing**: Test backup e restore
@@ -205,18 +219,21 @@ Data validation: Integrity checks
 ## Measurement Tools e Techniques
 
 ### Performance Monitoring
+
 - **Application Performance Monitoring**: New Relic, Dynatrace
 - **Load Testing Tools**: JMeter, LoadRunner, K6
 - **Profiling Tools**: APM, code profilers
 - **Infrastructure Monitoring**: CloudWatch, Prometheus
 
 ### Security Assessment
+
 - **Vulnerability Scanners**: Nessus, OpenVAS
 - **SAST Tools**: SonarQube, Checkmarx
 - **DAST Tools**: OWASP ZAP, Burp Suite
 - **Compliance Tools**: Compliance monitoring
 
 ### Usability Evaluation
+
 - **Analytics Tools**: Google Analytics, Hotjar
 - **A/B Testing**: Optimizely, VWO
 - **User Testing Platforms**: UserTesting, Maze
@@ -251,24 +268,28 @@ Accessibility: 100% WCAG AA compliance
 ## Acceptance Testing Process
 
 ### 1. Test Planning
+
 - Identificazione metriche target
 - Definizione test environment
 - Preparazione test data
 - Setup monitoring tools
 
 ### 2. Test Execution
+
 - Baseline measurement
 - Test scenario execution
 - Continuous monitoring
 - Data collection
 
 ### 3. Results Analysis
+
 - Statistical analysis
 - Trend identification
 - Root cause analysis
 - Performance tuning
 
 ### 4. Sign-off Process
+
 - Results validation
 - Stakeholder review
 - Exception documentation
@@ -277,18 +298,21 @@ Accessibility: 100% WCAG AA compliance
 ## Common Challenges
 
 ### Performance Testing
+
 - **Realistic Test Data**: Dati rappresentativi produzione
 - **Environment Parity**: Ambiente simile a produzione
 - **Test Isolation**: Evitare interferenze tra test
 - **Monitoring Overhead**: Impact monitoring su performance
 
 ### Security Testing
+
 - **False Positives**: Filtering real vs false vulnerabilities
 - **Test Environment**: Sicurezza in test vs prod
 - **Compliance Requirements**: Meeting regulatory standards
 - **Continuous Security**: Ongoing security assessment
 
 ### Usability Testing
+
 - **User Recruitment**: Finding representative users
 - **Test Bias**: Avoiding observer effect
 - **Quantifying UX**: Measuring subjective experiences
@@ -297,6 +321,7 @@ Accessibility: 100% WCAG AA compliance
 ## Best Practices
 
 ### Do's
+
 - **Set realistic targets** basati su benchmarks
 - **Test early and often** nel development cycle
 - **Use production-like data** per test accurati
@@ -305,6 +330,7 @@ Accessibility: 100% WCAG AA compliance
 - **Automate where possible** per consistency
 
 ### Don'ts
+
 - **Non ignorare edge cases** e condizioni estreme
 - **Non testare solo happy path** per non-functional
 - **Non dimenticare mobile** e dispositivi diversi
@@ -315,12 +341,14 @@ Accessibility: 100% WCAG AA compliance
 ## Integration con CI/CD
 
 ### Automated Testing
+
 - **Performance Gates**: Soglie automatiche CI/CD
 - **Security Scanning**: Automated vulnerability scans
 - **Accessibility Checks**: Automated a11y testing
 - **Quality Gates**: Build fails se requirements non met
 
 ### Continuous Monitoring
+
 - **Production Monitoring**: Real-time metrics
 - **Alerting**: Automatic alerts per threshold
 - **Trending**: Long-term trend analysis

@@ -5,6 +5,7 @@ Questa cartella contiene i requisiti specifici per l'interfaccia utente del sist
 ## Scopo degli UI Requirements
 
 Gli **UI Requirements** definiscono:
+
 - Componenti interfaccia utente
 - Layout e responsive design
 - Interazioni e user experience
@@ -15,12 +16,14 @@ Gli **UI Requirements** definiscono:
 ## Tipologie di UI Requirements
 
 ### Layout e Structure
+
 - Grid systems e layout responsive
 - Navigation patterns
 - Header, footer, sidebar
 - Content organization
 
 ### Interactive Components
+
 - Forms e input controls
 - Buttons e call-to-action
 - Modal e dialogs
@@ -28,12 +31,14 @@ Gli **UI Requirements** definiscono:
 - Charts e visualizzazioni
 
 ### User Experience
+
 - User workflows e journeys
 - Loading states e feedback
 - Error handling UI
 - Success/confirmation patterns
 
 ### Responsive Design
+
 - Mobile-first approach
 - Tablet optimization
 - Desktop experience
@@ -47,6 +52,7 @@ REQ-UI-{COMPONENT}-{NUMBER}
 ```
 
 **Dove**:
+
 - `UI` = sempre per UI requirements
 - `{COMPONENT}` = Tipo componente (FORM, NAV, DASH, etc.)
 - `{NUMBER}` = Numero progressivo (001, 002, etc.)
@@ -63,17 +69,20 @@ REQ-UI-MODAL-001       # Modal dialogs
 ## Categorizzazione UI
 
 ### Core Components
+
 - **REQ-UI-CORE-XXX**: Componenti base (buttons, inputs, etc.)
 - **REQ-UI-LAYOUT-XXX**: Layout e struttura
 - **REQ-UI-NAV-XXX**: Navigazione
 
 ### Feature Components
+
 - **REQ-UI-FORM-XXX**: Forms e input
 - **REQ-UI-TABLE-XXX**: Tabelle e grids
 - **REQ-UI-CHART-XXX**: Charts e grafici
 - **REQ-UI-MODAL-XXX**: Modal e dialogs
 
 ### Specialized Components
+
 - **REQ-UI-ADMIN-XXX**: Interfacce admin
 - **REQ-UI-MOBILE-XXX**: Componenti mobile-specific
 - **REQ-UI-PRINT-XXX**: Layout per stampa
@@ -81,6 +90,7 @@ REQ-UI-MODAL-001       # Modal dialogs
 ## Quality Gates UI
 
 ### Design Consistency
+
 - [ ] Design system compliance
 - [ ] Brand guidelines seguito
 - [ ] Visual consistency mantenuta
@@ -88,6 +98,7 @@ REQ-UI-MODAL-001       # Modal dialogs
 - [ ] Color palette utilizzata correttamente
 
 ### Usability Standards
+
 - [ ] User testing completato
 - [ ] Accessibility guidelines (WCAG 2.1 AA)
 - [ ] Mobile-friendly design
@@ -95,6 +106,7 @@ REQ-UI-MODAL-001       # Modal dialogs
 - [ ] Clear information hierarchy
 
 ### Technical Quality
+
 - [ ] Performance targets raggiunti
 - [ ] Cross-browser compatibility
 - [ ] Responsive behavior verificato
@@ -146,6 +158,7 @@ xxl: 48px
 ## Component Categories
 
 ### Input Components
+
 - Text inputs, textareas
 - Select dropdowns
 - Checkboxes, radio buttons
@@ -154,6 +167,7 @@ xxl: 48px
 - Rich text editors
 
 ### Display Components
+
 - Cards e panels
 - Tables e data grids
 - Lists e tiles
@@ -162,6 +176,7 @@ xxl: 48px
 - Tooltips e popovers
 
 ### Navigation Components
+
 - Main navigation
 - Breadcrumbs
 - Pagination
@@ -170,6 +185,7 @@ xxl: 48px
 - Mobile menu
 
 ### Feedback Components
+
 - Alerts e notifications
 - Loading spinners
 - Error messages
@@ -180,12 +196,14 @@ xxl: 48px
 ## Accessibility Standards
 
 ### WCAG 2.1 AA Compliance
+
 - **Perceivable**: Text alternatives, captions, contrast
 - **Operable**: Keyboard accessible, seizure prevention
 - **Understandable**: Readable, predictable
 - **Robust**: Compatible with assistive technologies
 
 ### Key Requirements
+
 - Color contrast ratio ≥ 4.5:1
 - Keyboard navigation support
 - Screen reader compatibility
@@ -196,12 +214,14 @@ xxl: 48px
 ## Mobile Considerations
 
 ### Mobile-First Design
+
 - Touch-friendly interactions (44px minimum)
 - Thumb-friendly navigation
 - Swipe gestures support
 - Offline functionality where appropriate
 
 ### Performance
+
 - Fast loading on 3G networks
 - Optimized images and assets
 - Progressive loading
@@ -210,6 +230,7 @@ xxl: 48px
 ## Best Practices
 
 ### Do's
+
 - **Follow design system** consistently
 - **Test on real devices** and browsers
 - **Optimize for performance**
@@ -218,6 +239,7 @@ xxl: 48px
 - **Implement progressive enhancement**
 
 ### Don'ts
+
 - **Don't ignore mobile experience**
 - **Don't use color alone** to convey information
 - **Don't create overly complex** interfaces

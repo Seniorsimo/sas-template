@@ -5,6 +5,7 @@ I diagrammi dei componenti mostrano l'organizzazione e le dipendenze dell'archit
 ## Scopo dei Component Diagrams
 
 I **Component Diagrams** servono per:
+
 - Visualizzare l'architettura del sistema a livello di componenti
 - Mostrare le dipendenze tra moduli software
 - Documentare interfacce e contratti tra componenti
@@ -79,7 +80,8 @@ IInterface - ComponentC
 
 ## Come Utilizzare il Template
 
-### 1. Identifica i Layer Architetturali
+### Identifica i Layer Architetturali
+
 ```plantuml
 package "Presentation Layer" {
   component "Web UI"
@@ -97,7 +99,8 @@ package "Data Layer" {
 }
 ```
 
-### 2. Definisci i Componenti Principali
+### Definisci i Componenti Principali
+
 ```plantuml
 component "User Service" as UserSvc {
   portin "IUserService" as IUserSvc
@@ -110,7 +113,7 @@ component "Order Service" as OrderSvc {
 }
 ```
 
-### 3. Specifica le Interfacce
+### Specifica le Interfacce
 ```plantuml
 interface "REST API" as REST
 interface "Database Interface" as DB
@@ -882,6 +885,7 @@ note right of MockEmail : Verifies email\ncalls without sending
 ## Tools e Methodology
 
 ### Architecture Documentation
+
 - **C4 Model**: Context, Containers, Components, Code
 - **Arc42**: Structured architecture documentation
 - **Architecture Decision Records**: Document design decisions
@@ -911,12 +915,14 @@ CI/CD Pipeline:
 ## Resources e Standards
 
 ### Architecture Patterns
+
 - **Microservices**: Independent deployable components
 - **Event Sourcing**: Component state via events
 - **CQRS**: Separate read/write components
 - **Hexagonal**: Ports and adapters pattern
 
 ### Template Correlati
+
 - `../class-diagrams/`: Detailed component internals
 - `../../03-behavioral-diagrams/`: Component interactions
 - `../../05-database-design/`: Data component design
