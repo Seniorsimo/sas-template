@@ -409,6 +409,7 @@
 - [ ] Go-live criteria soddisfatti
 
 ### Approvals
+
 | Ruolo | Nome | Data | Firma | Comments |
 |-------|------|------|-------|----------|
 | Integration Engineer | [Nome] | ______ | ______ | [Comments] |

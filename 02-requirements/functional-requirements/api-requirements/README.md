@@ -46,6 +46,7 @@ Gli **API Requirements** definiscono:
 ## Convenzioni per API Requirements
 
 ### Schema ID
+
 ```
 REQ-API-{AREA}-{NUMBER}
 ```
@@ -57,6 +58,7 @@ REQ-API-{AREA}-{NUMBER}
 - `{NUMBER}` = Numero progressivo (001, 002, etc.)
 
 ### Esempi ID
+
 ```
 REQ-API-AUTH-001       # API per autenticazione
 REQ-API-USER-001       # API per gestione utenti
@@ -124,6 +126,7 @@ REQ-API-SEARCH-001     # API per ricerca
 ## API Design Standards
 
 ### URL Structure
+
 ```
 https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 ```
@@ -137,6 +140,7 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 - **DELETE**: Remove resource (idempotent)
 
 ### Response Format
+
 ```json
 {
   "data": { ... },
@@ -150,6 +154,7 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 ```
 
 ### Error Format
+
 ```json
 {
   "errors": [

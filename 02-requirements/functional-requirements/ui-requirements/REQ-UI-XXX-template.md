@@ -70,6 +70,7 @@
 ## Layout Specifications
 
 ### Desktop Layout (≥1024px)
+
 ```
 ┌─────────────────────────────────────┐
 │  [Header Area - Height: Xpx]       │
@@ -86,6 +87,7 @@
 ```
 
 ### Tablet Layout (768px - 1024px)
+
 ```
 ┌───────────────────────────┐
 │  [Header - Collapsed]     │
@@ -99,6 +101,7 @@
 ```
 
 ### Mobile Layout (≤768px)
+
 ```
 ┌─────────────────┐
 │  [Header-Mobile]│

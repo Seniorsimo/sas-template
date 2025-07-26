@@ -88,6 +88,7 @@ acceptance-criteria/
 ## Metodologia e Framework
 
 ### User Stories Format
+
 ```
 Come [tipo di utente]
 Voglio [funzionalità/obiettivo]
@@ -112,18 +113,21 @@ Per [beneficio/valore]
 ## Tracciabilità Completa
 
 ### Forward Traceability
+
 ```
 Obiettivi Business → User Stories → Requisiti → 
 Criteri Accettazione → Test Cases → Code
 ```
 
 ### Backward Traceability
+
 ```
 Code → Test Cases → Criteri Accettazione → 
 Requisiti → User Stories → Obiettivi Business
 ```
 
 ### Horizontal Traceability
+
 ```
 User Stories ↔ Functional Requirements ↔ 
 Non-Functional Requirements ↔ Acceptance Criteria

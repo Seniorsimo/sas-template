@@ -251,12 +251,14 @@
 ## Storia della User Story
 
 ### Change Log
+
 | Data | Versione | Autore | Cambiamenti |
 |------|----------|--------|-------------|
 | [Data] | 1.0 | [Nome] | User story creata |
 | [Data] | 1.1 | [Nome] | [Descrizione cambiamento] |
 
 ### Sprint History
+
 - **Sprint X**: [Status raggiunto]
 - **Sprint Y**: [Status raggiunto]
 

@@ -51,6 +51,7 @@ Gli **User Acceptance Criteria** servono per:
 ## Come Utilizzare il Template
 
 ### 1. Identifica il Tipo di UAT
+
 ```bash
 # Business Process Testing
 AC-U-BP-001-order-management.md
@@ -82,6 +83,7 @@ AC-U-PERF-001-page-load-times.md
 ## User Personas per UAT
 
 ### End User (Utente Finale)
+
 ```yaml
 Caratteristiche:
   - Utilizzo quotidiano del sistema
@@ -97,6 +99,7 @@ Test Focus:
 ```
 
 ### Business User (Utente Business)
+
 ```yaml
 Caratteristiche:
   - Responsabile processi aziendali
@@ -112,6 +115,7 @@ Test Focus:
 ```
 
 ### Administrator (Amministratore)
+
 ```yaml
 Caratteristiche:
   - Gestione configurazione sistema
@@ -127,6 +131,7 @@ Test Focus:
 ```
 
 ### External User (Utente Esterno)
+
 ```yaml
 Caratteristiche:
   - Accesso limitato al sistema
@@ -144,6 +149,7 @@ Test Focus:
 ## UAT Test Scenarios
 
 ### Usability Testing Scenarios
+
 ```gherkin
 Scenario: First-time user registration
 Given I am a new user visiting the registration page
@@ -154,6 +160,7 @@ And I understand next steps
 ```
 
 ### Business Process Testing
+
 ```gherkin
 Scenario: Complete business workflow
 Given I need to complete a business process
@@ -164,6 +171,7 @@ And the result matches business expectations
 ```
 
 ### Accessibility Testing
+
 ```gherkin
 Scenario: Screen reader compatibility
 Given I am using a screen reader
@@ -174,6 +182,7 @@ And keyboard navigation works correctly
 ```
 
 ### Mobile User Experience
+
 ```gherkin
 Scenario: Mobile workflow completion
 Given I am using a mobile device
@@ -184,6 +193,7 @@ And text is readable without zooming
 ```
 
 ### Performance from User Perspective
+
 ```gherkin
 Scenario: Acceptable response times
 Given I am performing routine tasks
@@ -226,6 +236,7 @@ And the system feels responsive
 ## UAT Process Flow
 
 ### 1. UAT Planning
+
 ```yaml
 Activities:
   - Define UAT objectives
@@ -242,6 +253,7 @@ Deliverables:
 ```
 
 ### 2. UAT Preparation
+
 ```yaml
 Activities:
   - Setup test environment
@@ -258,6 +270,7 @@ Deliverables:
 ```
 
 ### 3. UAT Execution
+
 ```yaml
 Activities:
   - Execute planned scenarios
@@ -274,6 +287,7 @@ Deliverables:
 ```
 
 ### 4. UAT Evaluation
+
 ```yaml
 Activities:
   - Analyze feedback
@@ -318,6 +332,7 @@ Deliverables:
 ## UAT Success Metrics
 
 ### Quantitative Metrics
+
 ```yaml
 Task Success Rate: ≥ 95%
 Task Completion Time: Within expected range
@@ -327,6 +342,7 @@ User Satisfaction: ≥ 4.0/5.0
 ```
 
 ### Qualitative Metrics
+
 ```yaml
 User Confidence: Users feel confident using system
 Intuitiveness: Users find system intuitive
@@ -336,6 +352,7 @@ Satisfaction: Users enjoy using system
 ```
 
 ### Business Metrics
+
 ```yaml
 Process Improvement: Measurable process gains
 Cost Reduction: Operational cost savings
@@ -433,6 +450,7 @@ Business Goals: Strategic objectives met
 ## UAT Reporting
 
 ### UAT Summary Report Template
+
 ```yaml
 Executive Summary:
   - Overall UAT outcome
@@ -460,6 +478,7 @@ Recommendations:
 ```
 
 ### Issue Classification
+
 ```yaml
 Critical Issues:
   - Prevent task completion

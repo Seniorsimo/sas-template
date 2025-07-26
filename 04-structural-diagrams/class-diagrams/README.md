@@ -16,6 +16,7 @@ I **Class Diagrams** servono per:
 ### Classi
 
 #### Sintassi Base
+
 ```plantuml
 class "Nome Classe" {
   +attributo_pubblico : tipo
@@ -31,6 +32,7 @@ class "Nome Classe" {
 ```
 
 #### Stereotipi
+
 ```plantuml
 class "<<interface>>" as Interface
 class "<<abstract>>" as AbstractClass
@@ -40,6 +42,7 @@ class "<<repository>>" as Repository
 ```
 
 ### Visibilità
+
 ```plantuml
 class Example {
   + public_attribute : String
@@ -57,6 +60,7 @@ class Example {
 ### Relazioni
 
 #### Association (Associazione)
+
 ```plantuml
 ClassA -- ClassB
 ClassA --> ClassB : "navigazione"
@@ -64,34 +68,40 @@ ClassA -- ClassB : "ruolo"
 ```
 
 #### Aggregation (Aggregazione)
+
 ```plantuml
 ClassA o-- ClassB
 ClassA "1" o-- "0..*" ClassB : "contiene"
 ```
 
 #### Composition (Composizione)
+
 ```plantuml
 ClassA *-- ClassB
 ClassA "1" *-- "1..*" ClassB : "è composto da"
 ```
 
 #### Inheritance (Ereditarietà)
+
 ```plantuml
 SubClass --|> SuperClass
 ConcreteClass --|> AbstractClass
 ```
 
 #### Implementation (Implementazione)
+
 ```plantuml
 ConcreteClass ..|> Interface
 ```
 
 #### Dependency (Dipendenza)
+
 ```plantuml
 ClassA ..> ClassB : "usa"
 ```
 
 ### Molteplicità
+
 ```plantuml
 ClassA "1" -- "0..*" ClassB
 ClassA "0..1" -- "1..n" ClassB
@@ -138,6 +148,7 @@ OrderItem "0..*" -- "1" Product : "references"
 ```
 
 ### Aggiungi Dettagli e Constraint
+
 ```plantuml
 class Order {
   -orderId : Long {id}
@@ -156,6 +167,7 @@ note right of Order : Vincoli:\n- totalAmount >= 0\n- orderDate <= today
 ## Pattern Architetturali
 
 ### Layered Architecture
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -221,6 +233,7 @@ OrderService ..> Order
 ```
 
 ### MVC Pattern
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -282,6 +295,7 @@ UserModel o-- User
 ```
 
 ### Repository Pattern
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -334,6 +348,7 @@ UserService ..> UserRepository
 ```
 
 ### Factory Pattern
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -394,6 +409,7 @@ PayPalFactory ..> PayPalProcessor : "creates"
 ## Best Practices
 
 ### Design delle Classi
+
 ```plantuml
 ' Classe ben strutturata
 class Customer {
@@ -417,6 +433,7 @@ class GodClass {
 ```
 
 ### Naming Conventions
+
 ```plantuml
 ' Nomi chiari e descrittivi
 class ShoppingCart {
@@ -435,6 +452,7 @@ class Data {
 ```
 
 ### Livelli di Astrazione
+
 ```plantuml
 interface PaymentGateway {
   +processPayment(amount : BigDecimal) : PaymentResult
@@ -451,6 +469,7 @@ class Order {
 ```
 
 ### Anti-Patterns da Evitare
+
 ```plantuml
 class EverythingManager {
   +handleUsers(), handleOrders(), handlePayments()
@@ -473,6 +492,7 @@ class OrderService {
 ## Styling e Layout
 
 ### Colori per Package
+
 ```plantuml
 !define CONTROLLER_COLOR #E3F2FD
 !define SERVICE_COLOR #E8F5E8
@@ -486,6 +506,7 @@ package "Models" MODEL_COLOR
 ```
 
 ### Stereotipi Custom
+
 ```plantuml
 class "<<Controller>>" as UserController #lightblue
 class "<<Service>>" as UserService #lightgreen
@@ -494,6 +515,7 @@ class "<<Entity>>" as User #lightpink
 ```
 
 ### Layout e Organizzazione
+
 ```plantuml
 ' Disposizione orizzontale
 left to right direction
@@ -515,6 +537,7 @@ class C
 ## Esempi per Dominio
 
 ### E-commerce System
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -623,6 +646,7 @@ Order -- OrderStatus
 ```
 
 ### Banking System
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -739,6 +763,7 @@ Transaction -- TransactionType
 ```
 
 ### Hospital Management System
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -877,6 +902,7 @@ Appointment -- AppointmentStatus
 ## Tracciabilità e Design
 
 ### Mapping da Requirements
+
 ```yaml
 Class: Customer
 Requirements:
@@ -888,6 +914,7 @@ User Stories:
 ```
 
 ### Design Patterns Integration
+
 ```plantuml
 note top of OrderService : Implementa Service Pattern\nPer centralizzare business logic
 
@@ -897,6 +924,7 @@ note left of UserRepository : Repository Pattern\nPer astrazione data access
 ```
 
 ### Code Generation
+
 ```java
 // Generated from Class Diagram
 public class Customer {
@@ -916,6 +944,7 @@ public class Customer {
 ## Validation e Testing
 
 ### Class Design Validation
+
 ```yaml
 Single Responsibility: PASS - Ogni classe ha una responsabilità
 Open/Closed Principle: PASS - Estendibile senza modifiche
@@ -925,6 +954,7 @@ Dependency Inversion: PASS - Dipendenze da astrazioni
 ```
 
 ### Unit Testing Structure
+
 ```plantuml
 class CustomerTest {
   +testGetFullName() : void
@@ -945,6 +975,7 @@ OrderServiceTest ..> OrderService : "tests"
 ## Tools e Integration
 
 ### Reverse Engineering
+
 ```bash
 # Generate class diagram from Java code
 plantuml -jar plantuml.jar -reverse *.java
@@ -961,6 +992,7 @@ plantuml -jar plantuml.jar -reverse *.cs
 - **VS Code**: PlantUML extension + live preview
 
 ### ORM Mapping
+
 ```plantuml
 class User {
   -id : Long <<PK>>
@@ -982,6 +1014,7 @@ note right of User : JPA Entity\n@Table(name="users")\n@Column annotations
 - **Domain-Driven Design**: Aggregate, entity, value object
 
 ### Template Correlati
+
 - `../behavioral-diagrams/`: Behavior degli oggetti
 - `../../02-requirements/`: Requirements mapping
 - `../../05-database-design/`: Data model correlation

@@ -13,6 +13,7 @@ I **Sequence Diagrams** servono per:
 ## Elementi del Diagramma
 
 ### Participants (Partecipanti)
+
 ```plantuml
 participant "Nome Partecipante" as P1
 actor "Attore" as A1
@@ -23,6 +24,7 @@ database "Database" as DB1
 ```
 
 ### Lifelines (Linee di Vita)
+
 ```plantuml
 participant A
 participant B
@@ -36,23 +38,27 @@ deactivate B
 ### Messaggi
 
 #### Messaggi Sincroni
+
 ```plantuml
 A -> B: Chiamata sincrona
 A <-- B: Risposta
 ```
 
 #### Messaggi Asincroni
+
 ```plantuml
 A ->> B: Messaggio asincrono
 A -->> B: Risposta asincrona
 ```
 
 #### Self-Messages
+
 ```plantuml
 A -> A: Auto-chiamata
 ```
 
 ### Attivazione e Distruzione
+
 ```plantuml
 participant A
 participant B
@@ -66,6 +72,7 @@ destroy B
 ```
 
 ### Alternative e Loop
+
 ```plantuml
 alt condizione true
   A -> B: Messaggio A
@@ -116,6 +123,7 @@ deactivate W
 ```
 
 ### Gestisci Scenari Alternativi
+
 ```plantuml
 alt credenziali valide
   U --> G: success + user_data
@@ -129,6 +137,7 @@ end
 ## Pattern Comuni
 
 ### Pattern Request-Response Semplice
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -145,6 +154,7 @@ deactivate S
 ```
 
 ### Pattern Multi-Layer
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -176,6 +186,7 @@ deactivate P
 ```
 
 ### Pattern Async con Callback
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -201,6 +212,7 @@ deactivate W
 ```
 
 ### Pattern Error Handling
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -234,6 +246,7 @@ deactivate A
 ```
 
 ### Pattern Microservices
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -286,6 +299,7 @@ deactivate G
 ## Best Practices
 
 ### Messaggi e Naming
+
 ```plantuml
 User -> AuthService: authenticateUser(username, password)
 AuthService -> Database: findUserByUsername(username)
@@ -295,6 +309,7 @@ System -> DB: getData()
 ```
 
 ### Livello di Astrazione
+
 ```plantuml
 Client -> OrderService: createOrder(orderData)
 OrderService -> PaymentService: processPayment(amount)
@@ -304,6 +319,7 @@ Controller -> Repository: executeSQL(query)
 ```
 
 ### Gestione Activation
+
 ```plantuml
 A -> B: request
 activate B
@@ -317,6 +333,7 @@ deactivate B
 ```
 
 ### Return Messages
+
 ```plantuml
 A -> B: getData()
 activate B
@@ -335,6 +352,7 @@ B --> A: simpleResponse
 ## Styling e Personalizzazione
 
 ### Stereotipi e Colori
+
 ```plantuml
 !define ACTOR_COLOR #E8F5E8
 !define BOUNDARY_COLOR #E3F2FD
@@ -350,6 +368,7 @@ database "DB" as DB DATABASE_COLOR
 ```
 
 ### Grouping e Separatori
+
 ```plantuml
 == Authentication Phase ==
 User -> System: login()
@@ -367,6 +386,7 @@ System -> System: cleanup()
 ```
 
 ### Note e Commenti
+
 ```plantuml
 User -> System: request
 note right: Questo messaggio include\nvalidazione dei parametri
@@ -378,6 +398,7 @@ note over Database: Query ottimizzata\ncon indici appropriati
 ## Esempi per Dominio
 
 ### E-commerce: Processo di Checkout
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -446,6 +467,7 @@ deactivate W
 ```
 
 ### Sistema Bancario: Trasferimento Fondi
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -512,6 +534,7 @@ deactivate B
 ```
 
 ### Sistema IoT: Device Management
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -570,6 +593,7 @@ end
 ## Sequence vs Altri Diagrammi
 
 ### Sequence vs Activity
+
 ```yaml
 Sequence Diagrams:
   - Focus: Interazioni tra oggetti
@@ -585,6 +609,7 @@ Activity Diagrams:
 ```
 
 ### Sequence vs Communication
+
 ```yaml
 Sequence Diagrams:
   - Layout: Verticale, temporale
@@ -602,6 +627,7 @@ Communication Diagrams:
 ## Tracciabilità e Documentazione
 
 ### Collegamento con Use Cases
+
 ```plantuml
 title Sequence per Use Case "UC-001: User Login"
 note over User, Database: Implementa User Story US-001\nRequisiti: REQ-F-001, REQ-NF-003
@@ -610,6 +636,7 @@ User -> System: login(username, password)
 ```
 
 ### Mapping con API Documentation
+
 ```plantuml
 note right of API: POST /api/v1/auth/login\nContent-Type: application/json\n{\n  "username": "string",\n  "password": "string"\n}
 
@@ -618,6 +645,7 @@ API --> User: 200 OK + JWT token
 ```
 
 ### Error Scenario Documentation
+
 ```plantuml
 == Happy Path ==
 User -> System: validRequest()
@@ -634,6 +662,7 @@ System --> User: 401 Unauthorized
 ## Testing dei Sequence Diagrams
 
 ### Test Scenario Mapping
+
 ```yaml
 Sequence: "User Authentication"
 Test Cases:
@@ -645,6 +674,7 @@ Test Cases:
 ```
 
 ### Mock Objects
+
 ```plantuml
 participant "Real Client" as C
 participant "System Under Test" as S
@@ -660,6 +690,7 @@ S --> C: processed_response
 ## Tools e Integration
 
 ### PlantUML Advanced Features
+
 ```plantuml
 ' Autonumbering
 autonumber
@@ -678,12 +709,14 @@ A -> B: after space
 ```
 
 ### Integration con IDE
+
 - **VS Code**: PlantUML extension + live preview
 - **IntelliJ**: PlantUML plugin + syntax highlighting
 - **Eclipse**: PlantUML plugin
 - **Vim/Emacs**: PlantUML syntax support
 
 ### API Documentation Integration
+
 ```yaml
 # OpenAPI + PlantUML
 paths:
@@ -701,6 +734,7 @@ paths:
 ## Advanced Patterns
 
 ### Saga Pattern (Distributed Transactions)
+
 ```plantuml
 @startuml
 title Saga Pattern - Order Processing
@@ -738,6 +772,7 @@ end
 ```
 
 ### Circuit Breaker Pattern
+
 ```plantuml
 @startuml
 title Circuit Breaker Pattern

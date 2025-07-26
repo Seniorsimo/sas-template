@@ -91,30 +91,35 @@ Questo workspace fornisce un **template completo** per gestire l'intero ciclo di
 ## Workflow di Sviluppo Template
 
 ### Fase 1: Foundation (01-project-definition/)
+
 ```
 Project Description → Stakeholder Analysis → SMART Objectives → 
 Scope Definition → Risk Assessment
 ```
 
 ### Fase 2: Requirements (02-requirements/)
+
 ```
 Epic Stories → Functional Requirements (by category) → 
 Non-Functional Requirements → Acceptance Criteria (structured)
 ```
 
 ### Fase 3: Behavioral Design (03-behavioral-diagrams/)
+
 ```
 Use Case Modeling → Business Process Flows → 
 System Interaction Sequences
 ```
 
 ### Fase 4: Structural Design (04-structural-diagrams/)
+
 ```
 System Architecture → OOP Class Design → 
 Component Architecture & Deployment
 ```
 
 ### Fase 5: Data Design (05-database-design/)
+
 ```
 Conceptual ER Model → Logical Data Model → 
 Data Dictionary & Business Rules

@@ -153,6 +153,7 @@
 ## Stakeholder Esterni
 
 ### Fornitori/Vendor
+
 | Nome Fornitore | Servizio Fornito | Contatto | Criticità |
 |----------------|------------------|----------|-----------|
 | [Nome 1] | [Descrizione servizio] | [Email/Tel] | Alta/Media/Bassa |

@@ -181,9 +181,50 @@ foreach ($file in $fileOrder) {
             $content = $content -replace "\n---\n", "`n"
             $content = $content -replace "\n---\s*\*.*?\*\n", "`n"
             
+            # Calcola la profondità della cartella per determinare l'indentazione dei titoli
+            $folderPath = Split-Path $file -Parent
+            $fileName = Split-Path $file -Leaf
+            
+            if ([string]::IsNullOrEmpty($folderPath) -or $folderPath -eq ".") {
+                # File nella root, nessuna indentazione aggiuntiva
+                $titleIndentation = 0
+            } else {
+                # Conta i livelli di cartella (split by \ o /)
+                $folderLevels = ($folderPath -split '[\\\/]').Count
+                $titleIndentation = $folderLevels
+                
+                # Eccezione per i file README: hanno -1 livello di indentazione
+                if ($fileName -eq "README.md") {
+                    $titleIndentation = [Math]::Max(0, $titleIndentation - 1)
+                }
+            }
+            
+            # Applica l'indentazione ai titoli se necessario
+            if ($titleIndentation -gt 0) {
+                $additionalHashes = "#" * $titleIndentation
+                # Splitta il contenuto in righe per processare ogni riga separatamente
+                $lines = $content -split "`n"
+                $processedLines = @()
+                
+                foreach ($line in $lines) {
+                    if ($line -match '^(#+)(\s+.*)$') {
+                        # Riga che inizia con # seguiti da spazio e contenuto
+                        $processedLines += "$additionalHashes$line"
+                    } elseif ($line -match '^(#+)([^#\s].*)$') {
+                        # Riga che inizia con # seguiti direttamente da contenuto (senza spazio)
+                        $processedLines += "$additionalHashes$($matches[1]) $($matches[2])"
+                    } else {
+                        # Riga normale, non modificare
+                        $processedLines += $line
+                    }
+                }
+                
+                $content = $processedLines -join "`n"
+            }
+            
             # Per TUTTI i file .md, non aggiungere titolo aggiuntivo, solo newpage
             $combinedContent += "`n\newpage`n"
-            # Aggiungi direttamente il contenuto senza titolo aggiuntivo
+            # Aggiungi direttamente il contenuto (con titoli indentati se necessario)
             $combinedContent += $content
             $combinedContent += "`n"
             
@@ -192,8 +233,20 @@ foreach ($file in $fileOrder) {
             $sectionName = (Split-Path $file -Leaf) -replace "\.puml$", ""
             $sectionName = "$sectionName (Diagramma UML)"
             
+            # Calcola l'indentazione anche per i titoli dei diagrammi PlantUML
+            $folderPath = Split-Path $file -Parent
+            if ([string]::IsNullOrEmpty($folderPath) -or $folderPath -eq ".") {
+                $titleIndentation = 0
+            } else {
+                $folderLevels = ($folderPath -split '[\\\/]').Count
+                $titleIndentation = $folderLevels
+            }
+            
+            # Applica l'indentazione al titolo del diagramma
+            $titlePrefix = "#" * ($titleIndentation + 1)  # +1 perché iniziamo sempre con un #
+            
             $combinedContent += "`n\newpage`n"
-            $combinedContent += "# $sectionName`n"
+            $combinedContent += "$titlePrefix $sectionName`n"
             
             # Gestione file PlantUML
             $content = Get-Content $fullPath -Raw -Encoding UTF8

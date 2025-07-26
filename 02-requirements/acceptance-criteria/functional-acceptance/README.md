@@ -32,6 +32,7 @@ I **Functional Acceptance Criteria** servono per:
 ## Come Utilizzare il Template
 
 ### 1. Copia e Rinomina
+
 ```bash
 # Copia il template
 cp AC-F-XXX-template.md AC-F-001-user-login.md
@@ -58,6 +59,7 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 ## Struttura Test Scenarios
 
 ### Pattern Given/When/Then
+
 ```gherkin
 **Given** [stato iniziale/precondizioni]
 **When** [azione eseguita]

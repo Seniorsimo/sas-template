@@ -16,12 +16,14 @@ I **Component Diagrams** servono per:
 ### Componenti
 
 #### Sintassi Base
+
 ```plantuml
 component "Nome Componente" as ComponentAlias
 [Altro Componente]
 ```
 
 #### Stereotipi
+
 ```plantuml
 component "<<service>>" as Service
 component "<<library>>" as Library  
@@ -32,12 +34,14 @@ component "<<external>>" as External
 ### Interfacce
 
 #### Interface Declaration
+
 ```plantuml
 interface "Nome Interface" as IInterface
 () "Interface Symbol" as ISymbol
 ```
 
 #### Provided/Required Interfaces
+
 ```plantuml
 component Component1
 interface "IService" as IService
@@ -47,6 +51,7 @@ Component1 --( IService : requires
 ```
 
 ### Packages e Raggruppamenti
+
 ```plantuml
 package "Layer Name" {
   component "Component A"
@@ -65,6 +70,7 @@ cloud "External Systems" {
 ### Relazioni
 
 #### Basic Connections
+
 ```plantuml
 ComponentA --> ComponentB
 ComponentA -- ComponentB : "uses"
@@ -72,6 +78,7 @@ ComponentA ..> ComponentB : "depends on"
 ```
 
 #### Interface Connections
+
 ```plantuml
 ComponentA -( IInterface
 ComponentB --( IInterface
@@ -114,6 +121,7 @@ component "Order Service" as OrderSvc {
 ```
 
 ### Specifica le Interfacce
+
 ```plantuml
 interface "REST API" as REST
 interface "Database Interface" as DB
@@ -127,6 +135,7 @@ OrderSvc --( MQ : publishes to
 ## Pattern Architetturali
 
 ### Layered Architecture
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -174,6 +183,7 @@ RepoInterface - Repos
 ```
 
 ### Microservices Architecture
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -245,6 +255,7 @@ Gateway --> ServiceDiscovery : "discovers services"
 ```
 
 ### Event-Driven Architecture
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -305,6 +316,7 @@ CommandInterface - OrderSvc
 ```
 
 ### Hexagonal Architecture (Ports & Adapters)
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -373,6 +385,7 @@ ExternalAPIAdapter --> ThirdPartyAPI
 ## Best Practices
 
 ### Component Design
+
 ```plantuml
 component "UserService" {
   interface "IUserRepository" as IUserRepo
@@ -392,6 +405,7 @@ package "Authentication" {
 ```
 
 ### Interface Segregation
+
 ```plantuml
 ' Interfacce specifiche e focalizzate
 interface "IUserReader" {
@@ -413,6 +427,7 @@ interface "IUserManager" {
 ```
 
 ### Dependency Direction
+
 ```plantuml
 ' Dipendenze verso il centro (Domain)
 package "UI Layer" {
@@ -434,6 +449,7 @@ Repository ..|> IRepository
 ```
 
 ### Anti-Patterns da Evitare
+
 ```plantuml
 ' Circular Dependencies
 component A --> B
@@ -452,6 +468,7 @@ component ServiceA --> ConcreteImplementationB : "Dipendenza da implementazione"
 ## Styling e Visualizzazione
 
 ### Colori per Layer
+
 ```plantuml
 !define UI_COLOR #E3F2FD
 !define BL_COLOR #E8F5E8
@@ -465,6 +482,7 @@ cloud "External" EXTERNAL_COLOR
 ```
 
 ### Stereotipi e Icons
+
 ```plantuml
 component "<<service>>" as Service1
 component "<<repository>>" as Repo1
@@ -478,6 +496,7 @@ External1 #lightcoral
 ```
 
 ### Layout e Organizzazione
+
 ```plantuml
 ' Disposizione a livelli
 top to bottom direction
@@ -496,6 +515,7 @@ together {
 ## Esempi per Dominio
 
 ### E-commerce Platform
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -593,6 +613,7 @@ AllServices --> Monitoring
 ```
 
 ### Banking System
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -700,6 +721,7 @@ AllServices --> Monitoring
 ```
 
 ### Healthcare Management System
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -810,6 +832,7 @@ ClinicalDB --> BackupSvc
 ## Tracciabilità e Design
 
 ### Mapping da Architettura
+
 ```yaml
 Component: "Order Service"
 Architectural Requirements:
@@ -824,6 +847,7 @@ Quality Attributes:
 ```
 
 ### Interface Contracts
+
 ```plantuml
 interface "IOrderService" {
   +createOrder(orderData : OrderDto) : OrderResult
@@ -835,6 +859,7 @@ note right of IOrderService : Contract definisce:\n- Input/Output types\n- Error
 ```
 
 ### Deployment Mapping
+
 ```plantuml
 node "Web Server Cluster" {
   component "Load Balancer"
@@ -860,6 +885,7 @@ cloud "Cloud Services" {
 ## Component Testing Strategy
 
 ### Unit Testing per Component
+
 ```yaml
 Component: UserService
 Test Types:
@@ -870,6 +896,7 @@ Test Types:
 ```
 
 ### Mock Dependencies
+
 ```plantuml
 component "UserService" as UserSvc
 component "Mock Database" as MockDB
@@ -892,6 +919,7 @@ note right of MockEmail : Verifies email\ncalls without sending
 - **Component Catalogs**: Reusable component library
 
 ### Analysis Tools
+
 ```bash
 # Dependency analysis
 gradle dependencyInsight --dependency package
@@ -904,6 +932,7 @@ archunit verify-architecture-rules
 ```
 
 ### Continuous Architecture
+
 ```yaml
 CI/CD Pipeline:
   - Architecture Tests: Validate dependency rules

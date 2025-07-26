@@ -13,6 +13,7 @@ I **Use Case Diagrams** servono per:
 ## Elementi del Diagramma
 
 ### Attori (Actors)
+
 ```plantuml
 actor "Nome Attore" as ActorAlias
 actor :Nome Attore: as ActorAlias2
@@ -25,6 +26,7 @@ actor :Nome Attore: as ActorAlias2
 - **Attori di Sistema**: Altri sistemi che interagiscono
 
 ### Casi d'Uso (Use Cases)
+
 ```plantuml
 usecase "Nome Use Case" as UC1
 usecase (Nome Use Case) as UC2
@@ -37,6 +39,7 @@ usecase (Nome Use Case) as UC2
 - **Sub-Function**: Sotto-funzionalità specifiche
 
 ### System Boundary
+
 ```plantuml
 rectangle "Nome Sistema" {
   usecase "Use Case 1" as UC1
@@ -47,21 +50,25 @@ rectangle "Nome Sistema" {
 ### Relazioni
 
 #### Association (Associazione)
+
 ```plantuml
 Actor --> (Use Case)
 ```
 
 #### Include (Inclusione)
+
 ```plantuml
 (Use Case Base) .> (Use Case Incluso) : <<include>>
 ```
 
 #### Extend (Estensione)
+
 ```plantuml
 (Use Case Esteso) .> (Use Case Base) : <<extend>>
 ```
 
 #### Generalization (Generalizzazione)
+
 ```plantuml
 (Use Case Specifico) --|> (Use Case Generale)
 Actor1 --|> Actor2
@@ -99,6 +106,7 @@ package "Gestione Account" {
 ```
 
 ### Stabilisci le Relazioni
+
 ```plantuml
 ' Associazioni dirette
 Customer --> UC1
@@ -113,6 +121,7 @@ UC6 .> UC5 : <<extend>>
 ## Pattern Comuni
 
 ### Pattern Cliente-Sistema
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -136,6 +145,7 @@ UC3 .> UC4 : <<include>>
 ```
 
 ### Pattern Amministrativo
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -165,6 +175,7 @@ SA --|> A
 ```
 
 ### Pattern con Sistema Esterno
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -201,6 +212,7 @@ Web --> UC2
 - **Packages**: Raggruppamenti logici ("Gestione Ordini", "Sicurezza")
 
 ### Livelli di Dettaglio
+
 ```plantuml
 ' Troppo dettagliato
 usecase "Clicca Bottone Login"
@@ -216,6 +228,7 @@ usecase "Gestisci Configurazione Utenti"
 ```
 
 ### Relazioni Significative
+
 ```plantuml
 ' Include per funzionalità sempre richieste
 (Effettua Ordine) .> (Valida Pagamento) : <<include>>
@@ -237,6 +250,7 @@ usecase "Gestisci Configurazione Utenti"
 ## Tracciabilità
 
 ### Collegamento con User Stories
+
 ```plantuml
 ' Use Case: UC-001 "Effettua Ordine"
 ' User Stories: US-001, US-002, US-003
@@ -246,6 +260,7 @@ note top of UC1 : Traccia a:\nUS-001: Ordine Cliente\nREQ-F-001: Processo Ordini
 ```
 
 ### Collegamento con Requirements
+
 ```yaml
 Use Case ID: UC-001
 Name: Effettua Ordine
@@ -262,6 +277,7 @@ Non-Functional Requirements:
 ## Styling e Presentazione
 
 ### Theme e Colori
+
 ```plantuml
 !theme blueprint
 !define BUSINESS_COLOR #E1F5FE
@@ -280,6 +296,7 @@ skinparam usecase {
 ```
 
 ### Layout e Organizzazione
+
 ```plantuml
 ' Attori primari a sinistra
 left to right direction
@@ -300,6 +317,7 @@ package "Modulo Supporto" as Support {
 ## Esempi per Dominio
 
 ### E-commerce
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -342,6 +360,7 @@ UC4 .> UC3 : <<include>>
 ```
 
 ### Sistema Bancario
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -371,6 +390,7 @@ UC4 .> UC3 : <<extend>>
 ```
 
 ### Sistema HR
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -417,6 +437,7 @@ UC5 .> UC2 : <<include>>
 - **GitHub**: PlantUML rendering in README
 
 ### Export e Condivisione
+
 ```bash
 # Export PNG
 plantuml -tpng diagram.puml
@@ -429,6 +450,7 @@ plantuml -tpdf diagram.puml
 ```
 
 ### Integrazione CI/CD
+
 ```yaml
 # GitHub Actions example
 - name: Generate PlantUML Diagrams

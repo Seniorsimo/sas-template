@@ -74,6 +74,7 @@ acceptance-criteria/
 ## Convenzioni di Naming
 
 ### Schema ID Standard
+
 ```
 AC-{TYPE}-{AREA}-{NUMBER}
 ```
@@ -85,6 +86,7 @@ AC-{TYPE}-{AREA}-{NUMBER}
 - `{NUMBER}`: Numero progressivo (001, 002, etc.)
 
 ### Esempi di Naming
+
 ```
 AC-F-001              # Primo criterio funzionale generico
 AC-F-LOGIN-001         # Primo criterio funzionale per area login

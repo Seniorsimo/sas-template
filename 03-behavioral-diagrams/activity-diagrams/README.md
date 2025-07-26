@@ -15,6 +15,7 @@ Gli **Activity Diagrams** servono per:
 ### Nodi di Controllo
 
 #### Start/End Nodes
+
 ```plantuml
 start
 stop
@@ -22,6 +23,7 @@ end
 ```
 
 #### Activity Nodes
+
 ```plantuml
 :Attività Semplice;
 :Attività con
@@ -29,6 +31,7 @@ Descrizione Multipla;
 ```
 
 #### Decision Nodes
+
 ```plantuml
 if (Condizione?) then (si)
   :Azione A;
@@ -38,6 +41,7 @@ endif
 ```
 
 #### Fork/Join (Parallelismo)
+
 ```plantuml
 fork
   :Processo A;
@@ -47,6 +51,7 @@ end fork
 ```
 
 ### Swimlanes (Corsie)
+
 ```plantuml
 |Cliente|
 start
@@ -61,6 +66,7 @@ stop
 ```
 
 ### Note e Commenti
+
 ```plantuml
 :Attività Importante;
 note right: Questa attività richiede\nvalidazione speciale
@@ -87,6 +93,7 @@ start
 ```
 
 ### Modella il Flusso
+
 ```plantuml
 |Cliente|
 start
@@ -108,6 +115,7 @@ endif
 ## Pattern Comuni
 
 ### Pattern Processo Lineare
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -156,6 +164,7 @@ end
 ```
 
 ### Pattern con Loop
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -174,6 +183,7 @@ end
 ```
 
 ### Pattern Multi-Swimlane
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -219,6 +229,7 @@ end
 - **Parallelismo appropriato**: Fork/join solo quando necessario
 
 ### Naming e Descrizioni
+
 ```plantuml
 :Valida Credenziali Utente;
 :Genera Report Vendite;
@@ -230,6 +241,7 @@ end
 ```
 
 ### Livello di Dettaglio
+
 ```plantuml
 :Elabora Ordine Cliente;
 :Verifica Disponibilità Prodotto;
@@ -241,6 +253,7 @@ end
 ```
 
 ### Gestione Errori
+
 ```plantuml
 :Elabora Pagamento;
 if (Pagamento riuscito?) then (si)
@@ -255,6 +268,7 @@ endif
 ## Styling e Layout
 
 ### Colori per Swimlanes
+
 ```plantuml
 !define CLIENTE_COLOR #E3F2FD
 !define SISTEMA_COLOR #E8F5E8  
@@ -268,6 +282,7 @@ endif
 ```
 
 ### Styling Attività
+
 ```plantuml
 skinparam activity {
   BackgroundColor #E1F5FE
@@ -282,6 +297,7 @@ skinparam decision {
 ```
 
 ### Layout Direction
+
 ```plantuml
 ' Layout verticale (default)
 top to bottom direction
@@ -293,6 +309,7 @@ left to right direction
 ## Esempi per Dominio
 
 ### E-commerce: Processo Checkout
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -341,6 +358,7 @@ end
 ```
 
 ### Banking: Processo Prestito
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -386,6 +404,7 @@ end
 ```
 
 ### Manufacturing: Processo Produzione
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -432,6 +451,7 @@ end
 ## Activity vs Altri Diagrammi
 
 ### Activity vs Sequence
+
 ```yaml
 Activity Diagrams:
   - Focus: Workflow e processi
@@ -447,6 +467,7 @@ Sequence Diagrams:
 ```
 
 ### Activity vs Use Case
+
 ```yaml
 Activity Diagrams:
   - Cosa mostra: Come fare
@@ -464,6 +485,7 @@ Use Case Diagrams:
 ## Tracciabilità
 
 ### Collegamento con Use Cases
+
 ```plantuml
 title Implementazione Use Case "Elabora Ordine"
 note top : Traccia a Use Case UC-002\nUser Story US-005
@@ -474,6 +496,7 @@ start
 ```
 
 ### Collegamento con Requirements
+
 ```yaml
 Activity: "Processo Approvazione Credito"
 Use Cases: UC-003 "Richiedi Prestito"
@@ -488,6 +511,7 @@ Requirements:
 ## Testing degli Activity Diagrams
 
 ### Scenari di Test
+
 ```plantuml
 ' Test Happy Path
 start
@@ -514,6 +538,7 @@ end
 ## Tools Avanzati
 
 ### PlantUML Advanced Features
+
 ```plantuml
 ' Partition per raggruppamento
 partition "Fase Preparazione" {

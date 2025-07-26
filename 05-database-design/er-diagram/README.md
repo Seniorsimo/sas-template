@@ -16,6 +16,7 @@ I **Diagrammi ER** servono per:
 ### Entità
 
 #### Sintassi PlantUML
+
 ```plantuml
 entity "Nome Entità" as EntityAlias {
   * primary_key : TYPE
@@ -27,6 +28,7 @@ entity "Nome Entità" as EntityAlias {
 ```
 
 #### Tipi di Entità
+
 ```plantuml
 ' Entità forte
 entity Customer {
@@ -50,6 +52,7 @@ entity OrderItem {
 ### Attributi
 
 #### Classificazione Attributi
+
 ```plantuml
 entity Product {
   * product_id : UUID
@@ -63,6 +66,7 @@ entity Product {
 ```
 
 #### Notation Symbols
+
 - `*` = Attributo obbligatorio (NOT NULL)
 - `<<FK>>` = Foreign Key
 - `<<PK>>` = Primary Key
@@ -73,6 +77,7 @@ entity Product {
 ### Relazioni
 
 #### Cardinalità
+
 ```plantuml
 Customer ||--o{ Order : "places"
 Order ||--o{ OrderItem : "contains"
@@ -81,6 +86,7 @@ Category ||--o{ Product : "categorizes"
 ```
 
 #### Tipi di Relazioni
+
 ```plantuml
 ' One-to-One (1:1)
 Customer ||--|| CustomerProfile : "has"
@@ -98,6 +104,7 @@ Category ||--o{ Category : "parent/child"
 ### Vincoli e Business Rules
 
 #### Vincoli di Integrità
+
 ```plantuml
 entity Order {
   * order_id : UUID
@@ -115,6 +122,7 @@ note right of Order : Business Rules:\n- total_amount >= 0\n- shipping_date >= o
 ## Come Utilizzare il Template
 
 ### Identifica le Entità del Dominio
+
 ```plantuml
 ' Entità principali del business
 entity Customer
@@ -130,6 +138,7 @@ entity AuditLog
 ```
 
 ### Definisci gli Attributi
+
 ```plantuml
 entity Customer {
   * customer_id : UUID
@@ -146,6 +155,7 @@ entity Customer {
 ```
 
 ### Modella le Relazioni
+
 ```plantuml
 Customer ||--o{ Order : "places"
 Customer ||--o{ Address : "has"
@@ -156,6 +166,7 @@ Category ||--o{ Product : "contains"
 ```
 
 ### Aggiungi Vincoli e Note
+
 ```plantuml
 note right of Customer : Customer must have\nat least one contact method\n(email or phone)
 
@@ -167,6 +178,7 @@ note bottom of Payment : Payment amount must\nmatch Order.total_amount
 ## Pattern di Modellazione
 
 ### Pattern Gerarchia (Inheritance)
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -205,6 +217,7 @@ Person ||--o| Employee : "is a"
 ```
 
 ### Pattern Aggregazione/Composizione
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -248,6 +261,7 @@ note right of ShippingAddress : ShippingAddress specific\nto this Order only\n(c
 ```
 
 ### Pattern Many-to-Many con Attributi
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -290,6 +304,7 @@ note top of Enrollment : Enrollment entity captures\nthe relationship attributes
 ```
 
 ### Pattern Temporal/Historical Data
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -336,6 +351,7 @@ note right of ProductInventory : Daily inventory snapshots\nfor trend analysis
 ## Best Practices per ER Design
 
 ### Entità ben definite
+
 ```plantuml
 ' Entità con responsabilità chiara
 entity Customer {
@@ -365,6 +381,7 @@ entity CustomerEverything {
 ```
 
 ### Relazioni semantiche
+
 ```plantuml
 ' Relazioni con nomi significativi
 Customer ||--o{ Order : "places"
@@ -377,6 +394,7 @@ Order ||--o{ OrderItem : "links to"
 ```
 
 ### Normalizzazione appropriata
+
 ```plantuml
 ' 3NF - Entità separate per concetti distinti
 entity Customer {
@@ -410,6 +428,7 @@ entity CustomerDenorm {
 ```
 
 ### Anti-Patterns da Evitare
+
 ```plantuml
 ' Entità "God Table"
 entity SystemData {
@@ -434,6 +453,7 @@ entity Customer {
 ## Styling e Presentazione
 
 ### Colori per Categorizzazione
+
 ```plantuml
 !define CORE_ENTITY_COLOR #E3F2FD
 !define LOOKUP_COLOR #E8F5E8
@@ -447,6 +467,7 @@ entity AuditLog AUDIT_COLOR
 ```
 
 ### Raggruppamento Logico
+
 ```plantuml
 package "Customer Domain" {
   entity Customer
@@ -468,6 +489,7 @@ package "Product Domain" {
 ```
 
 ### Layout Ottimizzato
+
 ```plantuml
 ' Entità centrali al centro
 ' Entità di lookup ai margini
@@ -486,6 +508,7 @@ Order }o--o{ Product
 ## Esempi per Dominio
 
 ### E-commerce Database Model
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -641,6 +664,7 @@ note left of ProductInventory : quantity_on_hand >= 0\nreserved_quantity <= quan
 ```
 
 ### Banking System Data Model
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -810,6 +834,7 @@ note left of Loan : monthly_payment calculated based on\nprincipal, rate, and te
 ```
 
 ### Healthcare Data Model
+
 ```plantuml
 @startuml
 !theme blueprint
@@ -1038,6 +1063,7 @@ note left of Bill : patient_amount + insurance_amount\n= total_amount
 ## Validation e Quality Checks
 
 ### Data Model Quality Metrics
+
 ```yaml
 Entity Design Quality:
   - Single Responsibility: Each entity has one clear purpose
@@ -1053,6 +1079,7 @@ Relationship Quality:
 ```
 
 ### Business Rule Validation
+
 ```plantuml
 entity Order {
   * order_id : UUID
@@ -1067,6 +1094,7 @@ note right of Order : Validation Rules:\n- total_amount >= 0\n- order_date <= to
 ```
 
 ### Referential Integrity Checks
+
 ```yaml
 Foreign Key Constraints:
   - All FK columns reference valid PK
@@ -1084,6 +1112,7 @@ Data Consistency:
 ## Tools e Integration
 
 ### PlantUML Advanced Features
+
 ```plantuml
 ' Conditional styling
 !if ($ENVIRONMENT == "production")
@@ -1101,6 +1130,7 @@ entity Customer [[https://wiki.company.com/customer]]
 ```
 
 ### ER to Implementation Mapping
+
 ```yaml
 ER Design → Database Schema:
   - Entity → Table
@@ -1116,6 +1146,7 @@ ER Design → ORM Mapping:
 ```
 
 ### Integration con Development
+
 ```bash
 # Generate JPA entities from ER
 er-to-jpa --input model.puml --output src/main/java/entities/

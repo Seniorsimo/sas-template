@@ -206,6 +206,7 @@ X-API-Version: 1.0
 ## Data Models
 
 ### Request Models
+
 ```json
 // [ModelName]Request
 {
@@ -235,6 +236,7 @@ X-API-Version: 1.0
 ```
 
 ### Response Models
+
 ```json
 // [ModelName]Response
 {
@@ -260,6 +262,7 @@ X-API-Version: 1.0
 ```
 
 ### Error Models
+
 ```json
 // ErrorResponse
 {

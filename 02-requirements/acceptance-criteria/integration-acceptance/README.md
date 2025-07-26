@@ -47,6 +47,7 @@ Gli **Integration Acceptance Criteria** servono per:
 ## Come Utilizzare il Template
 
 ### 1. Identifica il Tipo di Integrazione
+
 ```bash
 # API Integration
 AC-I-API-001-payment-gateway.md
@@ -78,6 +79,7 @@ AC-I-EXT-001-maps-service.md
 ## Integration Patterns Testati
 
 ### Synchronous Integration
+
 ```gherkin
 Given il sistema destinazione è disponibile
 When invio una richiesta sincronoa
@@ -86,6 +88,7 @@ And la risposta contiene i dati attesi
 ```
 
 ### Asynchronous Integration
+
 ```gherkin
 Given il message broker è operativo
 When pubblico un messaggio nella queue
@@ -95,6 +98,7 @@ And il consumer processa il messaggio
 ```
 
 ### Batch Integration
+
 ```gherkin
 Given ho un file batch da processare
 When avvio il processo di import
@@ -104,6 +108,7 @@ And viene generato un report di completamento
 ```
 
 ### Event-Driven Integration
+
 ```gherkin
 Given il sistema è in ascolto per eventi
 When si verifica un evento di business
@@ -115,6 +120,7 @@ And processano l'evento appropriatamente
 ## Test Scenarios Comuni
 
 ### Connectivity Testing
+
 ```gherkin
 Scenario: Verifica connessione di base
 Given le credenziali sono configurate
@@ -124,6 +130,7 @@ And ricevo una risposta di health check
 ```
 
 ### Data Exchange Testing
+
 ```gherkin
 Scenario: Scambio dati corretto
 Given ho dati validi da trasmettere
@@ -134,6 +141,7 @@ And i dati mantengono integrità
 ```
 
 ### Error Handling Testing
+
 ```gherkin
 Scenario: Gestione errori di rete
 Given il sistema esterno è temporaneamente non disponibile
@@ -144,6 +152,7 @@ And viene attivata la logica di retry
 ```
 
 ### Performance Testing
+
 ```gherkin
 Scenario: Performance sotto carico
 Given sto inviando X richieste simultanee
@@ -154,6 +163,7 @@ And non si verificano memory leaks
 ```
 
 ### Security Testing
+
 ```gherkin
 Scenario: Autenticazione sicura
 Given ho credenziali valide
@@ -227,6 +237,7 @@ And il token ha scadenza appropriata
 ## Integration Monitoring
 
 ### Key Metrics
+
 ```yaml
 Success Rate: ≥ 99.5%
 Error Rate: ≤ 0.5%
@@ -236,6 +247,7 @@ Availability: ≥ 99.9%
 ```
 
 ### SLA Monitoring
+
 ```yaml
 Response Time SLA: 95% < 1s
 Availability SLA: 99.9% uptime
@@ -244,6 +256,7 @@ Recovery Time SLA: < 5 min
 ```
 
 ### Business Metrics
+
 ```yaml
 Transaction Volume: Daily/hourly counts
 Data Quality: % successful data transfers
@@ -333,6 +346,7 @@ User Experience: Integration user satisfaction
 ## Troubleshooting Integration Issues
 
 ### Common Error Patterns
+
 ```yaml
 Timeout Errors:
   - Network latency issues

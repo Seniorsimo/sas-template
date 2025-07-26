@@ -47,6 +47,7 @@ Gli **UI Requirements** definiscono:
 ## Convenzioni per UI Requirements
 
 ### Schema ID
+
 ```
 REQ-UI-{COMPONENT}-{NUMBER}
 ```
@@ -58,6 +59,7 @@ REQ-UI-{COMPONENT}-{NUMBER}
 - `{NUMBER}` = Numero progressivo (001, 002, etc.)
 
 ### Esempi ID
+
 ```
 REQ-UI-FORM-001        # Form di login
 REQ-UI-NAV-001         # Navigazione principale
@@ -116,6 +118,7 @@ REQ-UI-MODAL-001       # Modal dialogs
 ## UI Design Standards
 
 ### Responsive Breakpoints
+
 ```css
 Mobile: 320px - 768px
 Tablet: 768px - 1024px
@@ -124,6 +127,7 @@ Large Desktop: 1440px+
 ```
 
 ### Color Palette
+
 ```css
 Primary: #007bff
 Secondary: #6c757d
@@ -136,6 +140,7 @@ Dark: #343a40
 ```
 
 ### Typography Scale
+
 ```css
 H1: 2.5rem (40px)
 H2: 2rem (32px)
@@ -146,6 +151,7 @@ Small: 0.875rem (14px)
 ```
 
 ### Spacing System
+
 ```css
 xs: 4px
 sm: 8px

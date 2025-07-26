@@ -260,6 +260,7 @@
 ## Test Results
 
 ### Execution Summary
+
 | Test Run | Date | Tester | Status | Notes |
 |----------|------|--------|--------|-------|
 | 1 | [Data] | [Nome] | [Pass/Fail] | [Note] |

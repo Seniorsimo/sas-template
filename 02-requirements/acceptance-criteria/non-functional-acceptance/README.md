@@ -85,6 +85,7 @@ Ogni criterio deve avere:
 ## Performance Acceptance Criteria
 
 ### Response Time Metrics
+
 ```
 Target: ≤ 2 secondi (95° percentile)
 Acceptable: ≤ 5 secondi (95° percentile)
@@ -93,6 +94,7 @@ Environment: Production-like hardware
 ```
 
 ### Throughput Metrics
+
 ```
 Target: ≥ 1000 transazioni/minuto
 Peak Load: ≥ 500 transazioni/minuto
@@ -101,6 +103,7 @@ Measurement: Sustained 30 minutes
 ```
 
 ### Resource Utilization
+
 ```
 CPU: ≤ 70% under normal load
 Memory: ≤ 80% allocated heap
@@ -111,6 +114,7 @@ Network: ≤ 60% bandwidth
 ## Security Acceptance Criteria
 
 ### Authentication Requirements
+
 ```
 Login Success: Valid credentials accepted
 Login Failure: Invalid credentials rejected
@@ -119,6 +123,7 @@ Session: Timeout after 30 min inactivity
 ```
 
 ### Authorization Controls
+
 ```
 Role-based: Access based on user roles
 Resource-level: Granular permissions
@@ -127,6 +132,7 @@ Audit trail: All access logged
 ```
 
 ### Data Protection
+
 ```
 Encryption in transit: TLS 1.3 minimum
 Encryption at rest: AES-256
@@ -137,6 +143,7 @@ Backup security: Encrypted backups
 ## Usability Acceptance Criteria
 
 ### User Experience Metrics
+
 ```
 Task completion: ≥ 95% success rate
 Time to complete: ≤ 3 minutes average
@@ -145,6 +152,7 @@ User satisfaction: ≥ 4.5/5 rating
 ```
 
 ### Accessibility Compliance
+
 ```
 WCAG Level: AA compliance verified
 Screen reader: Compatible with NVDA/JAWS
@@ -153,6 +161,7 @@ Color contrast: ≥ 4.5:1 ratio
 ```
 
 ### Learning Curve
+
 ```
 First-time users: Productive in ≤ 15 min
 Training required: ≤ 2 hours
@@ -163,6 +172,7 @@ Return users: No relearning needed
 ## Reliability Acceptance Criteria
 
 ### Availability Targets
+
 ```
 Uptime: ≥ 99.9% (8.76 hours/year downtime)
 Planned maintenance: ≤ 4 hours/month
@@ -171,6 +181,7 @@ Recovery point: ≤ 1 hour RPO
 ```
 
 ### Fault Tolerance
+
 ```
 Single point failure: No SPOFs
 Graceful degradation: Core functions available
@@ -179,6 +190,7 @@ Retry logic: Exponential backoff
 ```
 
 ### Data Consistency
+
 ```
 ACID compliance: Database transactions
 Eventual consistency: Distributed systems
@@ -242,6 +254,7 @@ Data validation: Integrity checks
 ## SLA e Service Level Objectives
 
 ### Performance SLOs
+
 ```
 Response Time SLO: 95% requests < 2s
 Availability SLO: 99.9% uptime
@@ -250,6 +263,7 @@ Error Rate SLO: < 0.1% error rate
 ```
 
 ### Security SLOs
+
 ```
 Vulnerability Response: Critical <24h
 Patch Management: Security patches <7 days
@@ -258,6 +272,7 @@ Access Review: Quarterly access review
 ```
 
 ### Usability SLOs
+
 ```
 User Satisfaction: ≥ 4.5/5 rating
 Support Tickets: ≤ 5% users need help

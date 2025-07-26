@@ -38,6 +38,7 @@
 ## Rischi Alti (15-25)
 
 ### RISK-001: [Nome Rischio Alto 1]
+
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
 **Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
 
@@ -68,6 +69,7 @@
 ---
 
 ### RISK-002: [Nome Rischio Alto 2]
+
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
 **Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
 
@@ -100,6 +102,7 @@
 ## Rischi Medi (6-12)
 
 ### RISK-003: [Nome Rischio Medio 1]
+
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
 **Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
 
@@ -116,6 +119,7 @@
 ---
 
 ### RISK-004: [Nome Rischio Medio 2]
+
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
 **Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
 
@@ -134,6 +138,7 @@
 ## Rischi Bassi (1-5)
 
 ### RISK-005: [Nome Rischio Basso 1]
+
 **Categoria**: Tecnico | Business | Organizzativo | Esterno  
 **Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
 
@@ -184,6 +189,7 @@
 ## Risk Summary Dashboard
 
 ### Rischi per Categoria
+
 | Categoria | Alto | Medio | Basso | Totale |
 |-----------|------|-------|-------|--------|
 | Tecnico | [#] | [#] | [#] | [#] |
@@ -252,6 +258,7 @@
 - **Mensile**: Tutti gli altri rischi attivi
 
 ### Communication Plan
+
 | Audience | Frequency | Content |
 |----------|-----------|---------|
 | Team | Settimanale | Tutti i rischi attivi |
@@ -280,6 +287,7 @@
 ## Risk Review Meeting Minutes
 
 ### [Data Meeting]
+
 **Partecipanti**: [Lista partecipanti]
 
 **Rischi Discussi**:
