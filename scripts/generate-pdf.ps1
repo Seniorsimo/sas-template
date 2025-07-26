@@ -239,8 +239,20 @@ foreach ($file in $fileOrder) {
             $combinedContent += "`n"
             
         } elseif ($fileExtension -eq ".puml") {
-            # Gestione file PlantUML - mantieni sempre il titolo per i diagrammi
-            $sectionName = (Split-Path $file -Leaf) -replace "\.puml$", ""
+            # Gestione file PlantUML - estrai il titolo dal contenuto se esiste
+            $content = Get-Content $fullPath -Raw -Encoding UTF8
+            
+            # Estrai titolo dal diagramma PlantUML se presente dopo @startuml
+            $diagramTitle = ""
+            if ($content -match '@startuml\s+(.+?)(\r?\n)') {
+                $diagramTitle = $matches[1].Trim()
+                # Rimuovi il titolo dal diagramma
+                $content = $content -replace '@startuml\s+(.+?)(\r?\n)', '@startuml$2'
+                Write-Host "    Titolo estratto dal diagramma: $diagramTitle" -ForegroundColor Cyan
+            }
+            
+            # Usa il titolo estratto se disponibile, altrimenti usa il nome del file
+            $sectionName = if ($diagramTitle) { $diagramTitle } else { (Split-Path $file -Leaf) -replace "\.puml$", "" }
             $sectionName = "$sectionName (Diagramma UML)"
             
             # Calcola l'indentazione anche per i titoli dei diagrammi PlantUML
@@ -257,9 +269,6 @@ foreach ($file in $fileOrder) {
             
             $combinedContent += "`n\newpage`n"
             $combinedContent += "$titlePrefix $sectionName`n"
-            
-            # Gestione file PlantUML
-            $content = Get-Content $fullPath -Raw -Encoding UTF8
             
             # Validazione contenuto PlantUML
             try {
@@ -281,10 +290,6 @@ foreach ($file in $fileOrder) {
             } catch {
                 Write-Host "    Errore nella lettura del file PlantUML: $($_.Exception.Message)" -ForegroundColor Red
             }
-            
-            # Aggiungi descrizione del diagramma
-            #$relativePath = $file -replace "\\", "/"
-            #$combinedContent += "`n**Diagramma PlantUML:** ``$relativePath```n`n"
             
             # Aggiungi il contenuto PlantUML con wrapping LaTeX per centratura
             $combinedContent += "``````{=latex}`n\begin{center}`n```````n`n``````plantuml"
