@@ -1,2 +1,4 @@
-test-documentation.html
+temp-*.md
 *.pdf
+
+.venv

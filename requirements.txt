@@ -1,0 +1,4 @@
+# Requirements per generazione PDF con PlantUML
+pandocfilters==1.5.1
+pillow==11.3.0
+pycairo==1.28.0
