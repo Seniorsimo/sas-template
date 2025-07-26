@@ -357,9 +357,8 @@ foreach ($file in $fileOrder) {
             }
             
             # Migliora il posizionamento dei diagrammi PlantUML embedded nei file MD
-            # Aggiungi separatori prima e dopo i blocchi plantuml per evitare problemi di layout
-            $content = $content -replace '(```plantuml)', "`n`n---`n`n`$1"
-            $content = $content -replace '(```)\s*(\n)(?![`])', "`$1`$2`n---`n`n"
+            # Usa una singola regex per estrarre e ricomporre con comandi LaTeX
+            $content = $content -replace '(?s)```plantuml(.*?)```', "`n`n---`n`n``````{=latex}`n\begin{center}`n```````n`n``````plantuml`$1```````n`n``````{=latex}`n\end{center}`n```````n`n---`n`n"
             
             # Per TUTTI i file .md, non aggiungere titolo aggiuntivo, solo newpage
             $combinedContent += "`n\newpage`n"
@@ -397,10 +396,17 @@ foreach ($file in $fileOrder) {
             # Aggiungi separatori e padding per evitare problemi di posizionamento
             $combinedContent += "---`n`n"
             
-            # Aggiungi il contenuto PlantUML come blocco di codice con separatori
+            # Aggiungi il contenuto PlantUML con wrapping LaTeX per centratura
+            $combinedContent += "`n"
+            $combinedContent += "``````{=latex}`n"
+            $combinedContent += "\begin{center}`n"
+            $combinedContent += "```````n`n"
             $combinedContent += "``````plantuml`n"
             $combinedContent += $content
             $combinedContent += "`n```````n`n"
+            $combinedContent += "``````{=latex}`n"
+            $combinedContent += "\end{center}`n"
+            $combinedContent += "```````n`n"
             
             # Aggiungi padding finale per separare dal contenuto successivo
             $combinedContent += "---`n`n"
