@@ -1,0 +1,32 @@
+﻿/* Stili per linee orizzontali piu larghe */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ccc, #333, #ccc);
+    margin: 20px 0;
+}
+
+/* Centratura per i diagrammi */
+.plantuml-diagram {
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Miglioramenti per i blocchi di codice */
+pre.plantuml {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 15px auto;
+    max-width: 90%;
+}
+
+/* Centratura per le immagini generate */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}

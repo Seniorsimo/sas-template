@@ -2,3 +2,4 @@ temp-*.md
 *.pdf
 
 .venv
+.plantuml_cache

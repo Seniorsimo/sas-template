@@ -14,13 +14,21 @@
 #
 # I diagrammi PlantUML sono abilitati per default.
 # Per disabilitarli: .\generate-pdf.ps1 -WithDiagrams:$false
+# La pre-elaborazione parallela migliora le performance su progetti grandi
+# Per specificare numero di worker: .\generate-pdf.ps1 -MaxWorkers 4
 
 param(
     [string]$OutputPath = ".\documentation.pdf",
     [string]$Title = "Enterprise Software Documentation Template",
-    [switch]$WithDiagrams = $true,
-    [switch]$Verbose
+    [switch]$WithDiagrams,
+    [switch]$Verbose,
+    [switch]$ParallelDiagrams,
+    [int]$MaxWorkers = 0
 )
+
+# Default values for switches
+if (-not $PSBoundParameters.ContainsKey('WithDiagrams')) { $WithDiagrams = $true }
+if (-not $PSBoundParameters.ContainsKey('ParallelDiagrams')) { $ParallelDiagrams = $true }
 
 Write-Host "Generazione PDF Documentazione Template Enterprise" -ForegroundColor Green
 Write-Host "=================================================" -ForegroundColor Green
@@ -75,13 +83,131 @@ if ($WithDiagrams) {
         }
         
         if (-not $plantumlAvailable) {
-            Write-Host "PlantUML non trovato. I diagrammi non verranno renderizzati." -ForegroundColor Yellow
+            Write-Host "ATTENZIONE: PlantUML non trovato. I diagrammi non verranno renderizzati." -ForegroundColor Yellow
             Write-Host "Per abilitare i diagrammi:" -ForegroundColor Cyan
             Write-Host "1. Installa PlantUML: https://plantuml.com/download" -ForegroundColor Cyan
             Write-Host "2. Oppure installa pandoc-plantuml: pip install pandoc-plantuml" -ForegroundColor Cyan
             Write-Host "3. PlantUML è già scaricato in: $env:USERPROFILE\tools\plantuml\plantuml.jar" -ForegroundColor Cyan
         }
     }
+}
+
+# Configurazione parallelizzazione
+if ($MaxWorkers -eq 0) {
+    $MaxWorkers = [Environment]::ProcessorCount
+    if ($MaxWorkers -gt 8) { $MaxWorkers = 8 } # Limite massimo ragionevole
+}
+
+if ($ParallelDiagrams -and $WithDiagrams) {
+    Write-Host "Elaborazione parallela abilitata con $MaxWorkers worker" -ForegroundColor Cyan
+    $env:PLANTUML_MAX_WORKERS = $MaxWorkers.ToString()
+} else {
+    Write-Host "Elaborazione sequenziale" -ForegroundColor Cyan
+}
+
+# Funzione per pre-processare i diagrammi PlantUML se richiesto
+function Invoke-ParallelPlantUMLPreprocessing {
+    param(
+        [string[]]$PumlFiles,
+        [string]$PlantUMLCommand,
+        [int]$Workers = 4
+    )
+    
+    if (-not $PumlFiles -or $PumlFiles.Count -eq 0) {
+        return
+    }
+    
+    Write-Host "Pre-elaborazione parallela di $($PumlFiles.Count) diagrammi PlantUML..." -ForegroundColor Cyan
+    
+    # Crea directory cache se non esiste
+    $cacheDir = Join-Path $PWD ".plantuml_cache"
+    if (-not (Test-Path $cacheDir)) {
+        New-Item -ItemType Directory -Path $cacheDir -Force | Out-Null
+    }
+    
+    # Elabora i diagrammi in parallelo usando PowerShell Jobs
+    $jobs = @()
+    $batchSize = [Math]::Ceiling($PumlFiles.Count / $Workers)
+    
+    for ($i = 0; $i -lt $Workers; $i++) {
+        $start = $i * $batchSize
+        $end = [Math]::Min($start + $batchSize - 1, $PumlFiles.Count - 1)
+        
+        if ($start -le $end) {
+            $fileBatch = $PumlFiles[$start..$end]
+            
+            $job = Start-Job -ScriptBlock {
+                param($files, $plantumlCmd, $cacheDir, $workerId)
+                
+                $processed = 0
+                $cached = 0
+                $failed = 0
+                
+                foreach ($file in $files) {
+                    try {
+                        $content = Get-Content $file -Raw -Encoding UTF8
+                        $hash = [System.Security.Cryptography.MD5]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($content))
+                        $hashString = [System.BitConverter]::ToString($hash) -replace '-'
+                        
+                        $cacheFile = Join-Path $cacheDir "$hashString.png"
+                        
+                        if (Test-Path $cacheFile) {
+                            $cached++
+                            continue
+                        }
+                        
+                        # Genera PNG temporaneo
+                        $tempPng = [System.IO.Path]::ChangeExtension($file, '.png')
+                        
+                        if ($plantumlCmd -like "*java*") {
+                            $cmdArgs = $plantumlCmd.Split(' ') + @('-tpng', '-charset', 'UTF-8', '-quiet', $file)
+                            & $cmdArgs[0] $cmdArgs[1..($cmdArgs.Length-1)]
+                        } else {
+                            & $plantumlCmd -tpng -charset UTF-8 -quiet $file
+                        }
+                        
+                        if (Test-Path $tempPng) {
+                            # Sposta nella cache
+                            Move-Item $tempPng $cacheFile -Force
+                            $processed++
+                        } else {
+                            $failed++
+                        }
+                        
+                    } catch {
+                        $failed++
+                    }
+                }
+                
+                return @{
+                    WorkerId = $workerId
+                    Processed = $processed
+                    Cached = $cached
+                    Failed = $failed
+                }
+            } -ArgumentList $fileBatch, $plantumlCommand, $cacheDir, ($i + 1)
+            
+            $jobs += $job
+        }
+    }
+    
+    # Attendi completamento e raccogli statistiche
+    $totalProcessed = 0
+    $totalCached = 0
+    $totalFailed = 0
+    
+    foreach ($job in $jobs) {
+        $result = Receive-Job -Job $job -Wait
+        Remove-Job -Job $job
+        
+        $totalProcessed += $result.Processed
+        $totalCached += $result.Cached
+        $totalFailed += $result.Failed
+        
+        Write-Host "  Worker $($result.WorkerId): $($result.Processed) generati, $($result.Cached) cache, $($result.Failed) errori" -ForegroundColor Gray
+    }
+    
+    Write-Host "Pre-elaborazione completata: $totalProcessed generati, $totalCached da cache, $totalFailed errori" -ForegroundColor Green
 }
 
 # Genera ordine dei file dinamicamente
@@ -153,6 +279,14 @@ foreach ($file in $fileOrder) {
     Write-Host "  $file" -ForegroundColor Gray
 }
 
+# Pre-elaborazione parallela dei diagrammi PlantUML se abilitata
+if ($ParallelDiagrams -and $WithDiagrams -and $plantumlAvailable) {
+    $pumlFilesOnly = $allPumlFiles | ForEach-Object { Join-Path $PWD $_ }
+    if ($pumlFilesOnly.Count -gt 0) {
+        Invoke-ParallelPlantUMLPreprocessing -PumlFiles $pumlFilesOnly -PlantUMLCommand $plantumlCommand -Workers $MaxWorkers
+    }
+}
+
 # Crea file temporaneo combinato
 $tempFile = Join-Path $PWD "temp-combined.md"
 $combinedContent = @()
@@ -222,6 +356,11 @@ foreach ($file in $fileOrder) {
                 $content = $processedLines -join "`n"
             }
             
+            # Migliora il posizionamento dei diagrammi PlantUML embedded nei file MD
+            # Aggiungi separatori prima e dopo i blocchi plantuml per evitare problemi di layout
+            $content = $content -replace '(```plantuml)', "`n`n---`n`n`$1"
+            $content = $content -replace '(```)\s*(\n)(?![`])', "`$1`$2`n---`n`n"
+            
             # Per TUTTI i file .md, non aggiungere titolo aggiuntivo, solo newpage
             $combinedContent += "`n\newpage`n"
             # Aggiungi direttamente il contenuto (con titoli indentati se necessario)
@@ -253,12 +392,18 @@ foreach ($file in $fileOrder) {
             
             # Aggiungi descrizione del diagramma
             $relativePath = $file -replace "\\", "/"
-            $combinedContent += "**Diagramma PlantUML:** ``$relativePath```n`n"
+            $combinedContent += "`n**Diagramma PlantUML:** ``$relativePath```n`n"
             
-            # Aggiungi il contenuto PlantUML come blocco di codice
+            # Aggiungi separatori e padding per evitare problemi di posizionamento
+            $combinedContent += "---`n`n"
+            
+            # Aggiungi il contenuto PlantUML come blocco di codice con separatori
             $combinedContent += "``````plantuml`n"
             $combinedContent += $content
             $combinedContent += "`n```````n`n"
+            
+            # Aggiungi padding finale per separare dal contenuto successivo
+            $combinedContent += "---`n`n"
         }
         
     } else {
@@ -266,13 +411,29 @@ foreach ($file in $fileOrder) {
     }
 }
 
-# Scrivi file temporaneo
+# Scrivi file temporaneo con encoding UTF-8 esplicito
 $combinedContent -join "`n" | Out-File -FilePath $tempFile -Encoding UTF8 -NoNewline
 Write-Host "File temporaneo creato: $tempFile" -ForegroundColor Green
 
-# Verifica che il file esista
+# Verifica che il file esista e sia valido UTF-8
 if (-not (Test-Path $tempFile)) {
     Write-Host "Errore: Il file temporaneo non è stato creato correttamente" -ForegroundColor Red
+    exit 1
+}
+
+# Verifica encoding UTF-8 e risolvi eventuali problemi
+try {
+    $testContent = Get-Content $tempFile -Encoding UTF8 -Raw
+    if ($testContent.Length -eq 0) {
+        Write-Host "Errore: Il file temporaneo è vuoto" -ForegroundColor Red
+        exit 1
+    }
+    
+    # Riscrive il file per assicurarsi che sia UTF-8 senza BOM
+    [System.IO.File]::WriteAllText($tempFile, $testContent, [System.Text.UTF8Encoding]::new($false))
+    Write-Host "Encoding UTF-8 verificato e normalizzato" -ForegroundColor Green
+} catch {
+    Write-Host "Errore nella verifica encoding: $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
 
@@ -288,6 +449,9 @@ $pandocArgs = @(
     "--variable", "monofont=Consolas", 
     "--variable", "fontsize=11pt",
     "--variable", "geometry:margin=2cm",
+    "--variable", "graphics=yes",
+    "--variable", "fig-align=center",
+    "--variable", "fig-pos=H",
     "--number-sections",
     "--toc",
     "--toc-depth=3"
@@ -296,12 +460,14 @@ $pandocArgs = @(
 if ($WithDiagrams -and $plantumlAvailable) {
     Write-Host "Inclusione diagrammi PlantUML..." -ForegroundColor Cyan
     
-    # Prova diversi filtri in ordine di preferenza
+    # Determina quale filtro utilizzare
     $filters = @(
-        "D:\Repositories\test_uml\scripts\plantuml_filter.bat",
+        "D:\Repositories\test_uml\scripts\plantuml_filter_simple.bat",
         "pandoc-plantuml-filter", 
         "pandoc-plantuml"
     )
+    Write-Host "Utilizzando filtro PlantUML ottimizzato..." -ForegroundColor Cyan
+    
     $filterFound = $false
     
     foreach ($filter in $filters) {
@@ -334,6 +500,10 @@ if ($WithDiagrams -and $plantumlAvailable) {
     if (-not $filterFound) {
         Write-Host "Nessun filtro PlantUML trovato, continuando senza rendering diagrammi..." -ForegroundColor Yellow
         Write-Host "I blocchi plantuml verranno mostrati come codice nel PDF" -ForegroundColor Yellow
+    } else {
+        # Aggiungi parametri aggiuntivi per gestire encoding UTF-8
+        $pandocArgs += "--metadata", "lang=it"
+        Write-Host "Filtro PlantUML configurato con supporto UTF-8" -ForegroundColor Green
     }
 } elseif ($WithDiagrams -and -not $plantumlAvailable) {
     Write-Host "Diagrammi richiesti ma PlantUML non disponibile. Continuando senza diagrammi..." -ForegroundColor Yellow
@@ -355,7 +525,11 @@ try {
         
         # Statistiche di generazione
         if ($WithDiagrams -and $plantumlAvailable) {
-            Write-Host "Diagrammi PlantUML inclusi nel PDF" -ForegroundColor Green
+            if ($ParallelDiagrams) {
+                Write-Host "Diagrammi PlantUML inclusi nel PDF (elaborazione parallela con $MaxWorkers worker)" -ForegroundColor Green
+            } else {
+                Write-Host "Diagrammi PlantUML inclusi nel PDF (elaborazione sequenziale)" -ForegroundColor Green
+            }
         } elseif ($WithDiagrams -and -not $plantumlAvailable) {
             Write-Host "ATTENZIONE: Diagrammi PlantUML non renderizzati (PlantUML non disponibile)" -ForegroundColor Yellow
         } else {

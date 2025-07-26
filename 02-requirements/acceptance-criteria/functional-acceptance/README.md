@@ -53,8 +53,8 @@ AC-F-{AREA}-{NUMBER}-{description}.md
 
 Concentrati su **COSA** il sistema deve fare, non **COME**:
 
-- ✅ "Il sistema deve validare il formato email"
-- ❌ "Il sistema deve usare regex per email"
+- [OK] "Il sistema deve validare il formato email"
+- [KO] "Il sistema deve usare regex per email"
 
 ## Struttura Test Scenarios
 

@@ -152,8 +152,8 @@ Requisiti ↔ Architecture ↔ Design ↔ Implementation
 
 | Requisito | User Stories | Use Cases | Test Cases | Implementato |
 |-----------|--------------|-----------|------------|--------------|
-| REQ-F-001 | US-001, US-002 | UC-001 | TC-001, TC-002 | ✅ |
-| REQ-F-002 | US-003 | UC-002 | TC-003 | ⏳ |
+| REQ-F-001 | US-001, US-002 | UC-001 | TC-001, TC-002 | Completato |
+| REQ-F-002 | US-003 | UC-002 | TC-003 | In Corso |
 
 ## Best Practices
 
