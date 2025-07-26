@@ -124,8 +124,6 @@ UC6 .> UC5 : <<extend>>
 
 ```plantuml
 @startuml
-!theme blueprint
-
 actor "Cliente" as C
 actor "Sistema Bancario" as Bank
 
@@ -148,8 +146,6 @@ UC3 .> UC4 : <<include>>
 
 ```plantuml
 @startuml
-!theme blueprint
-
 actor "Utente" as U
 actor "Amministratore" as A
 actor "Super Admin" as SA
@@ -178,8 +174,6 @@ SA --|> A
 
 ```plantuml
 @startuml
-!theme blueprint
-
 actor "Utente Mobile" as Mobile
 actor "Utente Web" as Web
 actor "API Gateway" as API
@@ -256,7 +250,7 @@ usecase "Gestisci Configurazione Utenti"
 ' User Stories: US-001, US-002, US-003
 ' Requirements: REQ-F-001, REQ-F-002
 
-note top of UC1 : Traccia a:\nUS-001: Ordine Cliente\nREQ-F-001: Processo Ordini
+note right of UC1 : Traccia a:\nUS-001: Ordine Cliente\nREQ-F-001: Processo Ordini
 ```
 
 ### Collegamento con Requirements
@@ -320,7 +314,6 @@ package "Modulo Supporto" as Support {
 
 ```plantuml
 @startuml
-!theme blueprint
 title Sistema E-commerce - Use Cases Principali
 
 actor "Cliente" as C
@@ -363,7 +356,6 @@ UC4 .> UC3 : <<include>>
 
 ```plantuml
 @startuml
-!theme blueprint
 title Sistema Bancario - Use Cases
 
 actor "Cliente" as C
@@ -393,7 +385,6 @@ UC4 .> UC3 : <<extend>>
 
 ```plantuml
 @startuml
-!theme blueprint
 title Sistema HR - Gestione Dipendenti
 
 actor "Dipendente" as D

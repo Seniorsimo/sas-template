@@ -136,23 +136,6 @@ Per diagrammi rapidi e semplici:
 - Usa `Ctrl+Shift+P` → `PlantUML: Preview Current Diagram`
 - Per esportare: `PlantUML: Export Current Diagram`
 
-### Draw.io
-
-- Fai doppio clic sul file `.drawio`
-- Si aprirà l'editor integrato di Draw.io
-- Modifica con drag-and-drop
-- Salva automaticamente in VS Code
-
-### Mermaid
-
-- Inserisci il codice in un file Markdown:
-   ```markdown
-   ```mermaid
-   graph TD
-     A --> B
-   ```
-- Usa l'anteprima Markdown per visualizzare
-
 ## Integrazione con Documentazione
 
 - Riferimenti ai diagrammi nella documentazione testuale

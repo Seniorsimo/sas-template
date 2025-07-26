@@ -170,9 +170,9 @@ Category ||--o{ Product : "contains"
 ```plantuml
 note right of Customer : Customer must have\nat least one contact method\n(email or phone)
 
-note top of Order : Order total calculated\nfrom OrderItem.quantity * unit_price
+note right of Order : Order total calculated\nfrom OrderItem.quantity * unit_price
 
-note bottom of Payment : Payment amount must\nmatch Order.total_amount
+note right of Payment : Payment amount must\nmatch Order.total_amount
 ```
 
 ## Pattern di Modellazione
@@ -181,7 +181,6 @@ note bottom of Payment : Payment amount must\nmatch Order.total_amount
 
 ```plantuml
 @startuml
-!theme blueprint
 title Pattern Gerarchia - Specializzazione
 
 entity Person {
@@ -220,7 +219,6 @@ Person ||--o| Employee : "is a"
 
 ```plantuml
 @startuml
-!theme blueprint
 title Pattern Composizione - Aggregazione
 
 entity Order {
@@ -264,7 +262,6 @@ note right of ShippingAddress : ShippingAddress specific\nto this Order only\n(c
 
 ```plantuml
 @startuml
-!theme blueprint
 title Pattern M:N con Attributi di Relazione
 
 entity Student {
@@ -307,7 +304,6 @@ note top of Enrollment : Enrollment entity captures\nthe relationship attributes
 
 ```plantuml
 @startuml
-!theme blueprint
 title Pattern Dati Temporali
 
 entity Product {
@@ -511,7 +507,6 @@ Order }o--o{ Product
 
 ```plantuml
 @startuml
-!theme blueprint
 title E-commerce - Entity Relationship Diagram
 
 !define CUSTOMER_COLOR #E3F2FD
@@ -667,7 +662,6 @@ note left of ProductInventory : quantity_on_hand >= 0\nreserved_quantity <= quan
 
 ```plantuml
 @startuml
-!theme blueprint
 title Banking System - Entity Relationship Diagram
 
 package "Customer Management" #E3F2FD {
@@ -837,7 +831,6 @@ note left of Loan : monthly_payment calculated based on\nprincipal, rate, and te
 
 ```plantuml
 @startuml
-!theme blueprint
 title Healthcare Management - Entity Relationship Diagram
 
 package "Patient Management" #E3F2FD {
@@ -1110,24 +1103,6 @@ Data Consistency:
 ```
 
 ## Tools e Integration
-
-### PlantUML Advanced Features
-
-```plantuml
-' Conditional styling
-!if ($ENVIRONMENT == "production")
-  !define DB_COLOR #FFE0E0
-!else
-  !define DB_COLOR #E0FFE0
-!endif
-
-' Include external files
-!include common-entities.puml
-!include business-rules.puml
-
-' Hyperlinks to documentation
-entity Customer [[https://wiki.company.com/customer]]
-```
 
 ### ER to Implementation Mapping
 

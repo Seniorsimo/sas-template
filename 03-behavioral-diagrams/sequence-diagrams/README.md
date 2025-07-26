@@ -91,8 +91,6 @@ end
 
 ```plantuml
 @startuml
-!theme blueprint
-
 actor "Cliente" as C
 participant "Web App" as W
 participant "API Gateway" as G
@@ -140,7 +138,6 @@ end
 
 ```plantuml
 @startuml
-!theme blueprint
 title Pattern Request-Response Base
 
 participant "Client" as C
@@ -157,7 +154,6 @@ deactivate S
 
 ```plantuml
 @startuml
-!theme blueprint
 title Architettura Multi-Layer
 
 actor "User" as U
@@ -189,7 +185,6 @@ deactivate P
 
 ```plantuml
 @startuml
-!theme blueprint
 title Pattern Asincrono con Callback
 
 participant "Client" as C
@@ -215,7 +210,6 @@ deactivate W
 
 ```plantuml
 @startuml
-!theme blueprint
 title Gestione Errori Completa
 
 participant "Client" as C
@@ -249,7 +243,6 @@ deactivate A
 
 ```plantuml
 @startuml
-!theme blueprint
 title Microservices Communication
 
 actor "User" as U
@@ -271,12 +264,12 @@ G -> O: Process Order
 activate O
 
 par parallel calls
-  O -> P: Reserve Payment
-  activate P
-and
-  O -> I: Check Inventory
-  activate I
-end
+== Parallel Calls ==
+O -> P: Reserve Payment
+activate P
+O -> I: Check Inventory
+activate I
+...parallel execution...
 
 alt all services OK
   P --> O: Payment Reserved
@@ -401,7 +394,6 @@ note over Database: Query ottimizzata\ncon indici appropriati
 
 ```plantuml
 @startuml
-!theme blueprint
 title E-commerce - Checkout Process
 
 actor "Customer" as C
@@ -470,7 +462,6 @@ deactivate W
 
 ```plantuml
 @startuml
-!theme blueprint
 title Banking - Fund Transfer
 
 actor "Customer" as C
@@ -537,7 +528,6 @@ deactivate B
 
 ```plantuml
 @startuml
-!theme blueprint
 title IoT Device Management
 
 participant "IoT Device" as D

@@ -138,7 +138,6 @@ OrderSvc --( MQ : publishes to
 
 ```plantuml
 @startuml
-!theme blueprint
 title Layered Architecture - Component View
 
 package "Presentation Layer" #E3F2FD {
@@ -186,7 +185,6 @@ RepoInterface - Repos
 
 ```plantuml
 @startuml
-!theme blueprint
 title Microservices Architecture
 
 package "API Gateway Layer" #E3F2FD {
@@ -258,7 +256,6 @@ Gateway --> ServiceDiscovery : "discovers services"
 
 ```plantuml
 @startuml
-!theme blueprint
 title Event-Driven Architecture
 
 package "Event Producers" #E3F2FD {
@@ -319,7 +316,6 @@ CommandInterface - OrderSvc
 
 ```plantuml
 @startuml
-!theme blueprint
 title Hexagonal Architecture
 
 package "Core Domain" #FFF3E0 {
@@ -450,19 +446,43 @@ Repository ..|> IRepository
 
 ### Anti-Patterns da Evitare
 
+#### Circular Dependencies
+
 ```plantuml
-' Circular Dependencies
-component A --> B
-component B --> C
-component C --> A : "EVITARE!"
+@startuml
+title Anti-Pattern: Circular Dependencies
+component A
+component B
+component C
+A --> B
+B --> C
+C --> A : "EVITARE!"
+note right of C : Ciclo di dipendenze tra componenti
+@enduml
+```
 
-' God Component
+#### God Component
+
+```plantuml
+@startuml
+title Anti-Pattern: God Component
 component "EverythingManager" {
-  note right : Gestisce tutto:\n- Users\n- Orders\n- Payments\n- Reports\n- Notifications
+  'note right : Gestisce tutto:\n- Users\n- Orders\n- Payments\n- Reports\n- Notifications
 }
+note right of EverythingManager : Un solo componente accentrato viola la separazione di responsabilità
+@enduml
+```
 
-' Tight Coupling
-component ServiceA --> ConcreteImplementationB : "Dipendenza da implementazione"
+#### Tight Coupling
+
+```plantuml
+@startuml
+title Anti-Pattern: Tight Coupling
+component ServiceA
+component ConcreteImplementationB
+ServiceA --> ConcreteImplementationB : "Dipendenza da implementazione"
+note right of ServiceA : Accoppiamento stretto tra componenti
+@enduml
 ```
 
 ## Styling e Visualizzazione
@@ -484,32 +504,49 @@ cloud "External" EXTERNAL_COLOR
 ### Stereotipi e Icons
 
 ```plantuml
-component "<<service>>" as Service1
-component "<<repository>>" as Repo1
-component "<<controller>>" as Controller1
-component "<<external>>" as External1
-
-Service1 #lightgreen
-Repo1 #lightyellow
-Controller1 #lightblue
-External1 #lightcoral
+component "<<service>>" as Service1 #lightgreen
+component "<<repository>>" as Repo1 #lightyellow
+component "<<controller>>" as Controller1 #lightblue
+component "<<external>>" as External1 #lightcoral
 ```
 
 ### Layout e Organizzazione
 
+#### Disposizione a livelli
 ```plantuml
-' Disposizione a livelli
+@startuml
+title Layout: Disposizione a livelli
 top to bottom direction
+component A
+component B
+A --> B
+note right of B : Flusso verticale tra componenti
+@enduml
+```
 
-' Evidenziare flusso principale
-component A --> B #red;line.bold
-component B --> C #blue;line.dashed
+#### Evidenziare flusso principale
+```plantuml
+@startuml
+title Layout: Evidenziare flusso principale
+component A
+component B
+component C
+A --> B #red;line.bold
+B --> C #blue;line.dashed
+note right of C : Evidenziazione del flusso principale
+@enduml
+```
 
-' Raggruppare componenti correlati
+#### Raggruppare componenti correlati
+```plantuml
+@startuml
+title Layout: Raggruppare componenti correlati
 together {
   component "Service A"
   component "Service B"
 }
+'note right of Service B : Raggruppamento logico di componenti
+@enduml
 ```
 
 ## Esempi per Dominio
@@ -518,7 +555,6 @@ together {
 
 ```plantuml
 @startuml
-!theme blueprint
 title E-commerce Platform - Component Architecture
 
 package "Frontend Applications" #E3F2FD {
@@ -616,7 +652,6 @@ AllServices --> Monitoring
 
 ```plantuml
 @startuml
-!theme blueprint
 title Banking System - Component Architecture
 
 package "Customer Channels" #E3F2FD {
@@ -724,7 +759,6 @@ AllServices --> Monitoring
 
 ```plantuml
 @startuml
-!theme blueprint
 title Healthcare Management System
 
 package "Patient Portals" #E3F2FD {

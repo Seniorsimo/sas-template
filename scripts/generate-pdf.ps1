@@ -14,21 +14,16 @@
 #
 # I diagrammi PlantUML sono abilitati per default.
 # Per disabilitarli: .\generate-pdf.ps1 -WithDiagrams:$false
-# La pre-elaborazione parallela migliora le performance su progetti grandi
-# Per specificare numero di worker: .\generate-pdf.ps1 -MaxWorkers 4
 
 param(
     [string]$OutputPath = ".\documentation.pdf",
     [string]$Title = "Enterprise Software Documentation Template",
     [switch]$WithDiagrams,
-    [switch]$Verbose,
-    [switch]$ParallelDiagrams,
-    [int]$MaxWorkers = 0
+    [switch]$Verbose
 )
 
 # Default values for switches
 if (-not $PSBoundParameters.ContainsKey('WithDiagrams')) { $WithDiagrams = $true }
-if (-not $PSBoundParameters.ContainsKey('ParallelDiagrams')) { $ParallelDiagrams = $true }
 
 Write-Host "Generazione PDF Documentazione Template Enterprise" -ForegroundColor Green
 Write-Host "=================================================" -ForegroundColor Green
@@ -92,123 +87,8 @@ if ($WithDiagrams) {
     }
 }
 
-# Configurazione parallelizzazione
-if ($MaxWorkers -eq 0) {
-    $MaxWorkers = [Environment]::ProcessorCount
-    if ($MaxWorkers -gt 8) { $MaxWorkers = 8 } # Limite massimo ragionevole
-}
-
-if ($ParallelDiagrams -and $WithDiagrams) {
-    Write-Host "Elaborazione parallela abilitata con $MaxWorkers worker" -ForegroundColor Cyan
-    $env:PLANTUML_MAX_WORKERS = $MaxWorkers.ToString()
-} else {
-    Write-Host "Elaborazione sequenziale" -ForegroundColor Cyan
-}
-
-# Funzione per pre-processare i diagrammi PlantUML se richiesto
-function Invoke-ParallelPlantUMLPreprocessing {
-    param(
-        [string[]]$PumlFiles,
-        [string]$PlantUMLCommand,
-        [int]$Workers = 4
-    )
-    
-    if (-not $PumlFiles -or $PumlFiles.Count -eq 0) {
-        return
-    }
-    
-    Write-Host "Pre-elaborazione parallela di $($PumlFiles.Count) diagrammi PlantUML..." -ForegroundColor Cyan
-    
-    # Crea directory cache se non esiste
-    $cacheDir = Join-Path $PWD ".plantuml_cache"
-    if (-not (Test-Path $cacheDir)) {
-        New-Item -ItemType Directory -Path $cacheDir -Force | Out-Null
-    }
-    
-    # Elabora i diagrammi in parallelo usando PowerShell Jobs
-    $jobs = @()
-    $batchSize = [Math]::Ceiling($PumlFiles.Count / $Workers)
-    
-    for ($i = 0; $i -lt $Workers; $i++) {
-        $start = $i * $batchSize
-        $end = [Math]::Min($start + $batchSize - 1, $PumlFiles.Count - 1)
-        
-        if ($start -le $end) {
-            $fileBatch = $PumlFiles[$start..$end]
-            
-            $job = Start-Job -ScriptBlock {
-                param($files, $plantumlCmd, $cacheDir, $workerId)
-                
-                $processed = 0
-                $cached = 0
-                $failed = 0
-                
-                foreach ($file in $files) {
-                    try {
-                        $content = Get-Content $file -Raw -Encoding UTF8
-                        $hash = [System.Security.Cryptography.MD5]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($content))
-                        $hashString = [System.BitConverter]::ToString($hash) -replace '-'
-                        
-                        $cacheFile = Join-Path $cacheDir "$hashString.png"
-                        
-                        if (Test-Path $cacheFile) {
-                            $cached++
-                            continue
-                        }
-                        
-                        # Genera PNG temporaneo
-                        $tempPng = [System.IO.Path]::ChangeExtension($file, '.png')
-                        
-                        if ($plantumlCmd -like "*java*") {
-                            $cmdArgs = $plantumlCmd.Split(' ') + @('-tpng', '-charset', 'UTF-8', '-quiet', $file)
-                            & $cmdArgs[0] $cmdArgs[1..($cmdArgs.Length-1)]
-                        } else {
-                            & $plantumlCmd -tpng -charset UTF-8 -quiet $file
-                        }
-                        
-                        if (Test-Path $tempPng) {
-                            # Sposta nella cache
-                            Move-Item $tempPng $cacheFile -Force
-                            $processed++
-                        } else {
-                            $failed++
-                        }
-                        
-                    } catch {
-                        $failed++
-                    }
-                }
-                
-                return @{
-                    WorkerId = $workerId
-                    Processed = $processed
-                    Cached = $cached
-                    Failed = $failed
-                }
-            } -ArgumentList $fileBatch, $plantumlCommand, $cacheDir, ($i + 1)
-            
-            $jobs += $job
-        }
-    }
-    
-    # Attendi completamento e raccogli statistiche
-    $totalProcessed = 0
-    $totalCached = 0
-    $totalFailed = 0
-    
-    foreach ($job in $jobs) {
-        $result = Receive-Job -Job $job -Wait
-        Remove-Job -Job $job
-        
-        $totalProcessed += $result.Processed
-        $totalCached += $result.Cached
-        $totalFailed += $result.Failed
-        
-        Write-Host "  Worker $($result.WorkerId): $($result.Processed) generati, $($result.Cached) cache, $($result.Failed) errori" -ForegroundColor Gray
-    }
-    
-    Write-Host "Pre-elaborazione completata: $totalProcessed generati, $totalCached da cache, $totalFailed errori" -ForegroundColor Green
-}
+# Configurazione elaborazione diagrammi
+Write-Host "Elaborazione diagrammi PlantUML standard" -ForegroundColor Cyan
 
 # Genera ordine dei file dinamicamente
 Write-Host "Scansione struttura progetto..." -ForegroundColor Cyan
@@ -277,14 +157,6 @@ $fileOrder = Get-SortedFiles -files $allFiles
 Write-Host "File da includere nel PDF:" -ForegroundColor Cyan
 foreach ($file in $fileOrder) {
     Write-Host "  $file" -ForegroundColor Gray
-}
-
-# Pre-elaborazione parallela dei diagrammi PlantUML se abilitata
-if ($ParallelDiagrams -and $WithDiagrams -and $plantumlAvailable) {
-    $pumlFilesOnly = $allPumlFiles | ForEach-Object { Join-Path $PWD $_ }
-    if ($pumlFilesOnly.Count -gt 0) {
-        Invoke-ParallelPlantUMLPreprocessing -PumlFiles $pumlFilesOnly -PlantUMLCommand $plantumlCommand -Workers $MaxWorkers
-    }
 }
 
 # Crea file temporaneo combinato
@@ -358,7 +230,7 @@ foreach ($file in $fileOrder) {
             
             # Migliora il posizionamento dei diagrammi PlantUML embedded nei file MD
             # Usa una singola regex per estrarre e ricomporre con comandi LaTeX
-            $content = $content -replace '(?s)```plantuml(.*?)```', "`n`n---`n`n``````{=latex}`n\begin{center}`n```````n`n``````plantuml`$1```````n`n``````{=latex}`n\end{center}`n```````n`n---`n`n"
+            $content = $content -replace '(?s)```plantuml(.*?)```', "`n``````{=latex}`n\begin{center}`n```````n`n``````plantuml`$1```````n`n``````{=latex}`n\end{center}`n```````n"
             
             # Per TUTTI i file .md, non aggiungere titolo aggiuntivo, solo newpage
             $combinedContent += "`n\newpage`n"
@@ -389,27 +261,36 @@ foreach ($file in $fileOrder) {
             # Gestione file PlantUML
             $content = Get-Content $fullPath -Raw -Encoding UTF8
             
-            # Aggiungi descrizione del diagramma
-            $relativePath = $file -replace "\\", "/"
-            $combinedContent += "`n**Diagramma PlantUML:** ``$relativePath```n`n"
+            # Validazione contenuto PlantUML
+            try {
+                if ($content -match '@startuml' -and $content -match '@enduml') {
+                    Write-Host "    Sintassi PlantUML valida" -ForegroundColor Green
+                } else {
+                    Write-Host "    Possibile problema sintassi PlantUML (mancano @startuml/@enduml)" -ForegroundColor Yellow
+                }
+                
+                # Controlla per sintassi problematiche comuni
+                if ($content -match '[^\x00-\x7F]') {
+                    Write-Host "    Caratteri non-ASCII rilevati nel diagramma" -ForegroundColor Yellow
+                }
+                
+                if ($content -match '!include|!theme') {
+                    Write-Host "    Include/theme esterni rilevati" -ForegroundColor Cyan
+                }
+                
+            } catch {
+                Write-Host "    Errore nella lettura del file PlantUML: $($_.Exception.Message)" -ForegroundColor Red
+            }
             
-            # Aggiungi separatori e padding per evitare problemi di posizionamento
-            $combinedContent += "---`n`n"
+            # Aggiungi descrizione del diagramma
+            #$relativePath = $file -replace "\\", "/"
+            #$combinedContent += "`n**Diagramma PlantUML:** ``$relativePath```n`n"
             
             # Aggiungi il contenuto PlantUML con wrapping LaTeX per centratura
-            $combinedContent += "`n"
-            $combinedContent += "``````{=latex}`n"
-            $combinedContent += "\begin{center}`n"
-            $combinedContent += "```````n`n"
-            $combinedContent += "``````plantuml`n"
+            $combinedContent += "``````{=latex}`n\begin{center}`n```````n`n``````plantuml"
             $combinedContent += $content
-            $combinedContent += "`n```````n`n"
-            $combinedContent += "``````{=latex}`n"
-            $combinedContent += "\end{center}`n"
-            $combinedContent += "```````n`n"
+            $combinedContent += "```````n`n``````{=latex}`n\end{center}`n```````n`n"
             
-            # Aggiungi padding finale per separare dal contenuto successivo
-            $combinedContent += "---`n`n"
         }
         
     } else {
@@ -433,6 +314,24 @@ try {
     if ($testContent.Length -eq 0) {
         Write-Host "Errore: Il file temporaneo è vuoto" -ForegroundColor Red
         exit 1
+    }
+    
+    # Analisi contenuto per statistiche pre-generazione
+    $totalLines = ($testContent -split "`n").Count
+    $diagramBlocks = ([regex]::Matches($testContent, '```plantuml')).Count
+    $markdownFiles = ([regex]::Matches($testContent, '\\newpage')).Count
+    
+    Write-Host "`nStatistiche documento combinato:" -ForegroundColor Cyan
+    Write-Host "- Righe totali: $totalLines" -ForegroundColor Gray
+    Write-Host "- Sezioni (newpage): $markdownFiles" -ForegroundColor Gray
+    Write-Host "- Blocchi diagrammi PlantUML: $diagramBlocks" -ForegroundColor Gray
+    
+    if ($diagramBlocks -gt 0 -and $WithDiagrams) {
+        Write-Host "Diagrammi PlantUML pronti per il rendering" -ForegroundColor Green
+    } elseif ($diagramBlocks -gt 0 -and -not $WithDiagrams) {
+        Write-Host "Diagrammi trovati ma rendering disabilitato (-WithDiagrams:$false)" -ForegroundColor Yellow
+    } elseif ($diagramBlocks -eq 0) {
+        Write-Host "Nessun diagramma PlantUML trovato" -ForegroundColor Cyan
     }
     
     # Riscrive il file per assicurarsi che sia UTF-8 senza BOM
@@ -482,30 +381,38 @@ if ($WithDiagrams -and $plantumlAvailable) {
             if ($filter -like "*.bat") {
                 # Test del file batch
                 if (Test-Path $filter) {
-                    Write-Host "Utilizzando file batch: $filter" -ForegroundColor Green
+                    Write-Host "File batch trovato: $filter" -ForegroundColor Green
                     $pandocArgs += "--filter", $filter
                     $filterFound = $true
                     break
+                } else {
+                    Write-Host "File batch non trovato: $filter" -ForegroundColor Red
                 }
             } else {
                 # Test dei filtri standard
                 $command = Get-Command ($filter -split ' ')[0] -ErrorAction SilentlyContinue
                 if ($command) {
-                    Write-Host "Utilizzando filtro: $filter" -ForegroundColor Green
+                    Write-Host "Filtro trovato: $filter - Path: $($command.Source)" -ForegroundColor Green
                     $pandocArgs += "--filter", $filter
                     $filterFound = $true
                     break
+                } else {
+                    Write-Host "Filtro non trovato: $filter" -ForegroundColor Red
                 }
             }
         } catch {
-            Write-Host "Filtro $filter non disponibile" -ForegroundColor Gray
+            Write-Host "Errore test filtro $filter`: $($_.Exception.Message)" -ForegroundColor Red
             continue
         }
     }
     
     if (-not $filterFound) {
-        Write-Host "Nessun filtro PlantUML trovato, continuando senza rendering diagrammi..." -ForegroundColor Yellow
+        Write-Host "`nATTENZIONE: Nessun filtro PlantUML trovato!" -ForegroundColor Yellow
         Write-Host "I blocchi plantuml verranno mostrati come codice nel PDF" -ForegroundColor Yellow
+        Write-Host "`nPer installare un filtro:" -ForegroundColor Cyan
+        Write-Host "- pip install pandoc-plantuml-filter" -ForegroundColor Cyan
+        Write-Host "- oppure pip install pandoc-plantuml" -ForegroundColor Cyan
+        Write-Host "- assicurati che PlantUML sia installato e accessibile" -ForegroundColor Cyan
     } else {
         # Aggiungi parametri aggiuntivi per gestire encoding UTF-8
         $pandocArgs += "--metadata", "lang=it"
@@ -522,20 +429,34 @@ if ($Verbose) {
 Write-Host "Generazione PDF in corso..." -ForegroundColor Cyan
 Write-Host "Output: $OutputPath" -ForegroundColor Cyan
 
+# Mostra il comando Pandoc completo se richiesto il verbose
+if ($Verbose) {
+    Write-Host "Comando Pandoc:" -ForegroundColor Gray
+    Write-Host "pandoc $($pandocArgs -join ' ')" -ForegroundColor Gray
+}
+
 try {
-    & pandoc @pandocArgs
+    # Cattura stderr per errori più dettagliati
+    $pandocOutput = & pandoc @pandocArgs 2>&1
     
     if ($LASTEXITCODE -eq 0) {
         Write-Host "PDF generato con successo!" -ForegroundColor Green
         Write-Host "Posizione: $(Resolve-Path $OutputPath)" -ForegroundColor Green
         
+        # Mostra warning se ci sono stati problemi non fatali
+        if ($pandocOutput) {
+            $warnings = $pandocOutput | Where-Object { $_ -match "warning|attenzione" }
+            if ($warnings) {
+                Write-Host "`nWarning durante la generazione:" -ForegroundColor Yellow
+                foreach ($warning in $warnings) {
+                    Write-Host "  $warning" -ForegroundColor Yellow
+                }
+            }
+        }
+        
         # Statistiche di generazione
         if ($WithDiagrams -and $plantumlAvailable) {
-            if ($ParallelDiagrams) {
-                Write-Host "Diagrammi PlantUML inclusi nel PDF (elaborazione parallela con $MaxWorkers worker)" -ForegroundColor Green
-            } else {
-                Write-Host "Diagrammi PlantUML inclusi nel PDF (elaborazione sequenziale)" -ForegroundColor Green
-            }
+            Write-Host "Diagrammi PlantUML inclusi nel PDF" -ForegroundColor Green
         } elseif ($WithDiagrams -and -not $plantumlAvailable) {
             Write-Host "ATTENZIONE: Diagrammi PlantUML non renderizzati (PlantUML non disponibile)" -ForegroundColor Yellow
         } else {
@@ -543,7 +464,7 @@ try {
         }
         
         # Cleanup
-        Remove-Item $tempFile -Force
+        #Remove-Item $tempFile -Force
         
         # Apri PDF se richiesto
         $openPdf = Read-Host "Aprire il PDF generato? (y/n)"
@@ -551,15 +472,67 @@ try {
             Start-Process $OutputPath
         }
     } else {
-        throw "Pandoc ha restituito codice di errore: $LASTEXITCODE"
+        # Gestione errori dettagliata
+        Write-Host "Pandoc ha fallito con codice di errore: $LASTEXITCODE" -ForegroundColor Red
+        
+        if ($pandocOutput) {
+            Write-Host "`nDettagli errore Pandoc:" -ForegroundColor Red
+            foreach ($line in $pandocOutput) {
+                if ($line -match "plantuml|diagram") {
+                    Write-Host "  DIAGRAMMA: $line" -ForegroundColor Magenta
+                } elseif ($line -match "error|failed|cannot") {
+                    Write-Host "  ERRORE: $line" -ForegroundColor Red
+                } elseif ($line -match "warning") {
+                    Write-Host "  WARNING: $line" -ForegroundColor Yellow
+                } else {
+                    Write-Host "  $line" -ForegroundColor Gray
+                }
+            }
+        }
+        
+        # Suggerimenti per la risoluzione
+        Write-Host "`nSuggerimenti per la risoluzione:" -ForegroundColor Cyan
+        Write-Host "1. Controlla la sintassi dei diagrammi PlantUML nel file temporaneo" -ForegroundColor Cyan
+        Write-Host "2. Verifica che tutti i filtri Pandoc siano installati correttamente" -ForegroundColor Cyan
+        Write-Host "3. Prova a eseguire con -Verbose per maggiori dettagli" -ForegroundColor Cyan
+        Write-Host "4. Controlla i log di sistema per errori LaTeX" -ForegroundColor Cyan
+        
+        throw "Generazione PDF fallita"
     }
     
 } catch {
-    Write-Host "Errore durante la generazione PDF:" -ForegroundColor Red
-    Write-Host $_.Exception.Message -ForegroundColor Red
+    Write-Host "`nErrore durante la generazione PDF:" -ForegroundColor Red
+    Write-Host "Messaggio: $($_.Exception.Message)" -ForegroundColor Red
     
-    Write-Host "File temporaneo mantenuto per debug: $tempFile" -ForegroundColor Yellow
-    Write-Host "Controlla il contenuto del file per risolvere il problema." -ForegroundColor Yellow
+    # Informazioni aggiuntive per il debug
+    Write-Host "`nInformazioni debug:" -ForegroundColor Yellow
+    Write-Host "- File temporaneo: $tempFile" -ForegroundColor Yellow
+    Write-Host "- Directory lavoro: $PWD" -ForegroundColor Yellow
+    Write-Host "- Output destinazione: $OutputPath" -ForegroundColor Yellow
+    
+    # Verifica stato del file temporaneo
+    if (Test-Path $tempFile) {
+        $tempSize = (Get-Item $tempFile).Length
+        Write-Host "- File temporaneo: OK - $tempSize bytes" -ForegroundColor Yellow
+    } else {
+        Write-Host "- File temporaneo: MANCANTE!" -ForegroundColor Red
+    }
+    
+    # Verifica presenza diagrammi nel file temporaneo
+    if (Test-Path $tempFile) {
+        $tempContent = Get-Content $tempFile -Raw -ErrorAction SilentlyContinue
+        if ($tempContent -match '```plantuml') {
+            $diagramCount = ([regex]::Matches($tempContent, '```plantuml')).Count
+            Write-Host "- Diagrammi PlantUML trovati: $diagramCount" -ForegroundColor Yellow
+        } else {
+            Write-Host "- Nessun diagramma PlantUML trovato nel file combinato" -ForegroundColor Yellow
+        }
+    }
+    
+    Write-Host "`nPer il debug, controlla:" -ForegroundColor Cyan
+    Write-Host "1. Contenuto del file: $tempFile" -ForegroundColor Cyan
+    Write-Host "2. Installa/aggiorna: pandoc-plantuml-filter" -ForegroundColor Cyan
+    Write-Host "3. Verifica installazione PlantUML e Java" -ForegroundColor Cyan
     
     exit 1
 }

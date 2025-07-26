@@ -114,8 +114,6 @@ ClassA "1" -- "exactly 3" ClassB
 
 ```plantuml
 @startuml
-!theme blueprint
-
 class Customer {
   -customerId : Long
   -firstName : String
@@ -170,7 +168,6 @@ note right of Order : Vincoli:\n- totalAmount >= 0\n- orderDate <= today
 
 ```plantuml
 @startuml
-!theme blueprint
 title Layered Architecture Pattern
 
 package "Presentation Layer" #E3F2FD {
@@ -236,7 +233,6 @@ OrderService ..> Order
 
 ```plantuml
 @startuml
-!theme blueprint
 title Model-View-Controller Pattern
 
 package "View" #E3F2FD {
@@ -298,7 +294,6 @@ UserModel o-- User
 
 ```plantuml
 @startuml
-!theme blueprint
 title Repository Pattern
 
 interface Repository<T> {
@@ -351,7 +346,6 @@ UserService ..> UserRepository
 
 ```plantuml
 @startuml
-!theme blueprint
 title Factory Pattern
 
 abstract class PaymentProcessor {
@@ -540,7 +534,6 @@ class C
 
 ```plantuml
 @startuml
-!theme blueprint
 title E-commerce Domain Model
 
 class Customer {
@@ -649,7 +642,6 @@ Order -- OrderStatus
 
 ```plantuml
 @startuml
-!theme blueprint
 title Banking System Class Diagram
 
 abstract class Account {
@@ -766,7 +758,6 @@ Transaction -- TransactionType
 
 ```plantuml
 @startuml
-!theme blueprint
 title Hospital Management System
 
 abstract class Person {
@@ -916,11 +907,11 @@ User Stories:
 ### Design Patterns Integration
 
 ```plantuml
-note top of OrderService : Implementa Service Pattern\nPer centralizzare business logic
+note right of OrderService : Implementa Service Pattern\nPer centralizzare business logic
 
 note right of PaymentGateway : Strategy Pattern\nPer multiple payment methods
 
-note left of UserRepository : Repository Pattern\nPer astrazione data access
+note right of UserRepository : Repository Pattern\nPer astrazione data access
 ```
 
 ### Code Generation

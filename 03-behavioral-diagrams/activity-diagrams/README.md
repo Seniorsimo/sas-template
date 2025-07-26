@@ -118,7 +118,6 @@ endif
 
 ```plantuml
 @startuml
-!theme blueprint
 title Processo di Approvazione Lineare
 
 start
@@ -139,7 +138,6 @@ end
 ### Pattern con Parallelismo
 ```plantuml
 @startuml
-!theme blueprint
 title Processo di Elaborazione Parallela
 
 start
@@ -167,7 +165,6 @@ end
 
 ```plantuml
 @startuml
-!theme blueprint
 title Processo con Iterazione
 
 start
@@ -186,7 +183,6 @@ end
 
 ```plantuml
 @startuml
-!theme blueprint
 title Processo Cross-Funzionale
 
 |#AntiqueWhite|Cliente|
@@ -312,7 +308,6 @@ left to right direction
 
 ```plantuml
 @startuml
-!theme blueprint
 title E-commerce - Processo di Checkout
 
 |#E3F2FD|Cliente|
@@ -361,7 +356,6 @@ end
 
 ```plantuml
 @startuml
-!theme blueprint
 title Sistema Bancario - Richiesta Prestito
 
 |#E3F2FD|Cliente|
@@ -407,7 +401,6 @@ end
 
 ```plantuml
 @startuml
-!theme blueprint
 title Manufacturing - Processo di Produzione
 
 |#E3F2FD|Vendite|
@@ -488,7 +481,10 @@ Use Case Diagrams:
 
 ```plantuml
 title Implementazione Use Case "Elabora Ordine"
-note top : Traccia a Use Case UC-002\nUser Story US-005
+note right 
+  Traccia a Use Case UC-002
+  User Story US-005
+end note
 
 start
 :Ricevi Richiesta Ordine;
@@ -540,7 +536,10 @@ end
 ### PlantUML Advanced Features
 
 ```plantuml
+@startuml
 ' Partition per raggruppamento
+start
+
 partition "Fase Preparazione" {
   :Setup Ambiente;
   :Carica Dati;
@@ -551,12 +550,13 @@ partition "Fase Elaborazione" {
   :Genera Output;
 }
 
-' Backward arrow
-:Attività A;
--> Errore;
-:Gestione Errore;
-<-- Retry;
-:Attività A;
+' Loop con retry
+repeat
+  :Attività con Possibile Errore;
+repeat while (Errore rilevato?) is (sì) not (no)
+
+end
+@enduml
 ```
 
 ### Integration con Modeling Tools
