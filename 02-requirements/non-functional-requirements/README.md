@@ -1,313 +1,122 @@
 # Requisiti Non-Funzionali
 
-Questa cartella contiene tutti i requisiti non-funzionali del sistema, organizzati per categoria di qualità.
-
 ## Panoramica
 
-I **Requisiti Non-Funzionali** definiscono le qualità del sistema: come deve performare, quanto deve essere sicuro, usabile, affidabile, etc. Questi requisiti sono spesso chiamati "ilities" e sono critici per il successo del sistema.
+I requisiti non-funzionali del [nome sistema] definiscono gli attributi di qualità e i vincoli del sistema. Questi requisiti determinano come il sistema dovrà operare piuttosto che cosa dovrà fare, e sono organizzati nelle seguenti categorie principali:
 
-## Struttura Organizzativa
+## Categorie di Qualità
 
-```
-non-functional-requirements/
-├── performance/
-│   ├── README.md                     (Requisiti di performance)
-│   ├── REQ-NF-PERF-001.md          (Tempo di risposta)
-│   └── REQ-NF-PERF-XXX.md          (Altri requisiti performance)
-├── security/
-│   ├── README.md                     (Requisiti di sicurezza)
-│   ├── REQ-NF-SEC-001.md           (Autenticazione)
-│   └── REQ-NF-SEC-XXX.md           (Altri requisiti security)
-├── usability/
-│   ├── README.md                     (Requisiti di usabilità)
-│   ├── REQ-NF-USA-001.md           (Accessibilità)
-│   └── REQ-NF-USA-XXX.md           (Altri requisiti usability)
-├── reliability/
-│   ├── README.md                     (Requisiti di affidabilità)
-│   ├── REQ-NF-REL-001.md           (Disponibilità)
-│   └── REQ-NF-REL-XXX.md           (Altri requisiti reliability)
-├── scalability/
-│   ├── README.md                     (Requisiti di scalabilità)
-│   ├── REQ-NF-SCAL-001.md          (Carico utenti)
-│   └── REQ-NF-SCAL-XXX.md          (Altri requisiti scalability)
-├── compatibility/
-│   ├── README.md                     (Requisiti di compatibilità)
-│   ├── REQ-NF-COMP-001.md          (Browser support)
-│   └── REQ-NF-COMP-XXX.md          (Altri requisiti compatibility)
-└── README.md                         (Questo file)
-```
-
-## Convenzioni di Naming
-
-### ID Requisiti per Categoria
-
-- **Performance**: `REQ-NF-PERF-XXX`
-- **Security**: `REQ-NF-SEC-XXX`
-- **Usability**: `REQ-NF-USA-XXX`
-- **Reliability**: `REQ-NF-REL-XXX`
-- **Scalability**: `REQ-NF-SCAL-XXX`
-- **Compatibility**: `REQ-NF-COMP-XXX`
-- **Maintainability**: `REQ-NF-MAINT-XXX`
-- **Portability**: `REQ-NF-PORT-XXX`
-
-### File Names
-
-`[ID]-[nome-breve].md`
-
-**Esempi**:
-
-- `REQ-NF-PERF-001-response-time.md`
-- `REQ-NF-SEC-001-authentication.md`
-- `REQ-NF-USA-001-accessibility.md`
-
-## Categorie Principali
+Il sistema [nome sistema] dovrà soddisfare i seguenti attributi di qualità:
 
 ### Performance
 
-Velocità, throughput, utilizzo risorse:
-
-- Tempo di risposta
-- Throughput (operazioni/secondo)
-- Utilizzo CPU/memoria
-- Capacità di carico
+[Descrivere le aspettative generali di performance del sistema, con focus su tempi di risposta, throughput e utilizzo delle risorse]
 
 ### Security
 
-Protezione dati e sistema:
-
-- Autenticazione e autorizzazione
-- Crittografia dati
-- Audit e logging
-- Protezione attacchi
+[Descrivere l'approccio alla sicurezza del sistema, includendo requisiti di autenticazione, autorizzazione, crittografia e protezione dei dati]
 
 ### Usability
 
-Facilità d'uso e user experience:
-
-- Accessibilità (WCAG)
-- User interface design
-- Learnability
-- User satisfaction
+[Descrivere le aspettative di usabilità, accessibilità e user experience del sistema]
 
 ### Reliability
 
-Affidabilità e disponibilità:
-
-- Uptime/disponibilità
-- MTBF (Mean Time Between Failures)
-- MTTR (Mean Time To Recovery)
-- Error handling
+[Descrivere i requisiti di affidabilità, disponibilità, disaster recovery e continuità operativa]
 
 ### Scalability
 
-Capacità di crescita:
-
-- Scalabilità orizzontale
-- Scalabilità verticale
-- Gestione del carico
-- Elasticità
+[Descrivere le aspettative di scalabilità del sistema in termini di crescita utenti, dati e carico]
 
 ### Compatibility
 
-Interoperabilità e compatibilità:
+[Descrivere i requisiti di compatibilità con altri sistemi, browser, dispositivi e standard]
 
-- Browser support
-- Sistema operativo
-- Versioni software
-- Standard e protocolli
+## Obiettivi di Qualità
 
-## Template Requisito Non-Funzionale
+La seguente tabella riassume gli obiettivi principali di qualità per il sistema [nome sistema]:
 
-```markdown
-# REQ-NF-[CAT]-XXX: [Titolo Requisito]
+| Attributo | Obiettivo | Metrica |
+|-----------|-----------|---------|
+| Performance | [Obiettivo] | [Metrica] |
+| Security | [Obiettivo] | [Metrica] |
+| Usability | [Obiettivo] | [Metrica] |
+| Reliability | [Obiettivo] | [Metrica] |
+| Scalability | [Obiettivo] | [Metrica] |
+| Compatibility | [Obiettivo] | [Metrica] |
 
-## Informazioni Generali
+## Requisiti Specifici
 
-**ID**: REQ-NF-[CAT]-XXX
-**Categoria**: [Performance|Security|Usability|etc.]
-**Priorità**: Critical | High | Medium | Low
-**Misurabilità**: Quantitative | Qualitative
+### Performance
 
-## Descrizione
+- [Lista dei principali requisiti di performance]
+- REQ-NF-PERF-001: [Nome requisito]
+- REQ-NF-PERF-002: [Nome requisito]
 
-[Cosa il sistema deve fare dal punto di vista qualitativo]
+### Security
 
-## Metriche e Target
+- [Lista dei principali requisiti di sicurezza]
+- REQ-NF-SEC-001: [Nome requisito]
+- REQ-NF-SEC-002: [Nome requisito]
 
-**Metrica**: [Come misurare]
-**Target Value**: [Valore obiettivo]
-**Acceptance Criteria**: [Criteri di accettazione]
+### Usability
 
-## Metodo di Verifica
+- [Lista dei principali requisiti di usabilità]
+- REQ-NF-USA-001: [Nome requisito]
+- REQ-NF-USA-002: [Nome requisito]
 
-[Come testare e validare questo requisito]
+### Reliability
+
+- [Lista dei principali requisiti di affidabilità]
+- REQ-NF-REL-001: [Nome requisito]
+- REQ-NF-REL-002: [Nome requisito]
+
+### Scalability
+
+- [Lista dei principali requisiti di scalabilità]
+- REQ-NF-SCAL-001: [Nome requisito]
+- REQ-NF-SCAL-002: [Nome requisito]
+
+### Compatibility
+
+- [Lista dei principali requisiti di compatibilità]
+- REQ-NF-COMP-001: [Nome requisito]
+- REQ-NF-COMP-002: [Nome requisito]
+
+## Impatto sul Business
+
+[Descrivere come questi requisiti non-funzionali si allineano agli obiettivi di business dell'organizzazione e quale impatto avranno sul successo del progetto]
+
+## Approccio di Implementazione
+
+[Delineare l'approccio generale per l'implementazione e il testing dei requisiti non-funzionali, includendo le tecnologie, strumenti e metodologie principali]
+
+## Responsabilità
+
+[Definire i ruoli e le responsabilità per la gestione, implementazione e verifica dei requisiti non-funzionali]
 
 ## Tracciabilità
 
-**Functional Requirements**: [REQ-F-XXX]
-**User Stories**: [US-XXX]
-```
+[Descrivere come questi requisiti saranno tracciati attraverso le fasi di design, implementazione e testing]
 
-## Prioritizzazione
+## Prioritizzazione e Pianificazione
 
-### Critical
+[Descrivere come i requisiti non-funzionali sono stati prioritizzati e come saranno integrati nella pianificazione del progetto]
 
-Requisiti senza i quali il sistema è inutilizzabile
+## Casi di Studio
 
-- Security essenziali
-- Performance critiche
-- Availability minimale
+### E-commerce
 
-### High
+[Descrivere esempi specifici di come questi requisiti non-funzionali si applicano in un contesto di e-commerce]
 
-Requisiti che impattano significativamente l'utente
+### Banking
 
-- User experience
-- Performance auspicate
-- Compatibility principale
+[Descrivere esempi specifici di come questi requisiti non-funzionali si applicano in un contesto bancario]
 
-### Medium
+### Healthcare
 
-Requisiti che migliorano la qualità
-
-- Usability avanzata
-- Performance ottimali
-- Maintainability
-
-### Low
-
-Requisiti nice-to-have
-
-- Features accessorie
-- Optimizations
-- Future compatibility
-
-## SMART Criteria
-
-I requisiti non-funzionali devono essere **SMART**:
-
-- **Specific**: Specificare esattamente cosa
-- **Measurable**: Quantificabile con metriche
-- **Achievable**: Raggiungibile tecnicamente
-- **Relevant**: Rilevante per il business
-- **Time-bound**: Con deadline chiare
-
-## Metodi di Verifica
-
-### Performance Testing
-
-- Load testing
-- Stress testing
-- Volume testing
-- Endurance testing
-
-### Security Testing
-
-- Penetration testing
-- Vulnerability scanning
-- Security code review
-- Compliance audit
-
-### Usability Testing
-
-- User testing sessions
-- Accessibility audit
-- UX review
-- A/B testing
-
-### Reliability Testing
-
-- Failure testing
-- Recovery testing
-- Availability monitoring
-- Chaos engineering
-
-## Quality Attributes Matrix
-
-| Quality Attribute | Importanza | Difficoltà | Priorità |
-|-------------------|------------|------------|----------|
-| Performance | High | Medium | High |
-| Security | Critical | High | Critical |
-| Usability | High | Low | High |
-| Reliability | High | Medium | High |
-| Scalability | Medium | High | Medium |
-
-## Tracciabilità NFR
-
-### Forward Traceability
-
-NFR → Architecture Decisions → Design Patterns → Implementation → Testing
-
-### Backward Traceability
-
-Business Goals → User Needs → Quality Attributes → NFR
-
-### Horizontal Traceability
-
-NFR ↔ Functional Requirements ↔ User Stories ↔ Test Cases
-
-## Best Practices
-
-### Do's
-
-- **Quantifica sempre** quando possibile
-- **Usa metriche standard** dell'industria
-- **Collega agli obiettivi** di business
-- **Pianifica testing specifico** per ogni NFR
-- **Considera trade-offs** tra qualità diverse
-
-### Don'ts
-
-- **Non essere vago** ("il sistema deve essere veloce")
-- **Non ignorare** le limitazioni tecniche
-- **Non dimenticare** il costo di implementazione
-- **Non sottovalutare** l'impatto su altri requisiti
-- **Non rimandare** la validazione
-
-## NFR Lifecycle
-
-### 1. Identification
-
-- Business analysis
-- Stakeholder interviews
-- Industry benchmarks
-- Regulatory requirements
-
-### 2. Specification
-
-- Quantitative definition
-- Acceptance criteria
-- Verification methods
-- Priority assignment
-
-### 3. Design & Architecture
-
-- Architecture decisions
-- Technology selection
-- Pattern implementation
-- Resource planning
-
-### 4. Implementation
-
-- Code implementation
-- Configuration setup
-- Environment preparation
-- Tool integration
-
-### 5. Verification
-
-- Testing execution
-- Measurement collection
-- Performance monitoring
-- Quality assessment
-
-### 6. Maintenance
-
-- Continuous monitoring
-- Performance tuning
-- Requirement updates
-- Improvement implementation
+[Descrivere esempi specifici di come questi requisiti non-funzionali si applicano in un contesto sanitario]
 
 ---
 
-*I requisiti non-funzionali sono spesso più difficili da implementare dei funzionali, ma sono quelli che determinano il successo o fallimento del sistema.*
+*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

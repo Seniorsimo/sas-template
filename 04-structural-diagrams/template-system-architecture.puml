@@ -2,6 +2,19 @@
 !theme plain
 title [Nome del Progetto] - Architettura di Sistema
 
+' ====================
+' SYSTEM ARCHITECTURE DIAGRAM TEMPLATE
+' ====================
+' 
+' Purpose: Rappresentare l'architettura generale del sistema e le interazioni tra i layer principali
+' Domain: [Dominio - es. E-commerce, Banking, Healthcare]
+' Last Updated: [Data]
+' Author: [Nome]
+'
+' Tracciabilità:
+' - Requirements: [REQ-XXX, REQ-YYY]
+' - User Stories: [US-XXX, US-YYY]
+
 ' Definizione degli stili per i diversi layer
 skinparam package {
     BackgroundColor<<frontend>> LightBlue

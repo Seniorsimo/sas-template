@@ -1,103 +1,64 @@
-# Core Features - Funzionalità Principali
+# Core Features - [Progetto]
 
-Questa cartella contiene i requisiti per le funzionalità core del sistema.
+## Panoramica delle Funzionalità Core
 
-## Panoramica
+[Fornire una panoramica generale delle funzionalità core implementate nel sistema. Descrivere il loro ruolo fondamentale e l'impatto sul business.]
 
-Le **Core Features** sono le funzionalità fondamentali senza le quali il sistema non può operare. Queste sono tipicamente classificate come "Must Have" nella prioritizzazione MoSCoW.
+## Componenti Principali
 
-## Categorie di Core Features
+### [Componente Core 1 - es. Autenticazione e Autorizzazione]
 
-### Autenticazione e Autorizzazione
+[Descrizione del componente e del suo ruolo nel sistema]
 
-- Gestione login/logout utenti
-- Controllo accessi basato su ruoli
-- Gestione sessioni e token
-- Password policy e security
+- [Funzionalità 1.1]
+- [Funzionalità 1.2]
+- [Funzionalità 1.3]
 
-### Gestione Dati Principali
+### [Componente Core 2 - es. Gestione Dati Principali]
 
-- CRUD operations per entità core
-- Validazione dati
-- Business rules enforcement
-- Data consistency
+[Descrizione del componente e del suo ruolo nel sistema]
 
-### Business Logic Core
+- [Funzionalità 2.1]
+- [Funzionalità 2.2]
+- [Funzionalità 2.3]
 
-- Processi business principali
-- Workflow automation
-- Calcoli e algoritmi core
-- State management
+### [Componente Core 3 - es. Business Logic Core]
 
-### Reporting e Analytics
+[Descrizione del componente e del suo ruolo nel sistema]
 
-- Report standard
-- Dashboard principali
-- Export dati
-- Audit logging
+- [Funzionalità 3.1]
+- [Funzionalità 3.2]
+- [Funzionalità 3.3]
 
-## Struttura File
+## Mappatura dei Requisiti
 
-### Template Naming
+| ID Requisito | Titolo | Priorità | Stato | Stakeholder |
+|--------------|--------|----------|-------|------------|
+| REQ-F-001    | [Nome Requisito] | [Must/Should] | [Status] | [Owner] |
+| REQ-F-002    | [Nome Requisito] | [Must/Should] | [Status] | [Owner] |
+| REQ-F-003    | [Nome Requisito] | [Must/Should] | [Status] | [Owner] |
 
-`REQ-F-XXX-[nome-funzionalità].md`
+## Dipendenze e Integrazione
 
-### Esempi
+[Descrivere come le funzionalità core si integrano con altri sistemi o componenti]
 
-- `REQ-F-001-user-authentication.md`
-- `REQ-F-002-role-management.md`
-- `REQ-F-003-data-validation.md`
+## Esempi di Implementazione
 
-## Priorità Core Features
+### E-commerce
 
-### Livello 1 - Sistema Base
+[Esempio di implementazione delle core features in un contesto e-commerce]
 
-- [ ] Autenticazione utenti
-- [ ] Autorizzazione base
-- [ ] Gestione sessioni
-- [ ] Logging sistema
+### Banking
 
-### Livello 2 - Business Logic
+[Esempio di implementazione delle core features in un contesto banking]
 
-- [ ] Funzionalità business principali
-- [ ] Workflow core
-- [ ] Validazioni business
-- [ ] Notifiche base
+### Healthcare
 
-### Livello 3 - Features Avanzate
+[Esempio di implementazione delle core features in un contesto healthcare]
 
-- [ ] Reporting
-- [ ] Analytics base
-- [ ] Export/Import
-- [ ] Configurazioni sistema
+## Considerazioni Tecniche
 
-## Collegamenti
-
-### User Stories Principali
-
-Le core features sono tipicamente derivate dalle user stories ad alta priorità dell'epic principale del progetto.
-
-### Architettura
-
-Le core features definiscono i componenti principali dell'architettura del sistema.
-
-### Database
-
-Le core features determinano le entità principali del modello dati.
-
-## Linee Guida
-
-### Criteri per Core Features
-
-- **Essenziale**: Il sistema non può funzionare senza
-- **Frequente**: Utilizzato dalla maggioranza degli utenti
-- **Fondante**: Base per altre funzionalità
-- **MVP**: Incluso nel Minimum Viable Product
-
-### Quality Gates
-
-- Tutti i requisiti core devono essere "Must Have"
-- Copertura test >= 95%
+[Riassumere eventuali decisioni tecniche significative o vincoli relativi alle funzionalità core]
 - Performance requirements stringenti
 - Security requirements obbligatori
 

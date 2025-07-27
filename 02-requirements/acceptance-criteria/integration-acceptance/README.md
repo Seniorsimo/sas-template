@@ -1,52 +1,16 @@
-# Integration Acceptance Criteria
+# Criteri di Accettazione per l'Integrazione
 
-Questa cartella contiene i criteri di accettazione per validare l'integrazione tra sistemi, servizi o componenti del software.
+## Panoramica delle Integrazioni
 
-## Scopo degli Integration Acceptance Criteria
+[Fornire una panoramica delle integrazioni implementate nel progetto [NOME PROGETTO], descrivendo l'architettura di integrazione generale e gli approcci adottati.]
 
-Gli **Integration Acceptance Criteria** servono per:
+## Principali Punti di Integrazione
 
-- Verificare comunicazione corretta tra sistemi
-- Validare scambio dati tra componenti
-- Testare API e servizi web
-- Confermare integrazione con sistemi esterni e legacy
+[Elencare i principali punti di integrazione nel sistema, raggruppati per tipo di integrazione.]
 
-## Tipologie di Integrazioni
+### API Integrations
 
-### API Integration
-
-- **REST APIs**: HTTP/HTTPS endpoints
-- **GraphQL**: Query e mutation APIs
-- **SOAP Services**: Web services legacy
-- **WebSocket**: Real-time communication
-- **gRPC**: High-performance RPC
-
-### Data Integration
-
-- **Database Integration**: Cross-database queries
-- **File Transfer**: Batch file processing
-- **Message Queues**: Async messaging (SQS, RabbitMQ)
-- **Event Streaming**: Kafka, Event Hub
-- **ETL Processes**: Extract, Transform, Load
-
-### System Integration
-
-- **Microservices**: Service-to-service communication
-- **Legacy Systems**: Mainframe, AS400 integration
-- **Cloud Services**: AWS, Azure, GCP services
-- **Third-party APIs**: Payment, authentication, maps
-- **Enterprise Systems**: ERP, CRM, HR systems
-
-### UI Integration
-
-- **Single Sign-On**: SSO implementations
-- **Embedded Widgets**: Third-party components
-- **iFrame Integration**: Cross-domain embedding
-- **Mobile Deep Links**: App-to-app integration
-
-## Come Utilizzare il Template
-
-### 1. Identifica il Tipo di Integrazione
+[Descrivere le principali API integrate nel sistema, sia esposte che consumate, con informazioni sul loro scopo e stato attuale.]
 
 ```bash
 # API Integration
@@ -84,56 +48,39 @@ AC-I-EXT-001-maps-service.md
 Given il sistema destinazione è disponibile
 When invio una richiesta sincronoa
 Then ricevo una risposta entro X secondi
-And la risposta contiene i dati attesi
-```
+### Data Integrations
 
-### Asynchronous Integration
+[Descrivere le integrazioni a livello di dati implementate nel sistema, inclusi database, ETL, message queues e altri meccanismi di scambio dati.]
 
-```gherkin
-Given il message broker è operativo
-When pubblico un messaggio nella queue
-Then il messaggio viene processato
-And ricevo un acknowledgment
-And il consumer processa il messaggio
-```
+### System Integrations
 
-### Batch Integration
+[Descrivere le integrazioni con sistemi esterni, inclusi sistemi legacy, servizi cloud, o altri sistemi enterprise.]
 
-```gherkin
-Given ho un file batch da processare
-When avvio il processo di import
-Then tutti i record validi sono processati
-And i record invalidi sono loggati
-And viene generato un report di completamento
-```
+### UI Integrations
 
-### Event-Driven Integration
+[Descrivere eventuali integrazioni a livello di interfaccia utente, come SSO, embedded widgets o altre forme di UI integration.]
 
-```gherkin
-Given il sistema è in ascolto per eventi
-When si verifica un evento di business
-Then l'evento viene pubblicato
-And tutti i subscriber ricevono l'evento
-And processano l'evento appropriatamente
-```
+## Matrice di Test di Integrazione
 
-## Test Scenarios Comuni
+[Fornire una matrice dei test di integrazione eseguiti, con relativi risultati e status.]
 
-### Connectivity Testing
+### API Testing Results
 
-```gherkin
-Scenario: Verifica connessione di base
-Given le credenziali sono configurate
-When testo la connettività
-Then la connessione è stabilita con successo
-And ricevo una risposta di health check
-```
+| API | Version | Test Criteria | Status | Last Tested | Issues |
+|-----|---------|--------------|--------|------------|--------|
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
 
-### Data Exchange Testing
+### Data Integration Testing Results
 
-```gherkin
-Scenario: Scambio dati corretto
-Given ho dati validi da trasmettere
+| Integration Point | Direction | Test Criteria | Status | Last Tested | Issues |
+|------------------|-----------|--------------|--------|------------|--------|
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
 When invio i dati al sistema esterno
 Then i dati sono trasmessi correttamente
 And ricevo conferma della ricezione
@@ -151,56 +98,38 @@ And l'errore viene loggato
 And viene attivata la logica di retry
 ```
 
-### Performance Testing
+## Problemi di Integrazione e Mitigazione
 
-```gherkin
-Scenario: Performance sotto carico
-Given sto inviando X richieste simultanee
-When eseguo il test di carico
-Then tutte le richieste sono processate entro Y secondi
-And il tasso di successo è ≥ Z%
-And non si verificano memory leaks
-```
+[Descrivere i principali problemi di integrazione riscontrati durante i test e le strategie di mitigazione adottate.]
 
-### Security Testing
+| Problema | Impatto | Risoluzione | Status |
+|---------|---------|------------|--------|
+| [Problema] | [High/Medium/Low] | [Descrizione soluzione] | [Resolved/Open/In Progress] |
+| [Problema] | [High/Medium/Low] | [Descrizione soluzione] | [Resolved/Open/In Progress] |
+| [Problema] | [High/Medium/Low] | [Descrizione soluzione] | [Resolved/Open/In Progress] |
+| [Problema] | [High/Medium/Low] | [Descrizione soluzione] | [Resolved/Open/In Progress] |
 
-```gherkin
-Scenario: Autenticazione sicura
-Given ho credenziali valide
-When mi autentico con il sistema esterno
-Then l'autenticazione ha successo
-And ricevo un token valido
-And il token ha scadenza appropriata
-```
+## Metriche di Integrazione
 
-## Quality Gates per Integration
+### Performance delle Integrazioni
 
-### Functional Quality
+[Fornire le metriche chiave di performance per le integrazioni principali del sistema.]
 
-- [ ] **Data Integrity**: Dati trasmessi senza corruzioni
-- [ ] **Protocol Compliance**: Aderenza a standard protocollari
-- [ ] **Error Handling**: Gestione appropriata di tutti gli errori
-- [ ] **State Management**: Gestione corretta stati transazione
+| Integration Point | Avg Response Time | 95% Response Time | Throughput | Error Rate | SLA Status |
+|------------------|------------------|-------------------|-----------|-----------|-----------|
+| [Integration] | [Time] | [Time] | [Requests/s] | [%] | [Met/Not Met] |
+| [Integration] | [Time] | [Time] | [Requests/s] | [%] | [Met/Not Met] |
+| [Integration] | [Time] | [Time] | [Requests/s] | [%] | [Met/Not Met] |
 
-### Performance Quality
+### Affidabilità delle Integrazioni
 
-- [ ] **Response Time**: Entro SLA definiti
-- [ ] **Throughput**: Volume transazioni richiesto
-- [ ] **Concurrency**: Gestione richieste simultanee
-- [ ] **Resource Usage**: Utilizzo efficiente risorse
+[Fornire le metriche di affidabilità per le integrazioni principali del sistema.]
 
-### Security Quality
-
-- [ ] **Authentication**: Meccanismi auth implementati
-- [ ] **Authorization**: Controlli accesso funzionanti
-- [ ] **Data Protection**: Dati sensibili protetti
-- [ ] **Audit Logging**: Tutte le operazioni loggate
-
-### Reliability Quality
-
-- [ ] **Fault Tolerance**: Resilienza a failure
-- [ ] **Recovery**: Capacità di recovery da errori
-- [ ] **Monitoring**: Osservabilità completa
+| Integration Point | Uptime | MTBF | MTTR | Failure Rate | Retry Rate |
+|------------------|--------|------|------|-------------|-----------|
+| [Integration] | [%] | [Time] | [Time] | [%] | [%] |
+| [Integration] | [%] | [Time] | [Time] | [%] | [%] |
+| [Integration] | [%] | [Time] | [Time] | [%] | [%] |
 - [ ] **Alerting**: Notifiche per anomalie
 
 ## Testing Tools e Environment
@@ -220,172 +149,72 @@ And il token ha scadenza appropriata
 - **Artillery**: Node.js load testing
 - **Gatling**: High-performance load testing
 
-### Monitoring Tools
+## Monitoring e Alerting
 
-- **Application Performance Monitoring**: New Relic, Dynatrace
-- **Log Aggregation**: ELK Stack, Splunk
-- **Metrics Collection**: Prometheus, Grafana
-- **Distributed Tracing**: Jaeger, Zipkin
+[Descrivere il sistema di monitoring e alerting implementato per le integrazioni, inclusi i principali indicatori monitorati e le soglie di alert configurate.]
 
-### Mock Services
+| Integration Point | Key Metrics Monitored | Alert Thresholds | Alert Channel |
+|------------------|----------------------|-----------------|---------------|
+| [Integration] | [List metrics] | [Thresholds] | [Channel] |
+| [Integration] | [List metrics] | [Thresholds] | [Channel] |
+| [Integration] | [List metrics] | [Thresholds] | [Channel] |
 
-- **WireMock**: HTTP service mocking
-- **MockServer**: Flexible mocking platform
-- **Postman Mock Server**: Quick API mocking
-- **JSON Server**: RESTful API mocking
+## Conformità e Standard
 
-## Integration Monitoring
+[Descrivere gli standard di conformità applicabili alle integrazioni implementate e il loro stato attuale di compliance.]
 
-### Key Metrics
+| Standard | Applicabilità | Status | Note |
+|---------|--------------|--------|------|
+| [Standard] | [Areas] | [Compliant/Non-Compliant] | [Notes] |
+| [Standard] | [Areas] | [Compliant/Non-Compliant] | [Notes] |
+| [Standard] | [Areas] | [Compliant/Non-Compliant] | [Notes] |
 
-```yaml
-Success Rate: ≥ 99.5%
-Error Rate: ≤ 0.5%
-Average Response Time: ≤ 500ms
-95th Percentile: ≤ 2000ms
-Availability: ≥ 99.9%
-```
+## Roadmap di Integrazione
 
-### SLA Monitoring
+[Descrivere le future integrazioni pianificate o i miglioramenti alle integrazioni esistenti.]
 
-```yaml
-Response Time SLA: 95% < 1s
-Availability SLA: 99.9% uptime
-Error Rate SLA: < 0.1%
-Recovery Time SLA: < 5 min
-```
+| Integration | Priority | Planned Date | Dependencies | Status |
+|------------|----------|-------------|-------------|--------|
+| [Integration] | [Priority] | [Date] | [Dependencies] | [Status] |
+| [Integration] | [Priority] | [Date] | [Dependencies] | [Status] |
+| [Integration] | [Priority] | [Date] | [Dependencies] | [Status] |
 
-### Business Metrics
+## Analisi Sicurezza delle Integrazioni
 
-```yaml
-Transaction Volume: Daily/hourly counts
-Data Quality: % successful data transfers
-Business Impact: Revenue/process impact
-User Experience: Integration user satisfaction
-```
+[Descrivere le valutazioni di sicurezza condotte sulle integrazioni e le misure implementate per garantire la sicurezza dei dati e delle comunicazioni.]
 
-## Integration Testing Lifecycle
+| Aspetto di Sicurezza | Implementazione | Status | Rischi Residui |
+|--------------------|----------------|--------|---------------|
+| Authentication | [Descrizione] | [Status] | [Rischi] |
+| Authorization | [Descrizione] | [Status] | [Rischi] |
+| Data Protection | [Descrizione] | [Status] | [Rischi] |
+| Transport Security | [Descrizione] | [Status] | [Rischi] |
+| Audit e Logging | [Descrizione] | [Status] | [Rischi] |
 
-### 1. Planning Phase
+## Lezioni Apprese
 
-- **Integration Architecture Review**: Design validation
-- **Test Strategy Definition**: Approach e tools
-- **Environment Setup**: Test environment prep
-- **Test Data Preparation**: Realistic test datasets
+[Descrivere le principali lezioni apprese durante l'implementazione e il testing delle integrazioni, che possono essere utili per future integrazioni.]
 
-### 2. Development Phase
+| Categoria | Lezione Appresa | Raccomandazione |
+|----------|----------------|----------------|
+| [Categoria] | [Descrizione] | [Raccomandazione] |
+| [Categoria] | [Descrizione] | [Raccomandazione] |
+| [Categoria] | [Descrizione] | [Raccomandazione] |
 
-- **Component Testing**: Individual service testing
-- **Contract Testing**: API contract validation
-- **Integration Development**: Actual integration coding
-- **Unit Testing**: Isolated component tests
+## Sign-off
 
-### 3. Integration Testing Phase
+### Approvals
 
-- **Smoke Testing**: Basic connectivity
-- **Functional Testing**: End-to-end scenarios
-- **Performance Testing**: Load e stress testing
-- **Security Testing**: Auth e vulnerability testing
-
-### 4. Deployment Phase
-
-- **Staging Testing**: Production-like testing
-- **Production Validation**: Post-deployment verification
-- **Monitoring Setup**: Alerts e dashboards
-- **Documentation**: Runbooks e procedures
-
-## Common Integration Challenges
-
-### Technical Challenges
-
-- **Network Latency**: Geographic distributed systems
-- **Data Format Differences**: Schema mismatches
-- **Version Compatibility**: API version management
-- **Transaction Management**: Distributed transactions
-
-### Operational Challenges
-
-- **Monitoring Complexity**: Multi-system visibility
-- **Debugging Difficulty**: Cross-system troubleshooting
-- **Deployment Coordination**: Multi-team releases
-- **Change Management**: Impact of changes
-
-### Business Challenges
-
-- **SLA Alignment**: Different system SLAs
-- **Data Consistency**: Eventually consistent systems
-- **Error Attribution**: Identifying failure sources
-- **Cost Management**: Third-party service costs
-
-## Best Practices
-
-### Design Best Practices
-
-- **Implement Circuit Breakers** per fault tolerance
-- **Use Idempotent Operations** per reliability
-- **Design for Failure** con fallback mechanisms
-- **Implement Proper Logging** per troubleshooting
-- **Version APIs** per backward compatibility
-
-### Testing Best Practices
-
-- **Test Early** nel development lifecycle
-- **Use Contract Testing** per API validation
-- **Implement Automated Testing** per CI/CD
-- **Test Failure Scenarios** non solo happy path
-- **Monitor Production** per real-world validation
-
-### Anti-Patterns da Evitare
-
-- **Tight Coupling**: Dipendenze strette tra sistemi
-- **Sync When Async**: Usare sync per long-running ops
-- **No Error Handling**: Ignorare gestione errori
-- **Hard-coded Config**: Configurazioni non flessibili
-- **No Monitoring**: Mancanza observability
-
-## Troubleshooting Integration Issues
-
-### Common Error Patterns
-
-```yaml
-Timeout Errors:
-  - Network latency issues
-  - Overloaded target system
-  - Incorrect timeout settings
-
-Authentication Failures:
-  - Expired credentials
-  - Wrong authentication method
-  - Network security blocks
-
-Data Format Errors:
-  - Schema mismatches
-  - Encoding issues
-  - Required field missing
-
-Business Logic Errors:
-  - Validation rule differences
-  - State inconsistencies
-  - Timing dependencies
-```
-
-### Debugging Techniques
-
-- **Distributed Tracing**: Follow request path
-- **Correlation IDs**: Track requests across systems
-- **Log Aggregation**: Centralized log analysis
-- **Health Checks**: System availability monitoring
-
-## Supporto e Contatti
-
-Per domande sugli Integration Acceptance Criteria:
-
-- **Integration Architect**: [Responsabile design integrazioni]
-- **API Developer**: [Responsabile API development]
-- **DevOps Engineer**: [Responsabile deployment e monitoring]
-- **Security Engineer**: [Responsabile integration security]
-- **QA Engineer**: [Responsabile integration testing]
+| Ruolo | Nome | Data | Firma |
+|-------|------|------|-------|
+| Integration Architect | [Nome] | [Data] | [Firma] |
+| API Developer | [Nome] | [Data] | [Firma] |
+| Security Engineer | [Nome] | [Data] | [Firma] |
+| QA Engineer | [Nome] | [Data] | [Firma] |
+| Product Owner | [Nome] | [Data] | [Firma] |
 
 ---
 
-*Le integrazioni sono spesso il punto più fragile di un sistema distribuito. Testale accuratamente per garantire comunicazione affidabile e resiliente tra componenti.*
+*Documento generato il: [DATA GENERAZIONE]*  
+*Versione: [NUMERO VERSIONE]*  
+*Autori: [NOME AUTORI]*

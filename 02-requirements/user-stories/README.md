@@ -1,159 +1,92 @@
-# User Stories
+# User Stories [Nome Progetto]
 
-Questa cartella contiene tutte le user stories del progetto, organizzate per epic.
+## Introduzione
 
-## Struttura Organizzativa
+[Fornire una breve introduzione all'approccio basato su user stories adottato per questo progetto. Spiegare come le user stories sono state identificate e prioritizzate per soddisfare gli obiettivi di business definiti nella sezione di definizione del progetto.]
 
-### Organizzazione per Epic
+## Riepilogo delle Epic
 
-Ogni epic ha la sua cartella dedicata:
-```
-user-stories/
-├── epic-[nome-epic]/
-│   ├── README.md              (Descrizione dell'epic)
-│   ├── US-001-[titolo].md     (User story 1)
-│   ├── US-002-[titolo].md     (User story 2)
-│   └── US-xxx-[titolo].md     (Altre user stories)
-├── epic-template/             (Template per nuovi epic)
-└── README.md                  (Questo file)
-```
+La seguente tabella fornisce una panoramica delle epic identificate per il progetto:
 
-## Convenzioni di Naming
+| ID Epic | Nome | Descrizione | Priorità | Stato | User Stories |
+|---------|------|------------|----------|-------|-------------|
+| EPIC-001 | [Nome Epic 1] | [Breve descrizione] | Alta | [Stato] | US-001, US-002, US-003 |
+| EPIC-002 | [Nome Epic 2] | [Breve descrizione] | Media | [Stato] | US-004, US-005 |
+| EPIC-003 | [Nome Epic 3] | [Breve descrizione] | Bassa | [Stato] | US-006, US-007, US-008 |
 
-### Epic
+## Dettaglio Epic
 
-- **Cartelle**: `epic-[nome-breve]` (es. `epic-authentication`, `epic-user-management`)
-- **Nome Epic**: Descrittivo e conciso (es. "Gestione Utenti", "Sistema di Autenticazione")
+### EPIC-001: [Nome Epic 1]
 
-### User Stories
+**Obiettivo**: [Obiettivo principale dell'epic]
 
-- **File**: `US-XXX-[titolo-breve].md`
-- **ID**: Numerazione progressiva globale (US-001, US-002, etc.)
-- **Titolo**: Descrittivo e conciso (es. `US-001-login-utente.md`)
+**Descrizione**: [Descrizione più dettagliata dell'epic]
 
-## Template User Story
+**User Stories Principali**:
+- **US-001**: Come [utente], voglio [funzionalità] per [beneficio]
+- **US-002**: Come [utente], voglio [funzionalità] per [beneficio]
+- **US-003**: Come [utente], voglio [funzionalità] per [beneficio]
 
-Ogni user story deve seguire questo formato:
+### EPIC-002: [Nome Epic 2]
 
-```markdown
-# US-XXX: [Titolo User Story]
+**Obiettivo**: [Obiettivo principale dell'epic]
 
-## Informazioni Generali
+**Descrizione**: [Descrizione più dettagliata dell'epic]
 
-**ID**: US-XXX
-**Epic**: [Nome Epic]
-**Priorità**: Alta | Media | Bassa
-**Stima**: [Story Points]
-**Status**: Backlog | In Progress | In Review | Done
+**User Stories Principali**:
+- **US-004**: Come [utente], voglio [funzionalità] per [beneficio]
+- **US-005**: Come [utente], voglio [funzionalità] per [beneficio]
 
-## User Story
+## Metriche e Stato
 
-**Come** [tipo di utente]  
-**Voglio** [funzionalità/obiettivo]  
-**Per** [beneficio/valore]
+### Riepilogo Stato
 
-## Criteri di Accettazione
+| Stato | Numero di User Stories | % del Totale |
+|-------|------------------------|-------------|
+| Backlog | [Numero] | [%] |
+| In Progress | [Numero] | [%] |
+| In Review | [Numero] | [%] |
+| Done | [Numero] | [%] |
+| Totale | [Numero] | 100% |
 
-- [ ] [Criterio 1]
-- [ ] [Criterio 2]
-- [ ] [Criterio 3]
+### Distribuzione per Priorità
 
-## Casi di Test
+| Priorità | Numero di User Stories | % del Totale |
+|----------|------------------------|-------------|
+| Alta | [Numero] | [%] |
+| Media | [Numero] | [%] |
+| Bassa | [Numero] | [%] |
 
-### Test Case 1: [Nome test]
+## Roadmap e Pianificazione
 
-- **Prerequisiti**: [Condizioni iniziali]
-- **Passi**: [Step by step]
-- **Risultato Atteso**: [Cosa dovrebbe succedere]
+### Distribuzione per Sprint/Release
 
-## Note Tecniche
+| Sprint/Release | Epic | User Stories | Stato |
+|----------------|------|-------------|-------|
+| Sprint 1 | EPIC-001 | US-001, US-002 | Completato |
+| Sprint 2 | EPIC-001, EPIC-002 | US-003, US-004 | In Progress |
+| Sprint 3 | EPIC-002 | US-005, US-006 | Pianificato |
 
-[Dettagli implementativi, vincoli, dipendenze]
+### Dipendenze Chiave
 
-## Tracciabilità
+- **US-003** dipende da **US-001**
+- **US-005** dipende da **US-004**
+- **EPIC-002** dipende da completamento di **EPIC-001**
 
-- **Obiettivi collegati**: [Da 01-project-definition/objectives.md]
-- **Requisiti funzionali**: [REQ-XXX]
-- **Casi d'uso**: [UC-XXX]
-```
+## Collegamenti agli Obiettivi di Business
 
-## Prioritizzazione
+La tabella seguente mostra come le epic si collegano agli obiettivi di business definiti nella sezione di definizione del progetto:
 
-### Criteri di Priorità
+| Epic | Obiettivi di Business Correlati | Valore per il Business |
+|------|--------------------------------|------------------------|
+| EPIC-001 | [Obiettivo 1], [Obiettivo 3] | [Descrizione valore] |
+| EPIC-002 | [Obiettivo 2] | [Descrizione valore] |
+| EPIC-003 | [Obiettivo 1], [Obiettivo 4] | [Descrizione valore] |
 
-- **Alta**: Funzionalità core per MVP, blockers
-- **Media**: Funzionalità importanti per release completa
-- **Bassa**: Nice-to-have, miglioramenti futuri
+## Note e Considerazioni
 
-### Story Points
-
-- **1**: Molto semplice (poche ore)
-- **2**: Semplice (1 giorno)
-- **3**: Media (2-3 giorni)
-- **5**: Complessa (1 settimana)
-- **8**: Molto complessa (2 settimane)
-- **13**: Epic troppo grande, da spezzare
-
-## Workflow User Stories
-
-### 1. Creazione
-
-- Crea cartella epic se non esiste
-- Copia template da `epic-template/`
-- Assegna ID progressivo
-- Compila tutti i campi
-
-### 2. Refinement
-
-- Review durante sprint planning
-- Aggiorna criteri di accettazione
-- Stima story points
-- Identifica dipendenze
-
-### 3. Development
-
-- Status → "In Progress"
-- Implementazione seguendo criteri
-- Status → "In Review"
-- Testing e validazione
-- Status → "Done"
-
-## Tracking e Metriche
-
-### Definition of Ready (DoR)
-
-- [ ] User story scritta in formato standard
-- [ ] Criteri di accettazione definiti
-- [ ] Story points stimati
-- [ ] Dipendenze identificate
-- [ ] Mockup/wireframe se necessario
-
-### Definition of Done (DoD)
-
-- [ ] Codice implementato
-- [ ] Unit test scritti e passanti
-- [ ] Criteri di accettazione verificati
-- [ ] Code review completata
-- [ ] Documentazione aggiornata
-
-## Best Practices
-
-### Do's
-
-- **Scrivi from user perspective** - sempre dal punto di vista dell'utente
-- **Mantieni stories indipendenti** - evita dipendenze strette
-- **Usa INVEST criteria** (Independent, Negotiable, Valuable, Estimable, Small, Testable)
-- **Include acceptance criteria specifici** e misurabili
-- **Aggiorna regolarmente** status e dettagli
-
-### Don'ts
-
-- **Non scrivere task tecnici** come user stories
-- **Non creare stories troppo grandi** (>8 story points)
-- **Non omettere il valore** per l'utente
-- **Non duplicare stories** tra epic diversi
-- **Non dimenticare la tracciabilità** con requisiti e obiettivi
+[Eventuali note aggiuntive sulle user stories, limitazioni, assunzioni o considerazioni importanti che non rientrano nelle sezioni precedenti.]
 
 ---
 
-*Per creare un nuovo epic, copia la cartella `epic-template` e personalizzala.*
+*User Stories [Nome Progetto] - v[Versione]*

@@ -1,52 +1,39 @@
-# Non-Functional Acceptance Criteria
+# Criteri di Accettazione Non-Funzionale
 
-Questa cartella contiene i criteri di accettazione per validare gli attributi di qualità del sistema (performance, sicurezza, usabilità, affidabilità, scalabilità).
+## Panoramica dei Test Non-Funzionali
 
-## Scopo dei Non-Functional Acceptance Criteria
+[Fornire una panoramica dell'approccio adottato per i test non-funzionali nel progetto [NOME PROGETTO]. Descrivere brevemente i principali attributi di qualità testati e la loro importanza per il successo del progetto.]
 
-I **Non-Functional Acceptance Criteria** servono per:
+## Service Level Agreements (SLA)
 
-- Verificare attributi di qualità del sistema (performance, security, usability)
-- Validare requisiti non-funzionali quantificabili
-- Testare comportamenti sotto stress e condizioni limite
-- Confermare SLA e metriche di sistema
+[Elencare i principali Service Level Agreements stabiliti per il sistema e il loro stato di conformità attuale.]
 
-## Quality Attributes Coperti
+### Performance SLA
 
-### Performance
+| Metrica | Target | Risultato Attuale | Status |
+|---------|--------|------------------|--------|
+| Tempo di risposta medio | [Target] | [Attuale] | [Pass/Fail] |
+| Tempo di risposta 95° percentile | [Target] | [Attuale] | [Pass/Fail] |
+| Throughput | [Target] | [Attuale] | [Pass/Fail] |
+| Utenti concorrenti supportati | [Target] | [Attuale] | [Pass/Fail] |
 
-- **Response Time**: Tempi di risposta per operazioni
-- **Throughput**: Transazioni per unità di tempo
-- **Resource Utilization**: CPU, memoria, storage, network
-- **Scalability**: Capacità di gestire carico crescente
+### Availability SLA
 
-### Security
+| Metrica | Target | Risultato Attuale | Status |
+|---------|--------|------------------|--------|
+| Uptime | [Target]% | [Attuale]% | [Pass/Fail] |
+| MTBF (Mean Time Between Failures) | [Target] | [Attuale] | [Pass/Fail] |
+| MTTR (Mean Time To Recovery) | [Target] | [Attuale] | [Pass/Fail] |
+| Scheduled Downtime | [Target] | [Attuale] | [Pass/Fail] |
 
-- **Authentication**: Meccanismi di autenticazione
-- **Authorization**: Controlli di accesso e permessi
-- **Data Protection**: Crittografia, privacy, audit
-- **Vulnerability**: Resistenza ad attacchi
+### Security SLA
 
-### Usability
-
-- **User Experience**: Facilità d'uso e soddisfazione
-- **Accessibility**: Conformità standard accessibilità
-- **Learnability**: Curva apprendimento per nuovi utenti
-- **Error Prevention**: Prevenzione errori utente
-
-### Reliability
-
-- **Availability**: Uptime e disponibilità sistema
-- **Fault Tolerance**: Gestione failure e recovery
-- **Data Consistency**: Integrità e consistenza dati
-- **MTBF/MTTR**: Mean time between/to recovery
-
-### Compatibility
-
-- **Browser Support**: Supporto browser multipli
-- **Device Compatibility**: Mobile, tablet, desktop
-- **Operating System**: Supporto OS diversi
-- **Integration**: Compatibilità con sistemi esistenti
+| Metrica | Target | Risultato Attuale | Status |
+|---------|--------|------------------|--------|
+| Vulnerabilità critiche | [Target] | [Attuale] | [Pass/Fail] |
+| Tempo di risoluzione vulnerabilità | [Target] | [Attuale] | [Pass/Fail] |
+| Compliance standard | [Target] | [Attuale] | [Pass/Fail] |
+| Penetration Test Score | [Target] | [Attuale] | [Pass/Fail] |
 
 ## Come Utilizzare il Template
 
@@ -62,54 +49,28 @@ AC-NF-SEC-001-authentication.md
 # Usability
 AC-NF-USA-001-accessibility.md
 
-# Reliability
-AC-NF-REL-001-availability.md
-```
+## Risultati dei Test Non-Funzionali
 
-### 2. Definisci Metriche Quantificabili
+### Test di Performance
 
-Ogni criterio deve avere:
+[Descrivere i risultati dei test di performance condotti sul sistema, includendo le condizioni di test (carico, durata, ambiente) e le metriche chiave rilevate.]
 
-- **Metrica specifica**: Cosa misurare
-- **Target value**: Valore obiettivo
-- **Threshold minimo**: Soglia accettazione
-- **Condizioni misurazione**: Come e quando misurare
+#### Risultati Load Test
 
-### 3. Specifica Test Conditions
+| Test Scenario | Utenti Concorrenti | Durata | Tempo Risposta Medio | Tempo Risposta 95° | Throughput | Status |
+|---------------|-------------------|--------|---------------------|-------------------|-----------|--------|
+| Login | [Numero] | [Durata] | [Tempo] | [Tempo] | [TPS] | [Pass/Fail] |
+| Search | [Numero] | [Durata] | [Tempo] | [Tempo] | [TPS] | [Pass/Fail] |
+| Checkout | [Numero] | [Durata] | [Tempo] | [Tempo] | [TPS] | [Pass/Fail] |
+| Report Generation | [Numero] | [Durata] | [Tempo] | [Tempo] | [TPS] | [Pass/Fail] |
 
-- **Load conditions**: Carico normale, picco, stress
-- **Environment**: Prod-like, test, staging
-- **Tools**: Strumenti di misurazione
-- **Duration**: Durata test per stabilità
+#### Risultati Stress Test
 
-## Performance Acceptance Criteria
+[Descrivere i risultati dei test di stress, focalizzandosi sul comportamento del sistema sotto carico estremo e sui punti di rottura identificati.]
 
-### Response Time Metrics
+### Test di Sicurezza
 
-```
-Target: ≤ 2 secondi (95° percentile)
-Acceptable: ≤ 5 secondi (95° percentile)
-Test Load: 100 utenti concorrenti
-Environment: Production-like hardware
-```
-
-### Throughput Metrics
-
-```
-Target: ≥ 1000 transazioni/minuto
-Peak Load: ≥ 500 transazioni/minuto
-Concurrent Users: 200 simultaneous
-Measurement: Sustained 30 minutes
-```
-
-### Resource Utilization
-
-```
-CPU: ≤ 70% under normal load
-Memory: ≤ 80% allocated heap
-Disk I/O: ≤ 80% capacity
-Network: ≤ 60% bandwidth
-```
+[Riassumere i risultati delle valutazioni di sicurezza condotte sul sistema, come penetration testing, vulnerability assessment, e security code review.]
 
 ## Security Acceptance Criteria
 
@@ -137,56 +98,32 @@ Audit trail: All access logged
 Encryption in transit: TLS 1.3 minimum
 Encryption at rest: AES-256
 PII handling: Anonymization/masking
-Backup security: Encrypted backups
-```
+#### Risultati Vulnerability Assessment
 
-## Usability Acceptance Criteria
+| Categoria | Vulnerabilità Critiche | Vulnerabilità Alte | Vulnerabilità Medie | Vulnerabilità Basse |
+|-----------|------------------------|-------------------|---------------------|---------------------|
+| Authentication | [Numero] | [Numero] | [Numero] | [Numero] |
+| Authorization | [Numero] | [Numero] | [Numero] | [Numero] |
+| Data Protection | [Numero] | [Numero] | [Numero] | [Numero] |
+| Input Validation | [Numero] | [Numero] | [Numero] | [Numero] |
+| API Security | [Numero] | [Numero] | [Numero] | [Numero] |
 
-### User Experience Metrics
+### Test di Usabilità
 
-```
-Task completion: ≥ 95% success rate
-Time to complete: ≤ 3 minutes average
-Error rate: ≤ 5% user errors
-User satisfaction: ≥ 4.5/5 rating
-```
+[Descrivere i risultati dei test di usabilità condotti con gli utenti finali, inclusi task completion rate, tempo di completamento delle attività, e feedback soggettivo.]
 
-### Accessibility Compliance
+#### Metriche di Usabilità
 
-```
-WCAG Level: AA compliance verified
-Screen reader: Compatible with NVDA/JAWS
-Keyboard navigation: 100% accessible
-Color contrast: ≥ 4.5:1 ratio
-```
+| Task | Completion Rate | Tempo Medio | Errori | Soddisfazione Utente |
+|------|----------------|------------|--------|---------------------|
+| User Registration | [%] | [Tempo] | [Numero] | [Rating/5] |
+| Product Search | [%] | [Tempo] | [Numero] | [Rating/5] |
+| Checkout | [%] | [Tempo] | [Numero] | [Rating/5] |
+| Account Management | [%] | [Tempo] | [Numero] | [Rating/5] |
 
-### Learning Curve
+### Test di Compatibilità
 
-```
-First-time users: Productive in ≤ 15 min
-Training required: ≤ 2 hours
-Help usage: ≤ 20% need help
-Return users: No relearning needed
-```
-
-## Reliability Acceptance Criteria
-
-### Availability Targets
-
-```
-Uptime: ≥ 99.9% (8.76 hours/year downtime)
-Planned maintenance: ≤ 4 hours/month
-Recovery time: ≤ 15 minutes RTO
-Recovery point: ≤ 1 hour RPO
-```
-
-### Fault Tolerance
-
-```
-Single point failure: No SPOFs
-Graceful degradation: Core functions available
-Circuit breaker: Prevents cascade failures
-Retry logic: Exponential backoff
+[Riassumere i risultati dei test di compatibilità su diversi browser, dispositivi e sistemi operativi.]
 ```
 
 ### Data Consistency
@@ -211,56 +148,35 @@ Data validation: Integrity checks
 
 - **Penetration Testing**: Simulazione attacchi
 - **Vulnerability Scanning**: Ricerca vulnerabilità note
-- **Authentication Testing**: Test meccanismi auth
-- **Authorization Testing**: Test controlli accesso
+#### Matrice di Compatibilità
 
-### Usability Testing
+| Piattaforma | Chrome | Firefox | Safari | Edge | IE 11 |
+|------------|--------|---------|--------|------|-------|
+| Windows 10 | [Status] | [Status] | N/A | [Status] | [Status] |
+| Windows 11 | [Status] | [Status] | N/A | [Status] | N/A |
+| macOS | [Status] | [Status] | [Status] | [Status] | N/A |
+| iOS | [Status] | [Status] | [Status] | N/A | N/A |
+| Android | [Status] | [Status] | N/A | [Status] | N/A |
 
-- **User Testing**: Test con utenti reali
-- **Accessibility Testing**: Test con tecnologie assistive
-- **Cross-browser Testing**: Test compatibilità browser
-- **Device Testing**: Test su dispositivi diversi
+### Test di Scalabilità
 
-### Reliability Testing
+[Descrivere i risultati dei test di scalabilità, inclusa la capacità del sistema di scalare orizzontalmente e verticalmente sotto diversi carichi.]
 
-- **Failover Testing**: Test procedure failover
-- **Recovery Testing**: Test procedure recovery
-- **Backup Testing**: Test backup e restore
-- **Chaos Engineering**: Test resilience sistema
+## Conformità e Standard
 
-## Measurement Tools e Techniques
+[Elencare gli standard di conformità rilevanti per il progetto e il loro stato di compliance attuale.]
 
-### Performance Monitoring
+| Standard | Status | Note |
+|---------|--------|------|
+| GDPR | [Conforme/Non Conforme] | [Note] |
+| PCI-DSS | [Conforme/Non Conforme] | [Note] |
+| WCAG 2.1 AA | [Conforme/Non Conforme] | [Note] |
+| ISO 27001 | [Conforme/Non Conforme] | [Note] |
+| HIPAA | [Conforme/Non Conforme] | [Note] |
 
-- **Application Performance Monitoring**: New Relic, Dynatrace
-- **Load Testing Tools**: JMeter, LoadRunner, K6
-- **Profiling Tools**: APM, code profilers
-- **Infrastructure Monitoring**: CloudWatch, Prometheus
+## Raccomandazioni
 
-### Security Assessment
-
-- **Vulnerability Scanners**: Nessus, OpenVAS
-- **SAST Tools**: SonarQube, Checkmarx
-- **DAST Tools**: OWASP ZAP, Burp Suite
-- **Compliance Tools**: Compliance monitoring
-
-### Usability Evaluation
-
-- **Analytics Tools**: Google Analytics, Hotjar
-- **A/B Testing**: Optimizely, VWO
-- **User Testing Platforms**: UserTesting, Maze
-- **Accessibility Tools**: axe, WAVE, Lighthouse
-
-## SLA e Service Level Objectives
-
-### Performance SLOs
-
-```
-Response Time SLO: 95% requests < 2s
-Availability SLO: 99.9% uptime
-Throughput SLO: Handle 1000 TPS
-Error Rate SLO: < 0.1% error rate
-```
+[Fornire raccomandazioni basate sui risultati dei test non-funzionali, inclusi miglioramenti suggeriti e rischi identificati.]
 
 ### Security SLOs
 
@@ -282,103 +198,45 @@ Accessibility: 100% WCAG AA compliance
 
 ## Acceptance Testing Process
 
-### 1. Test Planning
+### Priorità di Intervento
 
-- Identificazione metriche target
-- Definizione test environment
-- Preparazione test data
-- Setup monitoring tools
+| Area | Severità | Impatto | Complessità | Raccomandazione |
+|------|----------|---------|-------------|-----------------|
+| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
+| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
+| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
+| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
 
-### 2. Test Execution
+## Confronto con la Concorrenza
 
-- Baseline measurement
-- Test scenario execution
-- Continuous monitoring
-- Data collection
+[Comparare le performance non-funzionali del sistema con i principali concorrenti o benchmark di settore, evidenziando punti di forza e aree di miglioramento.]
 
-### 3. Results Analysis
+| Attributo | Sistema Attuale | Concorrente 1 | Concorrente 2 | Benchmark Settore |
+|-----------|---------------|--------------|--------------|-------------------|
+| Performance | [Rating] | [Rating] | [Rating] | [Rating] |
+| Sicurezza | [Rating] | [Rating] | [Rating] | [Rating] |
+| Usabilità | [Rating] | [Rating] | [Rating] | [Rating] |
+| Affidabilità | [Rating] | [Rating] | [Rating] | [Rating] |
+| Scalabilità | [Rating] | [Rating] | [Rating] | [Rating] |
 
-- Statistical analysis
-- Trend identification
-- Root cause analysis
-- Performance tuning
+## Sign-off
 
-### 4. Sign-off Process
+### Approvals
 
-- Results validation
-- Stakeholder review
-- Exception documentation
-- Formal acceptance
+| Ruolo | Nome | Data | Firma |
+|-------|------|------|-------|
+| Technical Architect | [Nome] | [Data] | [Firma] |
+| Security Officer | [Nome] | [Data] | [Firma] |
+| QA Manager | [Nome] | [Data] | [Firma] |
+| Operations Manager | [Nome] | [Data] | [Firma] |
+| Product Owner | [Nome] | [Data] | [Firma] |
 
-## Common Challenges
+## Prossimi Passi
 
-### Performance Testing
-
-- **Realistic Test Data**: Dati rappresentativi produzione
-- **Environment Parity**: Ambiente simile a produzione
-- **Test Isolation**: Evitare interferenze tra test
-- **Monitoring Overhead**: Impact monitoring su performance
-
-### Security Testing
-
-- **False Positives**: Filtering real vs false vulnerabilities
-- **Test Environment**: Sicurezza in test vs prod
-- **Compliance Requirements**: Meeting regulatory standards
-- **Continuous Security**: Ongoing security assessment
-
-### Usability Testing
-
-- **User Recruitment**: Finding representative users
-- **Test Bias**: Avoiding observer effect
-- **Quantifying UX**: Measuring subjective experiences
-- **Iteration**: Incorporating feedback loops
-
-## Best Practices
-
-### Do's
-
-- **Set realistic targets** basati su benchmarks
-- **Test early and often** nel development cycle
-- **Use production-like data** per test accurati
-- **Monitor continuously** non solo durante test
-- **Document everything** per audit e compliance
-- **Automate where possible** per consistency
-
-### Don'ts
-
-- **Non ignorare edge cases** e condizioni estreme
-- **Non testare solo happy path** per non-functional
-- **Non dimenticare mobile** e dispositivi diversi
-- **Non skippiare user testing** per usability
-- **Non sottovalutare security** testing
-- **Non ignorare accessibility** requirements
-
-## Integration con CI/CD
-
-### Automated Testing
-
-- **Performance Gates**: Soglie automatiche CI/CD
-- **Security Scanning**: Automated vulnerability scans
-- **Accessibility Checks**: Automated a11y testing
-- **Quality Gates**: Build fails se requirements non met
-
-### Continuous Monitoring
-
-- **Production Monitoring**: Real-time metrics
-- **Alerting**: Automatic alerts per threshold
-- **Trending**: Long-term trend analysis
-- **Feedback Loops**: Results inform next iteration
-
-## Supporto e Contatti
-
-Per domande sui Non-Functional Acceptance Criteria:
-
-- **Performance Engineer**: [Responsabile performance testing]
-- **Security Architect**: [Responsabile security requirements]
-- **UX Researcher**: [Responsabile usability testing]
-- **Site Reliability Engineer**: [Responsabile reliability/availability]
-- **QA Lead**: [Coordinamento testing non-funzionale]
+[Descrivere le azioni pianificate per migliorare gli attributi non-funzionali del sistema nel prossimo periodo.]
 
 ---
 
-*I Non-Functional Acceptance Criteria definiscono la qualità del sistema oltre alla funzionalità. Misurarli accuratamente è essenziale per un'esperienza utente eccellente e operazioni affidabili.*
+*Documento generato il: [DATA GENERAZIONE]*  
+*Versione: [NUMERO VERSIONE]*  
+*Autori: [NOME AUTORI]*

@@ -4,6 +4,12 @@
 
 Questo workspace è un **sistema di template enterprise completo** per la documentazione di progetti software, dal design alla implementazione.
 
+## Struttura dei File
+Per ogni cartella del workspace:
+- Il **README.md** è un template che rappresenta il capitolo introduttivo della sezione nella documentazione finale e contiene placeholder da compilare
+- Il file **INSTRUCTIONS.md** contiene le istruzioni e le linee guida specifiche per quella sezione, destinato all'agent/utente e NON da includere nella documentazione finale
+- I file **[ID]-template.md** o **template-*.puml** sono i modelli da utilizzare per creare i documenti specifici, anch'essi con placeholder da compilare
+
 ## Contesto del Progetto
 - **Template enterprise** con struttura gerarchica scalabile per progetti di qualsiasi dimensione
 - **Workflow strutturato**: definizione → requisiti → design comportamentale → design strutturale → database design
@@ -63,20 +69,21 @@ Questo workspace è un **sistema di template enterprise completo** per la docume
 
 ### REGOLA FONDAMENTALE
 **PRIMA di creare o modificare qualsiasi file:**
-1. **Leggi SEMPRE il README** della cartella di destinazione per comprendere scope e best practices
-2. **Cerca template esistenti** nella cartella - se presente, DEVE essere utilizzato come base
-3. **Non creare mai file da zero** quando esiste un template corrispondente
-4. **Segui le convenzioni** stabilite nei template esistenti per naming e struttura
-5. **Dopo ogni modifica effettuata ad un file, eseguire una review del file stesso per verificarne la correttezza formale** (formattazione, struttura, coerenza con gli standard e i template)
+1. **Leggi SEMPRE il file INSTRUCTIONS.md** della cartella di destinazione per comprendere scope e best practices
+2. **Considera il README.md** come un template da completare con i placeholder per la documentazione finale, NON come un file di istruzioni per l'agent
+3. **Cerca template esistenti** nella cartella - se presente, DEVE essere utilizzato come base
+4. **Non creare mai file da zero** quando esiste un template corrispondente
+5. **Segui le convenzioni** stabilite nei template esistenti per naming e struttura
+6. **Dopo ogni modifica effettuata ad un file, eseguire una review del file stesso per verificarne la correttezza formale** (formattazione, struttura, coerenza con gli standard e i template)
 
 ### Workflow per Nuovi File
 ```
 1. Identifica cartella destinazione (01-05)
-2. Leggi README della cartella
-3. Cerca template-*.md o template-*.puml
-4. Copia template come base
-5. Personalizza mantenendo struttura
-6. Aggiorna README se necessario
+2. Leggi INSTRUCTIONS.md della cartella per le linee guida specifiche
+3. Considera README.md come template da completare con i placeholder per la sezione
+4. Cerca [ID]-template.md o template-*.puml da usare come base
+5. Copia template come base
+6. Personalizza mantenendo struttura e formato dei placeholder
 7. ESEGUI REVIEW del file per verificare correttezza formale
 8. AGGIORNA README della cartella se contiene indici o riferimenti al file modificato
 ```
@@ -98,6 +105,7 @@ Questo workspace è un **sistema di template enterprise completo** per la docume
 - **Assenza di emoji** nei documenti professionali (mantenere stile enterprise)
 - **Risposte concise** senza riepiloghi non richiesti
 - **README aggiornato** se presente nella cartella e contiene indici o riferimenti al file modificato
+- **Rispetto del ruolo dei file**: README.md come template, INSTRUCTIONS.md come guida operativa
 
 ### Template Priority Matrix
 - **01-project-definition/**: Usa sempre i 5 template base (description, stakeholders, objectives, scope, risks)

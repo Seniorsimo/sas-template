@@ -1,242 +1,109 @@
-# Acceptance Criteria Templates
+# Criteri di Accettazione
 
-Questa cartella contiene i template per la definizione dei criteri di accettazione del progetto, organizzati per tipologia di test e validazione.
+## Sommario Esecutivo
 
-## Struttura della Cartella
+[Breve introduzione al sistema di criteri di accettazione implementato per il progetto [NOME PROGETTO]. Descrivere l'approccio adottato e l'importanza dei criteri di accettazione nel ciclo di vita del progetto.]
 
-```
-acceptance-criteria/
-├── README.md                           # Questo file
-├── functional-acceptance/              # Criteri per test funzionali
-│   └── AC-F-XXX-template.md           # Template criteri funzionali
-├── non-functional-acceptance/          # Criteri per test non-funzionali
-│   └── AC-NF-XXX-template.md          # Template criteri non-funzionali
-├── integration-acceptance/             # Criteri per test di integrazione
-│   └── AC-I-XXX-template.md           # Template criteri integrazione
-└── user-acceptance/                    # Criteri per User Acceptance Testing
-    └── AC-UA-XXX-template.md          # Template criteri UAT
-```
+## Obiettivi della Strategia di Testing
 
-## Tipologie di Criteri di Accettazione
+[Descrivere gli obiettivi principali che si intendono raggiungere attraverso la definizione e l'implementazione dei criteri di accettazione.]
 
-### Functional Acceptance Criteria (AC-F-XXX)
+## Panoramica dei Criteri di Accettazione
 
-**Scopo**: Definire criteri per validare che le funzionalità implementate soddisfino i requisiti funzionali specifici.
+Il progetto [NOME PROGETTO] implementa quattro categorie principali di criteri di accettazione, ciascuna con un focus specifico:
 
-**Quando utilizzare**:
+### Criteri di Accettazione Funzionale
 
-- Test di singole funzionalità
-- Validazione comportamenti business logic
-- Verifica workflow applicativi
-- Test input/output di sistema
+[Breve descrizione dell'approccio ai criteri funzionali e i principali domini coperti.]
 
-**Esempio ID**: AC-F-001, AC-F-002, AC-F-LOGIN-001
+### Criteri di Accettazione Non-Funzionale
 
-### Non-Functional Acceptance Criteria (AC-NF-XXX)
+[Breve descrizione delle aree di qualità coperte dai criteri non-funzionali, come performance, sicurezza, usabilità.]
 
-**Scopo**: Definire criteri per validare attributi di qualità del sistema (performance, sicurezza, usabilità, etc.).
+### Criteri di Accettazione per l'Integrazione
 
-**Quando utilizzare**:
+[Descrizione dell'approccio all'integrazione e delle interfacce principali coperte dai criteri.]
 
-- Test di performance e carico
-- Validazione requisiti di sicurezza
-- Test di usabilità e accessibilità
-- Verifica scalabilità e affidabilità
+### Criteri di Accettazione Utente
 
-**Esempio ID**: AC-NF-001, AC-NF-PERF-001, AC-NF-SEC-001
+[Descrizione dell'approccio al user acceptance testing e dei principali scenari di business coperti.]
 
-### Integration Acceptance Criteria (AC-I-XXX)
+## Matrice di Copertura
 
-**Scopo**: Definire criteri per validare l'integrazione tra sistemi, servizi o componenti.
+[Inserire una tabella che mostri la copertura dei criteri di accettazione rispetto ai requisiti e alle funzionalità chiave del sistema. La tabella dovrebbe evidenziare quali aree sono ben coperte e quali potrebbero richiedere ulteriori criteri.]
 
-**Quando utilizzare**:
+### E-commerce
+| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
+|----------------|-------------------|----------------------|----------------------|---------------|
+| Catalogo Prodotti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Carrello | [IDs] | [IDs] | [IDs] | [IDs] |
+| Checkout | [IDs] | [IDs] | [IDs] | [IDs] |
+| Account Utente | [IDs] | [IDs] | [IDs] | [IDs] |
 
-- Test API e servizi web
-- Integrazione con sistemi esterni
-- Test database e data flow
-- Validazione message queues e event processing
+### Banking
+| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
+|----------------|-------------------|----------------------|----------------------|---------------|
+| Autenticazione | [IDs] | [IDs] | [IDs] | [IDs] |
+| Transazioni | [IDs] | [IDs] | [IDs] | [IDs] |
+| Gestione Conti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Reportistica | [IDs] | [IDs] | [IDs] | [IDs] |
 
-**Esempio ID**: AC-I-001, AC-I-API-001, AC-I-DB-001
+### Healthcare
+| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
+|----------------|-------------------|----------------------|----------------------|---------------|
+| Cartelle Pazienti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Appuntamenti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Prescrizioni | [IDs] | [IDs] | [IDs] | [IDs] |
+| Analisi Risultati | [IDs] | [IDs] | [IDs] | [IDs] |
 
-### User Acceptance Criteria (AC-UA-XXX)
+## Test Suite e Risultati Principali
 
-**Scopo**: Definire criteri per validare che il sistema soddisfi le aspettative e necessità degli utenti finali.
+### Risultati Complessivi
 
-**Quando utilizzare**:
+[Inserire un riassunto dei risultati dell'esecuzione dei criteri di accettazione, possibilmente con un grafico che mostri la percentuale di criteri passati, falliti o in sospeso.]
 
-- User Acceptance Testing (UAT)
-- Validazione user experience
-- Test usabilità con utenti reali
-- Verifica business value per end users
+### Test Case Prioritari
 
-**Esempio ID**: AC-UA-001, AC-UA-LOGIN-001, AC-UA-DASHBOARD-001
+[Elencare i test case più critici basati sui criteri di accettazione e i loro risultati.]
 
-## Convenzioni di Naming
+### Problemi Aperti
 
-### Schema ID Standard
+[Elencare i problemi più significativi emersi durante l'esecuzione dei test di accettazione.]
 
-```
-AC-{TYPE}-{AREA}-{NUMBER}
-```
+## Riassunto Statistico
 
-**Dove**:
+### Stato dei Criteri di Accettazione
 
-- `{TYPE}`: F (Functional) | NF (Non-Functional) | I (Integration) | UA (User Acceptance)
-- `{AREA}`: [Opzionale] Area funzionale o modulo specifico
-- `{NUMBER}`: Numero progressivo (001, 002, etc.)
+[Inserire una tabella o un grafico che mostri lo stato attuale dei criteri di accettazione per categoria, ad esempio: completati, in corso, bloccati, non iniziati.]
 
-### Esempi di Naming
+### Trend di Progresso
 
-```
-AC-F-001              # Primo criterio funzionale generico
-AC-F-LOGIN-001         # Primo criterio funzionale per area login
-AC-F-PAYMENT-003       # Terzo criterio funzionale per pagamenti
-AC-NF-PERF-001         # Primo criterio non-funzionale performance
-AC-NF-SEC-002          # Secondo criterio non-funzionale security
-AC-I-API-001           # Primo criterio integrazione API
-AC-I-DATABASE-001      # Primo criterio integrazione database
-AC-UA-ONBOARDING-001   # Primo criterio UAT per onboarding
-AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
-```
+[Descrivere il trend di completamento dei criteri di accettazione nel corso del tempo e il rapporto con le milestone di progetto.]
 
-## Workflow di Utilizzo
+## Approvazioni
 
-### 1. Creazione di un Nuovo Criterio
+### Sign-off
 
-- Identificare la tipologia appropriata (F/NF/I/UA)
-- Copiare il template corrispondente
-- Rinominare il file seguendo le convenzioni
-- Compilare tutte le sezioni del template
-- Collegare a requisiti e user stories esistenti
+| Ruolo | Nome | Data | Firma |
+|------|------|------|------|
+| Product Owner | [Nome] | [Data] | [Firma] |
+| QA Manager | [Nome] | [Data] | [Firma] |
+| Technical Lead | [Nome] | [Data] | [Firma] |
+| User Representative | [Nome] | [Data] | [Firma] |
 
-### 2. Review e Approvazione
+### Note di Approvazione
 
-- Business Analyst review per completezza
-- Technical review per fattibilità
-- Stakeholder approval per criteri business-critical
-- QA review per testability
+[Eventuali note o condizioni associate all'approvazione dei criteri di accettazione.]
 
-### 3. Implementazione e Test
+## Prossimi Passi
 
-- Development team implementa features
-- QA team esegue test secondo criteri
-- Business users validano acceptance criteria
-- Sign-off formale e closure
+[Descrivere le azioni successive previste dopo l'approvazione dei criteri di accettazione, come il rilascio in produzione, il monitoraggio post-rilascio, o le attività di feedback utente.]
 
-## Collegamento con Altri Artefatti
+---
 
-### Tracciabilità Verso l'Alto
-
-- **Business Objectives** (01-project-definition/objectives.md)
-- **User Stories** (02-requirements/user-stories/)
-- **Functional Requirements** (02-requirements/functional-requirements/)
-- **Non-Functional Requirements** (02-requirements/non-functional-requirements/)
-
-### Tracciabilità Verso il Basso
-
-- **Test Cases** (Documenti di test dettagliati)
-- **Test Scripts** (Script automatici di test)
-- **Test Results** (Report risultati test)
-
-### Collegamento Orizzontale
-
-- **Use Case Diagrams** (03-behavioral-diagrams/use-case-diagrams/)
-- **Sequence Diagrams** (03-behavioral-diagrams/sequence-diagrams/)
-- **Class Diagrams** (04-structural-diagrams/class-diagrams/)
-
-## Checklist per Criteri di Qualità
-
-### Criteri di Accettazione Efficaci
-
-- [ ] **Specific**: Criteri specifici e non ambigui
-- [ ] **Measurable**: Metriche e soglie quantificabili
-- [ ] **Achievable**: Realistici e implementabili
-- [ ] **Relevant**: Collegati ai business objectives
-- [ ] **Time-bound**: Con tempistiche chiare per test
-
-### Completezza del Template
-
-- [ ] Tutte le sezioni obbligatorie compilate
-- [ ] Tracciabilità a requisiti stabilita
-- [ ] Scenari di test definiti chiaramente
-- [ ] Criteri di pass/fail espliciti
-- [ ] Responsabilità e timeline assegnate
-
-### Review Quality Gates
-
-- [ ] **Business Review**: Value e completeness validati
-- [ ] **Technical Review**: Feasibility e testability confermati
-- [ ] **UX Review**: User experience considerations incluse
-- [ ] **QA Review**: Test approach e automation strategy
-
-## Metriche e KPI
-
-### Metriche di Progetto
-
-- **Coverage**: % requisiti con AC definiti
-- **Completeness**: % AC con tutti campi compilati
-- **Traceability**: % AC collegati a requisiti
-- **Pass Rate**: % AC che passano i test al primo tentativo
-
-### Metriche di Qualità
-
-- **Defect Density**: Difetti trovati per AC
-- **Cycle Time**: Tempo da creazione AC a sign-off
-- **Rework Rate**: % AC che richiedono modifiche
-- **Stakeholder Satisfaction**: Feedback su chiarezza AC
-
-## Best Practices
-
-### Durante la Creazione
-
-- **Coinvolgere tutti gli stakeholder** nella definizione
-- **Usare linguaggio business** comprensibile agli utenti
-- **Essere specifici e misurabili** nei criteri
-- **Includere scenari negativi** oltre a quelli positivi
-- **Considerare edge cases** e condizioni limite
-
-### Durante l'Implementazione
-
-- **Mantenere tracciabilità** durante sviluppo
-- **Aggiornare AC** se cambiano i requisiti
-- **Validare frequentemente** con stakeholder
-- **Documentare deviazioni** e rationale
-- **Preparare evidenze** per sign-off
-
-### Durante i Test
-
-- **Seguire AC come script di test** ufficiali
-- **Documentare tutti i risultati** accuratamente
-- **Coinvolgere business users** nella validazione
-- **Gestire issues** in modo sistematico
-- **Ottenere sign-off formale** prima del rilascio
-
-## Template Sections Reference
-
-### Sezioni Comuni a Tutti i Template
-
-- **Informazioni Generali**: Metadati e identificazione
-- **Descrizione**: Context e background
-- **Criteri di Accettazione**: Specifici per tipologia
-- **Tracciabilità**: Collegamenti a altri documenti
-- **Test Results**: Evidenze e outcomes
-- **Sign-off**: Approvazioni formali
-
-### Sezioni Specifiche per Tipologia
-
-- **Functional**: Focus su behavior e business logic
-- **Non-Functional**: Metriche quantitative e thresholds
-- **Integration**: Protocols, data flow e system interactions
-- **User Acceptance**: User experience e business value
-
-## Contatti e Supporto
-
-Per domande sui template di Acceptance Criteria:
-
-- **Product Owner**: [Responsabile business requirements]
-- **Business Analyst**: [Responsabile AC documentation]
-- **QA Lead**: [Responsabile test strategy]
-- **Project Manager**: [Coordinamento e timeline]
+*Documento generato il: [DATA GENERAZIONE]*  
+*Versione: [NUMERO VERSIONE]*  
+*Autori: [NOME AUTORI]*
 
 ---
 

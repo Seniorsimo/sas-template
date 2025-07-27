@@ -1,6 +1,84 @@
-# Dizionario dei Dati
+# Dizionario dei Dati - [Nome Progetto]
 
-## Tabella: users
+Questo documento fornisce una definizione dettagliata di tutte le entità del database per [Nome Progetto], specificando i campi, le relazioni, i vincoli e le regole di business associate.
+
+## Panoramica del Modello Dati
+
+Il modello dati di [Nome Progetto] è composto dalle seguenti entità principali:
+
+- **[Entità 1]**: [breve descrizione]
+- **[Entità 2]**: [breve descrizione]
+- **[Entità 3]**: [breve descrizione]
+
+## Definizione delle Entità
+
+### Tabella: [nome_tabella_1]
+
+**Descrizione**: [Descrivere lo scopo di questa tabella e il suo ruolo nel sistema]
+
+| Campo | Tipo | Null | Default | Descrizione |
+|-------|------|------|---------|-------------|
+| [campo_1] | [TIPO] | [SI/NO] | [valore] | [descrizione dettagliata] |
+| [campo_2] | [TIPO] | [SI/NO] | [valore] | [descrizione dettagliata] |
+| [campo_3] | [TIPO] | [SI/NO] | [valore] | [descrizione dettagliata] |
+
+**Indici**:
+
+- PRIMARY KEY ([campo_1])
+- UNIQUE KEY [nome_indice] ([campo_2])
+- KEY [nome_indice] ([campo_3])
+
+**Relazioni**:
+
+- [campo_riferimento] → [tabella_riferita]([campo_riferito])
+
+**Vincoli**:
+
+- [Descrizione vincolo 1]
+- [Descrizione vincolo 2]
+
+**Requisiti correlati**:
+
+- [REQ-XXX]: [Breve descrizione]
+
+---
+
+### Tabella: [nome_tabella_2]
+
+**Descrizione**: [Descrivere lo scopo di questa tabella e il suo ruolo nel sistema]
+
+| Campo | Tipo | Null | Default | Descrizione |
+|-------|------|------|---------|-------------|
+| [campo_1] | [TIPO] | [SI/NO] | [valore] | [descrizione dettagliata] |
+| [campo_2] | [TIPO] | [SI/NO] | [valore] | [descrizione dettagliata] |
+| [campo_3] | [TIPO] | [SI/NO] | [valore] | [descrizione dettagliata] |
+
+**Indici**:
+
+- PRIMARY KEY ([campo_1])
+- UNIQUE KEY [nome_indice] ([campo_2])
+- KEY [nome_indice] ([campo_3])
+
+**Relazioni**:
+
+- [campo_riferimento] → [tabella_riferita]([campo_riferito])
+
+**Vincoli**:
+
+- [Descrizione vincolo 1]
+- [Descrizione vincolo 2]
+
+**Requisiti correlati**:
+
+- [REQ-XXX]: [Breve descrizione]
+
+---
+
+## Esempi di Implementazione
+
+### [Esempio: E-commerce]
+
+#### Tabella: users
 
 **Descrizione**: Contiene informazioni sui clienti registrati nel sistema
 
@@ -9,52 +87,13 @@
 | user_id | INTEGER | NO | AUTO_INCREMENT | Chiave primaria |
 | username | VARCHAR(50) | NO | - | Nome utente univoco |
 | email | VARCHAR(100) | NO | - | Email univoca |
-| password_hash | VARCHAR(255) | NO | - | Hash della password (bcrypt) |
+| password_hash | VARCHAR(255) | NO | - | Hash della password |
 | first_name | VARCHAR(50) | NO | - | Nome |
 | last_name | VARCHAR(50) | NO | - | Cognome |
-| phone | VARCHAR(20) | YES | NULL | Numero di telefono |
 | created_at | TIMESTAMP | NO | CURRENT_TIMESTAMP | Data creazione |
-| updated_at | TIMESTAMP | NO | CURRENT_TIMESTAMP ON UPDATE | Data ultimo aggiornamento |
-| is_active | BOOLEAN | NO | TRUE | Flag attivazione account |
+| is_active | BOOLEAN | NO | TRUE | Flag attivazione |
 
-**Indici**:
-
-- PRIMARY KEY (user_id)
-- UNIQUE KEY uk_username (username)
-- UNIQUE KEY uk_email (email)
-
-**Vincoli**:
-
-- email deve seguire formato email valido
-- username lunghezza minima 3 caratteri
-
----
-
-## Tabella: categories
-
-**Descrizione**: Gerarchia delle categorie prodotti
-
-| Campo | Tipo | Null | Default | Descrizione |
-|-------|------|------|---------|-------------|
-| category_id | INTEGER | NO | AUTO_INCREMENT | Chiave primaria |
-| name | VARCHAR(50) | NO | - | Nome categoria |
-| description | TEXT | YES | NULL | Descrizione categoria |
-| parent_category_id | INTEGER | YES | NULL | Riferimento categoria padre |
-| created_at | TIMESTAMP | NO | CURRENT_TIMESTAMP | Data creazione |
-
-**Indici**:
-
-- PRIMARY KEY (category_id)
-- UNIQUE KEY uk_category_name (name)
-- KEY fk_parent_category (parent_category_id)
-
-**Relazioni**:
-
-- parent_category_id → categories(category_id)
-
----
-
-## Tabella: products
+#### Tabella: products
 
 **Descrizione**: Catalogo prodotti disponibili
 
@@ -62,42 +101,63 @@
 |-------|------|------|---------|-------------|
 | product_id | INTEGER | NO | AUTO_INCREMENT | Chiave primaria |
 | name | VARCHAR(100) | NO | - | Nome prodotto |
-| description | TEXT | YES | NULL | Descrizione dettagliata |
 | price | DECIMAL(10,2) | NO | - | Prezzo unitario |
-| sku | VARCHAR(50) | NO | - | Codice prodotto univoco |
+| category_id | INTEGER | NO | - | Categoria |
 | stock_quantity | INTEGER | NO | 0 | Quantità in magazzino |
-| category_id | INTEGER | NO | - | Categoria di appartenenza |
-| created_at | TIMESTAMP | NO | CURRENT_TIMESTAMP | Data creazione |
-| updated_at | TIMESTAMP | NO | CURRENT_TIMESTAMP ON UPDATE | Data ultimo aggiornamento |
-| is_available | BOOLEAN | NO | TRUE | Disponibilità vendita |
 
-**Indici**:
+### [Esempio: Banking]
 
-- PRIMARY KEY (product_id)
-- UNIQUE KEY uk_sku (sku)
-- KEY fk_product_category (category_id)
-- KEY idx_price (price)
-- KEY idx_availability (is_available)
+#### Tabella: transactions
 
-**Relazioni**:
-
-- category_id → categories(category_id)
-
-**Vincoli**:
-
-- price > 0
-- stock_quantity >= 0
-
----
-
-## Tabella: orders
-
-**Descrizione**: Ordini effettuati dai clienti
+**Descrizione**: Movimenti sui conti
 
 | Campo | Tipo | Null | Default | Descrizione |
 |-------|------|------|---------|-------------|
-| order_id | INTEGER | NO | AUTO_INCREMENT | Chiave primaria |
-| user_id | INTEGER | NO | - | Cliente che ha effettuato l'ordine |
+| transaction_id | INTEGER | NO | AUTO_INCREMENT | Chiave primaria |
+| account_id | INTEGER | NO | - | Conto di riferimento |
+| amount | DECIMAL(15,2) | NO | - | Importo operazione |
+| transaction_type | VARCHAR(20) | NO | - | Tipo operazione |
+| transaction_date | TIMESTAMP | NO | CURRENT_TIMESTAMP | Data operazione |
+
+### [Esempio: Healthcare]
+
+#### Tabella: patients
+
+**Descrizione**: Anagrafica pazienti
+
+| Campo | Tipo | Null | Default | Descrizione |
+|-------|------|------|---------|-------------|
+| patient_id | INTEGER | NO | AUTO_INCREMENT | Chiave primaria |
+| first_name | VARCHAR(50) | NO | - | Nome |
+| last_name | VARCHAR(50) | NO | - | Cognome |
+| date_of_birth | DATE | NO | - | Data di nascita |
+| gender | VARCHAR(10) | YES | NULL | Genere |
+| medical_record_number | VARCHAR(20) | NO | - | Numero cartella clinica |
+
+#### Tabella: appointments
+
+**Descrizione**: Appuntamenti medici
+
+| Campo | Tipo | Null | Default | Descrizione |
+|-------|------|------|---------|-------------|
+| appointment_id | INTEGER | NO | AUTO_INCREMENT | Chiave primaria |
+| patient_id | INTEGER | NO | - | Paziente |
+| practitioner_id | INTEGER | NO | - | Medico |
+| appointment_date | DATETIME | NO | - | Data e ora |
+| status | VARCHAR(20) | NO | 'SCHEDULED' | Stato appuntamento |
+| notes | TEXT | YES | NULL | Note cliniche |
+
+## Glossario dei Termini
+
+- **[Termine 1]**: [Definizione]
+- **[Termine 2]**: [Definizione]
+- **[Termine 3]**: [Definizione]
+
+## Regole di Business
+
+- [RB-1]: [Descrizione regola di business]
+- [RB-2]: [Descrizione regola di business]
+- [RB-3]: [Descrizione regola di business]
 | order_date | TIMESTAMP | NO | CURRENT_TIMESTAMP | Data e ora ordine |
 | status | ENUM | NO | 'PENDING' | Stato corrente ordine |
 | total_amount | DECIMAL(10,2) | NO | - | Importo totale |

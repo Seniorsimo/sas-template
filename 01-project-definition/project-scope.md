@@ -245,5 +245,4 @@
 
 ---
 
-*Questo documento rappresenta l'accordo formale sullo scope del progetto.*
-*Qualsiasi modifica deve essere approvata attraverso il processo di change control.*
+*Scope del Progetto [Nome Progetto] - v[Versione]*

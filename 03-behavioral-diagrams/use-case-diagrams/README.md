@@ -1,148 +1,96 @@
-# Use Case Diagrams
+# 3.2 Diagrammi dei Casi d'Uso
 
-I diagrammi dei casi d'uso mostrano le funzionalità del sistema dal punto di vista degli utenti e degli attori esterni.
+## 3.2.1 Panoramica
 
-## Scopo dei Use Case Diagrams
+[Breve introduzione ai casi d'uso del sistema, includendo informazioni sul contesto d'uso e sugli utenti principali]
 
-I **Use Case Diagrams** servono per:
-- Identificare gli attori del sistema
-- Definire i casi d'uso principali
-- Mostrare le relazioni tra attori e casi d'uso
-- Stabilire i confini del sistema (system boundary)
+Il sistema [nome del sistema] interagisce con diversi attori esterni e offre le seguenti funzionalità principali.
 
-## Elementi del Diagramma
+## 3.2.2 Attori del Sistema
 
-### Attori (Actors)
+I seguenti attori interagiscono con il sistema:
 
-```plantuml
-actor "Nome Attore" as ActorAlias
-actor :Nome Attore: as ActorAlias2
-```
+- **[NomeAttore1]**: [Breve descrizione del ruolo e responsabilità]
+- **[NomeAttore2]**: [Breve descrizione del ruolo e responsabilità]
+- **[NomeAttore3]**: [Breve descrizione del ruolo e responsabilità]
 
-**Tipologie di Attori:**
+## 3.2.3 Casi d'Uso Principali
 
-- **Attori Primari**: Utenti principali che iniziano i casi d'uso
-- **Attori Secondari**: Sistemi esterni che supportano i casi d'uso
-- **Attori di Sistema**: Altri sistemi che interagiscono
+### UC-001: [Nome Caso d'Uso]
 
-### Casi d'Uso (Use Cases)
+**Descrizione**: [Breve descrizione dello scopo e del risultato del caso d'uso]
 
-```plantuml
-usecase "Nome Use Case" as UC1
-usecase (Nome Use Case) as UC2
-```
+**Attori**: [Attori coinvolti]
 
-**Livelli di Granularità:**
+**Pre-condizioni**: [Condizioni che devono essere vere prima dell'esecuzione]
 
-- **High-Level**: Processi business completi
-- **User-Level**: Interazioni singole utente
-- **Sub-Function**: Sotto-funzionalità specifiche
+**Post-condizioni**: [Stato del sistema dopo l'esecuzione con successo]
 
-### System Boundary
+**Flusso Principale**:
+1. [Passo 1]
+2. [Passo 2]
+3. [Passo 3]
 
-```plantuml
-rectangle "Nome Sistema" {
-  usecase "Use Case 1" as UC1
-  usecase "Use Case 2" as UC2
-}
-```
+**Flussi Alternativi**:
+- [Descrizione flusso alternativo 1]
+- [Descrizione flusso alternativo 2]
 
-### Relazioni
+**Requisiti correlati**: [IDs dei requisiti funzionali implementati]
 
-#### Association (Associazione)
+### UC-002: [Nome Caso d'Uso]
 
-```plantuml
-Actor --> (Use Case)
-```
+**Descrizione**: [Breve descrizione dello scopo e del risultato del caso d'uso]
 
-#### Include (Inclusione)
+**Attori**: [Attori coinvolti]
 
-```plantuml
-(Use Case Base) .> (Use Case Incluso) : <<include>>
-```
+**Pre-condizioni**: [Condizioni che devono essere vere prima dell'esecuzione]
 
-#### Extend (Estensione)
+**Post-condizioni**: [Stato del sistema dopo l'esecuzione con successo]
 
-```plantuml
-(Use Case Esteso) .> (Use Case Base) : <<extend>>
-```
+**Flusso Principale**:
+1. [Passo 1]
+2. [Passo 2]
+3. [Passo 3]
 
-#### Generalization (Generalizzazione)
+**Flussi Alternativi**:
+- [Descrizione flusso alternativo 1]
+- [Descrizione flusso alternativo 2]
 
-```plantuml
-(Use Case Specifico) --|> (Use Case Generale)
-Actor1 --|> Actor2
-```
+**Requisiti correlati**: [IDs dei requisiti funzionali implementati]
 
-## Come Utilizzare il Template
+## 3.2.4 Diagrammi
 
-### Identifica gli Attori
+### Diagramma Generale dei Casi d'Uso
 
-```plantuml
-' Attori Primari (esterni, a sinistra)
-actor "Cliente" as Customer
-actor "Amministratore" as Admin
+[Inserire riferimento al diagramma generale dei casi d'uso]
 
-' Attori Secondari (sistemi, a destra)  
-actor "Sistema Pagamenti" as PaymentSys
-actor "Sistema Email" as EmailSys
-```
+### Diagramma [Area Funzionale 1]
 
-### Definisci i Casi d'Uso
+[Inserire riferimento al diagramma dei casi d'uso specifici per l'area funzionale]
 
-```plantuml
-' Casi d'uso raggruppati logicamente
-package "Gestione Ordini" {
-  usecase "Effettua Ordine" as UC1
-  usecase "Modifica Ordine" as UC2
-  usecase "Cancella Ordine" as UC3
-}
+### Diagramma [Area Funzionale 2]
 
-package "Gestione Account" {
-  usecase "Registra Account" as UC4
-  usecase "Login" as UC5
-  usecase "Recupera Password" as UC6
-}
-```
+[Inserire riferimento al diagramma dei casi d'uso specifici per l'area funzionale]
 
-### Stabilisci le Relazioni
+## 3.2.5 Relazioni tra Casi d'Uso
 
-```plantuml
-' Associazioni dirette
-Customer --> UC1
-Customer --> UC2
-Admin --> UC3
+### Relazioni di Inclusione (<<include>>)
 
-' Relazioni include/extend
-UC1 .> UC5 : <<include>>
-UC6 .> UC5 : <<extend>>
-```
+- **[Caso d'uso base]** include **[Caso d'uso incluso]**: [Spiegazione della relazione]
+- **[Caso d'uso base]** include **[Caso d'uso incluso]**: [Spiegazione della relazione]
 
-## Pattern Comuni
+### Relazioni di Estensione (<<extend>>)
 
-### Pattern Cliente-Sistema
+- **[Caso d'uso esteso]** estende **[Caso d'uso base]**: [Spiegazione della condizione e dell'estensione]
+- **[Caso d'uso esteso]** estende **[Caso d'uso base]**: [Spiegazione della condizione e dell'estensione]
 
-```plantuml
-@startuml
-actor "Cliente" as C
-actor "Sistema Bancario" as Bank
+## 3.2.6 Tracciabilità ai Requisiti
 
-rectangle "E-commerce System" {
-  usecase "Sfoglia Catalogo" as UC1
-  usecase "Effettua Ordine" as UC2
-  usecase "Effettua Pagamento" as UC3
-  usecase "Ricevi Conferma" as UC4
-}
-
-C --> UC1
-C --> UC2
-UC2 .> UC3 : <<include>>
-UC3 --> Bank
-UC3 .> UC4 : <<include>>
-@enduml
-```
-
-### Pattern Amministrativo
+| Caso d'Uso | Requisiti Implementati | User Stories Correlate |
+|------------|------------------------|------------------------|
+| UC-001     | [REQ-IDs]              | [US-IDs]               |
+| UC-002     | [REQ-IDs]              | [US-IDs]               |
+| UC-003     | [REQ-IDs]              | [US-IDs]               |
 
 ```plantuml
 @startuml

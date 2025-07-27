@@ -1,4 +1,4 @@
-# Descrizione del Progetto
+# Descrizione del Progetto [Nome Progetto]
 
 ## Panoramica Generale
 
@@ -101,4 +101,4 @@
 
 ---
 
-*Template creato per facilitare la definizione del progetto*
+*Descrizione del Progetto [Nome Progetto] - v[Versione]*

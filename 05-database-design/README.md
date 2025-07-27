@@ -1,125 +1,94 @@
-# Database Design
+# Database Design - [Nome Progetto]
 
-Questa sezione contiene la progettazione del database tramite **DIAGRAMMI VISIVI SOLAMENTE**.
+## Introduzione
 
-> **IMPORTANTE**: Questa sezione contiene esclusivamente diagrammi e documentazione del design. 
-> Non include codice SQL, DDL o script di implementazione.
+Questa sezione documenta il design della base dati per il sistema [Nome Progetto]. Il design è rappresentato attraverso diagrammi visivi e descrizioni strutturate che definiscono il modello dati concettuale e logico.
 
-## Obiettivo
+> **IMPORTANTE**: Questa documentazione contiene esclusivamente diagrammi e specifiche di design.
+> L'implementazione fisica (SQL, DDL) è gestita separatamente.
 
-Documentare la struttura dei dati tramite:
+## Obiettivi del Database Design
 
-- **Diagrammi ER (Entity-Relationship)** per il modello concettuale
-- **Dizionario dei dati** per la documentazione delle entità
-- **Diagrammi di architettura dati** per la visione complessiva
+[Descrivi gli obiettivi principali del database per questo progetto. Ad esempio:]
 
-## Struttura
+- Supportare le funzionalità core di [funzionalità principale]
+- Garantire l'integrità e la coerenza dei dati di [dominio principale]
+- Facilitare l'accesso efficiente alle informazioni di [tipologia dati]
+- Supportare la scalabilità per [requisiti di crescita/volume]
 
-### er-diagram/
+## Panoramica del Modello Dati
 
-Diagrammi Entità-Relazione che mostrano:
-- Entità del dominio e loro attributi
-- Relazioni tra entità con cardinalità
-- Chiavi primarie e foreign keys
-- Vincoli di integrità referenziale
-- Modello concettuale e logico dei dati
+[Fornisci una breve panoramica del modello dati e delle entità principali]
 
-### data-dictionary.md
+Il modello dati è organizzato attorno alle seguenti entità principali:
 
-Dizionario dei dati completo che documenta:
-- Definizione di tutte le entità
-- Descrizione dettagliata degli attributi
-- Tipi di dati e vincoli di dominio
-- Relazioni e regole di business
-- Glossario dei termini del dominio
+- **[Entità 1]**: [Breve descrizione]
+- **[Entità 2]**: [Breve descrizione]
+- **[Entità 3]**: [Breve descrizione]
 
-## Convenzioni ER
+## Struttura della Documentazione
 
-### Entità
+### Diagrammi ER
 
-- Nomi al singolare e in PascalCase
-- Attributi in camelCase
-- Chiavi primarie sottolineate
+I diagrammi Entity-Relationship nella cartella `er-diagram/` documentano:
+- Entità del dominio con attributi completi
+- Relazioni tra entità con cardinalità specificate
+- Vincoli di integrità e regole di business
 
-### Relazioni
+### Dizionario Dati
 
-- Nomi descrittivi del tipo di relazione
-- Cardinalità chiaramente specificata
-- Ruoli quando necessario
+Il file `data-dictionary.md` fornisce:
+- Definizioni dettagliate di ogni entità
+- Specifiche complete degli attributi (tipo, vincoli, default)
+- Regole di business associate ai dati
 
-### Attributi
+## Requisiti Supportati
 
-- Tipi di dati specificati
-- Vincoli di dominio
-- Valori di default
+Questo modello dati è stato progettato per supportare i seguenti requisiti:
 
-## Processo di Design Concettuale
+- [REQ-XXX]: [Breve descrizione del requisito]
+- [REQ-XXX]: [Breve descrizione del requisito]
+- [REQ-XXX]: [Breve descrizione del requisito]
 
-- **Analisi dei Requisiti**: Estrazione entità dai requirements e user stories
-- **Modello Concettuale**: Diagramma ER ad alto livello con entità principali
-- **Modello Logico**: Raffinamento con normalizzazione e vincoli
-- **Documentazione**: Dizionario dati e descrizioni dettagliate
+## Esempi di Implementazione
 
-> **Nota**: L'implementazione fisica (DDL, SQL) non è inclusa in questa sezione.
+### [Esempio: E-commerce]
 
-## Livelli di Normalizzazione
+In un contesto E-commerce, le entità principali includono:
+- **Customer**: Gestione degli utenti registrati
+- **Product**: Catalogo prodotti con attributi e categorie
+- **Order**: Ordini con stato, data, e riferimenti cliente
+- **OrderItem**: Dettaglio prodotti in un ordine
 
-- **1NF**: Eliminazione gruppi ripetuti e valori multipli
-- **2NF**: Eliminazione dipendenze parziali dalle chiavi
-- **3NF**: Eliminazione dipendenze transitive
-- **BCNF**: Forma normale Boyce-Codd per casi complessi
+### [Esempio: Banking]
 
-## Best Practices per Diagrammi ER
+In un contesto Banking, le entità principali includono:
+- **Account**: Conti correnti/deposito con saldo e stato
+- **Customer**: Anagrafica clienti con documenti di identità
+- **Transaction**: Movimenti con importo, data, tipo operazione
+- **Card**: Carte di pagamento associate ai conti
 
-### Design Concettuale
+### [Esempio: Healthcare]
 
-- **Entità chiare**: Nomi significativi che riflettono il dominio business
-- **Attributi essenziali**: Include solo attributi rilevanti per il modello
-- **Relazioni semantiche**: Nomi che esprimono il significato business
-- **Cardinalità accurate**: Rifletti le regole business reali
+In un contesto Healthcare, le entità principali includono:
+- **Patient**: Anagrafica pazienti con storia medica
+- **Practitioner**: Medici e specialisti con qualifiche
+- **Appointment**: Appuntamenti con data, durata, stato
+- **MedicalRecord**: Cartelle cliniche con diagnosi e trattamenti
 
-### Notation Standards
+## Livello di Normalizzazione
 
-- **Entità**: Rettangoli con nomi al singolare (Customer, Order, Product)
-- **Attributi**: Ovali collegati alle entità con linee
-- **Chiavi primarie**: Attributi sottolineati o evidenziati
-- **Relazioni**: Rombi con verbi che descrivono l'associazione
+Il modello dati è stato progettato secondo il livello di normalizzazione [specificare livello, es. 3NF], con le seguenti considerazioni:
 
-### Visual Organization
+- [Descrivere eventuali eccezioni alla normalizzazione]
+- [Spiegare eventuali denormalizzazioni intenzionali]
 
-- **Layout pulito**: Evita sovrapposizioni di linee
-- **Raggruppamento logico**: Entità correlate vicine
-- **Colori consistenti**: Usa colori per categorizzare entità
-- **Leggibilità**: Font e dimensioni appropriate
+## Tracciabilità ai Requisiti
 
-### Documentazione
+[Fornire informazioni su come questo design del database soddisfa i requisiti del sistema]
 
-- **Tracciabilità**: Collegamenti con requirements e user stories
-- **Glossario**: Definizioni chiare per termini di dominio
-- **Vincoli**: Documenta regole business non esprimibili graficamente
-- **Versioning**: Mantieni storia delle modifiche al modello
+## Considerazioni Future
 
-## Template e Strumenti
-
-### PlantUML per ER Diagrams
-
-Usa la sintassi PlantUML per diagrammi versionabili:
-```plantuml
-@startuml
-entity Customer {
-  * customer_id : UUID
-  --
-  * first_name : VARCHAR(50)
-  * last_name : VARCHAR(50)
-  email : VARCHAR(100)
-}
-@enduml
-```
-
-### Collegamento con Altri Diagrammi
-
-- **Class Diagrams**: Mappatura entità → classi domain
-- **Component Diagrams**: Architettura data layer
-- **Use Cases**: Operazioni CRUD per ogni entità
+[Discutere possibili evoluzioni future del modello dati]
 - Pianifica per la scalabilità
 - Documenta decisioni di denormalizzazione

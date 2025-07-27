@@ -1,236 +1,71 @@
-# Integrations - Integrazioni
+# Integrazioni - [Progetto]
 
-Questa cartella contiene i requisiti per le integrazioni con sistemi esterni e servizi di terze parti.
+## Panoramica delle Integrazioni
 
-## Panoramica
+[Fornire una panoramica generale delle integrazioni implementate nel sistema. Descrivere l'approccio complessivo alle integrazioni e la loro importanza strategica.]
 
-I requisiti di **Integrazione** definiscono come il sistema deve interagire con sistemi esterni, API di terze parti, servizi cloud e sistemi legacy.
+## Sistemi Integrati
 
-## Tipi di Integrazioni
+### [Categoria Integrazione 1 - es. API di Terze Parti]
 
-### API di Terze Parti
+[Descrizione della categoria di integrazione]
 
-- Payment gateways (Stripe, PayPal, etc.)
-- Servizi di comunicazione (Twilio, SendGrid)
-- Servizi di autenticazione (OAuth providers)
-- Servizi di mapping (Google Maps, etc.)
+- [Sistema 1.1] - [Descrizione breve]
+- [Sistema 1.2] - [Descrizione breve]
+- [Sistema 1.3] - [Descrizione breve]
 
-### Sistemi Legacy
+### [Categoria Integrazione 2 - es. Sistemi Legacy]
 
-- Database legacy
-- Applicazioni enterprise esistenti
-- Mainframe systems
-- File systems
+[Descrizione della categoria di integrazione]
 
-### Servizi Cloud
+- [Sistema 2.1] - [Descrizione breve]
+- [Sistema 2.2] - [Descrizione breve]
+- [Sistema 2.3] - [Descrizione breve]
 
-- Cloud storage (AWS S3, Azure Blob)
-- Servizi di messaging (SQS, Service Bus)
-- Servizi di monitoring (CloudWatch, etc.)
-- CDN e caching services
+### [Categoria Integrazione 3 - es. Servizi Cloud]
 
-### Database Esterni
+[Descrizione della categoria di integrazione]
 
-- Data warehouses
-- Sistemi di analytics
-- Database di partner
-- Master data management
+- [Sistema 3.1] - [Descrizione breve]
+- [Sistema 3.2] - [Descrizione breve]
+- [Sistema 3.3] - [Descrizione breve]
 
-## Struttura File
+## Riepilogo delle Integrazioni
 
-### Template Naming
+| ID Requisito | Sistema | Tipo | Criticità | Stato |
+|--------------|---------|------|-----------|-------|
+| REQ-I-001    | [Nome Sistema] | [Tipo] | [Criticità] | [Stato] |
+| REQ-I-002    | [Nome Sistema] | [Tipo] | [Criticità] | [Stato] |
+| REQ-I-003    | [Nome Sistema] | [Tipo] | [Criticità] | [Stato] |
 
-`REQ-I-XXX-[nome-integrazione].md`
+## Architettura di Integrazione
 
-### Esempi
+[Descrizione dell'architettura di integrazione, includendo pattern e tecnologie usate]
 
-- `REQ-I-001-payment-gateway.md`
-- `REQ-I-002-email-service.md`
-- `REQ-I-003-legacy-crm.md`
-- `REQ-I-004-cloud-storage.md`
+## Flussi di Integrazione Principali
 
-## Categorizzazione per Criticità
+### [Flusso 1]
 
-### Critiche (Must Have)
+[Descrizione del flusso di integrazione principale]
 
-- [ ] Integrazioni essenziali per business core
-- [ ] Sistemi di pagamento
-- [ ] Servizi di autenticazione
-- [ ] Database principali
+### [Flusso 2]
 
-### Importanti (Should Have)
+[Descrizione del flusso di integrazione principale]
 
-- [ ] Servizi di notifica
-- [ ] Sistemi di monitoring
-- [ ] Backup services
-- [ ] Analytics platforms
+## Esempi di Implementazione
 
-### Opzionali (Could Have)
+### E-commerce
 
-- [ ] Servizi di recommendation
-- [ ] Social media integrations
-- [ ] Advanced analytics
-- [ ] Marketing tools
+[Esempio di implementazione delle integrazioni in un contesto e-commerce]
 
-## Aspetti Tecnici da Considerare
+### Banking
 
-### Protocolli di Comunicazione
+[Esempio di implementazione delle integrazioni in un contesto banking]
 
-- **REST API**: GET, POST, PUT, DELETE
-- **GraphQL**: Query e mutations
-- **SOAP**: Web services legacy
-- **Message Queues**: Async communication
-- **Webhooks**: Event-driven integration
+### Healthcare
 
-### Sicurezza
+[Esempio di implementazione delle integrazioni in un contesto healthcare]
 
-- **API Keys**: Gestione e rotazione
-- **OAuth 2.0**: Authorization flows
-- **JWT Tokens**: Validazione e refresh
-- **SSL/TLS**: Encryption in transit
-- **IP Whitelisting**: Network security
+## Note di Implementazione
 
-### Error Handling
-
-- **Retry Logic**: Exponential backoff
-- **Circuit Breaker**: Fault tolerance
-- **Timeout Management**: Response time limits
-- **Fallback Strategies**: Graceful degradation
-
-### Monitoring
-
-- **Health Checks**: Service availability
-- **Performance Metrics**: Response times
-- **Error Rates**: Success/failure tracking
-- **SLA Monitoring**: Service level compliance
-
-## Template per Requisito Integrazione
-
-```markdown
-# REQ-I-XXX: [Nome Integrazione]
-
-## Informazioni Generali
-
-**ID**: REQ-I-XXX
-**Sistema Esterno**: [Nome sistema/servizio]
-**Proprietario**: [Fornitore/Team]
-**Criticità**: Critical | Important | Optional
-**Tipo**: API REST | SOAP | File Exchange | Database
-
-## Descrizione Integrazione
-
-[Descrizione di cosa fa l'integrazione e perché è necessaria]
-
-## Specifiche Tecniche
-
-### Endpoint/Connection
-
-- **URL**: [Endpoint URL]
-- **Protocollo**: [HTTP/HTTPS/FTP/etc.]
-- **Autenticazione**: [Tipo di auth]
-- **Rate Limits**: [Limiti di chiamate]
-
-### Dati Scambiati
-
-**Input**: [Formato e struttura dati inviati]  
-**Output**: [Formato e struttura dati ricevuti]
-
-## SLA e Performance
-
-- **Availability**: [Uptime atteso]
-- **Response Time**: [Tempo massimo risposta]
-- **Throughput**: [Operazioni/secondo]
-
-## Error Handling
-
-[Come gestire errori e fallimenti]
-
-## Testing
-
-[Come testare l'integrazione]
-```
-
-## Workflow di Integrazione
-
-### Design Phase
-
-- Analisi requirements
-- Valutazione alternative
-- Proof of Concept
-- Architecture review
-
-### Development Phase
-
-- Implementation
-- Unit testing
-- Integration testing
-- Security review
-
-### Testing Phase
-
-- End-to-end testing
-- Performance testing
-- Security testing
-- Disaster recovery testing
-
-### Deployment Phase
-
-- Staging deployment
-- Production deployment
-- Monitoring setup
-- Documentation
-
-## Dependencies Matrix
-
-| Integrazione | Core Features | Altri Sistemi | Criticità |
-|--------------|---------------|---------------|-----------|
-| REQ-I-001 | REQ-F-001, REQ-F-003 | REQ-I-002 | High |
-| REQ-I-002 | REQ-F-002 | - | Medium |
-
-## Rischi Comuni
-
-### Disponibilità
-
-- Downtime del servizio esterno
-- Cambiamenti non comunicati
-- Rate limiting imprevisto
-
-### Sicurezza
-
-- Breach del servizio terzo
-- Credential exposure
-- Data leakage
-
-### Performance
-
-- Latenza di rete
-- Bottleneck sui servizi esterni
-- Cascading failures
-
-### Business
-
-- Cambi di pricing
-- Discontinuation del servizio
-- Vendor lock-in
-
-## Best Practices
-
-### Do's
-
-- **Implementa circuit breakers** per fault tolerance
-- **Usa retry logic** con exponential backoff
-- **Monitora continuamente** le integrazioni
-- **Documenta accuratamente** API contracts
-- **Testa scenari di failure**
-
-### Don'ts
-
-- **Non fare assunzioni** su disponibilità
-- **Non ignorare rate limits**
-- **Non hardcodare** credenziali
-- **Non trascurare** la security
-- **Non dimenticare** il monitoring
-
----
-
-*Le integrazioni sono spesso il punto più fragile del sistema. Progettale con resilienza e monitoring adeguati.*
+[Riassumere considerazioni tecniche relative alle integrazioni, come protocolli usati, strategie di error handling, soluzioni di sicurezza adottate]

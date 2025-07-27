@@ -308,6 +308,4 @@
 
 ---
 
-*Ultima modifica: [Data]*
-*Prossima review: [Data]*
-*Document Owner: [Nome Risk Manager]*
+*Risk Register [Nome Progetto] - v[Versione]*

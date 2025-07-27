@@ -1,104 +1,118 @@
-# Component Diagrams
+# Diagrammi dei Componenti per [Nome Progetto]
 
-I diagrammi dei componenti mostrano l'organizzazione e le dipendenze dell'architettura software a livello di componenti.
+## Introduzione
 
-## Scopo dei Component Diagrams
+Questa sezione documenta l'architettura a componenti di [Nome Progetto], illustrando la decomposizione del sistema in moduli funzionali, le loro interfacce e le relazioni tra di essi.
 
-I **Component Diagrams** servono per:
+## Panoramica dell'Architettura a Componenti
 
-- Visualizzare l'architettura del sistema a livello di componenti
-- Mostrare le dipendenze tra moduli software
-- Documentare interfacce e contratti tra componenti
-- Pianificare deployment e distribuzione
+L'architettura di [Nome Progetto] è organizzata nei seguenti moduli principali:
 
-## Elementi del Diagramma
+- **[Nome Modulo 1]**: [Breve descrizione della responsabilità]
+- **[Nome Modulo 2]**: [Breve descrizione della responsabilità]
+- **[Nome Modulo 3]**: [Breve descrizione della responsabilità]
 
-### Componenti
+[Riferimento al diagramma generale dei componenti]
 
-#### Sintassi Base
+## Layer Architetturali
 
-```plantuml
-component "Nome Componente" as ComponentAlias
-[Altro Componente]
+Il sistema è strutturato nei seguenti layer architetturali:
+
+### Layer di Presentazione
+
+[Breve descrizione del layer e dei suoi componenti]
+
+[Riferimento al diagramma dei componenti del layer di presentazione]
+
+Componenti principali:
+- **[Nome Componente 1]**: [Responsabilità]
+- **[Nome Componente 2]**: [Responsabilità]
+
+### Layer di Business
+
+[Breve descrizione del layer e dei suoi componenti]
+
+[Riferimento al diagramma dei componenti del layer di business]
+
+Componenti principali:
+- **[Nome Componente 1]**: [Responsabilità]
+- **[Nome Componente 2]**: [Responsabilità]
+
+### Layer di Persistenza
+
+[Breve descrizione del layer e dei suoi componenti]
+
+[Riferimento al diagramma dei componenti del layer di persistenza]
+
+Componenti principali:
+- **[Nome Componente 1]**: [Responsabilità]
+- **[Nome Componente 2]**: [Responsabilità]
 ```
 
-#### Stereotipi
+## Interfacce Principali
 
-```plantuml
-component "<<service>>" as Service
-component "<<library>>" as Library  
-component "<<database>>" as Database
-component "<<external>>" as External
-```
+Le interfacce chiave tra i componenti includono:
 
-### Interfacce
+### [Nome Interfaccia 1]
 
-#### Interface Declaration
+[Breve descrizione dello scopo dell'interfaccia]
 
-```plantuml
-interface "Nome Interface" as IInterface
-() "Interface Symbol" as ISymbol
-```
+Metodi principali:
+- **[Nome Metodo 1]**: [Descrizione]
+- **[Nome Metodo 2]**: [Descrizione]
 
-#### Provided/Required Interfaces
+Componenti che la forniscono:
+- [Nome Componente]
 
-```plantuml
-component Component1
-interface "IService" as IService
+Componenti che la richiedono:
+- [Nome Componente]
 
-Component1 -( IService : provides
-Component1 --( IService : requires
-```
+### [Nome Interfaccia 2]
 
-### Packages e Raggruppamenti
+[Breve descrizione dello scopo dell'interfaccia]
 
-```plantuml
-package "Layer Name" {
-  component "Component A"
-  component "Component B"
-}
+Metodi principali:
+- **[Nome Metodo 1]**: [Descrizione]
+- **[Nome Metodo 2]**: [Descrizione]
 
-folder "Module Name" {
-  component "Component C"
-}
+Componenti che la forniscono:
+- [Nome Componente]
 
-cloud "External Systems" {
-  component "External API"
-}
-```
+Componenti che la richiedono:
+- [Nome Componente]
 
-### Relazioni
+## Integrazione con Sistemi Esterni
 
-#### Basic Connections
+### [Nome Sistema Esterno 1]
 
-```plantuml
-ComponentA --> ComponentB
-ComponentA -- ComponentB : "uses"
-ComponentA ..> ComponentB : "depends on"
-```
+[Breve descrizione dell'integrazione]
 
-#### Interface Connections
+[Riferimento al diagramma dell'integrazione]
 
-```plantuml
-ComponentA -( IInterface
-ComponentB --( IInterface
-IInterface - ComponentC
-```
+Componenti coinvolti:
+- **[Nome Componente]**: [Ruolo nell'integrazione]
 
-## Come Utilizzare il Template
+### [Nome Sistema Esterno 2]
 
-### Identifica i Layer Architetturali
+[Breve descrizione dell'integrazione]
 
-```plantuml
-package "Presentation Layer" {
-  component "Web UI"
-  component "Mobile App"
-}
+[Riferimento al diagramma dell'integrazione]
 
-package "Business Layer" {
-  component "Business Logic"
-  component "Domain Services"
-}
+Componenti coinvolti:
+- **[Nome Componente]**: [Ruolo nell'integrazione]
+
+## Decisioni Architetturali
+
+| ID | Decisione | Motivazione | Alternative Considerate |
+|----|-----------|-------------|-------------------------|
+| AD01 | [Decisione 1] | [Motivazione] | [Alternative] |
+| AD02 | [Decisione 2] | [Motivazione] | [Alternative] |
+
+## Riferimenti ad Altri Documenti
+
+- **Requisiti implementati**: [Riferimenti ai requisiti]
+- **Diagrammi di deployment correlati**: [Riferimenti]
+- **Diagrammi delle classi correlati**: [Riferimenti]
 
 package "Data Layer" {
   component "Repository"

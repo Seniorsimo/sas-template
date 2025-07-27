@@ -258,6 +258,4 @@
 
 ---
 
-*Ultima modifica: [Data]*
-*Versione documento: [Numero versione]*
-*Prossima revisione programmata: [Data]*
+*Stakeholders del Progetto [Nome Progetto] - v[Versione]*

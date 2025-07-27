@@ -1,103 +1,79 @@
-# Class Diagrams
+# Diagrammi delle Classi per [Nome Progetto]
 
-I diagrammi delle classi mostrano la struttura statica del sistema, incluse classi, attributi, metodi e relazioni.
+## Introduzione
 
-## Scopo dei Class Diagrams
+Questa sezione documenta la struttura statica di [Nome Progetto] attraverso diagrammi delle classi UML, illustrando le classi del sistema, i loro attributi, metodi e le relazioni tra di esse.
 
-I **Class Diagrams** servono per:
+## Modello del Dominio
 
-- Modellare la struttura statica del sistema
-- Definire classi, attributi e metodi
-- Mostrare relazioni tra classi
-- Documentare l'architettura object-oriented
+Il modello del dominio rappresenta le entità principali del business e le loro relazioni:
 
-## Elementi del Diagramma
+[Riferimento al file del modello del dominio]
 
-### Classi
+### Entità Principali
 
-#### Sintassi Base
+- **[Nome Entità 1]**: [Breve descrizione dell'entità]
+- **[Nome Entità 2]**: [Breve descrizione dell'entità]
+- **[Nome Entità 3]**: [Breve descrizione dell'entità]
 
-```plantuml
-class "Nome Classe" {
-  +attributo_pubblico : tipo
-  -attributo_privato : tipo
-  #attributo_protetto : tipo
-  ~attributo_package : tipo
-  --
-  +metodo_pubblico() : tipo_ritorno
-  -metodo_privato() : void
-  {abstract} +metodo_astratto()
-  {static} +metodo_statico()
-}
-```
+## Architettura a Livello di Classi
 
-#### Stereotipi
+L'architettura del sistema è organizzata nei seguenti package principali:
 
-```plantuml
-class "<<interface>>" as Interface
-class "<<abstract>>" as AbstractClass
-class "<<entity>>" as Entity
-class "<<service>>" as Service
-class "<<repository>>" as Repository
-```
+### [Nome Package 1]
 
-### Visibilità
+[Breve descrizione dello scopo del package]
 
-```plantuml
-class Example {
-  + public_attribute : String
-  - private_attribute : int
-  # protected_attribute : Date
-  ~ package_attribute : boolean
-  __
-  + public_method() : void
-  - private_method() : String
-  # protected_method() : int
-  ~ package_method() : boolean
-}
-```
+[Riferimento al diagramma delle classi del package]
 
-### Relazioni
+Classi principali:
+- **[Nome Classe 1]**: [Responsabilità principale]
+- **[Nome Classe 2]**: [Responsabilità principale]
 
-#### Association (Associazione)
+### [Nome Package 2]
 
-```plantuml
-ClassA -- ClassB
-ClassA --> ClassB : "navigazione"
-ClassA -- ClassB : "ruolo"
-```
+[Breve descrizione dello scopo del package]
 
-#### Aggregation (Aggregazione)
+[Riferimento al diagramma delle classi del package]
 
-```plantuml
-ClassA o-- ClassB
-ClassA "1" o-- "0..*" ClassB : "contiene"
-```
+Classi principali:
+- **[Nome Classe 1]**: [Responsabilità principale]
+- **[Nome Classe 2]**: [Responsabilità principale]
 
-#### Composition (Composizione)
+## Design Patterns Implementati
 
-```plantuml
-ClassA *-- ClassB
-ClassA "1" *-- "1..*" ClassB : "è composto da"
-```
+### [Nome Pattern 1]
 
-#### Inheritance (Ereditarietà)
+[Breve descrizione dell'implementazione del pattern]
 
-```plantuml
-SubClass --|> SuperClass
-ConcreteClass --|> AbstractClass
-```
+[Riferimento al diagramma del pattern]
 
-#### Implementation (Implementazione)
+Classi coinvolte:
+- **[Nome Classe 1]**: [Ruolo nel pattern]
+- **[Nome Classe 2]**: [Ruolo nel pattern]
 
-```plantuml
-ConcreteClass ..|> Interface
-```
+### [Nome Pattern 2]
 
-#### Dependency (Dipendenza)
+[Breve descrizione dell'implementazione del pattern]
 
-```plantuml
-ClassA ..> ClassB : "usa"
+[Riferimento al diagramma del pattern]
+
+Classi coinvolte:
+- **[Nome Classe 1]**: [Ruolo nel pattern]
+- **[Nome Classe 2]**: [Ruolo nel pattern]
+
+## Interfacce Principali
+
+Le interfacce chiave del sistema includono:
+
+- **[Nome Interfaccia 1]**: [Descrizione dello scopo e responsabilità]
+- **[Nome Interfaccia 2]**: [Descrizione dello scopo e responsabilità]
+
+## Riferimenti ad Altri Documenti
+
+- **Requisiti implementati**: [Riferimenti ai requisiti]
+- **Diagrammi di sequenza correlati**: [Riferimenti ai diagrammi di sequenza]
+- **Diagrammi dei componenti correlati**: [Riferimenti ai diagrammi dei componenti]
 ```
 
 ### Molteplicità

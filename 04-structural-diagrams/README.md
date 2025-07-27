@@ -1,198 +1,76 @@
-# Diagrammi Strutturali
+# Diagrammi Strutturali per [Nome Progetto]
 
-Questa sezione contiene tutti i diagrammi che descrivono la struttura e l'architettura del sistema.
+## Introduzione
 
-## Struttura
+Questa sezione documenta l'architettura strutturale di [Nome Progetto], fornendo una rappresentazione dettagliata delle componenti statiche del sistema, delle loro relazioni e dell'organizzazione generale dell'architettura.
 
-### class-diagrams/
+## Panoramica Architetturale
 
-Diagrammi delle classi UML che mostrano:
-- Classi del dominio e business objects
-- Attributi, metodi e visibilità
-- Relazioni tra classi (ereditarietà, composizione, aggregazione)
-- Interfacce, classi astratte e pattern OOP
-- Design patterns e architectural patterns
+[Breve descrizione dell'approccio architetturale adottato nel progetto, ad esempio architettura a microservizi, monolitica, client-server, etc.]
 
-### component-diagrams/
+L'architettura di [Nome Progetto] è organizzata nei seguenti layer principali:
 
-Diagrammi dei componenti che descrivono:
-- Architettura del sistema a livello di componenti
-- Interfacce e contratti tra moduli
-- Dipendenze e accoppiamento tra componenti
-- Layer architetturali e package organization
-- Deployment e distribuzione dei componenti
+- **Layer di Presentazione**: [Descrizione delle tecnologie frontend e dell'interfaccia utente]
+- **Layer di Business**: [Descrizione dei servizi e della logica di business]
+- **Layer di Persistenza**: [Descrizione del sistema di storage e database]
 
-### template-system-architecture.puml
+## Diagramma dell'Architettura di Sistema
 
-Template per il diagramma dell'architettura generale del sistema che include:
-- Layer dell'applicazione (Frontend, API Gateway, Services)
-- Database Layer (Database principale, Cache, File Storage)
-- Servizi esterni (servizi di terze parti)
-- Componenti di infrastruttura (Load Balancer, Monitoring, Security, CI/CD)
-- Flussi di comunicazione tra i componenti
+Il diagramma dell'architettura generale illustra i componenti principali del sistema e le loro interazioni:
 
-**Come utilizzare**: Personalizza i nomi dei servizi, delle tecnologie e delle connessioni in base al tuo progetto specifico.
+[Riferimento al diagramma system-architecture.puml]
 
-## Strumenti Disponibili
+## Diagrammi delle Classi
 
-### PlantUML (.puml)
+I diagrammi delle classi documentano la struttura interna delle componenti principali:
 
-Perfetto per diagrammi UML formali:
-- Sintassi testuale precisa
-- Supporto completo per UML standard
-- Facile versionamento
-- Generazione automatica
+- [Nome Componente 1]: [Breve descrizione e riferimento al file]
+- [Nome Componente 2]: [Breve descrizione e riferimento al file]
+- [Nome Componente 3]: [Breve descrizione e riferimento al file]
 
-**Esempio d'uso**:
-```plantuml
-@startuml
-class User {
-  -id: Long
-  +getName(): String
-}
-@enduml
-```
+## Diagrammi dei Componenti
 
-### Draw.io (.drawio)
+I diagrammi dei componenti illustrano l'organizzazione del sistema a livello di moduli:
 
-Ideale per diagrammi di architettura e infrastruttura:
+- [Nome Modulo 1]: [Breve descrizione e riferimento al file]
+- [Nome Modulo 2]: [Breve descrizione e riferimento al file]
 
-- Interfaccia drag-and-drop
-- Librerie di icone predefinite
-- Ottimo per diagrammi di deployment
-- Collaborazione visuale
+## Design Patterns Implementati
 
-**Come aprire**: Fai doppio clic sul file `.drawio` per aprirlo nell'editor integrato di VS Code.
+Il sistema utilizza i seguenti design patterns:
 
-### Mermaid (.mmd)
+- **[Nome Pattern 1]**: [Breve descrizione dell'implementazione e scopo]
+- **[Nome Pattern 2]**: [Breve descrizione dell'implementazione e scopo]
+- **[Nome Pattern 3]**: [Breve descrizione dell'implementazione e scopo]
 
-Per diagrammi rapidi e semplici:
+## Tecnologie Utilizzate
 
-- Sintassi semplificata
-- Rendering veloce
-- Perfetto per documentazione
+### Backend
+- [Tecnologia/Framework 1]: [Scopo/utilizzo]
+- [Tecnologia/Framework 2]: [Scopo/utilizzo]
 
-## Workflow Consigliato
+### Frontend
+- [Tecnologia/Framework 1]: [Scopo/utilizzo]
+- [Tecnologia/Framework 2]: [Scopo/utilizzo]
 
-### Architettura di Sistema (Draw.io)
+### Persistenza
+- [Tecnologia/Database 1]: [Scopo/utilizzo]
+- [Tecnologia/Database 2]: [Scopo/utilizzo]
+## Riferimenti ad Altri Documenti
 
-- Inizia con il diagramma generale dell'architettura
-- Mostra i layer principali
-- Evidenzia i flussi di comunicazione
+- **Requisiti correlati**: [Riferimenti ai requisiti implementati]
+- **User stories correlate**: [Riferimenti alle user stories implementate]
+- **Diagrammi comportamentali**: [Riferimenti ai diagrammi comportamentali correlati]
 
-### Diagrammi dei Componenti (PlantUML)
+## Decisioni Architetturali
 
-- Dettaglio dei singoli componenti
-- Interfacce e dipendenze
-- Mapping con l'architettura generale
+| ID | Decisione | Motivazione | Alternative Considerate | Impatto |
+|----|-----------|-------------|-------------------------|---------|
+| AD01 | [Decisione 1] | [Motivazione] | [Alternative] | [Impatto] |
+| AD02 | [Decisione 2] | [Motivazione] | [Alternative] | [Impatto] |
 
-### Diagrammi delle Classi (PlantUML)
+## Considerazioni per Evoluzioni Future
 
-- Modello del dominio
-- Design patterns implementati
-- Struttura interna dei componenti
-
-## Template Disponibili
-
-### Per PlantUML
-
-- `template-class-diagram.puml` - Struttura base per diagrammi delle classi
-- Esempi di relazioni, stereotipi e annotazioni
-
-### Per Draw.io
-
-- `system-architecture.drawio` - Template architettura sistema
-- Layout predefinito con layer colorati
-- Esempi di connessioni e etichette
-
-## Best Practices
-
-### Diagrammi delle Classi
-
-- Mostra solo attributi e metodi rilevanti
-- Usa stereotipi per chiarire ruoli (`<<interface>>`, `<<abstract>>`)
-- Raggruppa classi correlate in package
-- Includi molteplicità nelle relazioni
-
-### Diagrammi di Architettura
-
-- Usa colori consistenti per raggruppare layer
-- Mostra direzione dei flussi di comunicazione
-- Includi tecnologie utilizzate
-- Mantieni il diagramma ad alto livello
-
-### Naming Conventions
-
-- File: `[component-name]-[type].puml` o `[system-name]-architecture.drawio`
-- Classi: PascalCase
-- Attributi/Metodi: camelCase
-- Package: lowercase
-
-## Visualizzazione
-
-### PlantUML
-
-- Apri il file `.puml`
-- Usa `Ctrl+Shift+P` → `PlantUML: Preview Current Diagram`
-- Per esportare: `PlantUML: Export Current Diagram`
-
-## Integrazione con Documentazione
-
-- Riferimenti ai diagrammi nella documentazione testuale
-- Link tra diagrammi comportamentali e strutturali
-- Tracciabilità con requisiti e user stories
-- Relazioni tra classi (associazione, aggregazione, composizione, ereditarietà)
-- Interfacce e classi astratte
-
-### component-diagrams/
-
-Diagrammi dei componenti che descrivono:
-- Architettura a componenti
-- Interfacce fornite e richieste
-- Dipendenze tra componenti
-- Organizzazione del sistema
-
-## Convenzioni per Diagrammi delle Classi
-
-### Visibilità
-
-- `+` public
-- `-` private
-- `#` protected
-- `~` package
-
-### Relazioni
-
-- **Associazione**: linea semplice
-- **Aggregazione**: diamante vuoto
-- **Composizione**: diamante pieno
-- **Ereditarietà**: triangolo vuoto
-- **Implementazione**: triangolo vuoto + linea tratteggiata
-
-### Stereotipi
-
-- `<<interface>>`
-- `<<abstract>>`
-- `<<entity>>`
-- `<<controller>>`
-- `<<service>>`
-
-## Best Practices
-
-### Organizzazione
-
-- Raggruppa classi correlate
-- Mantieni diagrammi leggibili (max 10-15 classi)
-- Usa package per organizzare classi
-
-### Dettaglio
-
-- Includi attributi e metodi principali
-- Specifica tipi di dati importanti
-- Mostra cardinalità nelle associazioni
-
-### Tracciabilità
-
-- Collega alle user stories
-- Mantieni consistenza con i diagrammi comportamentali
-- Documenta le decisioni di design
+- [Considerazione 1]: [Descrizione di possibili evoluzioni future dell'architettura]
+- [Considerazione 2]: [Descrizione di possibili evoluzioni future dell'architettura]
+- [Considerazione 3]: [Descrizione di possibili evoluzioni future dell'architettura]

@@ -1,5 +1,6 @@
 temp-*.md
 *.pdf
+*.html
 
 .venv
 .plantuml_cache

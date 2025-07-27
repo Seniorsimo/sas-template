@@ -1,210 +1,52 @@
-# Template Documentazione Progetto Software
+# [Nome Progetto] - Documentazione Tecnica
 
-Questo workspace fornisce un **template completo** per gestire l'intero ciclo di vita documentale di un progetto software, dalla definizione iniziale fino alla progettazione strutturale.
+## Panoramica del Progetto
 
-## Come Utilizzare Questo Template
+[Breve descrizione del progetto che evidenzi scopo, ambito e obiettivi principali. Fornire un quadro generale che introduca il lettore alla documentazione completa.]
 
-- **Clona** questo repository
-- **Personalizza** i file template in base al tuo progetto specifico
-- **Sostituisci** i placeholder `[Nome Progetto]`, `[Descrizione]`, etc. con i tuoi dati
-- **Elimina** le sezioni non necessarie per il tuo progetto
-- **Aggiungi** diagrammi e documentazione specifica
-
-## Struttura del Template
+## Indice della Documentazione
 
 ### 01-project-definition/
 
-**Template completi per la definizione iniziale del progetto**
-
-- `project-description.md` - Descrizione dettagliata del progetto (problema, soluzione, benefici)
-- `stakeholders.md` - Identificazione e analisi completa degli stakeholder  
-- `objectives.md` - Obiettivi SMART (business/tecnici/qualità) con metriche di successo
-- `project-scope.md` - Definizione dello scope (in/out scope, vincoli, WBS)
-- `risk-register.md` - Registro dei rischi con matrice probabilità/impatto e piani di mitigazione
+Definizione del progetto che include descrizione, stakeholder, obiettivi, ambito e rischi identificati.
 
 ### 02-requirements/
 
-**Gestione gerarchica e strutturata dei requisiti**
-
-- **`user-stories/`** - Epic e user stories con prioritizzazione MoSCoW
-- **`functional-requirements/`** - Struttura organizzata in:
-  - `core-features/` - Funzionalità principali del sistema
-  - `integrations/` - Requisiti di integrazione con sistemi esterni
-  - `api-requirements/` - Specifiche per API e servizi web
-  - `ui-requirements/` - Requisiti di interfaccia utente e UX
-- **`non-functional-requirements/`** - Performance, security, usability, scalability
-- **`acceptance-criteria/`** - Criteri strutturati per categoria:
-  - `functional-acceptance/` - Criteri per validazione funzionale
-  - `non-functional-acceptance/` - Criteri per qualità e performance
-  - `integration-acceptance/` - Criteri per testing di integrazione
-  - `user-acceptance/` - Criteri per UAT e business validation
+Requisiti del progetto organizzati gerarchicamente in user stories, requisiti funzionali e non funzionali, e criteri di accettazione.
 
 ### 03-behavioral-diagrams/
 
-**Diagrammi UML comportamentali con template e guide complete**
-
-- **`use-case-diagrams/`** - Casi d'uso con attori, boundary e relazioni + README dettagliato
-- **`activity-diagrams/`** - Workflow e processi business con swimlanes + guide best practices
-- **`sequence-diagrams/`** - Interazioni temporali tra oggetti/sistemi + pattern comuni
+[Breve introduzione alla sezione dei diagrammi comportamentali]
 
 ### 04-structural-diagrams/
 
-**Diagrammi UML strutturali per architettura e design**
-
-- **`class-diagrams/`** - Modello OOP con relazioni, pattern e principi SOLID + esempi multi-dominio
-- **`component-diagrams/`** - Architettura componenti, layer e deployment + pattern architetturali
-- `template-system-architecture.puml` - Template architettura generale del sistema
+[Breve introduzione alla sezione dei diagrammi strutturali]
 
 ### 05-database-design/
 
-**Progettazione dati tramite diagrammi e documentazione (NO SQL)**
+[Breve introduzione alla sezione di progettazione del database]
 
-- **`er-diagram/`** - Modello Entità-Relazione concettuale e logico + guida completa
-- `data-dictionary.md` - Dizionario dei dati e glossario del dominio
+## Versioni e Revisioni
 
-> **Nota**: Ogni sottocartella include template PlantUML + README dettagliato con best practices, esempi e anti-patterns
+| Versione | Data | Autore | Descrizione Modifiche |
+|---------|------|--------|----------------------|
+| 1.0     | [Data] | [Autore] | Versione iniziale |
+| [Versione] | [Data] | [Autore] | [Descrizione Modifiche] |
 
-## Strumenti Consigliati
+## Approvazioni e Firme
 
-### Estensioni VS Code
+| Ruolo | Nome | Data | Firma |
+|-------|------|------|-------|
+| [Ruolo] | [Nome] | [Data] | |
+| [Ruolo] | [Nome] | [Data] | |
+| [Ruolo] | [Nome] | [Data] | |
 
-- **PlantUML**: Per creare diagrammi UML con codice
-- **Markdown All in One**: Per gestire la documentazione
-- **Draw.io Integration**: Per diagrammi visuali
-- **Mermaid Preview**: Per diagrammi Mermaid
+## Riferimenti e Collegamenti
 
-### Formati Supportati
-
-- **PlantUML** (.puml) - Diagrammi UML testuali
-- **Mermaid** (.mmd) - Diagrammi con sintassi semplificata
-- **Draw.io** (.drawio) - Diagrammi visuali
-- **Markdown** (.md) - Documentazione
-
-## Come Iniziare
-
-- **Definisci il Progetto**: Completa tutti i template in `01-project-definition/` (description, stakeholders, objectives, scope, risks)
-- **Raccogli i Requisiti Gerarchici**: Struttura le user stories e requisiti in `02-requirements/` usando la gerarchia per categoria
-- **Crea i Diagrammi Comportamentali**: Modella use cases, activity e sequence in `03-behavioral-diagrams/`
-- **Progetta l'Architettura**: Sviluppa system architecture, class e component diagrams in `04-structural-diagrams/`
-- **Disegna il Modello Dati**: Completa con ER diagrams e data dictionary in `05-database-design/`
-
-## Workflow di Sviluppo Template
-
-### Fase 1: Foundation (01-project-definition/)
-
-```
-Project Description → Stakeholder Analysis → SMART Objectives → 
-Scope Definition → Risk Assessment
-```
-
-### Fase 2: Requirements (02-requirements/)
-
-```
-Epic Stories → Functional Requirements (by category) → 
-Non-Functional Requirements → Acceptance Criteria (structured)
-```
-
-### Fase 3: Behavioral Design (03-behavioral-diagrams/)
-
-```
-Use Case Modeling → Business Process Flows → 
-System Interaction Sequences
-```
-
-### Fase 4: Structural Design (04-structural-diagrams/)
-
-```
-System Architecture → OOP Class Design → 
-Component Architecture & Deployment
-```
-
-### Fase 5: Data Design (05-database-design/)
-
-```
-Conceptual ER Model → Logical Data Model → 
-Data Dictionary & Business Rules
-```
-
-> **Pro Tip**: Ogni README fornisce guide dettagliate, pattern comuni e anti-patterns per accelerare lo sviluppo
-
-## Note
-
-- Tutti i file sono **template riutilizzabili** con placeholder da personalizzare
-- I diagrammi PlantUML includono esempi di sintassi e best practices
-- Seguire le convenzioni UML standard per mantenere consistenza
-- Utilizzare gli ID univoci per la tracciabilità tra documenti
-
-## Template Sistema Completo
-
-### Template Documentazione (Markdown)
-
-**01-project-definition/**
-
-- `project-description.md` - Descrizione completa: problema, soluzione, benefici, ROI
-- `stakeholders.md` - Mapping stakeholder con matrice interesse/influenza
-- `objectives.md` - Obiettivi SMART (business/tecnici/qualità) con KPI
-- `project-scope.md` - In/out scope, vincoli, assunzioni, WBS
-- `risk-register.md` - Matrice rischi con probabilità/impatto e piani di mitigazione
-
-**02-requirements/**
-
-- `user-stories/` - Epic e user stories con prioritizzazione MoSCoW
-- `functional-requirements/` (core-features, integrations, API, UI)
-- `non-functional-requirements/` - Performance, security, usability, scalability  
-- `acceptance-criteria/` (functional, non-functional, integration, user acceptance)
-
-**05-database-design/**
-
-- `data-dictionary.md` - Dizionario dati completo e glossario del dominio
-
-### Template Diagrammi (PlantUML)
-
-**Behavioral Diagrams**
-
-- `template-use-case.puml` - Casi d'uso con attori, boundary, include/extend
-- `template-activity.puml` - Workflow business con swimlanes e decision points
-- `template-sequence.puml` - Interazioni temporali con lifelines e messaggi
-
-**Structural Diagrams** 
-
-- `template-system-architecture.puml` - Architettura generale multi-layer
-- `template-class-diagram.puml` - Modello OOP con relazioni e pattern SOLID
-- `template-component-diagram.puml` - Architettura componenti e deployment
-
-**Data Diagrams**
-
-- `template-er-diagram.puml` - Modello Entità-Relazione con cardinalità e vincoli
-
-### README e Documentazione
-
-- **15+ README completi** con best practices, esempi multi-dominio e anti-patterns
-- **Guide dettagliate** per ogni tipo di diagramma con sintassi e convenzioni
-- **Esempi pratici** per E-commerce, Banking, Healthcare, SaaS
-
-## Utilizzo Template Enterprise
-
-### Quick Start
-
-- **Clone/Fork** questo repository per il tuo progetto
-- **Leggi i README** di ogni cartella per comprendere la struttura e best practices
-- **Inizia da 01-project-definition/** seguendo l'ordine numerico delle cartelle
-- **Personalizza i template** sostituendo placeholder con i dati del tuo progetto
-- **Usa i pattern forniti** negli esempi multi-dominio come riferimento
-
-### Personalizzazione Avanzata
-
-- **Multi-domain Examples**: Adapta gli esempi E-commerce/Banking/Healthcare al tuo settore  
-- **Scaling**: Usa la struttura gerarchica per progetti di qualsiasi dimensione
-- **Tool Integration**: Compatible con Jira, Confluence, Azure DevOps, GitHub Issues
-- **Enterprise Standards**: Integra SMART objectives, MoSCoW prioritization, RACI matrices
-
-### Governance e Tracciabilità
-
-- **ID Univoci**: Ogni requisito/user story/componente ha identificatori per la tracciabilità
-- **Matrice di Tracciabilità**: Collegamenti tra requisiti → design → implementazione
-- **Version Control**: Struttura ottimizzata per Git con branching per feature
-- **Review Process**: Template supportano review strutturati e approval workflow
+- [Link a documentazione esterna 1]
+- [Link a documentazione esterna 2]
+- [Link a documentazione esterna 3]
 
 ---
 
-*Enterprise Software Documentation Template v2.0 - Complete Project Lifecycle Coverage*
+*[Nome Progetto] - Documentazione Tecnica v[Versione]*

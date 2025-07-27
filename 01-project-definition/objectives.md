@@ -182,5 +182,6 @@
 
 ---
 
-*Ultima modifica: [Data]*
-*Versione documento: [Numero versione]*
+---
+
+*Obiettivi del Progetto [Nome Progetto] - v[Versione]*

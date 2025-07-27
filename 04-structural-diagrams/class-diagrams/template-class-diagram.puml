@@ -2,8 +2,22 @@
 !define ENTITY class
 !define SERVICE class
 !define CONTROLLER class
+!define REPOSITORY class
 
-title Sistema [Nome] - Diagramma delle Classi
+' Puoi personalizzare i colori per migliorare la leggibilità
+!define DOMAIN_COLOR LightSkyBlue
+!define SERVICE_COLOR LightGreen
+!define INTERFACE_COLOR Yellow
+!define REPOSITORY_COLOR LightSalmon
+
+skinparam class {
+    BackgroundColor<<ENTITY>> DOMAIN_COLOR
+    BackgroundColor<<SERVICE>> SERVICE_COLOR
+    BackgroundColor<<CONTROLLER>> INTERFACE_COLOR
+    BackgroundColor<<REPOSITORY>> REPOSITORY_COLOR
+}
+
+title [Nome Sistema] - Diagramma delle Classi - [Modulo/Package]
 
 package "Domain Model" {
   

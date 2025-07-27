@@ -1,20 +1,20 @@
 @startuml Component-Diagram-Template
 !theme blueprint
-title Template Component Diagram
+title [Nome Sistema] - Diagramma dei Componenti
 
 ' ====================
 ' COMPONENT DIAGRAM TEMPLATE
 ' ====================
 ' 
 ' Purpose: Modellare l'architettura e le dipendenze tra componenti
-' Domain: [INSERIRE DOMINIO - es. E-commerce, Banking, Healthcare]
-' Last Updated: [DATA]
-' Author: [NOME]
+' Domain: [Dominio - es. E-commerce, Banking, Healthcare]
+' Last Updated: [Data]
+' Author: [Nome]
 '
-' Traceability:
-' - Use Cases: [UC-XXX]
-' - Requirements: [REQ-XXX]
-' - User Stories: [US-XXX]
+' Tracciabilità:
+' - Use Cases: [UC-XXX, UC-YYY]
+' - Requirements: [REQ-XXX, REQ-YYY]
+' - User Stories: [US-XXX, US-YYY]
 
 ' Styling personalizzato
 !define COMPONENT_COLOR #E3F2FD

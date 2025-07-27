@@ -1,267 +1,116 @@
-# Functional Acceptance Criteria
+# Criteri di Accettazione Funzionale
 
-Questa cartella contiene i criteri di accettazione per validare che le funzionalità implementate soddisfino i requisiti funzionali specifici.
+## Panoramica dei Test Funzionali
 
-## Scopo dei Functional Acceptance Criteria
+[Fornire una panoramica dell'approccio adottato per i test funzionali nel progetto [NOME PROGETTO]. Descrivere brevemente la metodologia, gli strumenti utilizzati e le aree di focus principali.]
 
-I **Functional Acceptance Criteria** servono per:
+## Funzionalità Testate
 
-- Verificare che le funzionalità si comportino come specificato
-- Validare business logic e workflow applicativi  
-- Testare input/output e elaborazioni dati
-- Confermare che i requisiti funzionali siano implementati correttamente
+[Elencare le principali funzionalità del sistema che sono state sottoposte a test funzionali, organizzate per modulo o area di business.]
 
-## Quando Utilizzare questo Template
+### Core Business Functions
 
-### Scenario Ideali
+[Descrivere le funzionalità di business core che sono state testate e il loro stato attuale.]
 
-- **Feature Completion**: Quando una nuova funzionalità è implementata
-- **Business Logic Testing**: Per validare regole business complesse
-- **Data Processing**: Per testare elaborazioni e trasformazioni dati
-- **Workflow Validation**: Per verificare flussi operativi
-- **Integration Points**: Per testare punti di integrazione funzionale
+### Data Management
 
-### Tipologie di Funzionalità Coperte
+[Descrivere i test eseguiti sulle funzionalità di gestione dati, come CRUD operations, validazioni, trasformazioni.]
 
-- **CRUD Operations**: Create, Read, Update, Delete
-- **Business Workflows**: Processi business multi-step
-- **Data Validation**: Controlli input e business rules
-- **Calculations**: Logiche di calcolo e elaborazione
-- **State Management**: Gestione stati e transizioni
+### Workflow Processes
 
-## Come Utilizzare il Template
+[Descrivere i test eseguiti sui workflow di business end-to-end e processi multi-step.]
 
-### 1. Copia e Rinomina
+### User Interface Functions
 
-```bash
-# Copia il template
-cp AC-F-XXX-template.md AC-F-001-user-login.md
+[Descrivere i test funzionali eseguiti sull'interfaccia utente, come navigazione, form submission, validazioni client-side.]
 
-# Esempio naming convention
-AC-F-{AREA}-{NUMBER}-{description}.md
-```
+## Matrice di Copertura dei Test Funzionali
 
-### 2. Compila le Sezioni Principali
+### E-commerce
 
-- **Informazioni Generali**: ID, categoria, priorità
-- **Descrizione Funzionalità**: Cosa deve fare il sistema
-- **Scenari di Test**: Given/When/Then scenarios
-- **Criteri Dettagliati**: Checklist specifica
-- **Tracciabilità**: Collegamenti a requisiti e user stories
+| Feature | Test Criteria ID | Stato | Pass Rate | Criticità |
+|---------|-----------------|-------|-----------|-----------|
+| Product Catalog | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Shopping Cart | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Checkout Process | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Order Management | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
 
-### 3. Focus sui Comportamenti
+### Banking
 
-Concentrati su **COSA** il sistema deve fare, non **COME**:
+| Feature | Test Criteria ID | Stato | Pass Rate | Criticità |
+|---------|-----------------|-------|-----------|-----------|
+| Authentication | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Account Management | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Transactions | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Reporting | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
 
-- [OK] "Il sistema deve validare il formato email"
-- [KO] "Il sistema deve usare regex per email"
+### Healthcare
 
-## Struttura Test Scenarios
+| Feature | Test Criteria ID | Stato | Pass Rate | Criticità |
+|---------|-----------------|-------|-----------|-----------|
+| Patient Records | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Appointment Scheduling | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Prescription Management | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Billing | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
 
-### Pattern Given/When/Then
+## Risultati dei Test Funzionali
 
-```gherkin
-**Given** [stato iniziale/precondizioni]
-**When** [azione eseguita]
-**Then** [risultato atteso]
-**And** [condizioni aggiuntive]
-```
+### Panoramica Risultati
 
-### Tipi di Scenari da Includere
+[Fornire un riassunto dei risultati complessivi dei test funzionali, incluso il numero totale di test eseguiti, passati, falliti e bloccati.]
 
-#### Happy Path (Scenario Principale)
+### Test Results Trend
 
-- Flusso normale senza errori
-- Dati validi e condizioni ottimali
-- Comportamento atteso standard
+[Descrivere il trend dei risultati dei test funzionali nel corso del progetto, evidenziando miglioramenti o problemi ricorrenti.]
 
-#### Alternative Flows (Scenari Alternativi)
+### Defect Summary
 
-- Percorsi alternativi validi
-- Scelte utente diverse
-- Configurazioni alternative
+| Severità | Totale | Risolti | Aperti | Deferred |
+|---------|--------|---------|--------|----------|
+| Critical | [Numero] | [Numero] | [Numero] | [Numero] |
+| High | [Numero] | [Numero] | [Numero] | [Numero] |
+| Medium | [Numero] | [Numero] | [Numero] | [Numero] |
+| Low | [Numero] | [Numero] | [Numero] | [Numero] |
 
-#### Error Scenarios (Gestione Errori)
+## Critical Defects
 
-- Input invalidi
-- Condizioni di errore
-- Gestione eccezioni
+[Elencare i difetti più critici trovati durante i test funzionali e il loro stato attuale.]
 
-#### Edge Cases (Casi Limite)
+## Raccomandazioni
 
-- Valori limite (min/max)
-- Condizioni estreme
-- Scenari rari ma possibili
+[Fornire raccomandazioni basate sui risultati dei test funzionali, inclusi eventuali rischi identificati o aree che richiedono ulteriori test.]
 
-## Checklist Qualità AC Funzionali
+## Test Automation Summary
 
-### Completezza
+### Automated Tests Coverage
 
-- [ ] Tutti i requisiti funzionali coperti
-- [ ] Scenari happy path definiti
-- [ ] Scenari alternativi identificati
-- [ ] Gestione errori specificata
-- [ ] Edge cases considerati
+[Descrivere la copertura dei test automatizzati per le funzionalità del sistema, incluso il numero di test automatizzati vs manuali.]
 
-### Chiarezza
+### Automation Framework
 
-- [ ] Linguaggio business comprensibile
-- [ ] Criteri non ambigui
-- [ ] Esempi concreti forniti
-- [ ] Terminologia consistente
-- [ ] Assunzioni esplicite
+[Breve descrizione del framework di automazione utilizzato per i test funzionali.]
 
-### Testabilità
+### Continuous Integration
 
-- [ ] Criteri misurabili
-- [ ] Dati test identificati
-- [ ] Ambiente test specificato
-- [ ] Procedure test definite
-- [ ] Risultati attesi chiari
+[Spiegare come i test funzionali sono integrati nel pipeline CI/CD e la frequenza di esecuzione.]
 
-### Tracciabilità
+## Sign-off
 
-- [ ] Collegati a requisiti funzionali
-- [ ] Derivati da user stories
-- [ ] Allineati con obiettivi business
-- [ ] Impatto su architettura identificato
+### Approvals
 
-## Collegamenti con Altri Artefatti
-
-### Input per AC Funzionali
-
-- **Requirements (REQ-F-XXX)**: Requisiti funzionali da validare
-- **User Stories (US-XXX)**: Storie utente implementate
-- **Use Cases (UC-XXX)**: Casi d'uso del sistema
-- **Business Rules**: Regole business da applicare
-
-### Output degli AC Funzionali
-
-- **Test Cases**: Test case dettagliati per QA
-- **Test Scripts**: Script automatici di test
-- **Test Data**: Dati necessari per esecuzione
-- **Defect Reports**: Report bug se criteri non soddisfatti
-
-## Metriche di Successo
-
-### Coverage Metrics
-
-- **Requirement Coverage**: % requisiti con AC definiti
-- **Scenario Coverage**: % scenari business coperti
-- **Branch Coverage**: % branch logici testati
-
-### Quality Metrics
-
-- **Pass Rate**: % AC che passano al primo tentativo
-- **Defect Detection**: % difetti trovati tramite AC
-- **Rework Rate**: % AC che richiedono modifiche
-
-### Efficiency Metrics
-
-- **Test Execution Time**: Tempo medio esecuzione AC
-- **Automation Rate**: % AC automatizzati
-- **Maintenance Effort**: Effort manutenzione AC
-
-## Best Practices
-
-### Durante la Definizione
-
-1. **Coinvolgi il Product Owner** per validazione business
-2. **Usa esempi concreti** invece di descrizioni astratte
-3. **Mantieni atomicità** - un AC per un comportamento
-4. **Evita dettagli implementativi** - focus sul comportamento
-5. **Considera l'utente finale** - valore per il business
-
-### Durante l'Implementazione
-
-1. **Aggiorna AC** se i requisiti cambiano
-2. **Valida frequentemente** con stakeholder
-3. **Documenta deviazioni** e rationale
-4. **Mantieni tracciabilità** durante sviluppo
-5. **Prepara evidenze** per acceptance testing
-
-### Durante i Test
-
-1. **Esegui AC nell'ordine** di priorità business
-2. **Documenta tutti i risultati** accuratamente
-3. **Coinvolgi business users** nella validazione
-4. **Gestisci fallimenti** con processo strutturato
-5. **Ottieni sign-off formale** prima del rilascio
-
-## Processo di Lifecycle
-
-### 1. Creation Phase
-
-- Analisi requisiti funzionali
-- Workshop con stakeholder
-- Definizione scenari test
-- Review e approvazione
-
-### 2. Implementation Phase
-
-- Guida per sviluppatori
-- Validazione continua
-- Update per cambiamenti
-- Preparazione test data
-
-### 3. Testing Phase
-
-- Esecuzione test manuali
-- Automazione dove possibile
-- Reporting risultati
-- Issue resolution
-
-### 4. Acceptance Phase
-
-- Business user validation
-- Sign-off stakeholder
-- Documentation update
-- Lessons learned
-
-## Template Sections Overview
-
-### Mandatory Sections
-
-- **Informazioni Generali**: Metadati e identificazione
-- **Descrizione Funzionalità**: Scopo e contesto
-- **Scenari di Test**: Given/When/Then specifici
-- **Criteri Dettagliati**: Checklist verificabile
-- **Tracciabilità**: Collegamenti requisiti
-
-### Optional Sections
-
-- **Test Data Requirements**: Dati specifici necessari
-- **Environment Setup**: Configurazione ambiente
-- **Automation Notes**: Note per automazione
-- **Performance Considerations**: Aspetti performance
-
-## Common Pitfalls
-
-### Errori da Evitare
-
-- **Troppo generico**: "Il sistema deve funzionare"
-- **Dettagli implementativi**: "Deve usare Spring Framework"
-- **Non testabile**: "Deve essere user-friendly"
-- **Ambiguo**: "Deve essere veloce"
-- **Senza tracciabilità**: Non collegato a requisiti
-
-### Best Practices
-
-- **Specifico e misurabile**: "Login deve completarsi in <2 secondi"
-- **Linguaggio business**: Comprensibile agli stakeholder
-- **Comportamento osservabile**: Verificabile dall'esterno
-- **Completo**: Copre tutti gli scenari rilevanti
-- **Mantenibile**: Facile da aggiornare
-
-## Supporto e Contatti
-
-Per domande sui Functional Acceptance Criteria:
-
-- **Business Analyst**: [Responsabile definizione AC]
-- **Product Owner**: [Approvazione business value]
-- **QA Lead**: [Strategia testing e automazione]
-- **Technical Lead**: [Feasibility e implementazione]
+| Ruolo | Nome | Data | Firma |
+|-------|------|------|-------|
+| Business Owner | [Nome] | [Data] | [Firma] |
+| QA Manager | [Nome] | [Data] | [Firma] |
+| Project Manager | [Nome] | [Data] | [Firma] |
+| Technical Lead | [Nome] | [Data] | [Firma] |
+
+## Prossimi Passi
+
+[Descrivere eventuali attività di test funzionali pianificate per il futuro, come test di regressione, test di nuove funzionalità, o miglioramenti al processo di test.]
 
 ---
 
-*I Functional Acceptance Criteria sono il ponte tra requisiti business e implementazione tecnica. Definiscili con precisione per garantire che il software faccia esattamente quello che il business si aspetta.*
+*Documento generato il: [DATA GENERAZIONE]*  
+*Versione: [NUMERO VERSIONE]*  
+*Autori: [NOME AUTORI]*

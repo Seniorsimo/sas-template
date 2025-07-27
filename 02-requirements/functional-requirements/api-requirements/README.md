@@ -1,215 +1,65 @@
-# API Requirements - Specifiche API
+# API Requirements - [Progetto]
 
-Questa cartella contiene i requisiti specifici per le API del sistema - endpoint, contratti dati, e specifiche tecniche per l'interfaccia applicativa.
+## Panoramica delle API
 
-## Scopo degli API Requirements
+[Fornire una panoramica generale delle API esposte dal sistema. Descrivere lo scopo delle API, il tipo di architettura utilizzata (RESTful, GraphQL, etc.) e gli standard adottati.]
 
-Gli **API Requirements** definiscono:
+## Principali Endpoint API
 
-- Endpoint e operazioni disponibili
-- Contratti dati (request/response)
-- Autenticazione e autorizzazione API
-- Gestione errori e status codes
-- Performance e rate limiting
-- Documentazione e versioning
+### [Categoria API 1 - es. User Management]
 
-## Tipologie di API
+[Descrizione della categoria API]
 
-### REST APIs
+- [Endpoint 1.1] - [Descrizione breve]
+- [Endpoint 1.2] - [Descrizione breve]
+- [Endpoint 1.3] - [Descrizione breve]
 
-- Endpoint RESTful standard
-- HTTP methods (GET, POST, PUT, DELETE)
-- Resource-based URLs
-- JSON request/response
+### [Categoria API 2 - es. Authentication]
 
-### GraphQL APIs
+[Descrizione della categoria API]
 
-- Schema definitions
-- Query e mutation operations
-- Subscription per real-time
-- Type system
+- [Endpoint 2.1] - [Descrizione breve]
+- [Endpoint 2.2] - [Descrizione breve]
+- [Endpoint 2.3] - [Descrizione breve]
 
-### SOAP APIs
+### [Categoria API 3 - es. Business Logic]
 
-- WSDL definitions
-- XML request/response
-- SOAP envelope structure
-- Web service operations
+[Descrizione della categoria API]
 
-### Microservices APIs
+- [Endpoint 3.1] - [Descrizione breve]
+- [Endpoint 3.2] - [Descrizione breve]
+- [Endpoint 3.3] - [Descrizione breve]
 
-- Service-to-service communication
-- Internal API contracts
-- Service mesh integration
-- Event-driven APIs
+## API Inventory
 
-## Convenzioni per API Requirements
+| ID API | Nome | Metodo/Pattern | Target Consumers | Priorità | Stato |
+|--------|------|---------------|-----------------|----------|-------|
+| REQ-API-001 | [Nome API] | [GET/POST/etc.] | [Public/Private] | [Priorità] | [Stato] |
+| REQ-API-002 | [Nome API] | [GET/POST/etc.] | [Public/Private] | [Priorità] | [Stato] |
+| REQ-API-003 | [Nome API] | [GET/POST/etc.] | [Public/Private] | [Priorità] | [Stato] |
 
-### Schema ID
+## Architettura delle API
 
-```
-REQ-API-{AREA}-{NUMBER}
-```
+[Descrivere l'architettura API adottata, includendo versioning, layering, e principi di design]
 
-**Dove**:
+## Standard di Sicurezza
 
-- `API` = sempre per API requirements
-- `{AREA}` = Area funzionale (USER, AUTH, ORDER, etc.)
-- `{NUMBER}` = Numero progressivo (001, 002, etc.)
+[Riassunto degli standard di sicurezza implementati per le API del sistema]
 
-### Esempi ID
+## Esempi di Implementazione
 
-```
-REQ-API-AUTH-001       # API per autenticazione
-REQ-API-USER-001       # API per gestione utenti
-REQ-API-ORDER-001      # API per ordini
-REQ-API-PAYMENT-001    # API per pagamenti
-REQ-API-SEARCH-001     # API per ricerca
-```
+### E-commerce
 
-## Categorizzazione API
+[Esempio di implementazione delle API in un contesto e-commerce]
 
-### Public APIs
+### Banking
 
-- **REQ-API-PUB-XXX**: API pubbliche per partner/clienti
-- Rate limiting stringente
-- Documentazione pubblica completa
-- Versioning rigoroso
+[Esempio di implementazione delle API in un contesto banking]
 
-### Private APIs
+### Healthcare
 
-- **REQ-API-PRIV-XXX**: API interne per microservizi
-- Performance ottimizzate
-- Documentazione interna
-- Evoluzione più flessibile
+[Esempio di implementazione delle API in un contesto healthcare]
 
-### Partner APIs
+## Documentazione API
 
-- **REQ-API-PART-XXX**: API per partner business
-- Autenticazione forte
-- SLA definiti
-- Monitoring dedicato
-
-### Admin APIs
-
-- **REQ-API-ADMIN-XXX**: API per amministrazione
-- Sicurezza massima
-- Audit logging completo
-- Accesso limitato
-
-## Quality Gates API
-
-### Design Quality
-
-- [ ] RESTful design principles seguiti
-- [ ] Resource naming consistente
-- [ ] HTTP methods utilizzati correttamente
-- [ ] Status codes appropriati
-- [ ] Error handling standardizzato
-
-### Documentation Quality
-
-- [ ] OpenAPI/Swagger specification completa
-- [ ] Esempi per ogni endpoint
-- [ ] Error scenarios documentati
-- [ ] Authentication clearly explained
-- [ ] Rate limiting policies documented
-
-### Security Standards
-
-- [ ] Authentication mechanism defined
-- [ ] Authorization rules specified
-- [ ] Input validation requirements
-- [ ] Output sanitization rules
-- [ ] Security headers configured
-
-## API Design Standards
-
-### URL Structure
-
-```
-https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
-```
-
-### HTTP Methods
-
-- **GET**: Retrieve data (idempotent)
-- **POST**: Create new resource
-- **PUT**: Update entire resource (idempotent)
-- **PATCH**: Partial update
-- **DELETE**: Remove resource (idempotent)
-
-### Response Format
-
-```json
-{
-  "data": { ... },
-  "meta": {
-    "timestamp": "2025-01-01T12:00:00Z",
-    "version": "1.0",
-    "requestId": "uuid"
-  },
-  "errors": [ ... ]
-}
-```
-
-### Error Format
-
-```json
-{
-  "errors": [
-    {
-      "code": "VALIDATION_ERROR",
-      "message": "Invalid input data",
-      "field": "email",
-      "details": "Email format is invalid"
-    }
-  ]
-}
-```
-
-## Security Standards
-
-### Authentication
-
-- **API Keys**: For service-to-service
-- **OAuth 2.0**: For user-based access
-- **JWT Tokens**: For stateless authentication
-- **mTLS**: For high-security scenarios
-
-### Rate Limiting
-
-- **Public APIs**: 1000 requests/hour
-- **Partner APIs**: 10000 requests/hour
-- **Internal APIs**: No limit (monitoring)
-
-### Security Headers
-
-- **X-API-Version**: API version
-- **X-Rate-Limit-***: Rate limiting info
-- **X-Request-ID**: Request tracking
-- **Authorization**: Authentication token
-
-## Best Practices
-
-### Do's
-
-- **Version your APIs** from the start
-- **Use consistent naming** conventions
-- **Implement proper error handling**
-- **Provide comprehensive documentation**
-- **Include examples** for all endpoints
-- **Monitor API usage** and performance
-
-### Don'ts
-
-- **Don't break backward compatibility** without versioning
-- **Don't expose internal implementation** details
-- **Don't ignore security** considerations
-- **Don't skip input validation**
-- **Don't forget rate limiting**
-- **Don't ignore monitoring** and logging
-
----
-
-*Le API sono l'interfaccia del tuo sistema. Progettale con cura per garantire usabilità, sicurezza e manutenibilità.*
+[Riferimento alla documentazione OpenAPI/Swagger o altro strumento di documentazione API]
