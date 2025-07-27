@@ -18,6 +18,32 @@ Questa sezione include la documentazione fondamentale che definisce e contestual
 
 [Descrivere il contesto aziendale o organizzativo in cui si inserisce il progetto. Includere informazioni su fattori di mercato, tendenze del settore o requisiti normativi che influenzano il progetto.]
 
+### Diagramma di Contesto
+
+Il seguente diagramma illustra il contesto del progetto e le sue relazioni principali:
+
+```plantuml
+@startuml Project-Context
+!theme blueprint
+title Contesto del Progetto
+
+actor "Sponsor del Progetto" as sponsor
+actor "Utenti Finali" as users
+actor "Team di Sviluppo" as devteam
+
+rectangle "Progetto [Nome]" as project {
+  component "Soluzione Proposta" as solution
+  component "Deliverable" as deliverables
+}
+
+sponsor --> project : finanzia e approva
+users --> solution : utilizza
+devteam --> deliverables : realizza
+
+note right of project : Contesto Enterprise\ncon multiple stakeholder\ne interdipendenze
+@enduml
+```
+
 ## Riepilogo Esecutivo
 
 ### Problema
