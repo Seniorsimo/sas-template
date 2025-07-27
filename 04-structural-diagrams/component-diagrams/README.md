@@ -44,81 +44,11 @@ Componenti principali:
 
 [Riferimento al diagramma dei componenti del layer di persistenza]
 
+
+
 Componenti principali:
 - **[Nome Componente 1]**: [Responsabilità]
 - **[Nome Componente 2]**: [Responsabilità]
-```
-
-## Interfacce Principali
-
-Le interfacce chiave tra i componenti includono:
-
-### [Nome Interfaccia 1]
-
-[Breve descrizione dello scopo dell'interfaccia]
-
-Metodi principali:
-- **[Nome Metodo 1]**: [Descrizione]
-- **[Nome Metodo 2]**: [Descrizione]
-
-Componenti che la forniscono:
-- [Nome Componente]
-
-Componenti che la richiedono:
-- [Nome Componente]
-
-### [Nome Interfaccia 2]
-
-[Breve descrizione dello scopo dell'interfaccia]
-
-Metodi principali:
-- **[Nome Metodo 1]**: [Descrizione]
-- **[Nome Metodo 2]**: [Descrizione]
-
-Componenti che la forniscono:
-- [Nome Componente]
-
-Componenti che la richiedono:
-- [Nome Componente]
-
-## Integrazione con Sistemi Esterni
-
-### [Nome Sistema Esterno 1]
-
-[Breve descrizione dell'integrazione]
-
-[Riferimento al diagramma dell'integrazione]
-
-Componenti coinvolti:
-- **[Nome Componente]**: [Ruolo nell'integrazione]
-
-### [Nome Sistema Esterno 2]
-
-[Breve descrizione dell'integrazione]
-
-[Riferimento al diagramma dell'integrazione]
-
-Componenti coinvolti:
-- **[Nome Componente]**: [Ruolo nell'integrazione]
-
-## Decisioni Architetturali
-
-| ID | Decisione | Motivazione | Alternative Considerate |
-|----|-----------|-------------|-------------------------|
-| AD01 | [Decisione 1] | [Motivazione] | [Alternative] |
-| AD02 | [Decisione 2] | [Motivazione] | [Alternative] |
-
-## Riferimenti ad Altri Documenti
-
-- **Requisiti implementati**: [Riferimenti ai requisiti]
-- **Diagrammi di deployment correlati**: [Riferimenti]
-- **Diagrammi delle classi correlati**: [Riferimenti]
-
-package "Data Layer" {
-  component "Repository"
-  component "Data Access"
-}
-```
 
 ### Definisci i Componenti Principali
 

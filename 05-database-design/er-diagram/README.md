@@ -16,21 +16,9 @@ Il modello dati è centrato sulle seguenti entità principali:
 
 [Inserire qui il diagramma ER concettuale]
 
-```plantuml
-@startuml Conceptual ER Diagram
-' Inserire qui il diagramma concettuale
-@enduml
-```
-
 ## Diagramma ER Dettagliato
 
 [Inserire qui il diagramma ER dettagliato con tutte le entità e attributi]
-
-```plantuml
-@startuml Detailed ER Diagram
-' Inserire qui il diagramma ER dettagliato
-@enduml
-```
 
 ## Descrizione delle Entità
 

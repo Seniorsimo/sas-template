@@ -41,7 +41,7 @@ Utilizzare sempre un rettangolo per definire il boundary del sistema:
 
 ```plantuml
 rectangle "Nome Sistema" {
-  // casi d'uso interni al sistema
+  ' casi d'uso interni al sistema
 }
 ```
 

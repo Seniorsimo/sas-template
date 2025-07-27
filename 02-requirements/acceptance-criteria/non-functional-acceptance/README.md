@@ -124,7 +124,6 @@ PII handling: Anonymization/masking
 ### Test di Compatibilità
 
 [Riassumere i risultati dei test di compatibilità su diversi browser, dispositivi e sistemi operativi.]
-```
 
 ### Data Consistency
 
@@ -196,20 +195,6 @@ Task Success: ≥ 95% completion rate
 Accessibility: 100% WCAG AA compliance
 ```
 
-## Acceptance Testing Process
-
-### Priorità di Intervento
-
-| Area | Severità | Impatto | Complessità | Raccomandazione |
-|------|----------|---------|-------------|-----------------|
-| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
-| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
-| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
-| [Area] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Alta/Media/Bassa] | [Descrizione intervento] |
-
-## Confronto con la Concorrenza
-
-[Comparare le performance non-funzionali del sistema con i principali concorrenti o benchmark di settore, evidenziando punti di forza e aree di miglioramento.]
 
 | Attributo | Sistema Attuale | Concorrente 1 | Concorrente 2 | Benchmark Settore |
 |-----------|---------------|--------------|--------------|-------------------|

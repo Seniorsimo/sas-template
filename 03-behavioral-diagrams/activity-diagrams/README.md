@@ -95,12 +95,6 @@ Questa sezione descrive i principali processi operativi implementati in [nome de
 ### Rollback e Compensazione
 
 [Descrizione dei meccanismi di rollback e compensazione in caso di errori]
-:Elabora Richiesta;
-
-|Database|
-:Salva Dati;
-stop
-```
 
 ### Note e Commenti
 

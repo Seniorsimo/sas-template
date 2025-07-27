@@ -55,6 +55,7 @@ if (Errore?) then (si)
   stop
 else (no)
   :Continua Processo;
+  stop
 endif
 ```
 

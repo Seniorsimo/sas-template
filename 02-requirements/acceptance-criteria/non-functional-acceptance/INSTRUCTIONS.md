@@ -15,10 +15,16 @@ I **Non-Functional Acceptance Criteria** servono per:
 
 ### Performance
 
-- **Response Time**: Tempi di risposta per operazioni
-- **Throughput**: Transazioni per unità di tempo
-- **Resource Utilization**: CPU, memoria, storage, network
-- **Scalability**: Capacità di gestire carico crescente
+
+## Naming dei file per Quality Attribute
+
+Per ogni criterio di accettazione non-funzionale, crea un file dedicato seguendo la convenzione:
+
+- `AC-NF-PERF-001-response-time.md` per Performance
+- `AC-NF-SEC-001-authentication.md` per Security
+- `AC-NF-USA-001-accessibility.md` per Usability
+
+Utilizza sempre la struttura e i placeholder del template fornito nel README della cartella.
 
 ### Security
 
