@@ -2,11 +2,11 @@
 
 ## Sommario Esecutivo
 
-[Breve introduzione al sistema di criteri di accettazione implementato per il progetto [NOME PROGETTO]. Descrivere l'approccio adottato e l'importanza dei criteri di accettazione nel ciclo di vita del progetto.]
+[Introduzione al sistema di criteri di accettazione del progetto [NOME PROGETTO]]
 
 ## Obiettivi della Strategia di Testing
 
-[Descrivere gli obiettivi principali che si intendono raggiungere attraverso la definizione e l'implementazione dei criteri di accettazione.]
+[Obiettivi principali dei criteri di accettazione]
 
 ## Panoramica dei Criteri di Accettazione
 
@@ -14,23 +14,23 @@ Il progetto [NOME PROGETTO] implementa quattro categorie principali di criteri d
 
 ### Criteri di Accettazione Funzionale
 
-[Breve descrizione dell'approccio ai criteri funzionali e i principali domini coperti.]
+[Descrizione dei criteri funzionali]
 
 ### Criteri di Accettazione Non-Funzionale
 
-[Breve descrizione delle aree di qualità coperte dai criteri non-funzionali, come performance, sicurezza, usabilità.]
+[Descrizione dei criteri non-funzionali]
 
 ### Criteri di Accettazione per l'Integrazione
 
-[Descrizione dell'approccio all'integrazione e delle interfacce principali coperte dai criteri.]
+[Descrizione dei criteri di integrazione]
 
 ### Criteri di Accettazione Utente
 
-[Descrizione dell'approccio al user acceptance testing e dei principali scenari di business coperti.]
+[Descrizione dei criteri di accettazione utente]
 
 ## Matrice di Copertura
 
-[Inserire una tabella che mostri la copertura dei criteri di accettazione rispetto ai requisiti e alle funzionalità chiave del sistema. La tabella dovrebbe evidenziare quali aree sono ben coperte e quali potrebbero richiedere ulteriori criteri.]
+[Tabella di copertura dei criteri di accettazione]
 
 ### E-commerce
 | Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
@@ -60,25 +60,25 @@ Il progetto [NOME PROGETTO] implementa quattro categorie principali di criteri d
 
 ### Risultati Complessivi
 
-[Inserire un riassunto dei risultati dell'esecuzione dei criteri di accettazione, possibilmente con un grafico che mostri la percentuale di criteri passati, falliti o in sospeso.]
+[Riassunto dei risultati dell'esecuzione dei criteri di accettazione]
 
 ### Test Case Prioritari
 
-[Elencare i test case più critici basati sui criteri di accettazione e i loro risultati.]
+[Test case critici basati sui criteri di accettazione]
 
 ### Problemi Aperti
 
-[Elencare i problemi più significativi emersi durante l'esecuzione dei test di accettazione.]
+[Problemi emersi durante l'esecuzione dei test di accettazione]
 
 ## Riassunto Statistico
 
 ### Stato dei Criteri di Accettazione
 
-[Inserire una tabella o un grafico che mostri lo stato attuale dei criteri di accettazione per categoria, ad esempio: completati, in corso, bloccati, non iniziati.]
+[Stato attuale dei criteri di accettazione per categoria]
 
 ### Trend di Progresso
 
-[Descrivere il trend di completamento dei criteri di accettazione nel corso del tempo e il rapporto con le milestone di progetto.]
+[Trend di completamento dei criteri di accettazione]
 
 ## Approvazioni
 
@@ -93,11 +93,11 @@ Il progetto [NOME PROGETTO] implementa quattro categorie principali di criteri d
 
 ### Note di Approvazione
 
-[Eventuali note o condizioni associate all'approvazione dei criteri di accettazione.]
+[Note o condizioni associate all'approvazione dei criteri di accettazione]
 
 ## Prossimi Passi
 
-[Descrivere le azioni successive previste dopo l'approvazione dei criteri di accettazione, come il rilascio in produzione, il monitoraggio post-rilascio, o le attività di feedback utente.]
+[Azioni successive previste dopo l'approvazione dei criteri di accettazione]
 
 ---
 

@@ -2,17 +2,17 @@
 
 ## Introduzione
 
-[Inserire qui un'introduzione che spieghi l'approccio adottato per la raccolta e la gestione dei requisiti del progetto. Descrivere brevemente la metodologia utilizzata (Agile, Scrum, ecc.) e come questa si allinea con gli obiettivi del progetto definiti nella sezione precedente.]
+[Introduzione all'approccio per la gestione dei requisiti del progetto]
 
 ## Panoramica dei Requisiti
 
-[Fornire una panoramica generale dei requisiti del sistema, evidenziando le aree funzionali principali e le caratteristiche di qualità essenziali.]
+[Panoramica generale dei requisiti del sistema]
 
 ## Epic e User Stories
 
 ### Epic 1: [Nome Epic 1]
 
-[Breve descrizione dell'epic e del suo obiettivo generale]
+[Descrizione dell'epic]
 
 #### User Stories Principali:
 
@@ -22,7 +22,7 @@
 
 ### Epic 2: [Nome Epic 2]
 
-[Breve descrizione dell'epic e del suo obiettivo generale]
+[Descrizione dell'epic]
 
 #### User Stories Principali:
 
@@ -142,7 +142,7 @@ I requisiti descritti in questo documento sono stati esaminati e approvati dai s
 
 ## Note e Considerazioni
 
-[Note aggiuntive o considerazioni importanti riguardo ai requisiti che non rientrano nelle sezioni precedenti.]
+[Note aggiuntive sui requisiti]
 
 ---
 
