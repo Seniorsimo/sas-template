@@ -230,8 +230,9 @@ foreach ($file in $fileOrder) {
             }
             
             # Migliora il posizionamento dei diagrammi PlantUML embedded nei file MD
-            # Usa una singola regex per estrarre e ricomporre con comandi LaTeX
-            $content = $content -replace '(?s)```plantuml(.*?)```', "`n``````{=latex}`n\begin{center}`n```````n`n``````plantuml`$1```````n`n``````{=latex}`n\end{center}`n```````n"
+            # Fix: Evita nidificazione di blocchi \begin{center} processando solo blocchi non elaborati
+            # Usa regex più precisa per processare solo blocchi PlantUML senza wrapping LaTeX
+            $content = $content -replace '(?s)(?<!```\{=latex\}\r?\n\\begin\{center\}\r?\n```\r?\n\r?\n)```plantuml((?:(?!```\{=latex\}).)*?)```(?!\r?\n\r?\n```\{=latex\}\r?\n\\end\{center\})', "`n``````{=latex}`n\begin{center}`n```````n`n``````plantuml`$1```````n`n``````{=latex}`n\end{center}`n```````n"
             
             # Per TUTTI i file .md, non aggiungere titolo aggiuntivo, solo newpage
             $combinedContent += "`n\newpage`n"
@@ -293,6 +294,8 @@ foreach ($file in $fileOrder) {
             }
             
             # Aggiungi il contenuto PlantUML con wrapping LaTeX per centratura
+            # Nota: per i file .puml standalone, ogni file viene processato una sola volta
+            # quindi non c'è rischio di nidificazione dei blocchi center
             $combinedContent += "``````{=latex}`n\begin{center}`n```````n`n``````plantuml"
             $combinedContent += $content
             $combinedContent += "```````n`n``````{=latex}`n\end{center}`n```````n`n"
