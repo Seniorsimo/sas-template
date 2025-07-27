@@ -168,7 +168,7 @@ $combinedContent = @()
 $combinedContent += "# $Title`n"
 $combinedContent += "**Enterprise Template System**`n"
 $combinedContent += "Generato il $(Get-Date -Format 'dd/MM/yyyy')`n`n"
-$combinedContent += "\\newpage`n`n"
+$combinedContent += "\newpage`n`n"
 
 Write-Host "Combinazione file Markdown e PlantUML..." -ForegroundColor Cyan
 
