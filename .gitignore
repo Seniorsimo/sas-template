@@ -4,3 +4,4 @@ temp-*.md
 
 .venv
 .plantuml_cache
+*debug*.tex

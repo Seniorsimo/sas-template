@@ -95,7 +95,8 @@ Write-Host "Scansione struttura progetto..." -ForegroundColor Cyan
 
 # Trova tutti i file .md escludendo i template e file temporanei
 $allMarkdownFiles = Get-ChildItem -Path $PWD -Filter "*.md" -Recurse | 
-    Where-Object { 
+    Where-Object {
+        $_.Name -ne "INSTRUCTIONS.md" -and
         $_.Name -notlike "*template*" -and 
         $_.FullName -notlike "*template*" -and
         $_.Name -ne "temp-combined.md" -and
@@ -346,6 +347,30 @@ try {
     Write-Host "Errore nella verifica encoding: $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
+
+
+# Genera file .tex intermedio per debug
+$pandocArgsTex = @(
+    $tempFile,
+    "-o", "documentation-debug.tex",
+    "--from", "markdown-yaml_metadata_block",
+    "--to", "latex",
+    "--pdf-engine=xelatex",
+    "--highlight-style=tango",
+    "--variable", "mainfont=Calibri",
+    "--variable", "monofont=Consolas", 
+    "--variable", "fontsize=11pt",
+    "--variable", "geometry:margin=2cm",
+    "--variable", "graphics=yes",
+    "--variable", "fig-align=center",
+    "--variable", "fig-pos=H",
+    "--number-sections",
+    "--toc",
+    "--toc-depth=3"
+)
+Write-Host "Generazione file .tex intermedio per debug..." -ForegroundColor Cyan
+& pandoc @pandocArgsTex
+Write-Host "File .tex generato: documentation-debug.tex" -ForegroundColor Green
 
 # Parametri Pandoc con XeLaTeX
 $pandocArgs = @(
