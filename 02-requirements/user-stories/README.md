@@ -86,7 +86,3 @@ La tabella seguente mostra come le epic si collegano agli obiettivi di business 
 ## Note e Considerazioni
 
 [Eventuali note aggiuntive sulle user stories, limitazioni, assunzioni o considerazioni importanti che non rientrano nelle sezioni precedenti.]
-
----
-
-*User Stories [Nome Progetto] - v[Versione]*

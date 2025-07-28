@@ -52,33 +52,6 @@ Il progetto [NOME PROGETTO] implementa quattro categorie principali di criteri d
 
 [Descrivere il trend di completamento dei criteri di accettazione nel corso del tempo e il rapporto con le milestone di progetto.]
 
-## Approvazioni
-
-### Sign-off
-
-| Ruolo | Nome | Data | Firma |
-|------|------|------|------|
-| Product Owner | [Nome] | [Data] | [Firma] |
-| QA Manager | [Nome] | [Data] | [Firma] |
-| Technical Lead | [Nome] | [Data] | [Firma] |
-| User Representative | [Nome] | [Data] | [Firma] |
-
-### Note di Approvazione
-
-[Eventuali note o condizioni associate all'approvazione dei criteri di accettazione.]
-
 ## Prossimi Passi
 
 [Descrivere le azioni successive previste dopo l'approvazione dei criteri di accettazione, come il rilascio in produzione, il monitoraggio post-rilascio, o le attività di feedback utente.]
-
----
-
-*Documento generato il: [DATA GENERAZIONE]*  
-*Versione: [NUMERO VERSIONE]*  
-*Autori: [NOME AUTORI]*
-
----
-
-*Ultima revisione: [Data]*  
-*Prossima review: [Data]*  
-*Mantainer: [Nome responsabile documentation]*

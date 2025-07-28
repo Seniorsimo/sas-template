@@ -1,4 +1,3 @@
-
 # Stakeholders del Progetto
 
 ## Informazioni Generali
@@ -255,7 +254,3 @@
 - [Assunzione 1 sulla disponibilità o commitment]
 - [Assunzione 2 sulle competenze o autorità]
 - [Assunzione 3 sui tempi di risposta o feedback]
-
----
-
-*Stakeholders del Progetto [Nome Progetto] - v[Versione]*

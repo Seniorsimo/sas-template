@@ -91,4 +91,3 @@ I seguenti attori interagiscono con il sistema:
 | UC-001     | [REQ-IDs]              | [US-IDs]               |
 | UC-002     | [REQ-IDs]              | [US-IDs]               |
 | UC-003     | [REQ-IDs]              | [US-IDs]               |
-

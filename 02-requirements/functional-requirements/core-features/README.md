@@ -47,7 +47,3 @@
 [Riassumere eventuali decisioni tecniche significative o vincoli relativi alle funzionalità core]
 - Performance requirements stringenti
 - Security requirements obbligatori
-
----
-
-*I requisiti in questa cartella rappresentano la base del sistema e devono essere implementati con la massima qualità.*

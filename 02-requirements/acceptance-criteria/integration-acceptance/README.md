@@ -106,21 +106,3 @@
 | [Categoria] | [Descrizione] | [Raccomandazione] |
 | [Categoria] | [Descrizione] | [Raccomandazione] |
 | [Categoria] | [Descrizione] | [Raccomandazione] |
-
-## Sign-off
-
-### Approvals
-
-| Ruolo | Nome | Data | Firma |
-|-------|------|------|-------|
-| Integration Architect | [Nome] | [Data] | [Firma] |
-| API Developer | [Nome] | [Data] | [Firma] |
-| Security Engineer | [Nome] | [Data] | [Firma] |
-| QA Engineer | [Nome] | [Data] | [Firma] |
-| Product Owner | [Nome] | [Data] | [Firma] |
-
----
-
-*Documento generato il: [DATA GENERAZIONE]*  
-*Versione: [NUMERO VERSIONE]*  
-*Autori: [NOME AUTORI]*

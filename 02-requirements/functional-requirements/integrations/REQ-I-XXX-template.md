@@ -470,30 +470,10 @@
 
 ## Change History
 
-| Versione | Data | Autore | Cambiamenti | Impact su Integration | Approvato da |
-|----------|------|--------|-------------|----------------------|--------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | - | [Nome] |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] | [Nome] |
-
----
-
-## Approvazioni
-
-### Technical Approval
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Integration Architect | [Nome] | ______ | ______ | [Comments] |
-| Security Architect | [Nome] | ______ | ______ | [Comments] |
-| Infrastructure Lead | [Nome] | ______ | ______ | [Comments] |
-
-### Business Approval
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| Business Stakeholder | [Nome] | ______ | ______ | [Comments] |
-| Operations Manager | [Nome] | ______ | ______ | [Comments] |
+| Versione | Data | Autore | Cambiamenti | Impact su Integration |
+|----------|------|--------|-------------|----------------------|
+| 1.0 | [Data] | [Nome] | Versione iniziale | - |
+| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] |
 
 ---
 
@@ -517,10 +497,3 @@
 - [Link a monitoring setup]
 - [Link a troubleshooting guide]
 - [Link a disaster recovery plan]
-
----
-
-*Requisito integrazione creato il: [Data]*  
-*Ultima revisione: [Data]*  
-*Prossima review: [Data]*  
-*Integration Owner: [Nome responsabile integrazione]*

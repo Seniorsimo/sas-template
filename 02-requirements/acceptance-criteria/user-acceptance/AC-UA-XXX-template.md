@@ -473,43 +473,6 @@
 
 ---
 
-## Sign-off e Acceptance
-
-### UAT Completion Criteria
-
-- [ ] Tutti gli scenari critici testati con successo
-- [ ] User satisfaction score >= target
-- [ ] Nessun issue critico aperto
-- [ ] Performance accettabile per utenti
-- [ ] Training materials validated
-- [ ] Support procedures tested
-
-### Business Acceptance
-
-- [ ] Business value demonstrated
-- [ ] User adoption strategy approved
-- [ ] ROI projection realistic
-- [ ] Change management plan ready
-- [ ] Go-live criteria met
-
-### User Acceptance
-
-- [ ] Primary users satisfied with functionality
-- [ ] Task efficiency improved vs current process
-- [ ] Learning curve acceptable
-- [ ] Users ready for production rollout
-
-### Approvals
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| UAT Coordinator | [Nome] | ______ | ______ | [Comments] |
-| Primary Business User | [Nome] | ______ | ______ | [Comments] |
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| Business Sponsor | [Nome] | ______ | ______ | [Comments] |
-
----
-
 ## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impact su UAT |
@@ -541,10 +504,3 @@
 - [Link a user personas]
 - [Link a user journey maps]
 - [Link a change management plan]
-
----
-
-*Criterio di accettazione utente creato il: [Data]*  
-*Ultima validazione: [Data]*  
-*Prossima review: [Data]*  
-*UAT Coordinator: [Nome responsabile]*

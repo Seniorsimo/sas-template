@@ -387,39 +387,6 @@
 
 ---
 
-## Sign-off e Acceptance
-
-### Technical Review Checklist
-
-- [ ] Integration pattern appropriato implementato
-- [ ] Tutti gli scenari di test eseguiti con successo
-- [ ] Error handling testato e funzionante
-- [ ] Performance requirements soddisfatti
-- [ ] Security requirements implementati
-- [ ] Monitoring e logging configurati
-- [ ] Documentation completa e aggiornata
-
-### Business Acceptance Checklist
-
-- [ ] Business requirements soddisfatti
-- [ ] SLA targets raggiunti
-- [ ] Data integrity verificata
-- [ ] Operational runbooks completati
-- [ ] Support team formato
-- [ ] Go-live criteria soddisfatti
-
-### Approvals
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Integration Engineer | [Nome] | ______ | ______ | [Comments] |
-| System Architect | [Nome] | ______ | ______ | [Comments] |
-| Security Officer | [Nome] | ______ | ______ | [Comments] |
-| Operations Manager | [Nome] | ______ | ______ | [Comments] |
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-
----
-
 ## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impact su Integration |
@@ -451,10 +418,3 @@
 - [Link a test data sets]
 - [Link a test results reports]
 - [Link a performance test results]
-
----
-
-*Criterio di accettazione integrazione creato il: [Data]*  
-*Ultima validazione: [Data]*  
-*Prossima review: [Data]*  
-*Integration Engineer: [Nome responsabile]*

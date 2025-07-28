@@ -261,9 +261,3 @@
 
 - **Sprint X**: [Status raggiunto]
 - **Sprint Y**: [Status raggiunto]
-
----
-
-*User Story creata il: [Data]*  
-*Ultimo aggiornamento: [Data]*  
-*Assegnata a: [Nome Developer]*

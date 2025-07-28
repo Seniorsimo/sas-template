@@ -102,7 +102,3 @@ La seguente tabella riassume gli obiettivi principali di qualità per il sistema
 ## Prioritizzazione e Pianificazione
 
 [Descrivere come i requisiti non-funzionali sono stati prioritizzati e come saranno integrati nella pianificazione del progetto]
-
----
-
-*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

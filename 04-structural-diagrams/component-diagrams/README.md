@@ -43,6 +43,3 @@ Componenti principali:
 [Breve descrizione del layer e dei suoi componenti]
 
 [Riferimento al diagramma dei componenti del layer di persistenza]
-
-
-

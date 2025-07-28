@@ -71,7 +71,3 @@ Le seguenti proiezioni di crescita sono state considerate nella definizione dei 
 ## Strategie di Testing
 
 [Descrivere le strategie per testare e validare i requisiti di scalabilità]
-
----
-
-*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

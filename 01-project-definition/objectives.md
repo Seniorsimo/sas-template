@@ -179,9 +179,3 @@
 - **[Rischio 1]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
 - **[Rischio 2]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
 - **[Rischio 3]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
-
----
-
----
-
-*Obiettivi del Progetto [Nome Progetto] - v[Versione]*

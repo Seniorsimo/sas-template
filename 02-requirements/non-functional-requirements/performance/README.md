@@ -61,7 +61,3 @@ Il sistema [nome sistema] deve soddisfare i seguenti obiettivi di performance:
 ## Fattori di Rischio
 
 [Identificare potenziali rischi e fattori che potrebbero influenzare negativamente la performance del sistema]
-
----
-
-*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

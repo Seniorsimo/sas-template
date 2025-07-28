@@ -76,7 +76,3 @@ Il sistema [nome sistema] deve essere conforme ai seguenti standard di usabilit√
 ## User Personas
 
 [Breve descrizione delle principali user personas considerate nella definizione dei requisiti di usabilit√†]
-
----
-
-*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

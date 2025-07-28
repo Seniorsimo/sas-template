@@ -65,23 +65,6 @@
 
 [Spiegare come i test funzionali sono integrati nel pipeline CI/CD e la frequenza di esecuzione.]
 
-## Sign-off
-
-### Approvals
-
-| Ruolo | Nome | Data | Firma |
-|-------|------|------|-------|
-| Business Owner | [Nome] | [Data] | [Firma] |
-| QA Manager | [Nome] | [Data] | [Firma] |
-| Project Manager | [Nome] | [Data] | [Firma] |
-| Technical Lead | [Nome] | [Data] | [Firma] |
-
 ## Prossimi Passi
 
 [Descrivere eventuali attività di test funzionali pianificate per il futuro, come test di regressione, test di nuove funzionalità, o miglioramenti al processo di test.]
-
----
-
-*Documento generato il: [DATA GENERAZIONE]*  
-*Versione: [NUMERO VERSIONE]*  
-*Autori: [NOME AUTORI]*

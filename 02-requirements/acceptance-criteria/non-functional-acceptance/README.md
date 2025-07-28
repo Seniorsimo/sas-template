@@ -115,24 +115,6 @@
 
 [Fornire raccomandazioni basate sui risultati dei test non-funzionali, inclusi miglioramenti suggeriti e rischi identificati.]
 
-## Sign-off
-
-### Approvals
-
-| Ruolo | Nome | Data | Firma |
-|-------|------|------|-------|
-| Technical Architect | [Nome] | [Data] | [Firma] |
-| Security Officer | [Nome] | [Data] | [Firma] |
-| QA Manager | [Nome] | [Data] | [Firma] |
-| Operations Manager | [Nome] | [Data] | [Firma] |
-| Product Owner | [Nome] | [Data] | [Firma] |
-
 ## Prossimi Passi
 
 [Descrivere le azioni pianificate per migliorare gli attributi non-funzionali del sistema nel prossimo periodo.]
-
----
-
-*Documento generato il: [DATA GENERAZIONE]*  
-*Versione: [NUMERO VERSIONE]*  
-*Autori: [NOME AUTORI]*

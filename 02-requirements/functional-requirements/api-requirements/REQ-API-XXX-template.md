@@ -607,29 +607,10 @@ Content-Security-Policy: default-src 'self'
 
 ## Change History
 
-| Versione | Data | Autore | Cambiamenti | Breaking Changes | Approvato da |
-|----------|------|--------|-------------|------------------|--------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | No | [Nome] |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Sì/No] | [Nome] |
-
----
-
-## Approvazioni
-
-### Technical Approval
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| API Architect | [Nome] | ______ | ______ | [Comments] |
-| Security Engineer | [Nome] | ______ | ______ | [Comments] |
-| Performance Engineer | [Nome] | ______ | ______ | [Comments] |
-
-### Business Approval
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| Technical Product Manager | [Nome] | ______ | ______ | [Comments] |
+| Versione | Data | Autore | Cambiamenti | Breaking Changes |
+|----------|------|--------|-------------|------------------|
+| 1.0 | [Data] | [Nome] | Versione iniziale | No |
+| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Sì/No] |
 
 ---
 
@@ -653,10 +634,3 @@ Content-Security-Policy: default-src 'self'
 - [Link a coding standards]
 - [Link a testing guidelines]
 - [Link a deployment procedures]
-
----
-
-*API requirement creato il: [Data]*  
-*Ultima revisione: [Data]*  
-*Prossima review: [Data]*  
-*API Owner: [Nome responsabile API]*

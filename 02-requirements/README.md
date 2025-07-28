@@ -116,36 +116,6 @@
 - [Vincolo 2 che influenza i requisiti]
 - [Vincolo 3 che influenza i requisiti]
 
-## Approvazioni
-
-I requisiti descritti in questo documento sono stati esaminati e approvati dai seguenti stakeholder:
-
-| Nome | Ruolo | Data | Firma |
-|------|-------|------|-------|
-| [Nome] | [Ruolo] | [Data] | |
-| [Nome] | [Ruolo] | [Data] | |
-| [Nome] | [Ruolo] | [Data] | |
-
-## Glossario dei Termini
-
-| Termine | Definizione |
-|---------|-------------|
-| [Termine] | [Definizione] |
-| [Termine] | [Definizione] |
-| [Termine] | [Definizione] |
-
-## Riferimenti e Collegamenti
-
-- [Riferimento a documenti esterni 1]
-- [Riferimento a documenti esterni 2]
-- [Riferimento a documenti esterni 3]
-
 ## Note e Considerazioni
 
 [Note aggiuntive o considerazioni importanti riguardo ai requisiti che non rientrano nelle sezioni precedenti.]
-
----
-
-*Requisiti e User Stories [Nome Progetto] - v[Versione]*
-
-

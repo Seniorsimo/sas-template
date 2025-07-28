@@ -249,36 +249,9 @@
 
 ---
 
-## Sign-off
-
-### Review Checklist
-
-- [ ] Requisito chiaro e non ambiguo
-- [ ] Criteri di accettazione testabili
-- [ ] Tracciabilità completa
-- [ ] Aspetti tecnici definiti
-- [ ] Rischi identificati
-- [ ] Stima effort ragionevole
-
-### Approvazioni
-
-| Ruolo | Nome | Data | Firma |
-|-------|------|------|-------|
-| Business Analyst | [Nome] | ______ | ______ |
-| Technical Lead | [Nome] | ______ | ______ |
-| Product Owner | [Nome] | ______ | ______ |
-
----
-
 ## Change History
 
 | Versione | Data | Autore | Cambiamenti |
 |----------|------|--------|-------------|
 | 1.0 | [Data] | [Nome] | Versione iniziale |
 | 1.1 | [Data] | [Nome] | [Descrizione cambiamenti] |
-
----
-
-*Requisito creato il: [Data]*  
-*Ultima modifica: [Data]*  
-*Prossima review: [Data]*
