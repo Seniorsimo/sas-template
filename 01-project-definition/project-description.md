@@ -97,8 +97,3 @@
 - [Criterio 1]
 - [Criterio 2]
 - [Criterio 3]
-
-
----
-
-*Descrizione del Progetto [Nome Progetto] - v[Versione]*

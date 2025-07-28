@@ -281,28 +281,6 @@
 
 ---
 
-## Sign-off
-
-### Review Checklist
-
-- [ ] Criteri chiari e testabili
-- [ ] Tracciabilità completa
-- [ ] Test data identificati
-- [ ] Environment requirements definiti
-- [ ] Rischi identificati e mitigati
-- [ ] Timeline realistica
-
-### Approvals
-
-| Ruolo | Nome | Data | Firma | Status |
-|-------|------|------|-------|--------|
-| QA Lead | [Nome] | ______ | ______ | [Approved/Pending] |
-| Product Owner | [Nome] | ______ | ______ | [Approved/Pending] |
-| Tech Lead | [Nome] | ______ | ______ | [Approved/Pending] |
-| Business Analyst | [Nome] | ______ | ______ | [Approved/Pending] |
-
----
-
 ## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impatto |
@@ -325,10 +303,3 @@
 - [Link a test scripts]
 - [Link a test data files]
 - [Link a environment setup guides]
-
----
-
-*Criterio di accettazione creato il: [Data]*  
-*Ultima verifica: [Data]*  
-*Prossima review: [Data]*  
-*Owner: [QA Engineer responsabile]*

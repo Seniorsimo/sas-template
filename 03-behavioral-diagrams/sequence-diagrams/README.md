@@ -109,4 +109,3 @@ Questa sezione descrive le interazioni tra i componenti di [nome del sistema] at
 |-------------|------------|----------------------|------------------------|
 | [Nome 1]    | [Elenco]   | [UC-IDs]             | [REQ-IDs]              |
 | [Nome 2]    | [Elenco]   | [UC-IDs]             | [REQ-IDs]              |
-

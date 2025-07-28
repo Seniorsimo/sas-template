@@ -296,37 +296,9 @@
 
 ---
 
-## Sign-off e Validazione
-
-### Review Checklist
-
-- [ ] Requisito quantificabile e misurabile
-- [ ] Criteri di accettazione chiari
-- [ ] Piano di verifica definito
-- [ ] Tracciabilità completa
-- [ ] Rischi identificati e mitigati
-- [ ] Trade-offs analizzati
-
-### Approvazioni
-
-| Ruolo | Nome | Data | Firma |
-|-------|------|------|-------|
-| Technical Architect | [Nome] | ______ | ______ |
-| QA Engineer | [Nome] | ______ | ______ |
-| Product Owner | [Nome] | ______ | ______ |
-| Quality Assurance | [Nome] | ______ | ______ |
-
----
-
 ## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impatto |
 |----------|------|--------|-------------|---------|
 | 1.0 | [Data] | [Nome] | Versione iniziale | - |
 | 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] |
-
----
-
-*Requisito non-funzionale creato il: [Data]*  
-*Ultima verifica: [Data]*  
-*Prossima validazione: [Data]*

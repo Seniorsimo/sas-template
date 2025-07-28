@@ -221,11 +221,3 @@
 ### Note Aggiuntive
 
 [Qualsiasi nota importante o considerazione speciale]
-
----
-
-*Epic creato il: [Data]*  
-*Ultimo aggiornamento: [Data]*  
-*Prossima review: [Data]*
-
----

@@ -177,16 +177,3 @@
 | [Nome Documento] | [Ubicazione] | [Descrizione] |
 | [Nome Documento] | [Ubicazione] | [Descrizione] |
 | [Nome Documento] | [Ubicazione] | [Descrizione] |
-
-## Firme di Approvazione
-
-| Ruolo | Nome | Firma | Data |
-|-------|------|-------|------|
-| Business Owner | [Nome] | ____________ | [Data] |
-| Product Owner | [Nome] | ____________ | [Data] |
-| Quality Manager | [Nome] | ____________ | [Data] |
-| User Representative | [Nome] | ____________ | [Data] |
-
----
-
-*La User Acceptance è più di un test: è la validazione che il software fornisca reale valore di business agli utenti finali.*

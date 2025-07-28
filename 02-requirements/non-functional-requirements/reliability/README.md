@@ -71,7 +71,3 @@ Il sistema [nome sistema] deve rispettare i seguenti SLA:
 ## Strategia di Monitoraggio
 
 [Descrivere la strategia di monitoraggio per verificare il rispetto dei requisiti di affidabilità]
-
----
-
-*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

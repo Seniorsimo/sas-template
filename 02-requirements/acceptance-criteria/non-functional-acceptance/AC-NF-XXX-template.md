@@ -330,42 +330,6 @@
 
 ---
 
-## Sign-off e Acceptance
-
-### Review Checklist
-
-- [ ] Metriche chiaramente definite e misurabili
-- [ ] Condizioni di test appropriate e rappresentative
-- [ ] Tool e metodologie adeguate
-- [ ] Baseline e benchmark identificati
-- [ ] Rischi identificati e mitigati
-- [ ] Timeline realistica e fattibile
-
-### Performance Acceptance
-
-- [ ] Tutti i target di performance raggiunti
-- [ ] Sistema stabile sotto carico normale
-- [ ] Recovery appropriato dopo stress test
-- [ ] Monitoring e alerting in place
-
-### Business Acceptance
-
-- [ ] SLA requirements soddisfatti
-- [ ] Business impact accettabile
-- [ ] Costi operazionali entro budget
-- [ ] Stakeholder satisfied
-
-### Approvals
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Performance Engineer | [Nome] | ______ | ______ | [Comments] |
-| Technical Architect | [Nome] | ______ | ______ | [Comments] |
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| Operations Manager | [Nome] | ______ | ______ | [Comments] |
-
----
-
 ## Change History
 
 | Versione | Data | Autore | Cambiamenti | Impact su Testing |
@@ -396,10 +360,3 @@
 - [Link a monitoring configuration]
 - [Link a alerting rules]
 - [Link a dashboard setup]
-
----
-
-*Criterio di accettazione non-funzionale creato il: [Data]*  
-*Ultima validazione: [Data]*  
-*Prossima review: [Data]*  
-*Performance Engineer: [Nome responsabile]*

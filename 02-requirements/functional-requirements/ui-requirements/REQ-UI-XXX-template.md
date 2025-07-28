@@ -484,36 +484,10 @@
 
 ## Change History
 
-| Versione | Data | Autore | Cambiamenti | Design Impact | Approvato da |
-|----------|------|--------|-------------|---------------|--------------|
-| 1.0 | [Data] | [Nome] | Versione iniziale | - | [Nome] |
-| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] | [Nome] |
-
----
-
-## Approvazioni
-
-### Design Approval
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| UI/UX Designer | [Nome] | ______ | ______ | [Comments] |
-| Brand Manager | [Nome] | ______ | ______ | [Comments] |
-| Accessibility Specialist | [Nome] | ______ | ______ | [Comments] |
-
-### Technical Approval
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Frontend Architect | [Nome] | ______ | ______ | [Comments] |
-| Performance Engineer | [Nome] | ______ | ______ | [Comments] |
-
-### Business Approval
-
-| Ruolo | Nome | Data | Firma | Comments |
-|-------|------|------|-------|----------|
-| Product Owner | [Nome] | ______ | ______ | [Comments] |
-| User Experience Lead | [Nome] | ______ | ______ | [Comments] |
+| Versione | Data | Autore | Cambiamenti | Design Impact |
+|----------|------|--------|-------------|---------------|
+| 1.0 | [Data] | [Nome] | Versione iniziale | - |
+| 1.1 | [Data] | [Nome] | [Cambiamenti] | [Impatto] |
 
 ---
 
@@ -539,10 +513,3 @@
 - [Link a user journey maps]
 - [Link a usability testing results]
 - [Link a accessibility audit results]
-
----
-
-*UI requirement creato il: [Data]*  
-*Ultima revisione: [Data]*  
-*Prossima review: [Data]*  
-*UI Owner: [Nome responsabile UI/UX]*

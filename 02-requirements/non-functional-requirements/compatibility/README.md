@@ -68,7 +68,3 @@ Il sistema [nome sistema] deve soddisfare i seguenti obiettivi di compatibilità
 ## Roadmap di Compatibilità
 
 [Descrivere come la compatibilità evolverà nel tempo, includendo piani per l'aggiunta o la rimozione del supporto per determinate piattaforme]
-
----
-
-*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

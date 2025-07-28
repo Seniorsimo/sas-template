@@ -305,7 +305,3 @@
 - [Azione] - Owner: [Nome] - Due: [Data]
 
 **Next Meeting**: [Data prossimo meeting]
-
----
-
-*Risk Register [Nome Progetto] - v[Versione]*

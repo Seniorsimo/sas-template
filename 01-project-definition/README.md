@@ -28,37 +28,3 @@ Questa sezione include la documentazione fondamentale che definisce e contestual
 
 ### Valore Atteso
 [Riepilogo dei principali benefici e del ritorno sull'investimento previsto]
-
-## Approvazioni
-
-La definizione del progetto è stata esaminata e approvata dai seguenti stakeholder:
-
-| Nome | Ruolo | Data | Firma |
-|------|-------|------|-------|
-| [Nome] | [Ruolo] | [Data] | |
-| [Nome] | [Ruolo] | [Data] | |
-| [Nome] | [Ruolo] | [Data] | |
-
-## Documenti Correlati
-
-| ID | Titolo Documento | Versione | Descrizione |
-|----|------------------|----------|-------------|
-| [ID-DOC] | [Titolo] | [Versione] | [Breve descrizione] |
-| [ID-DOC] | [Titolo] | [Versione] | [Breve descrizione] |
-| [ID-DOC] | [Titolo] | [Versione] | [Breve descrizione] |
-
-## Glossario dei Termini
-
-| Termine | Definizione |
-|---------|-------------|
-| [Termine] | [Definizione] |
-| [Termine] | [Definizione] |
-| [Termine] | [Definizione] |
-
-## Riepilogo della Sezione
-
-[Fornire un breve paragrafo di chiusura che riassuma i punti chiave di questa sezione e introduca il passaggio alla sezione successiva della documentazione.]
-
----
-
-*Definizione del Progetto [Nome Progetto] - v[Versione]*

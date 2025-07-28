@@ -76,7 +76,3 @@ Il sistema [nome sistema] deve essere conforme ai seguenti standard di sicurezza
 ## Gestione delle Vulnerabilità
 
 [Descrivere il processo di gestione delle vulnerabilità, includendo identificazione, classificazione, remediation e disclosure]
-
----
-
-*Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*
