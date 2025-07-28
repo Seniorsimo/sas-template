@@ -28,34 +28,6 @@ Il progetto [NOME PROGETTO] implementa quattro categorie principali di criteri d
 
 [Descrizione dell'approccio al user acceptance testing e dei principali scenari di business coperti.]
 
-## Matrice di Copertura
-
-[Inserire una tabella che mostri la copertura dei criteri di accettazione rispetto ai requisiti e alle funzionalità chiave del sistema. La tabella dovrebbe evidenziare quali aree sono ben coperte e quali potrebbero richiedere ulteriori criteri.]
-
-### E-commerce
-| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
-|----------------|-------------------|----------------------|----------------------|---------------|
-| Catalogo Prodotti | [IDs] | [IDs] | [IDs] | [IDs] |
-| Carrello | [IDs] | [IDs] | [IDs] | [IDs] |
-| Checkout | [IDs] | [IDs] | [IDs] | [IDs] |
-| Account Utente | [IDs] | [IDs] | [IDs] | [IDs] |
-
-### Banking
-| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
-|----------------|-------------------|----------------------|----------------------|---------------|
-| Autenticazione | [IDs] | [IDs] | [IDs] | [IDs] |
-| Transazioni | [IDs] | [IDs] | [IDs] | [IDs] |
-| Gestione Conti | [IDs] | [IDs] | [IDs] | [IDs] |
-| Reportistica | [IDs] | [IDs] | [IDs] | [IDs] |
-
-### Healthcare
-| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
-|----------------|-------------------|----------------------|----------------------|---------------|
-| Cartelle Pazienti | [IDs] | [IDs] | [IDs] | [IDs] |
-| Appuntamenti | [IDs] | [IDs] | [IDs] | [IDs] |
-| Prescrizioni | [IDs] | [IDs] | [IDs] | [IDs] |
-| Analisi Risultati | [IDs] | [IDs] | [IDs] | [IDs] |
-
 ## Test Suite e Risultati Principali
 
 ### Risultati Complessivi

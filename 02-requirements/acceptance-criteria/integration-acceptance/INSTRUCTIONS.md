@@ -248,6 +248,86 @@ Requisiti: Gateway configuration, access control
 - **Circuit Breakers**: Prevent cascade failures
 - **Monitor Integrations**: Health checks, metrics
 
+## Esempi di utilizzo
+
+### Esempi di Naming
+
+```bash
+# API Integration
+AC-I-API-001-payment-gateway.md
+
+# Database Integration
+AC-I-DB-001-user-sync.md
+
+# Message Queue
+AC-I-MQ-001-order-events.md
+
+# External Service
+AC-I-EXT-001-maps-service.md
+```
+
+### Definizione di un Integration Contract
+
+- **Input Schema**: Formato dati inviati
+- **Output Schema**: Formato dati ricevuti
+- **Protocol Details**: HTTP methods, headers, auth
+- **Error Handling**: Error codes e recovery
+
+### Esempi di Scenari di Test
+
+- **Happy Path**: Integrazione funziona correttamente
+- **Error Conditions**: Gestione failure e timeout
+- **Load Testing**: Performance sotto carico
+- **Security**: Authentication e authorization
+
+### Synchronous Integration
+
+```gherkin
+Given il sistema destinazione è disponibile
+When invio una richiesta sincronoa
+Then ricevo una risposta entro X secondi
+```
+
+### Data Integrations
+
+```gherkin
+When invio i dati al sistema esterno
+Then i dati sono trasmessi correttamente
+And ricevo conferma della ricezione
+And i dati mantengono integrità
+```
+
+### Error Handling Testing
+
+```gherkin
+Scenario: Gestione errori di rete
+Given il sistema esterno è temporaneamente non disponibile
+When tento di inviare dati
+Then ricevo un errore di timeout appropriato
+And l'errore viene loggato
+And viene attivata la logica di retry
+```
+
+## Esempi di Matrice di Test di Integrazione
+
+### API Testing Results
+
+| API | Version | Test Criteria | Status | Last Tested | Issues |
+|-----|---------|--------------|--------|------------|--------|
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [API Name] | [Version] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+
+### Data Integration Testing Results
+
+| Integration Point | Direction | Test Criteria | Status | Last Tested | Issues |
+|------------------|-----------|--------------|--------|------------|--------|
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+| [Integration] | [In/Out/Bi] | [AC-I-IDs] | [Pass/Fail] | [Date] | [Issue IDs] |
+
 ## Supporto e Contatti
 
 Per domande sui Integration Acceptance Criteria:

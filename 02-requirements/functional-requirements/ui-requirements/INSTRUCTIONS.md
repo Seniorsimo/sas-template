@@ -252,3 +252,23 @@ xxl: 48px
 - **Don't forget loading states**
 - **Don't skip user testing**
 - **Don't ignore browser compatibility**
+
+## Esempi di Implementazione
+
+### E-commerce
+
+- **Griglia Prodotti**: Visualizzazione dei prodotti con immagini, prezzi e pulsanti di aggiunta al carrello.
+- **Form di Checkout**: Modulo per l'inserimento dei dati di spedizione e pagamento.
+- **Dashboard Ordini**: Tabella con lo storico degli ordini, stato e link per il tracciamento.
+
+### Banking
+
+- **Dashboard Principale**: Visualizzazione del saldo, ultimi movimenti e grafici di spesa.
+- **Form di Bonifico**: Modulo per l'inserimento dei dati del beneficiario, importo e causale.
+- **Grafico Andamento Conto**: Grafico a linee che mostra l'evoluzione del saldo nel tempo.
+
+### Healthcare
+
+- **Dashboard Paziente**: Visualizzazione degli appuntamenti futuri, ultimi referti e prescrizioni.
+- **Form di Prenotazione Visita**: Modulo per la ricerca di medici e la selezione di data e ora.
+- **Visualizzatore Referti**: Interfaccia per la visualizzazione di referti medici in formato PDF o DICOM.

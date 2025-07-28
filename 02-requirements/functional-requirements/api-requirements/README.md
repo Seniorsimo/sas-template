@@ -46,20 +46,6 @@
 
 [Riassunto degli standard di sicurezza implementati per le API del sistema]
 
-## Esempi di Implementazione
-
-### E-commerce
-
-[Esempio di implementazione delle API in un contesto e-commerce]
-
-### Banking
-
-[Esempio di implementazione delle API in un contesto banking]
-
-### Healthcare
-
-[Esempio di implementazione delle API in un contesto healthcare]
-
 ## Documentazione API
 
 [Riferimento alla documentazione OpenAPI/Swagger o altro strumento di documentazione API]

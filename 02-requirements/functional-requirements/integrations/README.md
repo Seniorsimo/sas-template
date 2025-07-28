@@ -52,20 +52,6 @@
 
 [Descrizione del flusso di integrazione principale]
 
-## Esempi di Implementazione
-
-### E-commerce
-
-[Esempio di implementazione delle integrazioni in un contesto e-commerce]
-
-### Banking
-
-[Esempio di implementazione delle integrazioni in un contesto banking]
-
-### Healthcare
-
-[Esempio di implementazione delle integrazioni in un contesto healthcare]
-
 ## Note di Implementazione
 
 [Riassumere considerazioni tecniche relative alle integrazioni, come protocolli usati, strategie di error handling, soluzioni di sicurezza adottate]

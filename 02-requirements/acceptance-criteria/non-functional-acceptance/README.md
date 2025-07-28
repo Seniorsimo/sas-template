@@ -35,20 +35,6 @@
 | Compliance standard | [Target] | [Attuale] | [Pass/Fail] |
 | Penetration Test Score | [Target] | [Attuale] | [Pass/Fail] |
 
-## Come Utilizzare il Template
-
-### 1. Identifica il Quality Attribute
-
-```bash
-# Performance
-AC-NF-PERF-001-response-time.md
-
-# Security  
-AC-NF-SEC-001-authentication.md
-
-# Usability
-AC-NF-USA-001-accessibility.md
-
 ## Risultati dei Test Non-Funzionali
 
 ### Test di Performance
@@ -72,32 +58,6 @@ AC-NF-USA-001-accessibility.md
 
 [Riassumere i risultati delle valutazioni di sicurezza condotte sul sistema, come penetration testing, vulnerability assessment, e security code review.]
 
-## Security Acceptance Criteria
-
-### Authentication Requirements
-
-```
-Login Success: Valid credentials accepted
-Login Failure: Invalid credentials rejected
-Lockout: After 5 failed attempts
-Session: Timeout after 30 min inactivity
-```
-
-### Authorization Controls
-
-```
-Role-based: Access based on user roles
-Resource-level: Granular permissions
-Principle of least privilege: Minimal access
-Audit trail: All access logged
-```
-
-### Data Protection
-
-```
-Encryption in transit: TLS 1.3 minimum
-Encryption at rest: AES-256
-PII handling: Anonymization/masking
 #### Risultati Vulnerability Assessment
 
 | Categoria | Vulnerabilità Critiche | Vulnerabilità Alte | Vulnerabilità Medie | Vulnerabilità Basse |
@@ -125,28 +85,6 @@ PII handling: Anonymization/masking
 
 [Riassumere i risultati dei test di compatibilità su diversi browser, dispositivi e sistemi operativi.]
 
-### Data Consistency
-
-```
-ACID compliance: Database transactions
-Eventual consistency: Distributed systems
-Backup verification: Regular restore tests
-Data validation: Integrity checks
-```
-
-## Testing Approaches
-
-### Performance Testing
-
-- **Load Testing**: Comportamento sotto carico normale
-- **Stress Testing**: Comportamento oltre capacità
-- **Volume Testing**: Grandi quantità di dati
-- **Endurance Testing**: Performance sostenute nel tempo
-
-### Security Testing
-
-- **Penetration Testing**: Simulazione attacchi
-- **Vulnerability Scanning**: Ricerca vulnerabilità note
 #### Matrice di Compatibilità
 
 | Piattaforma | Chrome | Firefox | Safari | Edge | IE 11 |
@@ -176,33 +114,6 @@ Data validation: Integrity checks
 ## Raccomandazioni
 
 [Fornire raccomandazioni basate sui risultati dei test non-funzionali, inclusi miglioramenti suggeriti e rischi identificati.]
-
-### Security SLOs
-
-```
-Vulnerability Response: Critical <24h
-Patch Management: Security patches <7 days
-Incident Response: Detection <15 min
-Access Review: Quarterly access review
-```
-
-### Usability SLOs
-
-```
-User Satisfaction: ≥ 4.5/5 rating
-Support Tickets: ≤ 5% users need help
-Task Success: ≥ 95% completion rate
-Accessibility: 100% WCAG AA compliance
-```
-
-
-| Attributo | Sistema Attuale | Concorrente 1 | Concorrente 2 | Benchmark Settore |
-|-----------|---------------|--------------|--------------|-------------------|
-| Performance | [Rating] | [Rating] | [Rating] | [Rating] |
-| Sicurezza | [Rating] | [Rating] | [Rating] | [Rating] |
-| Usabilità | [Rating] | [Rating] | [Rating] | [Rating] |
-| Affidabilità | [Rating] | [Rating] | [Rating] | [Rating] |
-| Scalabilità | [Rating] | [Rating] | [Rating] | [Rating] |
 
 ## Sign-off
 

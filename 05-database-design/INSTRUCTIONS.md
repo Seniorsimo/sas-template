@@ -215,6 +215,32 @@ Per ogni dominio applicativo (E-commerce, Banking, Healthcare), utilizzare esemp
 - **Banking**: accounts, customers, transactions, cards
 - **Healthcare**: patients, practitioners, appointments, medical_records
 
+## Esempi di Implementazione
+
+### E-commerce
+
+In un contesto E-commerce, le entità principali includono:
+- **Customer**: Gestione degli utenti registrati
+- **Product**: Catalogo prodotti con attributi e categorie
+- **Order**: Ordini con stato, data, e riferimenti cliente
+- **OrderItem**: Dettaglio prodotti in un ordine
+
+### Banking
+
+In un contesto Banking, le entità principali includono:
+- **Account**: Conti correnti/deposito con saldo e stato
+- **Customer**: Anagrafica clienti con documenti di identità
+- **Transaction**: Movimenti con importo, data, tipo operazione
+- **Card**: Carte di pagamento associate ai conti
+
+### Healthcare
+
+In un contesto Healthcare, le entità principali includono:
+- **Patient**: Anagrafica pazienti con storia medica
+- **Practitioner**: Medici e specialisti con qualifiche
+- **Appointment**: Appuntamenti con data, durata, stato
+- **MedicalRecord**: Cartelle cliniche con diagnosi e trattamenti
+
 ## Tracciabilità ai Requisiti
 
 Per ogni entità, associare i requisiti che hanno portato alla sua definizione:

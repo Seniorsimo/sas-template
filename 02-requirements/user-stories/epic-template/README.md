@@ -227,3 +227,5 @@
 *Epic creato il: [Data]*  
 *Ultimo aggiornamento: [Data]*  
 *Prossima review: [Data]*
+
+---
