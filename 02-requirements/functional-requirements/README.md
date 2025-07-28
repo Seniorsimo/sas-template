@@ -44,26 +44,6 @@ Il sistema [Nome Sistema] implementa le seguenti macro-funzionalità:
 | REQ-API-001 | [Breve descrizione] | Must | [Status] | [US-003, UC-003] |
 | REQ-UI-001  | [Breve descrizione] | Could | [Status] | [US-004, UC-004] |
 
-## Esempi di Applicazione
-
-### E-commerce
-
-- [Esempio di funzionalità core per e-commerce]
-- [Esempio di integrazione per e-commerce]
-- [Esempio di API per e-commerce]
-
-### Banking
-
-- [Esempio di funzionalità core per banking]
-- [Esempio di integrazione per banking]
-- [Esempio di API per banking]
-
-### Healthcare
-
-- [Esempio di funzionalità core per healthcare]
-- [Esempio di integrazione per healthcare]
-- [Esempio di API per healthcare]
-
 ## Considerazioni Implementative
 
 [Riassumere eventuali considerazioni tecniche o implementative chiave che attraversano tutte le categorie di requisiti funzionali]

@@ -230,6 +230,32 @@ AC-UA-MOBILE-001       # Primo criterio UAT per mobile experience
 - **Integration**: Protocols, data flow e system interactions
 - **User Acceptance**: User experience e business value
 
+## Esempi di Matrice di Copertura
+
+### E-commerce
+| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
+|----------------|-------------------|----------------------|----------------------|---------------|
+| Catalogo Prodotti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Carrello | [IDs] | [IDs] | [IDs] | [IDs] |
+| Checkout | [IDs] | [IDs] | [IDs] | [IDs] |
+| Account Utente | [IDs] | [IDs] | [IDs] | [IDs] |
+
+### Banking
+| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
+|----------------|-------------------|----------------------|----------------------|---------------|
+| Autenticazione | [IDs] | [IDs] | [IDs] | [IDs] |
+| Transazioni | [IDs] | [IDs] | [IDs] | [IDs] |
+| Gestione Conti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Reportistica | [IDs] | [IDs] | [IDs] | [IDs] |
+
+### Healthcare
+| Area Funzionale | Criteri Funzionali | Criteri Non-Funzionali | Criteri di Integrazione | Criteri Utente |
+|----------------|-------------------|----------------------|----------------------|---------------|
+| Cartelle Pazienti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Appuntamenti | [IDs] | [IDs] | [IDs] | [IDs] |
+| Prescrizioni | [IDs] | [IDs] | [IDs] | [IDs] |
+| Analisi Risultati | [IDs] | [IDs] | [IDs] | [IDs] |
+
 ## Contatti e Supporto
 
 Per domande sui template di Acceptance Criteria:

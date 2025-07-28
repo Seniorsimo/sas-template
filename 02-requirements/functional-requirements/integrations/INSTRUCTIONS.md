@@ -230,3 +230,23 @@ I requisiti di **Integrazione** definiscono come il sistema deve interagire con 
 - **Non hardcodare** credenziali
 - **Non trascurare** la security
 - **Non dimenticare** il monitoring
+
+## Esempi di Implementazione
+
+### E-commerce
+
+- **Integrazione con Gateway di Pagamento (Stripe)**: Per processare pagamenti con carta di credito.
+- **Integrazione con Servizio di Spedizione (UPS, FedEx)**: Per calcolare i costi di spedizione e tracciare gli ordini.
+- **Integrazione con CRM (Salesforce)**: Per sincronizzare i dati dei clienti e degli ordini.
+
+### Banking
+
+- **Integrazione con Sistemi di Credit Scoring (Experian)**: Per valutare l'affidabilità creditizia dei clienti.
+- **Integrazione con Reti Interbancarie (SWIFT)**: Per eseguire trasferimenti internazionali.
+- **Integrazione con Servizi Antifrode**: Per monitorare e prevenire transazioni fraudolente.
+
+### Healthcare
+
+- **Integrazione con Sistemi di Anagrafe Sanitaria**: Per verificare i dati dei pazienti.
+- **Integrazione con Laboratori di Analisi**: Per ricevere i risultati degli esami.
+- **Integrazione con Sistemi di Fatturazione Elettronica**: Per gestire la fatturazione delle prestazioni sanitarie.

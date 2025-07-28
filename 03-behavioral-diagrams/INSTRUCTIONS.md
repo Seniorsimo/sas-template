@@ -69,13 +69,6 @@ Ogni diagramma deve:
 4. Verificare la coerenza con requisiti e altri diagrammi
 5. Aggiornare riferimenti nel README della cartella se necessario
 
-## Multi-Domain Examples
-
-Fornire almeno un esempio per ciascuno dei domini:
-- **E-commerce**: Processi di checkout, gestione catalogo, ordini
-- **Banking**: Trasferimenti, apertura conti, gestione carte
-- **Healthcare**: Prenotazioni, cartelle cliniche, gestione pazienti
-
 ## Quality Gates
 
 Prima di considerare completo un diagramma, verificare:
@@ -84,3 +77,20 @@ Prima di considerare completo un diagramma, verificare:
 - ID e riferimenti sono corretti e tracciabili
 - La notazione UML è conforme agli standard
 - Sono inclusi esempi per diversi domini applicativi
+
+## Esempi per Dominio
+
+### E-commerce
+- **Use Case**: Gestione del carrello
+- **Activity Diagram**: Processo di checkout
+- **Sequence Diagram**: Interazione tra servizio ordini e gateway di pagamento
+
+### Banking
+- **Use Case**: Effettuare un bonifico
+- **Activity Diagram**: Processo di approvazione di un prestito
+- **Sequence Diagram**: Autenticazione a due fattori
+
+### Healthcare
+- **Use Case**: Prenotare una visita medica
+- **Activity Diagram**: Flusso di gestione di una prescrizione
+- **Sequence Diagram**: Accesso alla cartella clinica elettronica

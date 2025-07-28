@@ -106,7 +106,7 @@ EntityA |o--o{ EntityB : "relationship"
 
 ---
 
-## Esempi Multi-Dominio (solo riferimento, NON includere nel template README)
+## Esempi per Dominio
 
 ### E-commerce
 

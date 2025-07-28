@@ -103,20 +103,6 @@ La seguente tabella riassume gli obiettivi principali di qualità per il sistema
 
 [Descrivere come i requisiti non-funzionali sono stati prioritizzati e come saranno integrati nella pianificazione del progetto]
 
-## Casi di Studio
-
-### E-commerce
-
-[Descrivere esempi specifici di come questi requisiti non-funzionali si applicano in un contesto di e-commerce]
-
-### Banking
-
-[Descrivere esempi specifici di come questi requisiti non-funzionali si applicano in un contesto bancario]
-
-### Healthcare
-
-[Descrivere esempi specifici di come questi requisiti non-funzionali si applicano in un contesto sanitario]
-
 ---
 
 *Documento approvato da: [Nome e ruolo approvatore] - Data: [Data approvazione]*

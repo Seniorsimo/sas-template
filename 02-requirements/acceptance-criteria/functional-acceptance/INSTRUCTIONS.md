@@ -253,6 +253,35 @@ Concentrati su **COSA** il sistema deve fare, non **COME**:
 - **Completo**: Copre tutti gli scenari rilevanti
 - **Mantenibile**: Facile da aggiornare
 
+## Esempi di Matrice di Copertura
+
+### E-commerce
+
+| Feature | Test Criteria ID | Stato | Pass Rate | Criticità |
+|---------|-----------------|-------|-----------|-----------|
+| Product Catalog | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Shopping Cart | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Checkout Process | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Order Management | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+
+### Banking
+
+| Feature | Test Criteria ID | Stato | Pass Rate | Criticità |
+|---------|-----------------|-------|-----------|-----------|
+| Authentication | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Account Management | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Transactions | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Reporting | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+
+### Healthcare
+
+| Feature | Test Criteria ID | Stato | Pass Rate | Criticità |
+|---------|-----------------|-------|-----------|-----------|
+| Patient Records | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Appointment Scheduling | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Prescription Management | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+| Billing | [AC-F-IDs] | [Status] | [Rate]% | [Priority] |
+
 ## Supporto e Contatti
 
 Per domande sui Functional Acceptance Criteria:

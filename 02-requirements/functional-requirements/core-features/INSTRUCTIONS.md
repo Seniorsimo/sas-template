@@ -98,3 +98,23 @@ Le core features determinano le entità principali del modello dati.
 
 - Tutti i requisiti core devono essere "Must Have"
 - Copertura test >= 95%
+
+## Esempi di Implementazione
+
+### E-commerce
+
+- **Gestione Catalogo Prodotti**: Funzionalità di aggiunta, modifica, e rimozione dei prodotti.
+- **Gestione Carrello**: Aggiunta di prodotti al carrello, modifica quantità, e calcolo del totale.
+- **Processo di Checkout**: Inserimento dati di spedizione, selezione metodo di pagamento, e conferma ordine.
+
+### Banking
+
+- **Gestione Conti Correnti**: Visualizzazione saldo, lista movimenti, e dettagli del conto.
+- **Esecuzione Bonifici**: Inserimento dati beneficiario, importo, e data di esecuzione.
+- **Autenticazione a Due Fattori**: Login sicuro tramite password e codice OTP.
+
+### Healthcare
+
+- **Gestione Cartelle Cliniche**: Accesso e modifica delle informazioni dei pazienti.
+- **Prenotazione Visite**: Ricerca disponibilità medici e prenotazione appuntamenti.
+- **Gestione Prescrizioni**: Emissione e visualizzazione delle ricette mediche.

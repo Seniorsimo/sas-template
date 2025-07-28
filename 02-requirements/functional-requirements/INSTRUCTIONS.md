@@ -199,6 +199,29 @@ Requisiti ↔ Architecture ↔ Design ↔ Implementation
 - Impact analysis
 - Re-baseline quando necessario
 
+## Esempi di Applicazione
+
+### E-commerce
+
+- **Core Feature**: Gestione carrello e checkout
+- **Integrazione**: Gateway di pagamento (Stripe, PayPal)
+- **API**: Endpoint per ricerca prodotti e gestione ordini
+- **UI**: Interfaccia per visualizzazione catalogo prodotti
+
+### Banking
+
+- **Core Feature**: Gestione conti e transazioni
+- **Integrazione**: Sistemi di credit scoring
+- **API**: API per bonifici e pagamenti
+- **UI**: Dashboard per visualizzazione saldo e movimenti
+
+### Healthcare
+
+- **Core Feature**: Gestione cartelle cliniche elettroniche
+- **Integrazione**: Sistemi di prenotazione visite (CUP)
+- **API**: API per accesso referti e prescrizioni
+- **UI**: Portale paziente per visualizzazione dati sanitari
+
 ---
 
 *Per aggiungere nuovi requisiti, utilizza i template nelle rispettive cartelle di categoria.*

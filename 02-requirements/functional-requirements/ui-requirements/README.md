@@ -54,20 +54,6 @@
 
 [Descrizione dell'approccio responsive utilizzato e delle considerazioni per diverse dimensioni di schermo]
 
-## Esempi di Implementazione
-
-### E-commerce
-
-[Esempio di implementazione dell'interfaccia utente in un contesto e-commerce]
-
-### Banking
-
-[Esempio di implementazione dell'interfaccia utente in un contesto banking]
-
-### Healthcare
-
-[Esempio di implementazione dell'interfaccia utente in un contesto healthcare]
-
 ## Considerazioni Tecniche
 
 [Riassunto delle considerazioni tecniche relative all'interfaccia utente, come tecnologie frontend utilizzate, performance, compatibilità browser]

@@ -209,3 +209,23 @@ https://api.domain.com/v{version}/{resource}/{id}/{sub-resource}
 - **Don't skip input validation**
 - **Don't forget rate limiting**
 - **Don't ignore monitoring** and logging
+
+## Esempi di Implementazione
+
+### E-commerce
+
+- **GET /products/{id}**: Recupera dettagli di un prodotto.
+- **POST /cart/items**: Aggiunge un prodotto al carrello.
+- **GET /orders/{id}**: Controlla lo stato di un ordine.
+
+### Banking
+
+- **POST /transfers**: Esegue un bonifico tra conti.
+- **GET /accounts/{id}/balance**: Controlla il saldo di un conto.
+- **GET /transactions**: Recupera la lista delle transazioni.
+
+### Healthcare
+
+- **GET /patients/{id}/records**: Recupera la cartella clinica di un paziente.
+- **POST /appointments**: Prenota una nuova visita.
+- **GET /prescriptions**: Visualizza le prescrizioni attive.

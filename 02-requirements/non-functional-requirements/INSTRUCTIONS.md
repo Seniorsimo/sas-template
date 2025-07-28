@@ -168,3 +168,32 @@ NFR ↔ Functional Requirements ↔ User Stories ↔ Test Cases
    - Performance tuning
    - Requirement updates
    - Improvement implementation
+
+## Casi di Studio
+
+### E-commerce
+
+- **Performance**: Il tempo di caricamento della pagina prodotto deve essere inferiore a 2 secondi.
+- **Security**: I dati delle carte di credito devono essere conformi allo standard PCI-DSS.
+- **Usability**: Il processo di checkout deve essere completabile in meno di 3 passaggi.
+- **Reliability**: Il sistema deve garantire un uptime del 99.9% durante il Black Friday.
+- **Scalability**: Il sistema deve poter gestire un aumento del traffico del 500% durante i saldi.
+- **Compatibility**: Il sito deve essere compatibile con i principali browser (Chrome, Firefox, Safari) e dispositivi mobili.
+
+### Banking
+
+- **Performance**: Le transazioni online devono essere processate in meno di 3 secondi.
+- **Security**: L'autenticazione a due fattori (2FA) è obbligatoria per tutte le operazioni dispositive.
+- **Usability**: L'app mobile deve essere accessibile a utenti con disabilità visive (WCAG 2.1 AA).
+- **Reliability**: Il sistema deve garantire la consistenza dei dati delle transazioni (ACID).
+- **Scalability**: Il sistema deve poter gestire un aumento del 20% del numero di clienti ogni anno.
+- **Compatibility**: L'app deve essere compatibile con le ultime due versioni di iOS e Android.
+
+### Healthcare
+
+- **Performance**: L'accesso alla cartella clinica di un paziente deve avvenire in meno di 1 secondo.
+- **Security**: I dati sanitari dei pazienti devono essere conformi allo standard HIPAA.
+- **Usability**: I medici devono poter prescrivere un farmaco in meno di 5 click.
+- **Reliability**: Il sistema deve garantire un uptime del 99.99% per l'accesso ai dati critici.
+- **Scalability**: Il sistema deve poter archiviare e gestire petabyte di dati di imaging medicale.
+- **Compatibility**: Il sistema deve potersi integrare con i sistemi di anagrafe sanitaria regionali.

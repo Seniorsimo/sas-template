@@ -42,20 +42,6 @@
 
 [Descrivere come le funzionalità core si integrano con altri sistemi o componenti]
 
-## Esempi di Implementazione
-
-### E-commerce
-
-[Esempio di implementazione delle core features in un contesto e-commerce]
-
-### Banking
-
-[Esempio di implementazione delle core features in un contesto banking]
-
-### Healthcare
-
-[Esempio di implementazione delle core features in un contesto healthcare]
-
 ## Considerazioni Tecniche
 
 [Riassumere eventuali decisioni tecniche significative o vincoli relativi alle funzionalità core]
