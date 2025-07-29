@@ -12,7 +12,7 @@ $config = @{
 
     # Path del logo aziendale (usato in copertina e header)
     # Il path è relativo alla root del progetto
-    logo_path = "media/logo.png"
+    logo_path = "media/background.png"
 
     # --- TABELLA DI IDENTIFICAZIONE (COPERTINA) ---
     identification = @{
