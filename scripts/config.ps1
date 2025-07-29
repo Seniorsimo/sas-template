@@ -64,7 +64,7 @@ $config = @{
     # Questi dati appaiono su ogni pagina (tranne la copertina)
     header = @{
         "politica" = "Manuale Operativo Sicurezza Informatica"
-        "codice_documento" = "PSO-001-SICUREZZA"
+        "codicedocumento" = "PSO-001-SICUREZZA"
         # La versione nell'header viene presa dall'ultima versione nella tabella di versionamento
         "versione" = ""
     }
