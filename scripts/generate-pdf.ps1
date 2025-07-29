@@ -98,7 +98,6 @@ $allMarkdownFiles = Get-ChildItem -Path $PWD -Filter "*.md" -Recurse |
     Where-Object {
         $_.Name -ne "INSTRUCTIONS.md" -and
         $_.Name -notlike "*template*" -and 
-        $_.FullName -notlike "*template*" -and
         $_.Name -ne "temp-combined.md" -and
         $_.FullName -notlike "*\.git\*" -and
         $_.FullName -notlike "*\.github\*" -and
@@ -112,7 +111,6 @@ $allMarkdownFiles = Get-ChildItem -Path $PWD -Filter "*.md" -Recurse |
 $allPumlFiles = Get-ChildItem -Path $PWD -Filter "*.puml" -Recurse | 
     Where-Object { 
         $_.Name -notlike "*template*" -and 
-        $_.FullName -notlike "*template*" -and
         $_.FullName -notlike "*\.git\*" -and
         $_.FullName -notlike "*\.github\*" -and
         $_.FullName -notlike "*scripts\*"
