@@ -1,48 +1,23 @@
 @startuml Activity-Template
-!define SWIMLANE partition
-
 title Processo [Nome Processo] - Diagramma di Attività
 
-|#LightBlue|Utente|
+|#LightBlue|Attore 1|
 start
-:Inizia processo;
+:Azione 1;
+:Azione 2;
 
-|#LightGreen|Sistema|
-:Valida input;
+|#LightGreen|Attore 2|
+:Azione 3;
 
-if (Input valido?) then (sì)
-  :Elabora richiesta;
-  
-  |#LightYellow|Database|
-  :Salva dati;
-  
-  |#LightGreen|Sistema|
-  :Genera risposta;
-  
+if (Condizione?) then (sì)
+  :Azione 4;
 else (no)
-  :Mostra errore;
-  
-  |#LightBlue|Utente|
-  :Corregge input;
+  :Azione 5;
   stop
 endif
 
-|#LightBlue|Utente|
-:Riceve conferma;
-
-' Processo parallelo (opzionale)
-fork
-  :Invia notifica email;
-fork again
-  :Aggiorna log sistema;
-end fork
-
+|#LightBlue|Attore 1|
+:Azione 6;
 stop
-
-note right
-  Le swimlane rappresentano
-  i diversi attori/sistemi
-  coinvolti nel processo
-end note
 
 @enduml
