@@ -2,7 +2,7 @@
 
 \begin{center}
     \vspace*{\stretch{1}}
-    \includegraphics[width=0.4\textwidth]{{LOGO_PATH}}
+    \coverlogo
 
     \vspace{2cm}
 

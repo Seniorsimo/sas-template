@@ -15,10 +15,13 @@
 % --- Definizione variabili da Pandoc ---
 % Usiamo \providecommand per evitare errori se le variabili non sono passate
 \providecommand{\logo}{}
-\providecommand{\header_politica}{}
-\providecommand{\header_codice}{}
-\providecommand{\header_versione}{}
+\providecommand{\headerpolitica}{}
+\providecommand{\headercodice}{}
+\providecommand{\headerversione}{}
 \providecommand{\filename}{}
+
+% --- Comando Personalizzato per Logo in Copertina ---
+\newcommand{\coverlogo}{\includegraphics[width=0.4\textwidth]{\logo}}
 
 % --- Configurazione Margini ---
 % Questi valori sono già impostati in Pandoc, ma li ridefiniamo per sicurezza
@@ -37,11 +40,11 @@
 \fancyhead[R]{
     \begin{tabular}{|l|p{7cm}|}
     \hline
-    \textbf{Politica} & \header_politica \\
+    \textbf{Politica} & \headerpolitica \\
     \hline
-    \textbf{Codice Documento} & \header_codice \\
+    \textbf{Codice Documento} & \headercodice \\
     \hline
-    \textbf{Versione} & \header_versione \\
+    \textbf{Versione} & \headerversione \\
     \hline
     \end{tabular}
 }

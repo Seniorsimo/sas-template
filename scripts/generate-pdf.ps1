@@ -173,9 +173,8 @@ function Get-PopulatedContent {
 
     $templateContent = Get-Content $TemplatePath -Raw -Encoding UTF8
 
-    # Popola il titolo e il logo
+    # Popola il titolo
     $templateContent = $templateContent.Replace("{{TITLE}}", $Config.title)
-    $templateContent = $templateContent.Replace("{{LOGO_PATH}}", $Config.logo_path.Replace("\", "/"))
 
     # Genera righe per la tabella di identificazione
     $idRows = @()
@@ -447,9 +446,9 @@ $pandocArgs = @(
     "--toc-depth=3",
     # --- Variabili personalizzate per Header/Footer ---
     "--variable", "logo=$($config.logo_path.Replace("\", "/"))",
-    "--variable", "header_politica=$($config.header.politica)",
-    "--variable", "header_codice=$($config.header.codice_documento)",
-    "--variable", "header_versione=$($config.header.versione)",
+    "--variable", "headerpolitica=$($config.header.politica)",
+    "--variable", "headercodice=$($config.header.codicedocumento)",
+    "--variable", "headerversione=$($config.header.versione)",
     "--variable", "filename=$(Split-Path $OutputPath -Leaf)"
 )
 
