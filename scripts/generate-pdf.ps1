@@ -17,13 +17,23 @@
 
 param(
     [string]$OutputPath = ".\documentation.pdf",
-    [string]$Title = "Enterprise Software Documentation Template",
     [switch]$WithDiagrams,
     [switch]$Verbose
 )
 
 # Default values for switches
 if (-not $PSBoundParameters.ContainsKey('WithDiagrams')) { $WithDiagrams = $true }
+
+# --- Caricamento Configurazione ---
+$PSScriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
+$configPath = Join-Path $PSScriptRoot "config.ps1"
+if (-not (Test-Path $configPath)) {
+    Write-Host "ERRORE: File di configurazione 'config.ps1' non trovato nella cartella 'scripts'." -ForegroundColor Red
+    exit 1
+}
+. $configPath
+Write-Host "File di configurazione caricato con successo." -ForegroundColor Green
+
 
 Write-Host "Generazione PDF Documentazione Template Enterprise" -ForegroundColor Green
 Write-Host "=================================================" -ForegroundColor Green
@@ -103,9 +113,7 @@ $allMarkdownFiles = Get-ChildItem -Path $PWD -Filter "*.md" -Recurse |
         $_.FullName -notlike "*\.github\*" -and
         $_.FullName -notlike "*scripts\*"
     } |
-    ForEach-Object { 
-        $_.FullName.Replace("$PWD\", "").Replace("\", "\")
-    }
+    ForEach-Object { Resolve-Path -Path $_.FullName -Relative }
 
 # Trova tutti i file .puml escludendo i template
 $allPumlFiles = Get-ChildItem -Path $PWD -Filter "*.puml" -Recurse | 
@@ -115,9 +123,7 @@ $allPumlFiles = Get-ChildItem -Path $PWD -Filter "*.puml" -Recurse |
         $_.FullName -notlike "*\.github\*" -and
         $_.FullName -notlike "*scripts\*"
     } |
-    ForEach-Object { 
-        $_.FullName.Replace("$PWD\", "").Replace("\", "\")
-    }
+    ForEach-Object { Resolve-Path -Path $_.FullName -Relative }
 
 # Combina tutti i file
 $allFiles = $allMarkdownFiles + $allPumlFiles
@@ -158,15 +164,61 @@ foreach ($file in $fileOrder) {
     Write-Host "  $file" -ForegroundColor Gray
 }
 
+# --- Funzione per Popolare i Template ---
+function Get-PopulatedContent {
+    param(
+        [string]$TemplatePath,
+        [hashtable]$Config
+    )
+
+    $templateContent = Get-Content $TemplatePath -Raw -Encoding UTF8
+
+    # Popola il titolo e il logo
+    $templateContent = $templateContent.Replace("{{TITLE}}", $Config.title)
+    $templateContent = $templateContent.Replace("{{LOGO_PATH}}", $Config.logo_path.Replace("\", "/"))
+
+    # Genera righe per la tabella di identificazione
+    $idRows = @()
+    foreach ($item in $Config.identification.GetEnumerator()) {
+        $idRows += "$($item.Name) & $($item.Value) \\"
+    }
+    $templateContent = $templateContent.Replace("{{IDENTIFICATION_TABLE_ROWS}}", ($idRows -join "`n" + "\hline"))
+
+    # Genera righe per la tabella delle responsabilità
+    $respRows = @()
+    foreach ($item in $Config.responsibilities) {
+        $respRows += "$($item.Ruolo) & $($item.Nome) & $($item.Funzione) \\"
+    }
+    $templateContent = $templateContent.Replace("{{RESPONSIBILITIES_TABLE_ROWS}}", ($respRows -join "`n" + "\hline"))
+
+    # Genera righe per la tabella di versionamento
+    $verRows = @()
+    foreach ($item in $Config.versioning) {
+        $verRows += "$($item.Versione) & $($item.Data) & $($item.Motivo) & $($item.Modifiche) \\"
+    }
+    $templateContent = $templateContent.Replace("{{VERSIONING_TABLE_ROWS}}", ($verRows -join "`n" + "\hline"))
+
+    return $templateContent
+}
+
+
+# --- Preparazione Contenuto Speciale (Copertina, Versionamento) ---
+Write-Host "Preparazione copertina e pagine speciali..." -ForegroundColor Cyan
+$coverContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot "cover-template.md") -Config $config
+$versioningContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot "versioning-template.md") -Config $config
+
 # Crea file temporaneo combinato
 $tempFile = Join-Path $PWD "temp-combined.md"
 $combinedContent = @()
 
-# Header del documento (senza YAML per evitare conflitti)
-$combinedContent += "# $Title`n"
-$combinedContent += "**Enterprise Template System**`n"
-$combinedContent += "Generato il $(Get-Date -Format 'dd/MM/yyyy')`n`n"
-$combinedContent += "\newpage`n`n"
+# Aggiungi copertina e versionamento, con interruzioni di pagina esplicite
+$combinedContent += $coverContent
+$combinedContent += "\newpage"
+$combinedContent += $versioningContent
+$combinedContent += "\newpage"
+$combinedContent += "\tableofcontents"
+$combinedContent += "\newpage"
+
 
 Write-Host "Combinazione file Markdown e PlantUML..." -ForegroundColor Cyan
 
@@ -356,8 +408,6 @@ $pandocArgsTex = @(
     "--pdf-engine=xelatex",
     "--include-in-header", "scripts/header.tex",
     "--highlight-style=tango",
-    "--variable", "mainfont=Calibri",
-    "--variable", "monofont=Consolas", 
     "--variable", "fontsize=11pt",
     "--variable", "geometry:margin=2cm",
     "--variable", "graphics=yes",
@@ -378,18 +428,22 @@ $pandocArgs = @(
     "--from", "markdown-yaml_metadata_block",
     "--to", "pdf",
     "--pdf-engine=xelatex",
-    "--include-in-header", "scripts/header.tex",
+    "--include-in-header", (Join-Path $PSScriptRoot "header.tex"),
     "--highlight-style=tango",
-    "--variable", "mainfont=Calibri",
-    "--variable", "monofont=Consolas", 
     "--variable", "fontsize=11pt",
     "--variable", "geometry:margin=2cm",
     "--variable", "graphics=yes",
     "--variable", "fig-align=center",
     "--variable", "fig-pos=H",
     "--number-sections",
-    "--toc",
-    "--toc-depth=3"
+    # "--toc", # Il TOC è già stato inserito manualmente
+    "--toc-depth=3",
+    # --- Variabili personalizzate per Header/Footer ---
+    "--variable", "logo=$($config.logo_path.Replace("\", "/"))",
+    "--variable", "header_politica=$($config.header.politica)",
+    "--variable", "header_codice=$($config.header.codice_documento)",
+    "--variable", "header_versione=$($config.header.versione)",
+    "--variable", "filename=$(Split-Path $OutputPath -Leaf)"
 )
 
 if ($WithDiagrams -and $plantumlAvailable) {
@@ -495,6 +549,8 @@ try {
         
         # Cleanup
         #Remove-Item $tempFile -Force
+        #Remove-Item (Join-Path $PSScriptRoot "temp-cover.md") -Force
+        #Remove-Item (Join-Path $PSScriptRoot "temp-versioning.md") -Force
         
         # Apri PDF se richiesto
         $openPdf = Read-Host "Aprire il PDF generato? (y/n)"
