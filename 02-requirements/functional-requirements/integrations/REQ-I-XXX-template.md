@@ -19,10 +19,6 @@
 
 [Breve descrizione dell'integrazione - cosa collegare con cosa e perché]
 
-### Business Context
-
-[Perché questa integrazione è necessaria dal punto di vista business]
-
 ### Integration Pattern
 
 [Tipo di pattern di integrazione utilizzato - Point-to-Point, Hub-and-Spoke, ESB, etc.]
@@ -270,30 +266,6 @@
 
 ---
 
-## Timing e Scheduling
-
-### Execution Schedule
-
-**Real-time**: [Se real-time, specifiche latenza]  
-**Batch Processing**: [Se batch, schedule e finestre]  
-**Near Real-time**: [Se near real-time, specifiche]  
-**On-demand**: [Se on-demand, trigger events]
-
-### Processing Windows
-
-**Business Hours**: [Finestre orari business]  
-**Maintenance Windows**: [Finestre manutenzione]  
-**Peak Hours**: [Ore di picco]  
-**Blackout Periods**: [Periodi blackout]
-
-### Dependencies Timing
-
-**Prerequisite Systems**: [Sistemi che devono essere pronti]  
-**Sequence Dependencies**: [Dipendenze sequenziali]  
-**Timing Constraints**: [Vincoli temporali]
-
----
-
 ## Test Strategy
 
 ### Integration Testing
@@ -406,35 +378,6 @@
 **External Dependencies**: [Dipendenze esterne]  
 **Internal Dependencies**: [Dipendenze interne]  
 **Third-party Dependencies**: [Dipendenze terze parti]
-
----
-
-## Cost e Effort Estimates
-
-### Development Effort
-
-**Analysis & Design**: [Ore]  
-**Development**: [Ore]  
-**Testing**: [Ore]  
-**Deployment**: [Ore]  
-**Documentation**: [Ore]  
-**Total**: [Ore totali]
-
-### Infrastructure Costs
-
-**Development Environment**: [Costo]  
-**Testing Environment**: [Costo]  
-**Production Environment**: [Costo]  
-**Third-party Services**: [Costo]  
-**Ongoing Operational**: [Costo annuale]
-
-### Resource Requirements
-
-**Integration Architect**: [Giorni]  
-**Senior Developer**: [Giorni]  
-**QA Engineer**: [Giorni]  
-**DevOps Engineer**: [Giorni]  
-**Security Specialist**: [Giorni]
 
 ---
 

@@ -22,10 +22,6 @@
 
 [Spiegazione completa della funzionalità richiesta, includendo contesto e motivazioni]
 
-### Valore di Business
-
-[Perché questo requisito è importante e quale valore porta]
-
 ---
 
 ## Stakeholders
@@ -210,25 +206,6 @@
 
 - **[Rischio Business 1]**: [Descrizione]  
   *Mitigazione*: [Piano di mitigazione]
-
----
-
-## Planning
-
-### Stima Effort
-
-- **Analysis**: [Giorni persona]
-- **Development**: [Giorni persona]  
-- **Testing**: [Giorni persona]
-- **Documentation**: [Giorni persona]
-- **Total**: [Giorni persona totali]
-
-### Milestone
-
-- **Analysis Complete**: [Data]
-- **Development Complete**: [Data]
-- **Testing Complete**: [Data]
-- **Ready for Production**: [Data]
 
 ---
 
