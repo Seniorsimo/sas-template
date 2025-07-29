@@ -2,10 +2,10 @@
 
 ## Informazioni Generali
 
-**Progetto**: [Nome del Progetto]
-**Versione**: [Versione]
-**Data**: [Data]
-**Responsabile**: [Nome Responsabile]
+**Progetto**: [Nome del Progetto]  
+**Versione**: [Versione]  
+**Data**: [Data]  
+**Responsabile**: [Nome Responsabile]  
 
 ---
 
