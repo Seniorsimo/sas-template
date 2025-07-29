@@ -181,21 +181,21 @@ function Get-PopulatedContent {
     foreach ($item in $Config.identification.GetEnumerator()) {
         $idRows += "$($item.Name) & $($item.Value) \\"
     }
-    $templateContent = $templateContent.Replace("{{IDENTIFICATION_TABLE_ROWS}}", ($idRows -join "`n" + "\hline"))
+    $templateContent = $templateContent.Replace("{{IDENTIFICATION_TABLE_ROWS}}", ($idRows -join "`n"))
 
     # Genera righe per la tabella delle responsabilità
     $respRows = @()
     foreach ($item in $Config.responsibilities) {
         $respRows += "$($item.Ruolo) & $($item.Nome) & $($item.Funzione) \\"
     }
-    $templateContent = $templateContent.Replace("{{RESPONSIBILITIES_TABLE_ROWS}}", ($respRows -join "`n" + "\hline"))
+    $templateContent = $templateContent.Replace("{{RESPONSIBILITIES_TABLE_ROWS}}", ($respRows -join "`n"))
 
     # Genera righe per la tabella di versionamento
     $verRows = @()
     foreach ($item in $Config.versioning) {
         $verRows += "$($item.Versione) & $($item.Data) & $($item.Motivo) & $($item.Modifiche) \\"
     }
-    $templateContent = $templateContent.Replace("{{VERSIONING_TABLE_ROWS}}", ($verRows -join "`n" + "\hline"))
+    $templateContent = $templateContent.Replace("{{VERSIONING_TABLE_ROWS}}", ($verRows -join "`n"))
 
     return $templateContent
 }
