@@ -21,10 +21,6 @@
 
 [Spiegazione completa di cosa il sistema deve soddisfare dal punto di vista qualitativo]
 
-### Motivazione Business
-
-[Perché questo requisito è importante per il business]
-
 ### Impatto Utente
 
 [Come questo requisito influenza l'esperienza utente]
@@ -192,28 +188,6 @@
 
 ---
 
-## Costi e Trade-offs
-
-### Costi di Implementazione
-
-**Development**: [Stima effort di sviluppo]  
-**Testing**: [Costi aggiuntivi di testing]  
-**Infrastructure**: [Costi infrastrutturali]  
-**Maintenance**: [Costi operativi continuativi]
-
-### Trade-offs Identificati
-
-- **[Qualità A] vs [Qualità B]**: [Descrizione trade-off]
-- **[Performance] vs [Security]**: [Altro trade-off]
-
-### Risk/Benefit Analysis
-
-**Benefici**: [Benefici quantificati]  
-**Rischi**: [Rischi di non implementare]  
-**ROI**: [Ritorno investimento stimato]
-
----
-
 ## Rischi e Mitigazioni
 
 ### Rischi Tecnici
@@ -228,48 +202,6 @@
 
 - **[Rischio Business]**: [Descrizione]  
   *Mitigazione*: [Piano di mitigazione]
-
----
-
-## Timeline & Milestones
-
-### Fase di Analysis
-
-- **Requirements Finalization**: [Data]
-- **Architecture Review**: [Data]
-- **Technology Selection**: [Data]
-
-### Fase di Implementation
-
-- **Development Start**: [Data]
-- **Implementation Complete**: [Data]
-- **Internal Testing**: [Data]
-
-### Fase di Verification
-
-- **Testing Start**: [Data]
-- **Performance Validation**: [Data]
-- **Acceptance Testing**: [Data]
-- **Go-Live**: [Data]
-
----
-
-## Success Metrics
-
-### Metriche di Implementazione
-
-- **[Metrica 1]**: [Baseline] → [Target] → [Attuale]
-- **[Metrica 2]**: [Baseline] → [Target] → [Attuale]
-
-### KPI di Business
-
-- **[KPI 1]**: [Come questo NFR influenza il KPI]
-- **[KPI 2]**: [Altri KPI impattati]
-
-### User Satisfaction
-
-- **[Metrica UX 1]**: [Come misurare soddisfazione]
-- **[Metrica UX 2]**: [Altre metriche di soddisfazione]
 
 ---
 

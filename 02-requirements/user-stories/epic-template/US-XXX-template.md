@@ -215,23 +215,6 @@
 
 ---
 
-## Tracking
-
-### Story Points Breakdown
-
-- **Planning**: [Points] punti
-- **Development**: [Points] punti  
-- **Testing**: [Points] punti
-- **Review**: [Points] punti
-
-### Time Tracking
-
-- **Stimato**: [Ore] ore
-- **Effettivo**: [Ore] ore
-- **Variance**: [+/-X] ore
-
----
-
 ## Comments & Notes
 
 ### Development Notes

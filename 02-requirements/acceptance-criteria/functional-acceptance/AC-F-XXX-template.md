@@ -22,10 +22,6 @@
 
 [Contesto della funzionalità e perché questo criterio è importante]
 
-### Valore per il Business
-
-[Quale valore porta questo criterio al business]
-
 ---
 
 ## Scenario Principale
@@ -236,48 +232,6 @@
 
 - **[Rischio Business]**: [Impatto sul business se criterio non soddisfatto]  
   *Mitigation*: [Come mitigare il rischio business]
-
----
-
-## Testing Schedule
-
-### Timeline
-
-- **Test Preparation**: [Data inizio] - [Data fine]
-- **Test Execution**: [Data inizio] - [Data fine]
-- **Results Review**: [Data inizio] - [Data fine]
-- **Sign-off**: [Data target]
-
-### Milestones
-
-- **Environment Ready**: [Data]
-- **Test Data Ready**: [Data]
-- **First Pass Complete**: [Data]
-- **All Criteria Verified**: [Data]
-
----
-
-## Test Results
-
-### Execution Summary
-
-| Test Run | Date | Tester | Status | Notes |
-|----------|------|--------|--------|-------|
-| 1 | [Data] | [Nome] | [Pass/Fail] | [Note] |
-| 2 | [Data] | [Nome] | [Pass/Fail] | [Note] |
-
-### Criteria Status
-
-- [ ] **Scenario Principale**: [Status e note]
-- [ ] **Scenari Alternativi**: [Status e note]
-- [ ] **Scenari di Errore**: [Status e note]
-- [ ] **Edge Cases**: [Status e note]
-
-### Issues Found
-
-| ID | Descrizione | Severità | Status | Assignee |
-|----|-------------|----------|--------|----------|
-| [Issue-1] | [Descrizione] | [High/Med/Low] | [Open/Closed] | [Nome] |
 
 ---
 

@@ -23,10 +23,6 @@
 
 [In quale contesto l'utente interagisce con questo componente]
 
-### Business Purpose
-
-[Perché questo componente è importante dal punto di vista business]
-
 ### Component Category
 
 **Primary Function**: [Information Display | Data Entry | Navigation | Feedback | Action]  
@@ -324,31 +320,6 @@
 
 ---
 
-## User Experience Goals
-
-### Usability Metrics
-
-**Task Success Rate**: [% utenti che completano task]  
-**Task Completion Time**: [Tempo medio completamento]  
-**Error Rate**: [% errori utente]  
-**User Satisfaction**: [Score soddisfazione utente]
-
-### Engagement Metrics
-
-**Time on Component**: [Tempo medio di utilizzo]  
-**Interaction Rate**: [% utenti che interagiscono]  
-**Return Usage**: [% utenti che riutilizzano]  
-**Feature Discovery**: [% utenti che scoprono feature]
-
-### Business Metrics
-
-**Conversion Rate**: [% conversioni se applicabile]  
-**User Adoption**: [% adozione della feature]  
-**Support Tickets**: [Riduzione ticket supporto]  
-**User Feedback**: [Score feedback utente]
-
----
-
 ## Tracciabilità
 
 ### Business Requirements
@@ -398,59 +369,6 @@
 **Time Constraints**: [Limitazioni temporali]  
 **Technology Constraints**: [Limitazioni tecnologiche]  
 **Resource Constraints**: [Limitazioni risorse umane]
-
----
-
-## Timeline e Dependencies
-
-### Development Phases
-
-**Design Phase**: [Mockups, prototypes] - [Data inizio] to [Data fine]  
-**Development Phase**: [Implementation] - [Data inizio] to [Data fine]  
-**Testing Phase**: [QA, user testing] - [Data inizio] to [Data fine]  
-**Optimization Phase**: [Performance, polish] - [Data inizio] to [Data fine]
-
-### Key Milestones
-
-- **Design Approval**: [Data]
-- **Prototype Complete**: [Data]
-- **Development Complete**: [Data]
-- **Testing Complete**: [Data]
-- **Production Deployment**: [Data]
-
-### Dependencies
-
-**Design System Ready**: [Data]  
-**API Endpoints Available**: [Data]  
-**Authentication System Ready**: [Data]  
-**Content/Copy Ready**: [Data]
-
----
-
-## Effort e Cost Estimates
-
-### Design Effort
-
-**UX Research**: [Ore]  
-**UI Design**: [Ore]  
-**Prototyping**: [Ore]  
-**Design System Updates**: [Ore]  
-**User Testing**: [Ore]
-
-### Development Effort
-
-**Frontend Development**: [Ore]  
-**Responsive Implementation**: [Ore]  
-**Accessibility Implementation**: [Ore]  
-**Testing**: [Ore]  
-**Performance Optimization**: [Ore]
-
-### Resource Requirements
-
-**UI/UX Designer**: [Ore]  
-**Frontend Developer**: [Ore]  
-**Accessibility Specialist**: [Ore]  
-**QA Engineer**: [Ore]
 
 ---
 

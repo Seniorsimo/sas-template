@@ -21,10 +21,6 @@
 **I want** [funzionalità desiderata]  
 **So that** [beneficio/valore per l'utente]
 
-### Business Value
-
-[Valore business che questa funzionalità porta]
-
 ### User Journey Context
 
 [Dove si inserisce questa funzionalità nel journey utente complessivo]
@@ -271,35 +267,6 @@
 
 ---
 
-## UAT Team e Roles
-
-### UAT Coordinator
-
-**Name**: [Nome]  
-**Role**: [Ruolo aziendale]  
-**Responsibilities**: 
-
-- Planning UAT activities
-- Coordinating test sessions
-- Reporting results to stakeholders
-
-### Business Users (Testers)
-
-| Name | Role | Experience | Availability | Focus Area |
-|------|------|------------|--------------|------------|
-| [Nome1] | [Ruolo] | [Exp Level] | [Ore/settimana] | [Area] |
-| [Nome2] | [Ruolo] | [Exp Level] | [Ore/settimana] | [Area] |
-| [Nome3] | [Ruolo] | [Exp Level] | [Ore/settimana] | [Area] |
-
-### Support Team
-
-**Product Owner**: [Nome] - Decisioni su acceptance  
-**UX Designer**: [Nome] - Feedback su usability  
-**Business Analyst**: [Nome] - Chiarimenti requisiti  
-**Technical Support**: [Nome] - Supporto tecnico durante UAT
-
----
-
 ## UAT Environment
 
 ### Environment Setup
@@ -322,99 +289,6 @@
 **Training Materials**: [Materiali training se necessari]  
 **Feedback Collection**: [Tool per raccogliere feedback]  
 **Screen Recording**: [Tool per recording sessioni]
-
----
-
-## Success Metrics
-
-### Quantitative Metrics
-
-**Task Success Rate**: Target >= [%]  
-**Task Completion Time**: Target <= [minuti]  
-**Error Rate**: Target <= [% errori/task]  
-**Help Usage**: Target <= [% sessioni che richiedono help]  
-**User Satisfaction**: Target >= [valore]/10
-
-### Qualitative Metrics
-
-**Ease of Use**: [Rating scale 1-10]  
-**Usefulness**: [Quanto la feature è utile per il lavoro]  
-**Likelihood to Recommend**: [Net Promoter Score]  
-**Overall Experience**: [Rating esperienza complessiva]
-
-### Business Metrics
-
-**Feature Adoption**: [% utenti che adottano la feature]  
-**Task Efficiency Improvement**: [% miglioramento vs processo attuale]  
-**Support Tickets**: [Riduzione ticket supporto]  
-**Training Time**: [Tempo formazione necessario]
-
----
-
-## UAT Schedule
-
-### Pre-UAT Phase
-
-- **UAT Planning**: [Data inizio] - [Data fine]
-- **Environment Setup**: [Data inizio] - [Data fine]
-- **User Training**: [Data inizio] - [Data fine]
-- **Test Data Preparation**: [Data inizio] - [Data fine]
-
-### UAT Execution Phase
-
-- **Week 1**: [Focus area 1] - [Date]
-- **Week 2**: [Focus area 2] - [Date]  
-- **Week 3**: [Focus area 3] - [Date]
-- **Buffer Week**: [Issue resolution] - [Date]
-
-### Post-UAT Phase
-
-- **Results Analysis**: [Data inizio] - [Data fine]
-- **Issue Resolution**: [Data inizio] - [Data fine]
-- **Sign-off**: [Data target]
-- **Go-Live Preparation**: [Data inizio] - [Data fine]
-
-### Key Milestones
-
-- **UAT Environment Ready**: [Data]
-- **Users Trained**: [Data]
-- **50% Test Scenarios Complete**: [Data]
-- **All Critical Issues Resolved**: [Data]
-- **UAT Sign-off**: [Data]
-
----
-
-## Test Results e Feedback
-
-### Test Execution Summary
-
-| Test Session | Date | Participants | Scenarios Tested | Pass Rate | Issues Found |
-|--------------|------|--------------|------------------|-----------|--------------|
-| Session 1 | [Data] | [N] users | [Scenarios] | [%] | [N] issues |
-| Session 2 | [Data] | [N] users | [Scenarios] | [%] | [N] issues |
-| Session 3 | [Data] | [N] users | [Scenarios] | [%] | [N] issues |
-
-### User Feedback Summary
-
-| Feedback Category | Rating (1-10) | Comments Summary | Action Items |
-|-------------------|---------------|------------------|--------------|
-| Ease of Use | [Rating] | [Summary] | [Actions] |
-| Usefulness | [Rating] | [Summary] | [Actions] |
-| Performance | [Rating] | [Summary] | [Actions] |
-| Overall Satisfaction | [Rating] | [Summary] | [Actions] |
-
-### Issues Identified
-
-| Issue ID | Description | Severity | Reporter | Status | Resolution |
-|----------|-------------|----------|----------|--------|------------|
-| UAT-001 | [Description] | [High/Med/Low] | [User] | [Open/Resolved] | [Resolution] |
-| UAT-002 | [Description] | [High/Med/Low] | [User] | [Open/Resolved] | [Resolution] |
-
-### Improvement Recommendations
-
-- **[Area 1]**: [Recommendation with rationale]
-- **[Area 2]**: [Recommendation with rationale]
-- **[Area 3]**: [Recommendation with rationale]
 
 ---
 
