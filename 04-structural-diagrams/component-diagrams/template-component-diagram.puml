@@ -1,168 +1,44 @@
 @startuml Component-Diagram-Template
-!theme blueprint
-title [Nome Sistema] - Diagramma dei Componenti
+title Architettura [Nome Sistema] - Diagramma dei Componenti
 
-' ====================
-' COMPONENT DIAGRAM TEMPLATE
-' ====================
-' 
-' Purpose: Modellare l'architettura e le dipendenze tra componenti
-' Domain: [Dominio - es. E-commerce, Banking, Healthcare]
-' Last Updated: [Data]
-' Author: [Nome]
-'
-' Tracciabilità:
-' - Use Cases: [UC-XXX, UC-YYY]
-' - Requirements: [REQ-XXX, REQ-YYY]
-' - User Stories: [US-XXX, US-YYY]
-
-' Styling personalizzato
-!define COMPONENT_COLOR #E3F2FD
-!define INTERFACE_COLOR #E8F5E8
-!define PACKAGE_COLOR #FFF3E0
-!define EXTERNAL_COLOR #FCE4EC
-
-skinparam component {
-  BackgroundColor COMPONENT_COLOR
-  BorderColor #0277BD
-  FontSize 12
+' Raggruppamento dei componenti in package
+package "Livello Presentazione" {
+  [Frontend Web]
+  [App Mobile]
 }
 
-skinparam interface {
-  BackgroundColor INTERFACE_COLOR
-  BorderColor #4CAF50
-  FontSize 10
+package "Livello Applicativo" {
+  [API Gateway]
+  [Servizio Autenticazione]
 }
 
-skinparam package {
-  BackgroundColor PACKAGE_COLOR
-  BorderColor #FF9800
-  FontSize 14
+package "Livello Logica di Business" {
+  component "Servizio A" as ServiceA
+  component "Servizio B" as ServiceB
 }
 
-' ====================
-' PACKAGES/LAYERS
-' ====================
-
-package "Presentation Layer" as PresentationLayer PACKAGE_COLOR {
-  component "Web Frontend" as WebUI
-  component "Mobile App" as MobileApp
-  component "Admin Panel" as AdminUI
+package "Livello Dati" {
+  [Database]
+  [Cache]
 }
 
-package "Application Layer" as ApplicationLayer PACKAGE_COLOR {
-  component "API Gateway" as APIGateway
-  component "Authentication Service" as AuthService
-  component "Business Logic Service" as BusinessService
-}
+' Definizione delle interfacce
+interface "API Pubblica" as PublicAPI
+interface "Interfaccia Database" as DBInterface
 
-package "Domain Layer" as DomainLayer PACKAGE_COLOR {
-  component "Domain Model" as DomainModel
-  component "Business Rules Engine" as BusinessRules
-  component "Domain Events" as DomainEvents
-}
+' Relazioni tra i componenti
+[Frontend Web] --> [API Gateway]
+[App Mobile] --> [API Gateway]
 
-package "Infrastructure Layer" as InfrastructureLayer PACKAGE_COLOR {
-  component "Database Access" as DatabaseAccess
-  component "File Storage" as FileStorage
-  component "Message Queue" as MessageQueue
-  component "Email Service" as EmailService
-}
+[API Gateway] --> [Servizio Autenticazione]
+[API Gateway] --> ServiceA
+[API Gateway] -down- PublicAPI
 
-package "External Systems" as ExternalSystems EXTERNAL_COLOR {
-  component "Payment Gateway" as PaymentGateway
-  component "Third Party API" as ThirdPartyAPI
-  component "Legacy System" as LegacySystem
-}
+ServiceA --> ServiceB
+ServiceA --> DBInterface
 
-' ====================
-' INTERFACES
-' ====================
-
-interface "REST API" as RESTAPI
-interface "GraphQL API" as GraphQLAPI
-interface "Database Interface" as DatabaseInterface
-interface "Message Interface" as MessageInterface
-interface "File Interface" as FileInterface
-interface "Payment Interface" as PaymentInterface
-
-' ====================
-' RELATIONSHIPS
-' ====================
-
-' Presentation to Application
-WebUI --> RESTAPI
-MobileApp --> RESTAPI
-AdminUI --> GraphQLAPI
-
-' API Gateway connections
-RESTAPI - APIGateway
-GraphQLAPI - APIGateway
-
-' Application Layer connections
-APIGateway --> AuthService : "authenticates"
-APIGateway --> BusinessService : "delegates"
-AuthService --> DatabaseInterface
-BusinessService --> DomainModel
-
-' Domain Layer connections
-DomainModel --> BusinessRules : "validates"
-BusinessService --> DomainEvents : "publishes"
-
-' Infrastructure connections
-DatabaseInterface - DatabaseAccess
-MessageInterface - MessageQueue
-FileInterface - FileStorage
-
-' Business Service to Infrastructure
-BusinessService --> DatabaseInterface
-BusinessService --> MessageInterface
-BusinessService --> FileInterface
-
-' External integrations
-PaymentInterface - PaymentGateway
-BusinessService --> PaymentInterface
-BusinessService --> ThirdPartyAPI : "integrates"
-
-' Cross-cutting concerns
-EmailService --> MessageInterface
-DomainEvents --> MessageInterface
-
-' ====================
-' NOTES AND CONSTRAINTS
-' ====================
-
-note right of APIGateway : Entry point per tutte\nle richieste esterne
-
-note bottom of BusinessService : Contiene la logica\ndi business principale
-
-note left of DatabaseAccess : Implementa Repository\nPattern per data access
-
-note top of PaymentGateway : Sistema esterno\nper processare pagamenti
-
-note as N1
-  <b>Architectural Constraints:</b>
-  • Presentation layer non può accedere direttamente al Domain
-  • Infrastructure dipende solo da Application/Domain interfaces
-  • External systems comunicano solo tramite adapter pattern
-  • Tutti i components devono implementare health check
-end note
-
-note as N2
-  <b>Technology Stack:</b>
-  • Frontend: React/Vue.js
-  • Backend: Spring Boot/ASP.NET Core
-  • Database: PostgreSQL/SQL Server
-  • Message Queue: RabbitMQ/Kafka
-  • Cache: Redis
-  
-  <b>Deployment:</b>
-  • Crea un diagramma separato per deployment nodes
-  • Usa template-system-architecture.puml per overview
-end note
-
-' Collegamento note
-N1 .. APIGateway
-N2 .. InfrastructureLayer
+' Collegamento alle interfacce
+DBInterface - [Database]
+PublicAPI - [API Gateway]
 
 @enduml
