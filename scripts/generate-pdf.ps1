@@ -401,6 +401,7 @@ try {
 # Genera file .tex intermedio per debug
 $pandocArgsTex = @(
     $tempFile,
+    "-s",
     "-o", "documentation-debug.tex",
     "--from", "markdown-yaml_metadata_block",
     "--to", "latex",
@@ -413,8 +414,14 @@ $pandocArgsTex = @(
     "--variable", "fig-align=center",
     "--variable", "fig-pos=H",
     "--number-sections",
-    "--toc",
-    "--toc-depth=3"
+    # "--toc", # Il TOC è già stato inserito manualmente
+    "--toc-depth=3",
+    # --- Variabili personalizzate per Header/Footer ---
+    "--variable", "logo=$($config.logo_path.Replace("\", "/"))",
+    "--variable", "headerpolitica=$($config.header.politica)",
+    "--variable", "headercodice=$($config.header.codicedocumento)",
+    "--variable", "headerversione=$($config.header.versione)",
+    "--variable", "filename=$(Split-Path $OutputPath -Leaf)"
 )
 Write-Host "Generazione file .tex intermedio per debug..." -ForegroundColor Cyan
 & pandoc @pandocArgsTex

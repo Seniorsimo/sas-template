@@ -24,7 +24,7 @@ contents={%
 
 % --- Definizione variabili da Pandoc ---
 % Usiamo \providecommand per evitare errori se le variabili non sono passate
-\providecommand{\logo}{}
+\providecommand{\logo}{media/logo.png}
 \providecommand{\headerpolitica}{}
 \providecommand{\headercodice}{}
 \providecommand{\headerversione}{}
@@ -43,9 +43,7 @@ contents={%
 
 % --- Configurazione Header ---
 \fancyhead[L]{
-    \ifthenelse{\equal{\logo}{}}{}{%
-        \includegraphics[height=1.5cm]{\logo}%
-    }
+    \includegraphics[height=1.5cm]{\logo}%
 }
 \fancyhead[R]{
     \begin{tabular}{|l|p{7cm}|}
