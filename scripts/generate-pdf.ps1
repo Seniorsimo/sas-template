@@ -186,25 +186,38 @@ function Get-PopulatedContent {
         $templateContent = $templateContent.Replace("{{FILENAME}}", $Filename)
     }
 
-    # Genera righe per la tabella di identificazione
+    # Genera righe per la tabella di identificazione nel formato:
     $idRows = @()
-    foreach ($item in $Config.identification.GetEnumerator()) {
-        $idRows += "$($item.Name) & $($item.Value) \\"
-    }
+    $idRows += "\textcolor{azzurro}{Categoria} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.identification.Categoria)}} \\"
+    $idRows += "\hline"
+    $idRows += "\textcolor{azzurro}{Procedura} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.identification.Procedura)}} \\"
+    $idRows += "\hline"
+    $idRows += "\textcolor{azzurro}{Data Validita'} & \textcolor{azzurro}{$($Config.identification.DataValidita)} & \textcolor{azzurro}{Versione} & \textcolor{azzurro}{$($Config.identification.Versione)} \\"
+    $idRows += "\hline"
+    $idRows += "\textcolor{azzurro}{Nome Documento} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.identification.NomeDocumento)}} \\"
+    $idRows += "\hline"
     $templateContent = $templateContent.Replace("{{IDENTIFICATION_TABLE_ROWS}}", ($idRows -join "`n"))
 
-    # Genera righe per la tabella delle responsabilità
+    # Genera righe per la tabella delle responsabilità in stile:
+    # \textcolor{azzurro}{Approvato da} & \textcolor{azzurro}{Giovanni Verdi} & \textcolor{azzurro}{Chief Technology Officer (CTO)} \\
+    # \hline
     $respRows = @()
     foreach ($item in $Config.responsibilities) {
-        $respRows += "$($item.Ruolo) & $($item.Nome) & $($item.Funzione) \\"
+        $respRows += "\textcolor{azzurro}{$($item.Ruolo)} & \textcolor{azzurro}{$($item.Nome)} & \textcolor{azzurro}{$($item.Funzione)} \\"
+        $respRows += "\hline"
     }
     $templateContent = $templateContent.Replace("{{RESPONSIBILITIES_TABLE_ROWS}}", ($respRows -join "`n"))
 
-    # Genera righe per la tabella di versionamento
+    # Genera righe per la tabella di versionamento in stile:
+    # \textcolor{azzurro}{1.0} & \textcolor{azzurro}{29/07/2025} & \textcolor{azzurro}{Prima emissione} & \textcolor{azzurro}{Creazione del documento} \\
+    # \hline
     $verRows = @()
     foreach ($item in $Config.versioning) {
-        $verRows += "$($item.Versione) & $($item.Data) & $($item.Motivo) & $($item.Modifiche) \\"
+        $verRows += "\textcolor{azzurro}{$($item.Versione)} & \textcolor{azzurro}{$($item.Data)} & \textcolor{azzurro}{$($item.Motivo)} & \textcolor{azzurro}{$($item.Modifiche)} \\"
+        $verRows += "\hline"
     }
+
+
     $templateContent = $templateContent.Replace("{{VERSIONING_TABLE_ROWS}}", ($verRows -join "`n"))
 
     return $templateContent
@@ -218,7 +231,7 @@ $versioningContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot
 
 # --- Preparazione Header Dinamico ---
 Write-Host "Preparazione header dinamico..." -ForegroundColor Cyan
-$layoutContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot "layout.md") -Config $config -Filename $(Split-Path $OutputPath -Leaf)
+$layoutContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot "layout.tex") -Config $config -Filename $(Split-Path $OutputPath -Leaf)
 $baseHeaderContent = Get-Content (Join-Path $PSScriptRoot "header.tex") -Raw -Encoding UTF8
 $tempHeaderFile = Join-Path $PSScriptRoot "temp-header.tex"
 "$baseHeaderContent`n$layoutContent" | Out-File -FilePath $tempHeaderFile -Encoding UTF8 -NoNewline

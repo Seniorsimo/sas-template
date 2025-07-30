@@ -1,0 +1,91 @@
+% =================================================
+% Layout LaTeX per Header e Footer
+% =================================================
+%
+% Questo file definisce l'header e il footer.
+% Viene popolato dallo script generate-pdf.ps1
+% e poi incluso nel file .tex generato da Pandoc.
+
+% --- Configurazione Margini ---
+% Questi valori sono già impostati in Pandoc, ma li ridefiniamo per sicurezza
+\geometry{a4paper, top=3.5cm, bottom=2.5cm, left=2cm, right=2cm, headheight=3cm, footskip=1.5cm}
+
+% --- Definizione Stile Pagina "fancy" ---
+\pagestyle{fancy}
+\fancyhf{} % Pulisce tutti i campi di header e footer
+
+\setlength{\arrayrulewidth}{1pt}
+
+% --- Definizione colori personalizzati ---
+\definecolor{azzurro}{HTML}{0080FF}
+\definecolor{arancio}{HTML}{F4A261}
+\definecolor{viola}{HTML}{6A5ACD}
+
+% --- Configurazione Header ---
+\fancyhead[L]{
+    \begin{tikzpicture}
+        \node[opacity=0.6, anchor=north west] at (0,0) {
+            \includegraphics[height=1.5cm]{
+                % --- Comment line to prevent powershell substitution issue
+                {{LOGO_PATH}}
+            }
+        };
+    \end{tikzpicture}%
+}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\fancyhead[R]{%
+    \begin{tikzpicture}[remember picture, overlay]
+
+        % Nodo contenente la tabella
+        \node[opacity=0.6, anchor=south east, yshift=2.0cm, inner sep=0pt] (tabella_header) at (0.3,-1.8) {
+            {\small
+                \color{arancio}
+                \renewcommand{\arraystretch}{0.8}
+                \begin{tabular}{ |C{7cm}|C{4cm}|C{1.4cm}| }
+                    \hline
+                    \color{black}\textit{Politica}\color{arancio} & 
+                    \color{black}\textit{Codice Documento}\color{arancio} & 
+                    \color{black}\textit{Versione}\color{arancio} \\ 
+                    \color{black}{{HEADER_POLITICA}}\color{arancio} &
+                    \color{black}{{HEADER_CODICE}}\color{arancio} &
+                    \color{black}{{HEADER_VERSIONE}}\color{arancio}
+                \end{tabular}
+            }
+        };
+
+        % Linea viola sotto la tabella usando coordinate del nodo
+        \draw[viola, line width=4pt, opacity=0.6] 
+            ([xshift=4pt,yshift=-1pt]tabella_header.south west) -- 
+            ([xshift=-3pt,yshift=-1pt]tabella_header.south east);
+
+    \end{tikzpicture}%
+}
+
+% --- Configurazione Footer ---
+\fancyfoot[L]{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.6, anchor=south west, yshift=-0.4cm] at (0,0) {
+            % --- Comment line to prevent powershell substitution issue
+            {{FILENAME}}
+        };
+    \end{tikzpicture}
+}
+        
+\fancyfoot[R]{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.6, anchor=south east, yshift=-0.4cm] at (0.3,0) {
+            \thepage
+        };
+    \end{tikzpicture}
+}
+
+% --- Linea di separazione ---
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- Applica lo stile di pagina ---
+% Questo comando imposta lo stile "fancy" per tutte le pagine
+% La copertina userà \thispagestyle{empty} per non avere header/footer.
+\pagestyle{fancy}

@@ -1,21 +1,23 @@
 ```{=latex}
 
-\section*{STORICO DELLE REVISIONI}
+\begin{tikzpicture}
+    % Riga colorata sopra (larghezza: \textwidth)
+    \draw[fill=azzurro, draw=none, opacity=0.6] (0,0) rectangle (\textwidth, -1.15);
+    \setlength{\arrayrulewidth}{0.3pt} % rende i bordi più sottili
+    \renewcommand{\arraystretch}{1.2} % aumenta l'altezza riga
 
-\begin{longtable}{|p{2cm}|p{3cm}|p{4cm}|p{6cm}|}
-\hline
-\textbf{Versione} & \textbf{Data} & \textbf{Motivo della modifica} & \textbf{Modifiche effettuate} \\
-\hline
-\endfirsthead
-\hline
-\textbf{Versione} & \textbf{Data} & \textbf{Motivo della modifica} & \textbf{Modifiche effettuate} \\
-\hline
-\endhead
-\hline \multicolumn{4}{r@{}}{\textit{Continua nella pagina successiva}} \\
-\endfoot
-\hline
-\endlastfoot
-{{VERSIONING_TABLE_ROWS}}
-\end{longtable}
+    % Spostiamo in basso la tabella
+    \node[anchor=north west, inner sep=0pt] at (0,-0.0) {
+
+        \begin{tabularx}{\textwidth}{|p{2cm}|p{2.5cm}|X|X|}
+            \hline
+            \multicolumn{4}{|l|}{\textcolor{white}{\textbf{VERSIONAMENTO}}} \\
+            \hline
+            \textcolor{white}{\textbf{Versione}} & \textcolor{white}{\textbf{Data}} & \textcolor{white}{\textbf{Motivo}} & \textcolor{white}{\textbf{Modifiche}} \\
+            \hline
+            {{VERSIONING_TABLE_ROWS}}
+        \end{tabularx}
+    };
+\end{tikzpicture}
 
 ```
