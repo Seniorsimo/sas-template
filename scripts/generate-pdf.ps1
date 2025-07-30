@@ -26,9 +26,10 @@ if (-not $PSBoundParameters.ContainsKey('WithDiagrams')) { $WithDiagrams = $true
 
 # --- Caricamento Configurazione ---
 $PSScriptRoot = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
-$configPath = Join-Path $PSScriptRoot "config.ps1"
+$projectRoot = Split-Path -Parent -Path $PSScriptRoot
+$configPath = Join-Path $projectRoot "config.ps1"
 if (-not (Test-Path $configPath)) {
-    Write-Host "ERRORE: File di configurazione 'config.ps1' non trovato nella cartella 'scripts'." -ForegroundColor Red
+    Write-Host "ERRORE: File di configurazione 'config.ps1' non trovato nella root del progetto." -ForegroundColor Red
     exit 1
 }
 . $configPath

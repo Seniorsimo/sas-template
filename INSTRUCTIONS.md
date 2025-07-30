@@ -77,6 +77,7 @@ Questo documento fornisce linee guida e istruzioni per l'utilizzo efficace del t
 6. Aggiorna README se necessario
 7. ESEGUI REVIEW del file per verificare correttezza formale
 8. AGGIORNA README della cartella se contiene indici o riferimenti al file modificato
+9. AGGIORNA config.ps1 nella root se stai modificando informazioni di progetto rilevanti per la generazione del PDF
 ```
 
 ### Review Obbligatoria Post-Modifica
@@ -185,6 +186,18 @@ Data Dictionary & Business Rules
 - I diagrammi PlantUML includono esempi di sintassi e best practices
 - Seguire le convenzioni UML standard per mantenere consistenza
 - Utilizzare gli ID univoci per la tracciabilità tra documenti
+
+### File di Configurazione per Generazione PDF
+
+Nella root del progetto è presente il file `config.ps1` che contiene tutte le configurazioni necessarie per la generazione del PDF della documentazione:
+
+- **Informazioni generali**: Titolo del documento, path del logo aziendale
+- **Tabella di identificazione**: Categoria, codice procedura, versione, ecc.
+- **Tabella delle responsabilità**: Ruoli, nomi e funzioni delle persone coinvolte
+- **Tabella di versionamento**: Storia delle versioni con date e descrizioni delle modifiche
+- **Informazioni per l'header**: Dati che appaiono nell'intestazione di ogni pagina
+
+Prima di generare la documentazione finale, è necessario personalizzare questo file sostituendo i placeholder con le informazioni specifiche del progetto.
 
 ## Utilizzo Template Enterprise
 

@@ -8,7 +8,7 @@
 $config = @{
     # --- INFORMAZIONI GENERALI ---
     # Titolo principale del documento, usato sulla copertina e nell'header
-    title = "Manuale Operativo Sicurezza Informatica"
+    title = "[Titolo del documento]"
 
     # Path del logo aziendale (usato in copertina e header)
     # Il path è relativo alla root del progetto
@@ -16,55 +16,55 @@ $config = @{
 
     # --- TABELLA DI IDENTIFICAZIONE (COPERTINA) ---
     identification = @{
-        "Categoria" = "Policy Aziendale"
-        "Procedura" = "PSO-001"
-        "Data Validità" = "01/01/2025"
-        "Versione" = "1.0"
-        "Nome Documento" = "Manuale Operativo Sicurezza Informatica"
+        "Categoria" = "[Categoria del documento]"
+        "Procedura" = "[Codice procedura]"
+        "Data Validità" = "[GG/MM/AAAA]"
+        "Versione" = "[X.Y]"
+        "Nome Documento" = "[Nome completo del documento]"
     }
 
     # --- TABELLA DELLE RESPONSABILITA' (COPERTINA) ---
     # Ogni riga della tabella è un oggetto con "Ruolo", "Nome", "Funzione"
     responsibilities = @(
         @{
-            "Ruolo" = "Elaborato da"
-            "Nome" = "Mario Rossi"
-            "Funzione" = "IT Security Specialist"
+            "Ruolo" = "[Elaborato da]"
+            "Nome" = "[Nome e cognome]"
+            "Funzione" = "[Ruolo della persona]"
         },
         @{
-            "Ruolo" = "Verificato da"
-            "Nome" = "Luigi Bianchi"
-            "Funzione" = "IT Manager"
+            "Ruolo" = "[Verificato da]"
+            "Nome" = "[Nome e cognome]"
+            "Funzione" = "[Ruolo della persona]"
         },
         @{
-            "Ruolo" = "Approvato da"
-            "Nome" = "Giovanni Verdi"
-            "Funzione" = "Chief Technology Officer (CTO)"
+            "Ruolo" = "[Approvato da]"
+            "Nome" = "[Nome e cognome]"
+            "Funzione" = "[Ruolo della persona]"
         }
     )
 
     # --- TABELLA DI VERSIONAMENTO (SECONDA PAGINA) ---
-    # Ogni riga è un oggetto con "Versione", "Data", "Autore", "Modifiche"
+    # Ogni riga è un oggetto con "Versione", "Data", "Motivo", "Modifiche"
     versioning = @(
         @{
-            "Versione" = "1.0"
-            "Data" = "29/07/2025"
-            "Motivo" = "Prima emissione"
-            "Modifiche" = "Creazione del documento"
+            "Versione" = "[X.Y]"
+            "Data" = "[GG/MM/AAAA]"
+            "Motivo" = "[Motivo della modifica]"
+            "Modifiche" = "[Descrizione delle modifiche]"
         },
         @{
-            "Versione" = "0.9"
-            "Data" = "15/07/2025"
-            "Motivo" = "Bozza interna"
-            "Modifiche" = "Revisione iniziale"
+            "Versione" = "[X.Y-1]"
+            "Data" = "[GG/MM/AAAA]"
+            "Motivo" = "[Motivo della modifica]"
+            "Modifiche" = "[Descrizione delle modifiche]"
         }
     )
 
     # --- INFORMAZIONI PER L'HEADER ---
     # Questi dati appaiono su ogni pagina (tranne la copertina)
     header = @{
-        "politica" = "Manuale Operativo Sicurezza Informatica"
-        "codicedocumento" = "PSO-001-SICUREZZA"
+        "politica" = "[Titolo breve del documento]"
+        "codicedocumento" = "[Codice identificativo documento]"
         # La versione nell'header viene presa dall'ultima versione nella tabella di versionamento
         "versione" = ""
     }
