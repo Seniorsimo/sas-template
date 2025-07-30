@@ -1,0 +1,74 @@
+﻿% =================================================
+% Header LaTeX per Documentazione Enterprise
+% =================================================
+%
+% Questo file viene incluso da Pandoc e definisce
+% i pacchetti e comandi base.
+
+% --- Pacchetti richiesti ---
+\usepackage[pages=all]{background}
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=0.4,
+angle=0,
+contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{media/background.png}
+  }%
+}
+\usepackage{graphicx}      % Per includere immagini (logo)
+\usepackage{fancyhdr}      % Per personalizzare header e footer
+\usepackage{longtable}     % Per tabelle che possono estendersi su più pagine
+\usepackage{geometry}      % Per gestire i margini
+\usepackage{fontspec}      % Per usare font di sistema come Calibri
+
+% --- Definizione variabili da Pandoc ---
+% Le variabili dell'header sono gestite tramite template.
+
+% =================================================
+% Layout LaTeX per Header e Footer
+% =================================================
+%
+% Questo file definisce l'header e il footer.
+% Viene popolato dallo script generate-pdf.ps1
+% e poi incluso nel file .tex generato da Pandoc.
+
+% --- Configurazione Margini ---
+% Questi valori sono già impostati in Pandoc, ma li ridefiniamo per sicurezza
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm, headheight=3cm, footskip=1.5cm}
+
+% --- Definizione Stile Pagina "fancy" ---
+\pagestyle{fancy}
+\fancyhf{} % Pulisce tutti i campi di header e footer
+
+% --- Configurazione Header ---
+\fancyhead[L]{
+    \includegraphics[height=1.5cm]{
+        % --- Comment line to prevent powershell substitution issue
+        media/logo.png
+    }%
+}
+\fancyhead[R]{
+    \begin{tabular}{|l|p{7cm}|}
+    \hline
+    \textbf{Politica} & Manuale Operativo Sicurezza Informatica \\
+    \hline
+    \textbf{Codice Documento} & PSO-001-SICUREZZA \\
+    \hline
+    \textbf{Versione} & 1.0 \\
+    \hline
+    \end{tabular}
+}
+
+% --- Configurazione Footer ---
+\fancyfoot[L]{documentation.pdf}
+\fancyfoot[R]{Pagina \thepage}
+
+% --- Linea di separazione ---
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% --- Applica lo stile di pagina ---
+% Questo comando imposta lo stile "fancy" per tutte le pagine
+% La copertina userà \thispagestyle{empty} per non avere header/footer.
+\pagestyle{fancy}

@@ -168,13 +168,23 @@ foreach ($file in $fileOrder) {
 function Get-PopulatedContent {
     param(
         [string]$TemplatePath,
-        [hashtable]$Config
+        [hashtable]$Config,
+        [string]$Filename = ""
     )
 
     $templateContent = Get-Content $TemplatePath -Raw -Encoding UTF8
 
     # Popola il titolo
     $templateContent = $templateContent.Replace("{{TITLE}}", $Config.title)
+
+    # Popola le variabili dell'header
+    $templateContent = $templateContent.Replace("{{LOGO_PATH}}", $Config.logo_path.Replace("\", "/"))
+    $templateContent = $templateContent.Replace("{{HEADER_POLITICA}}", $Config.header.politica)
+    $templateContent = $templateContent.Replace("{{HEADER_CODICE}}", $Config.header.codicedocumento)
+    $templateContent = $templateContent.Replace("{{HEADER_VERSIONE}}", $Config.header.versione)
+    if (-not [string]::IsNullOrEmpty($Filename)) {
+        $templateContent = $templateContent.Replace("{{FILENAME}}", $Filename)
+    }
 
     # Genera righe per la tabella di identificazione
     $idRows = @()
@@ -205,6 +215,14 @@ function Get-PopulatedContent {
 Write-Host "Preparazione copertina e pagine speciali..." -ForegroundColor Cyan
 $coverContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot "cover-template.md") -Config $config
 $versioningContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot "versioning-template.md") -Config $config
+
+# --- Preparazione Header Dinamico ---
+Write-Host "Preparazione header dinamico..." -ForegroundColor Cyan
+$layoutContent = Get-PopulatedContent -TemplatePath (Join-Path $PSScriptRoot "layout.md") -Config $config -Filename $(Split-Path $OutputPath -Leaf)
+$baseHeaderContent = Get-Content (Join-Path $PSScriptRoot "header.tex") -Raw -Encoding UTF8
+$tempHeaderFile = Join-Path $PSScriptRoot "temp-header.tex"
+"$baseHeaderContent`n$layoutContent" | Out-File -FilePath $tempHeaderFile -Encoding UTF8 -NoNewline
+Write-Host "File header temporaneo creato: $tempHeaderFile" -ForegroundColor Green
 
 # Crea file temporaneo combinato
 $tempFile = Join-Path $PWD "temp-combined.md"
@@ -406,7 +424,7 @@ $pandocArgsTex = @(
     "--from", "markdown-yaml_metadata_block",
     "--to", "latex",
     "--pdf-engine=xelatex",
-    "--include-in-header", "scripts/header.tex",
+    "--include-in-header", $tempHeaderFile,
     "--highlight-style=tango",
     "--variable", "fontsize=11pt",
     "--variable", "geometry:margin=2cm",
@@ -415,13 +433,7 @@ $pandocArgsTex = @(
     "--variable", "fig-pos=H",
     "--number-sections",
     # "--toc", # Il TOC è già stato inserito manualmente
-    "--toc-depth=3",
-    # --- Variabili personalizzate per Header/Footer ---
-    "--variable", "logo=$($config.logo_path.Replace("\", "/"))",
-    "--variable", "headerpolitica=$($config.header.politica)",
-    "--variable", "headercodice=$($config.header.codicedocumento)",
-    "--variable", "headerversione=$($config.header.versione)",
-    "--variable", "filename=$(Split-Path $OutputPath -Leaf)"
+    "--toc-depth=3"
 )
 Write-Host "Generazione file .tex intermedio per debug..." -ForegroundColor Cyan
 & pandoc @pandocArgsTex
@@ -434,7 +446,7 @@ $pandocArgs = @(
     "--from", "markdown-yaml_metadata_block",
     "--to", "pdf",
     "--pdf-engine=xelatex",
-    "--include-in-header", (Join-Path $PSScriptRoot "header.tex"),
+    "--include-in-header", $tempHeaderFile,
     "--highlight-style=tango",
     "--variable", "fontsize=11pt",
     "--variable", "geometry:margin=2cm",
@@ -443,13 +455,7 @@ $pandocArgs = @(
     "--variable", "fig-pos=H",
     "--number-sections",
     # "--toc", # Il TOC è già stato inserito manualmente
-    "--toc-depth=3",
-    # --- Variabili personalizzate per Header/Footer ---
-    "--variable", "logo=$($config.logo_path.Replace("\", "/"))",
-    "--variable", "headerpolitica=$($config.header.politica)",
-    "--variable", "headercodice=$($config.header.codicedocumento)",
-    "--variable", "headerversione=$($config.header.versione)",
-    "--variable", "filename=$(Split-Path $OutputPath -Leaf)"
+    "--toc-depth=3"
 )
 
 if ($WithDiagrams -and $plantumlAvailable) {
@@ -557,6 +563,7 @@ try {
         #Remove-Item $tempFile -Force
         #Remove-Item (Join-Path $PSScriptRoot "temp-cover.md") -Force
         #Remove-Item (Join-Path $PSScriptRoot "temp-versioning.md") -Force
+        #Remove-Item $tempHeaderFile -Force
         
         # Apri PDF se richiesto
         $openPdf = Read-Host "Aprire il PDF generato? (y/n)"
