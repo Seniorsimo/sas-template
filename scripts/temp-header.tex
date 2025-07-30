@@ -1,3 +1,30 @@
+﻿% =================================================
+% Header LaTeX per Documentazione Enterprise
+% =================================================
+%
+% Questo file viene incluso da Pandoc e definisce
+% i pacchetti e comandi base.
+
+% --- Pacchetti richiesti ---
+\usepackage[pages=all]{background}
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=0.4,
+angle=0,
+contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{media/background.png}
+  }%
+}
+\usepackage{graphicx}      % Per includere immagini (logo)
+\usepackage{fancyhdr}      % Per personalizzare header e footer
+\usepackage{longtable}     % Per tabelle che possono estendersi su più pagine
+\usepackage{geometry}      % Per gestire i margini
+\usepackage{fontspec}      % Per usare font di sistema come Calibri
+
+% --- Definizione variabili da Pandoc ---
+% Le variabili dell'header sono gestite tramite template.
+
 % =================================================
 % Layout LaTeX per Header e Footer
 % =================================================
@@ -18,23 +45,23 @@
 \fancyhead[L]{
     \includegraphics[height=1.5cm]{
         % --- Comment line to prevent powershell substitution issue
-        {{LOGO_PATH}}
+        media/logo.png
     }%
 }
 \fancyhead[R]{
     \begin{tabular}{|l|p{7cm}|}
     \hline
-    \textbf{Politica} & {{HEADER_POLITICA}} \\
+    \textbf{Politica} & Manuale Operativo Sicurezza Informatica \\
     \hline
-    \textbf{Codice Documento} & {{HEADER_CODICE}} \\
+    \textbf{Codice Documento} & PSO-001-SICUREZZA \\
     \hline
-    \textbf{Versione} & {{HEADER_VERSIONE}} \\
+    \textbf{Versione} & 1.0 \\
     \hline
     \end{tabular}
 }
 
 % --- Configurazione Footer ---
-\fancyfoot[L]{{{FILENAME}}}
+\fancyfoot[L]{documentation.pdf}
 \fancyfoot[R]{Pagina \thepage}
 
 % --- Linea di separazione ---

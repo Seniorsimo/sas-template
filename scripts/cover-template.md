@@ -1,8 +1,13 @@
+```{=latex}
+
 \thispagestyle{empty}
 
 \begin{center}
     \vspace*{\stretch{1}}
-    \includegraphics[width=0.4\textwidth]{{LOGO_PATH}}
+    \includegraphics[width=0.4\textwidth]{
+        % --- Comment line to prevent powershell substitution issue
+        {{LOGO_PATH}}
+    }
 
     \vspace{2cm}
 
@@ -32,3 +37,5 @@
 
     \vspace*{\stretch{2}}
 \end{center}
+
+```

@@ -1,3 +1,5 @@
+```{=latex}
+
 \section*{STORICO DELLE REVISIONI}
 
 \begin{longtable}{|p{2cm}|p{3cm}|p{4cm}|p{6cm}|}
@@ -15,3 +17,5 @@
 \endlastfoot
 {{VERSIONING_TABLE_ROWS}}
 \end{longtable}
+
+```
