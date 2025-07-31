@@ -1,143 +1,70 @@
 # Scope del Progetto
 
-## In Scope (Cosa SARÀ incluso)
+---
+
+## In Scope (Cosa è Incluso)
 
 ### Funzionalità Principali
-
 - **[Nome Funzionalità 1]**
-  - [Descrizione dettagliata]
-  - [Criteri di accettazione principali]
-
+  - **Descrizione**: [Descrizione dettagliata della funzionalità]
+  - **Criteri di Accettazione**: [Criteri specifici per validare la funzionalità]
 - **[Nome Funzionalità 2]**
-  - [Descrizione dettagliata]
-  - [Criteri di accettazione principali]
-
+  - **Descrizione**: [Descrizione dettagliata della funzionalità]
+  - **Criteri di Accettazione**: [Criteri specifici per validare la funzionalità]
 - **[Nome Funzionalità 3]**
-  - [Descrizione dettagliata]
-  - [Criteri di accettazione principali]
+  - **Descrizione**: [Descrizione dettagliata della funzionalità]
+  - **Criteri di Accettazione**: [Criteri specifici per validare la funzionalità]
 
-### Moduli/Componenti Inclusi
-
-- **[Modulo 1]**: [Descrizione e responsabilità]
-- **[Modulo 2]**: [Descrizione e responsabilità]
-- **[Modulo 3]**: [Descrizione e responsabilità]
-
-### Integrazioni Incluse
-
-- **[Sistema 1]**: [Tipo integrazione e dati scambiati]
-- **[Sistema 2]**: [Tipo integrazione e dati scambiati]
-- **[Sistema 3]**: [Tipo integrazione e dati scambiati]
-
-### Deliverables
-
-- [ ] **Applicazione Software**: [Descrizione e caratteristiche]
-- [ ] **Documentazione Tecnica**: [API docs, architecture docs, etc.]
-- [ ] **Documentazione Utente**: [User manuals, help system, etc.]
-- [ ] **Piano di Deployment**: [Procedure di rilascio]
-- [ ] **Piano di Training**: [Materiali formativi per utenti]
-- [ ] **Piano di Supporto**: [Documentazione per supporto post-go-live]
+### Deliverable
+- **Software**: [Applicazione/servizio finale]
+- **Documentazione Tecnica**: [es. Design doc, API reference]
+- **Documentazione Utente**: [es. Manuale utente, FAQ]
 
 ---
 
-## Out of Scope (Cosa NON sarà incluso)
+## Out of Scope (Cosa è Escluso)
 
 ### Funzionalità Escluse
-
-- **[Funzionalità Esclusa 1]**
-  - Motivo esclusione: [Spiegazione]
-  - Possibile inclusione futura: [Sì/No e quando]
-
-- **[Funzionalità Esclusa 2]**
-  - Motivo esclusione: [Spiegazione]
-  - Possibile inclusione futura: [Sì/No e quando]
-
-- **[Funzionalità Esclusa 3]**
-  - Motivo esclusione: [Spiegazione]
-  - Possibile inclusione futura: [Sì/No e quando]
-
-### Sistemi/Piattaforme Non Supportate
-
-- **[Sistema/Piattaforma 1]**: [Motivo esclusione]
-- **[Sistema/Piattaforma 2]**: [Motivo esclusione]
-- **[Sistema/Piattaforma 3]**: [Motivo esclusione]
+- **[Funzionalità Esclusa 1]**: [Motivo dell'esclusione e possibile inclusione futura]
+- **[Funzionalità Esclusa 2]**: [Motivo dell'esclusione e possibile inclusione futura]
 
 ### Servizi Non Inclusi
-
-- **Migration dei Dati**: [Se applicabile]
-- **Training Avanzato**: [Oltre quello base]
-- **Customizzazioni Specifiche**: [Per singoli utenti/dipartimenti]
-- **Supporto 24/7**: [Se non previsto]
+- [es. Migrazione dati da sistemi legacy]
+- [es. Training avanzato per amministratori]
+- [es. Supporto 24/7 post-lancio]
 
 ---
 
-## Criteri di Successo
+## Criteri di Successo e Accettazione
 
-### Criteri di Completamento
+### Criteri di Successo del Progetto
+- **[Criterio 1]**: [es. Adozione da parte del 90% degli utenti target entro 3 mesi]
+- **[Criterio 2]**: [es. Raggiungimento degli obiettivi di business definiti nel file `02-objectives.md`]
+- **[Criterio 3]**: [es. Deployment completato entro la data e il budget previsti]
 
-- [ ] Tutte le funzionalità in scope sono implementate e testate
-- [ ] Tutti i test di accettazione sono superati
-- [ ] La documentazione è completa e approvata
-- [ ] Il sistema è deployato in produzione
-- [ ] Gli utenti finali sono formati
-- [ ] Il periodo di hypercare è completato
-
-### Criteri di Qualità
-
-- **Performance**: [Metriche specifiche]
-
-- **Sicurezza**: [Standard da rispettare]
-
-- **Usabilità**: [Criteri UX]
-
-- **Affidabilità**: [Uptime e error rates]
+### Criteri di Accettazione della Soluzione
+- **Funzionali**: [Elenco dei criteri funzionali che la soluzione deve soddisfare per essere accettata]
+- **Non Funzionali**: [Elenco dei criteri non funzionali (performance, sicurezza, etc.)]
+- **Qualità**: [Standard di qualità del codice, test coverage, etc.]
 
 ---
 
-## Assumptions (Assunzioni)
+## Assunzioni, Vincoli e Dipendenze
 
-### Assunzioni Tecniche
+### Assunzioni
+[Elenco di tutte le assunzioni (tecniche, di business, sulle risorse) che, se non valide, potrebbero impattare il progetto.]
+1. **[Assunzione 1]**
+2. **[Assunzione 2]**
+3. **[Assunzione 3]**
 
-- [Assunzione 1 su tecnologie o infrastruttura]
-- [Assunzione 2 su disponibilità di risorse]
-- [Assunzione 3 su integrazione con sistemi esistenti]
+### Vincoli
+[Elenco di tutti i vincoli (tecnici, di budget, temporali, normativi) che limitano le opzioni del progetto.]
+- **Vincoli Tecnici**: [es. Integrazione obbligatoria con il sistema X]
+- **Vincoli Temporali**: [es. Go-live entro il [Data]]
+- **Vincoli di Budget**: [es. Budget massimo di [Importo]]
+- **Vincoli Normativi**: [es. Conformità alla normativa Y]
 
-### Assunzioni di Business
-
-- [Assunzione 1 su budget e risorse]
-- [Assunzione 2 su timeline e priorità]
-- [Assunzione 3 su supporto management]
-
-### Assunzioni sugli Utenti
-
-- [Assunzione 1 su competenze utenti]
-- [Assunzione 2 su disponibilità per testing]
-- [Assunzione 3 su adoption della soluzione]
-
----
-
-## Constraints (Vincoli)
-
-### Vincoli Tecnici
-
-- **Tecnologie**: [Tecnologie che devono/non devono essere usate]
-- **Piattaforme**: [Sistemi operativi o browser supportati]
-- **Performance**: [Limiti di performance richiesti]
-- **Sicurezza**: [Standard di sicurezza da rispettare]
-
-### Vincoli di Tempo
-
-- **Go-Live Date**: [Data fissa non negoziabile]
-- **Milestone Intermedie**: [Date chiave nel progetto]
-- **Finestre di Deployment**: [Quando è possibile fare rilasci]
-
-### Vincoli di Budget
-
-- **Budget Totale**: [Importo massimo disponibile]
-- **Budget per Fase**: [Ripartizione per milestone]
-- **Costi Ricorrenti**: [Limiti per licenze, cloud, etc.]
-
-### Vincoli Organizzativi
-
-- **Risorse Disponibili**: [Limitazioni sul team]
-- **Approvazioni Richieste**: [Processi di approval necessari]
-- **Policy Aziendali**: [Regole interne da rispettare]
+### Dipendenze Esterne
+[Elenco delle dipendenze da team, sistemi o fornitori esterni che possono influenzare il progetto.]
+- **[Dipendenza 1]**: [Descrizione e impatto potenziale]
+- **[Dipendenza 2]**: [Descrizione e impatto potenziale]

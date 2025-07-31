@@ -1,143 +1,67 @@
 # Istruzioni per la Definizione del Progetto
 
-Questa cartella contiene i template e le linee guida per definire la prima fase della documentazione di progetto: la definizione e contestualizzazione del progetto software.
+Questa cartella contiene i template per definire la fase iniziale di un progetto software. L'obiettivo è creare una base solida e coerente, eliminando ridondanze e assicurando che ogni documento abbia uno scopo chiaro.
 
-## Scopo della Cartella
+---
 
-La cartella `01-project-definition` rappresenta la prima fase di documentazione del progetto e fornisce le fondamenta per tutte le fasi successive. Qui si definiscono:
+## Struttura e Scopo dei File
 
-- Il problema che il progetto intende risolvere
-- Gli stakeholder coinvolti e i loro interessi
-- Gli obiettivi misurabili (SMART)
-- Lo scope del progetto (incluso ed escluso)
-- I rischi identificati e le strategie di mitigazione
+### 1. `01-project-description.md`
+- **Scopo**: Fornire una visione d'insieme del progetto. È il punto di partenza per chiunque voglia comprendere rapidamente il "cosa" e il "perché".
+- **Contenuto Chiave**:
+  - **Panoramica Generale**: Un riassunto del progetto.
+  - **Contesto e Problema**: Il motivo per cui il progetto è necessario.
+  - **Soluzione Proposta**: La visione della soluzione a alto livello.
+  - **Valore e Benefici**: I principali vantaggi attesi.
+- **Da non includere**: Dettagli su scope, vincoli, assunzioni o criteri di accettazione specifici.
 
-## File Template Disponibili
+### 2. `02-objectives.md`
+- **Scopo**: Definire gli obiettivi misurabili (SMART) del progetto. Risponde alla domanda: "Cosa consideriamo un successo?".
+- **Contenuto Chiave**:
+  - **Obiettivi di Business**: Target legati al business (es. aumento fatturato, riduzione costi).
+  - **Obiettivi Tecnici**: Target non funzionali (es. performance, uptime, sicurezza).
+  - **Obiettivi di Qualità**: Target legati all'esperienza utente e all'affidabilità.
+- **Da non includere**: Vincoli, assunzioni, dipendenze o scope.
 
-### 1. project-description.md
+### 3. `03-project-scope.md`
+- **Scopo**: Essere l'unica fonte di verità per i confini del progetto. Centralizza tutte le informazioni su cosa è incluso/escluso, i vincoli, le assunzioni e le dipendenze.
+- **Contenuto Chiave**:
+  - **In Scope / Out of Scope**: Elenco chiaro di funzionalità e servizi.
+  - **Deliverable**: Cosa verrà prodotto concretamente.
+  - **Criteri di Successo e Accettazione**: Come si valuterà il completamento e la qualità.
+  - **Assunzioni, Vincoli e Dipendenze**: La sezione definitiva per questi elementi.
+- **Nota**: Questo è il documento più importante per evitare "scope creep".
 
-Template per descrivere il problema da risolvere e la soluzione proposta:
+### 4. `04-stakeholders.md`
+- **Scopo**: Mappare tutte le persone e i team coinvolti nel progetto.
+- **Contenuto Chiave**:
+  - **Stakeholder Primari**: Chi è direttamente impattato (es. utenti, sponsor).
+  - **Stakeholder Secondari**: Chi è indirettamente coinvolto (es. team di supporto, sicurezza).
+- **Da non includere**: Assunzioni generali (vanno in `03-project-scope.md`).
 
-- **Panoramica generale** del progetto
-- **Problema da risolvere** e contesto
-- **Soluzione proposta** e approccio
-- **Benefici attesi** e valore di business
+### 5. `05-risk-register.md`
+- **Scopo**: Identificare, analizzare e pianificare la mitigazione dei rischi di progetto.
+- **Contenuto Chiave**:
+  - **Matrice dei Rischi**: Per valutare probabilità e impatto.
+  - **Registro dei Rischi**: Elenco dettagliato dei rischi con piani di risposta.
 
-### 2. objectives.md
+---
 
-Template per definire obiettivi SMART:
+## Ordine di Compilazione e Flusso di Lavoro
 
-- **Obiettivi di business** (primari e secondari)
-- **Obiettivi tecnici** (performance, scalabilità, sicurezza)
-- **Obiettivi di qualità** (usabilità, affidabilità, portabilità)
+Si consiglia di seguire questo ordine per garantire coerenza:
 
-### 3. project-scope.md
+1.  **`01-project-description.md`**: Inizia con la visione generale.
+2.  **`04-stakeholders.md`**: Identifica subito chi è coinvolto.
+3.  **`02-objectives.md`**: Definisci gli obiettivi misurabili con gli stakeholder.
+4.  **`03-project-scope.md`**: Delinea i confini, raccogliendo vincoli e assunzioni da tutti. Questo è un passo cruciale e richiede la massima attenzione.
+5.  **`05-risk-register.md`**: Analizza cosa potrebbe andare storto.
 
-Template per delimitare i confini del progetto:
-
-- **Scope statement** e giustificazione
-- **In scope**: funzionalità, moduli, integrazioni incluse
-- **Out of scope**: cosa NON sarà incluso
-- **Vincoli** (tecnici, temporali, budget, organizzativi)
-- **Work Breakdown Structure** di alto livello
-
-### 4. stakeholders.md
-
-Template per mappare tutti gli stakeholder del progetto:
-
-- **Stakeholder primari** (Product Owner, Utenti finali)
-- **Stakeholder secondari** (Team di sviluppo, Operations, Sicurezza)
-- **Stakeholder esterni** (Fornitori, Partner, Enti regolatori)
-
-### 5. risk-register.md
-
-Template per la gestione dei rischi:
-
-- **Risk Matrix** con scala probabilità/impatto
-- **Catalogazione rischi** per categoria e priorità
-
-## Come Utilizzare Questi Template
-
-### 1. Ordine di Compilazione Consigliato
-
-- **project-description.md** → Definisci il COSA e il PERCHE'
-- **objectives.md** → Stabilisci COSA vuoi ottenere
-- **project-scope.md** → Delimita COSA farai e NON farai
-- **stakeholders.md** → Identifica il CHI è coinvolto  
-- **risk-register.md** → Anticipa COSA potrebbe andare storto
-
-### 2. Personalizzazione
-
-Per ogni file template:
-
-- **Cerca e sostituisci** tutti i placeholder `[Nome Progetto]`, `[Descrizione]`, etc.
-- **Compila le sezioni** con informazioni specifiche del tuo progetto
-- **Rimuovi sezioni** non applicabili al tuo contesto
-- **Aggiungi sezioni** specifiche se necessario
-
-### 3. Iterazione e Refinement
-
-- **Revisiona regolarmente** questi documenti durante il progetto
-- **Aggiorna** quando cambiano requisiti o contesto
-- **Mantieni allineamento** tra tutti i documenti
-- **Traccia cambiamenti** e versioni
-
-## Checklist di Completamento
-
-Prima di procedere alla fase successiva (`02-requirements`), assicurati di aver completato:
-
-- [ ] **Project Description**: Descrizione chiara di problema, soluzione e benefici
-- [ ] **Objectives**: Obiettivi SMART definiti con metriche di successo
-- [ ] **Project Scope**: Confini chiari di cosa è incluso ed escluso
-- [ ] **Stakeholders**: Identificazione completa di tutti gli stakeholder con ruoli e responsabilità  
-- [ ] **Risk Register**: Identificazione dei rischi principali con piani di mitigazione
-
-## Collegamento con Altre Sezioni
-
-### Input per le Fasi Successive:
-
-- **02-requirements**: Gli obiettivi definiti guideranno la raccolta dei requisiti
-- **03-behavioral-diagrams**: Gli stakeholder identificati diventeranno attori nei use case
-- **04-structural-diagrams**: Lo scope definisce i moduli da progettare
-- **05-database-design**: I requisiti di business guidano il design del database
-
-### Tracciabilità:
-
-- Ogni requisito deve essere tracciabile agli obiettivi
-- Ogni use case deve servire almeno uno stakeholder
-- Ogni componente deve essere nel scope definito
+---
 
 ## Best Practices
 
-### Do's
-
-- **Coinvolgi gli stakeholder** nella definizione e review
-- **Sii specifico** nelle descrizioni ed evita generalità
-- **Usa metriche quantificabili** dove possibile
-- **Mantieni documenti concisi** ma completi
-- **Versiona tutti i documenti** per tracciare cambiamenti
-
-### Don'ts
-
-- **Non fare assunzioni** senza documentarle
-- **Non definire scope troppo ampio** per la prima release
-- **Non trascurare i rischi** anche se sembrano improbabili
-- **Non procedere** senza approvazione formale
-- **Non dimenticare** di aggiornare i documenti durante il progetto
-
-## Esempi Multi-Domain
-
-### E-commerce
-- **Problema**: Gestione catalogo prodotti non scalabile
-- **Stakeholder**: Clienti online, merchant, team marketing
-- **Obiettivo**: Aumentare conversione del 15% in 6 mesi
-
-### Banking
-- **Problema**: Processo di onboarding clienti troppo lungo
-- **Stakeholder**: Clienti bancari, compliance officer, risk management
-- **Obiettivo**: Ridurre tempo di onboarding del 30% mantenendo compliance
-
-### Healthcare
-- **Problema**: Difficoltà nel tracciare appuntamenti e follow-up
-- **Stakeholder**: Pazienti, medici, personale amministrativo
-- **Obiettivo**: Ridurre no-show del 25% e migliorare follow-up del 40%
+- **Single Source of Truth**: Rispetta lo scopo di ogni file. Se un'informazione appartiene a `03-project-scope.md` (es. un vincolo), inseriscila solo lì.
+- **Consistenza**: Assicurati che i documenti siano allineati. Ad esempio, gli obiettivi in `02-objectives.md` devono riflettersi nei criteri di successo in `03-project-scope.md`.
+- **Iterazione**: Questi documenti sono "vivi". Aggiornali regolarmente man mano che il progetto evolve, ma sempre in modo controllato e dopo averne discusso con il team.
+- **Chiarezza**: Usa un linguaggio semplice e diretto. Evita ambiguità che potrebbero portare a incomprensioni.
