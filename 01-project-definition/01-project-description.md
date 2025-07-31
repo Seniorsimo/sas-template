@@ -2,81 +2,57 @@
 
 ## Panoramica Generale
 
-[Inserisci qui una breve descrizione del progetto - 2-3 paragrafi]
+[Inserisci qui una breve descrizione del progetto, il problema che risolve e il valore che porta. Max 2-3 paragrafi]
 
 **Nome del Progetto**: [Nome del Progetto]
-
+**Responsabile del Progetto**: [Nome]
+**Data**: [Data di creazione]
 **Versione**: 1.0
 
-**Data**: [Data di creazione]
+---
 
-**Responsabile del Progetto**: [Nome]
+## Contesto e Problema
 
-## Problema da Risolvere
+### Contesto di Business
+[Descrivi il contesto di mercato, aziendale o operativo in cui si inserisce il progetto.]
 
-### Contesto
+### Problema Attuale
+[Descrivi il problema principale che il progetto intende risolvere, le sue cause e il suo impatto negativo.]
 
-[Descrivi il contesto in cui si inserisce il progetto]
+- **Problema 1**: [Descrizione]
+- **Problema 2**: [Descrizione]
+- **Problema 3**: [Descrizione]
 
-### Problematiche Attuali
-
-- [Problema 1]
-- [Problema 2]
-- [Problema 3]
-
-### Impatto del Problema
-
-[Descrivi l'impatto negativo del problema non risolto]
+---
 
 ## Soluzione Proposta
 
-### Approccio
+### Visione della Soluzione
+[Descrivi l'approccio generale della soluzione e come risponderà ai problemi identificati.]
 
-[Descrivi l'approccio generale della soluzione]
+### Funzionalità Principali (High-Level)
+[Elenca le 3-5 funzionalità chiave che la soluzione offrirà.]
 
-### Funzionalità Principali
+- [Funzionalità Chiave 1]
+- [Funzionalità Chiave 2]
+- [Funzionalità Chiave 3]
 
-- [Funzionalità 1]
-- [Funzionalità 2]
-- [Funzionalità 3]
-
-### Tecnologie Coinvolte
-
+### Stack Tecnologico Proposto
 - **Frontend**: [Tecnologia]
 - **Backend**: [Tecnologia]
 - **Database**: [Tecnologia]
 - **Infrastruttura**: [Tecnologia]
 
-## Benefici Attesi
+---
 
-### Benefici per gli Utenti
-
-- [Beneficio 1]
-- [Beneficio 2]
-- [Beneficio 3]
+## Valore e Benefici Attesi
 
 ### Benefici per il Business
-
 - [Beneficio 1]
 - [Beneficio 2]
 - [Beneficio 3]
 
-### Benefici Tecnici
-
+### Benefici per gli Utenti Finali
 - [Beneficio 1]
 - [Beneficio 2]
 - [Beneficio 3]
-
-## Vincoli e Limitazioni
-
-### Vincoli Temporali
-
-[Descrivi i vincoli di tempo]
-
-### Vincoli di Budget
-
-[Descrivi i vincoli economici]
-
-### Vincoli Tecnici
-
-[Descrivi i vincoli tecnologici]
