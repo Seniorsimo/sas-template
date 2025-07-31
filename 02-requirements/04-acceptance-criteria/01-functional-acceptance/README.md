@@ -1,4 +1,4 @@
-# Criteri di Accettazione Funzionale - [Nome Progetto]
+# Criteri di Accettazione Funzionale
 
 ## Panoramica
 

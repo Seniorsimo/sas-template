@@ -1,4 +1,4 @@
-# Criteri di Accettazione per l'Integrazione - [Nome Progetto]
+# Criteri di Accettazione per l'Integrazione
 
 ## Panoramica
 

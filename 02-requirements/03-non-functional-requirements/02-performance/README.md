@@ -1,4 +1,4 @@
-# Requisiti di Performance - [Nome Progetto]
+# Requisiti di Performance
 
 ## Panoramica
 

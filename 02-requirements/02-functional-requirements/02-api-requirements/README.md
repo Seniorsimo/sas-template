@@ -1,4 +1,4 @@
-# API Requirements - [Nome Progetto]
+# API Requirements
 
 ## Panoramica
 

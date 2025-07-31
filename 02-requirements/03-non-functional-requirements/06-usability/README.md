@@ -1,4 +1,4 @@
-# Requisiti di Usabilità - [Nome Progetto]
+# Requisiti di Usabilità
 
 ## Panoramica
 

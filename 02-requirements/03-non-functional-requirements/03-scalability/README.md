@@ -1,4 +1,4 @@
-# Requisiti di Scalabilità - [Nome Progetto]
+# Requisiti di Scalabilità
 
 ## Panoramica
 

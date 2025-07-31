@@ -1,4 +1,4 @@
-# Requisiti di Sicurezza - [Nome Progetto]
+# Requisiti di Sicurezza
 
 ## Panoramica
 

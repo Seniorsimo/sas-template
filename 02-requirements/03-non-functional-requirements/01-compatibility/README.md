@@ -1,4 +1,4 @@
-# Requisiti di Compatibilità - [Nome Progetto]
+# Requisiti di Compatibilità
 
 ## Panoramica
 

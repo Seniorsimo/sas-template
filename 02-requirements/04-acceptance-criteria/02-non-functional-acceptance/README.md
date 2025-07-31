@@ -1,4 +1,4 @@
-# Criteri di Accettazione Non Funzionale - [Nome Progetto]
+# Criteri di Accettazione Non Funzionale
 
 ## Panoramica
 

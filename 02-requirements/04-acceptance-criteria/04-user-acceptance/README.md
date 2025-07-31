@@ -1,4 +1,4 @@
-# Criteri di Accettazione Utente - [Nome Progetto]
+# Criteri di Accettazione Utente
 
 ## Panoramica
 

@@ -1,4 +1,4 @@
-# Core Features - [Nome Progetto]
+# Core Features
 
 ## Panoramica
 

@@ -1,4 +1,4 @@
-# Integrazioni - [Nome Progetto]
+# Integrazioni
 
 ## Panoramica
 

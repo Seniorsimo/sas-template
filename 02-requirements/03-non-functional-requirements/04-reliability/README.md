@@ -1,4 +1,4 @@
-# Requisiti di Affidabilità - [Nome Progetto]
+# Requisiti di Affidabilità
 
 ## Panoramica
 

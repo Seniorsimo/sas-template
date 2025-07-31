@@ -1,4 +1,4 @@
-# UI Requirements - [Nome Progetto]
+# UI Requirements
 
 ## Panoramica
 
