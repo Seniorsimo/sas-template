@@ -1,17 +1,5 @@
 # Obiettivi del Progetto
 
-## Informazioni Generali
-
-**Progetto**: [Nome del Progetto]
-
-**Versione**: [Versione]
-
-**Data**: [Data]
-
-**Responsabile**: [Nome Responsabile]
-
----
-
 ## Obiettivi di Business
 
 ### Obiettivo Primario
@@ -97,23 +85,6 @@
 
 ---
 
-## Metriche di Successo
-
-### KPI Primari
-| Metrica | Baseline | Target | Scadenza |
-|---------|----------|---------|----------|
-| [Nome KPI 1] | [Valore attuale] | [Valore target] | [Data] |
-| [Nome KPI 2] | [Valore attuale] | [Valore target] | [Data] |
-| [Nome KPI 3] | [Valore attuale] | [Valore target] | [Data] |
-
-### KPI Secondari
-
-- **[Nome Metrica 1]**: [Descrizione e target]
-- **[Nome Metrica 2]**: [Descrizione e target]
-- **[Nome Metrica 3]**: [Descrizione e target]
-
----
-
 ## Vincoli e Limitazioni
 
 ### Vincoli Tecnici
@@ -173,9 +144,3 @@
 - [Dipendenza 1]: [Descrizione e impatto]
 - [Dipendenza 2]: [Descrizione e impatto]
 - [Dipendenza 3]: [Descrizione e impatto]
-
-### Rischi Identificati
-
-- **[Rischio 1]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
-- **[Rischio 2]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]
-- **[Rischio 3]**: [Probabilità: Alta/Media/Bassa] - [Impatto: Alto/Medio/Basso]

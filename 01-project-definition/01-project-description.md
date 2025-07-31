@@ -80,20 +80,3 @@
 ### Vincoli Tecnici
 
 [Descrivi i vincoli tecnologici]
-
-### Vincoli Normativi
-
-[Descrivi i vincoli legali/normativi]
-
-## Rischi Identificati
-
-| Rischio | Probabilità | Impatto | Mitigazione |
-|---------|-------------|---------|-------------|
-| [Rischio 1] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Strategia] |
-| [Rischio 2] | [Alta/Media/Bassa] | [Alto/Medio/Basso] | [Strategia] |
-
-## Criteri di Successo
-
-- [Criterio 1]
-- [Criterio 2]
-- [Criterio 3]

@@ -23,25 +23,15 @@ Template per descrivere il problema da risolvere e la soluzione proposta:
 - **Soluzione proposta** e approccio
 - **Benefici attesi** e valore di business
 
-### 2. stakeholders.md
-
-Template per mappare tutti gli stakeholder del progetto:
-
-- **Stakeholder primari** (Product Owner, Utenti finali)
-- **Stakeholder secondari** (Team di sviluppo, Operations, Sicurezza)
-- **Stakeholder esterni** (Fornitori, Partner, Enti regolatori)
-- **Matrice stakeholder** e piano di comunicazione
-
-### 3. objectives.md
+### 2. objectives.md
 
 Template per definire obiettivi SMART:
 
 - **Obiettivi di business** (primari e secondari)
 - **Obiettivi tecnici** (performance, scalabilità, sicurezza)
 - **Obiettivi di qualità** (usabilità, affidabilità, portabilità)
-- **Metriche di successo** e KPI
 
-### 4. project-scope.md
+### 3. project-scope.md
 
 Template per delimitare i confini del progetto:
 
@@ -51,23 +41,29 @@ Template per delimitare i confini del progetto:
 - **Vincoli** (tecnici, temporali, budget, organizzativi)
 - **Work Breakdown Structure** di alto livello
 
+### 4. stakeholders.md
+
+Template per mappare tutti gli stakeholder del progetto:
+
+- **Stakeholder primari** (Product Owner, Utenti finali)
+- **Stakeholder secondari** (Team di sviluppo, Operations, Sicurezza)
+- **Stakeholder esterni** (Fornitori, Partner, Enti regolatori)
+
 ### 5. risk-register.md
 
 Template per la gestione dei rischi:
 
 - **Risk Matrix** con scala probabilità/impatto
 - **Catalogazione rischi** per categoria e priorità
-- **Strategie di mitigazione** e piani di contingenza
-- **Risk management process** e escalation
 
 ## Come Utilizzare Questi Template
 
 ### 1. Ordine di Compilazione Consigliato
 
 - **project-description.md** → Definisci il COSA e il PERCHE'
-- **stakeholders.md** → Identifica il CHI è coinvolto  
 - **objectives.md** → Stabilisci COSA vuoi ottenere
 - **project-scope.md** → Delimita COSA farai e NON farai
+- **stakeholders.md** → Identifica il CHI è coinvolto  
 - **risk-register.md** → Anticipa COSA potrebbe andare storto
 
 ### 2. Personalizzazione
@@ -91,11 +87,10 @@ Per ogni file template:
 Prima di procedere alla fase successiva (`02-requirements`), assicurati di aver completato:
 
 - [ ] **Project Description**: Descrizione chiara di problema, soluzione e benefici
-- [ ] **Stakeholders**: Identificazione completa di tutti gli stakeholder con ruoli e responsabilità  
 - [ ] **Objectives**: Obiettivi SMART definiti con metriche di successo
 - [ ] **Project Scope**: Confini chiari di cosa è incluso ed escluso
+- [ ] **Stakeholders**: Identificazione completa di tutti gli stakeholder con ruoli e responsabilità  
 - [ ] **Risk Register**: Identificazione dei rischi principali con piani di mitigazione
-- [ ] **Approval**: Tutti i documenti approvati dagli stakeholder chiave
 
 ## Collegamento con Altre Sezioni
 

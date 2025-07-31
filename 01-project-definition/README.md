@@ -9,22 +9,11 @@
 Questa sezione include la documentazione fondamentale che definisce e contestualizza il progetto [Nome Progetto]:
 
 - **Descrizione del Progetto**: Panoramica generale, problema affrontato e soluzione proposta
-- **Analisi degli Stakeholder**: Identificazione e mappatura di tutti i soggetti coinvolti
 - **Obiettivi di Progetto**: Target SMART e metriche di successo definite
-- **Ambito del Progetto**: Perimetro chiaro di ciò che è incluso ed escluso
+- **Scope del Progetto**: Perimetro chiaro di ciò che è incluso ed escluso
+- **Analisi degli Stakeholder**: Identificazione e mappatura di tutti i soggetti coinvolti
 - **Registro dei Rischi**: Identificazione e piano di gestione dei potenziali rischi
 
 ## Contesto Aziendale/Organizzativo
 
 [Descrivere il contesto aziendale o organizzativo in cui si inserisce il progetto. Includere informazioni su fattori di mercato, tendenze del settore o requisiti normativi che influenzano il progetto.]
-
-## Riepilogo Esecutivo
-
-### Problema
-[Sintesi concisa del problema principale che il progetto intende risolvere]
-
-### Soluzione
-[Sintesi dell'approccio di soluzione scelto e dei suoi punti di forza]
-
-### Valore Atteso
-[Riepilogo dei principali benefici e del ritorno sull'investimento previsto]
