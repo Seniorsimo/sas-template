@@ -1,28 +1,26 @@
 @startuml Sequence-Template
-title Interazione [Nome Scenario] - Diagramma di Sequenza
+title Interazione [Nome Scenario]
 
-' Definizione dei partecipanti
 actor "Attore" as Actor
 participant "Componente 1" as C1
 participant "Componente 2" as C2
 database "Database" as DB
 
-' Inizio dell'interazione
 Actor -> C1: Messaggio di richiesta
 activate C1
 
 C1 -> C2: Messaggio interno
 activate C2
 
-C2 -> DB: Query sul database
+C2 -> DB: Query
 activate DB
-DB --> C2: Risultati della query
+DB --> C2: Risultati
 deactivate DB
 
-C2 --> C1: Risposta interna
+C2 --> C1: Risposta
 deactivate C2
 
-C1 --> Actor: Messaggio di risposta
+C1 --> Actor: Risposta finale
 deactivate C1
 
 @enduml
