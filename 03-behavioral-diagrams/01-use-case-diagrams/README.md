@@ -1,4 +1,4 @@
-# Diagrammi dei Casi d'Uso - [Nome Progetto]
+# Diagrammi dei Casi d'Uso
 
 ## Panoramica
 

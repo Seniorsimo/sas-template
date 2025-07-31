@@ -1,4 +1,4 @@
-# Descrizione del Progetto [Nome Progetto]
+# Descrizione
 
 ## Panoramica Generale
 

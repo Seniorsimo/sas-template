@@ -1,4 +1,4 @@
-# Stakeholders del Progetto
+# Stakeholders
 
 ## Stakeholder Primari
 

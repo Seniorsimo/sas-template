@@ -1,4 +1,4 @@
-# Diagrammi delle Attività - [Nome Progetto]
+# Diagrammi delle Attività
 
 ## Panoramica
 

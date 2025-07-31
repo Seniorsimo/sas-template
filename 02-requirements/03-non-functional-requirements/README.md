@@ -1,4 +1,4 @@
-# Requisiti Non Funzionali - [Nome Progetto]
+# Requisiti Non Funzionali
 
 ## Introduzione
 

@@ -1,4 +1,4 @@
-# Requisiti e User Stories - [Nome Progetto]
+# Requisiti e User Stories
 
 ## Introduzione
 

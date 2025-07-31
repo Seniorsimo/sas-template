@@ -35,6 +35,12 @@ if (-not (Test-Path $configPath)) {
 . $configPath
 Write-Host "File di configurazione caricato con successo." -ForegroundColor Green
 
+# Usa il nome del file specificato in config.ps1 se presente e se l'OutputPath non è stato specificato esplicitamente
+if (-not $PSBoundParameters.ContainsKey('OutputPath') -and -not [string]::IsNullOrEmpty($config.filename)) {
+    $OutputPath = Join-Path $projectRoot $config.filename
+    Write-Host "Utilizzo nome file da configurazione: $OutputPath" -ForegroundColor Green
+}
+
 
 Write-Host "Generazione PDF Documentazione Template Enterprise" -ForegroundColor Green
 Write-Host "=================================================" -ForegroundColor Green
@@ -180,22 +186,22 @@ function Get-PopulatedContent {
 
     # Popola le variabili dell'header
     $templateContent = $templateContent.Replace("{{LOGO_PATH}}", $Config.logo_path.Replace("\", "/"))
-    $templateContent = $templateContent.Replace("{{HEADER_POLITICA}}", $Config.header.politica)
-    $templateContent = $templateContent.Replace("{{HEADER_CODICE}}", $Config.header.codicedocumento)
-    $templateContent = $templateContent.Replace("{{HEADER_VERSIONE}}", $Config.header.versione)
+    $templateContent = $templateContent.Replace("{{HEADER_POLITICA}}", $Config.title)
+    $templateContent = $templateContent.Replace("{{HEADER_CODICE}}", $Config.document_code)
+    $templateContent = $templateContent.Replace("{{HEADER_VERSIONE}}", $Config.version)
     if (-not [string]::IsNullOrEmpty($Filename)) {
         $templateContent = $templateContent.Replace("{{FILENAME}}", $Filename)
     }
 
     # Genera righe per la tabella di identificazione nel formato:
     $idRows = @()
-    $idRows += "\textcolor{azzurro}{Categoria} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.identification.Categoria)}} \\"
+    $idRows += "\textcolor{azzurro}{Categoria} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.category)}} \\"
     $idRows += "\hline"
-    $idRows += "\textcolor{azzurro}{Procedura} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.identification.Procedura)}} \\"
+    $idRows += "\textcolor{azzurro}{Procedura} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.document_code)}} \\"
     $idRows += "\hline"
-    $idRows += "\textcolor{azzurro}{Data Validita'} & \textcolor{azzurro}{$($Config.identification.DataValidita)} & \textcolor{azzurro}{Versione} & \textcolor{azzurro}{$($Config.identification.Versione)} \\"
+    $idRows += "\textcolor{azzurro}{Data Validita'} & \textcolor{azzurro}{$($Config.validity_date)} & \textcolor{azzurro}{Versione} & \textcolor{azzurro}{$($Config.version)} \\"
     $idRows += "\hline"
-    $idRows += "\textcolor{azzurro}{Nome Documento} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.identification.NomeDocumento)}} \\"
+    $idRows += "\textcolor{azzurro}{Nome Documento} & \multicolumn{3}{l|}{\textcolor{azzurro}{$($Config.filename)}} \\"
     $idRows += "\hline"
     $templateContent = $templateContent.Replace("{{IDENTIFICATION_TABLE_ROWS}}", ($idRows -join "`n"))
 
@@ -279,7 +285,7 @@ foreach ($file in $fileOrder) {
             } else {
                 # Conta i livelli di cartella (split by \ o /)
                 $folderLevels = ($folderPath -split '[\\\/]').Count
-                $titleIndentation = $folderLevels
+                $titleIndentation = $folderLevels -1
                 
                 # Eccezione per i file README: hanno -1 livello di indentazione
                 if ($fileName -eq "README.md") {
@@ -315,7 +321,7 @@ foreach ($file in $fileOrder) {
             $content = $content -replace '(?s)```plantuml(.*?)```', "`n``````{=latex}`n\begin{center}`n```````n`n``````plantuml`$1```````n`n``````{=latex}`n\end{center}`n```````n"
             
             # Per TUTTI i file .md, non aggiungere titolo aggiuntivo, solo newpage
-            $combinedContent += "`n\newpage`n"
+            # $combinedContent += "`n\newpage`n"
             # Aggiungi direttamente il contenuto (con titoli indentati se necessario)
             $combinedContent += $content
             $combinedContent += "`n"

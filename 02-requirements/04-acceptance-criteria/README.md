@@ -1,4 +1,4 @@
-# Criteri di Accettazione - [Nome Progetto]
+# Criteri di Accettazione
 
 ## Introduzione
 

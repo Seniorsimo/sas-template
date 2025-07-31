@@ -1,4 +1,4 @@
-# Dizionario dei Dati - [Nome Progetto]
+# Dizionario dei Dati
 
 Questo documento fornisce una definizione dettagliata di tutte le entità del database per [Nome Progetto].
 

@@ -1,4 +1,4 @@
-# Obiettivi del Progetto
+# Obiettivi
 
 ## Obiettivi di Business
 

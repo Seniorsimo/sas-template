@@ -1,4 +1,4 @@
-# Requisiti Funzionali - [Nome Progetto]
+# Requisiti Funzionali
 
 ## Introduzione
 

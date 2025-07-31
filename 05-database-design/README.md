@@ -1,4 +1,4 @@
-# Database Design - [Nome Progetto]
+# Database Design
 
 ## Introduzione
 

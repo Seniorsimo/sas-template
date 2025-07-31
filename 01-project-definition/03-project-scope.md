@@ -1,4 +1,4 @@
-# Scope del Progetto
+# Scope
 
 ## In Scope (Cosa è Incluso)
 

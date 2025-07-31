@@ -1,4 +1,4 @@
-# Definizione del Progetto - [Nome Progetto]
+# Definizione del Progetto
 
 ## Introduzione
 

@@ -1,4 +1,4 @@
-# Diagrammi delle Classi - [Nome Progetto]
+# Diagrammi delle Classi
 
 ## Panoramica
 

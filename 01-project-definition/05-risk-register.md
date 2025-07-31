@@ -1,6 +1,6 @@
-# Risk Register - Registro dei Rischi
+# Registro dei Rischi
 
-## Risk Matrix - Matrice dei Rischi
+## Matrice dei Rischi
 
 ### Scala di Probabilità
 

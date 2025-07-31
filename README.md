@@ -1,4 +1,4 @@
-# [Nome Progetto] - Documentazione Tecnica
+# Documentazione Tecnica
 
 ## Panoramica del Progetto
 

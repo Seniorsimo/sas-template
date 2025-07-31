@@ -1,4 +1,4 @@
-# Diagrammi di Sequenza - [Nome Progetto]
+# Diagrammi di Sequenza
 
 ## Panoramica
 

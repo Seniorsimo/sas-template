@@ -1,4 +1,4 @@
-# Diagrammi Entità-Relazione - [Nome Progetto]
+# Diagrammi Entità-Relazione
 
 ## Panoramica
 

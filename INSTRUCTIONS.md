@@ -77,7 +77,7 @@ Questo documento fornisce linee guida e istruzioni per l'utilizzo efficace del t
 6. Aggiorna README se necessario
 7. ESEGUI REVIEW del file per verificare correttezza formale
 8. AGGIORNA README della cartella se contiene indici o riferimenti al file modificato
-9. AGGIORNA config.ps1 nella root se stai modificando informazioni di progetto rilevanti per la generazione del PDF
+9. AGGIORNA config.ps1 nella root con le informazioni di progetto rilevanti per la generazione del PDF (project, category, document_code, validity_date, responsibilities, versioning)
 ```
 
 ### Review Obbligatoria Post-Modifica
@@ -189,15 +189,34 @@ Data Dictionary & Business Rules
 
 ### File di Configurazione per Generazione PDF
 
-Nella root del progetto è presente il file `config.ps1` che contiene tutte le configurazioni necessarie per la generazione del PDF della documentazione:
+Nella root del progetto è presente il file `config.ps1` che contiene tutte le configurazioni necessarie per la generazione del PDF della documentazione. **Tutti i campi con placeholder [...]** devono essere compilati prima di generare il documento finale.
 
-- **Informazioni generali**: Titolo del documento, path del logo aziendale
-- **Tabella di identificazione**: Categoria, codice procedura, versione, ecc.
-- **Tabella delle responsabilità**: Ruoli, nomi e funzioni delle persone coinvolte
-- **Tabella di versionamento**: Storia delle versioni con date e descrizioni delle modifiche
-- **Informazioni per l'header**: Dati che appaiono nell'intestazione di ogni pagina
+#### Informazioni di Identificazione Obbligatorie
 
-Prima di generare la documentazione finale, è necessario personalizzare questo file sostituendo i placeholder con le informazioni specifiche del progetto.
+- **project** `[Nome del progetto]`: Nome del progetto o dell'organizzazione
+  - Esempio: "Sistema di Gestione Prenotazioni Ospedaliere"
+  
+- **category** `[Categoria del documento]`: Categoria generale del documento
+  - Esempio: "Analisi Tecnica", "Specifiche Funzionali"
+  
+- **document_code** `[Codice identificativo documento]`: Codice univoco del documento
+  - Esempio: "TEC_001_v01_Analisi-Tecnica-SGP"
+  
+- **validity_date** `[GG/MM/AAAA]`: Data di validità nel formato GG/MM/AAAA
+  - Esempio: "31/07/2025"
+
+#### Campi Opzionali (Generati Automaticamente se non Specificati)
+
+- **title**: Se vuoto, viene calcolato come `category - project`
+- **version**: Se vuoto, viene prelevato dall'ultima versione nella tabella di versionamento
+- **filename**: Determina il nome del file PDF generato. Se vuoto, verrà usato "documentation.pdf" (default) o generato dal document_code
+
+#### Tabelle Obbligatorie
+
+- **Tabella delle responsabilità**: Sostituire i placeholder `[Elaborato da]`, `[Nome e cognome]`, `[Ruolo della persona]` con i valori effettivi
+- **Tabella di versionamento**: Sostituire i placeholder `[X.Y]`, `[GG/MM/AAAA]`, `[Motivo della modifica]`, `[Descrizione delle modifiche]` con i valori effettivi
+
+Prima di generare la documentazione finale, è necessario personalizzare questo file sostituendo **TUTTI** i placeholder con le informazioni specifiche del progetto. Lo script `generate-pdf.ps1` utilizza queste informazioni per creare copertina, header, footer e tabelle nel documento finale.
 
 ## Utilizzo Template Enterprise
 

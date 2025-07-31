@@ -1,4 +1,4 @@
-# Diagrammi dei Componenti - [Nome Progetto]
+# Diagrammi dei Componenti
 
 ## Panoramica
 
