@@ -320,6 +320,9 @@ foreach ($file in $fileOrder) {
             # Usa una singola regex per estrarre e ricomporre con comandi LaTeX
             $content = $content -replace '(?s)```plantuml(.*?)```', "`n``````{=latex}`n\begin{center}`n```````n`n``````plantuml`$1```````n`n``````{=latex}`n\end{center}`n```````n"
             
+            # Estendi le linee di separazione delle tabelle Markdown (per avere tabelle full-width)
+            $content = $content -replace '(?<=\|)-+', '$0$0'
+            
             # Per TUTTI i file .md, non aggiungere titolo aggiuntivo, solo newpage
             # $combinedContent += "`n\newpage`n"
             # Aggiungi direttamente il contenuto (con titoli indentati se necessario)
