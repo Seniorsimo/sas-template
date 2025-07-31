@@ -26,8 +26,6 @@
   - Metrica: [Come misurarlo]
   - Target: [Valore target]
 
----
-
 ## Obiettivi Tecnici
 
 ### Performance
@@ -61,8 +59,6 @@
 - **Documentazione**: [es. API documentation completa]
 - **Monitoring**: [es. logging centralizzato e metriche]
 
----
-
 ## Obiettivi di Qualità
 
 ### Usabilità
@@ -82,5 +78,3 @@
 - **Browser Support**: [es. Chrome, Firefox, Safari, Edge (ultime 2 versioni)]
 - **Dispositivi**: [es. Desktop, Tablet, Mobile]
 - **Sistema Operativo**: [es. Windows, macOS, Linux]
-
----

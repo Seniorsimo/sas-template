@@ -24,8 +24,6 @@
 - **6-12**: Rischio Medio (Giallo)
 - **15-25**: Rischio Alto (Rosso)
 
----
-
 ## Rischi Alti (15-25)
 
 ### RISK-001: [Nome Rischio Alto 1]
@@ -57,8 +55,6 @@
 **Target Date**: [Data entro cui implementare mitigazioni]
 **Status**: Aperto | In Progress | Chiuso
 
----
-
 ### RISK-002: [Nome Rischio Alto 2]
 
 **Categoria**: Tecnico | Business | Organizzativo | Esterno
@@ -88,8 +84,6 @@
 **Target Date**: [Data entro cui implementare mitigazioni]
 **Status**: Aperto | In Progress | Chiuso
 
----
-
 ## Rischi Medi (6-12)
 
 ### RISK-003: [Nome Rischio Medio 1]
@@ -107,8 +101,6 @@
 **Owner**: [Nome responsabile]
 **Status**: Aperto | In Progress | Chiuso
 
----
-
 ### RISK-004: [Nome Rischio Medio 2]
 
 **Categoria**: Tecnico | Business | Organizzativo | Esterno
@@ -123,8 +115,6 @@
 
 **Owner**: [Nome responsabile]
 **Status**: Aperto | In Progress | Chiuso
-
----
 
 ## Rischi Bassi (1-5)
 
