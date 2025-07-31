@@ -2,7 +2,7 @@
 
 \begin{tikzpicture}
     % Riga colorata sopra (larghezza: \textwidth)
-    \draw[fill=azzurro, draw=none, opacity=0.6] (0,0) rectangle (\textwidth, -1.15);
+    \draw[fill=azzurro, draw=none, opacity=0.6] (0.01,-0.02) rectangle (\textwidth, -1.18);
     \setlength{\arrayrulewidth}{0.3pt} % rende i bordi più sottili
     \renewcommand{\arraystretch}{1.2} % aumenta l'altezza riga
 
