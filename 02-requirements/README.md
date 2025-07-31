@@ -1,121 +1,25 @@
-# Requisiti e User Stories [Nome Progetto]
+# Requisiti e User Stories - [Nome Progetto]
 
 ## Introduzione
 
-[Inserire qui un'introduzione che spieghi l'approccio adottato per la raccolta e la gestione dei requisiti del progetto. Descrivere brevemente la metodologia utilizzata (Agile, Scrum, ecc.) e come questa si allinea con gli obiettivi del progetto definiti nella sezione precedente.]
+Questa sezione della documentazione è dedicata alla definizione dettagliata dei requisiti del progetto [Nome Progetto]. L'obiettivo è tradurre gli obiettivi di alto livello, definiti nella sezione precedente, in un insieme chiaro e strutturato di requisiti funzionali, non funzionali, user stories e criteri di accettazione.
 
-## Panoramica dei Requisiti
+Un'efficace gestione dei requisiti è fondamentale per garantire che il prodotto finale soddisfi le aspettative degli stakeholder e risolva i problemi di business identificati.
 
-[Fornire una panoramica generale dei requisiti del sistema, evidenziando le aree funzionali principali e le caratteristiche di qualità essenziali.]
+## Contenuto della Sezione
 
-## Epic e User Stories
+Questa sezione è organizzata nei seguenti documenti, ciascuno con uno scopo preciso:
 
-### Epic 1: [Nome Epic 1]
+- **User Stories**: Descrivono le funzionalità dal punto di vista dell'utente finale, catturando il "chi", il "cosa" e il "perché" di ogni requisito.
 
-[Breve descrizione dell'epic e del suo obiettivo generale]
+- **Requisiti Funzionali**: Dettagliano il comportamento specifico del sistema, specificando cosa deve fare per soddisfare le esigenze degli utenti.
 
-#### User Stories Principali:
+- **Requisiti Non Funzionali**: Definiscono le caratteristiche di qualità del sistema, come performance, sicurezza, usabilità e scalabilità.
 
-- **US-001**: Come [ruolo], voglio [funzionalità] per [beneficio]
-- **US-002**: Come [ruolo], voglio [funzionalità] per [beneficio]
-- **US-003**: Come [ruolo], voglio [funzionalità] per [beneficio]
+- **Criteri di Accettazione**: Stabiliscono le condizioni che devono essere soddisfatte affinché un requisito o una user story possano essere considerati completati e accettati.
 
-### Epic 2: [Nome Epic 2]
+## Come Navigare Questa Sezione
 
-[Breve descrizione dell'epic e del suo obiettivo generale]
+Per una comprensione completa, si consiglia di esplorare le sottocartelle, che contengono i template e le istruzioni specifiche per ogni tipo di requisito. Ogni cartella è progettata per essere un contenitore autoconsistente per la sua area di competenza.
 
-#### User Stories Principali:
-
-- **US-004**: Come [ruolo], voglio [funzionalità] per [beneficio]
-- **US-005**: Come [ruolo], voglio [funzionalità] per [beneficio]
-- **US-006**: Come [ruolo], voglio [funzionalità] per [beneficio]
-
-## Requisiti Funzionali
-
-### Core Features
-
-- **REQ-F-001**: [Descrizione requisito funzionale 1]
-- **REQ-F-002**: [Descrizione requisito funzionale 2]
-- **REQ-F-003**: [Descrizione requisito funzionale 3]
-
-### API Requirements
-
-- **REQ-API-001**: [Descrizione requisito API 1]
-- **REQ-API-002**: [Descrizione requisito API 2]
-
-### Integrazioni
-
-- **REQ-I-001**: [Descrizione requisito di integrazione 1]
-- **REQ-I-002**: [Descrizione requisito di integrazione 2]
-
-### UI Requirements
-
-- **REQ-UI-001**: [Descrizione requisito UI 1]
-- **REQ-UI-002**: [Descrizione requisito UI 2]
-
-## Requisiti Non-Funzionali
-
-### Performance
-
-- **REQ-NF-PERF-001**: [Descrizione requisito di performance 1]
-- **REQ-NF-PERF-002**: [Descrizione requisito di performance 2]
-
-### Security
-
-- **REQ-NF-SEC-001**: [Descrizione requisito di sicurezza 1]
-- **REQ-NF-SEC-002**: [Descrizione requisito di sicurezza 2]
-
-### Usability
-
-- **REQ-NF-USA-001**: [Descrizione requisito di usabilità 1]
-- **REQ-NF-USA-002**: [Descrizione requisito di usabilità 2]
-
-### Scalability
-
-- **REQ-NF-SCAL-001**: [Descrizione requisito di scalabilità 1]
-- **REQ-NF-SCAL-002**: [Descrizione requisito di scalabilità 2]
-
-## Criteri di Accettazione
-
-### Functional Acceptance
-
-- **AC-F-001**: [Criterio di accettazione funzionale 1]
-- **AC-F-002**: [Criterio di accettazione funzionale 2]
-
-### Non-Functional Acceptance
-
-- **AC-NF-001**: [Criterio di accettazione non-funzionale 1]
-- **AC-NF-002**: [Criterio di accettazione non-funzionale 2]
-
-## Matrice di Prioritizzazione
-
-| Requisito | Priorità (MoSCoW) | Complessità | Sprint Target | Dipendenze |
-|-----------|-------------------|-------------|---------------|------------|
-| US-001    | Must Have         | Media       | Sprint 1      | -          |
-| US-002    | Should Have       | Alta        | Sprint 2      | US-001     |
-| REQ-F-001 | Must Have         | Bassa       | Sprint 1      | -          |
-| REQ-NF-PERF-001 | Should Have | Media       | Sprint 3      | REQ-F-001  |
-
-## Matrice di Tracciabilità
-
-| User Story | Req. Funzionali | Req. Non-Funz. | Criteri Accett. | Status |
-|------------|-----------------|-----------------|------------------|--------|
-| US-001     | REQ-F-001       | REQ-NF-PERF-001 | AC-F-001         | [Status] |
-| US-002     | REQ-F-002       | REQ-NF-SEC-001  | AC-F-002         | [Status] |
-
-## Collegamenti con gli Obiettivi di Progetto
-
-| Obiettivo | User Stories Correlate | Requisiti Correlati |
-|-----------|------------------------|---------------------|
-| [Obiettivo 1] | US-001, US-002 | REQ-F-001, REQ-NF-PERF-001 |
-| [Obiettivo 2] | US-003, US-004 | REQ-F-002, REQ-NF-SEC-001 |
-
-## Vincoli e Limitazioni
-
-- [Vincolo 1 che influenza i requisiti]
-- [Vincolo 2 che influenza i requisiti]
-- [Vincolo 3 che influenza i requisiti]
-
-## Note e Considerazioni
-
-[Note aggiuntive o considerazioni importanti riguardo ai requisiti che non rientrano nelle sezioni precedenti.]
+Per istruzioni dettagliate su come compilare e mantenere questi documenti, fare riferimento al file `INSTRUCTIONS.md` in questa cartella e nelle rispettive sottocartelle.
