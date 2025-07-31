@@ -1,0 +1,24 @@
+@startuml Class-Diagram-Template
+title [Nome Dominio] - Diagramma delle Classi
+
+package "Dominio Principale" {
+
+  class ClasseA {
+    -attributo1: String
+    +metodo1(): void
+  }
+
+  class ClasseB {
+    -attributo2: int
+    +metodo2(): String
+  }
+
+  interface Servizio {
+    +operazione(): void
+  }
+
+  ClasseA ..|> Servizio
+  ClasseA "1" -- "0..*" ClasseB
+}
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml Component-Diagram-Template
+title Architettura [Nome Sistema]
+
+package "Frontend" {
+  [Web App]
+}
+
+package "Backend" {
+  [API Gateway]
+  [Servizio A]
+  [Servizio B]
+}
+
+database "Database" {
+  [DB A]
+  [DB B]
+}
+
+[Web App] --> [API Gateway]
+[API Gateway] --> [Servizio A]
+[API Gateway] --> [Servizio B]
+[Servizio A] --> [DB A]
+[Servizio B] --> [DB B]
+
+@enduml

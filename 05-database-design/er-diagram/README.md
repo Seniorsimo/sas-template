@@ -1,63 +1,33 @@
-# Entity-Relationship Diagrams - [Nome Progetto]
+# Diagrammi Entità-Relazione - [Nome Progetto]
 
-## Panoramica del Modello Dati
+## Panoramica
 
-Questo documento presenta il modello Entity-Relationship per [Nome Progetto]. Il modello rappresenta la struttura dei dati persistenti del sistema.
+Questa sezione contiene i diagrammi Entity-Relationship (ER) che rappresentano il modello dei dati del sistema.
 
-## Entità Principali
+## Diagramma ER Generale
 
-Il modello dati è centrato sulle seguenti entità principali:
+[Inserire qui il diagramma ER principale, che mostra una visione d'insieme di tutte le entità e le loro relazioni.]
 
-- **[Entità 1]**: [Breve descrizione e ruolo nell'architettura dati]
-- **[Entità 2]**: [Breve descrizione e ruolo nell'architettura dati]
-- **[Entità 3]**: [Breve descrizione e ruolo nell'architettura dati]
+```plantuml
+@startuml
+title Modello Dati E-commerce
 
-## Diagramma ER Concettuale
+entity Utente {
+  +id: long
+  +nome: String
+  +email: String
+}
 
-[Inserire qui il diagramma ER concettuale]
+entity Ordine {
+  +id: long
+  +data: Date
+  +stato: String
+}
 
-## Diagramma ER Dettagliato
+Utente "1" -- "0..*" Ordine
+@enduml
+```
 
-[Inserire qui il diagramma ER dettagliato con tutte le entità e attributi]
+## Diagrammi di Dettaglio
 
-## Descrizione delle Entità
-
-### [Entità 1]
-
-- **Definizione**: [Descrizione dell'entità]
-- **Attributi Principali**:
-  - [attributo1]: [descrizione e tipo]
-  - [attributo2]: [descrizione e tipo]
-  - [attributo3]: [descrizione e tipo]
-- **Relazioni**:
-  - [relazione con Entità X]: [descrizione relazione]
-  - [relazione con Entità Y]: [descrizione relazione]
-
-### [Entità 2]
-
-- **Definizione**: [Descrizione dell'entità]
-- **Attributi Principali**:
-  - [attributo1]: [descrizione e tipo]
-  - [attributo2]: [descrizione e tipo]
-  - [attributo3]: [descrizione e tipo]
-- **Relazioni**:
-  - [relazione con Entità X]: [descrizione relazione]
-  - [relazione con Entità Y]: [descrizione relazione]
-
-## Vincoli di Integrità
-
-- **Vincoli di Chiave Primaria**: [Descrizione]
-- **Vincoli di Integrità Referenziale**: [Descrizione]
-- **Vincoli di Business**: [Descrizione]
-
-## Regole di Business
-
-- [RB-1]: [Descrizione regola di business]
-- [RB-2]: [Descrizione regola di business]
-- [RB-3]: [Descrizione regola di business]
-
-## Tracciabilità ai Requisiti
-
-- **[REQ-001]**: Implementato nelle entità [Entità X, Entità Y]
-- **[REQ-002]**: Implementato nelle entità [Entità Z] con vincoli [descrizione]
-- **[REQ-003]**: Supportato dalla relazione tra [Entità A] e [Entità B]
+Per una visione più dettagliata di specifiche aree del dominio, fare riferimento ai diagrammi dedicati.

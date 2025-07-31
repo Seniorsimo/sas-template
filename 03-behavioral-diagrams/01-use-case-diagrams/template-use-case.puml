@@ -1,25 +1,19 @@
 @startuml UseCase-Template
 title Sistema [Nome Sistema] - Casi d'Uso
 
-' Definizione degli attori
+left to right direction
+
 actor "Attore Principale" as MainActor
 actor "Altro Attore" as OtherActor
 
-' Confine del sistema
 rectangle "Nome del Sistema" {
   usecase "Funzionalità A" as UCA
   usecase "Funzionalità B" as UCB
   usecase "Funzionalità C" as UCC
-  usecase "Funzionalità D" as UCD
 }
 
-' Relazioni tra attori e casi d'uso
 MainActor --> UCA
 MainActor --> UCB
 OtherActor --> UCC
-
-' Relazioni tra casi d'uso (opzionale)
-UCA .> UCC : <<include>>
-UCB .> UCD : <<extend>>
 
 @enduml
