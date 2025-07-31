@@ -24,8 +24,6 @@
 **Livello di Influenza**: Alto | Medio | Basso
 **Livello di Interesse**: Alto | Medio | Basso
 
----
-
 ### Utilizzatori Finali
 
 #### [Tipo Utente 1]
@@ -75,8 +73,6 @@
 - [Pain point 1]
 - [Pain point 2]
 - [Pain point 3]
-
----
 
 ## Stakeholder Secondari
 
@@ -137,5 +133,3 @@
 - Crittografia dei dati sensibili
 - Logging e auditing appropriati
 - Conformità agli standard aziendali
-
----
