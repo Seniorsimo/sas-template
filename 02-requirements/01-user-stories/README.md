@@ -14,9 +14,3 @@ La struttura di questa cartella è la seguente:
 
 - **`epic-template/`**: Contiene un template per la creazione di nuove epic e le relative user stories.
 - **`[EPIC-XXX-nome-epic]/`**: Ogni epic avrà una sua cartella dedicata, che conterrà le user stories specifiche per quell'epic.
-
-## Come Utilizzare Questa Sezione
-
-Per creare una nuova epic, duplicare la cartella `epic-template` e rinominarla seguendo la convenzione `[EPIC-XXX-nome-epic]`. All'interno di ogni cartella di epic, utilizzare il file `US-XXX-template.md` per creare le singole user stories.
-
-Per istruzioni più dettagliate, fare riferimento al file `INSTRUCTIONS.md` in questa cartella e nelle rispettive sottocartelle.
