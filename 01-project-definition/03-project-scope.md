@@ -5,12 +5,17 @@
 ### Funzionalità Principali
 
 - **[Nome Funzionalità 1]**
+
   - **Descrizione**: [Descrizione dettagliata della funzionalità]
   - **Criteri di Accettazione**: [Criteri specifici per validare la funzionalità]
+
 - **[Nome Funzionalità 2]**
+
   - **Descrizione**: [Descrizione dettagliata della funzionalità]
   - **Criteri di Accettazione**: [Criteri specifici per validare la funzionalità]
+
 - **[Nome Funzionalità 3]**
+
   - **Descrizione**: [Descrizione dettagliata della funzionalità]
   - **Criteri di Accettazione**: [Criteri specifici per validare la funzionalità]
 
@@ -52,6 +57,7 @@
 ### Assunzioni
 
 [Elenco di tutte le assunzioni (tecniche, di business, sulle risorse) che, se non valide, potrebbero impattare il progetto.]
+
 1. **[Assunzione 1]**
 2. **[Assunzione 2]**
 3. **[Assunzione 3]**
@@ -59,6 +65,7 @@
 ### Vincoli
 
 [Elenco di tutti i vincoli (tecnici, di budget, temporali, normativi) che limitano le opzioni del progetto.]
+
 - **Vincoli Tecnici**: [es. Integrazione obbligatoria con il sistema X]
 - **Vincoli Temporali**: [es. Go-live entro il [Data]]
 - **Vincoli di Budget**: [es. Budget massimo di [Importo]]
@@ -67,5 +74,6 @@
 ### Dipendenze Esterne
 
 [Elenco delle dipendenze da team, sistemi o fornitori esterni che possono influenzare il progetto.]
+
 - **[Dipendenza 1]**: [Descrizione e impatto potenziale]
 - **[Dipendenza 2]**: [Descrizione e impatto potenziale]

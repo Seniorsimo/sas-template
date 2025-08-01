@@ -115,7 +115,7 @@ Per ogni cartella del workspace:
 - **05-database-design/**: Solo diagrammi ER, MAI codice SQL
 
 ## Suggerimenti Specifici per Diagrammi
-## Suggerimenti Specifici per Diagrammi
+
 - **Sequence diagrams**: Focus sui messaggi asincroni/sincroni e lifelines con attivazioni
 - **Class diagrams**: Includi attributi con visibilità, metodi, relazioni (association/composition/inheritance)
 - **ER diagrams**: Specifica cardinalità (1:1, 1:N, N:M), vincoli di integrità e business rules

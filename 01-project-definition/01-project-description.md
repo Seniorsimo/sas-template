@@ -5,8 +5,11 @@
 [Inserisci qui una breve descrizione del progetto, il problema che risolve e il valore che porta. Max 2-3 paragrafi]
 
 **Nome del Progetto**: [Nome del Progetto]
+
 **Responsabile del Progetto**: [Nome]
+
 **Data**: [Data di creazione]
+
 **Versione**: 1.0
 
 ## Contesto e Problema
