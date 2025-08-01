@@ -4,10 +4,6 @@
 
 Questa sezione definisce i requisiti di compatibilità del sistema, specificando le piattaforme, gli ambienti e gli standard con cui il sistema deve operare correttamente.
 
-## Organizzazione
-
-I requisiti di compatibilità sono suddivisi per categoria. Ogni requisito è documentato in un file separato, utilizzando il template `REQ-NF-COMP-XXX-template.md`.
-
 ## Riepilogo dei Requisiti di Compatibilità
 
 | ID Requisito | Descrizione | Priorità | Stato |

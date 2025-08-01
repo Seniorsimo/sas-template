@@ -4,10 +4,6 @@
 
 Questa sezione definisce i requisiti di usabilità del sistema, specificando gli attributi che garantiscono un'esperienza utente intuitiva, efficiente e soddisfacente.
 
-## Organizzazione
-
-I requisiti di usabilità sono suddivisi per categoria. Ogni requisito è documentato in un file separato, utilizzando il template `REQ-NF-USA-XXX-template.md`.
-
 ## Riepilogo dei Requisiti di Usabilità
 
 | ID Requisito | Descrizione | Priorità | Stato |

@@ -10,15 +10,9 @@ Questi requisiti sono cruciali per garantire che il sistema sia performante, sic
 
 I requisiti non funzionali sono suddivisi nelle seguenti categorie, ciascuna con una sua cartella dedicata:
 
-- **`performance/`**: Requisiti relativi ai tempi di risposta, al throughput e all'utilizzo delle risorse.
-- **`security/`**: Requisiti di autenticazione, autorizzazione, crittografia e protezione dei dati.
-- **`usability/`**: Requisiti di usabilità, accessibilità e user experience.
-- **`reliability/`**: Requisiti di affidabilità, disponibilità e continuità operativa.
-- **`scalability/`**: Requisiti di scalabilità in termini di crescita di utenti, dati e carico.
-- **`compatibility/`**: Requisiti di compatibilità con altri sistemi, browser e dispositivi.
-
-## Come Utilizzare Questa Sezione
-
-Per ogni nuovo requisito non funzionale, identificare la categoria appropriata e creare un nuovo file di requisito utilizzando il template fornito nella rispettiva sottocartella.
-
-Per istruzioni più dettagliate, fare riferimento al file `INSTRUCTIONS.md` in questa cartella e nelle rispettive sottocartelle.
+- **Compatibility**: Requisiti di compatibilità con altri sistemi, browser e dispositivi.
+- **Performance**: Requisiti relativi ai tempi di risposta, al throughput e all'utilizzo delle risorse.
+- **Scalability**: Requisiti di scalabilità in termini di crescita di utenti, dati e carico.
+- **Reliability**: Requisiti di affidabilità, disponibilità e continuità operativa.
+- **Security**: Requisiti di autenticazione, autorizzazione, crittografia e protezione dei dati.
+- **Usability**: Requisiti di usabilità, accessibilità e user experience.

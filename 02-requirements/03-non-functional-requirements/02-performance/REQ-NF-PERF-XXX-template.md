@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-NF-PERF-XXX
+
 **Categoria**: Performance
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione

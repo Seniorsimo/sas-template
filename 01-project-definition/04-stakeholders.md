@@ -5,8 +5,11 @@
 ### Product Owner / Sponsor
 
 **Nome**: [Nome]
+
 **Ruolo**: [Titolo/Posizione]
+
 **Organizzazione**: [Azienda/Dipartimento]
+
 **Contatto**: [Email/Telefono]
 
 **Responsabilità**:
@@ -22,6 +25,7 @@
 - [Aspettativa 3]
 
 **Livello di Influenza**: Alto | Medio | Basso
+
 **Livello di Interesse**: Alto | Medio | Basso
 
 ### Utilizzatori Finali
@@ -29,7 +33,9 @@
 #### [Tipo Utente 1]
 
 **Descrizione**: [Descrizione del gruppo di utenti]
+
 **Dimensione del Gruppo**: [Numero approssimativo]
+
 **Rappresentante**: [Nome del rappresentante se presente]
 
 **Caratteristiche**:
@@ -53,7 +59,9 @@
 #### [Tipo Utente 2]
 
 **Descrizione**: [Descrizione del gruppo di utenti]
+
 **Dimensione del Gruppo**: [Numero approssimativo]
+
 **Rappresentante**: [Nome del rappresentante se presente]
 
 **Caratteristiche**:
@@ -79,7 +87,9 @@
 ### Team di Sviluppo
 
 **Team Leader**: [Nome]
+
 **Dimensione Team**: [Numero persone]
+
 **Competenze Chiave**: [Lista competenze principali]
 
 **Responsabilità**:
@@ -99,6 +109,7 @@
 ### Team Operations/DevOps
 
 **Responsabile**: [Nome]
+
 **Contatto**: [Email]
 
 **Responsabilità**:
@@ -118,6 +129,7 @@
 ### Team di Sicurezza
 
 **Responsabile**: [Nome]
+
 **Contatto**: [Email]
 
 **Responsabilità**:

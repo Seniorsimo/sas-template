@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-NF-SCAL-XXX
+
 **Categoria**: Scalability
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione

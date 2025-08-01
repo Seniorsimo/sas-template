@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-UI-XXX
+
 **Categoria**: UI Requirement
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione UI Component

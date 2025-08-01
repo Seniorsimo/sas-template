@@ -2,11 +2,16 @@
 
 ## Informazioni Generali
 
-**ID**: REQ-NF-[CAT]-XXX  
-**Categoria**: Performance | Security | Usability | Reliability | Scalability | Compatibility  
-**Sottocategoria**: [Specifica più dettagliata]  
-**Priorità**: Critical | High | Medium | Low  
-**Status**: Draft | Review | Approved | Implemented | Verified  
+**ID**: REQ-NF-[CAT]-XXX
+
+**Categoria**: Performance | Security | Usability | Reliability | Scalability | Compatibility
+
+**Sottocategoria**: [Specifica più dettagliata]
+
+**Priorità**: Critical | High | Medium | Low
+
+**Status**: Draft | Review | Approved | Implemented | Verified
+
 **Owner**: [Stakeholder responsabile]
 
 ---
@@ -31,10 +36,14 @@
 
 ### Metrica Primaria
 
-**Nome Metrica**: [Nome della metrica principale]  
-**Unità di Misura**: [Secondi/Percentuale/Numero/etc.]  
-**Valore Target**: [Valore obiettivo da raggiungere]  
-**Valore Minimo Accettabile**: [Soglia minima]  
+**Nome Metrica**: [Nome della metrica principale]
+
+**Unità di Misura**: [Secondi/Percentuale/Numero/etc.]
+
+**Valore Target**: [Valore obiettivo da raggiungere]
+
+**Valore Minimo Accettabile**: [Soglia minima]
+
 **Valore Ottimale**: [Valore ideale]
 
 ### Metriche Secondarie
@@ -45,9 +54,12 @@
 
 ### Condizioni di Misurazione
 
-**Ambiente**: [Produzione/Staging/Test]  
-**Carico**: [Condizioni di carico durante la misurazione]  
-**Configurazione**: [Setup specifico richiesto]  
+**Ambiente**: [Produzione/Staging/Test]
+
+**Carico**: [Condizioni di carico durante la misurazione]
+
+**Configurazione**: [Setup specifico richiesto]
+
 **Periodo**: [Quando/quanto spesso misurare]
 
 ---
@@ -56,8 +68,10 @@
 
 ### Criterio Principale
 
-**Given** [condizioni iniziali]  
-**When** [scenario di test]  
+**Given** [condizioni iniziali]
+
+**When** [scenario di test]
+
 **Then** [risultato quantitativo atteso]
 
 ### Criteri Aggiuntivi
@@ -98,9 +112,12 @@
 
 ### Configurazioni
 
-**Hardware**: [Requisiti minimi hardware]  
-**Software**: [Configurazioni software richieste]  
-**Network**: [Requisiti di rete]  
+**Hardware**: [Requisiti minimi hardware]
+
+**Software**: [Configurazioni software richieste]
+
+**Network**: [Requisiti di rete]
+
 **Storage**: [Requisiti di storage]
 
 ### Vincoli Tecnici
@@ -116,8 +133,11 @@
 ### Metodi di Testing
 
 **Tipo di Test**: [Load/Security/Usability/etc.]  
+
 **Tools di Test**: [Strumenti da utilizzare]  
+
 **Frequenza**: [Quando eseguire i test]  
+
 **Automazione**: [Livello di automazione]
 
 ### Test Specifici
@@ -139,8 +159,11 @@
 ### Monitoring Continuo
 
 **Metriche da Monitorare**: [Liste metriche]  
+
 **Alerting**: [Quando attivare alert]  
+
 **Dashboard**: [Visualizzazioni necessarie]  
+
 **Reporting**: [Report periodici]
 
 ---

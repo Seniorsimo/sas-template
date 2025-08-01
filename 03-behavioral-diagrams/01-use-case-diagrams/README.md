@@ -30,4 +30,4 @@ admin --> UC4
 
 ## Casi d'Uso Dettagliati
 
-Per una descrizione dettagliata di ogni caso d'uso, fare riferimento alla documentazione dei requisiti funzionali nella sezione `02-requirements`.
+Per una descrizione dettagliata di ogni caso d'uso, fare riferimento alla documentazione dei requisiti funzionali nella sezione Requisiti.

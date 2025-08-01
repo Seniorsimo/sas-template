@@ -3,9 +3,13 @@
 ## Informazioni Generali
 
 **Epic ID**: EPIC-XXX
+
 **Nome**: [Nome Epic]
+
 **Descrizione**: [Descrizione di alto livello dell'epic]
+
 **Owner**: [Product Owner/Stakeholder]
+
 **Status**: Planning | In Progress | Done | On Hold
 
 ## Obiettivi dell'Epic
@@ -57,9 +61,3 @@
 
 - **[Rischio 1]**: [Descrizione e piano di mitigazione]
 - **[Rischio 2]**: [Descrizione e piano di mitigazione]
-
-## Note e Modifiche
-
-| Data | Versione | Autore | Cambiamenti |
-|------|----------|--------|-------------|
-| [Data] | 1.0 | [Nome] | Versione iniziale |

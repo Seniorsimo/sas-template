@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-NF-SEC-XXX
+
 **Categoria**: Security
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione

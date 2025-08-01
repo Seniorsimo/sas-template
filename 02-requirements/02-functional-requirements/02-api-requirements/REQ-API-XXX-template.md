@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-API-XXX
+
 **Categoria**: API Requirement
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione API

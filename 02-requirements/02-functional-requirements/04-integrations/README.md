@@ -4,10 +4,6 @@
 
 Questa sezione documenta i requisiti funzionali relativi alle **integrazioni** del sistema con sistemi esterni.
 
-## Organizzazione
-
-I requisiti sono suddivisi per sistema o servizio integrato. Ogni requisito è documentato in un file separato, utilizzando il template `REQ-I-XXX-template.md`.
-
 ## Riepilogo delle Integrazioni
 
 | ID Requisito | Sistema | Tipo | Criticità | Stato |

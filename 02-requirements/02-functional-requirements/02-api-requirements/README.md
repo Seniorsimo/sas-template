@@ -4,10 +4,6 @@
 
 Questa sezione documenta i requisiti funzionali relativi alle **API** esposte dal sistema.
 
-## Organizzazione
-
-I requisiti sono suddivisi per categoria di API. Ogni requisito è documentato in un file separato, utilizzando il template `REQ-API-XXX-template.md`.
-
 ## API Inventory
 
 | ID API | Nome | Metodo/Pattern | Priorità | Stato |

@@ -3,15 +3,21 @@
 ## Informazioni Generali
 
 **ID**: US-XXX
+
 **Epic**: [Nome Epic]
+
 **Priorità**: Alta | Media | Bassa
+
 **Stima**: [Story Points]
+
 **Status**: Backlog | In Progress | In Review | Done
 
 ## User Story
 
 **Come** [tipo di utente]
+
 **Voglio** [funzionalità/obiettivo]
+
 **Per** [beneficio/valore per l'utente]
 
 ## Criteri di Accettazione

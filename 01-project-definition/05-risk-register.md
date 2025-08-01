@@ -29,7 +29,12 @@
 ### RISK-001: [Nome Rischio Alto 1]
 
 **Categoria**: Tecnico | Business | Organizzativo | Esterno
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+
+**Probabilità**: [1-5] 
+
+**Impatto**: [1-5] 
+
+**Score**: [Prodotto]
 
 **Descrizione**: [Descrizione dettagliata del rischio]
 
@@ -50,15 +55,16 @@
 - **Prevenzione**: [Azioni per ridurre la probabilità]
 - **Mitigazione**: [Azioni per ridurre l'impatto]
 - **Contingency Plan**: [Piano di emergenza se il rischio si materializza]
-
-**Owner**: [Nome responsabile]
-**Target Date**: [Data entro cui implementare mitigazioni]
-**Status**: Aperto | In Progress | Chiuso
 
 ### RISK-002: [Nome Rischio Alto 2]
 
 **Categoria**: Tecnico | Business | Organizzativo | Esterno
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+
+**Probabilità**: [1-5]
+
+**Impatto**: [1-5]
+
+**Score**: [Prodotto]
 
 **Descrizione**: [Descrizione dettagliata del rischio]
 
@@ -79,17 +85,18 @@
 - **Prevenzione**: [Azioni per ridurre la probabilità]
 - **Mitigazione**: [Azioni per ridurre l'impatto]
 - **Contingency Plan**: [Piano di emergenza se il rischio si materializza]
-
-**Owner**: [Nome responsabile]
-**Target Date**: [Data entro cui implementare mitigazioni]
-**Status**: Aperto | In Progress | Chiuso
 
 ## Rischi Medi (6-12)
 
 ### RISK-003: [Nome Rischio Medio 1]
 
 **Categoria**: Tecnico | Business | Organizzativo | Esterno
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+
+**Probabilità**: [1-5]
+
+**Impatto**: [1-5]
+
+**Score**: [Prodotto]
 
 **Descrizione**: [Descrizione dettagliata del rischio]
 
@@ -97,14 +104,16 @@
 
 - [Azione di mitigazione 1]
 - [Azione di mitigazione 2]
-
-**Owner**: [Nome responsabile]
-**Status**: Aperto | In Progress | Chiuso
 
 ### RISK-004: [Nome Rischio Medio 2]
 
 **Categoria**: Tecnico | Business | Organizzativo | Esterno
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+
+**Probabilità**: [1-5] 
+
+**Impatto**: [1-5] 
+
+**Score**: [Prodotto]
 
 **Descrizione**: [Descrizione dettagliata del rischio]
 
@@ -112,19 +121,19 @@
 
 - [Azione di mitigazione 1]
 - [Azione di mitigazione 2]
-
-**Owner**: [Nome responsabile]
-**Status**: Aperto | In Progress | Chiuso
 
 ## Rischi Bassi (1-5)
 
 ### RISK-005: [Nome Rischio Basso 1]
 
 **Categoria**: Tecnico | Business | Organizzativo | Esterno
-**Probabilità**: [1-5] **Impatto**: [1-5] **Score**: [Prodotto]
+
+**Probabilità**: [1-5]
+
+**Impatto**: [1-5]
+
+**Score**: [Prodotto]
 
 **Descrizione**: [Descrizione sintetica del rischio]
 
 **Mitigazione**: [Azione semplice di mitigazione]
-
-**Owner**: [Nome responsabile]

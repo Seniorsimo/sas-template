@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-NF-COMP-XXX
+
 **Categoria**: Compatibility
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione

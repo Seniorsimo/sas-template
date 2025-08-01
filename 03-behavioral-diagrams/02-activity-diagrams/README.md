@@ -33,4 +33,4 @@ stop
 
 ## Processi Dettagliati
 
-Per una descrizione dettagliata di ogni processo, fare riferimento alla documentazione dei requisiti funzionali nella sezione `02-requirements`.
+Per una descrizione dettagliata di ogni processo, fare riferimento alla documentazione dei requisiti funzionali nella sezione "Requisiti".

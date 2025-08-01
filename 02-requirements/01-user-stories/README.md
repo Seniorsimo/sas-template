@@ -10,7 +10,3 @@ L'obiettivo è catturare i requisiti in un modo che sia facile da comprendere si
 
 Le user stories sono organizzate in **Epic**, che rappresentano grandi corpi di lavoro o funzionalità complesse. Ogni epic è a sua volta suddivisa in user stories più piccole e gestibili.
 
-La struttura di questa cartella è la seguente:
-
-- **`epic-template/`**: Contiene un template per la creazione di nuove epic e le relative user stories.
-- **`[EPIC-XXX-nome-epic]/`**: Ogni epic avrà una sua cartella dedicata, che conterrà le user stories specifiche per quell'epic.

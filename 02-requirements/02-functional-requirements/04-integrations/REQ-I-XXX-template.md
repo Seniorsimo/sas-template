@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-I-XXX
+
 **Categoria**: Integrazione
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione Integrazione

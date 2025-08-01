@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-F-XXX
+
 **Categoria**: Core Feature
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione

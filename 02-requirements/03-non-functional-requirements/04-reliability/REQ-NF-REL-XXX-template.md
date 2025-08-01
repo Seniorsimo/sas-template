@@ -3,8 +3,11 @@
 ## Informazioni Generali
 
 **ID**: REQ-NF-REL-XXX
+
 **Categoria**: Reliability
+
 **Priorità**: Must Have | Should Have
+
 **Status**: Draft | Review | Approved | Implemented
 
 ## Descrizione
